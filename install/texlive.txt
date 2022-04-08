@@ -1,0 +1,7 @@
+collection-fontsrecommended
+collection-latex
+collection-latexrecommended
+collection-mathscience
+collection-metapost
+collection-pictures
+collection-xetex

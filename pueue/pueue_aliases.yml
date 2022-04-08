@@ -1,0 +1,12 @@
+bups: 'brew update'
+bup: 'brew upgrade'
+cup: 'conda update --all --yes'
+cupk: 'conda update --all -n kaggle --yes'
+jlup: 'julia --eval "using Pkg; Pkg.update()"'
+nupg: 'npm update -g'
+rsup: 'rustup update'
+tlup: 'tlmgr update --all'
+
+bcl: 'brew autoremove && brew cleanup'
+ccl: 'conda clean --all --yes'
+jlcl: 'julia --eval "using Pkg; Pkg.gc()"'

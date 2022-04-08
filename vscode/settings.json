@@ -1,0 +1,506 @@
+{
+  "files.autoGuessEncoding": true,
+  "files.defaultLanguage": "markdown",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.wordWrap": "bounded",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  "editor.fontFamily": "FiraCode Nerd Font",
+  // "editor.fontFamily": "FiraCode NF",
+  "editor.inlayHints.fontFamily": "FiraCode Nerd Font",
+  // "editor.inlayHints.fontFamily": "FiraCode NF",
+  "debug.console.fontFamily": "FiraCode Nerd Font",
+  // "debug.console.fontFamily": "FiraCode NF",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  "diffEditor.wordWrap": "on",
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "emmet.showSuggestionsAsSnippets": true,
+  "git-graph.repository.sign.commits": true,
+  "git-graph.repository.sign.tags": true,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.supportCancellation": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": true,
+    "suppressGitMissingWarning": true
+  },
+  "gitlens.mode.active": "zen",
+  "html.format.indentInnerHtml": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.splitCwd": "workspaceRoot",
+  "terminal.integrated.tabs.focusMode": "singleClick",
+  "terminal.integrated.tabs.hideCondition": "never",
+  "terminal.integrated.wordSeparators": " ()[]{}',\"`─",
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "terminal.integrated.profiles.windows": {
+    "Git-Bash": {
+      "path": "c:\\scoop\\git\\bin\\bash.exe",
+      "args": [],
+      "icon": "terminal-bash"
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "window.restoreWindows": "all",
+  "workbench.activityBar.iconClickBehavior": "toggle",
+  "workbench.colorTheme": "Default Light+",
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editorAssociations": {
+    // "*.md": "markdown-notebook",
+    "*.ipynb": "jupyter-notebook",
+    "*.jpg": "imagePreview.previewEditor",
+    "*.png": "imagePreview.previewEditor",
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
+  "workbench.experimental.editor.dragAndDropIntoEditor.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.indent": 8,
+  "files.associations": {
+    "*.condarc": "yaml",
+    "*.m": "matlab"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.executorMap": {
+    "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "golang": "go run",
+    "java": "javac $dir$fileName && java $dir$fileNameWithoutExt",
+    "javascript": "node",
+    "julia": "julia",
+    "lua": "lua",
+    "python": "$pythonPath -u $fullFileName",
+    "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt"
+  },
+  "code-runner.executorMapByGlob": {
+    "*.js": "node"
+  },
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.saveAllFilesBeforeRun": true,
+  "code-runner.saveFileBeforeRun": false,
+  "markdown-toc.anchorMode": "github.com",
+  "markdown-toc.withLinks": true,
+  "markdown.extension.italic.indicator": "*",
+  "markdown.extension.print.theme": "light",
+  "markdown.extension.syntax.decorationFileSizeLimit": 50000,
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+  "markdown.extension.toc.levels": "1..4",
+  "markdown.extension.toc.orderedList": true,
+  "markdown.extension.toc.plaintext": true,
+  "markdown.preview.breaks": true,
+  "markdown.preview.fontFamily": "consolas",
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.linkify": true,
+  "markdown.preview.markEditorSelection": true,
+  "markdown.preview.openMarkdownLinks": "inEditor",
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.typographer": true,
+  "mdtableeditor.commandViews": {
+    "toolbar": [
+      "MdTableEditor.changeAlignCenter",
+      "MdTableEditor.changeAlignLeft",
+      "MdTableEditor.changeAlignRight",
+      "MdTableEditor.insertBottom",
+      "MdTableEditor.insertLeft",
+      "MdTableEditor.insertRight",
+      "MdTableEditor.insertTop",
+      "MdTableEditor.moveBottom",
+      "MdTableEditor.moveLeft",
+      "MdTableEditor.moveRight",
+      "MdTableEditor.moveTop",
+      "MdTableEditor.removeColumn",
+      "MdTableEditor.removeRow",
+    ],
+    "context": [
+      "MdTableEditor.changeAlignCenter",
+      "MdTableEditor.changeAlignLeft",
+      "MdTableEditor.changeAlignRight",
+      "MdTableEditor.insertBottom",
+      "MdTableEditor.insertLeft",
+      "MdTableEditor.insertRight",
+      "MdTableEditor.insertTop",
+      "MdTableEditor.moveBottom",
+      "MdTableEditor.moveLeft",
+      "MdTableEditor.moveRight",
+      "MdTableEditor.moveTop",
+      "MdTableEditor.removeColumn",
+      "MdTableEditor.removeRow",
+    ]
+  },
+  "mdtableeditor.isAutoFormatterEnabled": true,
+  "mdtableeditor.isTreeViewEnabled": true,
+  "mdtableeditor.isIconMenuEnabled": true,
+  "pandoc.docxOptString": "",
+  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
+  "pandoc.pdfOptString": "--pdf-engine=xelatex -V CJKmainfont=\"Arial Unicode MS\"",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "notebook.diff.enablePreview": false,
+  "notebook.diff.ignoreOutputs": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 16,
+  "python.formatting.provider": "yapf",
+  "python.formatting.yapfPath": "/opt/homebrew/Caskroom/mambaforge/base/bin/yapf",
+  "python.languageServer": "Jedi",
+  "python.linting.mypyEnabled": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.terminal.executeInFileDir": true,
+  "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "jupyter.alwaysScrollOnNewCell": true,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.exportWithOutputEnabled": true,
+  "jupyter.jupyterServerType": "local",
+  "jupyter.magicCommandsAsComments": true,
+  "jupyter.pythonExportMethod": "nbconvert",
+  "jupyter.sendSelectionToInteractiveWindow": true,
+  "jupyter.variableQueries": [
+    {
+      "language": "python",
+      "query": "_rwho_ls = %who_ls/nprint(_rwho_ls)",
+      "parseExpr": "'(/w+)'"
+    },
+    {
+      "language": "julia",
+      "query": "whos",
+      "parseExpr": "'(/w+)'"
+    }
+  ],
+  "css.format.enable": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "[c][cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[html][css][markdown][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript][javascriptreact][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[shellscript]": {
+    "files.eol": "\n",
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[latex][tex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  // "[julia][juliamarkdown]": {
+  //   "editor.defaultFormatter": "julialang.language-julia"
+  // },
+  "[sql]": {
+    "editor.defaultFormatter": "cweijan.vscode-database-client2"
+  },
+  "bookmarks.multicursor.toggleMode": "eachLineIndependently",
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
+  "bookmarks.wrapNavigation": true,
+  "latex-workshop.intellisense.unimathsymbols.enabled": true,
+  "latex-workshop.intellisense.update.aggressive.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.showContextMenu": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latexindent.path": "latexindent",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex",
+      "tools": [
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.fdb_xelatex",
+    "*.fls",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.log",
+    "*.lot",
+    "*.nav",
+    "*.out",
+    "*.snm",
+    "*.synctex.gz",
+    "*.synctex.gz(busy)",
+    "*.synctex(busy)",
+    "*.toc"
+  ],
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "hediet.vscode-drawio.offline": true,
+  "hediet.vscode-drawio.theme": "Kennedy",
+  "markdownlint.config": {
+    "MD001": false,
+    "MD010": false,
+    "MD024": false,
+    "MD025": false,
+    "MD026": false,
+    "MD029": false,
+    "MD033": false,
+    "MD034": false,
+    "MD037": false,
+    "MD041": false,
+    "MD042": false
+  },
+  "markdownlint.run": "onSave",
+  "ltex.language": "en-US",
+  "ltex.ltex-ls.logLevel": "finer",
+  "ltex.enabled": [
+    "latex",
+  ],
+  "ltex.latex.commands": {
+    "\\label{}": "ignore",
+    "\\documentclass[]{}": "ignore",
+    "\\cite{}": "dummy",
+    "\\cite[]{}": "dummy"
+  },
+  "ltex.markdown.nodes": {
+    "CodeBlock": "ignore",
+    "FencedCodeBlock": "ignore",
+    "AutoLink": "ignore",
+    "Code": "dummy"
+  },
+  "ltex.enabledRules": {
+    "en-GB": [
+      "PASSIVE_VOICE",
+      "OXFORD_SPELLING_NOUNS",
+    ],
+    "en-US": [
+      "PASSIVE_VOICE",
+    ]
+  },
+  "ltex.diagnosticSeverity": "information",
+  "prettier.endOfLine": "auto",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.vueIndentScriptAndStyle": true,
+  "emojisense.languages": {
+    "markdown": true,
+    "plaintext": true,
+    "python": false,
+    "julia": true
+  },
+  "myst.preview.extensions": [
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "tasklist"
+  ],
+  "github.copilot.advanced": {
+    "length": 500,
+    "autocomplete.length": 10
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "latex": false,
+    "markdown": false,
+    "plaintext": false,
+    "sql": false,
+    "yaml": false
+  },
+  "shellformat.effectLanguages": [
+    "dockerfile",
+    "dotenv",
+    "gitignore",
+    "hosts",
+    "ignore",
+    "properties",
+    "shellscript"
+  ],
+  "C_Cpp.default.compilerArgs": [
+    "-g",
+    "${file}",
+    "-std=c++20",
+    "-o",
+    "${fileDirname}/${fileBasenameNoExtension}"
+  ],
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "C_Cpp.clang_format_sortIncludes": true,
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  "clangd.checkUpdates": true,
+  "clangd.arguments": [
+    "--all-scopes-completion",
+    "--background-index",
+    "--clang-tidy-checks=cppcoreguidelines-*,performance-*,bugprone-*,portability-*,modernize-*",
+    "--clang-tidy",
+    "--compile-commands-dir=build",
+    "--completion-style=detailed",
+    "--function-arg-placeholders=false",
+    "--header-insertion-decorators",
+    "--header-insertion=iwyu",
+    "--log=verbose",
+    "--pch-storage=memory",
+    "-j=12"
+  ],
+  "lldb.commandCompletions": true,
+  "lldb.dereferencePointers": true,
+  "lldb.evaluateForHovers": true,
+  "lldb.launch.expressions": "simple",
+  "lldb.launch.terminal": "integrated",
+  "lldb.showDisassembly": "never",
+  "lldb.verboseLogging": true,
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.indentEntries": true,
+  "evenBetterToml.formatter.indentTables": true,
+  "redhat.telemetry.enabled": false,
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.hint.commandShortcut": false,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.useEndpointTranslation": false,
+  "leetcode.filePath": {
+    "default": {
+      "folder": "${language}",
+      "filename": "${id}.${kebab-case-name}.${ext}"
+    }
+  },
+  "leetcode.workspaceFolder": "/Users/Shared/leetcode",
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.lineBreak": "\\n",
+  "conventionalCommits.showNewVersionNotes": false,
+  "projectManager.any.maxDepthRecursion": 3,
+  "vscode-color-picker.languages": [
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "julia",
+    "jupyter",
+    "python",
+    "svg"
+  ],
+  "settingsSync.ignoredExtensions": [
+    "valentjn.vscode-ltex"
+  ],
+  "mainFeature.fullWidthCharsAndFollowingSpaces": false,
+  "data-size-count.statusBar.fileSizeFormat": "$(file-text) ${fileSize}",
+  "data-size-count.statusBar.selectionCountFormat": " | lines: ${linesCount} | words: ${wordsCount}",
+  "data-size-count.statusBar.dataCountFormat": " : ${dataCountWithBrackets}",
+  "data-size-count.statusBar.visibility": {
+    "fileSize": true,
+    "selection": true,
+    "data": true
+  },
+  "csv-preview.lineNumbers": "ordinal",
+  "csv-preview.resizeColumns": "all",
+  "database-client.highlightSQLBlock": true,
+  "database-client.showQuery": true,
+  "database-client.showTrigger": true,
+  "database-client.showUser": true,
+  "julia.completionmode": "import",
+  "julia.deleteJuliaCovFiles": true,
+  "julia.editor": "code",
+  "julia.enableCrashReporter": false,
+  "julia.enableTelemetry": false,
+  "julia.execution.codeInREPL": true,
+  "julia.execution.resultType": "both",
+  "julia.focusPlotNavigator": true,
+  "julia.lint.missingrefs": "symbols",
+  "julia.runtimeCompletions": true,
+  "julia.symbolCacheDownload": false
+}

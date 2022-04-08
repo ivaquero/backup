@@ -1,0 +1,278 @@
+{
+  "npms": {
+    "prefix": "npms",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import numpy as np",
+      "import pandas as pd",
+      "import seaborn as sns"
+    ]
+  },
+  "npm": {
+    "prefix": "npm",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import numpy as np",
+      "import pandas as pd"
+    ]
+  },
+  "np": {
+    "prefix": "np",
+    "description": "",
+    "body": [
+      "import numpy as np"
+    ]
+  },
+  "pd": {
+    "prefix": "pd",
+    "description": "",
+    "body": [
+      "import pandas as pd"
+    ]
+  },
+  "plt": {
+    "prefix": "plt",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt"
+    ]
+  },
+  "mpl": {
+    "prefix": "mpl",
+    "description": "",
+    "body": [
+      "import matplotlib as mpl"
+    ]
+  },
+  "show": {
+    "prefix": "show",
+    "description": "",
+    "body": [
+      "plt.show()"
+    ]
+  },
+  "stats": {
+    "prefix": "stats",
+    "description": "",
+    "body": [
+      "from scipy import stats"
+    ]
+  },
+  "csv": {
+    "prefix": "csv",
+    "description": "",
+    "body": [
+      "data = pd.read_csv('')",
+      ""
+    ]
+  },
+  "sns": {
+    "prefix": "sns",
+    "description": "",
+    "body": [
+      "import seaborn as sns"
+    ]
+  },
+  "lines": {
+    "prefix": "lines",
+    "description": "",
+    "body": [
+      "from matplotlib import lines",
+      ""
+    ]
+  },
+  "p12": {
+    "prefix": "p12",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)"
+    ]
+  },
+  "p21": {
+    "prefix": "p21",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(2, 1, figsize=(12, 8), constrained_layout=True)"
+    ]
+  },
+  "p31": {
+    "prefix": "p31",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(3, 1, figsize=(12, 10), constrained_layout=True)"
+    ]
+  },
+  "p13": {
+    "prefix": "p13",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(1, 3, figsize=(12, 6), constrained_layout=True)"
+    ]
+  },
+  "p1": {
+    "prefix": "p1",
+    "description": "",
+    "body": [
+      "_, ax = plt.subplots(figsize=(6, 4))"
+    ]
+  },
+  "p22": {
+    "prefix": "p22",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)"
+    ]
+  },
+  "az": {
+    "prefix": "az",
+    "description": "",
+    "body": [
+      "import arviz as az",
+      ""
+    ]
+  },
+  "svf": {
+    "prefix": "svf",
+    "description": "",
+    "body": [
+      "plt.savefig('../images/')"
+    ]
+  },
+  "seed": {
+    "prefix": "seed",
+    "description": "",
+    "body": [
+      "np.random.seed(42)"
+    ]
+  },
+  "mesh": {
+    "prefix": "mesh",
+    "description": "",
+    "body": [
+      "def make_mesh(lims, h):",
+      "",
+      "    x = np.linspace(lims[0], lims[1], h)",
+      "    y = np.linspace(lims[2], lims[3], h)",
+      "    X, Y = np.meshgrid(x, y)",
+      "",
+      "    return X, Y",
+      ""
+    ]
+  },
+  "meshd": {
+    "prefix": "meshd",
+    "description": "",
+    "body": [
+      "def make_mesh_d(lims, h):",
+      "",
+      "    x = np.arange(lims[0], lims[1], h)",
+      "    y = np.arange(lims[2], lims[3], h)",
+      "    X, Y = np.meshgrid(x, y)",
+      "",
+      "    return X, Y",
+      ""
+    ]
+  },
+  "cbar": {
+    "prefix": "cbar",
+    "description": "",
+    "body": [
+      "def add_cbar(fig,",
+      "             loc,",
+      "             orient='v',",
+      "             cmap='RdBu_r',",
+      "             vmin=-1,",
+      "             vmax=1,",
+      "             labelsize=20):",
+      "",
+      "    norm = mpl.colors.Normalize(vmin=vmin, vmax=vmax)",
+      "    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)",
+      "",
+      "    ruler = fig.add_axes(loc)",
+      "    if orient == 'h':",
+      "        cbar = f1.colorbar(sm, cax=ruler, orientation='horizontal')",
+      "    if orient == 'v':",
+      "        cbar = f1.colorbar(sm, cax=ruler, orientation='vertical')",
+      "    cbar.ax.tick_params(labelsize=labelsize)",
+      "",
+      "    return cbar",
+      ""
+    ]
+  },
+  "spinev": {
+    "prefix": "spinev",
+    "description": "",
+    "body": [
+      "ax.spine[['top', 'right']].set_visible(False)",
+      ""
+    ]
+  },
+  "axlabel": {
+    "prefix": "axlabel",
+    "description": "",
+    "body": [
+      "ax.set(xlabel='x', ylabel='y')"
+    ]
+  },
+  "cslayout": {
+    "prefix": "cslayout",
+    "description": "",
+    "body": [
+      "constrained_layout = True",
+      ""
+    ]
+  },
+  "subadj": {
+    "prefix": "subadj",
+    "description": "",
+    "body": [
+      "plt.subplots_adjust(bottom=0.1,",
+      "                    left=0.15,",
+      "                    right=1,",
+      "                    top=1,",
+      "                    wspace=0.3,",
+      "                    hspace=0.25)"
+    ]
+  },
+  "pm": {
+    "prefix": "pm",
+    "description": "",
+    "body": [
+      "import pymc as pm",
+      "import arviz as az",
+      "",
+      "az.style.use('arviz-darkgrid')"
+    ]
+  },
+  "tf": {
+    "prefix": "tf",
+    "description": "",
+    "body": [
+      "import tensorflow as tf"
+    ]
+  },
+  "rnd": {
+    "prefix": "rnd",
+    "description": "",
+    "body": [
+      "from numpy import random",
+      ""
+    ]
+  },
+  "kr": {
+    "prefix": "kr",
+    "description": "",
+    "body": [
+      "from tensorflow import keras"
+    ]
+  },
+  "pa": {
+    "prefix": "pa",
+    "description": "",
+    "body": [
+      "import pyarrow as pa"
+    ]
+  }
+}

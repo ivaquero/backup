@@ -1,0 +1,75 @@
+{
+  "df": {
+    "prefix": "df",
+    "description": "",
+    "body": [
+      "using DataFrames",
+      "using CSV: File",
+      ""
+    ]
+  },
+  "aog": {
+    "prefix": "aog",
+    "description": "",
+    "body": [
+      "using AlgebraOfGraphics",
+      ""
+    ]
+  },
+  "cm": {
+    "prefix": "cm",
+    "description": "",
+    "body": [
+      "using CairoMakie",
+      ""
+    ]
+  },
+  "gm": {
+    "prefix": "gm",
+    "description": "",
+    "body": [
+      "using GLMakie",
+      ""
+    ]
+  },
+  "mtk": {
+    "prefix": "mtk",
+    "description": "",
+    "body": [
+      "using ModelingToolKit",
+      ""
+    ]
+  },
+  "2df": {
+    "prefix": "2df",
+    "description": "",
+    "body": [
+      "|> DataFrame",
+      ""
+    ]
+  },
+  "f5": {
+    "prefix": "f5",
+    "description": "",
+    "body": [
+      "|> x -> first(x, 5)",
+      ""
+    ]
+  },
+  "ds": {
+    "prefix": "ds",
+    "description": "",
+    "body": [
+      "using DynamicalSystems",
+      ""
+    ]
+  },
+  "de": {
+    "prefix": "de",
+    "description": "",
+    "body": [
+      "using DifferentialEquations",
+      ""
+    ]
+  }
+}

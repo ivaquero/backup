@@ -1,0 +1,31 @@
+{
+  "dtag": {
+    "prefix": "dtag",
+    "description": "",
+    "body": [
+      "const strippedString = originalString.replace(/(<([^>]+)>)/gi, '');",
+      ""
+    ]
+  },
+  "rv": {
+    "prefix": "rv",
+    "description": "",
+    "body": [
+      "function reverseString(string) {",
+      "  return string.split(' ').reverse().join(' ');",
+      "}",
+      "",
+      "revereseString();",
+      ""
+    ]
+  },
+  "rnd": {
+    "prefix": "rnd",
+    "description": "",
+    "body": [
+      "const rnd = Math.floor(Math.random() * items.length);",
+      "items[rnd];",
+      ""
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "io": {
+    "prefix": "io",
+    "description": "",
+    "body": [
+      "#include <cstdio>",
+      "using namespace std;",
+      ""
+    ]
+  },
+  "std": {
+    "prefix": "std",
+    "description": "",
+    "body": [
+      "using namespace std;"
+    ]
+  },
+  "main": {
+    "prefix": "main",
+    "description": "",
+    "body": [
+      "int main() {",
+      "  ",
+      "}"
+    ]
+  },
+  "cout": {
+    "prefix": "cout",
+    "description": "",
+    "body": [
+      "cout << Name << endl;"
+    ]
+  },
+  "ios": {
+    "prefix": "ios",
+    "description": "",
+    "body": [
+      "#include <iostream>",
+      "using namespace std;",
+      ""
+    ]
+  },
+  "inc": {
+    "prefix": "inc",
+    "description": "",
+    "body": [
+      "#include"
+    ]
+  },
+  "f": {
+    "prefix": "f",
+    "description": "",
+    "body": [
+      "for (auto i = 0; i < 5; i++) {",
+      "}"
+    ]
+  },
+  "fi": {
+    "prefix": "fi",
+    "description": "",
+    "body": [
+      "for (auto it = v.begin(); it != v.end(); it++) {",
+      "}"
+    ]
+  },
+  "ls": {
+    "prefix": "ls",
+    "description": "",
+    "body": [
+      "#include <list>"
+    ]
+  },
+  "fir": {
+    "prefix": "fir",
+    "description": "",
+    "body": [
+      "for (auto it = L1.rbegin(); it != L1.rend(); it++) {",
+      "}"
+    ]
+  },
+  "test": {
+    "prefix": "test",
+    "description": "",
+    "body": [
+      "void test() {}"
+    ]
+  },
+  "pd": {
+    "prefix": "pd",
+    "description": "",
+    "body": [
+      "printf(\": %d\\n\", );"
+    ]
+  },
+  "p-": {
+    "prefix": "p-",
+    "description": "",
+    "body": [
+      "printf(\"--------------\\n\");"
+    ]
+  },
+  "vi": {
+    "prefix": "vi",
+    "description": "",
+    "body": [
+      "vector<int>"
+    ]
+  },
+  "be": {
+    "prefix": "be",
+    "description": "",
+    "body": [
+      "v.begin(), v.end()"
+    ]
+  }
+}

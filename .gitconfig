@@ -1,0 +1,23 @@
+[credential]
+helper = store
+
+[commit]
+gpgsign = false
+
+[gpg]
+program = gpg
+
+[pull]
+rebase = false
+
+[merge]
+conflictstyle = diff3
+
+[alias]
+count = git rev-list --count HEAD
+undo = git reset --soft HEAD^
+origin = git remote add origin
+publish = git push --set-upstream origin master
+
+[http]
+version = HTTP/1.1

@@ -1,0 +1,16 @@
+{
+    "registry-mirrors": [
+        "https://registry.docker-cn.com",
+        "http://hub-mirror.c.163.com"
+    ],
+    "builder": {
+        "gc": {
+            "defaultKeepStorage": "20GB",
+            "enabled": true
+        }
+    },
+    "experimental": false,
+    "features": {
+        "buildkit": true
+    }
+}

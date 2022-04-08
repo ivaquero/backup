@@ -1,0 +1,9 @@
+{
+  "func": {
+    "prefix": "func",
+    "description": "",
+    "body": [
+      "function FunctionName {}"
+    ]
+  }
+}
