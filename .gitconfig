@@ -1,6 +1,10 @@
 [credential]
 helper = store
 
+[user]
+name = ivaquero
+email = msaintms@outlook.com
+
 [commit]
 gpgsign = false
 
@@ -10,14 +14,35 @@ program = gpg
 [pull]
 rebase = false
 
+[pager]
+diff = delta
+log = delta
+reflog = delta
+show = delta
+
+[interactive]
+diffFilter = delta --color-only --features=interactive
+
+[delta]
+features = decorations
+side-by-side = true
+line-numbers = true
+navigate = true
+
+[delta "interactive"]
+keep-plus-minus-markers = false
+
 [merge]
 conflictstyle = diff3
 
+[diff]
+colorMoved = default
+
 [alias]
-count = git rev-list --count HEAD
-undo = git reset --soft HEAD^
-origin = git remote add origin
-publish = git push --set-upstream origin master
+count = rev-list --count HEAD
+undo = reset --soft HEAD^
+origin = remote add origin
+publish = push --set-upstream origin master
 
 [http]
 version = HTTP/1.1
