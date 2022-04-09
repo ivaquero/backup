@@ -37,13 +37,13 @@ Oxygen[zszj]=$OXIDIZER/zsh-plugins/zsh-zellij.sh
 ##########################################################
 
 declare -A Element
-Element[ox]=$OXIDIZER/oxidizer.sh
-Element[oxc]=$OXIDIZER/custom.sh
+Element[oxi]=$OXIDIZER/oxidizer.sh
+Element[ox]=$OXIDIZER/custom.sh
 Element[al]=$HOME/.config/alacritty/alacritty.yml
 Element[ar]=$HOME/.aria2/aria2.conf
 Element[zs]=$HOME/.zshrc
 
-source $Element[oxc]
+source $Element[ox]
 
 declare -A Oxide
 
@@ -52,8 +52,8 @@ if [[ ! -d $BACKUP/oxidizer ]]; then
 fi
 
 Oxide[zs]=$BACKUP/shell/.zshrc
-Oxide[ox]=$BACKUP/shell/oxidizer.sh
-Oxide[oxc]=$BACKUP/shell/custom.sh
+Oxide[oxi]=$BACKUP/shell/oxidizer.sh
+Oxide[ox]=$BACKUP/shell/custom.sh
 Oxide[al]=$BACKUP/alacritty.yml
 Oxide[ar]=$BACKUP/aria2.conf
 

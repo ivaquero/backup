@@ -3,8 +3,6 @@
 ##########################################################
 
 $global:Oxygen = @{}
-$global:Oxygen.ox = "$env:OXIDIZER/oxidizer.ps1"
-$global:Oxygen.oxc = "$env:OXIDIZER/default-custom.ps1"
 $global:Oxygen.al = "$env:OXIDIZER/defaults/alacritty-win.yml"
 $global:Oxygen.ar = "$env:OXIDIZER/defaults/aria2.conf"
 # plugins
@@ -31,18 +29,18 @@ $global:Oxygen.psw = "$env:OXIDIZER/pwsh-plugins/pwsh-windows.ps1"
 ##########################################################
 
 $global:Element = @{}
-$global:Element.ox = "$env:OXIDIZER/oxidizer.ps1"
-$global:Element.oxc = "$env:OXIDIZER/custom.ps1"
+$global:Element.oxi = "$env:OXIDIZER/oxidizer.ps1"
+$global:Element.ox = "$env:OXIDIZER/custom.ps1"
 $global:Element.al = "$env:SCOOP/persist/alacritty/alacritty.yml"
 $global:Element.ar = "$env:BASE/.aria2/aria2.conf"
 $global:Element.ps = $PROFILE
 
-. $global:Element.oxc
+. $global:Element.ox
 
 $global:Oxide = @{}
 $global:Oxide.ps = "$env:BACKUP/shell/Profile.ps1"
-$global:Oxide.ox = "$env:BACKUP/shell/oxidizer.ps1"
-$global:Oxide.oxc = "$env:BACKUP/shell/custom.ps1"
+$global:Oxide.oxi = "$env:BACKUP/shell/oxidizer.ps1"
+$global:Oxide.ox = "$env:BACKUP/shell/custom.ps1"
 $global:Oxide.al = "$env:BACKUP/alacritty.yml"
 $global:Oxide.ar = "$env:BACKUP/aria2.conf"
 
