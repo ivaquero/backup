@@ -171,7 +171,3 @@ if [[ $STARTUP ]]; then
     eval "$(zoxide init zsh)"
     startup
 fi
-
-if [[ -z $EDITOR ]]; then
-    export EDITOR=code
-fi

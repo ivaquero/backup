@@ -7,6 +7,11 @@ $env:DOWNLOAD = "$env:HOME/Documents"
 # backup folder
 $env:BACKUP = "$env:DOWNLOAD/backup"
 
+# default editor, can be changed by function `ched()`
+$env:EDITOR = code
+# terminal editor
+$env:EDITOR_T = vi
+
 ##########################################################
 # select pwsh-plugins
 ##########################################################

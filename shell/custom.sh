@@ -13,6 +13,11 @@ export DOWNLOAD=$HOME/Documents
 # backup folder
 export BACKUP=$DOWNLOAD/backup
 
+# default editor
+export EDITOR=code
+# terminal editor
+export EDITOR_T=hx
+
 ##########################################################
 # select zsh-plugins
 ##########################################################
