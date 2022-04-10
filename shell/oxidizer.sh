@@ -7,9 +7,8 @@ fi
 ##########################################################
 
 declare -A Oxygen
-Oxygen[zs]=$OXIDIZER/.zshrc
-Oxygen[al]=$OXIDIZER/defaults/alacritty.yml
-Oxygen[ar]=$OXIDIZER/defaults/aria2.conf
+Oxygen[oxal]=$OXIDIZER/defaults/alacritty.yml
+Oxygen[oxar]=$OXIDIZER/defaults/aria2.conf
 # plugins
 Oxygen[zsm]=$OXIDIZER/zsh-plugins/zsh-macos.sh
 Oxygen[zsub]=$OXIDIZER/zsh-plugins/zsh-ubuntu.sh
@@ -51,11 +50,11 @@ if [[ ! -d $BACKUP/oxidizer ]]; then
     mkdir -p $BACKUP/oxidizer
 fi
 
-Oxide[zs]=$BACKUP/shell/.zshrc
-Oxide[oxi]=$BACKUP/shell/oxidizer.sh
-Oxide[ox]=$BACKUP/shell/custom.sh
-Oxide[al]=$BACKUP/alacritty.yml
-Oxide[ar]=$BACKUP/aria2.conf
+Oxide[bkzs]=$BACKUP/shell/.zshrc
+Oxide[bkoxi]=$BACKUP/shell/oxidizer.sh
+Oxide[bkox]=$BACKUP/shell/custom.sh
+Oxide[bkal]=$BACKUP/alacritty.yml
+Oxide[bkar]=$BACKUP/aria2.conf
 
 ##########################################################
 # Aliases

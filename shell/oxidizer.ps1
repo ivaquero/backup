@@ -3,8 +3,8 @@
 ##########################################################
 
 $global:Oxygen = @{}
-$global:Oxygen.al = "$env:OXIDIZER/defaults/alacritty-win.yml"
-$global:Oxygen.ar = "$env:OXIDIZER/defaults/aria2.conf"
+$global:Oxygen.oxal = "$env:OXIDIZER/defaults/alacritty-win.yml"
+$global:Oxygen.oxar = "$env:OXIDIZER/defaults/aria2.conf"
 # plugins
 $global:Oxygen.pss = "$env:OXIDIZER/pwsh-plugins/pwsh-scoop.ps1"
 $global:Oxygen.pscc = "$env:OXIDIZER/pwsh-plugins/pwsh-cpp.ps1"
@@ -38,11 +38,11 @@ $global:Element.ps = $PROFILE
 . $global:Element.ox
 
 $global:Oxide = @{}
-$global:Oxide.ps = "$env:BACKUP/shell/Profile.ps1"
-$global:Oxide.oxi = "$env:BACKUP/shell/oxidizer.ps1"
-$global:Oxide.ox = "$env:BACKUP/shell/custom.ps1"
-$global:Oxide.al = "$env:BACKUP/alacritty.yml"
-$global:Oxide.ar = "$env:BACKUP/aria2.conf"
+$global:Oxide.bkps = "$env:BACKUP/shell/Profile.ps1"
+$global:Oxide.bkoxi = "$env:BACKUP/shell/oxidizer.ps1"
+$global:Oxide.bkox = "$env:BACKUP/shell/custom.ps1"
+$global:Oxide.bkal = "$env:BACKUP/alacritty.yml"
+$global:Oxide.bkar = "$env:BACKUP/aria2.conf"
 
 ##########################################################
 # Aliases

@@ -274,5 +274,12 @@
     "body": [
       "import pyarrow as pa"
     ]
+  },
+  "sy": {
+    "prefix": "sy",
+    "description": "",
+    "body": [
+      "import sympy as sy"
+    ]
   }
 }
