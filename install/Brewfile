@@ -26,7 +26,7 @@ brew "protobuf"
 brew "mysql"
 brew "node"
 brew "pandoc"
-brew "pueue"
+brew "pueue", restart_service: true
 brew "ripgrep"
 brew "rustup-init"
 brew "sd"
@@ -84,4 +84,5 @@ cask "wechat"
 cask "wpsoffice"
 cask "zoom"
 cask "zotero"
+mas "TweetDeck", id: 485812721
 mas "zClock Lite", id: 1489475245

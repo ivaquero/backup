@@ -19,30 +19,30 @@ export EDITOR=code
 export EDITOR_T=hx
 
 ##########################################################
-# select zsh-plugins
+# select ox-plugins
 ##########################################################
 
 # toolchain specific (highly recommended)
-# zsg: zsh-git
-# zszj: zsh-zellij
+# oxpg: ox-git
+# oxpzj: ox-zellij
 #
 # language & software-specific
-# zsc: zsh-conda
-# zscc: zsh-cpp
-# zsdk: zsh-docker
-# zshx: zsh-helix
-# zsjl: zsh-julia
-# zslm: zsh-lima
-# zsn: zsh-node
-# zsrs: zsh-rust
-# zstl: zsh-texlive
-# zsvi: zsh-vim
-# zsvs: zsh-vscode
+# oxpc: ox-conda
+# oxpcc: ox-cpp
+# oxpdk: ox-docker
+# oxphx: ox-helix
+# oxpjl: ox-julia
+# oxplm: ox-lima
+# oxpn: ox-node
+# oxprs: ox-rust
+# oxptl: ox-texlive
+# oxpvi: ox-vim
+# oxpvs: ox-vscode
 #
 # other-shortcuts
-# zsfm: zsh-formats
-# zswt: zsh-widgets
-PLUGINS=(zsg zszj zscc zsc zsjl zsn zsrs zstl zsvs zsfm zswt zslm zshx)
+# oxpfm: ox-format
+# oxpwt: ox-widgets
+PLUGINS=(oxpg oxpzj oxpcc oxpc oxpjl oxpn oxprs oxptl oxpvs oxpfm oxpwt oxplm oxphx)
 
 ##########################################################
 # register proxy ports
@@ -81,11 +81,11 @@ UP_OBJ=(brew conda julia node vscode)
 # vsk: vscode's keybindings.json
 # vss_: vscode's snippets folder
 declare -a EPF_OBJ
-EPF_OBJ=(ox al zs vs vsk vss_)
+EPF_OBJ=(ox al vs vsk vss_)
 
 # files to be import from backup folder
 # declare -a IPF_OBJ
-# IPF_OBJ=(ox al zs vs vsk vss_)
+# IPF_OBJ=(ox al vs vsk vss_)
 
 # file to be copied from oxidizer/defaults
 declare -a IIF_OBJ
@@ -155,10 +155,10 @@ Lima[ub]="ubuntu"
 Lima[ar]="archlinux"
 
 ##########################################################
-# zsh
+# oxph
 ##########################################################
 
-alias tt="\time zsh -i -c exit"
+alias tt="\time oxph -i -c exit"
 alias ua="unalias"
 alias uf="unfunction"
 alias wh="which"

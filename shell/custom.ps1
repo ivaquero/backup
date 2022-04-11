@@ -7,29 +7,34 @@ $env:DOWNLOAD = "$env:HOME/Documents"
 # backup folder
 $env:BACKUP = "$env:DOWNLOAD/backup"
 
+# default editor, can be changed by function `ched()`
+$env:EDITOR = "code"
+# terminal editor
+$env:EDITOR_T = "vi"
+
 ##########################################################
-# select pwsh-plugins
+# select ox-plugins
 ##########################################################
 
 # toolchain specific (highly recommended)
-# pss: pwsh-scoop
-# psg: pwsh-git
+# oxps: ox-scoop
+# oxpg: ox-git
 #
 # language & software-specific
-# pscc: pwsh-cpp
-# psc: pwsh-conda
-# psdk: pwsh-docker
-# psjl: pwsh-julia
-# psn: pwsh-node
-# psrs: pwsh-rust
-# pstl: pwsh-texlive
-# psvi: pwsh-vim
-# psvs: pwsh-vscode
+# oxpcc: ox-cpp
+# oxpc: ox-conda
+# oxpdk: ox-docker
+# oxpjl: ox-julia
+# oxpn: ox-node
+# oxprs: ox-rust
+# oxptl: ox-texlive
+# oxpvi: ox-vim
+# oxpvs: ox-vscode
 #
 # other-shortcuts
-# psfm: formats
-# pswt: pwsh-widgets
-$global:PLUGINS = @("psg", "pscc", "psc", "psjl", "psn", "psrs", "psdk", "psvs", "pstl", "psfm", "pswt")
+# oxpfm: ox-formats
+# oxpwt: ox-widgets
+$global:PLUGINS = @("oxpg", "oxpcc", "oxpc", "oxpjl", "oxpn", "oxprs", "oxpdk", "oxpvs", "oxptl", "oxpfm", "oxpwt")
 
 ##########################################################
 # register proxy ports
@@ -62,10 +67,10 @@ $global:UP_OBJ = @("vscode")
 # vs: vscode's settings.json
 # vsk: vscode's keybindings.json
 # vss_: vscode's snippets folder
-$global:EPF_OBJ = @("ox", "al", "ps", "vs", "vsk", "vss_")
+$global:EPF_OBJ = @("ox", "al", "vs", "vsk", "vss_")
 
 # files to be import from backup folder
-# $global:IPF_OBJ = @("ox", "al", "ps", "vs", "vsk", "vss_")
+# $global:IPF_OBJ = @("ox", "al", "vs", "vsk", "vss_")
 
 # file to be copied from oxidizer/defaults
 # al: alacritty
@@ -110,11 +115,6 @@ function ar { aria2c --dir $env:DOWNLOAD $args }
 ##########################################################
 
 # default editor can be changed by function `ched`
-# $env:EDITOR = "code"
-$global:STARTUP = 1
-
-function startup {
-}
 # $env:EDITOR = "code"
 $global:STARTUP = 1
 
