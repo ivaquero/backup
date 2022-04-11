@@ -155,10 +155,10 @@ Lima[ub]="ubuntu"
 Lima[ar]="archlinux"
 
 ##########################################################
-# oxph
+# zsh
 ##########################################################
 
-alias tt="\time oxph -i -c exit"
+alias tt="\time zsh -i -c exit"
 alias ua="unalias"
 alias uf="unfunction"
 alias wh="which"
