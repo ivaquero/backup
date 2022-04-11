@@ -7,11 +7,6 @@ $env:DOWNLOAD = "$env:HOME/Documents"
 # backup folder
 $env:BACKUP = "$env:DOWNLOAD/backup"
 
-# default editor, can be changed by function `ched()`
-$env:EDITOR = "code"
-# terminal editor
-$env:EDITOR_T = "vi"
-
 ##########################################################
 # select pwsh-plugins
 ##########################################################
@@ -32,9 +27,9 @@ $env:EDITOR_T = "vi"
 # psvs: pwsh-vscode
 #
 # other-shortcuts
-# pspd: pwsh-pandoc
+# psfm: formats
 # pswt: pwsh-widgets
-$global:PLUGINS = @("psg", "pscc", "psc", "psjl", "psn", "psrs", "psdk", "psvs", "pstl", "pspd", "pswt")
+$global:PLUGINS = @("psg", "pscc", "psc", "psjl", "psn", "psrs", "psdk", "psvs", "pstl", "psfm", "pswt")
 
 ##########################################################
 # register proxy ports
@@ -115,6 +110,11 @@ function ar { aria2c --dir $env:DOWNLOAD $args }
 ##########################################################
 
 # default editor can be changed by function `ched`
+# $env:EDITOR = "code"
+$global:STARTUP = 1
+
+function startup {
+}
 # $env:EDITOR = "code"
 $global:STARTUP = 1
 

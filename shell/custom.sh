@@ -40,9 +40,9 @@ export EDITOR_T=hx
 # zsvs: zsh-vscode
 #
 # other-shortcuts
-# zspd: zsh-pandoc
+# zsfm: zsh-formats
 # zswt: zsh-widgets
-PLUGINS=(zsg zszj zscc zsc zsjl zsn zsrs zstl zsvs zspd zswt zslm zshx)
+PLUGINS=(zsg zszj zscc zsc zsjl zsn zsrs zstl zsvs zsfm zswt zslm zshx)
 
 ##########################################################
 # register proxy ports
