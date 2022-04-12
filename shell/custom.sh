@@ -36,13 +36,13 @@ export EDITOR_T=hx
 # oxpn: ox-node
 # oxprs: ox-rust
 # oxptl: ox-texlive
-# oxpvi: ox-vim
+# oxpnv: ox-neovim
 # oxpvs: ox-vscode
 #
 # other-shortcuts
 # oxpfm: ox-format
 # oxpwt: ox-widgets
-PLUGINS=(oxpg oxpzj oxpcc oxpc oxpjl oxpn oxprs oxptl oxpvs oxpfm oxpwt oxplm oxphx)
+PLUGINS=(oxpg oxpzj oxpcc oxpc oxpjl oxpn oxprs oxptl oxpvs oxpfm oxpwt oxplm oxphx oxpnv)
 
 ##########################################################
 # register proxy ports

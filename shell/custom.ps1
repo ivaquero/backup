@@ -28,13 +28,13 @@ $env:EDITOR_T = "vi"
 # oxpn: ox-node
 # oxprs: ox-rust
 # oxptl: ox-texlive
-# oxpvi: ox-vim
+# oxpnv: ox-neovim
 # oxpvs: ox-vscode
 #
 # other-shortcuts
 # oxpfm: ox-formats
 # oxpwt: ox-widgets
-$global:PLUGINS = @("oxpg", "oxpcc", "oxpc", "oxpjl", "oxpn", "oxprs", "oxpdk", "oxpvs", "oxptl", "oxpfm", "oxpwt")
+$global:PLUGINS = @("oxpg", "oxpcc", "oxpc", "oxpjl", "oxpn", "oxprs", "oxpdk", "oxpvs", "oxptl", "oxpfm", "oxpwt", "oxpnv")
 
 ##########################################################
 # register proxy ports
