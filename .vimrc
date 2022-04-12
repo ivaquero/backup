@@ -84,7 +84,6 @@ colorscheme monokai
 let g:coc_global_extensions = [
     \ 'coc-lists',
     \ 'coc-pairs',
-    \ 'coc-snippets',
     \ 'coc-git',
     \ 'coc-emmet',
     \ 'coc-css',
@@ -94,9 +93,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-json',
     \ 'coc-prettier',
-    \ 'coc-rust-analyzer',
     \ 'coc-python',
-    \ 'coc-tsserver',
     \ 'coc-yaml']
 
 " airline
