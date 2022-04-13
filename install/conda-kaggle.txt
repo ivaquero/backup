@@ -1,11 +1,10 @@
-python-graphviz
 tikzplotlib
 lightgbm
 lux-api
-tensorflow
 watermark
-jupytext
 pyarrow
+jupytext
+python-graphviz
 mypy
 yapf
 multiprocess
