@@ -62,6 +62,8 @@ vadimcn.vscode-lldb
 valentjn.vscode-ltex
 VisualStudioExptTeam.vscodeintellicode
 vivaxy.vscode-conventional-commits
+vscodevim.vim
 wenfangdu.faster-new
+XadillaX.viml
 YuTengjing.open-in-external-app
 yzhang.markdown-all-in-one
