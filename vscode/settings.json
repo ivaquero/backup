@@ -239,9 +239,9 @@
   // "[julia][juliamarkdown]": {
   //   "editor.defaultFormatter": "julialang.language-julia"
   // },
-  "[sql]": {
-    "editor.defaultFormatter": "cweijan.vscode-database-client2"
-  },
+  // "[sql]": {
+  //   "editor.defaultFormatter": "cweijan.vscode-database-client2"
+  // },
   "bookmarks.multicursor.toggleMode": "eachLineIndependently",
   "bookmarks.saveBookmarksInProject": true,
   "bookmarks.sideBar.expanded": true,
@@ -462,7 +462,8 @@
   "leetcode.workspaceFolder": "/Users/Shared/leetcode",
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.lineBreak": "\\n",
-  "conventionalCommits.showNewVersionNotes": false,
+  "conventionalCommits.autoCommit": false,
+  "conventionalCommits.promptScopes": false,
   "projectManager.any.maxDepthRecursion": 3,
   "vscode-color-picker.languages": [
     "javascript",
@@ -507,4 +508,5 @@
   "julia.lint.missingrefs": "symbols",
   "julia.runtimeCompletions": true,
   "julia.symbolCacheDownload": false,
+  "vim.easymotion": true,
 }
