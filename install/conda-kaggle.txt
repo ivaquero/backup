@@ -7,7 +7,6 @@ watermark
 jupytext
 pyarrow
 mypy
-numba
 yapf
 multiprocess
 scienceplots
