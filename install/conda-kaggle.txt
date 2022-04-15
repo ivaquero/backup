@@ -8,6 +8,7 @@ jupytext
 python-graphviz
 pyarrow
 mypy
+pytorch-lightning
 umap-learn
 yapf
 multiprocess

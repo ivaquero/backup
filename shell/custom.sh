@@ -170,8 +170,9 @@ alias c="clear"
 alias ccc="local HISTSIZE=0 && history -p && reset"
 
 # tools
-alias du="dust"
 alias ar="aria2c --dir $DOWNLOAD"
+alias du="dust"
+alias tk="tokei"
 
 # global
 #
