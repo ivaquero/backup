@@ -135,6 +135,31 @@
 					<string>Scikit</string>
 				</dict>
 			</dict>
+			<key>TorchMetrics</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-15T12:04:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>TorchMetrics</string>
+						<string>PyTorch</string>
+						<string>Machine Learning</string>
+						<string>Metrics</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
+					<key>authorLinkText</key>
+					<string>Seungjae Jung</string>
+					<key>name</key>
+					<string>TorchMetrics</string>
+					<key>platform</key>
+					<string>usercontribTorchMetrics</string>
+					<key>uniqueIdentifier</key>
+					<string>TorchMetrics</string>
+				</dict>
+			</dict>
 			<key>statsmodels</key>
 			<dict>
 				<key>date</key>
@@ -224,6 +249,8 @@
 			<string>sy</string>
 			<key>~/Library/Application Support/Dash/User Contributed/TensorFlow 2/TensorFlow 2.docset</key>
 			<string>tf</string>
+			<key>~/Library/Application Support/Dash/User Contributed/TorchMetrics/torchmetrics.docset</key>
+			<string>tm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Visual Studio Code/Visual_Studio_Code.docset</key>
 			<string>vs:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
