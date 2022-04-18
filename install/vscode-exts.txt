@@ -12,7 +12,6 @@ cschlosser.doxdocgen
 cweijan.vscode-database-client2
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
-disroop.conan
 eamodio.gitlens
 esbenp.prettier-vscode
 ExecutableBookProject.myst-highlight
