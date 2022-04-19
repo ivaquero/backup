@@ -1,4 +1,8 @@
-export SHELL=$(which zsh)
+export SHELL=$(which bash)
+
+if [[ -r "$HOME/.bashrc" ]]; then
+    source "$HOME/.bashrc"
+fi
 
 if [[ -z $OXIDIZER ]]; then
     export OXIDIZER=$HOME/oxidizer
@@ -7,7 +11,7 @@ source $OXIDIZER/oxidizer.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/mambaforge/base/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/mambaforge/base/bin/conda' 'shell.bash' 'hook' 2>/dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else

@@ -155,12 +155,9 @@ Lima[ub]="ubuntu"
 Lima[ar]="archlinux"
 
 ##########################################################
-# zsh
+# common aliases
 ##########################################################
 
-alias tt="\time zsh -i -c exit"
-alias ua="unalias"
-alias uf="unfunction"
 alias wh="which"
 alias e="echo"
 alias ev="eval"
@@ -174,11 +171,23 @@ alias ar="aria2c --dir $DOWNLOAD"
 alias du="dust"
 alias tk="tokei"
 
+##########################################################
+# zsh
+##########################################################
+
+# zmodload zsh/zprof
+# zmodload zsh/mathfunc
+
+# alias tt="\time zsh -i -c exit"
+
+# # turn case sensitivity off
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
 # global
 #
 # w: wordcount, l: line, w:word
-alias -g w0="| rg '\s0\.\d+'"
-alias -g wl="| wc -l"
+# alias -g w0="| rg '\s0\.\d+'"
+# alias -g wl="| wc -l"
 
 ##########################################################
 # jupyter
