@@ -1,13 +1,13 @@
 export SHELL=$(which bash)
 
 if [[ -r "$HOME/.bashrc" ]]; then
-    source "$HOME/.bashrc"
+    . "$HOME/.bashrc"
 fi
 
 if [[ -z $OXIDIZER ]]; then
     export OXIDIZER=$HOME/oxidizer
 fi
-source $OXIDIZER/oxidizer.sh
+. $OXIDIZER/oxidizer.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
