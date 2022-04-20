@@ -103,7 +103,7 @@ $global:Conda_Env.k = "kaggle"
 
 function wh { which $args }
 function e { echo $args }
-function rr { Remove-Item -Recurse $args }
+function rr { del -Recurse $args }
 function du { dust $args }
 function c { clear }
 # tools
