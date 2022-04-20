@@ -448,18 +448,6 @@
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.formatter.indentTables": true,
   "redhat.telemetry.enabled": false,
-  "leetcode.defaultLanguage": "cpp",
-  "leetcode.hint.commandShortcut": false,
-  "leetcode.hint.commentDescription": false,
-  "leetcode.hint.configWebviewMarkdown": false,
-  "leetcode.useEndpointTranslation": false,
-  "leetcode.filePath": {
-    "default": {
-      "folder": "${language}",
-      "filename": "${id}.${kebab-case-name}.${ext}"
-    }
-  },
-  "leetcode.workspaceFolder": "/Users/Shared/leetcode",
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.lineBreak": "\\n",
   "conventionalCommits.autoCommit": false,
@@ -493,6 +481,19 @@
   "powershell.integratedConsole.suppressStartupBanner": true,
   "powershell.startAsLoginShell.osx": false,
   "powershell.codeFormatting.useCorrectCasing": true,
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.hint.commandShortcut": false,
+  "leetcode.hint.commentDescription": false,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.useEndpointTranslation": false,
+  "leetcode.filePath": {
+    "default": {
+      "folder": "${language}",
+      "filename": "${id}.${kebab-case-name}.${ext}"
+    }
+  },
+  "leetcode.workspaceFolder": "/Users/Shared/leetcode",
+  "leetcode.endpoint": "leetcode-cn",
   "database-client.highlightSQLBlock": true,
   "database-client.showQuery": true,
   "database-client.showTrigger": true,
@@ -509,4 +510,5 @@
   "julia.runtimeCompletions": true,
   "julia.symbolCacheDownload": false,
   "vim.easymotion": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }

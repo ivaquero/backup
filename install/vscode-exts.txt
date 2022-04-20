@@ -27,7 +27,7 @@ inu1255.easy-snippet
 James-Yu.latex-workshop
 jks-liu.wpls
 julialang.language-julia
-LeetCode.vscode-leetcode
+labuladong.leetcode-helper
 livepdm.auto-markdown-toc-ax1
 llvm-vs-code-extensions.vscode-clangd
 mathiassoeholm.markdown-link-updater
