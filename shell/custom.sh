@@ -67,6 +67,16 @@ BACK_OBJ=(brew conda julia node vscode)
 declare -a UP_OBJ
 UP_OBJ=(brew conda julia node vscode)
 
+# backup file path
+Oxide[bkb]=$BACKUP/install/Brewfile
+# conda env stats with bkce, and should be consistent with Conda_Env
+Oxide[bkceb]=$BACKUP/install/conda-base.txt
+Oxide[bkcek]=$BACKUP/install/conda-kaggle.txt
+Oxide[bkjl]=$BACKUP/install/julia.txt
+Oxide[bknj]=$BACKUP/install/node.txt
+Oxide[bktl]=$BACKUP/install/texlive.txt
+Oxide[bkvsx]=$BACKUP/install/vscode-exts.txt
+
 ##########################################################
 # select export and import configurations
 ##########################################################
@@ -105,9 +115,6 @@ export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 # export HOMEBREW_AUTO_UPDATE_SECS="86400"
 
-# brew backup path
-export HOMEBREW_BUNDLE_FILE=$BACKUP/install/Brewfile
-
 # brew mirrors for faster download, use `bmr` to use
 declare -A Brew_Mirror
 Brew_Mirror[ts]="mirrors.tuna.tsinghua.edu.cn/git/homebrew"
@@ -116,7 +123,6 @@ Brew_Mirror[zk]="mirrors.ustc.edu.cn/git/homebrew"
 # predefined brew services
 # set the length of key <= 3
 declare -A Brew_Service
-
 Brew_Service[pu]="pueue"
 Brew_Service[mys]="mysql"
 

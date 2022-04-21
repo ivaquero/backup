@@ -1,7 +1,8 @@
 ghp-import
-mamba
+jupytext
 mypy
 yapf
 multiprocess
-conda-tree
+mamba
 jupyter-book
+conda-tree
