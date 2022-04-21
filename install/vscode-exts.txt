@@ -3,6 +3,7 @@ AffenWiesel.matlab-formatter
 alefragnani.Bookmarks
 alefragnani.project-manager
 AntiAntiSepticeye.vscode-color-picker
+bamlubi.markdowntools
 bierner.emojisense
 bierner.markdown-mermaid
 ChrisChinchilla.vscode-pandoc
@@ -22,7 +23,6 @@ GitHub.copilot
 GitHub.remotehub
 GrapeCity.gc-excelviewer
 hediet.vscode-drawio
-hellorusk.markdown-table-maker
 inu1255.easy-snippet
 James-Yu.latex-workshop
 jks-liu.wpls
@@ -52,6 +52,7 @@ PKief.material-icon-theme
 pomdtr.excalidraw-editor
 qcz.text-power-tools
 redhat.vscode-xml
+seanwu.vscode-qt-for-python
 serayuzgur.crates
 szhshp.bisheng-formatter-vscode-extension
 tamasfe.even-better-toml

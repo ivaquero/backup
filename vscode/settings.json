@@ -1,6 +1,8 @@
 {
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
+  "files.encoding": "utf8bom",
+  "files.trimTrailingWhitespace": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
@@ -48,6 +50,7 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.showExitAlert": false,
   "terminal.integrated.splitCwd": "workspaceRoot",
   "terminal.integrated.tabs.focusMode": "singleClick",
@@ -57,10 +60,9 @@
     "language-julia.interrupt"
   ],
   "terminal.integrated.profiles.windows": {
-    "Git-Bash": {
-      "path": "c:\\scoop\\git\\bin\\bash.exe",
-      "args": [],
-      "icon": "terminal-bash"
+    "PowerShell": {
+      "path": "pwsh.exe",
+      "args": []
     }
   },
   "terminal.integrated.profiles.osx": {
@@ -509,6 +511,5 @@
   "julia.lint.missingrefs": "symbols",
   "julia.runtimeCompletions": true,
   "julia.symbolCacheDownload": false,
-  "vim.easymotion": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "vim.easymotion": true
 }
