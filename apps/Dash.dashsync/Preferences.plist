@@ -225,6 +225,8 @@
 			<string>py</string>
 			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
 			<string>rs</string>
+			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
+			<string>sa</string>
 			<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
 			<string>sp</string>
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
@@ -321,6 +323,11 @@
 			<dict>
 				<key>date</key>
 				<date>2022-03-12T13:33:47Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/SQLAlchemy.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-21T02:14:26Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SciPy.xml</key>
 			<dict>

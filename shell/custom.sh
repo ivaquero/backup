@@ -175,19 +175,19 @@ alias tk="tokei"
 # zsh
 ##########################################################
 
-# zmodload zsh/zprof
-# zmodload zsh/mathfunc
+if [[ $SHELL == *zsh ]]; then
+    zmodload zsh/zprof
+    zmodload zsh/mathfunc
 
-# alias tt="\time zsh -i -c exit"
+    alias tt="\time zsh -i -c exit"
 
-# # turn case sensitivity off
-# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+    # turn case sensitivity off
+    zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
-# global
-#
-# w: wordcount, l: line, w:word
-# alias -g w0="| rg '\s0\.\d+'"
-# alias -g wl="| wc -l"
+    # global
+    alias -g w0="| rg '\s0\.\d+'"
+    alias -g wl="| wc -l"
+fi
 
 ##########################################################
 # jupyter
