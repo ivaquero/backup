@@ -169,25 +169,36 @@ alias ccc="local HISTSIZE=0 && history -p && reset"
 # tools
 alias ar="aria2c --dir $DOWNLOAD"
 alias du="dust"
+alias hf="hyperfine"
 alias tk="tokei"
 
 ##########################################################
-# zsh
+# shell
 ##########################################################
 
-if [[ $SHELL == *zsh ]]; then
-    zmodload zsh/zprof
-    zmodload zsh/mathfunc
-
-    alias tt="\time zsh -i -c exit"
-
+case $SHELL in
+*zsh)
     # turn case sensitivity off
     zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
     # global
     alias -g w0="| rg '\s0\.\d+'"
     alias -g wl="| wc -l"
-fi
+
+    # test
+    alias tt="hyperfine --warmup 3 --shell zsh 'source ~/.zshrc'"
+    ;;
+*bash)
+    # turn case sensitivity off
+    if [ ! -a ~/.inputrc ]; then
+        echo '$include /etc/inputrc' >~/.inputrc
+    fi
+    echo 'set completion-ignore-case On' >>~/.inputrc
+
+    # test
+    alias tt="hyperfine --warmup 3 --shell bash 'source ~/.bash_profile'"
+    ;;
+esac
 
 ##########################################################
 # jupyter

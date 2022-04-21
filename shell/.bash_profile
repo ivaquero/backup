@@ -1,7 +1,7 @@
 export SHELL=$(which bash)
 
-if [[ -r "$HOME/.bashrc" ]]; then
-    . "$HOME/.bashrc"
+if [[ -n $HOME/.bashrc ]]; then
+    . $HOME/.bashrc
 fi
 
 if [[ -z $OXIDIZER ]]; then
