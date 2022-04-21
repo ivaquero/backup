@@ -161,7 +161,7 @@ key_bindings:
   # split pane in v12
   - { key: RBracket, mods: Command|Alt, chars: "\x02%" }
   - { key: RBracket, mods: Command|Alt, chars: "\x02\"" }
-  - { key: RBracket, mods: Command|Alt, chars: "\x0el\x0e" }
+  - { key: RBracket, mods: Command|Alt, chars: "\x0el\x0e\x0el\x0e" }
   # split pane in 22
   - { key: Backslash, mods: Command|Alt, chars: "\x02%" }
   - { key: Backslash, mods: Command|Alt, chars: "\x02\"" }
