@@ -115,6 +115,29 @@
 					<string>PytorchLightning</string>
 				</dict>
 			</dict>
+			<key>Qt_for_Python</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-21T10:07:54Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PySide2</string>
+						<string>PySide6</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
+					<key>authorLinkText</key>
+					<string>AC Better</string>
+					<key>name</key>
+					<string>Qt for Python (PySide 2/PySide 6)</string>
+					<key>platform</key>
+					<string>usercontribQt_for_Python</string>
+					<key>uniqueIdentifier</key>
+					<string>Qt_for_Python</string>
+				</dict>
+			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -223,6 +246,8 @@
 			<string>pd</string>
 			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
 			<string>py</string>
+			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
+			<string>qt:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
 			<string>rs</string>
 			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
@@ -245,6 +270,8 @@
 			<string>t</string>
 			<key>~/Library/Application Support/Dash/User Contributed/PytorchLightning/PytorchLightning.docset</key>
 			<string>tl</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide 2PySide 6/Qt_for_Python.docset</key>
+			<string>qtpy:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/User Contributed/SymPy/SymPy.docset</key>
@@ -318,6 +345,11 @@
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:38:01Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Qt_6.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-21T10:05:45Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Rust.xml</key>
 			<dict>
