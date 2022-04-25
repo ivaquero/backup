@@ -1,12 +1,10 @@
 tikzplotlib
 lightgbm
-sqlalchemy
-lux-api
 pandarallel
-watermark
 ipympl
 jupytext
 pyarrow
+jupyter
 mypy
 pytorch-lightning
 umap-learn
@@ -24,3 +22,4 @@ pydot
 seaborn
 imbalanced-learn
 mpltern
+optuna

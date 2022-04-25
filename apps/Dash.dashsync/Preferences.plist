@@ -90,6 +90,26 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>Optuna</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-25T17:20:47Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Optuna#readme</string>
+					<key>authorLinkText</key>
+					<string>Takuya Shimada</string>
+					<key>name</key>
+					<string>Optuna</string>
+					<key>platform</key>
+					<string>usercontribOptuna</string>
+					<key>uniqueIdentifier</key>
+					<string>Optuna</string>
+				</dict>
+			</dict>
 			<key>PytorchLightning</key>
 			<dict>
 				<key>date</key>
@@ -257,11 +277,13 @@
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
 			<string>ts</string>
 			<key>~/Library/Application Support/Dash/User Contributed/LightGBM/LightGBM.docset</key>
-			<string>lg</string>
+			<string>lgb:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/NetworkX/networkx.docset</key>
 			<string>nx</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Numba/Numba.docset</key>
 			<string>nb</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Optuna/Optuna.docset</key>
+			<string>op</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Powershell/Powershell.docset</key>
 			<string>ps</string>
 			<key>~/Library/Application Support/Dash/User Contributed/PyMC3/PyMC3.docset</key>
