@@ -53,6 +53,7 @@ PKief.material-icon-theme
 pomdtr.excalidraw-editor
 qcz.text-power-tools
 redhat.vscode-xml
+seanwu.vscode-qt-for-python
 serayuzgur.crates
 szhshp.bisheng-formatter-vscode-extension
 tamasfe.even-better-toml

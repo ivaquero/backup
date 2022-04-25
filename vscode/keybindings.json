@@ -152,4 +152,8 @@
     "key": "cmd+enter",
     "command": "workbench.action.terminal.runSelectedText"
   },
+  {
+    "key": "shift+alt+o",
+    "command": "workbench.action.reopenWithEditor"
+  },
 ]
