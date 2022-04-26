@@ -333,6 +333,11 @@
 				<key>date</key>
 				<date>2022-01-19T16:41:46Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/CMake.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-26T15:25:30Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/CSS.xml</key>
 			<dict>
 				<key>date</key>
