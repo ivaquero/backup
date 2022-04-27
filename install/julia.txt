@@ -1,5 +1,4 @@
 Agents
-Arrow
 BenchmarkTools
 CSV
 CairoMakie

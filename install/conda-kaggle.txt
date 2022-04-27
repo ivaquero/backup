@@ -1,9 +1,8 @@
 tikzplotlib
 lightgbm
-pandarallel
 ipympl
+pandarallel
 jupytext
-pyarrow
 jupyter
 mypy
 pytorch-lightning
