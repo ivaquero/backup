@@ -49,18 +49,18 @@ $global:Proxy.v = "1080"
 ##########################################################
 
 # options: scoop, conda, julia, node, texlive, vscode
-$global:INIT_OBJ = @("vscode")
-$global:BACK_OBJ = @("vscode")
-$global:UP_OBJ = @("vscode")
+$global:INIT_OBJ = @("conda", "texlive", "vscode")
+$global:BACK_OBJ = @("conda", "texlive", "vscode")
+$global:UP_OBJ = @("conda", "texlive", "vscode")
 
 # backup file path
-$global:Oxide.bkb = "$env:BACKUP/install/Brewfile"
+$global:Oxide.bks = "$env:BACKUP/install/Scoopfile.txt"
 # conda env stats with bkce, and should be consistent with Conda_Env
 $global:Oxide.bkceb = "$env:BACKUP/install/conda-base.txt"
 $global:Oxide.bkjl = "$env:BACKUP/install/julia.txt"
-$global:Oxide.bknj = "$env:BACKUP/install/node.txt"
 $global:Oxide.bktl = "$env:BACKUP/install/texlive.txt"
 $global:Oxide.bkvsx = "$env:BACKUP/install/vscode-exts.txt"
+# $global:Oxide.bknj = "$env:BACKUP/install/node.txt"
 
 ##########################################################
 # select export and import configurations
@@ -113,10 +113,10 @@ $global:Conda_Env.k = "kaggle"
 function wh { which $args }
 function e { echo $args }
 function rr { del -Recurse $args }
-function du { dust $args }
 function c { clear }
 # tools
 function ar { aria2c --dir $env:DOWNLOAD $args }
+function hf { hyperfine $args }
 
 ##########################################################
 # startup & daily commands

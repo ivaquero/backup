@@ -42,7 +42,7 @@ export EDITOR_T=hx
 # other-shortcuts
 # oxpfm: ox-format
 # oxpwt: ox-widgets
-PLUGINS=(oxpg oxpzj oxpcc oxpc oxpjl oxpnj oxprs oxptl oxpvs oxpfm oxpwt oxplm oxphx oxpnv)
+PLUGINS=(oxpg oxpzj oxpcc oxpc oxpjl oxprs oxptl oxpvs oxpfm oxpwt oxplm oxphx oxpnv)
 
 ##########################################################
 # register proxy ports
@@ -59,13 +59,13 @@ Proxy[v]=1080
 
 # options: brew, conda, julia, node, texlive, vscode
 declare -a INIT_OBJ
-INIT_OBJ=(brew conda julia node vscode)
+INIT_OBJ=(brew conda julia vscode)
 
 declare -a BACK_OBJ
-BACK_OBJ=(brew conda julia node vscode)
+BACK_OBJ=(brew conda julia vscode)
 
 declare -a UP_OBJ
-UP_OBJ=(brew conda julia node vscode)
+UP_OBJ=(brew conda julia vscode)
 
 # backup file path
 Oxide[bkb]=$BACKUP/install/Brewfile
@@ -73,9 +73,9 @@ Oxide[bkb]=$BACKUP/install/Brewfile
 Oxide[bkceb]=$BACKUP/install/conda-base.txt
 Oxide[bkcek]=$BACKUP/install/conda-kaggle.txt
 Oxide[bkjl]=$BACKUP/install/julia.txt
-Oxide[bknj]=$BACKUP/install/node.txt
 Oxide[bktl]=$BACKUP/install/texlive.txt
 Oxide[bkvsx]=$BACKUP/install/vscode-exts.txt
+# Oxide[bknj]=$BACKUP/install/node.txt
 
 ##########################################################
 # select export and import configurations

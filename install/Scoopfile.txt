@@ -49,6 +49,7 @@ mathpix-snipping-tool
 miniconda3
 motrix
 pdfsam
+qt-creator
 teamviewer
 tencent-meeting
 texlive
