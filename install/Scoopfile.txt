@@ -1,8 +1,8 @@
 sudo
 busybox
+clangd
 bat
 bottom
-clangd
 conan
 deno
 dust
