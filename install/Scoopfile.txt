@@ -4,7 +4,6 @@ clangd
 bat
 bottom
 conan
-deno
 dust
 fd
 ffmpeg
