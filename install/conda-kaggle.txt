@@ -1,9 +1,10 @@
 tikzplotlib
 lightgbm
 ipympl
+arviz
 pandarallel
+llvmdev
 jupytext
-jupyter
 mypy
 pytorch-lightning
 umap-learn
@@ -11,7 +12,6 @@ yapf
 multiprocess
 python-graphviz
 scienceplots
-pymc
 tabulate
 openpyxl
 sympy
