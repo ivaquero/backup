@@ -113,7 +113,7 @@
 			<key>PytorchLightning</key>
 			<dict>
 				<key>date</key>
-				<date>2022-04-15T02:53:38Z</date>
+				<date>2022-04-30T15:08:13Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -178,31 +178,6 @@
 					<string>Scikit</string>
 				</dict>
 			</dict>
-			<key>TorchMetrics</key>
-			<dict>
-				<key>date</key>
-				<date>2022-04-15T12:04:12Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>TorchMetrics</string>
-						<string>PyTorch</string>
-						<string>Machine Learning</string>
-						<string>Metrics</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
-					<key>authorLinkText</key>
-					<string>Seungjae Jung</string>
-					<key>name</key>
-					<string>TorchMetrics</string>
-					<key>platform</key>
-					<string>usercontribTorchMetrics</string>
-					<key>uniqueIdentifier</key>
-					<string>TorchMetrics</string>
-				</dict>
-			</dict>
 			<key>statsmodels</key>
 			<dict>
 				<key>date</key>
@@ -230,7 +205,33 @@
 			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict/>
+		<dict>
+			<key>TorchMetrics</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-30T15:08:35Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>TorchMetrics</string>
+						<string>PyTorch</string>
+						<string>Machine Learning</string>
+						<string>Metrics</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
+					<key>authorLinkText</key>
+					<string>Seungjae Jung</string>
+					<key>name</key>
+					<string>TorchMetrics</string>
+					<key>platform</key>
+					<string>usercontribTorchMetrics</string>
+					<key>uniqueIdentifier</key>
+					<string>TorchMetrics</string>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>actuallyDarkWebView</key>
 	<true/>
