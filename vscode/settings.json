@@ -479,6 +479,7 @@
   },
   "csv-preview.lineNumbers": "ordinal",
   "csv-preview.resizeColumns": "all",
+  "print-it.python.template": "print({{raw}})",
   "powershell.buttons.showPanelMovementButtons": true,
   "powershell.integratedConsole.suppressStartupBanner": true,
   "powershell.startAsLoginShell.osx": false,

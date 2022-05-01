@@ -6,6 +6,7 @@ AntiAntiSepticeye.vscode-color-picker
 bamlubi.markdowntools
 bierner.emojisense
 bierner.markdown-mermaid
+bmalehorn.print-it
 ChrisChinchilla.vscode-pandoc
 christian-kohler.path-intellisense
 clover.md-table-editor
@@ -55,6 +56,7 @@ qcz.text-power-tools
 redhat.vscode-xml
 seanwu.vscode-qt-for-python
 serayuzgur.crates
+sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
 tamasfe.even-better-toml
 Thinker.data-size-count
