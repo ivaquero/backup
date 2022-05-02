@@ -20,6 +20,7 @@ ModelingToolkit
 MultivariateStats
 OhMyREPL
 Polynomials
+StatsBase
 Symbolics
 XLSX
 CPUSummary
