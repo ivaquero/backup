@@ -206,6 +206,30 @@
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>Swift</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-03T16:41:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Swift</string>
+						<string>Swift Language Guide</string>
+						<string>Swift Book</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Swift#readme</string>
+					<key>authorLinkText</key>
+					<string>Roey Biran</string>
+					<key>name</key>
+					<string>Swift Language Guide</string>
+					<key>platform</key>
+					<string>usercontribSwift</string>
+					<key>uniqueIdentifier</key>
+					<string>Swift</string>
+				</dict>
+			</dict>
 			<key>TorchMetrics</key>
 			<dict>
 				<key>date</key>
@@ -241,6 +265,8 @@
 	<dict>
 		<key>keywords</key>
 		<dict>
+			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
+			<string>a</string>
 			<key>~/Library/Application Support/Dash/DocSets/Bash/Bash.docset</key>
 			<string>sh</string>
 			<key>~/Library/Application Support/Dash/DocSets/C++/C++.docset</key>
@@ -297,6 +323,8 @@
 			<string>qtpy:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
 			<string>rq</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Swift Language Guide/SwiftLanguageGuide.docset</key>
+			<string>sw</string>
 			<key>~/Library/Application Support/Dash/User Contributed/SymPy/SymPy.docset</key>
 			<string>sy</string>
 			<key>~/Library/Application Support/Dash/User Contributed/TensorFlow 2/TensorFlow 2.docset</key>
@@ -319,6 +347,11 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-03T16:20:41Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
 				<key>date</key>
