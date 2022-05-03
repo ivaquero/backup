@@ -1,11 +1,9 @@
-Agents
 BenchmarkTools
 CSV
 CairoMakie
 Catalyst
 Clustering
 Combinatorics
-DataFrames
 DataStructures
 DifferentialEquations
 Distributions
