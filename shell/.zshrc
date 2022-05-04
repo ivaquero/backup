@@ -1,3 +1,5 @@
+#!/opt/homebrew/bin/zsh
+
 if [[ -z $OXIDIZER ]]; then
     export OXIDIZER=$HOME/oxidizer
 fi

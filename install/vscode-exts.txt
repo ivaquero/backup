@@ -51,12 +51,13 @@ PKief.material-icon-theme
 pomdtr.excalidraw-editor
 qcz.text-power-tools
 redhat.vscode-xml
-seanwu.vscode-qt-for-python
 serayuzgur.crates
+sswg.swift-lang
 sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
 tamasfe.even-better-toml
 Thinker.data-size-count
+tonka3000.qtvsctools
 twxs.cmake
 usernamehw.errorlens
 vadimcn.vscode-lldb
