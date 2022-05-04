@@ -67,5 +67,6 @@ vivaxy.vscode-conventional-commits
 vscodevim.vim
 wenfangdu.faster-new
 XadillaX.viml
+Xenny.markdown-table
 YuTengjing.open-in-external-app
 yzhang.markdown-all-in-one
