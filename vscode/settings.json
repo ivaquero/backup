@@ -493,10 +493,6 @@
   "leetcode.workspaceFolder": "/Users/Shared/leetcode",
   "leetcode.endpoint": "leetcode-cn",
   "qttools.creator": "/opt/homebrew/Caskroom/qt-creator/7.0.1/Qt Creator.app",
-  "database-client.highlightSQLBlock": true,
-  "database-client.showQuery": true,
-  "database-client.showTrigger": true,
-  "database-client.showUser": true,
   "julia.completionmode": "import",
   "julia.deleteJuliaCovFiles": true,
   "julia.editor": "code",
@@ -508,5 +504,8 @@
   "julia.lint.missingrefs": "symbols",
   "julia.runtimeCompletions": true,
   "julia.symbolCacheDownload": false,
-  "vim.easymotion": true
+  "database-client.highlightSQLBlock": true,
+  "database-client.showQuery": true,
+  "database-client.showTrigger": true,
+  "database-client.showUser": true
 }
