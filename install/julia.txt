@@ -11,8 +11,10 @@ Flux
 GLM
 GLMakie
 HTTP
+HiGHS
 HypothesisTests
 IJulia
+JuMP
 Metaheuristics
 ModelingToolkit
 MultivariateStats
