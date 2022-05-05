@@ -108,16 +108,11 @@
   "code-runner.executorMap": {
     "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "golang": "go run",
     "java": "javac $dir$fileName && java $dir$fileNameWithoutExt",
-    "javascript": "node",
-    "julia": "julia",
-    "lua": "lua",
-    "python": "$pythonPath -u $fullFileName",
+    "javascript": "deno fmt && deno run --allow-net $fullFileName",
+    "julia": "julia eval $fullFileName",
+    "python": "$(which python) -u $fullFileName",
     "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt"
-  },
-  "code-runner.executorMapByGlob": {
-    "*.js": "node"
   },
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.saveAllFilesBeforeRun": true,
@@ -497,6 +492,7 @@
   },
   "leetcode.workspaceFolder": "/Users/Shared/leetcode",
   "leetcode.endpoint": "leetcode-cn",
+  "qttools.creator": "/opt/homebrew/Caskroom/qt-creator/7.0.1/Qt Creator.app",
   "database-client.highlightSQLBlock": true,
   "database-client.showQuery": true,
   "database-client.showTrigger": true,
