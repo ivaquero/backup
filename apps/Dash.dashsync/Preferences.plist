@@ -273,6 +273,8 @@
 			<string>cc</string>
 			<key>~/Library/Application Support/Dash/DocSets/C/C.docset</key>
 			<string>c</string>
+			<key>~/Library/Application Support/Dash/DocSets/CMake/CMake.docset</key>
+			<string>cm</string>
 			<key>~/Library/Application Support/Dash/DocSets/CSS/CSS.docset</key>
 			<string>css</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
@@ -294,7 +296,7 @@
 			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
 			<string>py</string>
 			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
-			<string>qt:</string>
+			<string>q</string>
 			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
 			<string>rs</string>
 			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
@@ -320,7 +322,7 @@
 			<key>~/Library/Application Support/Dash/User Contributed/PytorchLightning/PytorchLightning.docset</key>
 			<string>tl</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide 2PySide 6/Qt_for_Python.docset</key>
-			<string>qtpy:</string>
+			<string>qp</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Swift Language Guide/SwiftLanguageGuide.docset</key>

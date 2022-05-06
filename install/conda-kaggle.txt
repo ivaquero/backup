@@ -11,6 +11,7 @@ pytorch-lightning
 umap-learn
 yapf
 multiprocess
+clangxx
 python-graphviz
 scienceplots
 tabulate
