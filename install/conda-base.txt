@@ -1,8 +1,10 @@
+pyppeteer
 ghp-import
 jupytext
 mypy
+mamba
 yapf
 multiprocess
-mamba
 jupyter-book
+importlib-resources
 conda-tree
