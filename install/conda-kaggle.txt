@@ -3,6 +3,7 @@ lightgbm
 ipympl
 arviz
 mlxtend
+lux-api
 pandarallel
 llvmdev
 jupytext
