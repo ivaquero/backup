@@ -90,6 +90,28 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>Deno</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-09T03:54:41Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Deno API</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Deno#readme</string>
+					<key>authorLinkText</key>
+					<string>Yuto Oguchi</string>
+					<key>name</key>
+					<string>Deno</string>
+					<key>platform</key>
+					<string>usercontribDeno</string>
+					<key>uniqueIdentifier</key>
+					<string>Deno</string>
+				</dict>
+			</dict>
 			<key>Optuna</key>
 			<dict>
 				<key>date</key>
@@ -305,6 +327,8 @@
 			<string>sp</string>
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
 			<string>ts</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Deno/deno.docset</key>
+			<string>dn</string>
 			<key>~/Library/Application Support/Dash/User Contributed/LightGBM/LightGBM.docset</key>
 			<string>lgb:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/NetworkX/networkx.docset</key>
@@ -349,11 +373,6 @@
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-05-03T16:20:41Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
 				<key>date</key>
@@ -437,6 +456,11 @@
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-09T03:54:05Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Docker.xml</key>
 			<dict>
 				<key>date</key>

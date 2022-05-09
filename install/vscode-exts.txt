@@ -1,5 +1,4 @@
 adpyke.codesnap
-AffenWiesel.matlab-formatter
 alefragnani.Bookmarks
 alefragnani.project-manager
 AntiAntiSepticeye.vscode-color-picker
@@ -58,7 +57,6 @@ sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
 tamasfe.even-better-toml
 Thinker.data-size-count
-tonka3000.qtvsctools
 twxs.cmake
 usernamehw.errorlens
 vadimcn.vscode-lldb
