@@ -40,13 +40,6 @@
       ""
     ]
   },
-  "inc": {
-    "prefix": "inc",
-    "description": "",
-    "body": [
-      "#include"
-    ]
-  },
   "f": {
     "prefix": "f",
     "description": "",
@@ -111,6 +104,27 @@
     "description": "",
     "body": [
       "v.begin(), v.end()"
+    ]
+  },
+  "vec": {
+    "prefix": "vec",
+    "description": "",
+    "body": [
+      "#include <vector>"
+    ]
+  },
+  "alg": {
+    "prefix": "alg",
+    "description": "",
+    "body": [
+      "#include <algorithm>"
+    ]
+  },
+  "inc": {
+    "prefix": "inc",
+    "description": "",
+    "body": [
+      "#include"
     ]
   }
 }

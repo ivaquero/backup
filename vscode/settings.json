@@ -95,7 +95,6 @@
     "*.png": "imagePreview.previewEditor",
     "*.pdf": "latex-workshop-pdf-hook"
   },
-  "workbench.experimental.editor.dragAndDropIntoEditor.enabled": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "newUntitledFile",
@@ -112,7 +111,8 @@
     "javascript": "deno fmt && deno run --allow-net $fullFileName",
     "julia": "julia eval $fullFileName",
     "python": "$(which python) -u $fullFileName",
-    "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt"
+    "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt",
+    "shell": "zsh $fullFileName",
   },
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.saveAllFilesBeforeRun": true,
