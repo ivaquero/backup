@@ -313,6 +313,8 @@
 			<string>m</string>
 			<key>~/Library/Application Support/Dash/DocSets/NumPy/NumPy.docset</key>
 			<string>np</string>
+			<key>~/Library/Application Support/Dash/DocSets/OpenCV/OpenCV.docset</key>
+			<string>cv</string>
 			<key>~/Library/Application Support/Dash/DocSets/Pandas/Pandas.docset</key>
 			<string>pd</string>
 			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
@@ -422,6 +424,11 @@
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:00:56Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/OpenCV.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-10T04:22:23Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Pandas.xml</key>
 			<dict>
