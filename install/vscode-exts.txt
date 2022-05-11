@@ -1,4 +1,5 @@
 adpyke.codesnap
+ahnafnafee.postscript-preview
 alefragnani.Bookmarks
 alefragnani.project-manager
 AntiAntiSepticeye.vscode-color-picker
