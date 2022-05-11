@@ -95,6 +95,5 @@ cask "wechatwork"
 cask "wpsoffice"
 cask "zoom"
 cask "zotero"
-mas "Playgrounds", id: 1496833156
 mas "Twitter", id: 1482454543
 mas "zClock Lite", id: 1489475245

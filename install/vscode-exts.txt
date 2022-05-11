@@ -56,6 +56,7 @@ redhat.vscode-xml
 serayuzgur.crates
 sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
+takayama.vscode-qq
 tamasfe.even-better-toml
 Thinker.data-size-count
 twxs.cmake
