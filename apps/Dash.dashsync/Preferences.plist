@@ -200,6 +200,28 @@
 					<string>Scikit</string>
 				</dict>
 			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-13T06:41:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Niru Maheswaranathan</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
 			<key>statsmodels</key>
 			<dict>
 				<key>date</key>
@@ -228,6 +250,38 @@
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>PyMC3</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-13T06:37:45Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>python</string>
+						<string>statistical-analysis</string>
+						<string>theano</string>
+						<string>probabilistic-programming</string>
+						<string>bayesian-inference</string>
+						<string>variational-inference</string>
+						<string>mcmc</string>
+						<string>bayesian</string>
+						<string>bayes</string>
+						<string>stats</string>
+						<string>statistics</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyMC3#readme</string>
+					<key>authorLinkText</key>
+					<string>Paulo S. Costa</string>
+					<key>name</key>
+					<string>PyMC3</string>
+					<key>platform</key>
+					<string>usercontribPyMC3</string>
+					<key>uniqueIdentifier</key>
+					<string>PyMC3</string>
+				</dict>
+			</dict>
 			<key>Swift</key>
 			<dict>
 				<key>date</key>
@@ -361,6 +415,8 @@
 			<string>tm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Visual Studio Code/Visual_Studio_Code.docset</key>
 			<string>vs:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/jax/jax.docset</key>
+			<string>jx</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
 			<string>sk</string>
 			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn 0.11.0.docset</key>

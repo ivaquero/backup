@@ -4,14 +4,13 @@ ipympl
 arviz
 mlxtend
 lux-api
+numpyro
 pandarallel
-llvmdev
 jupytext
 pytorch-lightning
 umap-learn
 yapf
 multiprocess
-clangxx
 python-graphviz
 scienceplots
 tabulate
