@@ -7,7 +7,6 @@ lux-api
 pandarallel
 llvmdev
 jupytext
-mypy
 pytorch-lightning
 umap-learn
 yapf
