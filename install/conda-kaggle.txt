@@ -21,5 +21,4 @@ torchvision
 pydot
 seaborn
 imbalanced-learn
-mpltern
 optuna
