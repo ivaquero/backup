@@ -50,6 +50,7 @@ miniconda3
 motrix
 pdfsam
 qt-creator
+shotcut
 teamviewer
 tencent-meeting
 texlive
