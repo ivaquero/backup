@@ -1,691 +1,690 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+	<key>DHCheatRepo</key>
 	<dict>
-		<key>DHCheatRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHClojureRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHDartRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHGitHubRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHGoRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHHaskellRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHHexRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHJavaRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHPhpRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHRubyRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHScalaRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHStackOverflowRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>DHUserRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict>
-				<key>Deno</key>
-				<dict>
-					<key>date</key>
-					<date>2022-05-20T14:20:24Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>Deno API</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Deno#readme</string>
-						<key>authorLinkText</key>
-						<string>Yuto Oguchi</string>
-						<key>name</key>
-						<string>Deno</string>
-						<key>platform</key>
-						<string>usercontribDeno</string>
-						<key>uniqueIdentifier</key>
-						<string>Deno</string>
-					</dict>
-				</dict>
-				<key>Optuna</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-25T17:20:47Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array />
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Optuna#readme</string>
-						<key>authorLinkText</key>
-						<string>Takuya Shimada</string>
-						<key>name</key>
-						<string>Optuna</string>
-						<key>platform</key>
-						<string>usercontribOptuna</string>
-						<key>uniqueIdentifier</key>
-						<string>Optuna</string>
-					</dict>
-				</dict>
-				<key>PytorchLightning</key>
-				<dict>
-					<key>date</key>
-					<date>2022-05-11T17:39:53Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>PytorchLightning</string>
-							<string>pytorchlightning</string>
-							<string>pytorch lightning</string>
-							<string>pytorch-lightning</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PytorchLightning#readme</string>
-						<key>authorLinkText</key>
-						<string>Mun Hou</string>
-						<key>name</key>
-						<string>PytorchLightning</string>
-						<key>platform</key>
-						<string>usercontribPytorchLightning</string>
-						<key>uniqueIdentifier</key>
-						<string>PytorchLightning</string>
-					</dict>
-				</dict>
-				<key>Qt_for_Python</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-21T10:07:54Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>PySide2</string>
-							<string>PySide6</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
-						<key>authorLinkText</key>
-						<string>AC Better</string>
-						<key>name</key>
-						<string>Qt for Python (PySide 2/PySide 6)</string>
-						<key>platform</key>
-						<string>usercontribQt_for_Python</string>
-						<key>uniqueIdentifier</key>
-						<string>Qt_for_Python</string>
-					</dict>
-				</dict>
-				<key>Scikit</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:08:17Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array />
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
-						<key>authorLinkText</key>
-						<string>Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman</string>
-						<key>name</key>
-						<string>scikit-learn</string>
-						<key>platform</key>
-						<string>usercontribScikit</string>
-						<key>uniqueIdentifier</key>
-						<string>Scikit</string>
-					</dict>
-				</dict>
-				<key>jax</key>
-				<dict>
-					<key>date</key>
-					<date>2022-05-13T06:41:58Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>jaxlib</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-						<key>authorLinkText</key>
-						<string>Niru Maheswaranathan</string>
-						<key>name</key>
-						<string>jax</string>
-						<key>platform</key>
-						<string>usercontribjax</string>
-						<key>uniqueIdentifier</key>
-						<string>jax</string>
-					</dict>
-				</dict>
-				<key>statsmodels</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:14:48Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>Statsmodels</string>
-							<string>statsmodels</string>
-							<string>Statsmodels 0.13.1</string>
-							<string>statsmodels 0.13.1</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/statsmodels#readme</string>
-						<key>authorLinkText</key>
-						<string>Angelo Varlotta</string>
-						<key>name</key>
-						<string>statsmodels</string>
-						<key>platform</key>
-						<string>usercontribstatsmodels</string>
-						<key>uniqueIdentifier</key>
-						<string>statsmodels</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>uninstalled</key>
-			<dict>
-				<key>TorchMetrics</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-30T15:08:35Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>TorchMetrics</string>
-							<string>PyTorch</string>
-							<string>Machine Learning</string>
-							<string>Metrics</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
-						<key>authorLinkText</key>
-						<string>Seungjae Jung</string>
-						<key>name</key>
-						<string>TorchMetrics</string>
-						<key>platform</key>
-						<string>usercontribTorchMetrics</string>
-						<key>uniqueIdentifier</key>
-						<string>TorchMetrics</string>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
-		<key>actuallyDarkWebView</key>
-		<true />
-		<key>annotationsAreShown</key>
-		<true />
-		<key>docsets</key>
-		<dict>
-			<key>keywords</key>
-			<dict>
-				<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
-				<string>a</string>
-				<key>~/Library/Application Support/Dash/DocSets/Bash/Bash.docset</key>
-				<string>sh</string>
-				<key>~/Library/Application Support/Dash/DocSets/C++/C++.docset</key>
-				<string>cc</string>
-				<key>~/Library/Application Support/Dash/DocSets/C/C.docset</key>
-				<string>c</string>
-				<key>~/Library/Application Support/Dash/DocSets/CMake/CMake.docset</key>
-				<string>cm</string>
-				<key>~/Library/Application Support/Dash/DocSets/CSS/CSS.docset</key>
-				<string>css</string>
-				<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
-				<string>h</string>
-				<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
-				<string>js</string>
-				<key>~/Library/Application Support/Dash/DocSets/Julia/Julia.docset</key>
-				<string>jl</string>
-				<key>~/Library/Application Support/Dash/DocSets/LaTeX/LaTeX.docset</key>
-				<string>l</string>
-				<key>~/Library/Application Support/Dash/DocSets/Man_Pages/Man Pages.docset</key>
-				<string>mac</string>
-				<key>~/Library/Application Support/Dash/DocSets/MatPlotLib/Matplotlib.docset</key>
-				<string>m</string>
-				<key>~/Library/Application Support/Dash/DocSets/NumPy/NumPy.docset</key>
-				<string>np</string>
-				<key>~/Library/Application Support/Dash/DocSets/OpenCV/OpenCV.docset</key>
-				<string>cv</string>
-				<key>~/Library/Application Support/Dash/DocSets/Pandas/Pandas.docset</key>
-				<string>pd</string>
-				<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
-				<string>py</string>
-				<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
-				<string>q</string>
-				<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
-				<string>rs</string>
-				<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
-				<string>sa</string>
-				<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
-				<string>sp</string>
-				<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
-				<string>ts</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Deno/deno.docset</key>
-				<string>dn</string>
-				<key>~/Library/Application Support/Dash/User Contributed/LightGBM/LightGBM.docset</key>
-				<string>lgb:</string>
-				<key>~/Library/Application Support/Dash/User Contributed/NetworkX/networkx.docset</key>
-				<string>nx</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Numba/Numba.docset</key>
-				<string>nb</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Optuna/Optuna.docset</key>
-				<string>op</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Powershell/Powershell.docset</key>
-				<string>ps</string>
-				<key>~/Library/Application Support/Dash/User Contributed/PyMC3/PyMC3.docset</key>
-				<string>pm</string>
-				<key>~/Library/Application Support/Dash/User Contributed/PyTorch/PyTorch.docset</key>
-				<string>t</string>
-				<key>~/Library/Application Support/Dash/User Contributed/PytorchLightning/PytorchLightning.docset</key>
-				<string>tl</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide 2PySide 6/Qt_for_Python.docset</key>
-				<string>qp</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
-				<string>rq</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Swift Language Guide/SwiftLanguageGuide.docset</key>
-				<string>sw</string>
-				<key>~/Library/Application Support/Dash/User Contributed/SymPy/SymPy.docset</key>
-				<string>sy</string>
-				<key>~/Library/Application Support/Dash/User Contributed/TensorFlow 2/TensorFlow 2.docset</key>
-				<string>tf</string>
-				<key>~/Library/Application Support/Dash/User Contributed/TorchMetrics/torchmetrics.docset</key>
-				<string>tm</string>
-				<key>~/Library/Application Support/Dash/User Contributed/Visual Studio Code/Visual_Studio_Code.docset</key>
-				<string>vs:</string>
-				<key>~/Library/Application Support/Dash/User Contributed/jax/jax.docset</key>
-				<string>jx</string>
-				<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
-				<string>sk</string>
-				<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn 0.11.0.docset</key>
-				<string>s</string>
-				<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels 0.13.1.docset</key>
-				<string>sm</string>
-				<key>~/Library/Application Support/Dash/User Contributed/torchvision/torchvision.docset</key>
-				<string>tv</string>
-			</dict>
-		</dict>
-		<key>feeds</key>
-		<dict>
-			<key>installed</key>
-			<dict>
-				<key>http://kapeli.com/feeds/Bash.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-03-27T03:46:51Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/C++.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:48:22Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/CMake.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-26T15:25:30Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/CSS.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:19:27Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/HTML.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:15:43Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/JavaScript.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:39:34Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/Man_Pages.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-02T07:47:36Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:24:48Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/NumPy.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:00:56Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/OpenCV.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-05-10T04:22:23Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/Pandas.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:38:01Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/Qt_6.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-21T10:05:45Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/Rust.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-03-12T13:33:47Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/SQLAlchemy.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-04-21T02:14:26Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/SciPy.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-19T16:17:05Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/TypeScript.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-03-10T04:50:13Z</date>
-				</dict>
-			</dict>
-			<key>uninstalled</key>
-			<dict>
-				<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-05-09T03:54:05Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/C.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-05-20T14:34:28Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/Docker.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-03-19T16:39:54Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/Sass.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-02-02T11:06:04Z</date>
-				</dict>
-				<key>http://kapeli.com/feeds/VueJS.xml</key>
-				<dict>
-					<key>date</key>
-					<date>2022-01-31T04:40:55Z</date>
-				</dict>
-			</dict>
-		</dict>
-		<key>isPinned</key>
-		<false />
-		<key>placeholderDelimiter</key>
-		<string>__</string>
-		<key>profiles</key>
-		<array>
-			<dict>
-				<key>isDefault</key>
-				<true />
-				<key>name</key>
-				<string>Default</string>
-				<key>searchSnippets</key>
-				<false />
-				<key>triggers</key>
-				<array>
-					<dict>
-						<key>appPath</key>
-						<string>/Applications/Visual Studio Code.app</string>
-						<key>bundle</key>
-						<string>com.microsoft.VSCode</string>
-						<key>description</key>
-						<string>Code becomes active</string>
-						<key>image</key>
-						<string>generalAppIcon</string>
-						<key>isAppTrigger</key>
-						<true />
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>icon</key>
-				<string>Snippet</string>
-				<key>name</key>
-				<string>Snippets Only</string>
-				<key>placeholder</key>
-				<string>Search Snippets</string>
-				<key>searchSnippets</key>
-				<true />
-			</dict>
-		</array>
-		<key>searchKey</key>
-		<dict>
-			<key>keyCode</key>
-			<integer>2</integer>
-			<key>modifiers</key>
-			<integer>4608</integer>
-		</dict>
-		<key>shouldRestoreTabs</key>
-		<true />
-		<key>shouldShowStatusIcon</key>
-		<false />
-		<key>shouldSyncBookmarks</key>
-		<true />
-		<key>shouldSyncDocsets</key>
-		<true />
-		<key>shouldSyncGeneral</key>
-		<true />
-		<key>shouldSyncView</key>
-		<true />
-		<key>showDisabledDocsets</key>
-		<true />
-		<key>showInDock</key>
-		<true />
-		<key>sortDocsetsAlphabetically</key>
-		<true />
-		<key>versionedDHCheatRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHClojureRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHDartRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHGitHubRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHGoRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHHaskellRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHHexRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHJavaRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHPhpRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHRubyRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHScalaRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHStackOverflowRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedDHUserRepo</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>versionedFeeds</key>
-		<dict>
-			<key>installed</key>
-			<dict />
-			<key>uninstalled</key>
-			<dict />
-		</dict>
-		<key>webSearches</key>
-		<array>
-			<dict>
-				<key>iconName</key>
-				<string>Google</string>
-				<key>isDefault</key>
-				<true />
-				<key>isEnabled</key>
-				<false />
-				<key>name</key>
-				<string>Google</string>
-				<key>url</key>
-				<string>https://www.google.com/search?q={query}</string>
-			</dict>
-			<dict>
-				<key>iconName</key>
-				<string>DuckDuckGo</string>
-				<key>isDefault</key>
-				<true />
-				<key>isEnabled</key>
-				<false />
-				<key>name</key>
-				<string>DuckDuckGo</string>
-				<key>url</key>
-				<string>https://duckduckgo.com/?q={query}&amp;ia=web</string>
-			</dict>
-			<dict>
-				<key>iconName</key>
-				<string>Stack Overflow</string>
-				<key>isDefault</key>
-				<true />
-				<key>isEnabled</key>
-				<false />
-				<key>name</key>
-				<string>Stack Overflow</string>
-				<key>url</key>
-				<string>https://stackoverflow.com/search?q={query}</string>
-			</dict>
-		</array>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
 	</dict>
+	<key>DHClojureRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHDartRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHGitHubRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHGoRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHHaskellRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHHexRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHJavaRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHPhpRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHRubyRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHScalaRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHStackOverflowRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>DHUserRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict>
+			<key>Deno</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-20T14:20:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Deno API</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Deno#readme</string>
+					<key>authorLinkText</key>
+					<string>Yuto Oguchi</string>
+					<key>name</key>
+					<string>Deno</string>
+					<key>platform</key>
+					<string>usercontribDeno</string>
+					<key>uniqueIdentifier</key>
+					<string>Deno</string>
+				</dict>
+			</dict>
+			<key>Optuna</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-25T17:20:47Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Optuna#readme</string>
+					<key>authorLinkText</key>
+					<string>Takuya Shimada</string>
+					<key>name</key>
+					<string>Optuna</string>
+					<key>platform</key>
+					<string>usercontribOptuna</string>
+					<key>uniqueIdentifier</key>
+					<string>Optuna</string>
+				</dict>
+			</dict>
+			<key>PytorchLightning</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-11T17:39:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PytorchLightning</string>
+						<string>pytorchlightning</string>
+						<string>pytorch lightning</string>
+						<string>pytorch-lightning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PytorchLightning#readme</string>
+					<key>authorLinkText</key>
+					<string>Mun Hou</string>
+					<key>name</key>
+					<string>PytorchLightning</string>
+					<key>platform</key>
+					<string>usercontribPytorchLightning</string>
+					<key>uniqueIdentifier</key>
+					<string>PytorchLightning</string>
+				</dict>
+			</dict>
+			<key>Qt_for_Python</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-21T10:07:54Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PySide2</string>
+						<string>PySide6</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
+					<key>authorLinkText</key>
+					<string>AC Better</string>
+					<key>name</key>
+					<string>Qt for Python (PySide 2/PySide 6)</string>
+					<key>platform</key>
+					<string>usercontribQt_for_Python</string>
+					<key>uniqueIdentifier</key>
+					<string>Qt_for_Python</string>
+				</dict>
+			</dict>
+			<key>Scikit</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:08:17Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
+					<key>authorLinkText</key>
+					<string>Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman</string>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>usercontribScikit</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit</string>
+				</dict>
+			</dict>
+			<key>TorchMetrics</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-20T23:58:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>TorchMetrics</string>
+						<string>PyTorch</string>
+						<string>Machine Learning</string>
+						<string>Metrics</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
+					<key>authorLinkText</key>
+					<string>Seungjae Jung</string>
+					<key>name</key>
+					<string>TorchMetrics</string>
+					<key>platform</key>
+					<string>usercontribTorchMetrics</string>
+					<key>uniqueIdentifier</key>
+					<string>TorchMetrics</string>
+				</dict>
+			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-13T06:41:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Niru Maheswaranathan</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
+			<key>statsmodels</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:14:48Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Statsmodels</string>
+						<string>statsmodels</string>
+						<string>Statsmodels 0.13.1</string>
+						<string>statsmodels 0.13.1</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/statsmodels#readme</string>
+					<key>authorLinkText</key>
+					<string>Angelo Varlotta</string>
+					<key>name</key>
+					<string>statsmodels</string>
+					<key>platform</key>
+					<string>usercontribstatsmodels</string>
+					<key>uniqueIdentifier</key>
+					<string>statsmodels</string>
+				</dict>
+			</dict>
+		</dict>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>actuallyDarkWebView</key>
+	<true/>
+	<key>annotationsAreShown</key>
+	<true/>
+	<key>docsets</key>
+	<dict>
+		<key>keywords</key>
+		<dict>
+			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
+			<string>a</string>
+			<key>~/Library/Application Support/Dash/DocSets/Bash/Bash.docset</key>
+			<string>sh</string>
+			<key>~/Library/Application Support/Dash/DocSets/C++/C++.docset</key>
+			<string>cc</string>
+			<key>~/Library/Application Support/Dash/DocSets/C/C.docset</key>
+			<string>c</string>
+			<key>~/Library/Application Support/Dash/DocSets/CMake/CMake.docset</key>
+			<string>cm</string>
+			<key>~/Library/Application Support/Dash/DocSets/CSS/CSS.docset</key>
+			<string>css</string>
+			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
+			<string>h</string>
+			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
+			<string>js</string>
+			<key>~/Library/Application Support/Dash/DocSets/Julia/Julia.docset</key>
+			<string>jl</string>
+			<key>~/Library/Application Support/Dash/DocSets/LaTeX/LaTeX.docset</key>
+			<string>l</string>
+			<key>~/Library/Application Support/Dash/DocSets/Man_Pages/Man Pages.docset</key>
+			<string>mac</string>
+			<key>~/Library/Application Support/Dash/DocSets/MatPlotLib/Matplotlib.docset</key>
+			<string>m</string>
+			<key>~/Library/Application Support/Dash/DocSets/NumPy/NumPy.docset</key>
+			<string>np</string>
+			<key>~/Library/Application Support/Dash/DocSets/OpenCV/OpenCV.docset</key>
+			<string>cv</string>
+			<key>~/Library/Application Support/Dash/DocSets/Pandas/Pandas.docset</key>
+			<string>pd</string>
+			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
+			<string>py</string>
+			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
+			<string>q</string>
+			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
+			<string>rs</string>
+			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
+			<string>sa</string>
+			<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
+			<string>sp</string>
+			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
+			<string>ts</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Deno/deno.docset</key>
+			<string>dn</string>
+			<key>~/Library/Application Support/Dash/User Contributed/LightGBM/LightGBM.docset</key>
+			<string>lgb:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/NetworkX/networkx.docset</key>
+			<string>nx</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Numba/Numba.docset</key>
+			<string>nb</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Optuna/Optuna.docset</key>
+			<string>op</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Powershell/Powershell.docset</key>
+			<string>ps</string>
+			<key>~/Library/Application Support/Dash/User Contributed/PyMC3/PyMC3.docset</key>
+			<string>pm</string>
+			<key>~/Library/Application Support/Dash/User Contributed/PyTorch/PyTorch.docset</key>
+			<string>t</string>
+			<key>~/Library/Application Support/Dash/User Contributed/PytorchLightning/PytorchLightning.docset</key>
+			<string>tl</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide 2PySide 6/Qt_for_Python.docset</key>
+			<string>qp</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
+			<string>rq</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Swift Language Guide/SwiftLanguageGuide.docset</key>
+			<string>sw</string>
+			<key>~/Library/Application Support/Dash/User Contributed/SymPy/SymPy.docset</key>
+			<string>sy</string>
+			<key>~/Library/Application Support/Dash/User Contributed/TensorFlow 2/TensorFlow 2.docset</key>
+			<string>tf</string>
+			<key>~/Library/Application Support/Dash/User Contributed/TorchMetrics/torchmetrics.docset</key>
+			<string>tm</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Visual Studio Code/Visual_Studio_Code.docset</key>
+			<string>vs:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/jax/jax.docset</key>
+			<string>jx</string>
+			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
+			<string>sk</string>
+			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn 0.11.0.docset</key>
+			<string>s</string>
+			<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels 0.13.1.docset</key>
+			<string>sm</string>
+			<key>~/Library/Application Support/Dash/User Contributed/torchvision/torchvision.docset</key>
+			<string>tv</string>
+		</dict>
+	</dict>
+	<key>feeds</key>
+	<dict>
+		<key>installed</key>
+		<dict>
+			<key>http://kapeli.com/feeds/Bash.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-03-27T03:46:51Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/C++.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:48:22Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/CMake.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-26T15:25:30Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/CSS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:19:27Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/HTML.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:15:43Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/JavaScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:39:34Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-02T07:47:36Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:24:48Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/NumPy.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:00:56Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/OpenCV.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-10T04:22:23Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Pandas.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:38:01Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Qt_6.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-21T10:05:45Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Rust.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-03-12T13:33:47Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/SQLAlchemy.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-04-21T02:14:26Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/SciPy.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-19T16:17:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/TypeScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-03-10T04:50:13Z</date>
+			</dict>
+		</dict>
+		<key>uninstalled</key>
+		<dict>
+			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-09T03:54:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/C.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-20T14:34:28Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Docker.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-03-19T16:39:54Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Sass.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-02-02T11:06:04Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/VueJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-01-31T04:40:55Z</date>
+			</dict>
+		</dict>
+	</dict>
+	<key>isPinned</key>
+	<false/>
+	<key>placeholderDelimiter</key>
+	<string>__</string>
+	<key>profiles</key>
+	<array>
+		<dict>
+			<key>isDefault</key>
+			<true/>
+			<key>name</key>
+			<string>Default</string>
+			<key>searchSnippets</key>
+			<false/>
+			<key>triggers</key>
+			<array>
+				<dict>
+					<key>appPath</key>
+					<string>/Applications/Visual Studio Code.app</string>
+					<key>bundle</key>
+					<string>com.microsoft.VSCode</string>
+					<key>description</key>
+					<string>Code becomes active</string>
+					<key>image</key>
+					<string>generalAppIcon</string>
+					<key>isAppTrigger</key>
+					<true/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string>Snippet</string>
+			<key>name</key>
+			<string>Snippets Only</string>
+			<key>placeholder</key>
+			<string>Search Snippets</string>
+			<key>searchSnippets</key>
+			<true/>
+		</dict>
+	</array>
+	<key>searchKey</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>2</integer>
+		<key>modifiers</key>
+		<integer>4608</integer>
+	</dict>
+	<key>shouldRestoreTabs</key>
+	<true/>
+	<key>shouldShowStatusIcon</key>
+	<false/>
+	<key>shouldSyncBookmarks</key>
+	<true/>
+	<key>shouldSyncDocsets</key>
+	<true/>
+	<key>shouldSyncGeneral</key>
+	<true/>
+	<key>shouldSyncView</key>
+	<true/>
+	<key>showDisabledDocsets</key>
+	<true/>
+	<key>showInDock</key>
+	<true/>
+	<key>sortDocsetsAlphabetically</key>
+	<true/>
+	<key>versionedDHCheatRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHClojureRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHDartRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHGitHubRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHGoRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHHaskellRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHHexRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHJavaRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHPhpRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHRubyRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHScalaRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHStackOverflowRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedDHUserRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>versionedFeeds</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict/>
+	</dict>
+	<key>webSearches</key>
+	<array>
+		<dict>
+			<key>iconName</key>
+			<string>Google</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<false/>
+			<key>name</key>
+			<string>Google</string>
+			<key>url</key>
+			<string>https://www.google.com/search?q={query}</string>
+		</dict>
+		<dict>
+			<key>iconName</key>
+			<string>DuckDuckGo</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<false/>
+			<key>name</key>
+			<string>DuckDuckGo</string>
+			<key>url</key>
+			<string>https://duckduckgo.com/?q={query}&amp;ia=web</string>
+		</dict>
+		<dict>
+			<key>iconName</key>
+			<string>Stack Overflow</string>
+			<key>isDefault</key>
+			<true/>
+			<key>isEnabled</key>
+			<false/>
+			<key>name</key>
+			<string>Stack Overflow</string>
+			<key>url</key>
+			<string>https://stackoverflow.com/search?q={query}</string>
+		</dict>
+	</array>
+</dict>
 </plist>
