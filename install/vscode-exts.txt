@@ -29,11 +29,11 @@ inu1255.easy-snippet
 James-Yu.latex-workshop
 jks-liu.wpls
 julialang.language-julia
+k-kuroguro.csv2latex
 labuladong.leetcode-helper
 livepdm.auto-markdown-toc-ax1
 llvm-vs-code-extensions.vscode-clangd
 mathiassoeholm.markdown-link-updater
-matklad.rust-analyzer
 mhutchie.git-graph
 ms-python.python
 ms-python.vscode-pylance
@@ -54,6 +54,7 @@ PKief.material-icon-theme
 pomdtr.excalidraw-editor
 qcz.text-power-tools
 redhat.vscode-xml
+rust-lang.rust-analyzer
 serayuzgur.crates
 sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
