@@ -1,5 +1,6 @@
 tikzplotlib
 lightgbm
+clang_osx-arm64
 ipympl
 mlxtend
 lux-api
@@ -11,7 +12,6 @@ umap-learn
 jax
 yapf
 multiprocess
-clangxx
 python-graphviz
 opencv
 pyqt
