@@ -316,5 +316,33 @@
       "       zlim=lims[4:6])",
       ""
     ]
+  },
+  "dlen": {
+    "prefix": "dlen",
+    "description": "",
+    "body": [
+      "def __len__(self):"
+    ]
+  },
+  "dget": {
+    "prefix": "dget",
+    "description": "",
+    "body": [
+      "def __getitem__(self, item):"
+    ]
+  },
+  "dinit": {
+    "prefix": "dinit",
+    "description": "",
+    "body": [
+      "def __init__(self):"
+    ]
+  },
+  "init": {
+    "prefix": "init",
+    "description": "",
+    "body": [
+      "def __init__(self):"
+    ]
   }
 }
