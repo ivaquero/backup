@@ -10,6 +10,7 @@ bmalehorn.print-it
 ChrisChinchilla.vscode-pandoc
 christian-kohler.path-intellisense
 clover.md-table-editor
+corernd.wai-vscode
 cschlosser.doxdocgen
 cweijan.vscode-database-client2
 DavidAnson.vscode-markdownlint
