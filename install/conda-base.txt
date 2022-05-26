@@ -1,8 +1,8 @@
 pyppeteer
+multiprocess
 ghp-import
 jupytext
-yapf
-multiprocess
 mamba
+yapf
 jupyter-book
 conda-tree
