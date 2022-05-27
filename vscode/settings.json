@@ -391,6 +391,7 @@
   },
   "github.copilot.enable": {
     "*": true,
+    "jsonc": false,
     "latex": false,
     "markdown": false,
     "plaintext": false,
@@ -449,16 +450,6 @@
   "conventionalCommits.autoCommit": false,
   "conventionalCommits.promptScopes": false,
   "projectManager.any.maxDepthRecursion": 3,
-  "vscode-color-picker.languages": [
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "julia",
-    "jupyter",
-    "python",
-    "svg"
-  ],
   "settingsSync.ignoredExtensions": [
     "valentjn.vscode-ltex"
   ],
@@ -491,7 +482,6 @@
   },
   "leetcode.workspaceFolder": "/Users/Shared/leetcode",
   "leetcode.endpoint": "leetcode-cn",
-  "qttools.creator": "/opt/homebrew/Caskroom/qt-creator/7.0.1/Qt Creator.app",
   "julia.completionmode": "import",
   "julia.deleteJuliaCovFiles": true,
   "julia.editor": "code",
@@ -506,5 +496,5 @@
   "database-client.highlightSQLBlock": true,
   "database-client.showQuery": true,
   "database-client.showTrigger": true,
-  "database-client.showUser": true
+  "database-client.showUser": true,
 }

@@ -2,7 +2,6 @@ adpyke.codesnap
 ahnafnafee.postscript-preview
 alefragnani.Bookmarks
 alefragnani.project-manager
-AntiAntiSepticeye.vscode-color-picker
 bamlubi.markdowntools
 bierner.emojisense
 bierner.markdown-mermaid
@@ -10,7 +9,6 @@ bmalehorn.print-it
 ChrisChinchilla.vscode-pandoc
 christian-kohler.path-intellisense
 clover.md-table-editor
-corernd.wai-vscode
 cschlosser.doxdocgen
 cweijan.vscode-database-client2
 DavidAnson.vscode-markdownlint
@@ -71,5 +69,7 @@ vivaxy.vscode-conventional-commits
 wenfangdu.faster-new
 XadillaX.viml
 Xenny.markdown-table
+YRM.case-police
 YuTengjing.open-in-external-app
+yy0931.mplstyle
 yzhang.markdown-all-in-one
