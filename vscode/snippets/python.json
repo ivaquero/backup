@@ -344,5 +344,12 @@
     "body": [
       "def __init__(self):"
     ]
+  },
+  "main": {
+    "prefix": "main",
+    "description": "",
+    "body": [
+      "if __name__ == '__main__':"
+    ]
   }
 }
