@@ -14,6 +14,7 @@ cweijan.vscode-database-client2
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 denoland.vscode-deno
+donjayamanne.python-environment-manager
 eamodio.gitlens
 esbenp.prettier-vscode
 ExecutableBookProject.myst-highlight

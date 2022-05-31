@@ -272,6 +272,37 @@
 					<string>statsmodels</string>
 				</dict>
 			</dict>
+			<key>transformers</key>
+			<dict>
+				<key>date</key>
+				<date>2022-05-31T02:27:04Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>pytorch-transformers</string>
+						<string>pytorch-pretrained-bert</string>
+						<string>huggingface</string>
+						<string>bert</string>
+						<string>albert</string>
+						<string>roberta</string>
+						<string>xlnet</string>
+						<string>electra</string>
+						<string>bart</string>
+						<string>gpt</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/transformers#readme</string>
+					<key>authorLinkText</key>
+					<string>Venkat</string>
+					<key>name</key>
+					<string>Transformers</string>
+					<key>platform</key>
+					<string>usercontribtransformers</string>
+					<key>uniqueIdentifier</key>
+					<string>transformers</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict/>
@@ -356,6 +387,8 @@
 			<string>tf</string>
 			<key>~/Library/Application Support/Dash/User Contributed/TorchMetrics/torchmetrics.docset</key>
 			<string>tm</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Transformers/transformers.docset</key>
+			<string>tfs</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Visual Studio Code/Visual_Studio_Code.docset</key>
 			<string>vs:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/jax/jax.docset</key>
