@@ -70,7 +70,6 @@ vivaxy.vscode-conventional-commits
 wenfangdu.faster-new
 XadillaX.viml
 Xenny.markdown-table
-YRM.case-police
 YuTengjing.open-in-external-app
 yy0931.mplstyle
 yzhang.markdown-all-in-one

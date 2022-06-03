@@ -1,7 +1,7 @@
 pyppeteer
-multiprocess
 ghp-import
 jupytext
+multiprocess
 mamba
 yapf
 jupyter-book
