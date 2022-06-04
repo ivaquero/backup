@@ -5,8 +5,6 @@ ipympl
 pymc
 lux-api
 numpyro
-pandarallel
-jupytext
 multiprocess
 kaggle
 mlxtend

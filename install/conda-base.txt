@@ -1,6 +1,5 @@
 pyppeteer
 ghp-import
-jupytext
 multiprocess
 mamba
 yapf
