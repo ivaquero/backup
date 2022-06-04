@@ -93,7 +93,7 @@
 			<key>Deno</key>
 			<dict>
 				<key>date</key>
-				<date>2022-05-26T06:51:42Z</date>
+				<date>2022-06-03T16:13:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -130,6 +130,31 @@
 					<string>usercontribOptuna</string>
 					<key>uniqueIdentifier</key>
 					<string>Optuna</string>
+				</dict>
+			</dict>
+			<key>PyTorch</key>
+			<dict>
+				<key>date</key>
+				<date>2022-06-03T16:17:18Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PyTorch</string>
+						<string>Deep Learning</string>
+						<string>Machine Learning</string>
+						<string>Neural Networks</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>PyTorch</string>
+					<key>platform</key>
+					<string>usercontribPyTorch</string>
+					<key>uniqueIdentifier</key>
+					<string>PyTorch</string>
 				</dict>
 			</dict>
 			<key>PytorchLightning</key>
@@ -225,28 +250,6 @@
 					<string>TorchMetrics</string>
 				</dict>
 			</dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2022-05-13T06:41:58Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Niru Maheswaranathan</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
-				</dict>
-			</dict>
 			<key>statsmodels</key>
 			<dict>
 				<key>date</key>
@@ -270,6 +273,28 @@
 					<string>usercontribstatsmodels</string>
 					<key>uniqueIdentifier</key>
 					<string>statsmodels</string>
+				</dict>
+			</dict>
+			<key>torchvision</key>
+			<dict>
+				<key>date</key>
+				<date>2022-06-03T16:15:21Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>vision</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchvision#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>torchvision</string>
+					<key>platform</key>
+					<string>usercontribtorchvision</string>
+					<key>uniqueIdentifier</key>
+					<string>torchvision</string>
 				</dict>
 			</dict>
 			<key>transformers</key>
@@ -305,7 +330,30 @@
 			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict/>
+		<dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2022-06-04T03:06:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Niru Maheswaranathan</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>actuallyDarkWebView</key>
 	<true/>
@@ -482,11 +530,6 @@
 				<key>date</key>
 				<date>2022-01-19T16:17:05Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/TypeScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-03-10T04:50:13Z</date>
-			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict>
@@ -494,26 +537,6 @@
 			<dict>
 				<key>date</key>
 				<date>2022-05-09T03:54:05Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/C.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-05-20T14:34:28Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Docker.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-03-19T16:39:54Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Sass.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-02-02T11:06:04Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/VueJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-01-31T04:40:55Z</date>
 			</dict>
 		</dict>
 	</dict>
