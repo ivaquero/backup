@@ -93,7 +93,7 @@
 			<key>Deno</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-03T16:13:02Z</date>
+				<date>2022-06-07T00:57:24Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -160,7 +160,7 @@
 			<key>PytorchLightning</key>
 			<dict>
 				<key>date</key>
-				<date>2022-05-11T17:39:53Z</date>
+				<date>2022-06-07T00:57:54Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -372,7 +372,7 @@
 			<key>~/Library/Application Support/Dash/DocSets/C/C.docset</key>
 			<string>c</string>
 			<key>~/Library/Application Support/Dash/DocSets/CMake/CMake.docset</key>
-			<string>cm</string>
+			<string>mk</string>
 			<key>~/Library/Application Support/Dash/DocSets/CSS/CSS.docset</key>
 			<string>css</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
