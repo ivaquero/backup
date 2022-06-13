@@ -2,9 +2,11 @@ adpyke.codesnap
 ahnafnafee.postscript-preview
 alefragnani.Bookmarks
 alefragnani.project-manager
+arr.marksman
 bamlubi.markdowntools
 bierner.emojisense
 bierner.markdown-mermaid
+Blyxyas.latexcompiler
 bmalehorn.print-it
 ChrisChinchilla.vscode-pandoc
 christian-kohler.path-intellisense
@@ -21,6 +23,7 @@ ExecutableBookProject.myst-highlight
 Fooxly.workspace
 formulahendry.code-runner
 foxundermoon.shell-format
+gao-shuhua.vsc-unicode-latex
 GitHub.copilot
 GitHub.remotehub
 GrapeCity.gc-excelviewer
@@ -48,7 +51,6 @@ ms-vscode.powershell
 ms-vscode.remote-repositories
 ms-vscode.vscode-markdown-notebook
 njpwerner.autodocstring
-oijaz.unicode-latex
 piotrpalarz.vscode-gitignore-generator
 PKief.material-icon-theme
 pomdtr.excalidraw-editor
