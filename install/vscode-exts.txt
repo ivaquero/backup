@@ -62,6 +62,7 @@ sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
 takayama.vscode-qq
 tamasfe.even-better-toml
+TheNuProjectContributors.vscode-nushell-lang
 Thinker.data-size-count
 twxs.cmake
 usernamehw.errorlens
