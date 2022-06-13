@@ -51,7 +51,6 @@ motrix
 pdfsam
 qt-creator
 shotcut
-teamviewer
 tencent-meeting
 texlive
 tor-browser
