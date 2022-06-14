@@ -6,7 +6,6 @@ arr.marksman
 bamlubi.markdowntools
 bierner.emojisense
 bierner.markdown-mermaid
-Blyxyas.latexcompiler
 bmalehorn.print-it
 ChrisChinchilla.vscode-pandoc
 christian-kohler.path-intellisense
@@ -24,6 +23,7 @@ Fooxly.workspace
 formulahendry.code-runner
 foxundermoon.shell-format
 gao-shuhua.vsc-unicode-latex
+GitHub.codespaces
 GitHub.copilot
 GitHub.remotehub
 GrapeCity.gc-excelviewer
@@ -47,6 +47,7 @@ ms-toolsai.vscode-jupyter-powertoys
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
+ms-vscode.makefile-tools
 ms-vscode.powershell
 ms-vscode.remote-repositories
 ms-vscode.vscode-markdown-notebook
