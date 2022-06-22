@@ -186,11 +186,12 @@
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
-  "jupyter.alwaysScrollOnNewCell": true,
   "jupyter.askForKernelRestart": false,
+  "jupyter.enableExtendedKernelCompletions": true,
   "jupyter.exportWithOutputEnabled": true,
-  "jupyter.jupyterServerType": "local",
+  "jupyter.generateSVGPlots": true,
   "jupyter.magicCommandsAsComments": true,
+  "jupyter.pylanceHandlesNotebooks": true,
   "jupyter.pythonExportMethod": "nbconvert",
   "jupyter.sendSelectionToInteractiveWindow": true,
   "jupyter.variableQueries": [
@@ -496,5 +497,5 @@
   "database-client.highlightSQLBlock": true,
   "database-client.showQuery": true,
   "database-client.showTrigger": true,
-  "database-client.showUser": true,
+  "database-client.showUser": true
 }
