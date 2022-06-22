@@ -46,7 +46,7 @@ julia
 licecap
 logseq
 mathpix-snipping-tool
-miniconda3
+mambaforge
 motrix
 pdfsam
 qt-creator
