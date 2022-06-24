@@ -386,19 +386,6 @@
     "dollarmath",
     "tasklist"
   ],
-  "github.copilot.advanced": {
-    "length": 500,
-    "autocomplete.length": 10
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "jsonc": false,
-    "latex": false,
-    "markdown": false,
-    "plaintext": false,
-    "sql": false,
-    "yaml": false
-  },
   "shellformat.effectLanguages": [
     "dockerfile",
     "dotenv",

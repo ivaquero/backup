@@ -24,7 +24,6 @@ formulahendry.code-runner
 foxundermoon.shell-format
 gao-shuhua.vsc-unicode-latex
 GitHub.codespaces
-GitHub.copilot
 GitHub.remotehub
 GrapeCity.gc-excelviewer
 hediet.vscode-drawio
