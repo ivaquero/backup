@@ -3,7 +3,6 @@ busybox
 clangd
 bat
 bottom
-conan
 dust
 fd
 ffmpeg
@@ -15,7 +14,6 @@ latexindent
 lsd
 lux
 winget
-mdbook
 mysql
 nodejs
 pandoc
