@@ -98,5 +98,4 @@ cask "wpsoffice"
 cask "xnviewmp"
 cask "zoom"
 cask "zotero"
-mas "Twitter", id: 1482454543
 mas "zClock Lite", id: 1489475245
