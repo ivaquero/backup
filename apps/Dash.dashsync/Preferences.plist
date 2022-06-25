@@ -214,29 +214,6 @@
 					<string>PytorchLightning</string>
 				</dict>
 			</dict>
-			<key>Qt_for_Python</key>
-			<dict>
-				<key>date</key>
-				<date>2022-04-21T10:07:54Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>PySide2</string>
-						<string>PySide6</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
-					<key>authorLinkText</key>
-					<string>AC Better</string>
-					<key>name</key>
-					<string>Qt for Python (PySide 2/PySide 6)</string>
-					<key>platform</key>
-					<string>usercontribQt_for_Python</string>
-					<key>uniqueIdentifier</key>
-					<string>Qt_for_Python</string>
-				</dict>
-			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -363,6 +340,29 @@
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>Qt_for_Python</key>
+			<dict>
+				<key>date</key>
+				<date>2022-06-25T13:17:41Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PySide2</string>
+						<string>PySide6</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
+					<key>authorLinkText</key>
+					<string>AC Better</string>
+					<key>name</key>
+					<string>Qt for Python (PySide 2/PySide 6)</string>
+					<key>platform</key>
+					<string>usercontribQt_for_Python</string>
+					<key>uniqueIdentifier</key>
+					<string>Qt_for_Python</string>
+				</dict>
+			</dict>
 			<key>jax</key>
 			<dict>
 				<key>date</key>
@@ -542,11 +542,6 @@
 				<key>date</key>
 				<date>2022-01-19T16:38:01Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Qt_6.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-04-21T10:05:45Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Rust.xml</key>
 			<dict>
 				<key>date</key>
@@ -569,6 +564,11 @@
 			<dict>
 				<key>date</key>
 				<date>2022-05-09T03:54:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Qt_6.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-06-25T13:17:39Z</date>
 			</dict>
 		</dict>
 	</dict>

@@ -1,15 +1,14 @@
 tikzplotlib
 lightgbm
-pyqt
 ipympl
 pydot
-pymc
 lux-api
 numpyro
 itables
 multiprocess
 kaggle
 tabulate
+pymc
 mlxtend
 pytorch-lightning
 umap-learn
