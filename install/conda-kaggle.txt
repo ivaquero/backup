@@ -4,7 +4,9 @@ ipympl
 pydot
 lux-api
 numpyro
+torchvision
 itables
+opencv
 multiprocess
 kaggle
 tabulate
@@ -13,12 +15,11 @@ mlxtend
 pytorch-lightning
 umap-learn
 yapf
-opencv
 python-graphviz
+torchtext
 openpyxl
 sympy
 conda-tree
-torchvision
 imbalanced-learn
 seaborn
 optuna

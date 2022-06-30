@@ -93,7 +93,7 @@
 			<key>Deno</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-18T09:08:58Z</date>
+				<date>2022-06-28T13:45:34Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -282,6 +282,32 @@
 					<string>usercontribstatsmodels</string>
 					<key>uniqueIdentifier</key>
 					<string>statsmodels</string>
+				</dict>
+			</dict>
+			<key>torchtext</key>
+			<dict>
+				<key>date</key>
+				<date>2022-06-29T07:42:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>torchtext</string>
+						<string>torch</string>
+						<string>text</string>
+						<string>nlp</string>
+						<string>Natural Language Processing</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchtext#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>torchtext</string>
+					<key>platform</key>
+					<string>usercontribtorchtext</string>
+					<key>uniqueIdentifier</key>
+					<string>torchtext</string>
 				</dict>
 			</dict>
 			<key>torchvision</key>
@@ -479,6 +505,8 @@
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels 0.13.1.docset</key>
 			<string>sm</string>
+			<key>~/Library/Application Support/Dash/User Contributed/torchtext/torchtext.docset</key>
+			<string>tt</string>
 			<key>~/Library/Application Support/Dash/User Contributed/torchvision/torchvision.docset</key>
 			<string>tv</string>
 		</dict>
