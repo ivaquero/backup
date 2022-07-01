@@ -167,7 +167,7 @@
 			<key>PyTorch</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-03T16:17:18Z</date>
+				<date>2022-06-30T11:10:44Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -189,31 +189,6 @@
 					<string>PyTorch</string>
 				</dict>
 			</dict>
-			<key>PytorchLightning</key>
-			<dict>
-				<key>date</key>
-				<date>2022-06-07T00:57:54Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>PytorchLightning</string>
-						<string>pytorchlightning</string>
-						<string>pytorch lightning</string>
-						<string>pytorch-lightning</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PytorchLightning#readme</string>
-					<key>authorLinkText</key>
-					<string>Mun Hou</string>
-					<key>name</key>
-					<string>PytorchLightning</string>
-					<key>platform</key>
-					<string>usercontribPytorchLightning</string>
-					<key>uniqueIdentifier</key>
-					<string>PytorchLightning</string>
-				</dict>
-			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -232,31 +207,6 @@
 					<string>usercontribScikit</string>
 					<key>uniqueIdentifier</key>
 					<string>Scikit</string>
-				</dict>
-			</dict>
-			<key>TorchMetrics</key>
-			<dict>
-				<key>date</key>
-				<date>2022-05-20T23:58:27Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>TorchMetrics</string>
-						<string>PyTorch</string>
-						<string>Machine Learning</string>
-						<string>Metrics</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
-					<key>authorLinkText</key>
-					<string>Seungjae Jung</string>
-					<key>name</key>
-					<string>TorchMetrics</string>
-					<key>platform</key>
-					<string>usercontribTorchMetrics</string>
-					<key>uniqueIdentifier</key>
-					<string>TorchMetrics</string>
 				</dict>
 			</dict>
 			<key>statsmodels</key>
@@ -287,7 +237,7 @@
 			<key>torchtext</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-29T07:42:49Z</date>
+				<date>2022-06-30T11:10:40Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -313,7 +263,7 @@
 			<key>torchvision</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-03T16:15:21Z</date>
+				<date>2022-06-30T11:10:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -366,6 +316,31 @@
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>PytorchLightning</key>
+			<dict>
+				<key>date</key>
+				<date>2022-07-01T03:11:41Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PytorchLightning</string>
+						<string>pytorchlightning</string>
+						<string>pytorch lightning</string>
+						<string>pytorch-lightning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PytorchLightning#readme</string>
+					<key>authorLinkText</key>
+					<string>Mun Hou</string>
+					<key>name</key>
+					<string>PytorchLightning</string>
+					<key>platform</key>
+					<string>usercontribPytorchLightning</string>
+					<key>uniqueIdentifier</key>
+					<string>PytorchLightning</string>
+				</dict>
+			</dict>
 			<key>Qt_for_Python</key>
 			<dict>
 				<key>date</key>
@@ -387,6 +362,31 @@
 					<string>usercontribQt_for_Python</string>
 					<key>uniqueIdentifier</key>
 					<string>Qt_for_Python</string>
+				</dict>
+			</dict>
+			<key>TorchMetrics</key>
+			<dict>
+				<key>date</key>
+				<date>2022-07-01T03:11:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>TorchMetrics</string>
+						<string>PyTorch</string>
+						<string>Machine Learning</string>
+						<string>Metrics</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
+					<key>authorLinkText</key>
+					<string>Seungjae Jung</string>
+					<key>name</key>
+					<string>TorchMetrics</string>
+					<key>platform</key>
+					<string>usercontribTorchMetrics</string>
+					<key>uniqueIdentifier</key>
+					<string>TorchMetrics</string>
 				</dict>
 			</dict>
 			<key>jax</key>
