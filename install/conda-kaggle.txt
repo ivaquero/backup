@@ -12,7 +12,6 @@ kaggle
 tabulate
 pymc
 mlxtend
-pytorch-lightning
 umap-learn
 yapf
 python-graphviz
@@ -21,5 +20,6 @@ openpyxl
 sympy
 conda-tree
 imbalanced-learn
+tensorboard
 seaborn
 optuna
