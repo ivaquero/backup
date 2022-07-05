@@ -1,6 +1,7 @@
 pyppeteer
 ghp-import
 multiprocess
+isort
 mamba
 yapf
 jupyter-book
