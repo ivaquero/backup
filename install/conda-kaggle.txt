@@ -23,4 +23,5 @@ conda-tree
 imbalanced-learn
 tensorboard
 seaborn
+mpl-interactions
 optuna

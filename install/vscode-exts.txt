@@ -37,6 +37,7 @@ livepdm.auto-markdown-toc-ax1
 llvm-vs-code-extensions.vscode-clangd
 mathiassoeholm.markdown-link-updater
 mhutchie.git-graph
+ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
