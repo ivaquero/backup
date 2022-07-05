@@ -2,6 +2,7 @@ tikzplotlib
 lightgbm
 ipympl
 pydot
+pyarrow
 lux-api
 torchvision
 itables
