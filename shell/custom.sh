@@ -140,6 +140,10 @@ export ZELLIJ_CONFIG_DIR=$HOME/.config/zellij
 # set the length of key <= 3
 declare -A Conda_Env
 Conda_Env[k]="kaggle"
+Conda_Env[w]="weather"
+
+alias ck="ceat k"
+alias cw="ceat w"
 
 ##########################################################
 # rust configurations
@@ -177,6 +181,9 @@ alias ar="aria2c --dir $DOWNLOAD"
 alias du="dust"
 alias hf="hyperfine"
 alias tk="tokei"
+
+# runtime
+alias ipy="ipython"
 
 ##########################################################
 # shell
@@ -261,9 +268,3 @@ clall() {
 
     sleep 3 && pueue status
 }
-
-##########################################################
-# very personal
-##########################################################
-
-alias ck="ceat k"
