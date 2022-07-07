@@ -4,6 +4,7 @@ CairoMakie
 Catalyst
 Clustering
 Combinatorics
+DataFrames
 DataStructures
 DifferentialEquations
 Distributions
@@ -14,8 +15,8 @@ HTTP
 HiGHS
 HypothesisTests
 IJulia
+InteractiveDynamics
 JuMP
-Metaheuristics
 ModelingToolkit
 MultivariateStats
 OhMyREPL
