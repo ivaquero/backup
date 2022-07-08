@@ -1,2 +1,5 @@
 geopandas
+isort
+yapf
+conda-tree
 metpy

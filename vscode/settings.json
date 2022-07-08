@@ -182,6 +182,9 @@
   "notebook.markup.fontSize": 16,
   "python.formatting.provider": "yapf",
   "python.formatting.yapfPath": "/opt/homebrew/Caskroom/mambaforge/base/bin/yapf",
+  "isort.path": [
+    "/opt/homebrew/Caskroom/mambaforge/base/bin/isort"
+  ],
   "python.languageServer": "Jedi",
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
