@@ -13,11 +13,12 @@ isort
 numpyro
 tabulate
 mlxtend
+pymc
 umap-learn
 yapf
-pymc
 python-graphviz
 torchtext
+optuna
 openpyxl
 sympy
 conda-tree
@@ -25,4 +26,3 @@ imbalanced-learn
 tensorboard
 seaborn
 mpl-interactions
-optuna
