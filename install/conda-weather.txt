@@ -1,5 +1,9 @@
 geopandas
+itables
 isort
+tabulate
+jupyter
 yapf
+openpyxl
 conda-tree
 metpy
