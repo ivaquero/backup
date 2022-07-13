@@ -430,7 +430,7 @@
 			<key>~/Library/Application Support/Dash/DocSets/C/C.docset</key>
 			<string>c</string>
 			<key>~/Library/Application Support/Dash/DocSets/CMake/CMake.docset</key>
-			<string>mk</string>
+			<string>cm</string>
 			<key>~/Library/Application Support/Dash/DocSets/CSS/CSS.docset</key>
 			<string>css</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>

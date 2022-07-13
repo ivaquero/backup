@@ -47,7 +47,6 @@ ms-toolsai.vscode-jupyter-powertoys
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
-ms-vscode.makefile-tools
 ms-vscode.powershell
 ms-vscode.remote-repositories
 ms-vscode.vscode-markdown-notebook
