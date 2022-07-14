@@ -3,7 +3,7 @@ lightgbm
 ipympl
 pydot
 pyarrow
-lux-api
+jupyter_console
 torchvision
 itables
 opencv
@@ -26,3 +26,4 @@ imbalanced-learn
 tensorboard
 seaborn
 mpl-interactions
+bokeh

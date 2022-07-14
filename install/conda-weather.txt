@@ -1,8 +1,9 @@
 geopandas
+jupyter_console
 itables
 isort
+ipywidgets
 tabulate
-jupyter
 yapf
 openpyxl
 conda-tree
