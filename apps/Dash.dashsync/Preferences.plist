@@ -560,11 +560,6 @@
 				<key>date</key>
 				<date>2022-01-19T16:00:56Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/OpenCV.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-05-10T04:22:23Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Pandas.xml</key>
 			<dict>
 				<key>date</key>
@@ -592,6 +587,11 @@
 			<dict>
 				<key>date</key>
 				<date>2022-05-09T03:54:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/OpenCV.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2022-07-14T13:42:49Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Qt_6.xml</key>
 			<dict>

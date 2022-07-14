@@ -6,7 +6,6 @@ pyarrow
 jupyter_console
 torchvision
 itables
-opencv
 multiprocess
 kaggle
 isort
