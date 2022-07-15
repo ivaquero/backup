@@ -7,7 +7,6 @@ jupyter_console
 torchvision
 itables
 multiprocess
-kaggle
 isort
 numpyro
 tabulate
