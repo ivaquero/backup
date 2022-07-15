@@ -3,7 +3,6 @@ lightgbm
 ipympl
 pydot
 pyarrow
-jupyter_console
 torchvision
 itables
 multiprocess
