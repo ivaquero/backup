@@ -58,6 +58,7 @@ qcz.text-power-tools
 redhat.vscode-xml
 rust-lang.rust-analyzer
 serayuzgur.crates
+softaware.abc-music
 sukumo28.wav-preview
 szhshp.bisheng-formatter-vscode-extension
 takayama.vscode-qq
