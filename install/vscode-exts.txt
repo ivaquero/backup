@@ -3,6 +3,7 @@ ahnafnafee.postscript-preview
 alefragnani.Bookmarks
 alefragnani.project-manager
 arr.marksman
+aster.vscode-subtitles
 bamlubi.markdowntools
 bierner.emojisense
 bierner.markdown-mermaid
