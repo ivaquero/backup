@@ -12,6 +12,7 @@ pytorch-lightning
 jupyterlab_code_formatter
 mlxtend
 umap-learn
+jupyterlab-code-snippets
 yapf
 pymc
 python-graphviz

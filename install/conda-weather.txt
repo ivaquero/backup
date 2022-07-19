@@ -3,6 +3,7 @@ ipympl
 itables
 tabulate
 jupyterlab_code_formatter
+jupyterlab-code-snippets
 yapf
 openpyxl
 conda-tree
