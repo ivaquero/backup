@@ -182,9 +182,6 @@
   "notebook.markup.fontSize": 16,
   "python.formatting.provider": "yapf",
   "python.formatting.yapfPath": "/opt/homebrew/Caskroom/mambaforge/base/bin/yapf",
-  "isort.path": [
-    "/opt/homebrew/Caskroom/mambaforge/base/bin/isort"
-  ],
   "python.languageServer": "Jedi",
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
@@ -487,5 +484,9 @@
   "database-client.highlightSQLBlock": true,
   "database-client.showQuery": true,
   "database-client.showTrigger": true,
-  "database-client.showUser": true
+  "database-client.showUser": true,
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ]
 }

@@ -1,6 +1,6 @@
 geopandas
+jupyter_console
 itables
-isort
 ipywidgets
 tabulate
 yapf

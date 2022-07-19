@@ -6,13 +6,13 @@ pyarrow
 torchvision
 itables
 multiprocess
-isort
 numpyro
 tabulate
+pytorch-lightning
 mlxtend
-pymc
 umap-learn
 yapf
+pymc
 python-graphviz
 torchtext
 optuna
@@ -20,7 +20,6 @@ openpyxl
 sympy
 conda-tree
 imbalanced-learn
-tensorboard
 seaborn
 mpl-interactions
 bokeh
