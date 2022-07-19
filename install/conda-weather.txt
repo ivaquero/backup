@@ -1,7 +1,8 @@
 geopandas
+ipympl
 itables
 tabulate
-jupyter
+jupyterlab_code_formatter
 yapf
 openpyxl
 conda-tree
