@@ -9,6 +9,7 @@ multiprocess
 numpyro
 tabulate
 pytorch-lightning
+jupyter
 mlxtend
 umap-learn
 yapf
