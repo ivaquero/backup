@@ -17,6 +17,7 @@ yapf
 pymc
 python-graphviz
 torchtext
+torchdata
 optuna
 openpyxl
 sympy
