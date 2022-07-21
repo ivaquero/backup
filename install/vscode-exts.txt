@@ -23,6 +23,7 @@ ExecutableBookProject.myst-highlight
 Fooxly.workspace
 formulahendry.code-runner
 foxundermoon.shell-format
+franneck94.workspace-formatter
 gao-shuhua.vsc-unicode-latex
 GitHub.codespaces
 GitHub.remotehub
@@ -38,7 +39,6 @@ livepdm.auto-markdown-toc-ax1
 llvm-vs-code-extensions.vscode-clangd
 mathiassoeholm.markdown-link-updater
 mhutchie.git-graph
-ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
