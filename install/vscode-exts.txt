@@ -2,6 +2,7 @@ adpyke.codesnap
 ahnafnafee.postscript-preview
 alefragnani.Bookmarks
 alefragnani.project-manager
+ArianJamasb.protein-viewer
 arr.marksman
 aster.vscode-subtitles
 bamlubi.markdowntools
