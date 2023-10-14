@@ -1,0 +1,509 @@
+{
+  "ind": {
+    "prefix": "ind",
+    "description": "",
+    "body": [
+      "#h(2em)"
+    ]
+  },
+  "t6": {
+    "prefix": "t6",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: 6,",
+      "    align: (col, row) => (center,center,center,center,center,center).at(col),",
+      "    inset: 3pt,",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "  ),",
+      "  caption: [],",
+      "  supplement: [表]",
+      ")"
+    ]
+  },
+  "t3": {
+    "prefix": "t3",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: 3,",
+      "    align: (col, row) => (center,center,center,).at(col),",
+      "    inset: 3pt,",
+      "    [], [], [],",
+      "    [], [], [],",
+      "    [], [], [],",
+      "    [], [], [],",
+      "  ),",
+      "  caption: [],",
+      "  supplement: [表]",
+      ")"
+    ]
+  },
+  "t4": {
+    "prefix": "t4",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: 4,",
+      "    align: (col, row) => (center,center,center,center).at(col),",
+      "    inset: 3pt,",
+      "    [], [], [], [],",
+      "    [], [], [], [],",
+      "    [], [], [], [],",
+      "    [], [], [], [],",
+      "  ),",
+      "  caption: [],",
+      "  supplement: [表]",
+      ")"
+    ]
+  },
+  "t5": {
+    "prefix": "t5",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: 5,",
+      "    align: (col, row) => (center,center,center,center,center).at(col),",
+      "    inset: 3pt,",
+      "    [], [], [], [], [],",
+      "    [], [], [], [], [],",
+      "    [], [], [], [], [],",
+      "    [], [], [], [], [],",
+      "  ),",
+      "  caption: [],",
+      "  supplement: [表]",
+      ")"
+    ]
+  },
+  "rpy": {
+    "prefix": "rpy",
+    "description": "",
+    "body": [
+      "#let code1 = read(\"python\")",
+      "#code(code1)"
+    ]
+  },
+  "rjl": {
+    "prefix": "rjl",
+    "description": "",
+    "body": [
+      "#let code1 = read(\"julia\")",
+      "#code(code1, lang: \"julia\")"
+    ]
+  },
+  "def": {
+    "prefix": "def",
+    "description": "",
+    "body": [
+      "#definition[",
+      "]"
+    ]
+  },
+  "eneq": {
+    "prefix": "eneq",
+    "description": "",
+    "body": [
+      "#set math.equation(numbering: \"(1)\", supplement: [式])",
+      "#set math.equation(numbering: none)"
+    ]
+  },
+  "pg": {
+    "prefix": "pg",
+    "description": "",
+    "body": [
+      "#pagebreak()"
+    ]
+  },
+  "pgw": {
+    "prefix": "pgw",
+    "description": "",
+    "body": [
+      "#pagebreak(weak: true)"
+    ]
+  },
+  "d[": {
+    "prefix": "d[",
+    "description": "",
+    "body": [
+      "delim: \"[\","
+    ]
+  },
+  "ma": {
+    "prefix": "ma",
+    "description": "",
+    "body": [
+      "𝑨"
+    ]
+  },
+  "mb": {
+    "prefix": "mb",
+    "description": "",
+    "body": [
+      "𝑩"
+    ]
+  },
+  "mc": {
+    "prefix": "mc",
+    "description": "",
+    "body": [
+      "𝑪"
+    ]
+  },
+  "me": {
+    "prefix": "me",
+    "description": "",
+    "body": [
+      "𝑬"
+    ]
+  },
+  "mh": {
+    "prefix": "mh",
+    "description": "",
+    "body": [
+      "𝑯"
+    ]
+  },
+  "mj": {
+    "prefix": "mj",
+    "description": "",
+    "body": [
+      "𝑱"
+    ]
+  },
+  "mp": {
+    "prefix": "mp",
+    "description": "",
+    "body": [
+      "𝑷"
+    ]
+  },
+  "mq": {
+    "prefix": "mq",
+    "description": "",
+    "body": [
+      "𝑸"
+    ]
+  },
+  "mx": {
+    "prefix": "mx",
+    "description": "",
+    "body": [
+      "𝑿"
+    ]
+  },
+  "va": {
+    "prefix": "va",
+    "description": "",
+    "body": [
+      "𝒂"
+    ]
+  },
+  "vx": {
+    "prefix": "vx",
+    "description": "",
+    "body": [
+      "𝒙"
+    ]
+  },
+  "vy": {
+    "prefix": "vy",
+    "description": "",
+    "body": [
+      "𝒚"
+    ]
+  },
+  "eig": {
+    "prefix": "eig",
+    "description": "",
+    "body": [
+      "𝑨 - λ 𝑰"
+    ]
+  },
+  "aha": {
+    "prefix": "aha",
+    "description": "",
+    "body": [
+      "𝑨^H 𝑨"
+    ]
+  },
+  "rk": {
+    "prefix": "rk",
+    "description": "",
+    "body": [
+      "op(\"rank\")()"
+    ]
+  },
+  "theo": {
+    "prefix": "theo",
+    "description": "",
+    "body": [
+      "#theorem[",
+      "]"
+    ]
+  },
+  "coro": {
+    "prefix": "coro",
+    "description": "",
+    "body": [
+      "#corollary[",
+      "]"
+    ]
+  },
+  "tp": {
+    "prefix": "tp",
+    "description": "",
+    "body": [
+      "#tip[",
+      "]"
+    ]
+  },
+  "alg": {
+    "prefix": "alg",
+    "description": "",
+    "body": [
+      "#algo[",
+      "]"
+    ]
+  },
+  "xtax": {
+    "prefix": "xtax",
+    "description": "",
+    "body": [
+      "𝒙^⊤ 𝑨 𝒙"
+    ]
+  },
+  "ls": {
+    "prefix": "ls",
+    "description": "",
+    "body": [
+      "#list(",
+      "  [],",
+      "  [],",
+      "  indent: 1.2em",
+      ")"
+    ]
+  },
+  "vxt": {
+    "prefix": "vxt",
+    "description": "",
+    "body": [
+      "𝒙^⊤"
+    ]
+  },
+  "areq": {
+    "prefix": "areq",
+    "description": "",
+    "body": [
+      "⇔"
+    ]
+  },
+  "en": {
+    "prefix": "en",
+    "description": "",
+    "body": [
+      "#enum(",
+      "  [],",
+      "  [],",
+      "  [],",
+      "  indent: 1.2em",
+      ")"
+    ]
+  },
+  "mgl": {
+    "prefix": "mgl",
+    "description": "",
+    "body": [
+      "𝜦"
+    ]
+  },
+  "mi": {
+    "prefix": "mi",
+    "description": "",
+    "body": [
+      "𝑰"
+    ]
+  },
+  "ata": {
+    "prefix": "ata",
+    "description": "",
+    "body": [
+      "𝑨^⊤ 𝑨"
+    ]
+  },
+  "aat": {
+    "prefix": "aat",
+    "description": "",
+    "body": [
+      "𝑨 𝑨^⊤"
+    ]
+  },
+  "xtx": {
+    "prefix": "xtx",
+    "description": "",
+    "body": [
+      "𝒙^⊤ 𝒙"
+    ]
+  },
+  "yty": {
+    "prefix": "yty",
+    "description": "",
+    "body": [
+      "𝒚^⊤ 𝒚"
+    ]
+  },
+  "arr": {
+    "prefix": "arr",
+    "description": "",
+    "body": [
+      "⇒"
+    ]
+  },
+  "my": {
+    "prefix": "my",
+    "description": "",
+    "body": [
+      "𝒀"
+    ]
+  },
+  "mm": {
+    "prefix": "mm",
+    "description": "",
+    "body": [
+      "𝑴"
+    ]
+  },
+  "var": {
+    "prefix": "var",
+    "description": "",
+    "body": [
+      "op(\"Var\")(X)"
+    ]
+  },
+  "r2r": {
+    "prefix": "r2r",
+    "description": "",
+    "body": [
+      "ℝ → ℝ"
+    ]
+  },
+  "dnorm": {
+    "prefix": "dnorm",
+    "description": "",
+    "body": [
+      "N(μ, σ^2)"
+    ]
+  },
+  "iii": {
+    "prefix": "iii",
+    "description": "",
+    "body": [
+      "∫_(-∞)^(∞)"
+    ]
+  },
+  "rvxn": {
+    "prefix": "rvxn",
+    "description": "",
+    "body": [
+      "X_1, …, X_n"
+    ]
+  },
+  "rvxy": {
+    "prefix": "rvxy",
+    "description": "",
+    "body": [
+      "$X$和$Y$"
+    ]
+  },
+  "rcsv": {
+    "prefix": "rcsv",
+    "description": "",
+    "body": [
+      "#let csv1 = csv(\"\")",
+      "#figure(",
+      "  table(",
+      "  columns: 10,",
+      "  align: center,",
+      "  inset: 3pt,",
+      "  ..csv1.flatten(),",
+      "  ),",
+      "  caption: \"\",",
+      "  supplement: [表]",
+      ")",
+      ""
+    ]
+  },
+  "f12": {
+    "prefix": "f12",
+    "description": "",
+    "body": [
+      "#align(center,",
+      "  stack(",
+      "    dir: ltr,",
+      "    spacing: 2em,",
+      "  figure(",
+      "    image(\"images\", width: 40%),",
+      "    caption: \"\",",
+      "    supplement: [图]",
+      "  ),",
+      "  figure(",
+      "    image(\"images\", width: 40%),",
+      "    caption: \"\",",
+      "    supplement: [图]",
+      "  )",
+      "  )",
+      ")",
+      ""
+    ]
+  },
+  "iid": {
+    "prefix": "iid",
+    "description": "",
+    "body": [
+      "limits(∼)^(\"i.i.d\")"
+    ]
+  },
+  "img": {
+    "prefix": "img",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  image(\"images\", width: 40%),",
+      "  caption: \"\",",
+      "  supplement: [图]",
+      ")"
+    ]
+  },
+  "col2": {
+    "prefix": "col2",
+    "description": "",
+    "body": [
+      "#block(height: 9em,",
+      "  columns()[",
+      "",
+      "  ]",
+      ")",
+      ""
+    ]
+  },
+  "inv": {
+    "prefix": "inv",
+    "description": "",
+    "body": [
+      "^(-1)"
+    ]
+  },
+  "trns": {
+    "prefix": "trns",
+    "description": "",
+    "body": [
+      "^(⊤)"
+    ]
+  }
+}

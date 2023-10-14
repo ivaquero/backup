@@ -1,0 +1,88 @@
+{
+  "ucio": {
+    "prefix": "ucio",
+    "description": "",
+    "body": ["#include <cstdio>", ""]
+  },
+  "uios": {
+    "prefix": "uios",
+    "description": "",
+    "body": ["#include <iostream>", ""]
+  },
+  "uls": {
+    "prefix": "uls",
+    "description": "",
+    "body": ["#include <list>"]
+  },
+  "uvec": {
+    "prefix": "uvec",
+    "description": "",
+    "body": ["#include <vector>"]
+  },
+  "ualg": {
+    "prefix": "ualg",
+    "description": "",
+    "body": ["#include <algorithm>"]
+  },
+  "uns": {
+    "prefix": "uns",
+    "description": "",
+    "body": ["using namespace std;"]
+  },
+  "main": {
+    "prefix": "main",
+    "description": "",
+    "body": ["int main() {", "  ", "}"]
+  },
+  "coln": {
+    "prefix": "coln",
+    "description": "",
+    "body": ["cout << Name << endl;"]
+  },
+  "prf": {
+    "prefix": "prf",
+    "description": "",
+    "body": ["printf(\": %d\\n\", );"]
+  },
+  "f": {
+    "prefix": "f",
+    "description": "",
+    "body": ["for (auto i = 0; i < 5; i++) {", "}"]
+  },
+  "fi": {
+    "prefix": "fi",
+    "description": "",
+    "body": ["for (auto it = v.begin(); it != v.end(); it++) {", "}"]
+  },
+  "fir": {
+    "prefix": "fir",
+    "description": "",
+    "body": ["for (auto it = L1.rbegin(); it != L1.rend(); it++) {", "}"]
+  },
+  "ts": {
+    "prefix": "ts",
+    "description": "",
+    "body": ["void test() {}"]
+  },
+  "veci": {
+    "prefix": "veci",
+    "description": "",
+    "body": ["vector<int>"]
+  },
+  "ucout": {
+    "prefix": "ucout",
+    "description": "",
+    "body": ["using std::cout;", "using std::endl;", ""]
+  },
+  "covec": {
+    "prefix": "covec",
+    "description": "",
+    "body": [
+      "cout << \"w1: \";",
+      "for (int i : w1)",
+      "  std::cout << i << \", \";",
+      "cout << endl;",
+      ""
+    ]
+  }
+}

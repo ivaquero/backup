@@ -1,0 +1,333 @@
+{
+    "buckets": [
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": {
+                "value": "\/Date(1677241777000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Friday, February 24, 2023 8:29:37 PM"
+            },
+            "Manifests": 1783
+        },
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": {
+                "value": "\/Date(1677242055000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Friday, February 24, 2023 8:34:15 PM"
+            },
+            "Manifests": 1169
+        },
+        {
+            "Name": "nerd-fonts",
+            "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+            "Updated": {
+                "value": "\/Date(1676909769000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Tuesday, February 21, 2023 12:16:09 AM"
+            },
+            "Manifests": 214
+        },
+        {
+            "Name": "scoopet",
+            "Source": "https://github.com/ivaquero/scoopet",
+            "Updated": {
+                "value": "\/Date(1677207793000)\/",
+                "DisplayHint": 2,
+                "DateTime": "Friday, February 24, 2023 11:03:13 AM"
+            },
+            "Manifests": 59
+        }
+    ],
+    "apps": [
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "7zip",
+            "Version": "22.01",
+            "Updated": "\/Date(1668520512838)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "aria2",
+            "Version": "1.36.0-1",
+            "Updated": "\/Date(1661897767334)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "bat",
+            "Version": "0.22.1",
+            "Updated": "\/Date(1663619216419)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "bottom",
+            "Version": "0.8.0",
+            "Updated": "\/Date(1675021737811)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "scoopet",
+            "Name": "clash-verge",
+            "Version": "1.2.3",
+            "Updated": "\/Date(1675332546491)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "dark",
+            "Version": "3.11.2",
+            "Updated": "\/Date(1666678932904)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "dotnet-sdk",
+            "Version": "7.0.200",
+            "Updated": "\/Date(1676561448736)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "dust",
+            "Version": "0.8.4",
+            "Updated": "\/Date(1675021748353)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "espanso",
+            "Version": "2.1.8",
+            "Updated": "\/Date(1673148208654)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "ffmpeg",
+            "Version": "5.1.2",
+            "Updated": "\/Date(1664310496820)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "nerd-fonts",
+            "Name": "FiraCode-NF",
+            "Version": "2.3.3",
+            "Updated": "\/Date(1675021761212)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "scoopet",
+            "Name": "git-cn",
+            "Version": "2.39.2.windows.1",
+            "Updated": "\/Date(1676561141500)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "gitui",
+            "Version": "0.22.1",
+            "Updated": "\/Date(1669191634370)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "helix",
+            "Version": "22.12",
+            "Updated": "\/Date(1670898491451)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "hyperfine",
+            "Version": "1.15.0",
+            "Updated": "\/Date(1666506116901)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "innounp",
+            "Version": "0.50",
+            "Updated": "\/Date(1665202496509)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "less",
+            "Version": "608",
+            "Updated": "\/Date(1663619273802)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "lsd",
+            "Version": "0.23.1",
+            "Updated": "\/Date(1663619280545)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "nodejs",
+            "Version": "19.6.1",
+            "Updated": "\/Date(1676953209347)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "onefetch",
+            "Version": "2.15.1",
+            "Updated": "\/Date(1677254141777)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "peazip",
+            "Version": "9.0.0",
+            "Updated": "\/Date(1675021932089)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "posh-git",
+            "Version": "1.1.0",
+            "Updated": "\/Date(1661898874821)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "psreadline",
+            "Version": "2.2.6",
+            "Updated": "\/Date(1661898878422)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "pueue",
+            "Version": "3.1.1",
+            "Updated": "\/Date(1676561826171)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "scoopet",
+            "Name": "rectanglewin",
+            "Version": "0.2.1",
+            "Updated": "\/Date(1673621233389)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "ripgrep",
+            "Version": "13.0.0",
+            "Updated": "\/Date(1661897900503)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "rustup",
+            "Version": "1.25.2",
+            "Updated": "\/Date(1675581172869)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "scoop-completion",
+            "Version": "0.2.4",
+            "Updated": "\/Date(1665254919624)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "sd",
+            "Version": "0.7.5",
+            "Updated": "\/Date(1661898461484)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "starship",
+            "Version": "1.12.0",
+            "Updated": "\/Date(1671103549350)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "sudo",
+            "Version": "0.2020.01.26",
+            "Updated": "\/Date(1661898463735)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "tealdeer",
+            "Version": "1.6.1",
+            "Updated": "\/Date(1667636427359)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "tectonic",
+            "Version": "0.12.0",
+            "Updated": "\/Date(1675209760134)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "scoopet",
+            "Name": "texlive",
+            "Version": "2022",
+            "Updated": "\/Date(1666656130342)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "main",
+            "Name": "uutils-coreutils",
+            "Version": "0.0.17",
+            "Updated": "\/Date(1677191066240)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "vcredist2022",
+            "Version": "14.34.31931.0",
+            "Updated": "\/Date(1668356655919)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "vscode",
+            "Version": "1.75.1",
+            "Updated": "\/Date(1676561014838)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "windows-terminal",
+            "Version": "1.16.10261.0",
+            "Updated": "\/Date(1675022183354)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "winget",
+            "Version": "1.4.10173",
+            "Updated": "\/Date(1675021866197)\/"
+        },
+        {
+            "Info": "64bit",
+            "Source": "extras",
+            "Name": "wingetui",
+            "Version": "1.6.0",
+            "Updated": "\/Date(1675021896700)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "zoxide",
+            "Version": "0.9.0",
+            "Updated": "\/Date(1673621201498)\/"
+        }
+    ]
+}

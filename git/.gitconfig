@@ -1,0 +1,42 @@
+[user]
+name = ivaquero
+
+[credential]
+helper = store
+
+[commit]
+gpgsign = false
+
+[gpg]
+program = gpg
+
+[pull]
+rebase = false
+
+[merge]
+conflictstyle = diff3
+
+[diff]
+colorMoved = default
+
+[alias]
+compress = repack -a -d --depth=250 --window=250
+count = rev-list --count HEAD
+clone-shallow = clone --depth 1
+tag-remove = tag --delete
+tag-remove-remote = push --delete origin
+origin-add = remote add origin
+origin-add-url = remote set-url
+origin-rename = remote rename origin
+origin-push = push --set-upstream origin
+filter = filter-repo
+filter-id = filter-repo --strip-blobs-with-ids
+filter-path = filter-repo --invert-paths --path-glob
+filter-size = filter-repo --strip-blobs-bigger-than
+
+[http]
+version = HTTP/1.1
+proxy = http://127.0.0.1:7890
+
+[https]
+proxy = https://127.0.0.1:7890
