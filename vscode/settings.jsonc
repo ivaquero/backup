@@ -311,10 +311,6 @@
     "-j=12"
   ],
   "lldb.suppressUpdateNotifications": true,
-  "cmake.configureOnEdit": false,
-  "cmake.configureOnOpen": false,
-  "cmake.automaticReconfigure": false,
-  "cmake.autoSelectActiveFolder": false,
   // toml
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.indentEntries": true,
