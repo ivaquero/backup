@@ -423,5 +423,9 @@
     }
   ],
   "redhat.telemetry.enabled": false,
-  "vva.trustedDomain": true
+  "vva.trustedDomain": true,
+  "cmake.configureOnOpen": false,
+  "cmake.automaticReconfigure": false,
+  "cmake.autoSelectActiveFolder": false,
+  "cmake.configureOnEdit": false
 }

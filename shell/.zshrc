@@ -24,7 +24,4 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/Applications/MATLAB_R2023a_Beta.app/bin:$PATH"
 export PATH="${HOME}/.gem/ruby/2.6.0/bin:$PATH"
 
-export CPATH=/opt/homebrew/include
-export LIBRARY_PATH=/opt/homebrew/lib
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

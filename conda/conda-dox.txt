@@ -1,3 +1,4 @@
+conan
 conda-tree
 doc2dash
 jupyter-book
@@ -7,19 +8,20 @@ numpydoc
 pip
 pooch
 pre-commit
+pydot
 seaborn
 sphinx-autoapi
 sphinx-autodoc-typehints
 sphinx-autosummary-accessors
 sphinx-click
 sphinx-codeautolink
-sphinx-examples
 sphinx-gallery
 sphinx-inline-tabs
 sphinx-issues
 sphinx-notfound-page
-sphinx-proof
 sphinx-rtd-theme
+sphinx-sitemap
+sphinxcontrib-spelling
 sphinxext-opengraph
 sphinxext-rediraffe
 unicodedata2
