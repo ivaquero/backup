@@ -311,6 +311,10 @@
     "-j=12"
   ],
   "lldb.suppressUpdateNotifications": true,
+  "cmake.configureOnOpen": false,
+  "cmake.automaticReconfigure": false,
+  "cmake.autoSelectActiveFolder": false,
+  "cmake.configureOnEdit": false,
   // toml
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.indentEntries": true,
@@ -423,9 +427,5 @@
     }
   ],
   "redhat.telemetry.enabled": false,
-  "vva.trustedDomain": true,
-  "cmake.configureOnOpen": false,
-  "cmake.automaticReconfigure": false,
-  "cmake.autoSelectActiveFolder": false,
-  "cmake.configureOnEdit": false
+  "vva.trustedDomain": true
 }
