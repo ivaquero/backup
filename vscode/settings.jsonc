@@ -426,6 +426,5 @@
       ]
     }
   ],
-  "redhat.telemetry.enabled": false,
-  "vva.trustedDomain": true
+  "redhat.telemetry.enabled": false
 }
