@@ -210,7 +210,7 @@
   },
   // python
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports.ruff": true
@@ -275,8 +275,6 @@
   "conventionalCommits.lineBreak": "\\n",
   "conventionalCommits.promptScopes": false,
   "conventionalCommits.showNewVersionNotes": false,
-  "csv-preview.lineNumbers": "ordinal",
-  "csv-preview.resizeColumns": "all",
   "hediet.vscode-drawio.codeLinkActivated": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "Kennedy",
@@ -378,7 +376,7 @@
   "leetcode-problem-rating.hint.commandShortcut": false,
   "leetcode-problem-rating.hint.commentDescription": false,
   "leetcode-problem-rating.hint.configWebviewMarkdown": false,
-  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/leetcode/",
+  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/leetcode/",
   "leetcode-problem-rating.editor.shortcuts": [
     "submit",
     "case",
@@ -400,7 +398,7 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023a.app",
   // typst
   // "typst-lsp.experimentalFormatterMode": "on",
-  "typst-lsp.rootPath": "${HOME}/Documents",
+  "typst-lsp.rootPath": "${HOME}/Documents/GitHub",
   "typst-lsp.trace.server": "messages",
   "typst-preview.refresh": "onSave",
   "typst-preview.partialRendering": true,
