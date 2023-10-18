@@ -238,13 +238,6 @@
   "css.format.enable": true,
   "css.format.spaceAroundSelectorSeparator": true,
   "emmet.showSuggestionsAsSnippets": true,
-  "vscode-color-picker.languages": [
-    "python",
-    "javascript",
-    "typescript",
-    "julia",
-    "typst"
-  ],
   // latex
   "latex-workshop.intellisense.unimathsymbols.enabled": true,
   "latex-workshop.intellisense.update.aggressive.enabled": true,
