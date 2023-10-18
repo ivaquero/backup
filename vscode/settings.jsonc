@@ -210,13 +210,14 @@
   },
   // python
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports.ruff": true
     }
   },
   "ruff.fixAll": false,
+  "ruff.importStrategy": "useBundled",
   "ruff.enableExperimentalFormatter": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
