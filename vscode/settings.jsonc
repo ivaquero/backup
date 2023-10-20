@@ -303,10 +303,11 @@
     "-j=12"
   ],
   "lldb.suppressUpdateNotifications": true,
-  "cmake.configureOnOpen": false,
   "cmake.automaticReconfigure": false,
   "cmake.autoSelectActiveFolder": false,
   "cmake.configureOnEdit": false,
+  "cmake.configureOnOpen": false,
+  "cmake.statusbar.visibility": "compact",
   // toml
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.indentEntries": true,
@@ -418,5 +419,7 @@
       ]
     }
   ],
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "sourcery.codeLens": false,
+  "color-picker-universal.languages": ["*", "jsonc", "!plaintext"]
 }

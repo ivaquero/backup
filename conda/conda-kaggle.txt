@@ -8,7 +8,6 @@ jupyter-book
 jupyterlab
 jupyterlab_code_formatter
 jupytext
-mypy
 nbconvert
 openpyxl
 plotnine
