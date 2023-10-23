@@ -21,7 +21,6 @@ source ${OXIDIZER}/oxidizer.sh
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH="/Applications/MATLAB_R2023a_Beta.app/bin:$PATH"
-export PATH="${HOME}/.gem/ruby/2.6.0/bin:$PATH"
+export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

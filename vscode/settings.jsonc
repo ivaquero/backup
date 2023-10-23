@@ -393,11 +393,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  // matlab
-  "[matlab]": {
-    "editor.defaultFormatter": "MathWorks.language-matlab"
-  },
-  "MATLAB.installPath": "/Applications/MATLAB_R2023a.app",
   // typst
   // "typst-lsp.experimentalFormatterMode": "on",
   "typst-lsp.rootPath": "${HOME}/Documents/GitHub",
@@ -421,5 +416,10 @@
   ],
   "redhat.telemetry.enabled": false,
   "sourcery.codeLens": false,
-  "color-picker-universal.languages": ["*", "jsonc", "!plaintext"]
+  "color-picker-universal.languages": ["*", "jsonc", "!plaintext"],
+  // matlab
+  "[matlab]": {
+    "editor.defaultFormatter": "MathWorks.language-matlab"
+  },
+  "MATLAB.installPath": "/Applications/MATLAB_2023b.app"
 }
