@@ -2847,28 +2847,6 @@ $("h1").each(function() {
 					<string>SymPy</string>
 				</dict>
 			</dict>
-			<key>XMake</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-18T15:12:28Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Xmake</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
-					<key>authorLinkText</key>
-					<string>kassane</string>
-					<key>name</key>
-					<string>XMake</string>
-					<key>platform</key>
-					<string>usercontribXMake</string>
-					<key>uniqueIdentifier</key>
-					<string>XMake</string>
-				</dict>
-			</dict>
 			<key>arviz</key>
 			<dict>
 				<key>date</key>
@@ -2944,7 +2922,7 @@ $("h1").each(function() {
 			<key>nox</key>
 			<dict>
 				<key>date</key>
-				<date>2023-10-11T14:38:33Z</date>
+				<date>2023-10-22T14:41:50Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -2988,29 +2966,6 @@ $("h1").each(function() {
 					<string>usercontribplotnine</string>
 					<key>uniqueIdentifier</key>
 					<string>plotnine</string>
-				</dict>
-			</dict>
-			<key>pymc</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-09T13:25:20Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Bayesian Modeling</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
-					<key>authorLinkText</key>
-					<string>Paulo S. Costa, Xavier Yang</string>
-					<key>name</key>
-					<string>PyMC</string>
-					<key>platform</key>
-					<string>usercontribpymc</string>
-					<key>uniqueIdentifier</key>
-					<string>pymc</string>
 				</dict>
 			</dict>
 			<key>pyro</key>
@@ -3553,6 +3508,28 @@ $("h1").each(function() {
 					<string>UnicodeCharacters</string>
 				</dict>
 			</dict>
+			<key>XMake</key>
+			<dict>
+				<key>date</key>
+				<date>2023-10-21T14:38:35Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Xmake</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
+					<key>authorLinkText</key>
+					<string>kassane</string>
+					<key>name</key>
+					<string>XMake</string>
+					<key>platform</key>
+					<string>usercontribXMake</string>
+					<key>uniqueIdentifier</key>
+					<string>XMake</string>
+				</dict>
+			</dict>
 			<key>Zsh</key>
 			<dict>
 				<key>date</key>
@@ -3748,6 +3725,29 @@ $("h1").each(function() {
 					<string>polars</string>
 				</dict>
 			</dict>
+			<key>pymc</key>
+			<dict>
+				<key>date</key>
+				<date>2023-10-22T14:35:00Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Bayesian Modeling</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
+					<key>authorLinkText</key>
+					<string>Paulo S. Costa, Xavier Yang</string>
+					<key>name</key>
+					<string>PyMC</string>
+					<key>platform</key>
+					<string>usercontribpymc</string>
+					<key>uniqueIdentifier</key>
+					<string>pymc</string>
+				</dict>
+			</dict>
 			<key>pytest</key>
 			<dict>
 				<key>date</key>
@@ -3905,6 +3905,8 @@ $("h1").each(function() {
 	<dict>
 		<key>keywords</key>
 		<dict>
+			<key>~/Documents/GitHub/Dash-User-Contributions/docsets/PyMC/pymc.docset</key>
+			<string>pymc</string>
 			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
 			<string>a</string>
 			<key>~/Library/Application Support/Dash/DocSets/Bash/Bash.docset</key>

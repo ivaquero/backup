@@ -1,7 +1,7 @@
-conan
 conda-tree
 doc2dash
 jupyter-book
+jupyter-sphinx
 jupytext
 nox
 numpydoc
@@ -19,6 +19,7 @@ sphinx-gallery
 sphinx-inline-tabs
 sphinx-issues
 sphinx-notfound-page
+sphinx-remove-toctrees
 sphinx-rtd-theme
 sphinx-sitemap
 sphinxcontrib-spelling
