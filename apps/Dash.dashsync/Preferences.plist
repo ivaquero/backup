@@ -2968,6 +2968,29 @@ $("h1").each(function() {
 					<string>plotnine</string>
 				</dict>
 			</dict>
+			<key>pymc</key>
+			<dict>
+				<key>date</key>
+				<date>2023-10-24T12:32:55Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Bayesian Modeling</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
+					<key>authorLinkText</key>
+					<string>Paulo S. Costa, Xavier Yang</string>
+					<key>name</key>
+					<string>PyMC</string>
+					<key>platform</key>
+					<string>usercontribpymc</string>
+					<key>uniqueIdentifier</key>
+					<string>pymc</string>
+				</dict>
+			</dict>
 			<key>pyro</key>
 			<dict>
 				<key>date</key>
@@ -3723,29 +3746,6 @@ $("h1").each(function() {
 					<string>usercontribpolars</string>
 					<key>uniqueIdentifier</key>
 					<string>polars</string>
-				</dict>
-			</dict>
-			<key>pymc</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-22T14:35:00Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Bayesian Modeling</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
-					<key>authorLinkText</key>
-					<string>Paulo S. Costa, Xavier Yang</string>
-					<key>name</key>
-					<string>PyMC</string>
-					<key>platform</key>
-					<string>usercontribpymc</string>
-					<key>uniqueIdentifier</key>
-					<string>pymc</string>
 				</dict>
 			</dict>
 			<key>pytest</key>

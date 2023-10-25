@@ -13,5 +13,4 @@ openpyxl
 plotnine
 pydot
 pygwalker
-pyro-ppl
 translators

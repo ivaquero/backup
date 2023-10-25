@@ -54,7 +54,9 @@
   "terminal.external.linuxExec": "wezterm",
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.external.windowsExec": "C:\\Scoop\\apps\\wezterm\\current\\wezterm.exe",
-  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
@@ -65,19 +67,25 @@
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "path": "pwsh.exe",
-      "args": ["-NoLogo"]
+      "args": [
+        "-NoLogo"
+      ]
     }
   },
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "path": "/bin/zsh",
-      "args": ["-l"]
+      "args": [
+        "-l"
+      ]
     }
   },
   "terminal.integrated.profiles.linux": {
     "zsh": {
       "path": "/bin/zsh",
-      "args": ["-l"]
+      "args": [
+        "-l"
+      ]
     }
   },
   // workbench
@@ -125,7 +133,9 @@
   "errorLens.statusBarColorsEnabled": true,
   "errorLens.statusBarIconsEnabled": true,
   "errorLens.statusBarMessageEnabled": true,
-  "errorLens.excludeBySource": ["cSpell"],
+  "errorLens.excludeBySource": [
+    "cSpell"
+  ],
   // markdown
   "[markdown]": {
     "editor.quickSuggestions": {
@@ -210,7 +220,7 @@
   },
   // python
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports.ruff": true
@@ -218,7 +228,7 @@
   },
   "ruff.fixAll": false,
   "ruff.importStrategy": "useBundled",
-  "ruff.enableExperimentalFormatter": true,
+  "ruff.lint.run": "onSave",
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
@@ -229,12 +239,13 @@
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
   "jupyter.pythonExportMethod": "nbconvert",
+  "jupyter.showVariableViewWhenDebugging": true,
   // front end & formatters
   "[javascript][typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[json][jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "css.format.enable": true,
   "css.format.spaceAroundSelectorSeparator": true,
@@ -254,7 +265,9 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "tectonic",
-      "tools": ["tectonic"]
+      "tools": [
+        "tectonic"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -416,10 +429,14 @@
   ],
   "redhat.telemetry.enabled": false,
   "sourcery.codeLens": false,
-  "color-picker-universal.languages": ["*", "jsonc", "!plaintext"],
+  "color-picker-universal.languages": [
+    "*",
+    "jsonc",
+    "!plaintext"
+  ],
   // matlab
   "[matlab]": {
-    "editor.defaultFormatter": "MathWorks.language-matlab"
+    "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
-  "MATLAB.installPath": "/Applications/MATLAB_2023b.app"
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
 }
