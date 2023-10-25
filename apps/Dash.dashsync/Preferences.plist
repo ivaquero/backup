@@ -2991,30 +2991,6 @@ $("h1").each(function() {
 					<string>pymc</string>
 				</dict>
 			</dict>
-			<key>pyro</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-27T14:24:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Pyro</string>
-						<string>Pytorch Probability</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pyro#readme</string>
-					<key>authorLinkText</key>
-					<string>Songpeng Zu, Xavier Yang</string>
-					<key>name</key>
-					<string>pyro</string>
-					<key>platform</key>
-					<string>usercontribpyro</string>
-					<key>uniqueIdentifier</key>
-					<string>pyro</string>
-				</dict>
-			</dict>
 			<key>statsmodels</key>
 			<dict>
 				<key>date</key>
@@ -3746,6 +3722,30 @@ $("h1").each(function() {
 					<string>usercontribpolars</string>
 					<key>uniqueIdentifier</key>
 					<string>polars</string>
+				</dict>
+			</dict>
+			<key>pyro</key>
+			<dict>
+				<key>date</key>
+				<date>2023-10-25T13:27:59Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Pyro</string>
+						<string>Pytorch Probability</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pyro#readme</string>
+					<key>authorLinkText</key>
+					<string>Songpeng Zu, Xavier Yang</string>
+					<key>name</key>
+					<string>pyro</string>
+					<key>platform</key>
+					<string>usercontribpyro</string>
+					<key>uniqueIdentifier</key>
+					<string>pyro</string>
 				</dict>
 			</dict>
 			<key>pytest</key>

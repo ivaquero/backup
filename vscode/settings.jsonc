@@ -10,6 +10,7 @@
   "debug.onTaskErrors": "debugAnyway",
   "telemetry.telemetryLevel": "error",
   // editor
+  "editor.accessibilitySupport": "off",
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
@@ -244,7 +245,7 @@
   "[javascript][typescript]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[jsonc]": {
+  "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "css.format.enable": true,

@@ -1,5 +1,4 @@
 bambi
-black
 causalpy
 conda-tree
 ghp-import
@@ -13,4 +12,5 @@ openpyxl
 plotnine
 pydot
 pygwalker
+ruff
 translators
