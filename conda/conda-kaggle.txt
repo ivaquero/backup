@@ -1,7 +1,6 @@
 bambi
 causalpy
 conda-tree
-ghp-import
 jupyterlab
 jupyterlab_code_formatter
 jupytext
