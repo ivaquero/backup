@@ -2,8 +2,6 @@ bambi
 causalpy
 conda-tree
 ghp-import
-gif
-jupyter-book
 jupyterlab
 jupyterlab_code_formatter
 jupytext
@@ -13,4 +11,5 @@ plotnine
 pydot
 pygwalker
 ruff
+sympy
 translators
