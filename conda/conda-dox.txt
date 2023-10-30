@@ -1,3 +1,4 @@
+armadillo
 conda-tree
 doc2dash
 ghp-import
