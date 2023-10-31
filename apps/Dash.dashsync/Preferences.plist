@@ -1265,7 +1265,7 @@ $("h1").each(function() {
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
-				<date>2023-10-10T15:46:47Z</date>
+				<date>2023-10-31T03:37:26Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>

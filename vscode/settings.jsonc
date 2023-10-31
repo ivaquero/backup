@@ -213,11 +213,11 @@
   "code-runner.executorMap": {
     "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "javascript": "node fmt && node run --allow-net $fullFileName",
-    "julia": "julia --eval $fullFileName",
-    "python": "cd $dir && $(which python) -u $fullFileName",
+    "javascript": "node run --allow-net $dir$fullFileName",
+    "julia": "julia --eval $dir$fullFileName",
+    "python": "$(which python) -u $dir$fullFileName",
     "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt",
-    "matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt"
+    "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
   },
   // python
   "[python]": {
