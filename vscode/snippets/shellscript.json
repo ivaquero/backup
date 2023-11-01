@@ -42,7 +42,11 @@
   "if": {
     "prefix": "if",
     "description": "",
-    "body": ["if [ $1 ]; then", "fi", ""]
+    "body": [
+      "if [ $1 ]; then",
+      "fi",
+      ""
+    ]
   },
   "man": {
     "prefix": "man",
@@ -67,6 +71,22 @@
   "case": {
     "prefix": "case",
     "description": "",
-    "body": ["case $1 in", "a) ;;", "b) ;;", "*) ;;", "esac", ""]
+    "body": [
+      "case $1 in",
+      "a) ;;",
+      "b) ;;",
+      "*) ;;",
+      "esac",
+      ""
+    ]
+  },
+  "hd": {
+    "prefix": "hd",
+    "description": "",
+    "body": [
+      "#!/bin/bash /bin/zsh",
+      "##########################################################",
+      ""
+    ]
   }
 }

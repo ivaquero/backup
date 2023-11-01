@@ -412,7 +412,7 @@
   "typst-lsp.rootPath": "${HOME}/Documents/GitHub",
   "typst-lsp.trace.server": "messages",
   "typst-preview.refresh": "onSave",
-  "typst-preview.partialRendering": true,
+  // "typst-preview.partialRendering": true,
   // other
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
