@@ -1,3 +1,2 @@
 conda-tree
 mamba
-pip

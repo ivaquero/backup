@@ -154,7 +154,7 @@
     "prefix": "f1",
     "description": "",
     "body": [
-      "_, ax = plt.subplots(figsize=(6, 4))"
+      "_, ax = plt.subplots(figsize=(8, 4))"
     ]
   },
   "f22": {

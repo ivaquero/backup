@@ -505,5 +505,13 @@
     "body": [
       "^(⊤)"
     ]
+  },
+  "bib": {
+    "prefix": "bib",
+    "description": "",
+    "body": [
+      "#bibliography(\"data/works.bib\", title: \"参考文献\")",
+      ""
+    ]
   }
 }
