@@ -424,7 +424,11 @@
         {
           "title": "gimp",
           "openCommand": "/Applications/GIMP.app"
-        }
+        },
+        {
+          "title": "chrome",
+          "openCommand": "/Applications/Google Chrome.app"
+        },
       ]
     }
   ],
@@ -439,5 +443,5 @@
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  "MATLAB.installPath": "/Applications/MATLAB_R2022b.app",
 }

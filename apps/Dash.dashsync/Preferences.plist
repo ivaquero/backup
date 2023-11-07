@@ -1322,7 +1322,7 @@ $("h1").each(function() {
 			<key>homebrew</key>
 			<dict>
 				<key>date</key>
-				<date>2023-10-10T15:44:49Z</date>
+				<date>2023-11-04T07:54:40Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
