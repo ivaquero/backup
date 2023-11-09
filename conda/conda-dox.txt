@@ -9,7 +9,6 @@ nox
 numpydoc
 pip
 pooch
-pre-commit
 pydot
 seaborn
 sphinx-autoapi

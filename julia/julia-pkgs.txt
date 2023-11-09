@@ -3,7 +3,6 @@ CairoMakie
 Clustering
 Colors
 Combinatorics
-DSP
 DataFrames
 DataStructures
 DifferentialEquations
@@ -13,14 +12,11 @@ GLM
 GraphMakie
 Graphs
 HiGHS
-HypothesisTests
 Ipopt
 JuMP
 JuliaFormatter
 Latexify
-Match
 ModelingToolkit
-MultivariateStats
 OhMyREPL
 OrdinaryDiffEq
 PkgDependency
