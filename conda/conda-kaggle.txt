@@ -1,14 +1,11 @@
 bambi
 causalpy
 conda-tree
-jupyterlab
-jupyterlab_code_formatter
-jupytext
+ipykernel
 nbconvert
 openpyxl
 plotnine
 pydot
 pygwalker
-ruff
 sympy
 translators

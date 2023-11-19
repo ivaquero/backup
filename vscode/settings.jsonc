@@ -247,7 +247,7 @@
   "jupyter.showVariableViewWhenDebugging": true,
   // front end & formatters
   "[javascript][typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"

@@ -4,12 +4,10 @@ doc2dash
 ghp-import
 jupyter-book
 jupyter-sphinx
-jupytext
 nox
 numpydoc
 pip
 pooch
-pydot
 seaborn
 sphinx-autoapi
 sphinx-autodoc-typehints
@@ -26,5 +24,3 @@ sphinx-sitemap
 sphinxcontrib-spelling
 sphinxext-opengraph
 sphinxext-rediraffe
-unicodedata2
-xarray
