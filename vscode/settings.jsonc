@@ -210,14 +210,18 @@
   "pandoc.useDocker": false,
   // shortcuts
   "code-runner.runInTerminal": true,
+  "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
     "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
     "javascript": "node run --allow-net $dir$fullFileName",
-    "julia": "julia --eval $dir$fullFileName",
+    "typescript": "ts-node",
     "python": "$(which python) -u $dir$fullFileName",
     "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt",
-    "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
+    "julia": "julia",
+    "shellscript": "bash",
+    "go": "go run",
+    "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt",
   },
   // python
   "[python]": {
@@ -295,7 +299,7 @@
   "hediet.vscode-drawio.theme": "Kennedy",
   // cpp
   "[cpp]": {
-    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.defaultFormatter": "demiaochen.clang-format-indent-4",
     "editor.suggest.insertMode": "replace",
     "editor.semanticHighlighting.enabled": true,
     "editor.wordBasedSuggestions": true
@@ -316,12 +320,12 @@
     "-std=c++11",
     "-j=12"
   ],
-  "lldb.suppressUpdateNotifications": true,
+  "clangd.detectExtensionConflicts": false,
   "cmake.automaticReconfigure": false,
   "cmake.autoSelectActiveFolder": false,
   "cmake.configureOnEdit": false,
   "cmake.configureOnOpen": false,
-  "cmake.statusbar.visibility": "compact",
+  "cmake.showOptionsMovedNotification": false,
   // toml
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.indentEntries": true,
@@ -379,12 +383,12 @@
   },
   "cSpell.showAutocompleteSuggestions": true,
   "cSpell.validateDirectives": true,
-  // ai
-  "codeium.enableConfig": {
-    "*": true,
-    "markdown": true
-  },
-  "codeium.enableSearch": true,
+  // color
+  "color-picker-universal.languages": [
+    "*",
+    "jsonc",
+    "!plaintext"
+  ],
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
@@ -432,16 +436,18 @@
       ]
     }
   ],
-  "redhat.telemetry.enabled": false,
+  // ai
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true
+  },
+  "codeium.enableSearch": true,
   "sourcery.codeLens": false,
-  "color-picker-universal.languages": [
-    "*",
-    "jsonc",
-    "!plaintext"
-  ],
+  "redhat.telemetry.enabled": false,
   // matlab
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
-  "MATLAB.installPath": "/Applications/MATLAB_R2022b.app",
+  // "MATLAB.installPath": "/Applications/MATLAB_R2022b.app",
+  // "MATLAB.telemetry": false,
 }
