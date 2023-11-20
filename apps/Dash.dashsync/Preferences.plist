@@ -2682,6 +2682,32 @@ $("h1").each(function() {
 					<string>Conda</string>
 				</dict>
 			</dict>
+			<key>Linux_Man_Pages</key>
+			<dict>
+				<key>date</key>
+				<date>2023-11-20T06:31:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Linux</string>
+						<string>Posix</string>
+						<string>Man pages</string>
+						<string>Unix</string>
+						<string>BSD</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Linux_Man_Pages#readme</string>
+					<key>authorLinkText</key>
+					<string>Yan Pashkovsky</string>
+					<key>name</key>
+					<string>Linux Man Pages</string>
+					<key>platform</key>
+					<string>usercontribLinux_Man_Pages</string>
+					<key>uniqueIdentifier</key>
+					<string>Linux_Man_Pages</string>
+				</dict>
+			</dict>
 			<key>NLTK</key>
 			<dict>
 				<key>date</key>
@@ -3991,6 +4017,8 @@ $("h1").each(function() {
 			<string>gsl</string>
 			<key>~/Library/Application Support/Dash/User Contributed/LightGBM/LightGBM.docset</key>
 			<string>lgb:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Linux Man Pages/Linux.docset</key>
+			<string>gnu</string>
 			<key>~/Library/Application Support/Dash/User Contributed/NLTK/NLTK.docset</key>
 			<string>nl</string>
 			<key>~/Library/Application Support/Dash/User Contributed/NetworkX/NetworkX.docset</key>
