@@ -321,11 +321,6 @@
     "-j=12"
   ],
   "clangd.detectExtensionConflicts": false,
-  "cmake.automaticReconfigure": false,
-  "cmake.autoSelectActiveFolder": false,
-  "cmake.configureOnEdit": false,
-  "cmake.configureOnOpen": false,
-  "cmake.showOptionsMovedNotification": false,
   // toml
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.indentEntries": true,
