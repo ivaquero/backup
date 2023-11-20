@@ -1,2 +1,0 @@
-armadillo
-conda-tree
