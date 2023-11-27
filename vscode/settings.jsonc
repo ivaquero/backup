@@ -358,7 +358,7 @@
     "!cpp",
     "!h"
   ],
-  "cSpell.language": "en,uk",
+  "cSpell.language": "en,uk,ru",
   "cSpell.ignoreRegExpList": [
     "`.+`", // md quotes
     "\\|\\s+\\w+", // md tables
@@ -412,6 +412,7 @@
   "typst-lsp.trace.server": "messages",
   "typst-preview.refresh": "onSave",
   "typst-preview.partialRendering": true,
+  "typst-preview.showInActivityBar": true,
   // other
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
@@ -442,7 +443,7 @@
   // matlab
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
-  }
+  },
   // "MATLAB.installPath": "/Applications/MATLAB_R2022b.app",
   // "MATLAB.telemetry": false,
 }
