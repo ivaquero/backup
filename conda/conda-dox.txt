@@ -6,8 +6,12 @@ jupyter-book
 jupyter-sphinx
 nox
 numpydoc
+orca
 pip
+plotly
 pooch
+scikit-image
+scikit-learn
 seaborn
 sphinx-autoapi
 sphinx-autodoc-typehints
