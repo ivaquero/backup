@@ -445,5 +445,5 @@
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
   // "MATLAB.installPath": "/Applications/MATLAB_R2022b.app",
-  // "MATLAB.telemetry": false,
+  "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
 }
