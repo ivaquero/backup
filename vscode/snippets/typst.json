@@ -423,9 +423,8 @@
   },
   "rcsv": {
     "prefix": "rcsv",
-    "description": "",
     "body": [
-      "#let csv1 = csv(\"\")",
+      "#let csv1 = csv(\"data\")",
       "#figure(",
       "  tablex(",
       "  columns: 10,",
@@ -511,6 +510,14 @@
     "description": "",
     "body": [
       "#bibliography(\"data/works.bib\", title: \"参考文献\")",
+      ""
+    ]
+  },
+  "rcpp": {
+    "prefix": "rcpp",
+    "body": [
+      "#let code1 = read(\"code\")",
+      "#code(code1, lang: \"c++\")",
       ""
     ]
   }
