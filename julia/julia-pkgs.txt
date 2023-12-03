@@ -17,14 +17,15 @@ JuMP
 JuliaFormatter
 Latexify
 ModelingToolkit
+NotebookToLaTeX
 OhMyREPL
 OrdinaryDiffEq
+PairPlots
 PkgDependency
 Pluto
 PlutoUI
 Polynomials
 QuadGK
-RDatasets
 ReverseDiff
 Symbolics
 Tidier
