@@ -205,9 +205,6 @@
     "dollarmath",
     "tasklist"
   ],
-  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
-  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
-  "pandoc.useDocker": false,
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
@@ -256,6 +253,9 @@
   "css.format.spaceAroundSelectorSeparator": true,
   "emmet.showSuggestionsAsSnippets": true,
   // latex
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
   "latex-workshop.intellisense.unimathsymbols.enabled": true,
   "latex-workshop.intellisense.update.aggressive.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
@@ -439,6 +439,7 @@
   },
   "codeium.enableSearch": true,
   "sourcery.codeLens": false,
+  "yaml.validate": false,
   "redhat.telemetry.enabled": false,
   // matlab
   "[matlab]": {
