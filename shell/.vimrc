@@ -56,13 +56,10 @@ Plug 'vim-airline/vim-airline-themes'
 
 " components
 Plug 'nanotee/zoxide.vim'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'sbdchd/neoformat'
 
 " completions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'Exafunction/codeium.vim'
 
 " shortcut
 Plug 'tpope/vim-commentary'
@@ -70,6 +67,7 @@ Plug 'tpope/vim-surround'
 
 " language
 Plug 'kaarmu/typst.vim'
+Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
@@ -77,18 +75,17 @@ colorscheme monokai
 
 " coc.nvim
 let g:coc_global_extensions = [
-    \ 'coc-css',
     \ 'coc-emmet',
+    \ 'coc-explorer',
     \ 'coc-git',
     \ 'coc-gitignore',
     \ 'coc-highlight',
     \ 'coc-json',
     \ 'coc-lists',
     \ 'coc-markdownlint',
+    \ 'coc-marketplace',
     \ 'coc-pairs',
     \ 'coc-prettier',
-    \ 'coc-pyright',
-    \ 'coc-rome',
     \ 'coc-rust-analyzer',
     \ 'coc-texlab',
     \ 'coc-yaml']
@@ -121,22 +118,9 @@ let g:airline_section_c = ''
 let g:airline_section_x = ''
 let g:airline_section_z = airline#section#create_right(['%l', '%c'])
 
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-nmap <leader>, <Plug>AirlineSelectPrevTab
-nmap <leader>. <Plug>AirlineSelectNextTab
-nmap <leader>q :bp<cr>:bd #<cr>
-
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
-  endif
+endif
 
 " unicode symbols
 " let g:airline_left_sep = '»'
@@ -150,41 +134,17 @@ let g:airline_symbols.spell = '⁇'
 let g:airline_symbols.notexists = 'Ɇ'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" nerdtree
-map <C-[> :NERDTreeToggle <CR>
-
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowCollapsible = '-'
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeMinimalUI = 1
-
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
-
-let g:NERDTreeHidden=0
-let g:NERDTreeShowBookmarks=1
-let g:NERDTreeShowHidden = 0
-let g:NERDTreeShowLineNumbers=0
-let g:NERDTreeWinPos='left'
-let g:NERDTreeWinSize = 25
-
-let g:NERDTreeGitStatusShowClean = 1
-" let g:NERDTreeGitStatusConcealBrackets = 1
-" let g:NERDTreeGitStatusIndicatorMapCustom = {
-"                 \ 'Modified'  :'✹',
-"                 \ 'Staged'    :'✚',
-"                 \ 'Untracked' :'✭',
-"                 \ 'Renamed'   :'➜',
-"                 \ 'Unmerged'  :'═',
-"                 \ 'Deleted'   :'✖',
-"                 \ 'Dirty'     :'✗',
-"                 \ 'Ignored'   :'☒',
-"                 \ 'Clean'     :'✔︎',
-"                 \ 'Unknown'   :'?',
-"                 \ }
-
-autocmd vimenter * if !argc()|NERDTree|
-autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+" keymaps
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>, <Plug>AirlineSelectPrevTab
+nmap <leader>. <Plug>AirlineSelectNextTab
+nmap <leader>q :bp<cr>:bd #<cr>
+nmap <space>e <Cmd>CocCommand explorer<CR>
