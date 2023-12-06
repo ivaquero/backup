@@ -1,3 +1,4 @@
+cmakelang
 conda-tree
 mamba
 pdftotext

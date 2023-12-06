@@ -1,3 +1,4 @@
+arch-py
 bambi
 causalpy
 conda-tree
@@ -7,5 +8,4 @@ openpyxl
 plotnine
 pydot
 pygwalker
-sympy
 translators

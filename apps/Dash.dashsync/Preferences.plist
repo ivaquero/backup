@@ -1322,7 +1322,7 @@ $("h1").each(function() {
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
-				<date>2023-10-31T03:37:26Z</date>
+				<date>2023-12-04T16:38:05Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -4046,6 +4046,8 @@ $("h1").each(function() {
 			<string>nt:</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/PyGWalker/PyGWalker.docset</key>
 			<string>pgw:</string>
+			<key>~/Library/Application Support/Dash/Docset Generator/Typst/Typst.docset</key>
+			<string>t</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
