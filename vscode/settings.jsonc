@@ -346,7 +346,6 @@
   "julia.plots.path": "plots",
   "julia.runtimeCompletions": true,
   "julia.symbolCacheDownload": false,
-  "julia-format.flag": "style=SciMLStyle(), indent=4, margin=256, always_for_in=true, for_in_replacement=\"∈\", whitespace_typedefs=true, import_to_using=true, align_struct_field=true, align_assignment=true, align_conditional=true, align_pair_arrow=true, normalize_line_endings=\"unix\", align_matrix=true, join_lines_based_on_source=true, indent_submodule=true, surround_whereop_typeparameters=false",
   // spell
   "cSpell.enableFiletypes": [
     "latex",
@@ -445,6 +444,6 @@
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
-  // "MATLAB.installPath": "/Applications/MATLAB_R2022b.app",
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
 }

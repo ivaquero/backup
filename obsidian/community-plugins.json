@@ -16,5 +16,6 @@
   "obsidian-matrix",
   "emoji-shortcodes",
   "obsidian-git",
-  "obsidian-plantuml"
+  "obsidian-plantuml",
+  "latex-to-unicode"
 ]
