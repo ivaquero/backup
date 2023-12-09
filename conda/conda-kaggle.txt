@@ -1,4 +1,3 @@
-arch-py
 bambi
 causalpy
 conda-tree

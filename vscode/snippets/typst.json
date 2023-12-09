@@ -6,25 +6,6 @@
       "#h(2em)"
     ]
   },
-  "t6": {
-    "prefix": "t6",
-    "description": "",
-    "body": [
-      "#figure(",
-      "  tablex(",
-      "    columns: 6,",
-      "    align: center + horizon,",
-      "    inset: 3pt,",
-      "    [], [], [], [], [], [],",
-      "    [], [], [], [], [], [],",
-      "    [], [], [], [], [], [],",
-      "    [], [], [], [], [], [],",
-      "  ),",
-      "  caption: [],",
-      "  supplement: [表]",
-      ")"
-    ]
-  },
   "t3": {
     "prefix": "t3",
     "description": "",
@@ -82,6 +63,61 @@
       ")"
     ]
   },
+  "t6": {
+    "prefix": "t6",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  tablex(",
+      "    columns: 6,",
+      "    align: center + horizon,",
+      "    inset: 3pt,",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "  ),",
+      "  caption: [],",
+      "  supplement: [表]",
+      ")"
+    ]
+  },
+  "ls": {
+    "prefix": "ls",
+    "description": "",
+    "body": [
+      "#list(",
+      "  [],",
+      "  [],",
+      "  indent: 1.2em",
+      ")"
+    ]
+  },
+  "en": {
+    "prefix": "en",
+    "description": "",
+    "body": [
+      "#enum(",
+      "  [],",
+      "  [],",
+      "  [],",
+      "  numbering: \"8.1\"",
+      "  indent: 0.5em",
+      ")"
+    ]
+  },
+  "col2": {
+    "prefix": "col2",
+    "description": "",
+    "body": [
+      "#block(height: 9em,",
+      "  columns()[",
+      "",
+      "  ]",
+      ")",
+      ""
+    ]
+  },
   "rpy": {
     "prefix": "rpy",
     "description": "",
@@ -98,6 +134,73 @@
       "#code(code1, lang: \"julia\")"
     ]
   },
+  "rcpp": {
+    "prefix": "rcpp",
+    "body": [
+      "#let code1 = read(\"code\")",
+      "#code(code1, lang: \"c++\")",
+      ""
+    ]
+  },
+  "raw": {
+    "prefix": "raw",
+    "body": [
+      "```",
+      "",
+      "```"
+    ]
+  },
+  "rcsv": {
+    "prefix": "rcsv",
+    "body": [
+      "#let csv1 = csv(\"data\")",
+      "#figure(",
+      "  tablex(",
+      "    columns: 10,",
+      "    align: center,",
+      "    inset: 3pt,",
+      "    ..csv1.flatten(),",
+      "   ),",
+      "  caption: \"\",",
+      "  supplement: [表]",
+      ")",
+      ""
+    ]
+  },
+  "f12": {
+    "prefix": "f12",
+    "description": "",
+    "body": [
+      "#align(center,",
+      "  stack(",
+      "    dir: ltr,",
+      "    spacing: 2em,",
+      "  figure(",
+      "    image(\"images\", width: 40%),",
+      "    caption: \"\",",
+      "    supplement: [图]",
+      "  ),",
+      "  figure(",
+      "    image(\"images\", width: 40%),",
+      "    caption: \"\",",
+      "    supplement: [图]",
+      "  )",
+      "  )",
+      ")",
+      ""
+    ]
+  },
+  "img": {
+    "prefix": "img",
+    "description": "",
+    "body": [
+      "#figure(",
+      "  image(\"images\", width: 40%),",
+      "  caption: \"\",",
+      "  supplement: [图]",
+      ")"
+    ]
+  },
   "def": {
     "prefix": "def",
     "description": "",
@@ -106,12 +209,36 @@
       "]"
     ]
   },
-  "eneq": {
-    "prefix": "eneq",
+  "theo": {
+    "prefix": "theo",
     "description": "",
     "body": [
-      "#set math.equation(numbering: \"(1)\", supplement: [式])",
-      "#set math.equation(numbering: none)"
+      "#theorem[",
+      "]"
+    ]
+  },
+  "coro": {
+    "prefix": "coro",
+    "description": "",
+    "body": [
+      "#corollary[",
+      "]"
+    ]
+  },
+  "tp": {
+    "prefix": "tp",
+    "description": "",
+    "body": [
+      "#tip[",
+      "]"
+    ]
+  },
+  "alg": {
+    "prefix": "alg",
+    "description": "",
+    "body": [
+      "#algo[",
+      "]"
     ]
   },
   "pg": {
@@ -240,54 +367,11 @@
       "op(\"rank\")()"
     ]
   },
-  "theo": {
-    "prefix": "theo",
-    "description": "",
-    "body": [
-      "#theorem[",
-      "]"
-    ]
-  },
-  "coro": {
-    "prefix": "coro",
-    "description": "",
-    "body": [
-      "#corollary[",
-      "]"
-    ]
-  },
-  "tp": {
-    "prefix": "tp",
-    "description": "",
-    "body": [
-      "#tip[",
-      "]"
-    ]
-  },
-  "alg": {
-    "prefix": "alg",
-    "description": "",
-    "body": [
-      "#algo[",
-      "]"
-    ]
-  },
   "xtax": {
     "prefix": "xtax",
     "description": "",
     "body": [
       "𝒙^⊤ 𝑨 𝒙"
-    ]
-  },
-  "ls": {
-    "prefix": "ls",
-    "description": "",
-    "body": [
-      "#list(",
-      "  [],",
-      "  [],",
-      "  indent: 1.2em",
-      ")"
     ]
   },
   "vxt": {
@@ -302,18 +386,6 @@
     "description": "",
     "body": [
       "⇔"
-    ]
-  },
-  "en": {
-    "prefix": "en",
-    "description": "",
-    "body": [
-      "#enum(",
-      "  [],",
-      "  [],",
-      "  [],",
-      "  indent: 1.2em",
-      ")"
     ]
   },
   "mgl": {
@@ -421,74 +493,11 @@
       "$X$和$Y$"
     ]
   },
-  "rcsv": {
-    "prefix": "rcsv",
-    "body": [
-      "#let csv1 = csv(\"data\")",
-      "#figure(",
-      "  tablex(",
-      "  columns: 10,",
-      "  align: center,",
-      "  inset: 3pt,",
-      "  ..csv1.flatten(),",
-      "  ),",
-      "  caption: \"\",",
-      "  supplement: [表]",
-      ")",
-      ""
-    ]
-  },
-  "f12": {
-    "prefix": "f12",
-    "description": "",
-    "body": [
-      "#align(center,",
-      "  stack(",
-      "    dir: ltr,",
-      "    spacing: 2em,",
-      "  figure(",
-      "    image(\"images\", width: 40%),",
-      "    caption: \"\",",
-      "    supplement: [图]",
-      "  ),",
-      "  figure(",
-      "    image(\"images\", width: 40%),",
-      "    caption: \"\",",
-      "    supplement: [图]",
-      "  )",
-      "  )",
-      ")",
-      ""
-    ]
-  },
   "iid": {
     "prefix": "iid",
     "description": "",
     "body": [
       "limits(∼)^(\"i.i.d\")"
-    ]
-  },
-  "img": {
-    "prefix": "img",
-    "description": "",
-    "body": [
-      "#figure(",
-      "  image(\"images\", width: 40%),",
-      "  caption: \"\",",
-      "  supplement: [图]",
-      ")"
-    ]
-  },
-  "col2": {
-    "prefix": "col2",
-    "description": "",
-    "body": [
-      "#block(height: 9em,",
-      "  columns()[",
-      "",
-      "  ]",
-      ")",
-      ""
     ]
   },
   "inv": {
@@ -511,22 +520,6 @@
     "body": [
       "#bibliography(\"data/works.bib\", title: \"参考文献\")",
       ""
-    ]
-  },
-  "rcpp": {
-    "prefix": "rcpp",
-    "body": [
-      "#let code1 = read(\"code\")",
-      "#code(code1, lang: \"c++\")",
-      ""
-    ]
-  },
-  "raw": {
-    "prefix": "raw",
-    "body": [
-      "```",
-      "",
-      "```"
     ]
   }
 }
