@@ -4,7 +4,7 @@
   "window.restoreWindows": "all",
   // extensions
   "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "onlySelectedExtensions",
   // application
   "update.mode": "none",
   "debug.onTaskErrors": "debugAnyway",
@@ -45,7 +45,7 @@
     "*.vimrc": "viml",
     "*.condarc": "yaml",
     "*.h": "cpp",
-    "*.m": "matlab"
+    "*.m": "matlab",
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -225,7 +225,7 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports.ruff": true
+      "source.organizeImports.ruff": "explicit"
     }
   },
   "ruff.fixAll": false,
@@ -302,7 +302,7 @@
     "editor.defaultFormatter": "demiaochen.clang-format-indent-4",
     "editor.suggest.insertMode": "replace",
     "editor.semanticHighlighting.enabled": true,
-    "editor.wordBasedSuggestions": true
+    "editor.wordBasedSuggestions": "matchingDocuments"
   },
   "clangd.arguments": [
     "--all-scopes-completion",
@@ -321,6 +321,7 @@
     "-j=12"
   ],
   "clangd.detectExtensionConflicts": false,
+  "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
   // toml
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.indentEntries": true,
@@ -436,7 +437,6 @@
     "*": true,
     "markdown": true
   },
-  "codeium.enableSearch": true,
   "sourcery.codeLens": false,
   "yaml.validate": false,
   "redhat.telemetry.enabled": false,
@@ -445,5 +445,4 @@
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
-  "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
 }
