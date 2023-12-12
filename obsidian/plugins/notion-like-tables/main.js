@@ -42754,28 +42754,28 @@ function _typeof(o2) {
 }
 
 // node_modules/@babel/runtime/helpers/esm/toPrimitive.js
-function _toPrimitive(input, hint) {
-  if (_typeof(input) !== "object" || input === null)
-    return input;
-  var prim = input[Symbol.toPrimitive];
-  if (prim !== void 0) {
-    var res = prim.call(input, hint || "default");
-    if (_typeof(res) !== "object")
-      return res;
+function toPrimitive(t2, r2) {
+  if ("object" != _typeof(t2) || !t2)
+    return t2;
+  var e = t2[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i2 = e.call(t2, r2 || "default");
+    if ("object" != _typeof(i2))
+      return i2;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (hint === "string" ? String : Number)(input);
+  return ("string" === r2 ? String : Number)(t2);
 }
 
 // node_modules/@babel/runtime/helpers/esm/toPropertyKey.js
-function _toPropertyKey(arg) {
-  var key = _toPrimitive(arg, "string");
-  return _typeof(key) === "symbol" ? key : String(key);
+function toPropertyKey(t2) {
+  var i2 = toPrimitive(t2, "string");
+  return "symbol" == _typeof(i2) ? i2 : String(i2);
 }
 
 // node_modules/@babel/runtime/helpers/esm/defineProperty.js
 function _defineProperty(obj, key, value) {
-  key = _toPropertyKey(key);
+  key = toPropertyKey(key);
   if (key in obj) {
     Object.defineProperty(obj, key, {
       value,
@@ -62341,7 +62341,9 @@ function MatchColumnMenu({
       position,
       openDirection: "bottom-left",
       children: [
-        columns.map((column) => {
+        columns.filter(
+          (column) => column.type !== "source" /* SOURCE */ && column.type !== "source-file" /* SOURCE_FILE */ && column.type !== "last-edited-time" /* LAST_EDITED_TIME */ && column.type !== "creation-time" /* CREATION_TIME */
+        ).map((column) => {
           const { id: id3, content, type } = column;
           const isDisabled = columnMatches.some(
             (match) => match.columnId === id3
@@ -63207,36 +63209,61 @@ var addImportData = (prevState, data, columnMatches, dateFormat, dateFormatSepar
       if (match) {
         const { importColumnIndex } = match;
         content = importRow[importColumnIndex].trim();
-        if (type === "tag" /* TAG */) {
-          const { cell, newTags } = findTagCell(
-            columnTags,
-            columnId,
-            content
-          );
-          newCell = cell;
-          columnTags.push(...newTags);
-        } else if (type === "multi-tag" /* MULTI_TAG */) {
-          const { cell, newTags } = findMultiTagCell(
-            columnTags,
-            columnId,
-            content
-          );
-          newCell = cell;
-          columnTags.push(...newTags);
-        } else if (type === "date" /* DATE */) {
-          const cell = findDateCell(
-            columnId,
-            content,
-            dateFormat,
-            dateFormatSeparator
-          );
-          newCell = cell;
-        }
       }
-      if (!newCell) {
+      if (type === "tag" /* TAG */) {
+        const { cell, newTags } = findTagCell(
+          columnTags,
+          columnId,
+          content
+        );
+        newCell = cell;
+        columnTags.push(...newTags);
+      } else if (type === "multi-tag" /* MULTI_TAG */) {
+        const { cell, newTags } = findMultiTagCell(
+          columnTags,
+          columnId,
+          content
+        );
+        newCell = cell;
+        columnTags.push(...newTags);
+      } else if (type === "date" /* DATE */) {
+        const cell = findDateCell(
+          columnId,
+          content,
+          dateFormat,
+          dateFormatSeparator
+        );
+        newCell = cell;
+      } else if (type === "checkbox" /* CHECKBOX */) {
+        newCell = createCheckboxCell(columnId, {
+          value: content.toLowerCase() === "true" ? true : false
+        });
+      } else if (type === "number" /* NUMBER */) {
+        newCell = createNumberCell(columnId, {
+          value: parseFloat(content)
+        });
+      } else if (type === "embed" /* EMBED */) {
+        newCell = createEmbedCell(columnId, {
+          pathOrUrl: content
+        });
+      } else if (type === "file" /* FILE */) {
+        newCell = createFileCell(columnId, {
+          path: content
+        });
+      } else if (type === "creation-time" /* CREATION_TIME */) {
+        newCell = createCreationTimeCell(columnId);
+      } else if (type === "last-edited-time" /* LAST_EDITED_TIME */) {
+        newCell = createLastEditedTimeCell(columnId);
+      } else if (type === "source" /* SOURCE */) {
+        newCell = createSourceCell(columnId);
+      } else if (type === "source-file" /* SOURCE_FILE */) {
+        newCell = createSourceFileCell(columnId);
+      } else if (type === "text" /* TEXT */) {
         newCell = createTextCell(columnId, {
           content
         });
+      } else {
+        throw new Error("Unhandled cell type");
       }
       nextCells.push(newCell);
     });
