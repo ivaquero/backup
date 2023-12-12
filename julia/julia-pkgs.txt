@@ -17,6 +17,7 @@ JuMP
 JuliaFormatter
 Latexify
 ModelingToolkit
+NearestNeighbors
 NotebookToLaTeX
 OhMyREPL
 OrdinaryDiffEq
