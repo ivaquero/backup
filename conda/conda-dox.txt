@@ -10,6 +10,7 @@ orca
 pip
 plotly
 pooch
+python-kaleido
 scikit-image
 scikit-learn
 seaborn

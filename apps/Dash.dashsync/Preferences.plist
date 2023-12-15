@@ -2883,6 +2883,30 @@ $("h1").each(function() {
 					<string>Scikit</string>
 				</dict>
 			</dict>
+			<key>Scikit-image</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-15T10:04:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Image Processing</string>
+						<string>skimage</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
+					<key>authorLinkText</key>
+					<string>Aziz Alto, Xavier Yang</string>
+					<key>name</key>
+					<string>scikit-image</string>
+					<key>platform</key>
+					<string>usercontribScikit-image</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit-image</string>
+				</dict>
+			</dict>
 			<key>Seaborn</key>
 			<dict>
 				<key>date</key>
@@ -4156,6 +4180,8 @@ $("h1").each(function() {
 			<string>pr</string>
 			<key>~/Library/Application Support/Dash/User Contributed/pytest/pytest.docset</key>
 			<string>pt</string>
+			<key>~/Library/Application Support/Dash/User Contributed/scikitimage/scikit-image.docset</key>
+			<string>skm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn 1.2.docset</key>
 			<string>sk:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
