@@ -22,6 +22,7 @@
       "  ),",
       "  caption: [],",
       "  supplement: [表]",
+      "  kind: table",
       ")"
     ]
   },
@@ -41,6 +42,7 @@
       "  ),",
       "  caption: [],",
       "  supplement: [表]",
+      "  kind: table",
       ")"
     ]
   },
@@ -60,6 +62,7 @@
       "  ),",
       "  caption: [],",
       "  supplement: [表]",
+      "  kind: table",
       ")"
     ]
   },
@@ -520,6 +523,12 @@
     "body": [
       "#bibliography(\"data/works.bib\", title: \"参考文献\")",
       ""
+    ]
+  },
+  "nvl": {
+    "prefix": "nvl",
+    "body": [
+      "auto-vlines: false,",
     ]
   }
 }

@@ -15,7 +15,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Oxidizer
-export OXIDIZER=${HOME}/oxidizer
+export OXIDIZER=${HOME}/Documents/GitHub/oxidizer
 source ${OXIDIZER}/oxidizer.sh
 
 export PATH="/opt/homebrew/bin:$PATH"

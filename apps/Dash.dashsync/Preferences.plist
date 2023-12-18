@@ -2883,30 +2883,6 @@ $("h1").each(function() {
 					<string>Scikit</string>
 				</dict>
 			</dict>
-			<key>Scikit-image</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-15T10:04:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Image Processing</string>
-						<string>skimage</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
-					<key>authorLinkText</key>
-					<string>Aziz Alto, Xavier Yang</string>
-					<key>name</key>
-					<string>scikit-image</string>
-					<key>platform</key>
-					<string>usercontribScikit-image</string>
-					<key>uniqueIdentifier</key>
-					<string>Scikit-image</string>
-				</dict>
-			</dict>
 			<key>Seaborn</key>
 			<dict>
 				<key>date</key>
@@ -3567,6 +3543,30 @@ $("h1").each(function() {
 					<string>usercontribQt_for_Python</string>
 					<key>uniqueIdentifier</key>
 					<string>Qt_for_Python</string>
+				</dict>
+			</dict>
+			<key>Scikit-image</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-18T14:45:37Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Image Processing</string>
+						<string>skimage</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
+					<key>authorLinkText</key>
+					<string>Aziz Alto, Xavier Yang</string>
+					<key>name</key>
+					<string>scikit-image</string>
+					<key>platform</key>
+					<string>usercontribScikit-image</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit-image</string>
 				</dict>
 			</dict>
 			<key>TorchMetrics</key>
