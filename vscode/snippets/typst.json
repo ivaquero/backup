@@ -166,6 +166,7 @@
       "   ),",
       "  caption: \"\",",
       "  supplement: [表]",
+      "  kind: table",
       ")",
       ""
     ]
