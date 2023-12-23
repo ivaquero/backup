@@ -4,9 +4,7 @@ doc2dash
 ghp-import
 jupyter-book
 jupyter-sphinx
-nox
 numpydoc
-orca
 pip
 plotly
 pooch

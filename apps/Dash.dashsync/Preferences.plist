@@ -464,6 +464,63 @@ $("h1").each(function() {
 					<string>Distributions.jl</string>
 				</dict>
 			</dict>
+			<key>Doxygen</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-23T10:34:03Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://www.doxygen.nl/manual/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>dx</string>
+						<key>docsetName</key>
+						<string>Doxygen</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://www.doxygen.nl/manual/index.html</string>
+					</dict>
+					<key>name</key>
+					<string>Doxygen</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Doxygen</string>
+				</dict>
+			</dict>
 			<key>DynamicalSystems.jl</key>
 			<dict>
 				<key>date</key>
@@ -1089,6 +1146,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>ModelingToolkit.jl</string>
+				</dict>
+			</dict>
+			<key>PyWalker</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-23T10:31:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.kanaries.net/pygwalker/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>pw</string>
+						<key>docsetName</key>
+						<string>PyWalker</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.kanaries.net/pygwalker</string>
+					</dict>
+					<key>name</key>
+					<string>PyWalker</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>PyWalker</string>
 				</dict>
 			</dict>
 			<key>Symbolics.jl</key>
@@ -3026,32 +3140,6 @@ $("h1").each(function() {
 					<string>jupyter-book</string>
 				</dict>
 			</dict>
-			<key>nox</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-22T14:41:50Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>python</string>
-						<string>graph</string>
-						<string>matplotlib</string>
-						<string>visualization</string>
-						<string>data</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/nox#readme</string>
-					<key>authorLinkText</key>
-					<string>Paulo S. Costa</string>
-					<key>name</key>
-					<string>nox</string>
-					<key>platform</key>
-					<string>usercontribnox</string>
-					<key>uniqueIdentifier</key>
-					<string>nox</string>
-				</dict>
-			</dict>
 			<key>plotnine</key>
 			<dict>
 				<key>date</key>
@@ -3803,6 +3891,32 @@ $("h1").each(function() {
 					<string>usercontribjq</string>
 					<key>uniqueIdentifier</key>
 					<string>jq</string>
+				</dict>
+			</dict>
+			<key>nox</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-23T10:25:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>python</string>
+						<string>graph</string>
+						<string>matplotlib</string>
+						<string>visualization</string>
+						<string>data</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/nox#readme</string>
+					<key>authorLinkText</key>
+					<string>Paulo S. Costa</string>
+					<key>name</key>
+					<string>nox</string>
+					<key>platform</key>
+					<string>usercontribnox</string>
+					<key>uniqueIdentifier</key>
+					<string>nox</string>
 				</dict>
 			</dict>
 			<key>polars</key>
