@@ -9,7 +9,7 @@
   "showWelcomeModal": false,
   "showWhatsNewModal": true,
   "defaultFrozenColumnCount": 1,
-  "pluginVersion": "8.15.8",
+  "pluginVersion": "8.15.10",
   "exportRenderMarkdown": true,
   "showDonationModal": true,
   "hasMigratedTo700": true

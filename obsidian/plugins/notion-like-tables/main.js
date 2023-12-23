@@ -47405,6 +47405,7 @@ function LoomStateProvider({
   const [position, setPosition] = import_react5.default.useState(0);
   const logger = useLogger();
   const { reactAppId, loomFile, app } = useAppMount();
+  const [error, setError] = import_react5.default.useState(null);
   const isMountedRef = import_react5.default.useRef(false);
   import_react5.default.useEffect(() => {
     if (!isMountedRef.current) {
@@ -47428,9 +47429,43 @@ function LoomStateProvider({
         });
       }
     }
-    EventManager.getInstance().on("app-refresh", handleRefreshEvent);
-    return () => EventManager.getInstance().off("app-refresh", handleRefreshEvent);
+    EventManager.getInstance().on(
+      "app-refresh-by-state",
+      handleRefreshEvent
+    );
+    return () => EventManager.getInstance().off(
+      "app-refresh-by-state",
+      handleRefreshEvent
+    );
   }, [reactAppId, loomFile, app]);
+  import_react5.default.useEffect(() => {
+    function handleRefreshEvent(file, pluginVersion) {
+      return __async(this, null, function* () {
+        if (file.path === loomFile.path) {
+          const fileData = yield app.vault.read(loomFile);
+          try {
+            const state = deserializeState(fileData, pluginVersion);
+            setLoomState({
+              state,
+              shouldSaveToDisk: false,
+              shouldSaveFrontmatter: false,
+              time: Date.now()
+            });
+          } catch (err) {
+            setError(err);
+          }
+        }
+      });
+    }
+    EventManager.getInstance().on(
+      "app-refresh-by-file",
+      handleRefreshEvent
+    );
+    return () => EventManager.getInstance().off(
+      "app-refresh-by-file",
+      handleRefreshEvent
+    );
+  }, [loomFile, app]);
   function handleToggleSearchBar() {
     setSearchBarVisible((prevState) => !prevState);
   }
@@ -47500,6 +47535,9 @@ function LoomStateProvider({
     },
     [position, history, loomState]
   );
+  if (error) {
+    throw error;
+  }
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
     LoomStateContext.Provider,
     {
@@ -52669,7 +52707,7 @@ var DataLoomView = class extends import_obsidian8.TextFileView {
       this.setViewData(serialized, false);
       this.requestSave();
       EventManager.getInstance().emit(
-        "app-refresh",
+        "app-refresh-by-state",
         this.file.path,
         appId,
         state
@@ -63208,7 +63246,10 @@ var addImportData = (prevState, data, columnMatches, dateFormat, dateFormatSepar
       let newCell = null;
       if (match) {
         const { importColumnIndex } = match;
-        content = importRow[importColumnIndex].trim();
+        content = importRow[importColumnIndex];
+        if (content !== void 0 && content !== null) {
+          content = content.trim();
+        }
       }
       if (type === "tag" /* TAG */) {
         const { cell, newTags } = findTagCell(
@@ -63742,7 +63783,7 @@ var ImportModal = class extends import_obsidian17.Modal {
       const serialized = serializeState(state);
       yield this.app.vault.modify(this.loomFile, serialized);
       EventManager.getInstance().emit(
-        "app-refresh",
+        "app-refresh-by-state",
         this.loomFile.path,
         "",
         state
@@ -69146,7 +69187,12 @@ var handleSave = (app, file, appId, state, shouldSaveFrontmatter) => __async(voi
   }
   const serialized = serializeState(state);
   yield app.vault.modify(file, serialized);
-  EventManager.getInstance().emit("app-refresh", file.path, appId, state);
+  EventManager.getInstance().emit(
+    "app-refresh-by-state",
+    file.path,
+    appId,
+    state
+  );
 });
 var renderContainerEl = (linkEl) => {
   const containerEl = linkEl.createDiv({
@@ -69314,7 +69360,7 @@ var handleFileRename = (app, file, oldPath, currentAppVersion) => __async(void 0
       numFilesUpdated++;
       yield file.vault.modify(loomFile, serializeState(updatedState));
       EventManager.getInstance().emit(
-        "app-refresh",
+        "app-refresh-by-state",
         loomFile.path,
         -1,
         updatedState
@@ -69647,6 +69693,15 @@ var DataLoomPlugin = class extends import_obsidian22.Plugin {
           }
         })
       )
+    );
+    this.registerEvent(
+      this.app.vault.on("modify", (file) => __async(this, null, function* () {
+        if (file instanceof import_obsidian22.TFile) {
+          if (file.extension === LOOM_EXTENSION) {
+            EventManager.getInstance().emit("app-refresh-by-file", file, this.manifest.version);
+          }
+        }
+      }))
     );
     this.registerSourceEvents();
   }

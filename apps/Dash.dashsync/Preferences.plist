@@ -1091,63 +1091,6 @@ $("h1").each(function() {
 					<string>ModelingToolkit.jl</string>
 				</dict>
 			</dict>
-			<key>PyGWalker</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-16T06:24:30Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>docs.kanaries.net/pygwalker/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>pgw</string>
-						<key>docsetName</key>
-						<string>PyGWalker</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.kanaries.net/pygwalker</string>
-					</dict>
-					<key>name</key>
-					<string>PyGWalker</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>PyGWalker</string>
-				</dict>
-			</dict>
 			<key>Symbolics.jl</key>
 			<dict>
 				<key>date</key>
@@ -1379,7 +1322,7 @@ $("h1").each(function() {
 			<key>homebrew</key>
 			<dict>
 				<key>date</key>
-				<date>2023-11-04T07:54:40Z</date>
+				<date>2023-12-23T08:48:56Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -1776,6 +1719,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Penrose</string>
+				</dict>
+			</dict>
+			<key>PyGWalker</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-20T13:00:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>docs.kanaries.net/pygwalker/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>pgw</string>
+						<key>docsetName</key>
+						<string>PyGWalker</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.kanaries.net/pygwalker</string>
+					</dict>
+					<key>name</key>
+					<string>PyGWalker</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>PyGWalker</string>
 				</dict>
 			</dict>
 			<key>PyMC</key>
@@ -2883,6 +2883,30 @@ $("h1").each(function() {
 					<string>Scikit</string>
 				</dict>
 			</dict>
+			<key>Scikit-image</key>
+			<dict>
+				<key>date</key>
+				<date>2023-12-20T12:14:18Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Image Processing</string>
+						<string>skimage</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
+					<key>authorLinkText</key>
+					<string>Aziz Alto, Xavier Yang</string>
+					<key>name</key>
+					<string>scikit-image</string>
+					<key>platform</key>
+					<string>usercontribScikit-image</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit-image</string>
+				</dict>
+			</dict>
 			<key>Seaborn</key>
 			<dict>
 				<key>date</key>
@@ -3543,30 +3567,6 @@ $("h1").each(function() {
 					<string>usercontribQt_for_Python</string>
 					<key>uniqueIdentifier</key>
 					<string>Qt_for_Python</string>
-				</dict>
-			</dict>
-			<key>Scikit-image</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-18T14:45:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Image Processing</string>
-						<string>skimage</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
-					<key>authorLinkText</key>
-					<string>Aziz Alto, Xavier Yang</string>
-					<key>name</key>
-					<string>scikit-image</string>
-					<key>platform</key>
-					<string>usercontribScikit-image</string>
-					<key>uniqueIdentifier</key>
-					<string>Scikit-image</string>
 				</dict>
 			</dict>
 			<key>TorchMetrics</key>
