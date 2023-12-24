@@ -1,9 +1,12 @@
 armadillo
+black
 conda-tree
 doc2dash
 ghp-import
 jupyter-book
 jupyter-sphinx
+keras
+markdown
 numpydoc
 pip
 plotly

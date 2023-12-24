@@ -2,9 +2,12 @@ bambi
 causalpy
 conda-tree
 ipykernel
+keras
 nbconvert
 openpyxl
 plotnine
 pydot
 pygwalker
+torchvision
 translators
+ultralytics
