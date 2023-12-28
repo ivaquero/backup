@@ -165,7 +165,7 @@
       "    ..csv1.flatten(),",
       "   ),",
       "  caption: \"\",",
-      "  supplement: [表]",
+      "  supplement: [表],",
       "  kind: table",
       ")",
       ""

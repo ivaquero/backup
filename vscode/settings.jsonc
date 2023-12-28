@@ -14,7 +14,6 @@
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
-  "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
@@ -304,49 +303,11 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.wordBasedSuggestions": "matchingDocuments"
   },
-  "clangd.arguments": [
-    "--all-scopes-completion",
-    "--background-index",
-    "--clang-tidy-checks=cppcoreguidelines-*,performance-*,bugprone-*,portability-*,modernize-*",
-    "--clang-tidy",
-    "--compile-commands-dir=.vscode",
-    "--completion-style=detailed",
-    "--function-arg-placeholders=false",
-    "--header-insertion-decorators",
-    "--header-insertion=iwyu",
-    "--log=verbose",
-    "--pch-storage=memory",
-    "--query-driver=/usr/bin/clang++",
-    "-std=c++11",
-    "-j=12"
-  ],
-  "clangd.detectExtensionConflicts": false,
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
-  // toml
-  "evenBetterToml.formatter.alignEntries": true,
-  "evenBetterToml.formatter.indentEntries": true,
-  "evenBetterToml.formatter.indentTables": true,
-  // lua
-  "luahelper.format.align_args": true,
-  "luahelper.format.align_parameter": true,
-  "luahelper.format.spaces_inside_functioncall_parens": true,
-  "luahelper.format.spaces_inside_functiondef_parens": true,
-  "luahelper.format.spaces_inside_table_braces": true,
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "[julia]": {
-    "editor.defaultFormatter": "0h7z.vscode-julia-format"
-  },
-  "julia.deleteJuliaCovFiles": true,
-  "julia.enableTelemetry": false,
-  "julia.execution.codeInREPL": true,
-  "julia.execution.inlineResultsForCellEvaluation": true,
-  "julia.execution.resultType": "both",
-  "julia.plots.path": "plots",
-  "julia.runtimeCompletions": true,
-  "julia.symbolCacheDownload": false,
   // spell
   "cSpell.enableFiletypes": [
     "latex",
@@ -378,12 +339,6 @@
   },
   "cSpell.showAutocompleteSuggestions": true,
   "cSpell.validateDirectives": true,
-  // color
-  "color-picker-universal.languages": [
-    "*",
-    "jsonc",
-    "!plaintext"
-  ],
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
@@ -414,23 +369,15 @@
   "typst-preview.partialRendering": true,
   "typst-preview.showInActivityBar": true,
   // other
+  "yaml.validate": false,
+  "redhat.telemetry.enabled": false,
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
   },
-  "openInExternalApp.openMapper": [
-    {
-      "extensionName": "png",
-      "apps": [
-        {
-          "title": "gimp",
-          "openCommand": "/Applications/GIMP.app"
-        },
-        {
-          "title": "chrome",
-          "openCommand": "/Applications/Google Chrome.app"
-        },
-      ]
-    }
+  "color-picker-universal.languages": [
+    "*",
+    "jsonc",
+    "!plaintext"
   ],
   // ai
   "codeium.enableConfig": {
@@ -438,8 +385,31 @@
     "markdown": true
   },
   "sourcery.codeLens": false,
-  "yaml.validate": false,
-  "redhat.telemetry.enabled": false,
+  "[julia]": {
+    "editor.defaultFormatter": "0h7z.vscode-julia-format"
+  },
+  // toml
+  "evenBetterToml.formatter.alignComments": true,
+  "evenBetterToml.formatter.alignEntries": true,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.arrayTrailingComma": false,
+  "evenBetterToml.formatter.columnWidth": 80,
+  "evenBetterToml.formatter.indentEntries": true,
+  "evenBetterToml.formatter.indentTables": true,
+  // lua
+  "luahelper.format.align_args": true,
+  "luahelper.format.align_parameter": true,
+  "luahelper.format.spaces_inside_functioncall_parens": true,
+  "luahelper.format.spaces_inside_functiondef_parens": true,
+  "luahelper.format.spaces_inside_table_braces": true,
+  "julia.deleteJuliaCovFiles": true,
+  "julia.enableTelemetry": false,
+  "julia.execution.codeInREPL": true,
+  "julia.execution.inlineResultsForCellEvaluation": true,
+  "julia.execution.resultType": "both",
+  "julia.plots.path": "plots",
+  "julia.runtimeCompletions": true,
+  "julia.symbolCacheDownload": false,
   // matlab
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
