@@ -386,7 +386,7 @@
   },
   "sourcery.codeLens": false,
   "[julia]": {
-    "editor.defaultFormatter": "0h7z.vscode-julia-format"
+    "editor.defaultFormatter": "julialang.language-julia"
   },
   // toml
   "evenBetterToml.formatter.alignComments": true,
