@@ -229,8 +229,8 @@
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": false,
-      "source.organizeImports": true
+      "source.fixAll": "never",
+      "source.organizeImports": "explicit"
     }
   },
   "python.terminal.activateEnvInCurrentTerminal": true,
@@ -383,7 +383,6 @@
   "typst-preview.partialRendering": true,
   "typst-preview.showInActivityBar": true,
   // other
-  "yaml.validate": false,
   "redhat.telemetry.enabled": false,
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
