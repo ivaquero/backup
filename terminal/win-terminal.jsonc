@@ -28,12 +28,15 @@
     ],
     "alwaysShowNotificationIcon": false,
     "copyFormatting": "none",
-    "copyOnSelect": true,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "launchMode": "default",
+    "copyOnSelect": false,
+    "defaultProfile": "{c891c3d2-b798-4857-83c0-89bf2ea34021}",
+    "newTabMenu": [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": {
         "defaults": {
-            "cursorShape": "bar",
             "font": {
                 "face": "FiraCode Nerd Font"
             },
@@ -41,6 +44,12 @@
             "useAcrylic": true
         },
         "list": [
+            {
+                "commandline": "C:\\Scoop\\shims\\bash.exe --login -i",
+                "guid": "{c891c3d2-b798-4857-83c0-89bf2ea34021}",
+                "name": "Git Bash",
+                "icon": "C:\\Scoop\\apps\\git-cn\\current\\mingw64\\share\\git\\git-for-windows.ico"
+            },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -270,6 +279,5 @@
             "yellow": "#808000"
         }
     ],
-    "theme": "dark",
     "themes": []
 }

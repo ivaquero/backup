@@ -54,9 +54,6 @@
   "terminal.external.linuxExec": "wezterm",
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.external.windowsExec": "C:\\Scoop\\apps\\wezterm\\current\\wezterm.exe",
-  "terminal.integrated.commandsToSkipShell": [
-    "language-julia.interrupt"
-  ],
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
@@ -65,24 +62,30 @@
   "terminal.integrated.rightClickBehavior": "copyPaste",
   "terminal.integrated.shellIntegration.suggestEnabled": true,
   "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "path": "pwsh.exe",
+    "bash": {
+      "path": [
+        "C:\\Scoop\\shims\\bash.exe"
+      ],
+      "icon": "terminal-bash",
       "args": [
-        "-NoLogo"
-      ]
-    }
-  },
-  "terminal.integrated.profiles.osx": {
-    "zsh": {
-      "path": "/bin/zsh",
-      "args": [
-        "-l"
+        "-l",
+        "-i"
       ]
     }
   },
   "terminal.integrated.profiles.linux": {
     "zsh": {
       "path": "/bin/zsh",
+      "icon": "terminal-bash",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "icon": "terminal-bash",
       "args": [
         "-l"
       ]
@@ -284,7 +287,8 @@
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
   // shell
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": true,
   },
   // spell
   "cSpell.enableFiletypes": [
