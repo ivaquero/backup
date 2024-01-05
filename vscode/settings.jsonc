@@ -114,12 +114,6 @@
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
   "scm.providerCountBadge": "auto",
-  // notebook
-  "notebook.consolidatedRunButton": true,
-  "notebook.diff.enablePreview": false,
-  "notebook.diff.ignoreOutputs": true,
-  "notebook.lineNumbers": "on",
-  "notebook.markup.fontSize": 18,
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
@@ -143,7 +137,8 @@
       "strings": "on",
       "other": "on"
     },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
   },
   "markdown.extension.italic.indicator": "*",
   "markdown.extension.print.imgToBase64": true,
@@ -210,26 +205,34 @@
   "code-runner.executorMap": {
     "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
     "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "javascript": "node run --allow-net $dir$fullFileName",
+    "javascript": "node run --allow-net $fullFileName",
     "typescript": "ts-node",
-    "python": "$(which python) -u $dir$fullFileName",
+    "python": "$(which python) -u $fullFileName",
     "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt",
     "julia": "julia",
     "shellscript": "bash",
     "go": "go run",
     "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt",
   },
+  // notebook
+  "notebook.consolidatedRunButton": true,
+  "notebook.diff.enablePreview": false,
+  "notebook.diff.ignoreOutputs": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 18,
+  "notebook.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   // python
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.organizeImports.ruff": "explicit"
+      "source.fixAll": false,
+      "source.organizeImports": true
     }
   },
-  "ruff.fixAll": false,
-  "ruff.importStrategy": "useBundled",
-  "ruff.lint.run": "onSave",
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
@@ -246,47 +249,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json][jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
   },
   "css.format.enable": true,
   "css.format.spaceAroundSelectorSeparator": true,
   "emmet.showSuggestionsAsSnippets": true,
-  // latex
-  "[latex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
-  },
-  "latex-workshop.intellisense.unimathsymbols.enabled": true,
-  "latex-workshop.intellisense.update.aggressive.enabled": true,
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.autoClean.run": "onBuilt",
-  "latex-workshop.latex.clean.subfolder.enabled": true,
-  "latex-workshop.latexindent.path": "latexindent",
-  "latex-workshop.message.error.show": false,
-  "latex-workshop.message.warning.show": false,
-  "latex-workshop.showContextMenu": true,
-  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "tectonic",
-      "tools": [
-        "tectonic"
-      ]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "tectonic",
-      "command": "tectonic",
-      "args": [
-        "-X",
-        "compile",
-        "--keep-intermediates",
-        "--keep-logs",
-        "%DOC%.tex"
-      ]
-    }
-  ],
   // ui & preview
   "conventionalCommits.autoCommit": false,
   "conventionalCommits.emojiFormat": "emoji",
@@ -297,12 +265,22 @@
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "Kennedy",
   // cpp
-  "[cpp]": {
-    "editor.defaultFormatter": "demiaochen.clang-format-indent-4",
-    "editor.suggest.insertMode": "replace",
+  "[c][cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.semanticHighlighting.enabled": true,
-    "editor.wordBasedSuggestions": "matchingDocuments"
+    "editor.suggest.insertMode": "replace",
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    }
   },
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+  "C_Cpp.inlayHints.parameterNames.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.showSpace": true,
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
   // shell
   "[shellscript]": {
@@ -339,6 +317,42 @@
   },
   "cSpell.showAutocompleteSuggestions": true,
   "cSpell.validateDirectives": true,
+  // latex
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "latex-workshop.intellisense.unimathsymbols.enabled": true,
+  "latex-workshop.intellisense.update.aggressive.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.latexindent.path": "latexindent",
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.showContextMenu": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "tectonic",
+      "tools": [
+        "tectonic"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "tectonic",
+      "command": "tectonic",
+      "args": [
+        "-X",
+        "compile",
+        "--keep-intermediates",
+        "--keep-logs",
+        "%DOC%.tex"
+      ]
+    }
+  ],
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
@@ -386,7 +400,8 @@
   },
   "sourcery.codeLens": false,
   "[julia]": {
-    "editor.defaultFormatter": "julialang.language-julia"
+    "editor.defaultFormatter": "julialang.language-julia",
+    "editor.formatOnSave": true,
   },
   // toml
   "evenBetterToml.formatter.alignComments": true,

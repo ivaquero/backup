@@ -2741,6 +2741,28 @@ $("h1").each(function() {
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
+	<key>DHRustRepo</key>
+	<dict>
+		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
+		<dict>
+			<key>typst</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-03T12:54:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>typst</string>
+					<key>platform</key>
+					<string>crate</string>
+					<key>uniqueIdentifier</key>
+					<string>typst</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
 	<key>DHScalaRepo</key>
 	<dict>
 		<key>installed</key>
@@ -4422,10 +4444,15 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2023-08-29T13:38:16Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/Ruby_3.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-03T12:56:13Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Rust.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2023-08-24T04:45:11Z</date>
+				<date>2024-01-03T12:55:29Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SQLAlchemy.xml</key>
 			<dict>
