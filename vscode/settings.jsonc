@@ -55,6 +55,7 @@
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.external.windowsExec": "C:\\Scoop\\apps\\wezterm\\current\\wezterm.exe",
   "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.windows": "bash",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "whenEmpty",
@@ -104,7 +105,6 @@
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
     "*.md": "default",
-    "*.ipynb": "jupyter-notebook",
     "*.drawio.png": "hediet.vscode-drawio"
   },
   "workbench.iconTheme": "material-icon-theme",
@@ -233,7 +233,7 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll": "never",
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "python.terminal.activateEnvInCurrentTerminal": true,
@@ -292,6 +292,11 @@
   "C_Cpp.inlayHints.referenceOperator.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.formatOnSave": true,
+  },
+  "redhat.telemetry.enabled": false,
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
@@ -394,7 +399,6 @@
   "typst-preview.partialRendering": true,
   "typst-preview.showInActivityBar": true,
   // other
-  "redhat.telemetry.enabled": false,
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
   },
@@ -406,26 +410,24 @@
   // ai
   "codeium.enableConfig": {
     "*": true,
-    "markdown": true
-  },
-  "[julia]": {
-    "editor.defaultFormatter": "julialang.language-julia",
-    "editor.formatOnSave": true,
+    "markdown": true,
+    "toml": false
   },
   // toml
-  "evenBetterToml.formatter.alignComments": true,
-  "evenBetterToml.formatter.alignEntries": true,
-  "evenBetterToml.formatter.allowedBlankLines": 1,
-  "evenBetterToml.formatter.arrayTrailingComma": false,
-  "evenBetterToml.formatter.columnWidth": 80,
-  "evenBetterToml.formatter.indentEntries": true,
-  "evenBetterToml.formatter.indentTables": true,
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": false,
+  },
   // lua
   "luahelper.format.align_args": true,
   "luahelper.format.align_parameter": true,
   "luahelper.format.spaces_inside_functioncall_parens": true,
   "luahelper.format.spaces_inside_functiondef_parens": true,
   "luahelper.format.spaces_inside_table_braces": true,
+  "[julia]": {
+    "editor.defaultFormatter": "julialang.language-julia",
+    "editor.formatOnSave": true,
+  },
   "julia.deleteJuliaCovFiles": true,
   "julia.enableTelemetry": false,
   "julia.execution.codeInREPL": true,

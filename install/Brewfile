@@ -39,6 +39,7 @@ brew "pandoc"
 brew "pdfcpu"
 brew "pueue", restart_service: true
 brew "qt"
+brew "qt@5"
 brew "ripgrep"
 brew "rustup-init"
 brew "starship"
