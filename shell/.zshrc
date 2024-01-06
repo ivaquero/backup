@@ -22,5 +22,3 @@ export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
-
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

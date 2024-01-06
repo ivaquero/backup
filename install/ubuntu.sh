@@ -1,3 +1,4 @@
+#!/bin/bash /bin/zsh
 # Keep Alive Root
 while true; do
     sudo -n true
