@@ -233,12 +233,19 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll": "never",
-      "source.organizeImports": "explicit"
+      "source.organizeImports": true
     }
   },
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "ruff.lint.args": [
+    "--extend-select=FURB",
+    "--extend-select=NPY",
+    "--extend-select=PD",
+    "--extend-select=PL",
+    "--extend-select=UP",
+  ],
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.enableExtendedKernelCompletions": true,
@@ -401,7 +408,6 @@
     "*": true,
     "markdown": true
   },
-  "sourcery.codeLens": false,
   "[julia]": {
     "editor.defaultFormatter": "julialang.language-julia",
     "editor.formatOnSave": true,
