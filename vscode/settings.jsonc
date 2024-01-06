@@ -8,6 +8,7 @@
   // application
   "update.mode": "none",
   "debug.onTaskErrors": "debugAnyway",
+  "diffEditor.wordWrap": "on",
   "telemetry.telemetryLevel": "error",
   // editor
   "editor.accessibilitySupport": "off",
@@ -54,8 +55,7 @@
   "terminal.external.linuxExec": "wezterm",
   "terminal.external.osxExec": "WezTerm.app",
   "terminal.external.windowsExec": "C:\\Scoop\\apps\\wezterm\\current\\wezterm.exe",
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.defaultProfile.windows": "bash",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "whenEmpty",
@@ -63,32 +63,13 @@
   "terminal.integrated.rightClickBehavior": "copyPaste",
   "terminal.integrated.shellIntegration.suggestEnabled": true,
   "terminal.integrated.profiles.windows": {
-    "bash": {
+    "Git Bash": {
       "path": [
-        "C:\\Scoop\\shims\\bash.exe"
+        "C:\\Program Files\\Git\\git-bash.exe"
       ],
       "icon": "terminal-bash",
       "args": [
         "-l",
-        "-i"
-      ]
-    }
-  },
-  "terminal.integrated.profiles.linux": {
-    "zsh": {
-      "path": "/bin/zsh",
-      "icon": "terminal-bash",
-      "args": [
-        "-l"
-      ]
-    }
-  },
-  "terminal.integrated.profiles.osx": {
-    "zsh": {
-      "path": "/bin/zsh",
-      "icon": "terminal-bash",
-      "args": [
-        "-l"
       ]
     }
   },
@@ -113,10 +94,6 @@
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 8,
   "security.workspace.trust.untrustedFiles": "open",
-  "diffEditor.wordWrap": "on",
-  "scm.alwaysShowActions": true,
-  "scm.alwaysShowRepositories": true,
-  "scm.providerCountBadge": "auto",
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
@@ -135,11 +112,6 @@
   ],
   // markdown
   "[markdown]": {
-    "editor.quickSuggestions": {
-      "comments": "on",
-      "strings": "on",
-      "other": "on"
-    },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
   },
@@ -150,17 +122,14 @@
   "markdown.extension.toc.levels": "2..4",
   "markdown.extension.toc.orderedList": true,
   "markdown.occurrencesHighlight.enabled": true,
-  "markdown.preview.fontFamily": "monospace",
   "markdown.preview.fontSize": 16,
   "markdown.preview.linkify": true,
   "markdown.preview.markEditorSelection": true,
   "markdown.preview.openMarkdownLinks": "inEditor",
   "markdown.preview.scrollPreviewWithEditor": true,
-  "markdown.preview.typographer": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
-  "markdown.validate.referenceLinks.enabled": "ignore",
   "mdtableeditor.commandViews": {
     "toolbar": [],
     "context": [
@@ -194,7 +163,6 @@
     "MD041": false,
     "MD042": false
   },
-  "markdownlint.run": "onSave",
   "myst.preview.extensions": [
     "amsmath",
     "colon_fence",
@@ -216,16 +184,6 @@
     "shellscript": "bash",
     "go": "go run",
     "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt",
-  },
-  // notebook
-  "notebook.consolidatedRunButton": true,
-  "notebook.diff.enablePreview": false,
-  "notebook.diff.ignoreOutputs": true,
-  "notebook.formatOnSave.enabled": true,
-  "notebook.lineNumbers": "on",
-  "notebook.markup.fontSize": 18,
-  "notebook.codeActionsOnSave": {
-    "source.organizeImports": true
   },
   // python
   "[python]": {
@@ -254,9 +212,17 @@
   "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
   "jupyter.pythonExportMethod": "nbconvert",
   "jupyter.showVariableViewWhenDebugging": true,
+  // notebook
+  "notebook.consolidatedRunButton": true,
+  "notebook.diff.enablePreview": false,
+  "notebook.diff.ignoreOutputs": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 18,
   // front end & formatters
   "[javascript][typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
   },
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features",
@@ -280,17 +246,16 @@
     "editor.semanticHighlighting.enabled": true,
     "editor.suggest.insertMode": "replace",
     "editor.wordBasedSuggestions": "matchingDocuments",
-    "editor.quickSuggestions": {
-      "other": "on",
-      "comments": "off",
-      "strings": "off"
-    }
   },
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
   "C_Cpp.inlayHints.parameterNames.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format",
+    "editor.formatOnSave": true,
+  },
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml",
@@ -419,6 +384,10 @@
     "editor.formatOnSave": false,
   },
   // lua
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper",
+    "editor.formatOnSave": true
+  },
   "luahelper.format.align_args": true,
   "luahelper.format.align_parameter": true,
   "luahelper.format.spaces_inside_functioncall_parens": true,
@@ -432,13 +401,13 @@
   "julia.enableTelemetry": false,
   "julia.execution.codeInREPL": true,
   "julia.execution.inlineResultsForCellEvaluation": true,
-  "julia.execution.resultType": "both",
   "julia.plots.path": "plots",
   "julia.runtimeCompletions": true,
   "julia.symbolCacheDownload": false,
   // matlab
   "[matlab]": {
-    "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
+    "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
+    "editor.formatOnSave": true
   },
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app"
 }
