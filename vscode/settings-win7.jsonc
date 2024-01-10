@@ -1,0 +1,258 @@
+{
+    "window.newWindowDimensions": "inherit",
+    "window.restoreWindows": "all",
+    // extensions
+    "extensions.autoCheckUpdates": false,
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+    // application
+    "update.mode": "none",
+    "debug.onTaskErrors": "debugAnyway",
+    "diffEditor.wordWrap": "on",
+    "telemetry.telemetryLevel": "error",
+    // editor
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "consolas",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 18,
+    "editor.guides.bracketPairs": "active",
+    "editor.lineNumbers": "interval",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+    "editor.renderFinalNewline": true,
+    "editor.suggest.preview": true,
+    "editor.tabCompletion": "on",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.useTabStops": false,
+    "editor.wordWrap": "bounded",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    // explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.incrementalNaming": "smart",
+    "explorer.sortOrder": "type",
+    // extensions
+    "extensions.ignoreRecommendations": true,
+    // files
+    "files.associations": {
+        "*.vimrc": "viml",
+        "*.condarc": "yaml",
+        "*.h": "cpp",
+        "*.m": "matlab"
+    },
+    "files.autoGuessEncoding": true,
+    "files.defaultLanguage": "markdown",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    // terminal
+    "terminal.integrated.fontFamily": "consolas",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.rightClickBehavior": "copyPaste",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "path": [
+                "C:\\Program Files\\Git\\git-bash.exe"
+            ],
+            "icon": "terminal-bash",
+            "args": [
+                "-l"
+            ]
+        }
+    },
+    // workbench
+    "workbench.activityBar.iconClickBehavior": "toggle",
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.editor.wrapTabs": true,
+    "workbench.editorAssociations": {
+        "*.md": "default",
+        "*.drawio.png": "hediet.vscode-drawio"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.expandMode": "singleClick",
+    "workbench.tree.indent": 8,
+    "security.workspace.trust.untrustedFiles": "open",
+    // git
+    "git.alwaysShowStagedChangesResourceGroup": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.ignoreMissingGitWarning": true,
+    "git.suggestSmartCommit": true,
+    "git.supportCancellation": true,
+    // error
+    "errorLens.statusBarColorsEnabled": true,
+    "errorLens.statusBarIconsEnabled": true,
+    "errorLens.statusBarMessageEnabled": true,
+    "errorLens.excludeBySource": [
+        "cSpell"
+    ],
+    // markdown
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "markdown.extension.italic.indicator": "*",
+    "markdown.extension.print.imgToBase64": true,
+    "markdown.extension.print.theme": "light",
+    "markdown.extension.tableFormatter.normalizeIndentation": true,
+    "markdown.extension.toc.levels": "2..4",
+    "markdown.extension.toc.orderedList": true,
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.linkify": true,
+    "markdown.preview.markEditorSelection": true,
+    "markdown.preview.openMarkdownLinks": "inEditor",
+    "markdown.preview.scrollPreviewWithEditor": true,
+    "mdtableeditor.commandViews": {
+        "toolbar": [],
+        "context": [
+            "MdTableEditor.changeAlignCenter",
+            "MdTableEditor.changeAlignLeft",
+            "MdTableEditor.changeAlignRight",
+            "MdTableEditor.insertBottom",
+            "MdTableEditor.insertLeft",
+            "MdTableEditor.insertRight",
+            "MdTableEditor.insertTop",
+            "MdTableEditor.moveLeft",
+            "MdTableEditor.moveRight",
+            "MdTableEditor.removeColumn",
+            "MdTableEditor.removeRow"
+        ]
+    },
+    "mdtableeditor.isAutoFormatterEnabled": true,
+    "mdtableeditor.isTreeViewEnabled": true,
+    "mdtableeditor.isIconMenuEnabled": true,
+    "markdownlint.config": {
+        "MD001": false,
+        "MD010": false,
+        "MD024": false,
+        "MD025": false,
+        "MD026": false,
+        "MD029": false,
+        "MD033": false,
+        "MD034": false,
+        "MD036": false,
+        "MD037": false,
+        "MD041": false,
+        "MD042": false
+    },
+    "myst.preview.extensions": [
+        "amsmath",
+        "colon_fence",
+        "deflist",
+        "dollarmath",
+        "tasklist"
+    ],
+    // shortcuts
+    "code-runner.runInTerminal": true,
+    "code-runner.enableAppInsights": false,
+    "code-runner.executorMap": {
+        "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "javascript": "node run --allow-net $fullFileName",
+        "typescript": "ts-node",
+        "python": "$(which python) -u $fullFileName",
+        "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt",
+        "julia": "julia",
+        "shellscript": "bash",
+        "go": "go run",
+        "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
+    },
+    // python
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": false,
+            "source.organizeImports": true
+        }
+    },
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.executeInFileDir": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": false,
+    // jupyter
+    "jupyter.askForKernelRestart": false,
+    "jupyter.enableExtendedKernelCompletions": true,
+    "jupyter.exportWithOutputEnabled": true,
+    "jupyter.pythonExportMethod": "nbconvert",
+    "jupyter.showVariableViewWhenDebugging": true,
+    // notebook
+    "notebook.consolidatedRunButton": true,
+    "notebook.diff.enablePreview": false,
+    "notebook.diff.ignoreOutputs": true,
+    "notebook.lineNumbers": "on",
+    "notebook.markup.fontSize": 18,
+    // front end & formatters
+    "[javascript][typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[json][jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
+    },
+    "css.format.enable": true,
+    "css.format.spaceAroundSelectorSeparator": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    // ui & preview
+    "hediet.vscode-drawio.codeLinkActivated": false,
+    "hediet.vscode-drawio.offline": true,
+    "hediet.vscode-drawio.theme": "Kennedy",
+    // cpp
+    "[c][cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.suggest.insertMode": "replace",
+        "editor.wordBasedSuggestions": true
+    },
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.referenceOperator.enabled": true,
+    "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml",
+        "editor.formatOnSave": true
+    },
+    "redhat.telemetry.enabled": false,
+    // shell
+    "[shellscript]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+        "editor.formatOnSave": true
+    },
+    // other
+    "material-icon-theme.files.associations": {
+        "*.m": "matlab"
+    },
+    // lua
+    "[lua]": {
+        "editor.defaultFormatter": "yinfei.luahelper",
+        "editor.formatOnSave": true
+    },
+    "luahelper.format.align_args": true,
+    "luahelper.format.align_parameter": true,
+    "luahelper.format.spaces_inside_functioncall_parens": true,
+    "luahelper.format.spaces_inside_functiondef_parens": true,
+    "luahelper.format.spaces_inside_table_braces": true,
+    // matlab
+    "[matlab]": {
+        "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
+        "editor.formatOnSave": true
+    },
+    "MATLAB.installPath": "C:/Program Files/MATLAB/R2022b/",
+    "MATLAB.matlabConnectionTiming": "never",
+    "MATLAB.indexWorkspace": false
+}
