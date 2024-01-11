@@ -75,7 +75,6 @@
   },
   // workbench
   "workbench.activityBar.iconClickBehavior": "toggle",
-  "workbench.colorCustomizations": {},
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.enablePreviewFromQuickOpen": true,
@@ -409,5 +408,9 @@
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
     "editor.formatOnSave": true
   },
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app"
+  // "MATLAB.installPath": "C:/Program Files/MATLAB/R2022b/",
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  "MATLAB.matlabConnectionTiming": "never",
+  "MATLAB.indexWorkspace": false,
+  "MATLAB.telemetry": false
 }
