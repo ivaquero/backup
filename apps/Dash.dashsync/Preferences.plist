@@ -2901,6 +2901,30 @@ $("h1").each(function() {
 					<string>Linux_Man_Pages</string>
 				</dict>
 			</dict>
+			<key>MLX</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-16T15:28:28Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Apple</string>
+						<string>Deep Learning Framework</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/MLX#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>MLX</string>
+					<key>platform</key>
+					<string>usercontribMLX</string>
+					<key>uniqueIdentifier</key>
+					<string>MLX</string>
+				</dict>
+			</dict>
 			<key>NLTK</key>
 			<dict>
 				<key>date</key>

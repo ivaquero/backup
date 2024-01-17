@@ -9,4 +9,3 @@ pydot
 pygwalker
 torchvision
 translators
-ultralytics
