@@ -2,6 +2,7 @@ bambi
 causalpy
 conda-tree
 ipykernel
+mlx
 nbconvert
 openpyxl
 plotnine
