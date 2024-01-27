@@ -359,8 +359,9 @@
   // "typst-lsp.experimentalFormatterMode": "on",
   "typst-lsp.rootPath": "${HOME}/Documents/GitHub",
   "typst-lsp.trace.server": "messages",
-  "typst-preview.refresh": "onSave",
   "typst-preview.partialRendering": true,
+  "typst-preview.pinPreviewFile": true,
+  "typst-preview.refresh": "onSave",
   "typst-preview.showInActivityBar": true,
   // other
   "material-icon-theme.files.associations": {
@@ -412,5 +413,4 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
-  "MATLAB.telemetry": false
 }
