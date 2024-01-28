@@ -1,0 +1,4 @@
+conda-tree
+r-irkernel
+r-languageserver
+r-tidyverse
