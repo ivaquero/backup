@@ -467,7 +467,7 @@ $("h1").each(function() {
 			<key>Doxygen</key>
 			<dict>
 				<key>date</key>
-				<date>2023-12-23T10:34:03Z</date>
+				<date>2024-01-28T11:50:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -2836,6 +2836,20 @@ $("h1").each(function() {
 					<string>https://python.arviz.org/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://pytorch.org/docs/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T12:19:29Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyTorch</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pytorch.org/docs/stable/</string>
+				</dict>
+			</dict>
 			<key>https://requests.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -2892,6 +2906,20 @@ $("h1").each(function() {
 					<string>https://www.nltk.org/</string>
 				</dict>
 			</dict>
+			<key>https://www.statsmodels.org/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T12:41:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>statsmodels 0.14.1</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.statsmodels.org/stable/</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict>
@@ -2921,6 +2949,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://imbalanced-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://lets-plot.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T11:37:59Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>lets-plot</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://lets-plot.org/</string>
 				</dict>
 			</dict>
 			<key>https://scikit-learn.org/stable/</key>
@@ -3032,57 +3074,6 @@ $("h1").each(function() {
 					<string>Conda</string>
 				</dict>
 			</dict>
-			<key>Linux_Man_Pages</key>
-			<dict>
-				<key>date</key>
-				<date>2023-11-20T06:31:53Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Linux</string>
-						<string>Posix</string>
-						<string>Man pages</string>
-						<string>Unix</string>
-						<string>BSD</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Linux_Man_Pages#readme</string>
-					<key>authorLinkText</key>
-					<string>Yan Pashkovsky</string>
-					<key>name</key>
-					<string>Linux Man Pages</string>
-					<key>platform</key>
-					<string>usercontribLinux_Man_Pages</string>
-					<key>uniqueIdentifier</key>
-					<string>Linux_Man_Pages</string>
-				</dict>
-			</dict>
-			<key>PyTorch</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-10T13:21:28Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>PyTorch</string>
-						<string>Deep Learning</string>
-						<string>Machine Learning</string>
-						<string>Neural Networks</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
-					<key>authorLinkText</key>
-					<string>Yue Gao</string>
-					<key>name</key>
-					<string>PyTorch</string>
-					<key>platform</key>
-					<string>usercontribPyTorch</string>
-					<key>uniqueIdentifier</key>
-					<string>PyTorch</string>
-				</dict>
-			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -3173,31 +3164,6 @@ $("h1").each(function() {
 					<string>usercontribpymc</string>
 					<key>uniqueIdentifier</key>
 					<string>pymc</string>
-				</dict>
-			</dict>
-			<key>statsmodels</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-04T14:14:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Statsmodels</string>
-						<string>statsmodels</string>
-						<string>Statsmodels 0.14.0</string>
-						<string>statsmodels 0.14.0</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/statsmodels#readme</string>
-					<key>authorLinkText</key>
-					<string>Angelo Varlotta</string>
-					<key>name</key>
-					<string>statsmodels</string>
-					<key>platform</key>
-					<string>usercontribstatsmodels</string>
-					<key>uniqueIdentifier</key>
-					<string>statsmodels</string>
 				</dict>
 			</dict>
 		</dict>
@@ -3477,6 +3443,32 @@ $("h1").each(function() {
 					<string>LightGBM</string>
 				</dict>
 			</dict>
+			<key>Linux_Man_Pages</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T11:22:32Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Linux</string>
+						<string>Posix</string>
+						<string>Man pages</string>
+						<string>Unix</string>
+						<string>BSD</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Linux_Man_Pages#readme</string>
+					<key>authorLinkText</key>
+					<string>Yan Pashkovsky</string>
+					<key>name</key>
+					<string>Linux Man Pages</string>
+					<key>platform</key>
+					<string>usercontribLinux_Man_Pages</string>
+					<key>uniqueIdentifier</key>
+					<string>Linux_Man_Pages</string>
+				</dict>
+			</dict>
 			<key>MLX</key>
 			<dict>
 				<key>date</key>
@@ -3715,6 +3707,31 @@ $("h1").each(function() {
 					<string>usercontribPyMC3</string>
 					<key>uniqueIdentifier</key>
 					<string>PyMC3</string>
+				</dict>
+			</dict>
+			<key>PyTorch</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T12:23:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PyTorch</string>
+						<string>Deep Learning</string>
+						<string>Machine Learning</string>
+						<string>Neural Networks</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>PyTorch</string>
+					<key>platform</key>
+					<string>usercontribPyTorch</string>
+					<key>uniqueIdentifier</key>
+					<string>PyTorch</string>
 				</dict>
 			</dict>
 			<key>PytorchLightning</key>
@@ -4240,6 +4257,31 @@ $("h1").each(function() {
 					<string>pytest</string>
 				</dict>
 			</dict>
+			<key>statsmodels</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T12:42:37Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Statsmodels</string>
+						<string>statsmodels</string>
+						<string>Statsmodels 0.14.0</string>
+						<string>statsmodels 0.14.0</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/statsmodels#readme</string>
+					<key>authorLinkText</key>
+					<string>Angelo Varlotta</string>
+					<key>name</key>
+					<string>statsmodels</string>
+					<key>platform</key>
+					<string>usercontribstatsmodels</string>
+					<key>uniqueIdentifier</key>
+					<string>statsmodels</string>
+				</dict>
+			</dict>
 			<key>torchtext</key>
 			<dict>
 				<key>date</key>
@@ -4447,6 +4489,8 @@ $("h1").each(function() {
 			<string>n</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/NetworkX/NetworkX.docset</key>
 			<string>nx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
+			<string>pt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
@@ -4621,11 +4665,6 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2023-10-15T16:01:38Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-06T04:58:49Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
 			<dict>
 				<key>date</key>
@@ -4678,6 +4717,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-11-04T11:09:56Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-01-28T11:22:21Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/OpenCV.xml</key>
 			<dict>

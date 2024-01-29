@@ -413,4 +413,5 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
+  "r.rpath.mac": "~/.conda/envs/rstupid/bin/R"
 }
