@@ -8,13 +8,13 @@
   },
   "t3": {
     "prefix": "t3",
-    "description": "",
     "body": [
       "#figure(",
       "  tablex(",
-      "    columns: 3,",
+      "    columns: (auto, auto, auto),",
+      "    header-rows: 1,",
       "    align: center + horizon,",
-      "    inset: 3pt,",
+      "    inset: 0.3em,",
       "    [], [], [],",
       "    [], [], [],",
       "    [], [], [],",
@@ -23,18 +23,19 @@
       "  caption: [],",
       "  supplement: [表]",
       "  kind: table",
-      ")"
+      ")",
+      ""
     ]
   },
   "t4": {
     "prefix": "t4",
-    "description": "",
     "body": [
       "#figure(",
       "  tablex(",
-      "    columns: 4,",
+      "    columns: (auto, auto, auto, auto),",
+      "    header-rows: 1,",
       "    align: center + horizon,",
-      "    inset: 3pt,",
+      "    inset: 0.3em,",
       "    [], [], [], [],",
       "    [], [], [], [],",
       "    [], [], [], [],",
@@ -43,18 +44,19 @@
       "  caption: [],",
       "  supplement: [表]",
       "  kind: table",
-      ")"
+      ")",
+      ""
     ]
   },
   "t5": {
     "prefix": "t5",
-    "description": "",
     "body": [
       "#figure(",
       "  tablex(",
-      "    columns: 5,",
+      "    columns: (auto, auto, auto, auto, auto),",
+      "    header-rows: 1,",
       "    align: center,",
-      "    inset: 3pt,",
+      "    inset: 0.3em,",
       "    [], [], [], [], [],",
       "    [], [], [], [], [],",
       "    [], [], [], [], [],",
@@ -63,18 +65,19 @@
       "  caption: [],",
       "  supplement: [表]",
       "  kind: table",
-      ")"
+      ")",
+      ""
     ]
   },
   "t6": {
     "prefix": "t6",
-    "description": "",
     "body": [
       "#figure(",
       "  tablex(",
-      "    columns: 6,",
+      "    columns: (auto, auto, auto, auto, auto, auto),",
+      "    header-rows: 1,",
       "    align: center + horizon,",
-      "    inset: 3pt,",
+      "    inset: 0.3em,",
       "    [], [], [], [], [], [],",
       "    [], [], [], [], [], [],",
       "    [], [], [], [], [], [],",
@@ -82,7 +85,8 @@
       "  ),",
       "  caption: [],",
       "  supplement: [表]",
-      ")"
+      ")",
+      ""
     ]
   },
   "ls": {
@@ -156,14 +160,9 @@
   "rcsv": {
     "prefix": "rcsv",
     "body": [
-      "#let csv1 = csv(\"data\")",
+      "#let data = csv(\"data\")",
       "#figure(",
-      "  tablex(",
-      "    columns: 10,",
-      "    align: center,",
-      "    inset: 3pt,",
-      "    ..csv1.flatten(),",
-      "   ),",
+      "  ktable(data, 4),",
       "  caption: \"\",",
       "  supplement: [表],",
       "  kind: table",
@@ -529,7 +528,22 @@
   "nvl": {
     "prefix": "nvl",
     "body": [
-      "auto-vlines: false,",
+      "map-hlines: v => (",
+      "  if v.y > 1 and v.y < 5 {",
+      "    return (..v, stroke: color.rgb(\"#CCC\"))",
+      "  }",
+      "  else {",
+      "    return (..v, stroke: color.rgb(\"#000\"))",
+      "  }",
+      "),",
+      "auto-vlines: false,"
+    ]
+  },
+  "ce": {
+    "prefix": "ce",
+    "body": [
+      "#ce()",
+      ""
     ]
   }
 }
