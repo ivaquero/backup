@@ -306,42 +306,6 @@
   },
   "cSpell.showAutocompleteSuggestions": true,
   "cSpell.validateDirectives": true,
-  // latex
-  "[latex]": {
-    "editor.defaultFormatter": "James-Yu.latex-workshop"
-  },
-  "latex-workshop.intellisense.unimathsymbols.enabled": true,
-  "latex-workshop.intellisense.update.aggressive.enabled": true,
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.autoClean.run": "onBuilt",
-  "latex-workshop.latex.clean.subfolder.enabled": true,
-  "latex-workshop.latexindent.path": "latexindent",
-  "latex-workshop.message.error.show": false,
-  "latex-workshop.message.warning.show": false,
-  "latex-workshop.showContextMenu": true,
-  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "tectonic",
-      "tools": [
-        "tectonic"
-      ]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "tectonic",
-      "command": "tectonic",
-      "args": [
-        "-X",
-        "compile",
-        "--keep-intermediates",
-        "--keep-logs",
-        "%DOC%.tex"
-      ]
-    }
-  ],
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
