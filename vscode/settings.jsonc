@@ -120,7 +120,6 @@
   "markdown.extension.print.theme": "light",
   "markdown.extension.tableFormatter.normalizeIndentation": true,
   "markdown.extension.toc.levels": "2..4",
-  "markdown.extension.toc.orderedList": true,
   "markdown.occurrencesHighlight.enabled": true,
   "markdown.preview.fontSize": 16,
   "markdown.preview.linkify": true,
@@ -423,4 +422,20 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
+  "psi-header.templates": [
+    {
+      "language": "*",
+      "template": [
+        "****************************************************************************",
+        "@file: <<filename>>",
+        "@version: <<version>>",
+        "@author: <<author>>",
+        "@date: <<dateformat('YYYY-MM-DD')>>",
+        "@brief: <<description>>",
+        "****************************************************************************"
+      ],
+      "changeLogCaption": "HISTORY",
+    },
+  ],
+  "cmake.showOptionsMovedNotification": false,
 }
