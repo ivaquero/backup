@@ -47,7 +47,7 @@
     "*.vimrc": "viml",
     "*.condarc": "yaml",
     "*.h": "cpp",
-    "*.m": "matlab",
+    "*.m": "matlab"
   },
   "files.defaultLanguage": "markdown",
   "files.insertFinalNewline": true,
@@ -70,7 +70,7 @@
       ],
       "icon": "terminal-bash",
       "args": [
-        "-l",
+        "-l"
       ]
     }
   },
@@ -113,7 +113,7 @@
   // markdown
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "markdown.extension.italic.indicator": "*",
   "markdown.extension.print.imgToBase64": true,
@@ -182,7 +182,7 @@
     "julia": "julia",
     "shellscript": "bash",
     "go": "go run",
-    "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt",
+    "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
   },
   // python
   "[python]": {
@@ -202,7 +202,7 @@
     "--extend-select=PD",
     "--extend-select=PL",
     "--extend-select=RUF",
-    "--extend-select=UP",
+    "--extend-select=UP"
   ],
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -223,11 +223,11 @@
   // front end & formatters
   "[javascript][typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "css.format.enable": true,
   "css.format.spaceAroundSelectorSeparator": true,
@@ -246,7 +246,7 @@
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.semanticHighlighting.enabled": true,
     "editor.suggest.insertMode": "replace",
-    "editor.wordBasedSuggestions": "matchingDocuments",
+    "editor.wordBasedSuggestions": "matchingDocuments"
   },
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
@@ -255,10 +255,11 @@
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
   "[cmake]": {
     "editor.defaultFormatter": "cheshirekow.cmake-format",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "cmake.automaticReconfigure": false,
   "cmake.configureOnEdit": false,
+  "cmake.showOptionsMovedNotification": false,
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
   "lldb.commandCompletions": true,
   "lldb.dereferencePointers": true,
@@ -269,13 +270,13 @@
   "lldb.verboseLogging": true,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "redhat.telemetry.enabled": false,
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   // spell
   "cSpell.enableFiletypes": [
@@ -338,10 +339,10 @@
       "args": [
         "-X",
         "compile",
-        "--keep-intermediates",
-        "--keep-logs",
-        "%DOC%.tex"
-      ]
+        "%DOCFILE_EXT%",
+        "--print"
+      ],
+      "env": {}
     }
   ],
   // leetcode
@@ -392,7 +393,7 @@
   // toml
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": false
   },
   // lua
   "[lua]": {
@@ -406,15 +407,14 @@
   "luahelper.format.spaces_inside_table_braces": true,
   "[julia]": {
     "editor.defaultFormatter": "julialang.language-julia",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "julia.deleteJuliaCovFiles": true,
   "julia.enableTelemetry": false,
   "julia.execution.codeInREPL": true,
   "julia.execution.inlineResultsForCellEvaluation": true,
-  "julia.plots.path": "plots",
+  "julia.plots.path": "images",
   "julia.runtimeCompletions": true,
-  "julia.symbolCacheDownload": false,
   // matlab
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
@@ -428,16 +428,15 @@
     {
       "language": "*",
       "template": [
-        "****************************************************************************",
-        "@file: <<filename>>",
-        "@version: <<version>>",
-        "@author: <<author>>",
-        "@date: <<dateformat('YYYY-MM-DD')>>",
-        "@brief: <<description>>",
-        "****************************************************************************"
+        "/*",
+        "* file: <<filename>>",
+        "* version: <<version>>",
+        "* author: <<author>>",
+        "* create: <<dateformat('YYYY-MM-DD')>>",
+        "* brief: <<description>>",
+        "*/"
       ],
       "changeLogCaption": "HISTORY",
-    },
+    }
   ],
-  "cmake.showOptionsMovedNotification": false,
 }

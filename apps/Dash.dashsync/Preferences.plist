@@ -2741,7 +2741,7 @@ $("h1").each(function() {
 			<key>https://causalpy.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:22:32Z</date>
+				<date>2024-02-06T02:47:10Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2755,7 +2755,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-02-02T07:08:36Z</date>
+				<date>2024-02-05T00:51:01Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2783,7 +2783,7 @@ $("h1").each(function() {
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:24:09Z</date>
+				<date>2024-02-02T07:16:31Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2839,7 +2839,7 @@ $("h1").each(function() {
 			<key>https://pytorch.org/docs/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T12:19:29Z</date>
+				<date>2024-02-02T09:33:38Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -4471,6 +4471,8 @@ $("h1").each(function() {
 			<string>sp</string>
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
 			<string>ts</string>
+			<key>~/Library/Application Support/Dash/Docset Generator/Doxygen/Doxygen.docset</key>
+			<string>d</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/JuMPjl/JuMP.jl.docset</key>
 			<string>mpj</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/NLTK/NLTK.docset</key>
@@ -4505,6 +4507,8 @@ $("h1").each(function() {
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/skimage/skimage.docset</key>
 			<string>skm</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0141/statsmodels 0.14.1.docset</key>
+			<string>sm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
