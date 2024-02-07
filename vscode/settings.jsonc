@@ -424,19 +424,26 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
+  // documents
   "psi-header.templates": [
     {
       "language": "*",
       "template": [
-        "/*",
-        "* file: <<filename>>",
-        "* version: <<version>>",
-        "* author: <<author>>",
-        "* create: <<dateformat('YYYY-MM-DD')>>",
-        "* brief: <<description>>",
-        "*/"
+        "file: <<filename>>",
+        "",
+        "version: <<version>>",
+        "",
+        "author: ivaquero",
+        "",
+        "create: <<dateformat('YYYY-MM-DD')>>",
+        "",
+        "brief: <<description>>",
+        ""
       ],
-      "changeLogCaption": "HISTORY",
+      "changeLogCaption": "HISTORY"
     }
   ],
+  "doxdocgen.generic.authorName": "ivaquero",
+  "doxdocgen.generic.commandSuggestionAddPrefix": true,
+  "doxdocgen.c.triggerSequence": "///"
 }
