@@ -7,7 +7,6 @@
   "extensions.autoUpdate": "onlySelectedExtensions",
   // application
   "update.mode": "none",
-  "debug.onTaskErrors": "debugAnyway",
   "diffEditor.wordWrap": "on",
   "telemetry.telemetryLevel": "error",
   // editor
@@ -35,8 +34,6 @@
     "strings": true
   },
   // explorer
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
@@ -370,11 +367,9 @@
   // typst
   // "typst-lsp.experimentalFormatterMode": "on",
   "typst-lsp.rootPath": "${HOME}/Documents/GitHub",
-  "typst-lsp.trace.server": "messages",
   "typst-preview.partialRendering": true,
   "typst-preview.pinPreviewFile": true,
   "typst-preview.refresh": "onSave",
-  "typst-preview.showInActivityBar": true,
   // other
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
@@ -425,25 +420,28 @@
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
   // documents
-  "psi-header.templates": [
-    {
-      "language": "*",
-      "template": [
-        "file: <<filename>>",
-        "",
-        "version: <<version>>",
-        "",
-        "author: ivaquero",
-        "",
-        "create: <<dateformat('YYYY-MM-DD')>>",
-        "",
-        "brief: <<description>>",
-        ""
-      ],
-      "changeLogCaption": "HISTORY"
-    }
+  "doxdocgen.c.firstLine": "/*!",
+  "doxdocgen.c.triggerSequence": "///",
+  "doxdocgen.cpp.tparamTemplate": "@tparam{indent:15}{param}",
+  "doxdocgen.file.customTag": [
+    "@description"
   ],
-  "doxdocgen.generic.authorName": "ivaquero",
+  "doxdocgen.file.fileOrder": [
+    "file",
+    "author",
+    "date",
+    "description"
+  ],
+  "doxdocgen.file.fileTemplate": "@file{indent:15}{name}",
+  "doxdocgen.generic.authorTag": "@author{indent:15}{author}",
   "doxdocgen.generic.commandSuggestionAddPrefix": true,
-  "doxdocgen.c.triggerSequence": "///"
+  "doxdocgen.generic.customTags": [
+    "@attention"
+  ],
+  "doxdocgen.generic.useGitUserEmail": true,
+  "doxdocgen.generic.useGitUserName": true,
+  "doxdocgen.generic.briefTemplate": "@brief{indent:15}{text}",
+  "doxdocgen.generic.dateTemplate": "@date{indent:15}{date}",
+  "doxdocgen.generic.paramTemplate": "@param{indent:15}{param}",
+  "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}",
 }
