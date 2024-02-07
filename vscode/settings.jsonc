@@ -34,6 +34,8 @@
     "strings": true
   },
   // explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "explorer.fileNesting.enabled": true,
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
@@ -250,10 +252,6 @@
   "C_Cpp.inlayHints.parameterNames.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
-  "[cmake]": {
-    "editor.defaultFormatter": "cheshirekow.cmake-format",
-    "editor.formatOnSave": true
-  },
   "cmake.automaticReconfigure": false,
   "cmake.configureOnEdit": false,
   "cmake.showOptionsMovedNotification": false,
