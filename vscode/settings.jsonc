@@ -161,13 +161,6 @@
     "MD041": false,
     "MD042": false
   },
-  "myst.preview.extensions": [
-    "amsmath",
-    "colon_fence",
-    "deflist",
-    "dollarmath",
-    "tasklist"
-  ],
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
@@ -252,10 +245,6 @@
   "C_Cpp.inlayHints.parameterNames.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
-  "cmake.automaticReconfigure": false,
-  "cmake.configureOnEdit": false,
-  "cmake.showOptionsMovedNotification": false,
-  "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/cmake-format",
   "lldb.commandCompletions": true,
   "lldb.dereferencePointers": true,
   "lldb.evaluateForHovers": true,
@@ -417,6 +406,10 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
+  // cmake
+  "cmake.automaticReconfigure": false,
+  "cmake.configureOnEdit": false,
+  "cmake.showOptionsMovedNotification": false,
   // documents
   "doxdocgen.c.firstLine": "/*!",
   "doxdocgen.c.triggerSequence": "///",
