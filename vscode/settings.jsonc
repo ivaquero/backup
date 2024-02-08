@@ -407,10 +407,16 @@
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
   // cmake
+  "[cmake]": {
+    "editor.defaultFormatter": "cheshirekow.cmake-format",
+    "editor.formatOnSave": false
+  },
+  "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/clang-format",
   "cmake.automaticReconfigure": false,
   "cmake.configureOnEdit": false,
   "cmake.showOptionsMovedNotification": false,
   // documents
+  "C_Cpp.doxygen.generatedStyle": "/*!",
   "doxdocgen.c.firstLine": "/*!",
   "doxdocgen.c.triggerSequence": "///",
   "doxdocgen.cpp.tparamTemplate": "@tparam{indent:15}{param}",
