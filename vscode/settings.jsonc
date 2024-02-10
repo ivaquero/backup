@@ -233,25 +233,6 @@
   "hediet.vscode-drawio.codeLinkActivated": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "Kennedy",
-  // cpp
-  "[c][cpp]": {
-    "editor.defaultFormatter": "ms-vscode.cpptools",
-    "editor.semanticHighlighting.enabled": true,
-    "editor.suggest.insertMode": "replace",
-    "editor.wordBasedSuggestions": "matchingDocuments"
-  },
-  "C_Cpp.autocompleteAddParentheses": true,
-  "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
-  "C_Cpp.inlayHints.parameterNames.enabled": true,
-  "C_Cpp.inlayHints.referenceOperator.enabled": true,
-  "C_Cpp.inlayHints.referenceOperator.showSpace": true,
-  "lldb.commandCompletions": true,
-  "lldb.dereferencePointers": true,
-  "lldb.evaluateForHovers": true,
-  "lldb.launch.expressions": "native",
-  "lldb.launch.terminal": "integrated",
-  "lldb.suppressUpdateNotifications": true,
-  "lldb.verboseLogging": true,
   "[xml]": {
     "editor.defaultFormatter": "redhat.vscode-xml",
     "editor.formatOnSave": true
@@ -406,6 +387,32 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.indexWorkspace": false,
+  // cpp
+  "[c][cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.suggest.insertMode": "replace",
+    "editor.wordBasedSuggestions": "matchingDocuments"
+  },
+  "clangd.arguments": [
+    "--background-index",
+    "--compile-commands-dir=${workspaceFolder}/build",
+    "-j=12",
+    "--query-driver=/usr/bin/clang++",
+    "--clang-tidy",
+    "--clang-tidy-checks=performance-*,bugprone-*",
+    "--all-scopes-completion",
+    "--completion-style=detailed",
+    "--header-insertion=iwyu",
+    "--pch-storage=disk",
+  ],
+  "lldb.commandCompletions": true,
+  "lldb.dereferencePointers": true,
+  "lldb.evaluateForHovers": true,
+  "lldb.launch.expressions": "native",
+  "lldb.launch.terminal": "integrated",
+  "lldb.suppressUpdateNotifications": true,
+  "lldb.verboseLogging": true,
   // cmake
   "[cmake]": {
     "editor.defaultFormatter": "cheshirekow.cmake-format",
@@ -413,10 +420,10 @@
   },
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/clang-format",
   "cmake.automaticReconfigure": false,
+  "cmake.buildDirectory": "${workspaceFolder}/build",
   "cmake.configureOnEdit": false,
   "cmake.showOptionsMovedNotification": false,
   // documents
-  "C_Cpp.doxygen.generatedStyle": "/*!",
   "doxdocgen.c.firstLine": "/*!",
   "doxdocgen.c.triggerSequence": "///",
   "doxdocgen.cpp.tparamTemplate": "@tparam{indent:15}{param}",
