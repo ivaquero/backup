@@ -2780,6 +2780,20 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
+			<key>https://faker.readthedocs.io/en/master/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-02-12T17:27:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Faker</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://faker.readthedocs.io/en/master/</string>
+				</dict>
+			</dict>
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
@@ -4485,6 +4499,8 @@ $("h1").each(function() {
 			<string>az</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/CausalPy/CausalPy.docset</key>
 			<string>cp</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Faker/Faker.docset</key>
+			<string>fk</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
 			<string>mx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/NLTK/NLTK.docset</key>
