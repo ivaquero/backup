@@ -189,12 +189,7 @@
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "ruff.lint.args": [
-    "--extend-select=FURB",
-    "--extend-select=NPY",
-    "--extend-select=PD",
-    "--extend-select=PL",
-    "--extend-select=RUF",
-    "--extend-select=UP"
+    "--select=FURB,I,PD,PLR",
   ],
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -323,7 +318,6 @@
     "case",
     "allcase",
     "test",
-    "retest",
     "solution"
   ],
   "leetcode-problem-rating.filePath": {
@@ -378,6 +372,7 @@
   "julia.execution.inlineResultsForCellEvaluation": true,
   "julia.plots.path": "images",
   "julia.runtimeCompletions": true,
+  "julia.symbolCacheDownload": false,
   // matlab
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
@@ -451,5 +446,8 @@
   "doxdocgen.generic.briefTemplate": "@brief{indent:15}{text}",
   "doxdocgen.generic.dateTemplate": "@date{indent:15}{date}",
   "doxdocgen.generic.paramTemplate": "@param{indent:15}{param}",
-  "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}"
+  "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}",
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
 }
