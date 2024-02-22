@@ -85,7 +85,8 @@
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
     "*.md": "default",
-    "*.drawio.png": "hediet.vscode-drawio"
+    "*.drawio.png": "hediet.vscode-drawio",
+    "*.excalidraw": "editor.excalidraw"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -189,7 +190,7 @@
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "ruff.lint.args": [
-    "--select=FURB,I,PD,PLR",
+    "--select=FURB,I,PD",
   ],
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -363,7 +364,7 @@
   "luahelper.format.spaces_inside_functiondef_parens": true,
   "luahelper.format.spaces_inside_table_braces": true,
   "[julia]": {
-    "editor.defaultFormatter": "julialang.language-julia",
+    // "editor.defaultFormatter": "julialang.language-julia",
     "editor.formatOnSave": true
   },
   "julia.deleteJuliaCovFiles": true,
@@ -447,7 +448,9 @@
   "doxdocgen.generic.dateTemplate": "@date{indent:15}{date}",
   "doxdocgen.generic.paramTemplate": "@param{indent:15}{param}",
   "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}",
-  "terminal.integrated.commandsToSkipShell": [
-    "language-julia.interrupt"
-  ],
+  "excalidraw.image": {
+    "exportScale": 1,
+    "exportWithBackground": true,
+    "exportWithDarkMode": false
+  }
 }
