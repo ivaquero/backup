@@ -190,7 +190,7 @@
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "ruff.lint.args": [
-    "--select=FURB,I,PD",
+    "--select=FURB,I,PD"
   ],
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -385,27 +385,17 @@
   "MATLAB.indexWorkspace": false,
   // cpp
   "[c][cpp]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.semanticHighlighting.enabled": true,
     "editor.suggest.insertMode": "replace",
     "editor.wordBasedSuggestions": "matchingDocuments"
   },
-  "clangd.arguments": [
-    "-j=10",
-    "--all-scopes-completion",
-    "--background-index",
-    "--clang-tidy",
-    "--clang-tidy-checks=cppcoreguidelines-*,performance-*,bugprone-*,portability-*,modernize-*,google-*",
-    "--compile-commands-dir=build",
-    "--completion-style=detailed",
-    "--cross-file-rename",
-    "--header-insertion-decorators",
-    "--header-insertion=iwyu",
-    "--log=error",
-    "--pch-storage=disk",
-    "--pretty"
-  ],
-  "clangd.onConfigChanged": "restart",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
+  "C_Cpp.default.cppStandard": "c++11",
+  "C_Cpp.doxygen.generatedStyle": "/*!",
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "C_Cpp.inlayHints.referenceOperator.showSpace": true,
   "lldb.commandCompletions": true,
   "lldb.dereferencePointers": true,
   "lldb.evaluateForHovers": true,
@@ -420,11 +410,15 @@
   },
   "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/clang-format",
   "cmake.automaticReconfigure": false,
-  "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
   "cmake.buildDirectory": "${workspaceFolder}/build",
   "cmake.configureOnEdit": false,
   "cmake.configureOnOpen": false,
+  "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.showOptionsMovedNotification": false,
+  "cmake.pinnedCommands": [
+    "cmake.build"
+  ],
   // documents
   "doxdocgen.c.firstLine": "/*!",
   "doxdocgen.c.triggerSequence": "///",
