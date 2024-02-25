@@ -18,10 +18,12 @@ unset __conda_setup
 export OXIDIZER=${HOME}/Documents/GitHub/oxidizer
 source ${OXIDIZER}/oxidizer.sh
 
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
+if [[ "$(uname -sm)" = "Darwin arm64" ]]; then
+    export PATH="/opt/homebrew/bin:$PATH"
+    export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+    export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+    export CPATH=/opt/homebrew/include
+    export LIBRARY_PATH=/opt/homebrew/lib
+fi
 
-export CPATH=/opt/homebrew/include
-export LIBRARY_PATH=/opt/homebrew/lib
+export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
