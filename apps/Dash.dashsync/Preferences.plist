@@ -578,6 +578,63 @@ $("h1").each(function() {
 					<string>Typst</string>
 				</dict>
 			</dict>
+			<key>homebrew</key>
+			<dict>
+				<key>date</key>
+				<date>2024-02-27T16:59:45Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.brew.sh/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>b</string>
+						<key>docsetName</key>
+						<string>Homebrew</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.brew.sh/</string>
+					</dict>
+					<key>name</key>
+					<string>Homebrew</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>homebrew</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict>
@@ -2346,63 +2403,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>conda</string>
-				</dict>
-			</dict>
-			<key>homebrew</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-26T13:07:00Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.brew.sh/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>b</string>
-						<key>docsetName</key>
-						<string>Homebrew</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.brew.sh/</string>
-					</dict>
-					<key>name</key>
-					<string>Homebrew</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>homebrew</string>
 				</dict>
 			</dict>
 			<key>imbalanced-learn</key>
@@ -4695,11 +4695,6 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:38:01Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Qt_6.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2023-08-29T13:46:58Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/SciPy.xml</key>
 			<dict>
 				<key>date</key>
@@ -4762,6 +4757,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2023-08-29T13:38:16Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Qt_6.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-02-27T00:15:43Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Ruby_3.xml</key>
 			<dict>
