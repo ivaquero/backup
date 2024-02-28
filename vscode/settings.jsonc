@@ -405,22 +405,6 @@
   "lldb.launch.terminal": "integrated",
   "lldb.suppressUpdateNotifications": true,
   "lldb.verboseLogging": true,
-  // cmake
-  "[cmake]": {
-    "editor.defaultFormatter": "cheshirekow.cmake-format",
-    "editor.formatOnSave": false
-  },
-  "cmakeFormat.exePath": "/opt/homebrew/Caskroom/mambaforge-cn/base/bin/clang-format",
-  "cmake.automaticReconfigure": false,
-  "cmake.buildDirectory": "${workspaceFolder}/build",
-  "cmake.configureOnEdit": false,
-  "cmake.configureOnOpen": false,
-  "cmake.copyCompileCommands": "${workspaceFolder}/build/compile_commands.json",
-  "cmake.showConfigureWithDebuggerNotification": false,
-  "cmake.showOptionsMovedNotification": false,
-  "cmake.pinnedCommands": [
-    "cmake.build"
-  ],
   // documents
   "doxdocgen.c.firstLine": "/*!",
   "doxdocgen.c.triggerSequence": "///",
@@ -448,5 +432,10 @@
     "exportScale": 1,
     "exportWithBackground": true,
     "exportWithDarkMode": false
-  }
+  },
+  "shellcheck.exclude": [
+    "SC1090",
+    "SC2154",
+    "SC2034"
+  ]
 }

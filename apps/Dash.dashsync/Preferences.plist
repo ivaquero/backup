@@ -3111,6 +3111,28 @@ $("h1").each(function() {
 					<string>Scikit</string>
 				</dict>
 			</dict>
+			<key>XMake</key>
+			<dict>
+				<key>date</key>
+				<date>2024-02-28T16:04:03Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Xmake</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
+					<key>authorLinkText</key>
+					<string>kassane</string>
+					<key>name</key>
+					<string>XMake</string>
+					<key>platform</key>
+					<string>usercontribXMake</string>
+					<key>uniqueIdentifier</key>
+					<string>XMake</string>
+				</dict>
+			</dict>
 			<key>imbalanced-learn</key>
 			<dict>
 				<key>date</key>
@@ -3933,28 +3955,6 @@ $("h1").each(function() {
 					<string>usercontribUnicodeCharacters</string>
 					<key>uniqueIdentifier</key>
 					<string>UnicodeCharacters</string>
-				</dict>
-			</dict>
-			<key>XMake</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-21T14:38:35Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Xmake</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
-					<key>authorLinkText</key>
-					<string>kassane</string>
-					<key>name</key>
-					<string>XMake</string>
-					<key>platform</key>
-					<string>usercontribXMake</string>
-					<key>uniqueIdentifier</key>
-					<string>XMake</string>
 				</dict>
 			</dict>
 			<key>Zsh</key>
