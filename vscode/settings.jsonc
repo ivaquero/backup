@@ -239,6 +239,11 @@
     "editor.defaultFormatter": "foxundermoon.shell-format",
     "editor.formatOnSave": true
   },
+  "shellcheck.exclude": [
+    "SC1090",
+    "SC2154",
+    "SC2034"
+  ],
   // spell
   "cSpell.enableFiletypes": [
     "latex",
@@ -433,9 +438,5 @@
     "exportWithBackground": true,
     "exportWithDarkMode": false
   },
-  "shellcheck.exclude": [
-    "SC1090",
-    "SC2154",
-    "SC2034"
-  ]
+  "cmake.showOptionsMovedNotification": false
 }
