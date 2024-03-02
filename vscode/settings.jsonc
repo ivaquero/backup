@@ -348,11 +348,10 @@
     "!plaintext"
   ],
   // ai
-  "codeium.enableConfig": {
-    "*": true,
-    "markdown": true,
-    "toml": false
-  },
+  "twinny.useMultiLineCompletions": true,
+  "twinny.useFileContext": true,
+  "twinny.enableCompletionCache": true,
+  "twinny.useTls": true,
   // toml
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
@@ -361,7 +360,6 @@
   // lua
   "[lua]": {
     "editor.defaultFormatter": "yinfei.luahelper",
-    "editor.formatOnSave": true
   },
   "luahelper.format.align_args": true,
   "luahelper.format.align_parameter": true,
@@ -398,6 +396,7 @@
   "C_Cpp.clang_format_fallbackStyle": "LLVM",
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.doxygen.generatedStyle": "/*!",
+  "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
   "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
   "C_Cpp.inlayHints.parameterNames.enabled": true,
@@ -438,5 +437,7 @@
     "exportWithBackground": true,
     "exportWithDarkMode": false
   },
-  "cmake.showOptionsMovedNotification": false
+  "cmake.configureOnOpen": false,
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "cmake.showOptionsMovedNotification": false,
 }
