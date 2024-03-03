@@ -234,6 +234,10 @@
     "editor.formatOnSave": true
   },
   "redhat.telemetry.enabled": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
@@ -348,9 +352,11 @@
     "!plaintext"
   ],
   // ai
-  "twinny.useMultiLineCompletions": true,
-  "twinny.useFileContext": true,
+  "twinny.chatModelName": "gemma:7b-instruct",
   "twinny.enableCompletionCache": true,
+  "twinny.fimModelName": "gemma:7b-code",
+  "twinny.useFileContext": true,
+  "twinny.useMultiLineCompletions": true,
   "twinny.useTls": true,
   // toml
   "[toml]": {
