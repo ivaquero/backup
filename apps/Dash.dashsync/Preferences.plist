@@ -524,7 +524,7 @@ $("h1").each(function() {
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
-				<date>2023-12-04T16:38:05Z</date>
+				<date>2024-03-10T11:51:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -2741,7 +2741,7 @@ $("h1").each(function() {
 			<key>https://causalpy.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-02-06T02:47:10Z</date>
+				<date>2024-03-09T09:34:24Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2755,7 +2755,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-03-02T08:23:25Z</date>
+				<date>2024-03-08T13:40:18Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2780,24 +2780,10 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
-			<key>https://faker.readthedocs.io/en/master/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-17T12:02:48Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Faker</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://faker.readthedocs.io/en/master/</string>
-				</dict>
-			</dict>
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-02-21T10:56:17Z</date>
+				<date>2024-03-09T09:38:00Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2825,7 +2811,7 @@ $("h1").each(function() {
 			<key>https://plotnine.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:15:36Z</date>
+				<date>2024-03-09T09:28:16Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2949,6 +2935,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://bambinos.github.io/bambi/</string>
+				</dict>
+			</dict>
+			<key>https://faker.readthedocs.io/en/master/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-03-09T09:29:54Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Faker</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://faker.readthedocs.io/en/master/</string>
 				</dict>
 			</dict>
 			<key>https://imbalanced-learn.org/stable/</key>
