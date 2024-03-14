@@ -320,7 +320,7 @@
   // ai
   "twinny.chatModelName": "gemma:7b",
   "twinny.enableCompletionCache": true,
-  "twinny.fimModelName": "gemma:7b",
+  "twinny.fimModelName": "codellama:7b-code",
   "twinny.fimTemplateFormat": "deepseek",
   "twinny.useFileContext": true,
   "twinny.useMultiLineCompletions": true,
@@ -358,6 +358,9 @@
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.telemetry": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools",
@@ -411,5 +414,5 @@
   },
   "cmake.configureOnOpen": false,
   "cmake.showConfigureWithDebuggerNotification": false,
-  "cmake.showOptionsMovedNotification": false
+  "cmake.showOptionsMovedNotification": false,
 }
