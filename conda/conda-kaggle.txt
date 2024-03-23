@@ -1,8 +1,10 @@
 bambi
 causalpy
 conda-tree
+imbalanced-learn
 ipykernel
 keras
+keras-cv
 mlx
 nbconvert
 openpyxl
