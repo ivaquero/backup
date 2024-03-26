@@ -1,15 +1,16 @@
-black
 conda-tree
 doc2dash
 ghp-import
 jupyter-book
 jupyter-sphinx
 keras
-markdown
+marimo
+more-itertools
 numpydoc
 pip
 plotly
 pooch
+pypandoc
 python-kaleido
 scikit-image
 scikit-learn
@@ -17,6 +18,7 @@ seaborn
 sphinx-autoapi
 sphinx-autodoc-typehints
 sphinx-autosummary-accessors
+sphinx-basic-ng
 sphinx-click
 sphinx-codeautolink
 sphinx-gallery

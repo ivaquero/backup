@@ -467,7 +467,7 @@ $("h1").each(function() {
 			<key>PyWalker</key>
 			<dict>
 				<key>date</key>
-				<date>2024-02-26T13:06:59Z</date>
+				<date>2024-03-25T00:32:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -581,7 +581,7 @@ $("h1").each(function() {
 			<key>homebrew</key>
 			<dict>
 				<key>date</key>
-				<date>2024-02-27T16:59:45Z</date>
+				<date>2024-03-25T02:18:00Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -2752,20 +2752,6 @@ $("h1").each(function() {
 					<string>https://causalpy.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
-			<key>https://docs.marimo.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-12T13:22:24Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>marimo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.marimo.io/</string>
-				</dict>
-			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -2780,10 +2766,24 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
+			<key>https://koaning.github.io/scikit-lego/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-03-26T12:05:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>scikit-lego</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://koaning.github.io/scikit-lego/</string>
+				</dict>
+			</dict>
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-03-09T09:38:00Z</date>
+				<date>2024-03-25T00:39:59Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2825,7 +2825,7 @@ $("h1").each(function() {
 			<key>https://python.arviz.org/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:55:20Z</date>
+				<date>2024-03-25T00:52:17Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -2935,6 +2935,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://bambinos.github.io/bambi/</string>
+				</dict>
+			</dict>
+			<key>https://docs.marimo.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-03-25T10:34:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.marimo.io/</string>
 				</dict>
 			</dict>
 			<key>https://faker.readthedocs.io/en/master/</key>
@@ -4519,6 +4533,8 @@ $("h1").each(function() {
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitlearn/scikit-learn.docset</key>
 			<string>sk</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/scikitlego/scikit-lego.docset</key>
+			<string>skl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/seaborn/seaborn.docset</key>
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/skimage/skimage.docset</key>
@@ -4727,6 +4743,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2023-04-29T00:40:57Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/LaTeX.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-03-25T00:44:11Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Lua_5.4.xml</key>
 			<dict>
