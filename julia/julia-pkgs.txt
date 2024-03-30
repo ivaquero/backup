@@ -10,16 +10,14 @@ DifferentialEquations
 Distributions
 ForwardDiff
 GLM
-GraphMakie
-Graphs
 HiGHS
 Ipopt
 JuMP
 JuliaFormatter
+Jupyter2Pluto
 Latexify
 ModelingToolkit
 NearestNeighbors
-NotebookToLaTeX
 OhMyREPL
 OrdinaryDiffEq
 PairPlots
