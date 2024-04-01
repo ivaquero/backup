@@ -226,11 +226,6 @@
   "hediet.vscode-drawio.codeLinkActivated": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "Kennedy",
-  "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml",
-    "editor.formatOnSave": true
-  },
-  "redhat.telemetry.enabled": false,
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -377,13 +372,6 @@
   "C_Cpp.inlayHints.parameterNames.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.enabled": true,
   "C_Cpp.inlayHints.referenceOperator.showSpace": true,
-  "lldb.commandCompletions": true,
-  "lldb.dereferencePointers": true,
-  "lldb.evaluateForHovers": true,
-  "lldb.launch.expressions": "native",
-  "lldb.launch.terminal": "integrated",
-  "lldb.suppressUpdateNotifications": true,
-  "lldb.verboseLogging": true,
   // documents
   "doxdocgen.c.firstLine": "/*!",
   "doxdocgen.c.triggerSequence": "///",
@@ -415,4 +403,5 @@
   "cmake.configureOnOpen": false,
   "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.showOptionsMovedNotification": false,
+  "typos.config": "_typos.toml",
 }
