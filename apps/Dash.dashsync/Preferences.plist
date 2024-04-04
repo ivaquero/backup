@@ -635,6 +635,63 @@ $("h1").each(function() {
 					<string>homebrew</string>
 				</dict>
 			</dict>
+			<key>marimo</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-04T19:07:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.marimo.io/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>mo</string>
+						<key>docsetName</key>
+						<string>marimo</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.marimo.io</string>
+					</dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>marimo</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict>
@@ -2405,6 +2462,63 @@ $("h1").each(function() {
 					<string>conda</string>
 				</dict>
 			</dict>
+			<key>gt</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-04T19:03:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://posit-dev.github.io/great-tables/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>gt</string>
+						<key>docsetName</key>
+						<string>gt</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://posit-dev.github.io/great-tables/</string>
+					</dict>
+					<key>name</key>
+					<string>gt</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>gt</string>
+				</dict>
+			</dict>
 			<key>imbalanced-learn</key>
 			<dict>
 				<key>date</key>
@@ -2766,20 +2880,6 @@ $("h1").each(function() {
 					<string>https://koaning.github.io/scikit-lego/</string>
 				</dict>
 			</dict>
-			<key>https://lets-plot.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-30T17:08:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>lets-plot</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://lets-plot.org/</string>
-				</dict>
-			</dict>
 			<key>https://mesa.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -2806,6 +2906,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://ml-explore.github.io/mlx/build/html/</string>
+				</dict>
+			</dict>
+			<key>https://moshi4.github.io/pyCirclize/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-04T18:55:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pyCirclize</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://moshi4.github.io/pyCirclize/</string>
 				</dict>
 			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
@@ -2991,6 +3105,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://imbalanced-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://lets-plot.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-04T19:05:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>lets-plot</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://lets-plot.org/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>
@@ -4549,6 +4677,8 @@ $("h1").each(function() {
 			<string>mo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>
 			<string>gg</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
+			<string>pc</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitlearn/scikit-learn.docset</key>
 			<string>sk</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitlego/scikit-lego.docset</key>

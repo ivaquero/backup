@@ -14,7 +14,6 @@
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
-  "editor.suggest.shareSuggestSelections": true,
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
@@ -22,6 +21,7 @@
   "editor.renderFinalNewline": "on",
   "editor.suggest.preview": true,
   "editor.suggest.selectionMode": "whenQuickSuggestion",
+  "editor.suggest.shareSuggestSelections": true,
   "editor.suggest.showStatusBar": true,
   "editor.tabCompletion": "on",
   "editor.unicodeHighlight.ambiguousCharacters": false,
@@ -75,9 +75,8 @@
   },
   // workbench
   "workbench.activityBar.iconClickBehavior": "toggle",
+  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
-  "workbench.editor.enablePreviewFromCodeNavigation": true,
-  "workbench.editor.enablePreviewFromQuickOpen": true,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
@@ -90,9 +89,7 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-  "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.expandMode": "singleClick",
-  "workbench.tree.indent": 8,
   "security.workspace.trust.untrustedFiles": "open",
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
@@ -206,6 +203,9 @@
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 18,
   // front end & formatters
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
   "[javascript][typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
@@ -404,4 +404,5 @@
   "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.showOptionsMovedNotification": false,
   "typos.config": "_typos.toml",
+  "livePreview.notifyOnOpenLooseFile": false,
 }

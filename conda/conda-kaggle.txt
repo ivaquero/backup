@@ -9,7 +9,7 @@ mplfinance
 multiprocess
 openpyxl
 plotnine
+pycirclize
 pydot
 pygwalker
-torchvision
 yfinance
