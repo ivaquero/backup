@@ -1,14 +1,15 @@
 bambi
-causalpy
 conda-tree
 drawdata
 imbalanced-learn
 keras
 keras-cv
 mlx
+mplfinance
 multiprocess
 openpyxl
 plotnine
 pydot
 pygwalker
 torchvision
+yfinance

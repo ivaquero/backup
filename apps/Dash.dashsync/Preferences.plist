@@ -2738,20 +2738,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>https://causalpy.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-09T09:34:24Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>CausalPy</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://causalpy.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -2834,20 +2820,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://networkx.org/documentation/stable/</string>
-				</dict>
-			</dict>
-			<key>https://plotnine.readthedocs.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-09T09:28:16Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>plotnine</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://plotnine.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://python.arviz.org/en/stable/</key>
@@ -2965,6 +2937,20 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
+			<key>https://causalpy.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-02T23:29:40Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>CausalPy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://causalpy.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
@@ -3005,6 +2991,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://imbalanced-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://plotnine.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-03T16:28:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://plotnine.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://scikit-learn.org/stable/</key>
@@ -3205,6 +3205,29 @@ $("h1").each(function() {
 					<string>usercontribjupyter-book</string>
 					<key>uniqueIdentifier</key>
 					<string>jupyter-book</string>
+				</dict>
+			</dict>
+			<key>plotnine</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-03T16:29:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>implementation of a grammar of graphics based on ggplot2</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/plotnine#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>usercontribplotnine</string>
+					<key>uniqueIdentifier</key>
+					<string>plotnine</string>
 				</dict>
 			</dict>
 			<key>pymc</key>
@@ -4204,29 +4227,6 @@ $("h1").each(function() {
 					<string>usercontribnox</string>
 					<key>uniqueIdentifier</key>
 					<string>nox</string>
-				</dict>
-			</dict>
-			<key>plotnine</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T09:16:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>implementation of a grammar of graphics based on ggplot2</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/plotnine#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang</string>
-					<key>name</key>
-					<string>plotnine</string>
-					<key>platform</key>
-					<string>usercontribplotnine</string>
-					<key>uniqueIdentifier</key>
-					<string>plotnine</string>
 				</dict>
 			</dict>
 			<key>polars</key>
