@@ -4,14 +4,11 @@ ghp-import
 jupyter-book
 jupyter-sphinx
 keras
-marimo
 more-itertools
 numpydoc
 pip
 plotly
 pooch
-pypandoc
-python-kaleido
 scikit-image
 scikit-learn
 seaborn
