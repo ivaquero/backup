@@ -297,8 +297,6 @@
     }
   },
   // typst
-  // "typst-lsp.experimentalFormatterMode": "on",
-  "typst-lsp.rootPath": "${HOME}/Documents/GitHub",
   "typst-preview.partialRendering": true,
   "typst-preview.pinPreviewFile": true,
   "typst-preview.refresh": "onSave",
