@@ -61,7 +61,6 @@
   "terminal.integrated.hideOnStartup": "whenEmpty",
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.rightClickBehavior": "copyPaste",
-  "terminal.integrated.shellIntegration.suggestEnabled": true,
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": [
@@ -326,7 +325,8 @@
   },
   // lua
   "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper"
+    "editor.defaultFormatter": "yinfei.luahelper",
+    "editor.formatOnSave": true
   },
   "luahelper.format.align_args": true,
   "luahelper.format.align_parameter": true,

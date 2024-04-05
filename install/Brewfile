@@ -29,6 +29,7 @@ brew "jq"
 brew "kondo"
 brew "lsd"
 brew "monolith"
+brew "neovim"
 brew "node"
 brew "ollama", restart_service: true
 brew "onefetch"
