@@ -1,6 +1,9 @@
+bokeh
 conda-tree
+dm-tree
 doc2dash
 ghp-import
+h5netcdf
 jupyter-book
 jupyter-sphinx
 keras
@@ -26,5 +29,7 @@ sphinx-remove-toctrees
 sphinx-rtd-theme
 sphinx-sitemap
 sphinxcontrib-spelling
+sphinxcontrib-youtube
 sphinxext-opengraph
 sphinxext-rediraffe
+xarray-einstats
