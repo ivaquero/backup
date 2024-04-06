@@ -2636,13 +2636,13 @@ $("h1").each(function() {
 			<key>plotnine</key>
 			<dict>
 				<key>date</key>
-				<date>2023-10-05T03:32:45Z</date>
+				<date>2024-04-05T19:11:35Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
 					<dict>
 						<key>allowFilters</key>
-						<string>plotnine.readthedocs.io/en/latest/*</string>
+						<string>https://plotnine.org/*</string>
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
@@ -2680,7 +2680,7 @@ $("h1").each(function() {
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
-						<string>https://plotnine.readthedocs.io/en/latest/</string>
+						<string>https://plotnine.org/</string>
 					</dict>
 					<key>name</key>
 					<string>plotnine</string>
@@ -2922,6 +2922,34 @@ $("h1").each(function() {
 					<string>https://networkx.org/documentation/stable/</string>
 				</dict>
 			</dict>
+			<key>https://plotnine.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-06T04:47:04Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://plotnine.org/</string>
+				</dict>
+			</dict>
+			<key>https://python.arviz.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-06T04:57:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>ArviZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://python.arviz.org/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://pytorch.org/docs/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3105,20 +3133,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://python.arviz.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-05T18:05:59Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>ArviZ</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://python.arviz.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://scikit-image.org/docs/stable/</key>
@@ -3333,29 +3347,6 @@ $("h1").each(function() {
 					<string>usercontribjupyter-book</string>
 					<key>uniqueIdentifier</key>
 					<string>jupyter-book</string>
-				</dict>
-			</dict>
-			<key>plotnine</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-03T16:29:14Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>implementation of a grammar of graphics based on ggplot2</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/plotnine#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang</string>
-					<key>name</key>
-					<string>plotnine</string>
-					<key>platform</key>
-					<string>usercontribplotnine</string>
-					<key>uniqueIdentifier</key>
-					<string>plotnine</string>
 				</dict>
 			</dict>
 			<key>pymc</key>
@@ -4184,7 +4175,7 @@ $("h1").each(function() {
 			<key>arviz</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:56:00Z</date>
+				<date>2024-04-06T04:56:28Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -4355,6 +4346,29 @@ $("h1").each(function() {
 					<string>usercontribnox</string>
 					<key>uniqueIdentifier</key>
 					<string>nox</string>
+				</dict>
+			</dict>
+			<key>plotnine</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-05T19:20:52Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>implementation of a grammar of graphics based on ggplot2</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/plotnine#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>usercontribplotnine</string>
+					<key>uniqueIdentifier</key>
+					<string>plotnine</string>
 				</dict>
 			</dict>
 			<key>polars</key>
