@@ -105,8 +105,25 @@
   "errorLens.statusBarMessageEnabled": true,
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "always"
+    }
+  },
+  "markdownlint.config": {
+    "MD001": false,
+    "MD010": false,
+    "MD024": false,
+    "MD025": false,
+    "MD026": false,
+    "MD029": false,
+    "MD033": false,
+    "MD034": false,
+    "MD036": false,
+    "MD037": false,
+    "MD041": false,
+    "MD042": false
   },
   "markdown.extension.italic.indicator": "*",
   "markdown.extension.print.imgToBase64": true,
@@ -141,20 +158,6 @@
   "mdtableeditor.isAutoFormatterEnabled": true,
   "mdtableeditor.isTreeViewEnabled": true,
   "mdtableeditor.isIconMenuEnabled": true,
-  "markdownlint.config": {
-    "MD001": false,
-    "MD010": false,
-    "MD024": false,
-    "MD025": false,
-    "MD026": false,
-    "MD029": false,
-    "MD033": false,
-    "MD034": false,
-    "MD036": false,
-    "MD037": false,
-    "MD041": false,
-    "MD042": false
-  },
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
@@ -203,32 +206,32 @@
   "notebook.markup.fontSize": 18,
   // front end & formatters
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true
   },
+  "html.format.indentInnerHtml": true,
+  "html.format.indentHandlebars": true,
+  "css.format.enable": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "livePreview.notifyOnOpenLooseFile": false,
   "[javascript][typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true
   },
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features",
     "editor.formatOnSave": true
   },
-  "css.format.enable": true,
-  "css.format.spaceAroundSelectorSeparator": true,
-  "emmet.showSuggestionsAsSnippets": true,
+  "json.validate.enable": false,
   // ui & preview
   "conventionalCommits.autoCommit": false,
   "conventionalCommits.emojiFormat": "emoji",
   "conventionalCommits.lineBreak": "\\n",
   "conventionalCommits.promptScopes": false,
   "conventionalCommits.showNewVersionNotes": false,
-  "hediet.vscode-drawio.codeLinkActivated": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "Kennedy",
-  "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  },
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
@@ -401,6 +404,5 @@
   "cmake.configureOnOpen": false,
   "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.showOptionsMovedNotification": false,
-  "typos.config": "_typos.toml",
-  "livePreview.notifyOnOpenLooseFile": false,
+  "typos.config": "_typos.toml"
 }
