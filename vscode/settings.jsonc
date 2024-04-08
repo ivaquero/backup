@@ -312,13 +312,6 @@
     "jsonc",
     "!plaintext"
   ],
-  // ai
-  "twinny.chatModelName": "gemma:7b",
-  "twinny.enableCompletionCache": true,
-  "twinny.fimModelName": "codellama:7b-code",
-  "twinny.fimTemplateFormat": "deepseek",
-  "twinny.useFileContext": true,
-  "twinny.useMultiLineCompletions": true,
   // toml
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
@@ -404,5 +397,8 @@
   "cmake.configureOnOpen": false,
   "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.showOptionsMovedNotification": false,
-  "typos.config": "_typos.toml"
+  "typos.config": "_typos.toml",
+  // ai
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": true
 }
