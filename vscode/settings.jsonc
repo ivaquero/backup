@@ -15,6 +15,7 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.guides.bracketPairs": "active",
+  "editor.inlayHints.enabled": "offUnlessPressed",
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
@@ -224,6 +225,21 @@
     "editor.formatOnSave": true
   },
   "json.validate.enable": false,
+  // toml
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": false
+  },
+  // lua
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper",
+    "editor.formatOnSave": true
+  },
+  "luahelper.format.align_args": true,
+  "luahelper.format.align_parameter": true,
+  "luahelper.format.spaces_inside_functioncall_parens": true,
+  "luahelper.format.spaces_inside_functiondef_parens": true,
+  "luahelper.format.spaces_inside_table_braces": true,
   // ui & preview
   "conventionalCommits.autoCommit": false,
   "conventionalCommits.emojiFormat": "emoji",
@@ -232,6 +248,11 @@
   "conventionalCommits.showNewVersionNotes": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "Kennedy",
+  "excalidraw.image": {
+    "exportScale": 1,
+    "exportWithBackground": true,
+    "exportWithDarkMode": false
+  },
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
@@ -242,6 +263,27 @@
     "SC2154",
     "SC2034"
   ],
+  // leetcode
+  "leetcode-problem-rating.cppCompiler": "clang",
+  "leetcode-problem-rating.defaultLanguage": "cpp",
+  "leetcode-problem-rating.hideScore": "Score",
+  "leetcode-problem-rating.hint.commandShortcut": false,
+  "leetcode-problem-rating.hint.commentDescription": false,
+  "leetcode-problem-rating.hint.configWebviewMarkdown": false,
+  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/leetcode/",
+  "leetcode-problem-rating.editor.shortcuts": [
+    "submit",
+    "case",
+    "allcase",
+    "test",
+    "solution"
+  ],
+  "leetcode-problem-rating.filePath": {
+    "default": {
+      "folder": "${language}",
+      "filename": "${tag}_${id}_${snake_case_name}.${ext}"
+    }
+  },
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
@@ -278,55 +320,17 @@
       "env": {}
     }
   ],
-  // leetcode
-  "leetcode-problem-rating.cppCompiler": "clang",
-  "leetcode-problem-rating.defaultLanguage": "cpp",
-  "leetcode-problem-rating.hideScore": "Score",
-  "leetcode-problem-rating.hint.commandShortcut": false,
-  "leetcode-problem-rating.hint.commentDescription": false,
-  "leetcode-problem-rating.hint.configWebviewMarkdown": false,
-  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/leetcode/",
-  "leetcode-problem-rating.editor.shortcuts": [
-    "submit",
-    "case",
-    "allcase",
-    "test",
-    "solution"
-  ],
-  "leetcode-problem-rating.filePath": {
-    "default": {
-      "folder": "${language}",
-      "filename": "${tag}_${id}_${snake_case_name}.${ext}"
-    }
-  },
   // typst
+  "[typst]": {
+    "editor.defaultFormatter": "mgt19937.typst-preview",
+    "editor.formatOnSave": true
+  },
+  "tinymist.exportPdf": "onDocumentHasTitle",
+  "tinymist.outputPath": "$root/articles/$name",
+  "tinymist.semanticTokens": "disable",
   "typst-preview.partialRendering": true,
   "typst-preview.pinPreviewFile": true,
   "typst-preview.refresh": "onSave",
-  // other
-  "material-icon-theme.files.associations": {
-    "*.m": "matlab"
-  },
-  "color-picker-universal.languages": [
-    "*",
-    "jsonc",
-    "!plaintext"
-  ],
-  // toml
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.formatOnSave": false
-  },
-  // lua
-  "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper",
-    "editor.formatOnSave": true
-  },
-  "luahelper.format.align_args": true,
-  "luahelper.format.align_parameter": true,
-  "luahelper.format.spaces_inside_functioncall_parens": true,
-  "luahelper.format.spaces_inside_functiondef_parens": true,
-  "luahelper.format.spaces_inside_table_braces": true,
   "[julia]": {
     // "editor.defaultFormatter": "julialang.language-julia",
     "editor.formatOnSave": true
@@ -389,16 +393,19 @@
   "doxdocgen.generic.dateTemplate": "@date{indent:15}{date}",
   "doxdocgen.generic.paramTemplate": "@param{indent:15}{param}",
   "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}",
-  "excalidraw.image": {
-    "exportScale": 1,
-    "exportWithBackground": true,
-    "exportWithDarkMode": false
-  },
   "cmake.configureOnOpen": false,
   "cmake.showConfigureWithDebuggerNotification": false,
   "cmake.showOptionsMovedNotification": false,
+  // other
+  "material-icon-theme.files.associations": {
+    "*.m": "matlab"
+  },
+  "color-picker-universal.languages": [
+    "*",
+    "jsonc",
+    "!plaintext"
+  ],
   "typos.config": "_typos.toml",
-  // ai
   "continue.telemetryEnabled": false,
-  "continue.enableTabAutocomplete": true
+  "continue.enableTabAutocomplete": false,
 }
