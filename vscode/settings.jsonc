@@ -186,8 +186,9 @@
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "autoDocstring.docstringFormat": "numpy",
   "ruff.lint.args": [
-    "--select=FURB,I,PD"
+    "--select=F,I,R,FURB,PD"
   ],
   // jupyter
   "jupyter.askForKernelRestart": false,

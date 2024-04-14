@@ -2980,24 +2980,10 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
-			<key>https://mesa.readthedocs.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-30T05:10:32Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Mesa</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://mesa.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-04-05T18:05:04Z</date>
+				<date>2024-04-14T14:10:50Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3233,6 +3219,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://lets-plot.org/</string>
+				</dict>
+			</dict>
+			<key>https://mesa.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-14T13:58:16Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Mesa</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mesa.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>
