@@ -408,5 +408,5 @@
   ],
   "typos.config": "_typos.toml",
   "continue.telemetryEnabled": false,
-  "continue.enableTabAutocomplete": false,
+  "continue.enableTabAutocomplete": true,
 }

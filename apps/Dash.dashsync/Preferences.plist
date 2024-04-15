@@ -122,63 +122,6 @@ $("h1").each(function() {
 					<string>Armadillo</string>
 				</dict>
 			</dict>
-			<key>AstroVim</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-06T05:28:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.astronvim.com/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>av</string>
-						<key>docsetName</key>
-						<string>AstroVim</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.astronvim.com/</string>
-					</dict>
-					<key>name</key>
-					<string>AstroVim</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>AstroVim</string>
-				</dict>
-			</dict>
 			<key>Beautiful Makie</key>
 			<dict>
 				<key>date</key>
@@ -410,7 +353,7 @@ $("h1").each(function() {
 			<key>homebrew</key>
 			<dict>
 				<key>date</key>
-				<date>2024-03-25T02:18:00Z</date>
+				<date>2024-04-15T10:02:11Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -467,7 +410,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2024-04-10T04:12:52Z</date>
+				<date>2024-04-15T10:09:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -693,6 +636,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>ArViZ.jl</string>
+				</dict>
+			</dict>
+			<key>AstroVim</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-15T10:10:19Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.astronvim.com/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>av</string>
+						<key>docsetName</key>
+						<string>AstroVim</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.astronvim.com/</string>
+					</dict>
+					<key>name</key>
+					<string>AstroVim</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>AstroVim</string>
 				</dict>
 			</dict>
 			<key>DataFrames.jl</key>
@@ -4972,6 +4972,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2023-10-15T16:01:38Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/HTML.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-15T10:08:23Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
 				<key>date</key>
@@ -5014,11 +5019,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2023-04-29T00:40:43Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/HTML.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2023-04-29T00:41:09Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/LaTeX.xml</key>
 			<dict>
