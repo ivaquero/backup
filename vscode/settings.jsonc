@@ -406,7 +406,35 @@
     "jsonc",
     "!plaintext"
   ],
-  "typos.config": "_typos.toml",
-  "continue.telemetryEnabled": false,
-  "continue.enableTabAutocomplete": true,
+  // spell
+  "cSpell.enableFiletypes": [
+    "latex",
+    "markdown",
+    "python",
+    "!json",
+    "!jsonc",
+    "!c",
+    "!cpp",
+    "!h"
+  ],
+  "cSpell.language": "en,uk",
+  "cSpell.ignoreRegExpList": [
+    "`.+`", // md quotes
+    "\\|\\s+\\w+", // md tables
+    "`{3}\\w+\\n(.+\\n+)+`{3}", // md code blocks
+    "\\b[A-Z]\\w+[A-Z]\\b", // abbreviations
+    "\\$.+\\$", // formulae
+    "\\$\\$\\n(.+\\n)+\\$\\$" // formula blocks
+  ],
+  "cSpell.customDictionaries": {
+    "glossary": {
+      "name": "glossary",
+      "path": "${workspaceRoot}/vscode/glossary.txt",
+      "description": "glossary",
+      "addWords": true
+    },
+    "custom": true
+  },
+  "cSpell.showAutocompleteSuggestions": true,
+  "cSpell.validateDirectives": true,
 }
