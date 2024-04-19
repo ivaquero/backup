@@ -188,7 +188,7 @@
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "autoDocstring.docstringFormat": "numpy",
   "ruff.lint.args": [
-    "--select=F,I,R,FURB,PD"
+    "--select=F,I,R,PERF,PD,TCH,TID,SIM,RET,Q,PYI,PIE,C4"
   ],
   // jupyter
   "jupyter.askForKernelRestart": false,
