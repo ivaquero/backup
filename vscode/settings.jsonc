@@ -45,6 +45,7 @@
   // files
   "files.associations": {
     "*.vimrc": "viml",
+    "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
     "*.m": "matlab"
@@ -285,6 +286,37 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
+  // spell
+  "cSpell.enableFiletypes": [
+    "latex",
+    "markdown",
+    "python",
+    "!json",
+    "!jsonc",
+    "!c",
+    "!cpp",
+    "!h"
+  ],
+  "cSpell.language": "en,uk",
+  "cSpell.ignoreRegExpList": [
+    "`.+`", // md quotes
+    "\\|\\s+\\w+", // md tables
+    "`{3}\\w+\\n(.+\\n+)+`{3}", // md code blocks
+    "\\b[A-Z]\\w+[A-Z]\\b", // abbreviations
+    "\\$.+\\$", // formulae
+    "\\$\\$\\n(.+\\n)+\\$\\$" // formula blocks
+  ],
+  "cSpell.customDictionaries": {
+    "glossary": {
+      "name": "glossary",
+      "path": "${workspaceRoot}/vscode/glossary.txt",
+      "description": "glossary",
+      "addWords": true
+    },
+    "custom": true
+  },
+  "cSpell.showAutocompleteSuggestions": true,
+  "cSpell.validateDirectives": true,
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
@@ -332,29 +364,6 @@
   "typst-preview.partialRendering": true,
   "typst-preview.pinPreviewFile": true,
   "typst-preview.refresh": "onSave",
-  "[julia]": {
-    // "editor.defaultFormatter": "julialang.language-julia",
-    "editor.formatOnSave": true
-  },
-  "julia.deleteJuliaCovFiles": true,
-  "julia.enableTelemetry": false,
-  "julia.execution.codeInREPL": true,
-  "julia.execution.inlineResultsForCellEvaluation": true,
-  "julia.plots.path": "images",
-  "julia.runtimeCompletions": true,
-  "julia.symbolCacheDownload": false,
-  // matlab
-  "[matlab]": {
-    "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
-    "editor.formatOnSave": true
-  },
-  "MATLAB.indexWorkspace": false,
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
-  "MATLAB.matlabConnectionTiming": "never",
-  "MATLAB.telemetry": false,
-  "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt"
-  ],
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
@@ -378,6 +387,10 @@
     "--pretty",
     "--ranking-model=decision_forest",
     "-j=12"
+  ],
+  "clangd.fallbackFlags": [
+    "-std=c++11",
+    "-I${workspaceFolder}/src/includes",
   ],
   "clangd.onConfigChanged": "restart",
   // documents
@@ -415,35 +428,27 @@
     "jsonc",
     "!plaintext"
   ],
-  // spell
-  "cSpell.enableFiletypes": [
-    "latex",
-    "markdown",
-    "python",
-    "!json",
-    "!jsonc",
-    "!c",
-    "!cpp",
-    "!h"
-  ],
-  "cSpell.language": "en,uk",
-  "cSpell.ignoreRegExpList": [
-    "`.+`", // md quotes
-    "\\|\\s+\\w+", // md tables
-    "`{3}\\w+\\n(.+\\n+)+`{3}", // md code blocks
-    "\\b[A-Z]\\w+[A-Z]\\b", // abbreviations
-    "\\$.+\\$", // formulae
-    "\\$\\$\\n(.+\\n)+\\$\\$" // formula blocks
-  ],
-  "cSpell.customDictionaries": {
-    "glossary": {
-      "name": "glossary",
-      "path": "${workspaceRoot}/vscode/glossary.txt",
-      "description": "glossary",
-      "addWords": true
-    },
-    "custom": true
+  "[julia]": {
+    // "editor.defaultFormatter": "julialang.language-julia",
+    "editor.formatOnSave": true
   },
-  "cSpell.showAutocompleteSuggestions": true,
-  "cSpell.validateDirectives": true,
+  "julia.deleteJuliaCovFiles": true,
+  "julia.enableTelemetry": false,
+  "julia.execution.codeInREPL": true,
+  "julia.execution.inlineResultsForCellEvaluation": true,
+  "julia.plots.path": "images",
+  "julia.runtimeCompletions": true,
+  "julia.symbolCacheDownload": false,
+  // matlab
+  "[matlab]": {
+    "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
+    "editor.formatOnSave": true
+  },
+  "MATLAB.indexWorkspace": false,
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  "MATLAB.matlabConnectionTiming": "never",
+  "MATLAB.telemetry": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
 }
