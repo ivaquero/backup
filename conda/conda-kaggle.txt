@@ -1,7 +1,6 @@
 bambi
 conda-tree
 drawdata
-imbalanced-learn
 keras
 mlx
 mplfinance
@@ -11,4 +10,5 @@ plotnine
 pycirclize
 pydot
 pygwalker
+scikit-learn
 yfinance

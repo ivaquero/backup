@@ -236,6 +236,63 @@ $("h1").each(function() {
 					<string>Matplot++</string>
 				</dict>
 			</dict>
+			<key>PyWalker</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-22T17:32:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.kanaries.net/pygwalker/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>pgw</string>
+						<key>docsetName</key>
+						<string>PyGWalker</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.kanaries.net/pygwalker</string>
+					</dict>
+					<key>name</key>
+					<string>PyGWalker</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>PyWalker</string>
+				</dict>
+			</dict>
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
@@ -405,6 +462,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>ruff</string>
+				</dict>
+			</dict>
+			<key>xmake</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-22T17:18:55Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://xmake.io/#/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>xm</string>
+						<key>docsetName</key>
+						<string>XMake</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://xmake.io/</string>
+					</dict>
+					<key>name</key>
+					<string>XMake</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>xmake</string>
 				</dict>
 			</dict>
 		</dict>
@@ -2006,63 +2120,6 @@ $("h1").each(function() {
 					<string>PyTensor</string>
 				</dict>
 			</dict>
-			<key>PyWalker</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-05T17:49:48Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.kanaries.net/pygwalker/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>pw</string>
-						<key>docsetName</key>
-						<string>PyWalker</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.kanaries.net/pygwalker</string>
-					</dict>
-					<key>name</key>
-					<string>PyWalker</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>PyWalker</string>
-				</dict>
-			</dict>
 			<key>Pyro</key>
 			<dict>
 				<key>date</key>
@@ -2861,63 +2918,6 @@ $("h1").each(function() {
 					<string>scikit-learn</string>
 				</dict>
 			</dict>
-			<key>xmake</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-01T12:19:28Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://xmake.io/#/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>xm</string>
-						<key>docsetName</key>
-						<string>XMake</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://xmake.io/</string>
-					</dict>
-					<key>name</key>
-					<string>XMake</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>xmake</string>
-				</dict>
-			</dict>
 		</dict>
 	</dict>
 	<key>DHGitHubRepo</key>
@@ -3179,6 +3179,20 @@ $("h1").each(function() {
 					<string>https://faker.readthedocs.io/en/master/</string>
 				</dict>
 			</dict>
+			<key>https://hvplot.holoviz.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-22T17:32:06Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>hvPlot</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://hvplot.holoviz.org/</string>
+				</dict>
+			</dict>
 			<key>https://imbalanced-learn.org/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3407,51 +3421,6 @@ $("h1").each(function() {
 					<string>usercontribScikit</string>
 					<key>uniqueIdentifier</key>
 					<string>Scikit</string>
-				</dict>
-			</dict>
-			<key>XMake</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-02T08:28:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Xmake</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
-					<key>authorLinkText</key>
-					<string>kassane</string>
-					<key>name</key>
-					<string>XMake</string>
-					<key>platform</key>
-					<string>usercontribXMake</string>
-					<key>uniqueIdentifier</key>
-					<string>XMake</string>
-				</dict>
-			</dict>
-			<key>imbalanced-learn</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-04T08:20:21Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Tackle the Curse of Imbalanced Datasets in Machine Learning</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/imbalanced-learn#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang</string>
-					<key>name</key>
-					<string>imbalanced-learn</string>
-					<key>platform</key>
-					<string>usercontribimbalanced-learn</string>
-					<key>uniqueIdentifier</key>
-					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
 			<key>jupyter-book</key>
@@ -4255,6 +4224,28 @@ $("h1").each(function() {
 					<string>UnicodeCharacters</string>
 				</dict>
 			</dict>
+			<key>XMake</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-22T17:17:08Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Xmake</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
+					<key>authorLinkText</key>
+					<string>kassane</string>
+					<key>name</key>
+					<string>XMake</string>
+					<key>platform</key>
+					<string>usercontribXMake</string>
+					<key>uniqueIdentifier</key>
+					<string>XMake</string>
+				</dict>
+			</dict>
 			<key>Zsh</key>
 			<dict>
 				<key>date</key>
@@ -4408,6 +4399,29 @@ $("h1").each(function() {
 					<string>usercontribigraph</string>
 					<key>uniqueIdentifier</key>
 					<string>igraph</string>
+				</dict>
+			</dict>
+			<key>imbalanced-learn</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-22T17:31:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Tackle the Curse of Imbalanced Datasets in Machine Learning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/imbalanced-learn#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>imbalanced-learn</string>
+					<key>platform</key>
+					<string>usercontribimbalanced-learn</string>
+					<key>uniqueIdentifier</key>
+					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
 			<key>jax</key>
@@ -4813,6 +4827,8 @@ $("h1").each(function() {
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
+			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
 			<string>lp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/marimo/marimo.docset</key>

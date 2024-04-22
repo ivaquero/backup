@@ -13,9 +13,9 @@
 	<key>denyFilters</key>
 	<string></string>
 	<key>docsetKeyword</key>
-	<string>pw</string>
+	<string>pgw</string>
 	<key>docsetName</key>
-	<string>PyWalker</string>
+	<string>PyGWalker</string>
 	<key>extraInfoPlist</key>
 	<string></string>
 	<key>isFromLocalFolder</key>
