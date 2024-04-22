@@ -65,63 +65,6 @@
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>Armadillo</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-10T15:03:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://arma.sourceforge.net/docs.html</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>am</string>
-						<key>docsetName</key>
-						<string>Armadillo</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://arma.sourceforge.net/</string>
-					</dict>
-					<key>name</key>
-					<string>Armadillo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>Armadillo</string>
-				</dict>
-			</dict>
 			<key>Beautiful Makie</key>
 			<dict>
 				<key>date</key>
@@ -636,6 +579,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>ArViZ.jl</string>
+				</dict>
+			</dict>
+			<key>Armadillo</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-21T08:18:03Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://arma.sourceforge.net/docs.html</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>am</string>
+						<key>docsetName</key>
+						<string>Armadillo</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://arma.sourceforge.net/</string>
+					</dict>
+					<key>name</key>
+					<string>Armadillo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Armadillo</string>
 				</dict>
 			</dict>
 			<key>AstroVim</key>
@@ -3275,6 +3275,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://scikit-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://www.pydy.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-04-21T08:21:34Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyDy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pydy.org/</string>
 				</dict>
 			</dict>
 		</dict>
