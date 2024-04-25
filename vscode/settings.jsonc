@@ -141,6 +141,8 @@
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
+  "markdown-pdf.breaks": true,
+  "markdown-pdf.highlightStyle": "qtcreator_light.css",
   "mdtableeditor.commandViews": {
     "toolbar": [],
     "context": [
