@@ -110,6 +110,7 @@
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
+      "editor.quickSuggestions": true,
       "source.fixAll.markdownlint": "always"
     }
   },
@@ -143,25 +144,7 @@
   "markdown.validate.enabled": true,
   "markdown-pdf.breaks": true,
   "markdown-pdf.highlightStyle": "qtcreator_light.css",
-  "mdtableeditor.commandViews": {
-    "toolbar": [],
-    "context": [
-      "MdTableEditor.changeAlignCenter",
-      "MdTableEditor.changeAlignLeft",
-      "MdTableEditor.changeAlignRight",
-      "MdTableEditor.insertBottom",
-      "MdTableEditor.insertLeft",
-      "MdTableEditor.insertRight",
-      "MdTableEditor.insertTop",
-      "MdTableEditor.moveLeft",
-      "MdTableEditor.moveRight",
-      "MdTableEditor.removeColumn",
-      "MdTableEditor.removeRow"
-    ]
-  },
-  "mdtableeditor.isAutoFormatterEnabled": true,
-  "mdtableeditor.isTreeViewEnabled": true,
-  "mdtableeditor.isIconMenuEnabled": true,
+  "markdowntable.showMenu.csvToTable": true,
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
@@ -311,7 +294,7 @@
   "cSpell.customDictionaries": {
     "glossary": {
       "name": "glossary",
-      "path": "${workspaceRoot}/vscode/glossary.txt",
+      "path": "${workspaceRoot}/.vscode/glossary.txt",
       "description": "glossary",
       "addWords": true
     },
