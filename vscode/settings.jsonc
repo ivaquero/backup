@@ -110,7 +110,7 @@
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "editor.quickSuggestions": true,
+      "editor.quickSuggestions": "explicit",
       "source.fixAll.markdownlint": "always"
     }
   },
@@ -160,6 +160,10 @@
     "go": "go run",
     "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
   },
+  // bookmarks
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
   // python
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -429,11 +433,7 @@
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
     "editor.formatOnSave": true
   },
-  "MATLAB.indexWorkspace": false,
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
-  "MATLAB.matlabConnectionTiming": "never",
-  "MATLAB.telemetry": false,
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt"
-  ],
+  ]
 }
