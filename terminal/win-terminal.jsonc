@@ -38,17 +38,17 @@
     "profiles": {
         "defaults": {
             "font": {
-                "face": "FiraCode Nerd Font"
+                "face": "Courier New"
             },
             "snapOnInput": true,
             "useAcrylic": true
         },
         "list": [
             {
-                "commandline": "C:\\Scoop\\shims\\bash.exe --login -i",
+                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe --login -i",
                 "guid": "{c891c3d2-b798-4857-83c0-89bf2ea34021}",
-                "name": "Git Bash",
-                "icon": "C:\\Scoop\\apps\\git-cn\\current\\mingw64\\share\\git\\git-for-windows.ico"
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
