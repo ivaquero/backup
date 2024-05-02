@@ -63,6 +63,7 @@
   "terminal.integrated.hideOnStartup": "whenEmpty",
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.shellIntegration.suggestEnabled": true,
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": [
@@ -90,6 +91,7 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
   "security.workspace.trust.untrustedFiles": "open",
   // git
@@ -128,6 +130,7 @@
     "MD041": false,
     "MD042": false
   },
+  "markdown.experimental.updateLinksOnPaste": true,
   "markdown.extension.italic.indicator": "*",
   "markdown.extension.print.imgToBase64": true,
   "markdown.extension.print.theme": "light",
@@ -192,10 +195,12 @@
   "notebook.consolidatedRunButton": true,
   "notebook.diff.enablePreview": false,
   "notebook.diff.ignoreOutputs": true,
+  "notebook.experimental.remoteSave": true,
   "notebook.experimental.variablesView": true,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 18,
+  "notebook.output.minimalErrorRendering": true,
   // front end & formatters
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
@@ -436,5 +441,4 @@
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt"
   ],
-  "workbench.startupEditor": "none"
 }
