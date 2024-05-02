@@ -11,4 +11,5 @@ pycirclize
 pydot
 pygwalker
 scikit-learn
+tabulate
 yfinance

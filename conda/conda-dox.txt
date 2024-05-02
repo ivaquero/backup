@@ -1,9 +1,8 @@
 bokeh
 conda-tree
-dm-tree
 doc2dash
 ghp-import
-h5netcdf
+jaxlib
 jupyter-book
 jupyter-sphinx
 keras
@@ -12,6 +11,8 @@ numpydoc
 pip
 plotly
 pooch
+pymc
+pymc-sphinx-theme
 scikit-image
 scikit-learn
 seaborn
@@ -32,4 +33,3 @@ sphinxcontrib-spelling
 sphinxcontrib-youtube
 sphinxext-opengraph
 sphinxext-rediraffe
-xarray-einstats
