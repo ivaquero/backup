@@ -145,8 +145,6 @@
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
-  "markdown-pdf.breaks": true,
-  "markdown-pdf.highlightStyle": "qtcreator_light.css",
   "markdowntable.showMenu.csvToTable": true,
   // shortcuts
   "code-runner.runInTerminal": true,
@@ -422,6 +420,8 @@
     "jsonc",
     "!plaintext"
   ],
+  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
+  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
   "[julia]": {
     // "editor.defaultFormatter": "julialang.language-julia",
     "editor.formatOnSave": true
