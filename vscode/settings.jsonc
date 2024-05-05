@@ -54,9 +54,6 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // terminal
-  "terminal.external.linuxExec": "wezterm",
-  "terminal.external.osxExec": "WezTerm.app",
-  "terminal.external.windowsExec": "C:\\Scoop\\apps\\wezterm\\current\\wezterm.exe",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
@@ -222,8 +219,12 @@
   // toml
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true
   },
+  "evenBetterToml.formatter.alignComments": true,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.arrayAutoCollapse": true,
+  "evenBetterToml.formatter.indentEntries": true,
   // lua
   "[lua]": {
     "editor.defaultFormatter": "yinfei.luahelper",
@@ -428,10 +429,11 @@
   },
   "julia.deleteJuliaCovFiles": true,
   "julia.enableTelemetry": false,
+  "julia.environmentPath": "${workspaceFolder}",
   "julia.execution.codeInREPL": true,
-  "julia.execution.inlineResultsForCellEvaluation": true,
-  "julia.plots.path": "images",
-  "julia.runtimeCompletions": true,
+  "julia.execution.saveOnEval": true,
+  "julia.inlayHints.static.enabled": true,
+  "julia.plots.path": "../../images",
   "julia.symbolCacheDownload": false,
   // matlab
   "[matlab]": {
@@ -439,6 +441,8 @@
     "editor.formatOnSave": true
   },
   "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt"
+    "matlab.interrupt",
+    "language-julia.interrupt"
   ],
+  "redhat.telemetry.enabled": false,
 }
