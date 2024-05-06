@@ -423,6 +423,14 @@
   ],
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
+  "wordcount_cjk.activateLanguages": [
+    "markdown",
+    "plaintext",
+    "latex"
+  ],
+  "wordcount_cjk.statusBarTextTemplate": "中文：${cjk} 字 + 英文：${en_words} 词",
+  "wordcount_cjk.statusBarTooltipTemplate": "中文字数：${cjk} \\n 非 ASCII 字符数：\\t${total - ascii} \\n 英文单词数：${en_words} \\n 非空白字符数：${total - whitespace} \\n 总字符数：${total}",
+  "redhat.telemetry.enabled": false,
   "[julia]": {
     // "editor.defaultFormatter": "julialang.language-julia",
     "editor.formatOnSave": true
@@ -443,6 +451,5 @@
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
     "language-julia.interrupt"
-  ],
-  "redhat.telemetry.enabled": false,
+  ]
 }
