@@ -19,6 +19,7 @@ PairPlots
 PkgDependency
 Pluto
 PlutoUI
+Polynomials
 QuadGK
 ReverseDiff
 Tidier
