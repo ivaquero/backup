@@ -186,6 +186,8 @@
   "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
   "jupyter.pythonExportMethod": "nbconvert",
   "jupyter.showVariableViewWhenDebugging": true,
+  "dataWrangler.useRelativePath": true,
+  "dataWrangler.startInEditModeForNotebookEntrypoints": true,
   // notebook
   "notebook.consolidatedRunButton": true,
   "notebook.diff.enablePreview": false,
@@ -451,5 +453,5 @@
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
     "language-julia.interrupt"
-  ]
+  ],
 }
