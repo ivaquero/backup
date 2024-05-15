@@ -2,7 +2,6 @@ bambi
 conda-tree
 drawdata
 keras
-marimo
 mplfinance
 multiprocess
 openpyxl
