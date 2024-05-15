@@ -2980,20 +2980,6 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
-			<key>https://ml-explore.github.io/mlx/build/html/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-05-12T03:09:58Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>MLX</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://ml-explore.github.io/mlx/build/html/</string>
-				</dict>
-			</dict>
 			<key>https://moshi4.github.io/pyCirclize/</key>
 			<dict>
 				<key>date</key>
@@ -3247,6 +3233,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mesa.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://ml-explore.github.io/mlx/build/html/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-05-15T14:43:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>MLX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://ml-explore.github.io/mlx/build/html/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>

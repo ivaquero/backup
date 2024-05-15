@@ -2,15 +2,14 @@ bambi
 conda-tree
 drawdata
 keras
-mlx
+marimo
 mplfinance
 multiprocess
 openpyxl
 plotnine
 preliz
 pycirclize
-pydot
 pygwalker
-scikit-learn
+shap
 tabulate
 yfinance
