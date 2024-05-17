@@ -22,8 +22,11 @@ if [[ "$(uname -sm)" = "Darwin arm64" ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
     export PATH="/opt/homebrew/opt/curl/bin:$PATH"
     export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-    export CPATH=/opt/homebrew/include
-    export LIBRARY_PATH=/opt/homebrew/lib
+    export CPATH="/opt/homebrew/include"
+    export LIBRARY_PATH="/opt/homebrew/lib"
+    export CPPFLAGS="-I/opt/homebrew/opt/openblas/include"
+    export LDFLAGS="-L/opt/homebrew/opt/openblas/lib"
+    export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
 fi
 
-export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"

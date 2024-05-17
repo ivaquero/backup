@@ -479,4 +479,5 @@
     "return": "",
     "attention": "",
   },
+  "npm.packageManager": "bun",
 }
