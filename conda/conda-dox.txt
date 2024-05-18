@@ -1,15 +1,12 @@
-bokeh
 conda-tree
 doc2dash
 ghp-import
-jaxlib
 jupyter-book
 jupyter-sphinx
 keras
 more-itertools
 numpydoc
 pip
-plotly
 pooch
 pymc
 pymc-sphinx-theme
