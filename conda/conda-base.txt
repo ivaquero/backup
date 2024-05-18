@@ -1,4 +1,10 @@
 clang-format
+cmake-annotate
+cmake-format
+cmake-lint
+cmake-parse
 conda-tree
+jinja2
 mamba
 pdftotext
+six
