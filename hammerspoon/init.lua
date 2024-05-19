@@ -26,11 +26,11 @@ spoon.ShiftIt:bindHotkeys( {} )
 hs.loadSpoon( "Volume" )
 
 hs.hotkey.bind( { 'ctrl', 'shift' }, "Down", function()
-    spoon.Volume:changeVolume( 3 )
+    spoon.Volume:changeVolume( -3 )
 end )
 
 hs.hotkey.bind( { 'ctrl', 'shift' }, "Up", function()
-    spoon.Volume:changeVolume( -3 )
+    spoon.Volume:changeVolume( 3 )
 end )
 
 -- AClock

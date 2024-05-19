@@ -346,10 +346,6 @@
     "-I${workspaceFolder}/src/includes",
   ],
   "clangd.onConfigChanged": "restart",
-  // cmake
-  "cmake.configureOnOpen": false,
-  "cmake.showConfigureWithDebuggerNotification": false,
-  "cmake.showOptionsMovedNotification": false,
   // other
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
@@ -407,7 +403,8 @@
     },
     "prohibitAutoAdd": [
       "json",
-      "md"
+      "md",
+      "lua"
     ],
     "language": {
       "h/hpp/c/cpp": {
