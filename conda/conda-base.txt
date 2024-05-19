@@ -1,4 +1,2 @@
-clang-format
-cmakelang
 conda-tree
 mamba
