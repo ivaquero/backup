@@ -33,6 +33,12 @@ hs.hotkey.bind( { 'ctrl', 'shift' }, "Up", function()
     spoon.Volume:changeVolume( -3 )
 end )
 
+-- AClock
+hs.loadSpoon( "AClock" )
+hs.hotkey.bind( { 'ctrl', 'shift' }, "C", function()
+    spoon.AClock:toggleShow()
+end )
+
 -- Caffeine
 hs.loadSpoon( "Caffeine" )
 
