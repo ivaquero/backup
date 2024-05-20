@@ -1,22 +1,5 @@
 -- Reload
-function reloadConfig( paths )
-    doReload = false
-    for _, file in pairs( paths ) do
-        if file:sub( -4 ) == ".lua" then
-            print( "A lua config file changed, reload" )
-            doReload = true
-        end
-    end
-    if not doReload then
-        print( "No lua file changed, skipping reload" )
-        return
-    end
-
-    hs.reload()
-end
-
-configFileWatcher = hs.pathwatcher.new( os.getenv( "HOME" ) .. "/.hammerspoon/", reloadConfig )
-configFileWatcher:start()
+hs.loadSpoon( "Reload" )
 
 -- Window
 hs.loadSpoon( "ShiftIt" )
@@ -33,19 +16,9 @@ hs.hotkey.bind( { 'ctrl', 'shift' }, "Up", function()
     spoon.Volume:changeVolume( 3 )
 end )
 
--- AClock
-hs.loadSpoon( "AClock" )
-hs.hotkey.bind( { 'ctrl', 'shift' }, "C", function()
-    spoon.AClock:toggleShow()
-end )
-
 -- Caffeine
 hs.loadSpoon( "Caffeine" )
 
 hs.hotkey.bind( { 'ctrl', 'shift' }, "W", function()
-    spoon.Caffeine:start()
-end )
-
-hs.hotkey.bind( { 'ctrl', 'shift' }, "S", function()
-    spoon.Caffeine:stop()
+    spoon.Caffeine:setCaffeineDisplay( true )
 end )

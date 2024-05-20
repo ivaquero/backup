@@ -1,5 +1,7 @@
 --- === Volume ===
-local obj = {}
+local obj = {
+    hs = hs
+ }
 obj.__index = obj
 
 -- Metadata
@@ -7,9 +9,6 @@ obj.name = "Volume"
 obj.version = "1.0"
 obj.author = "ivaquero"
 obj.license = "MIT"
-
-function obj:init()
-end
 
 function obj:changeVolume( diff )
     local current = hs.audiodevice.defaultOutputDevice():volume()
