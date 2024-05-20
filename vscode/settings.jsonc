@@ -7,7 +7,7 @@
   "extensions.autoUpdate": "onlySelectedExtensions",
   // application
   "update.mode": "none",
-  "diffEditor.wordWrap": "on",
+  "diffEditor.wordWrap": "off",
   "telemetry.telemetryLevel": "error",
   // editor
   "editor.accessibilitySupport": "off",
@@ -15,8 +15,9 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.guides.bracketPairs": false,
+  "editor.guides.indentation": false,
+  "editor.inlayHints.enabled": "off",
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
@@ -31,7 +32,7 @@
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.useTabStops": false,
-  "editor.wordWrap": "bounded",
+  "editor.wordWrap": "off",
   "editor.quickSuggestions": {
     "comments": true,
     "strings": true,
@@ -78,6 +79,10 @@
   "workbench.activityBar.iconClickBehavior": "toggle",
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
+  },
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
@@ -461,4 +466,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
+  "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
+  "blockman.n32BlackListOfFileFormats": "plaintext, markdown, jsonc",
 }
