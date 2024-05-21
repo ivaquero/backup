@@ -91,7 +91,7 @@
   "workbench.editorAssociations": {
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.excalidraw": "editor.excalidraw"
+    // "*.excalidraw": "editor.excalidraw"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -371,7 +371,7 @@
   "wordcount_cjk.statusBarTooltipTemplate": "中文字数：${cjk} \\n 非 ASCII 字符数：\\t${total - ascii} \\n 英文单词数：${en_words} \\n 非空白字符数：${total - whitespace} \\n 总字符数：${total}",
   "redhat.telemetry.enabled": false,
   "[julia]": {
-    // "editor.defaultFormatter": "julialang.language-julia",
+    "editor.defaultFormatter": "julialang.language-julia",
   },
   "julia.deleteJuliaCovFiles": true,
   "julia.enableTelemetry": false,
@@ -467,5 +467,5 @@
     }
   },
   "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
-  "blockman.n32BlackListOfFileFormats": "plaintext, markdown, jsonc",
+  "blockman.n32BlackListOfFileFormats": "plaintext, markdown, jsonc, ruby",
 }
