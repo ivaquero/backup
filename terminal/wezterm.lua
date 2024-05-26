@@ -7,14 +7,14 @@ local set_environment_variables = {}
 -- Shell
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     table.insert( launch_menu, {
-        label = 'PowerShell',
-        args = { 'powershell.exe', '-NoLogo' }
+        label = 'Git Bash',
+        args = { 'bash.exe', '-l' }
      } )
     table.insert( launch_menu, {
-        label = "WSL",
-        args = { "wsl.exe", "--cd", "/home/" }
+        label = 'WSL',
+        args = { 'wsl.exe', '--cd', "/home/" }
      } )
-    default_prog = { 'powershell.exe', '-NoLogo' }
+    default_prog = { 'bash.exe', '-l' }
 elseif wezterm.target_triple == 'x86_64-unknown-linux-gnu' then
     table.insert( launch_menu, {
         label = 'Bash',
@@ -62,7 +62,7 @@ wezterm.on( 'gui-startup', function( cmd )
      }
 
     left_top_pane:send_text 'b\n'
-    left_bottom_pane:send_text 'b\n'
+    left_bottom_pane:send_text '\ncd $OX_BACKUP\nc\nb'
     right_top_pane:send_text 'k\n'
     window:gui_window():maximize()
 end )
