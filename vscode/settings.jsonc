@@ -263,7 +263,7 @@
     "SC2034"
   ],
   "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
-  "blockman.n32BlackListOfFileFormats": "plaintext, markdown, jsonc, ruby",
+  "blockman.n32BlackListOfFileFormats": "^python, ^json, ^cpp, ^c",
   // spell
   "cSpell.enableFiletypes": [
     "latex",
