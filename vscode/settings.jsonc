@@ -333,7 +333,7 @@
   ],
   // typst
   "[typst]": {
-    "editor.defaultFormatter": "mgt19937.typst-preview",
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
   },
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
