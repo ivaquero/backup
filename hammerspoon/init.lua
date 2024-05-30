@@ -17,8 +17,8 @@ hs.hotkey.bind( { 'ctrl', 'shift' }, "Up", function()
 end )
 
 -- Caffeine
-hs.loadSpoon( "Caffeine" )
+-- hs.loadSpoon( "Caffeine" )
 
-hs.hotkey.bind( { 'ctrl', 'shift' }, "W", function()
-    spoon.Caffeine:setCaffeineDisplay( true )
-end )
+-- hs.hotkey.bind( { 'ctrl', 'shift' }, "W", function()
+--     spoon.Caffeine:setCaffeineDisplay( true )
+-- end )

@@ -425,7 +425,8 @@
     "prohibitAutoAdd": [
       "json",
       "md",
-      "lua"
+      "lua",
+      "python"
     ],
     "language": {
       "h/hpp/c/cpp": {
@@ -481,5 +482,6 @@
       "folder": "${language}",
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
-  }
+  },
+  "continue.enableTabAutocomplete": true
 }
