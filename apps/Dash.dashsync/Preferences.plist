@@ -2969,7 +2969,7 @@ $("h1").each(function() {
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-04-05T17:57:19Z</date>
+				<date>2024-05-31T06:50:55Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3053,7 +3053,7 @@ $("h1").each(function() {
 			<key>https://requests.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-05-23T13:40:13Z</date>
+				<date>2024-05-31T06:34:37Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
