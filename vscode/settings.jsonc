@@ -52,6 +52,7 @@
   "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
   "explorer.fileNesting.enabled": true,
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
@@ -181,6 +182,7 @@
     "julia": "julia",
     "shellscript": "bash",
     "go": "go run",
+    "dart": "dart $dir$fileName",
     "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
   },
   // bookmarks
