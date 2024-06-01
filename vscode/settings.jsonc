@@ -32,7 +32,6 @@
   "editor.mouseWheelZoom": true,
   "editor.renderFinalNewline": "on",
   "editor.semanticHighlighting.enabled": true,
-  "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "replace",
   "editor.suggest.preview": true,
   "editor.suggest.selectionMode": "whenQuickSuggestion",
@@ -75,7 +74,6 @@
   "terminal.integrated.hideOnStartup": "whenEmpty",
   "terminal.integrated.inheritEnv": false,
   "terminal.integrated.rightClickBehavior": "copyPaste",
-  "terminal.integrated.stickyScroll.enabled": true,
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": [
@@ -234,6 +232,7 @@
   "[javascript][typescript]": {
     "editor.defaultFormatter": "biomejs.biome",
   },
+  "biome.rename": true,
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features",
   },
@@ -263,7 +262,7 @@
     "SC2034"
   ],
   "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
-  "blockman.n32BlackListOfFileFormats": "^python, ^json, ^cpp, ^c",
+  "blockman.n32BlackListOfFileFormats": "^python, ^json, ^cpp, ^c, ^javascript, ^typescript",
   // spell
   "cSpell.enableFiletypes": [
     "latex",
@@ -483,5 +482,5 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  "continue.enableTabAutocomplete": true
+  "continue.enableTabAutocomplete": true,
 }
