@@ -2,6 +2,7 @@ Books
 CairoMakie
 Colors
 Combinatorics
+CoordRefSystems
 DataStructures
 DifferentialEquations
 Distributions
@@ -10,7 +11,6 @@ GLM
 HiGHS
 Ipopt
 JuMP
-Jupyter2Pluto
 Latexify
 ModelingToolkit
 OhMyREPL

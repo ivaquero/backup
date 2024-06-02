@@ -301,6 +301,8 @@
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
   },
+  "latex-workshop.bibtex-fields.sort.enabled": true,
+  "latex-workshop.bibtex-format.sort.enabled": true,
   "latex-workshop.intellisense.unimathsymbols.enabled": true,
   "latex-workshop.intellisense.update.aggressive.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
@@ -422,6 +424,15 @@
     "matlab.interrupt",
     "language-julia.interrupt"
   ],
+  // lua
+  "[lua]": {
+    "editor.defaultFormatter": "yinfei.luahelper",
+  },
+  "luahelper.format.align_args": true,
+  "luahelper.format.align_parameter": true,
+  "luahelper.format.spaces_inside_functioncall_parens": true,
+  "luahelper.format.spaces_inside_functiondef_parens": true,
+  "luahelper.format.spaces_inside_table_braces": true,
   "fileheader.configObj": {
     "beforeAnnotation": {
       "*": ""
@@ -470,15 +481,6 @@
     "return": "",
     "attention": "",
   },
-  // lua
-  "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper",
-  },
-  "luahelper.format.align_args": true,
-  "luahelper.format.align_parameter": true,
-  "luahelper.format.spaces_inside_functioncall_parens": true,
-  "luahelper.format.spaces_inside_functiondef_parens": true,
-  "luahelper.format.spaces_inside_table_braces": true,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
