@@ -4759,6 +4759,8 @@ $("h1").each(function() {
 			<string>cm</string>
 			<key>~/Library/Application Support/Dash/DocSets/CSS/CSS.docset</key>
 			<string>css</string>
+			<key>~/Library/Application Support/Dash/DocSets/Dart/Dart.docset</key>
+			<string>d</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
 			<string>h</string>
 			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
@@ -5001,6 +5003,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-04-17T00:09:54Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-02T02:45:18Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
