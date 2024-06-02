@@ -3400,6 +3400,35 @@ $("h1").each(function() {
 					<string>Conda</string>
 				</dict>
 			</dict>
+			<key>React_Native</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-02T17:52:29Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>React</string>
+						<string>ReactNative</string>
+						<string>Facebook</string>
+						<string>JavaScript</string>
+						<string>Reactjs</string>
+						<string>UI</string>
+						<string>iOS</string>
+						<string>Android</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/React_Native#readme</string>
+					<key>authorLinkText</key>
+					<string>mnmaraes</string>
+					<key>name</key>
+					<string>React Native</string>
+					<key>platform</key>
+					<string>usercontribReact_Native</string>
+					<key>uniqueIdentifier</key>
+					<string>React_Native</string>
+				</dict>
+			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -4909,6 +4938,8 @@ $("h1").each(function() {
 			<string>tl</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide 2PySide 6/Qt_for_Python.docset</key>
 			<string>qtp:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/React Native/React_Native.docset</key>
+			<string>rn</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Swift Language Guide/SwiftLanguageGuide.docset</key>
@@ -5004,11 +5035,6 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-04-17T00:09:54Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Dart.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-02T02:45:18Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
 				<key>date</key>
@@ -5056,6 +5082,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-05-19T12:52:46Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-02T17:52:16Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTTP.xml</key>
 			<dict>

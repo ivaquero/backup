@@ -62,7 +62,7 @@ wezterm.on( 'gui-startup', function( cmd )
      }
 
     left_top_pane:send_text 'b\n'
-    left_bottom_pane:send_text '\ncd $OX_BACKUP\nc\nb'
+    left_bottom_pane:send_text '\ncd $OX_BACKUP\nc\nb\n'
     right_top_pane:send_text 'k\n'
     window:gui_window():maximize()
 end )
