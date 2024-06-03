@@ -47,7 +47,7 @@
   "editor.quickSuggestions": {
     "comments": true,
     "strings": true,
-    "other": true,
+    "other": true
   },
   // explorer
   "explorer.compactFolders": true,
@@ -102,8 +102,7 @@
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
     "*.md": "default",
-    "*.drawio.png": "hediet.vscode-drawio",
-    // "*.excalidraw": "editor.excalidraw"
+    "*.drawio.png": "hediet.vscode-drawio"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -218,7 +217,7 @@
   "dataWrangler.useRelativePath": true,
   // front end & formatters
   "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "html.format.indentInnerHtml": true,
   "html.format.indentHandlebars": true,
@@ -233,15 +232,15 @@
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "typescript.suggest.autoImports": true,
   "[javascript][typescript]": {
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "biome.rename": true,
   "[json][jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   // toml
   "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
   },
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.allowedBlankLines": 1,
@@ -257,7 +256,7 @@
   "hediet.vscode-drawio.theme": "Kennedy",
   // shell
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "shellcheck.exclude": [
     "SC1090",
@@ -352,7 +351,7 @@
   ],
   // typst
   "[typst]": {
-    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
   },
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
@@ -362,7 +361,7 @@
   "typst-preview.refresh": "onSave",
   // cpp
   "[c][cpp]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
   "clangd.arguments": [
     "--all-scopes-completion",
@@ -383,7 +382,7 @@
   ],
   "clangd.fallbackFlags": [
     "-std=c++11",
-    "-I${workspaceFolder}/src/includes",
+    "-I${workspaceFolder}/src/includes"
   ],
   "clangd.onConfigChanged": "restart",
   // other
@@ -397,16 +396,9 @@
   ],
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
-  "wordcount_cjk.activateLanguages": [
-    "markdown",
-    "plaintext",
-    "latex"
-  ],
-  "wordcount_cjk.statusBarTextTemplate": "中文：${cjk} 字 + 英文：${en_words} 词",
-  "wordcount_cjk.statusBarTooltipTemplate": "中文字数：${cjk} \\n 非 ASCII 字符数：\\t${total - ascii} \\n 英文单词数：${en_words} \\n 非空白字符数：${total - whitespace} \\n 总字符数：${total}",
   "redhat.telemetry.enabled": false,
   "[julia]": {
-    "editor.defaultFormatter": "julialang.language-julia",
+    "editor.defaultFormatter": "julialang.language-julia"
   },
   "julia.deleteJuliaCovFiles": true,
   "julia.enableTelemetry": false,
@@ -418,7 +410,7 @@
   "julia.symbolCacheDownload": false,
   // matlab
   "[matlab]": {
-    "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
+    "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
@@ -426,61 +418,19 @@
   ],
   // lua
   "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper",
+    "editor.defaultFormatter": "yinfei.luahelper"
   },
   "luahelper.format.align_args": true,
   "luahelper.format.align_parameter": true,
   "luahelper.format.spaces_inside_functioncall_parens": true,
   "luahelper.format.spaces_inside_functiondef_parens": true,
   "luahelper.format.spaces_inside_table_braces": true,
-  "fileheader.configObj": {
-    "beforeAnnotation": {
-      "*": ""
-    },
-    "afterAnnotation": {
-      "*": "\n"
-    },
-    "wideSame": true,
-    "wideNum": 13,
-    "functionWideNum": 12,
-    "functionParamsShape": "normal",
-    "openFunctionParamsCheck": true,
-    "dateFormat": "YYYY-MM-DD HH:mm",
-    "cursorModeInternalAll": {
-      "python": true,
-      "defaultSetting": false
-    },
-    "prohibitAutoAdd": [
-      "json",
-      "md",
-      "lua",
-      "python"
-    ],
-    "language": {
-      "h/hpp/c/cpp": {
-        "head": "/*!",
-        "middle": " * @",
-        "end": " */"
-      }
-    },
-    "specialOptions": {
-      "h/hpp/c/cpp": {
-        "description": "brief",
-      },
-    },
-  },
-  "fileheader.customMade": {
-    "Description": "",
-    "Author": "git config user.name",
-    "Date": "",
-    "LastEditTime": ""
-  },
-  "fileheader.cursorMode": {
-    "description": "",
-    "param": "",
-    "return": "",
-    "attention": "",
-  },
+  // other
+  "wordcounter.side.left": [
+    "word",
+    "line"
+  ],
+  "wordcounter.simple_wordcount": false,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
@@ -502,5 +452,5 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  "continue.enableTabAutocomplete": true,
+  "continue.enableTabAutocomplete": true
 }
