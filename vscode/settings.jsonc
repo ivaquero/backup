@@ -404,7 +404,15 @@
   "doxdocgen.generic.customTags": [
     "@attention"
   ],
-  // appearances
+  // pandoc
+  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
+  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
+  "wordcounter.side.left": [
+    "word",
+    "line"
+  ],
+  "wordcounter.simple_wordcount": false,
+  // other
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
   },
@@ -413,9 +421,6 @@
     "jsonc",
     "!plaintext"
   ],
-  // pandoc
-  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
-  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
   "redhat.telemetry.enabled": false,
   // julia
   "[julia]": {
@@ -446,12 +451,6 @@
   "luahelper.format.spaces_inside_functioncall_parens": true,
   "luahelper.format.spaces_inside_functiondef_parens": true,
   "luahelper.format.spaces_inside_table_braces": true,
-  // other
-  "wordcounter.side.left": [
-    "word",
-    "line"
-  ],
-  "wordcounter.simple_wordcount": false,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
