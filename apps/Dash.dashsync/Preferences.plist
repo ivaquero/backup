@@ -3400,35 +3400,6 @@ $("h1").each(function() {
 					<string>Conda</string>
 				</dict>
 			</dict>
-			<key>React_Native</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-02T17:52:29Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>React</string>
-						<string>ReactNative</string>
-						<string>Facebook</string>
-						<string>JavaScript</string>
-						<string>Reactjs</string>
-						<string>UI</string>
-						<string>iOS</string>
-						<string>Android</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/React_Native#readme</string>
-					<key>authorLinkText</key>
-					<string>mnmaraes</string>
-					<key>name</key>
-					<string>React Native</string>
-					<key>platform</key>
-					<string>usercontribReact_Native</string>
-					<key>uniqueIdentifier</key>
-					<string>React_Native</string>
-				</dict>
-			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -4134,6 +4105,35 @@ $("h1").each(function() {
 					<string>usercontribQt_for_Python</string>
 					<key>uniqueIdentifier</key>
 					<string>Qt_for_Python</string>
+				</dict>
+			</dict>
+			<key>React_Native</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-04T01:13:35Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>React</string>
+						<string>ReactNative</string>
+						<string>Facebook</string>
+						<string>JavaScript</string>
+						<string>Reactjs</string>
+						<string>UI</string>
+						<string>iOS</string>
+						<string>Android</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/React_Native#readme</string>
+					<key>authorLinkText</key>
+					<string>mnmaraes</string>
+					<key>name</key>
+					<string>React Native</string>
+					<key>platform</key>
+					<string>usercontribReact_Native</string>
+					<key>uniqueIdentifier</key>
+					<string>React_Native</string>
 				</dict>
 			</dict>
 			<key>Requests</key>
@@ -5035,6 +5035,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-04-17T00:09:54Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-04T01:13:46Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
 				<key>date</key>
@@ -5082,11 +5087,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-05-19T12:52:46Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Dart.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-02T17:52:16Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTTP.xml</key>
 			<dict>
