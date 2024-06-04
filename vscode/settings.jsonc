@@ -472,5 +472,4 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  "continue.enableTabAutocomplete": true
 }

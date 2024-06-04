@@ -26,7 +26,4 @@ if [[ "$(uname -sm)" = "Darwin arm64" ]]; then
     export CPPFLAGS="-I/opt/homebrew/opt/openblas/include"
     export LDFLAGS="-L/opt/homebrew/opt/openblas/lib"
     export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
-    export ANDROID_SDK_ROOT="/opt/homebrew/share/android-commandlinetools"
 fi
-
-export PATH="$HOME/go/bin:$PATH"
