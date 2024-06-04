@@ -179,63 +179,6 @@ $("h1").each(function() {
 					<string>Eigen</string>
 				</dict>
 			</dict>
-			<key>Matplot++</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-05T17:58:20Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://alandefreitas.github.io/matplotplusplus/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>mm</string>
-						<key>docsetName</key>
-						<string>Matplot++</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://alandefreitas.github.io/matplotplusplus/</string>
-					</dict>
-					<key>name</key>
-					<string>Matplot++</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>Matplot++</string>
-				</dict>
-			</dict>
 			<key>PyWalker</key>
 			<dict>
 				<key>date</key>
@@ -1605,6 +1548,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Match.jl</string>
+				</dict>
+			</dict>
+			<key>Matplot++</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-04T01:59:30Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://alandefreitas.github.io/matplotplusplus/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>mm</string>
+						<key>docsetName</key>
+						<string>Matplot++</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://alandefreitas.github.io/matplotplusplus/</string>
+					</dict>
+					<key>name</key>
+					<string>Matplot++</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Matplot++</string>
 				</dict>
 			</dict>
 			<key>ModelingToolkit.jl</key>
@@ -3445,29 +3445,6 @@ $("h1").each(function() {
 					<string>XMake</string>
 				</dict>
 			</dict>
-			<key>jupyter-book</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-09T13:17:18Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>open-source tool for building publication-quality books and documents</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jupyter-book#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang</string>
-					<key>name</key>
-					<string>jupyter-book</string>
-					<key>platform</key>
-					<string>usercontribjupyter-book</string>
-					<key>uniqueIdentifier</key>
-					<string>jupyter-book</string>
-				</dict>
-			</dict>
 			<key>pymc</key>
 			<dict>
 				<key>date</key>
@@ -4491,6 +4468,29 @@ $("h1").each(function() {
 					<string>usercontribjq</string>
 					<key>uniqueIdentifier</key>
 					<string>jq</string>
+				</dict>
+			</dict>
+			<key>jupyter-book</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-04T02:02:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>open-source tool for building publication-quality books and documents</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jupyter-book#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>jupyter-book</string>
+					<key>platform</key>
+					<string>usercontribjupyter-book</string>
+					<key>uniqueIdentifier</key>
+					<string>jupyter-book</string>
 				</dict>
 			</dict>
 			<key>nox</key>

@@ -385,7 +385,26 @@
     "-I${workspaceFolder}/src/includes"
   ],
   "clangd.onConfigChanged": "restart",
-  // other
+  // doxygen
+  "doxdocgen.c.triggerSequence": "///",
+  "doxdocgen.c.firstLine": "/*!",
+  "doxdocgen.cpp.tparamTemplate": "@tparam{indent:15}{param}",
+  "doxdocgen.file.fileTemplate": "@file{indent:15}{name}",
+  "doxdocgen.generic.useGitUserName": true,
+  "doxdocgen.generic.authorTag": "@author{indent:15}{author}",
+  "doxdocgen.generic.briefTemplate": "@brief{indent:15}{text}",
+  "doxdocgen.generic.dateTemplate": "@date{indent:15}{date}",
+  "doxdocgen.generic.paramTemplate": "@param{indent:15}{param}",
+  "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}",
+  "doxdocgen.file.fileOrder": [
+    "file",
+    "author",
+    "date"
+  ],
+  "doxdocgen.generic.customTags": [
+    "@attention"
+  ],
+  // appearances
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
   },
@@ -394,9 +413,11 @@
     "jsonc",
     "!plaintext"
   ],
+  // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
   "redhat.telemetry.enabled": false,
+  // julia
   "[julia]": {
     "editor.defaultFormatter": "julialang.language-julia"
   },
