@@ -3,6 +3,18 @@
     {
       "basename": "教学-学习观",
       "path": "教学-学习观.md"
+    },
+    {
+      "basename": "面试-数据方向",
+      "path": "dialog/面试-数据方向.md"
+    },
+    {
+      "basename": "知乎-河南农大",
+      "path": "dialog/知乎-河南农大.md"
+    },
+    {
+      "basename": "andreyvkh",
+      "path": "dialog/andreyvkh.md"
     }
   ],
   "omittedPaths": []

@@ -10,5 +10,9 @@
   "obsidian-plantuml",
   "obsidian-pandoc",
   "obsidian-zotero-desktop-connector",
-  "autocorrect-formatter"
+  "autocorrect-formatter",
+  "typst",
+  "obsidian-latex-suite",
+  "omnisearch",
+  "spellcheck-toggler"
 ]
