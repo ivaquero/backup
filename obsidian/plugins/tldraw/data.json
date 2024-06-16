@@ -1,0 +1,12 @@
+{
+  "folder": "tldraw",
+  "saveFileDelay": 0.5,
+  "newFilePrefix": "Tldraw ",
+  "newFileTimeFormat": "YYYY-MM-DD h.mmA",
+  "toolSelected": "select",
+  "themeMode": "light",
+  "gridMode": true,
+  "snapMode": true,
+  "debugMode": false,
+  "focusMode": false
+}
