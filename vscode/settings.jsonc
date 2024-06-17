@@ -438,6 +438,8 @@
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  "MATLAB.matlabConnectionTiming": "never",
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
     "language-julia.interrupt"
