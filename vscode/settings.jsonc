@@ -444,13 +444,8 @@
   ],
   // lua
   "[lua]": {
-    "editor.defaultFormatter": "yinfei.luahelper"
+    "editor.defaultFormatter": "JohnnyMorganz.stylua"
   },
-  "luahelper.format.align_args": true,
-  "luahelper.format.align_parameter": true,
-  "luahelper.format.spaces_inside_functioncall_parens": true,
-  "luahelper.format.spaces_inside_functiondef_parens": true,
-  "luahelper.format.spaces_inside_table_braces": true,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
