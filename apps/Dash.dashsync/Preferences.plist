@@ -2969,7 +2969,7 @@ $("h1").each(function() {
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-05-31T06:50:55Z</date>
+				<date>2024-06-17T11:57:06Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -5065,6 +5065,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:38:01Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/Qt_6.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-17T11:40:54Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/SciPy.xml</key>
 			<dict>
 				<key>date</key>
@@ -5127,11 +5132,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2023-08-29T13:38:16Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Qt_6.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-27T00:15:43Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Ruby_3.xml</key>
 			<dict>
