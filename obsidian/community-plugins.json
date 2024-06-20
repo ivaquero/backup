@@ -11,8 +11,9 @@
   "obsidian-pandoc",
   "obsidian-zotero-desktop-connector",
   "autocorrect-formatter",
-  "typst",
   "obsidian-latex-suite",
   "omnisearch",
-  "spellcheck-toggler"
+  "spellcheck-toggler",
+  "wypst",
+  "various-complements"
 ]

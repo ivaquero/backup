@@ -2,19 +2,27 @@
   "recentFiles": [
     {
       "basename": "教学-学习观",
-      "path": "教学-学习观.md"
-    },
-    {
-      "basename": "面试-数据方向",
-      "path": "dialog/面试-数据方向.md"
-    },
-    {
-      "basename": "知乎-河南农大",
-      "path": "dialog/知乎-河南农大.md"
+      "path": "drafts/教学-学习观.md"
     },
     {
       "basename": "andreyvkh",
-      "path": "dialog/andreyvkh.md"
+      "path": "drafts/andreyvkh.md"
+    },
+    {
+      "basename": "面试-英文",
+      "path": "drafts/面试-英文.md"
+    },
+    {
+      "basename": "面试-生物方向",
+      "path": "drafts/面试-生物方向.md"
+    },
+    {
+      "basename": "面试-数据方向",
+      "path": "drafts/面试-数据方向.md"
+    },
+    {
+      "basename": "知乎-河南农大",
+      "path": "drafts/知乎-河南农大.md"
     }
   ],
   "omittedPaths": []
