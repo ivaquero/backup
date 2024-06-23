@@ -2966,6 +2966,20 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>https://bambinos.github.io/bambi/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-23T06:20:04Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Bambi</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://bambinos.github.io/bambi/</string>
+				</dict>
+			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3095,20 +3109,6 @@ $("h1").each(function() {
 		</dict>
 		<key>uninstalled</key>
 		<dict>
-			<key>https://bambinos.github.io/bambi/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T09:47:29Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Bambi</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://bambinos.github.io/bambi/</string>
-				</dict>
-			</dict>
 			<key>https://causalpy.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3354,29 +3354,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>Bambi</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-03T13:26:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>BAyesian Model-Building Interface</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bambi#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang</string>
-					<key>name</key>
-					<string>Bambi</string>
-					<key>platform</key>
-					<string>usercontribBambi</string>
-					<key>uniqueIdentifier</key>
-					<string>Bambi</string>
-				</dict>
-			</dict>
 			<key>Conda</key>
 			<dict>
 				<key>date</key>
@@ -3471,6 +3448,29 @@ $("h1").each(function() {
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>Bambi</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-23T06:18:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>BAyesian Model-Building Interface</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bambi#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>Bambi</string>
+					<key>platform</key>
+					<string>usercontribBambi</string>
+					<key>uniqueIdentifier</key>
+					<string>Bambi</string>
+				</dict>
+			</dict>
 			<key>Beautiful_Soup</key>
 			<dict>
 				<key>date</key>
@@ -4842,6 +4842,8 @@ $("h1").each(function() {
 			<string>t</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/ArviZ/ArviZ.docset</key>
 			<string>az</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Bambi/Bambi.docset</key>
+			<string>bb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/CausalPy/CausalPy.docset</key>
 			<string>cp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Faker/Faker.docset</key>
