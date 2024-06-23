@@ -2980,20 +2980,6 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
-			<key>https://moshi4.github.io/pyCirclize/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-04T18:55:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pyCirclize</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://moshi4.github.io/pyCirclize/</string>
-				</dict>
-			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3247,6 +3233,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://ml-explore.github.io/mlx/build/html/</string>
+				</dict>
+			</dict>
+			<key>https://moshi4.github.io/pyCirclize/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-23T05:41:16Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pyCirclize</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://moshi4.github.io/pyCirclize/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>
@@ -4804,6 +4804,8 @@ $("h1").each(function() {
 			<string>mac</string>
 			<key>~/Library/Application Support/Dash/DocSets/MatPlotLib/Matplotlib.docset</key>
 			<string>m</string>
+			<key>~/Library/Application Support/Dash/DocSets/NodeJS/NodeJS.docset</key>
+			<string>nj</string>
 			<key>~/Library/Application Support/Dash/DocSets/NumPy/NumPy.docset</key>
 			<string>np</string>
 			<key>~/Library/Application Support/Dash/DocSets/OpenCV/OpenCV.docset</key>
@@ -5025,20 +5027,10 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:48:22Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/C.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-29T16:54:24Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/CSS.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2024-04-17T00:09:54Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Dart.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-04T01:13:46Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
@@ -5054,6 +5046,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:24:48Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/NodeJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-23T05:38:47Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/NumPy.xml</key>
 			<dict>
@@ -5088,10 +5085,20 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-04-05T18:07:02Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/C.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-23T05:38:30Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/CMake.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2024-05-19T12:52:46Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-23T05:38:36Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTTP.xml</key>
 			<dict>

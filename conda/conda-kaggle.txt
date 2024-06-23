@@ -7,7 +7,6 @@ multiprocess
 openpyxl
 plotnine
 preliz
-pycirclize
 pygwalker
 shap
 tabulate
