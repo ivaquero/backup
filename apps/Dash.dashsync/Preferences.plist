@@ -182,7 +182,7 @@ $("h1").each(function() {
 			<key>PyWalker</key>
 			<dict>
 				<key>date</key>
-				<date>2024-04-22T17:32:24Z</date>
+				<date>2024-06-22T09:46:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -296,7 +296,7 @@ $("h1").each(function() {
 			<key>homebrew</key>
 			<dict>
 				<key>date</key>
-				<date>2024-04-15T10:02:11Z</date>
+				<date>2024-06-22T09:46:14Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -353,7 +353,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2024-05-25T14:25:24Z</date>
+				<date>2024-06-22T09:54:20Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>

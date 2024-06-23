@@ -382,7 +382,8 @@
   ],
   "clangd.fallbackFlags": [
     "-std=c++11",
-    "-I${workspaceFolder}/src/includes"
+    "-I${workspaceFolder}/src/includes",
+    "-I/opt/homebrew/include",
   ],
   "clangd.onConfigChanged": "restart",
   // doxygen
@@ -438,8 +439,10 @@
   "[matlab]": {
     "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
   },
+  "MATLAB.indexWorkspace": false,
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
+  "MATLAB.telemetry": false,
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
     "language-julia.interrupt"
@@ -450,7 +453,7 @@
   },
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
-  "leetcode-problem-rating.defaultLanguage": "cpp",
+  "leetcode-problem-rating.defaultLanguage": "javascript",
   "leetcode-problem-rating.hideScore": "Score",
   "leetcode-problem-rating.hint.commandShortcut": false,
   "leetcode-problem-rating.hint.commentDescription": false,
@@ -468,5 +471,5 @@
       "folder": "${language}",
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
-  },
+  }
 }
