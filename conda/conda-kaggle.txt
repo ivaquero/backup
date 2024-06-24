@@ -8,6 +8,6 @@ openpyxl
 plotnine
 preliz
 pygwalker
-shap
+scikit-learn
 tabulate
 yfinance
