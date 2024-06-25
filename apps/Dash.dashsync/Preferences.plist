@@ -2980,6 +2980,20 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
+			<key>https://blackjax-devs.github.io/blackjax/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-25T12:44:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>blackjax</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://blackjax-devs.github.io/blackjax/</string>
+				</dict>
+			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3420,6 +3434,29 @@ $("h1").each(function() {
 					<string>usercontribXMake</string>
 					<key>uniqueIdentifier</key>
 					<string>XMake</string>
+				</dict>
+			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-25T13:02:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+						<string>flax</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Yuxin Wu</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
 				</dict>
 			</dict>
 			<key>pymc</key>
@@ -4430,28 +4467,6 @@ $("h1").each(function() {
 					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2022-06-04T03:06:01Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Niru Maheswaranathan</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
-				</dict>
-			</dict>
 			<key>jq</key>
 			<dict>
 				<key>date</key>
@@ -4862,6 +4877,8 @@ $("h1").each(function() {
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>
+			<string>bjx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
 			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
