@@ -1,6 +1,7 @@
 bambi
 conda-tree
 drawdata
+jaxlib
 keras
 mplfinance
 multiprocess
