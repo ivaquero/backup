@@ -200,10 +200,8 @@
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.executeInFileDir": true,
   "python.testing.autoTestDiscoverOnSaveEnabled": false,
+  "ruff.configuration": "pyproject.toml",
   "autoDocstring.docstringFormat": "numpy",
-  "ruff.lint.args": [
-    "--select=F,I,R,PERF,PD,TCH,TID,SIM,RET,Q,PYI,PIE,C4"
-  ],
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.enableExtendedPythonKernelCompletions": true,
@@ -211,10 +209,6 @@
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
   "jupyter.pythonExportMethod": "nbconvert",
-  "jupyter.showVariableViewWhenDebugging": true,
-  "dataWrangler.experiments.autoDetectCsvDelimiter": true,
-  "dataWrangler.experiments.fastCsvParsing": true,
-  "dataWrangler.useRelativePath": true,
   // front end & formatters
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -473,5 +467,5 @@
     }
   },
   // go
-  "go.formatTool": "goimports"
+  "go.formatTool": "goimports",
 }

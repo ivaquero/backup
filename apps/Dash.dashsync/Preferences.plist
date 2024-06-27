@@ -179,6 +179,63 @@ $("h1").each(function() {
 					<string>Eigen</string>
 				</dict>
 			</dict>
+			<key>MLX</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-27T21:31:20Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://ml-explore.github.io/mlx/build/html/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>mx</string>
+						<key>docsetName</key>
+						<string>MLX</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://ml-explore.github.io/mlx/</string>
+					</dict>
+					<key>name</key>
+					<string>MLX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>MLX</string>
+				</dict>
+			</dict>
 			<key>PyWalker</key>
 			<dict>
 				<key>date</key>
@@ -348,6 +405,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>homebrew</string>
+				</dict>
+			</dict>
+			<key>ruff</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-27T16:50:21Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.astral.sh/ruff/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>rf</string>
+						<key>docsetName</key>
+						<string>ruff</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.astral.sh/ruff/</string>
+					</dict>
+					<key>name</key>
+					<string>ruff</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>ruff</string>
 				</dict>
 			</dict>
 		</dict>
@@ -2747,63 +2861,6 @@ $("h1").each(function() {
 					<string>plotnine</string>
 				</dict>
 			</dict>
-			<key>ruff</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-27T14:36:51Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.astral.sh/ruff/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>rf</string>
-						<key>docsetName</key>
-						<string>ruff</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.astral.sh/ruff/</string>
-					</dict>
-					<key>name</key>
-					<string>ruff</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>ruff</string>
-				</dict>
-			</dict>
 			<key>scikit-learn</key>
 			<dict>
 				<key>date</key>
@@ -2994,6 +3051,20 @@ $("h1").each(function() {
 					<string>https://blackjax-devs.github.io/blackjax/</string>
 				</dict>
 			</dict>
+			<key>https://docs.marimo.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-27T21:13:26Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.marimo.io/</string>
+				</dict>
+			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3006,6 +3077,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.sympy.org/latest/</string>
+				</dict>
+			</dict>
+			<key>https://jax.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-27T21:14:03Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>JAX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://jax.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
@@ -3034,6 +3119,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.org/</string>
+				</dict>
+			</dict>
+			<key>https://preliz.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-27T21:00:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PreliZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://python.arviz.org/en/stable/</key>
@@ -3135,20 +3234,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://causalpy.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://docs.marimo.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-03-25T10:34:53Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>marimo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.marimo.io/</string>
 				</dict>
 			</dict>
 			<key>https://faker.readthedocs.io/en/master/</key>
@@ -3434,29 +3519,6 @@ $("h1").each(function() {
 					<string>usercontribXMake</string>
 					<key>uniqueIdentifier</key>
 					<string>XMake</string>
-				</dict>
-			</dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-25T13:02:31Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-						<string>flax</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Yuxin Wu</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
 				</dict>
 			</dict>
 			<key>pymc</key>
@@ -4467,6 +4529,29 @@ $("h1").each(function() {
 					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-27T21:13:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+						<string>flax</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Yuxin Wu</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
 			<key>jq</key>
 			<dict>
 				<key>date</key>
@@ -4863,6 +4948,8 @@ $("h1").each(function() {
 			<string>cp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Faker/Faker.docset</key>
 			<string>fk</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/JAX/JAX.docset</key>
+			<string>jx:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
 			<string>mx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Mesa/Mesa.docset</key>
@@ -4871,6 +4958,8 @@ $("h1").each(function() {
 			<string>n</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/NetworkX/NetworkX.docset</key>
 			<string>nx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/PreliZ/PreliZ.docset</key>
+			<string>pz</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
 			<string>pt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
