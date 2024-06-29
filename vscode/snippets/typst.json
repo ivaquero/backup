@@ -6,6 +6,13 @@
       "#h(2em)"
     ]
   },
+  "ss": {
+    "prefix": "ss",
+    "description": "",
+    "body": [
+      "$  $"
+    ]
+  },
   "t3": {
     "prefix": "t3",
     "body": [
@@ -26,27 +33,6 @@
       ")",
       ""
     ]
-  },
-  "t4": {
-    "prefix": "t4",
-    "body": [
-      "#figure(",
-      "  table(",
-      "    columns: (auto, auto, auto, auto),",
-      "    align: center + horizon,",
-      "    inset: 0.3em,",
-      "    [], [], [], [],",
-      "    [], [], [], [],",
-      "    [], [], [], [],",
-      "    [], [], [], [],",
-      "  ),",
-      "  caption: [],",
-      "  supplement: [表],",
-      "  kind: table",
-      ")",
-      ""
-    ],
-    "description": ""
   },
   "t41": {
     "prefix": "t4",
@@ -146,6 +132,19 @@
       ""
     ]
   },
+  "rcsv": {
+    "prefix": "rcsv",
+    "body": [
+      "#let data = csv(\"data\")",
+      "#figure(",
+      "  ktable(data, 4),",
+      "  caption: \"\",",
+      "  supplement: [表],",
+      "  kind: table",
+      ")",
+      ""
+    ]
+  },
   "rpy": {
     "prefix": "rpy",
     "description": "",
@@ -176,19 +175,6 @@
       "```",
       "",
       "```"
-    ]
-  },
-  "rcsv": {
-    "prefix": "rcsv",
-    "body": [
-      "#let data = csv(\"data\")",
-      "#figure(",
-      "  ktable(data, 4),",
-      "  caption: \"\",",
-      "  supplement: [表],",
-      "  kind: table",
-      ")",
-      ""
     ]
   },
   "f12": {
@@ -275,13 +261,6 @@
       "#pagebreak(weak: true)"
     ]
   },
-  "d[": {
-    "prefix": "d[",
-    "description": "",
-    "body": [
-      "delim: \"[\","
-    ]
-  },
   "ma": {
     "prefix": "ma",
     "description": "",
@@ -317,11 +296,39 @@
       "𝑯"
     ]
   },
+  "mi": {
+    "prefix": "mi",
+    "description": "",
+    "body": [
+      "𝑰"
+    ]
+  },
   "mj": {
     "prefix": "mj",
     "description": "",
     "body": [
       "𝑱"
+    ]
+  },
+  "ml": {
+    "prefix": "ml",
+    "description": "",
+    "body": [
+      "𝑳"
+    ]
+  },
+  "mm": {
+    "prefix": "mm",
+    "description": "",
+    "body": [
+      "𝑴"
+    ]
+  },
+  "mo": {
+    "prefix": "mo",
+    "description": "",
+    "body": [
+      "𝑶"
     ]
   },
   "mp": {
@@ -338,6 +345,20 @@
       "𝑸"
     ]
   },
+  "mr": {
+    "prefix": "mr",
+    "description": "",
+    "body": [
+      "𝑹"
+    ]
+  },
+  "ms": {
+    "prefix": "ms",
+    "description": "",
+    "body": [
+      "𝑺"
+    ]
+  },
   "mx": {
     "prefix": "mx",
     "description": "",
@@ -345,11 +366,39 @@
       "𝑿"
     ]
   },
+  "my": {
+    "prefix": "my",
+    "description": "",
+    "body": [
+      "𝒀"
+    ]
+  },
+  "mgl": {
+    "prefix": "mgl",
+    "description": "",
+    "body": [
+      "𝜦"
+    ]
+  },
+  "v0": {
+    "prefix": "v0",
+    "description": "",
+    "body": [
+      "𝟎"
+    ]
+  },
   "va": {
     "prefix": "va",
     "description": "",
     "body": [
       "𝒂"
+    ]
+  },
+  "vu": {
+    "prefix": "vu",
+    "description": "",
+    "body": [
+      "𝒖"
     ]
   },
   "vx": {
@@ -366,6 +415,13 @@
       "𝒚"
     ]
   },
+  "ve": {
+    "prefix": "ve",
+    "description": "",
+    "body": [
+      "𝒆"
+    ]
+  },
   "eig": {
     "prefix": "eig",
     "description": "",
@@ -380,11 +436,18 @@
       "𝑨^H 𝑨"
     ]
   },
-  "rk": {
-    "prefix": "rk",
+  "ata": {
+    "prefix": "ata",
     "description": "",
     "body": [
-      "op(\"rank\")()"
+      "𝑨^⊤ 𝑨"
+    ]
+  },
+  "aat": {
+    "prefix": "aat",
+    "description": "",
+    "body": [
+      "𝑨 𝑨^⊤"
     ]
   },
   "xtax": {
@@ -399,41 +462,6 @@
     "description": "",
     "body": [
       "𝒙^⊤"
-    ]
-  },
-  "areq": {
-    "prefix": "areq",
-    "description": "",
-    "body": [
-      "⇔"
-    ]
-  },
-  "mgl": {
-    "prefix": "mgl",
-    "description": "",
-    "body": [
-      "𝜦"
-    ]
-  },
-  "mi": {
-    "prefix": "mi",
-    "description": "",
-    "body": [
-      "𝑰"
-    ]
-  },
-  "ata": {
-    "prefix": "ata",
-    "description": "",
-    "body": [
-      "𝑨^⊤ 𝑨"
-    ]
-  },
-  "aat": {
-    "prefix": "aat",
-    "description": "",
-    "body": [
-      "𝑨 𝑨^⊤"
     ]
   },
   "xtx": {
@@ -457,22 +485,29 @@
       "⇒"
     ]
   },
-  "my": {
-    "prefix": "my",
+  "areq": {
+    "prefix": "darr",
     "description": "",
     "body": [
-      "𝒀"
+      "⇔"
     ]
   },
-  "mm": {
-    "prefix": "mm",
+  "12s": {
+    "prefix": "12s",
     "description": "",
     "body": [
-      "𝑴"
+      "1/2 ∑"
     ]
   },
-  "var": {
-    "prefix": "var",
+  "ork": {
+    "prefix": "ork",
+    "description": "",
+    "body": [
+      "op(\"rank\")()"
+    ]
+  },
+  "ovar": {
+    "prefix": "ovar",
     "description": "",
     "body": [
       "op(\"Var\")(X)"
@@ -499,6 +534,13 @@
       "∫_(-∞)^(∞)"
     ]
   },
+  "iid": {
+    "prefix": "iid",
+    "description": "",
+    "body": [
+      "limits(∼)^(\"i.i.d\")"
+    ]
+  },
   "rvxn": {
     "prefix": "rvxn",
     "description": "",
@@ -513,13 +555,6 @@
       "$X$和$Y$"
     ]
   },
-  "iid": {
-    "prefix": "iid",
-    "description": "",
-    "body": [
-      "limits(∼)^(\"i.i.d\")"
-    ]
-  },
   "inv": {
     "prefix": "inv",
     "description": "",
@@ -527,8 +562,8 @@
       "^(-1)"
     ]
   },
-  "trns": {
-    "prefix": "trns",
+  "tt": {
+    "prefix": "tt",
     "description": "",
     "body": [
       "^(⊤)"

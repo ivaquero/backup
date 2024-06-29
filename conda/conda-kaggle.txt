@@ -1,10 +1,12 @@
 bambi
 conda-tree
-drawdata
+ipykernel
 jaxlib
 keras
+marimo
 mplfinance
 multiprocess
+nbconvert
 openpyxl
 plotnine
 preliz
