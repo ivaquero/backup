@@ -351,8 +351,6 @@
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
   "typst-preview.partialRendering": true,
-  "typst-preview.pinPreviewFile": true,
-  "typst-preview.refresh": "onSave",
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"

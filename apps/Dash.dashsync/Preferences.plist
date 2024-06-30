@@ -3054,7 +3054,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-06-27T21:13:26Z</date>
+				<date>2024-06-30T18:28:24Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3453,29 +3453,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>Conda</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-03T13:23:24Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Package Management</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Conda#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang</string>
-					<key>name</key>
-					<string>Conda</string>
-					<key>platform</key>
-					<string>usercontribConda</string>
-					<key>uniqueIdentifier</key>
-					<string>Conda</string>
-				</dict>
-			</dict>
 			<key>Scikit</key>
 			<dict>
 				<key>date</key>
@@ -3683,6 +3660,29 @@ $("h1").each(function() {
 					<string>usercontribConan</string>
 					<key>uniqueIdentifier</key>
 					<string>Conan</string>
+				</dict>
+			</dict>
+			<key>Conda</key>
+			<dict>
+				<key>date</key>
+				<date>2024-06-30T18:27:54Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Package Management</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Conda#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang</string>
+					<key>name</key>
+					<string>Conda</string>
+					<key>platform</key>
+					<string>usercontribConda</string>
+					<key>uniqueIdentifier</key>
+					<string>Conda</string>
 				</dict>
 			</dict>
 			<key>DataFrames.jl</key>
