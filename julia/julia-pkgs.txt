@@ -2,7 +2,6 @@ Books
 CairoMakie
 Colors
 Combinatorics
-CoordRefSystems
 DataStructures
 DifferentialEquations
 Distributions
@@ -17,6 +16,7 @@ OhMyREPL
 OrdinaryDiffEq
 PairPlots
 PkgDependency
+PkgTemplates
 Pluto
 PlutoUI
 Polynomials
