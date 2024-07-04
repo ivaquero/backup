@@ -128,6 +128,7 @@
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
+  "scm.experimental.showHistoryGraph": true,
   // error
   "errorLens.statusBarColorsEnabled": true,
   "errorLens.statusBarIconsEnabled": true,
