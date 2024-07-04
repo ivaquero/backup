@@ -1,7 +1,7 @@
 bambi
+blackjax
 conda-tree
 ipykernel
-jaxlib
 keras
 marimo
 mplfinance
