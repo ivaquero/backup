@@ -8,12 +8,10 @@ Distributions
 ForwardDiff
 GLM
 HiGHS
-Ipopt
 JuMP
 Latexify
 ModelingToolkit
 OhMyREPL
-OrdinaryDiffEq
 PairPlots
 PkgDependency
 PkgTemplates
@@ -22,6 +20,10 @@ PlutoUI
 Polynomials
 QuadGK
 ReverseDiff
-Tidier
+TidierCats
+TidierData
+TidierDates
+TidierFiles
+TidierPlots
 Turing
 TuringGLM
