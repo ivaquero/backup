@@ -19,6 +19,30 @@
       ""
     ]
   },
+  "t32": {
+    "prefix": "t3",
+    "description": "",
+    "body": [
+      "|     |     |     |",
+      "| :-: | :-: | :-: |",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ]
+  },
+  "t31": {
+    "prefix": "t3",
+    "description": "",
+    "body": [
+      "|     |     |     |",
+      "| :-: | :-: | :-: |",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ]
+  },
   "t4": {
     "prefix": "t4",
     "description": "",
@@ -138,7 +162,14 @@
     "description": "",
     "body": [
       "<style>",
-      "    .box{",
+      "    table {",
+      "        width: auto;",
+      "        display: table;",
+      "        margin-left: auto;",
+      "        margin-right: auto;",
+      "    }",
+      "",
+      "    .box {",
       "        display: flex;",
       "    }",
       "    .left {",
@@ -158,7 +189,7 @@
       "    <div class=\"left\">",
       "    </div>",
       "    <div class=\"right\">",
-      "</div>",
+      "    </div>",
       "</div>"
     ]
   },
