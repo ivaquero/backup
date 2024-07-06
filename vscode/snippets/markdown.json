@@ -138,14 +138,28 @@
     "description": "",
     "body": [
       "<style>",
-      "table {",
-      "  width: auto;",
-      "  display: table;",
-      "  margin-left: auto;",
-      "  margin-right: auto;",
-      "}",
-      "</style>",
-      ""
+      "    .box{",
+      "        display: flex;",
+      "    }",
+      "    .left {",
+      "        width: 200px;",
+      "    }",
+      "    .right {",
+      "        flex: 1;",
+      "    }",
+      "</style>"
+    ]
+  },
+  "col2": {
+    "prefix": "col2",
+    "description": "",
+    "body": [
+      "<div class=\"box\">",
+      "    <div class=\"left\">",
+      "    </div>",
+      "    <div class=\"right\">",
+      "</div>",
+      "</div>"
     ]
   },
   "va": {

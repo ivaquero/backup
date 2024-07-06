@@ -296,6 +296,13 @@
       "𝑬"
     ]
   },
+  "mg": {
+    "prefix": "mg",
+    "description": "",
+    "body": [
+      "𝑮"
+    ]
+  },
   "mh": {
     "prefix": "mh",
     "description": "",
@@ -366,6 +373,13 @@
       "𝑺"
     ]
   },
+  "mu": {
+    "prefix": "mu",
+    "description": "",
+    "body": [
+      "𝑼"
+    ]
+  },
   "mx": {
     "prefix": "mx",
     "description": "",
@@ -408,6 +422,13 @@
       "𝒃"
     ]
   },
+  "vc": {
+    "prefix": "vc",
+    "description": "",
+    "body": [
+      "𝒄"
+    ]
+  },
   "ve": {
     "prefix": "ve",
     "description": "",
@@ -434,6 +455,13 @@
     "description": "",
     "body": [
       "𝒚"
+    ]
+  },
+  "vz": {
+    "prefix": "vz",
+    "description": "",
+    "body": [
+      "𝒛"
     ]
   },
   "vxax": {
@@ -492,6 +520,27 @@
       "𝑨^H 𝑨"
     ]
   },
+  "v00": {
+    "prefix": "v00",
+    "description": "",
+    "body": [
+      "vec(delim: \"[\", 0, 0)"
+    ]
+  },
+  "vx12": {
+    "prefix": "vx12",
+    "description": "",
+    "body": [
+      "vec(delim: \"[\", x_1, x_2)"
+    ]
+  },
+  "vy12": {
+    "prefix": "vy12",
+    "description": "",
+    "body": [
+      "vec(delim: \"[\", y_1, y_2)"
+    ]
+  },
   "inv": {
     "prefix": "inv",
     "description": "",
@@ -510,7 +559,7 @@
     "prefix": "dt",
     "description": "",
     "body": [
-      "dif t"
+      "dd(t)"
     ]
   },
   "arr": {
