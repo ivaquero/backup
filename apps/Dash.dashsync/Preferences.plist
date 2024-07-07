@@ -4966,6 +4966,8 @@ $("h1").each(function() {
 			<string>jx:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
 			<string>mx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Manim/Manim.docset</key>
+			<string>ma</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Mesa/Mesa.docset</key>
 			<string>ms</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/NLTK/NLTK.docset</key>
