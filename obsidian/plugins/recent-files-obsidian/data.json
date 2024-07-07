@@ -9,6 +9,66 @@
       "path": "drafts/andreyvkh.md"
     },
     {
+      "basename": "简历-杨鑫斌-数据",
+      "path": "resumes/简历-杨鑫斌-数据.pdf"
+    },
+    {
+      "basename": "杨鑫斌-数据",
+      "path": "resumes/杨鑫斌-数据.pdf"
+    },
+    {
+      "basename": "Resume-Yang-Xinbin",
+      "path": "resumes/Resume-Yang-Xinbin.pdf"
+    },
+    {
+      "basename": "photo-yy",
+      "path": "resumes/photo-yy.jpg"
+    },
+    {
+      "basename": "photo",
+      "path": "resumes/photo.png"
+    },
+    {
+      "basename": "sorting",
+      "path": "images/sorting.mp4"
+    },
+    {
+      "basename": "matlab-packaging",
+      "path": "images/matlab-packaging.png"
+    },
+    {
+      "basename": "aed",
+      "path": "images/aed.png"
+    },
+    {
+      "basename": "eugene",
+      "path": "images/education/eugene.png"
+    },
+    {
+      "basename": "doi",
+      "path": "images/education/doi.png"
+    },
+    {
+      "basename": "bylun",
+      "path": "images/education/bylun.png"
+    },
+    {
+      "basename": "big-o",
+      "path": "images/algo/big-o.png"
+    },
+    {
+      "basename": "infix2prefix",
+      "path": "images/algo/infix2prefix.png"
+    },
+    {
+      "basename": "infix2postfix",
+      "path": "images/algo/infix2postfix.png"
+    },
+    {
+      "basename": "infix-revers",
+      "path": "images/algo/infix-revers.png"
+    },
+    {
       "basename": "面试-英文",
       "path": "drafts/面试-英文.md"
     },
