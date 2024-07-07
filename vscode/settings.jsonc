@@ -355,9 +355,7 @@
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
-  "typst-preview.cursorIndicator": true,
-  "typst-preview.partialRendering": true,
-  "typst-preview.pinPreviewFile": true,
+  "tinymist.preview.cursorIndicator": true,
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
