@@ -161,6 +161,7 @@
   "markdown.validate.enabled": true,
   "markdownlint.config": {
     "MD001": false,
+    "MD003": false,
     "MD010": false,
     "MD024": false,
     "MD025": false,
@@ -450,16 +451,15 @@
   },
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
-  "leetcode-problem-rating.defaultLanguage": "javascript",
+  "leetcode-problem-rating.defaultLanguage": "cpp",
   "leetcode-problem-rating.hideScore": "Score",
   "leetcode-problem-rating.hint.commandShortcut": false,
   "leetcode-problem-rating.hint.commentDescription": false,
   "leetcode-problem-rating.hint.configWebviewMarkdown": false,
-  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/blog-web/algorithms",
+  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/notes/cpp",
   "leetcode-problem-rating.editor.shortcuts": [
     "submit",
     "case",
-    "allcase",
     "test",
     "solution"
   ],
