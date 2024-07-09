@@ -6,9 +6,8 @@
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": "onlySelectedExtensions",
   // application
-  "update.mode": "manual",
-  "diffEditor.wordWrap": "off",
   "telemetry.telemetryLevel": "error",
+  "security.workspace.trust.untrustedFiles": "open",
   // search
   "search.followSymlinks": false,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
@@ -16,23 +15,18 @@
   "extensions.ignoreRecommendations": true,
   // editor
   "editor.acceptSuggestionOnEnter": "smart",
-  "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
-  "editor.guides.bracketPairs": false,
-  "editor.guides.indentation": false,
   "editor.inlayHints.enabled": "off",
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
   "editor.mouseWheelZoom": true,
-  "editor.renderFinalNewline": "on",
   "editor.semanticHighlighting.enabled": true,
-  "editor.suggest.insertMode": "replace",
   "editor.suggest.preview": true,
   "editor.suggest.selectionMode": "whenQuickSuggestion",
   "editor.suggest.shareSuggestSelections": true,
@@ -73,9 +67,7 @@
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
-  "terminal.integrated.hideOnStartup": "whenEmpty",
-  "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.profiles.windows": {
     "Git Bash": {
       "path": [
@@ -88,7 +80,6 @@
     }
   },
   // workbench
-  "workbench.activityBar.iconClickBehavior": "toggle",
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.colorCustomizations": {
@@ -108,7 +99,6 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
-  "security.workspace.trust.untrustedFiles": "open",
   // notebook
   "notebook.consolidatedRunButton": true,
   "notebook.diff.enablePreview": false,
@@ -128,7 +118,6 @@
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
-  // "scm.experimental.showHistoryGraph": true,
   // error
   "errorLens.statusBarColorsEnabled": true,
   "errorLens.statusBarIconsEnabled": true,
@@ -203,9 +192,6 @@
       "source.organizeImports": "explicit"
     }
   },
-  "python.terminal.activateEnvInCurrentTerminal": true,
-  "python.terminal.executeInFileDir": true,
-  "python.testing.autoTestDiscoverOnSaveEnabled": false,
   "ruff.configuration": "pyproject.toml",
   "autoDocstring.docstringFormat": "numpy",
   // jupyter
