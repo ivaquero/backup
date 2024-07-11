@@ -109,6 +109,12 @@
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 18,
   "notebook.output.minimalErrorRendering": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.alwaysShowActions": true,
+  "scm.diffDecorationsGutterPattern": {
+    "added": true
+  },
+  "scm.experimental.showHistoryGraph": true,
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
