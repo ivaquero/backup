@@ -4,12 +4,9 @@ ghp-import
 jupyter-book
 jupyter-sphinx
 keras
+manim
 more-itertools
 numpydoc
-pip
-pooch
-pymc
-pymc-sphinx-theme
 scikit-image
 scikit-learn
 seaborn
