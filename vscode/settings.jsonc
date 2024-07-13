@@ -459,5 +459,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  "plantuml.server": " https://www.plantuml.com/plantuml"
+  "plantuml.server": " https://www.plantuml.com/plantuml",
+  "redhat.telemetry.enabled": false
 }
