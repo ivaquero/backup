@@ -1,4 +1,3 @@
-Books
 CairoMakie
 Colors
 Combinatorics
