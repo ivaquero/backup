@@ -1,2 +1,3 @@
+cmakelang
 conda-tree
 mamba

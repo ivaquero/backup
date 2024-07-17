@@ -3125,7 +3125,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-15T15:59:13Z</date>
+				<date>2024-07-17T22:33:56Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3545,28 +3545,6 @@ $("h1").each(function() {
 					<string>usercontribScikit</string>
 					<key>uniqueIdentifier</key>
 					<string>Scikit</string>
-				</dict>
-			</dict>
-			<key>XMake</key>
-			<dict>
-				<key>date</key>
-				<date>2024-05-03T07:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Xmake</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
-					<key>authorLinkText</key>
-					<string>kassane</string>
-					<key>name</key>
-					<string>XMake</string>
-					<key>platform</key>
-					<string>usercontribXMake</string>
-					<key>uniqueIdentifier</key>
-					<string>XMake</string>
 				</dict>
 			</dict>
 			<key>pymc</key>
@@ -4420,6 +4398,28 @@ $("h1").each(function() {
 					<string>usercontribUnicodeCharacters</string>
 					<key>uniqueIdentifier</key>
 					<string>UnicodeCharacters</string>
+				</dict>
+			</dict>
+			<key>XMake</key>
+			<dict>
+				<key>date</key>
+				<date>2024-07-17T22:39:55Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Xmake</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
+					<key>authorLinkText</key>
+					<string>kassane</string>
+					<key>name</key>
+					<string>XMake</string>
+					<key>platform</key>
+					<string>usercontribXMake</string>
+					<key>uniqueIdentifier</key>
+					<string>XMake</string>
 				</dict>
 			</dict>
 			<key>Zsh</key>
