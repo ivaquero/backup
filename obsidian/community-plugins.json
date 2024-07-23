@@ -2,13 +2,11 @@
   "obsidian-excalidraw-plugin",
   "table-editor-obsidian",
   "obsidian-tasks-plugin",
-  "calendar",
   "recent-files-obsidian",
   "obsidian-outliner",
   "obsidian-linter",
   "tldraw",
   "obsidian-plantuml",
-  "obsidian-pandoc",
   "obsidian-zotero-desktop-connector",
   "autocorrect-formatter",
   "obsidian-latex-suite",
@@ -16,5 +14,7 @@
   "spellcheck-toggler",
   "wypst",
   "various-complements",
-  "pdf-plus"
+  "pdf-plus",
+  "obsidian-enhancing-export",
+  "obsidian-full-calendar"
 ]

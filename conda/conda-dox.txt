@@ -5,8 +5,9 @@ jupyter-book
 jupyter-sphinx
 keras
 manim
-more-itertools
 numpydoc
+pip
+plotnine
 scikit-image
 scikit-learn
 seaborn
@@ -27,3 +28,4 @@ sphinxcontrib-spelling
 sphinxcontrib-youtube
 sphinxext-opengraph
 sphinxext-rediraffe
+touying
