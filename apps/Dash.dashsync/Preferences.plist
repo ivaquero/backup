@@ -3125,7 +3125,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-24T14:43:46Z</date>
+				<date>2024-07-27T15:30:52Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3167,7 +3167,7 @@ $("h1").each(function() {
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-12T12:19:48Z</date>
+				<date>2024-07-27T15:42:52Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3237,7 +3237,7 @@ $("h1").each(function() {
 			<key>https://pytorch.org/docs/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-04-26T19:13:33Z</date>
+				<date>2024-07-27T16:35:03Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3260,6 +3260,34 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://requests.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://scikit-learn.org/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-07-27T16:35:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scikit-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://www.pymc.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-07-27T17:13:30Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyMC project website</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pymc.io/</string>
 				</dict>
 			</dict>
 			<key>https://www.statsmodels.org/stable/</key>
@@ -3419,20 +3447,6 @@ $("h1").each(function() {
 					<string>https://scikit-image.org/docs/stable/</string>
 				</dict>
 			</dict>
-			<key>https://scikit-learn.org/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T09:48:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>scikit-learn</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scikit-learn.org/stable/</string>
-				</dict>
-			</dict>
 			<key>https://seaborn.pydata.org/</key>
 			<dict>
 				<key>date</key>
@@ -3523,54 +3537,7 @@ $("h1").each(function() {
 	<key>DHUserRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict>
-			<key>Scikit</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T09:49:33Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Machine Learning</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
-					<key>name</key>
-					<string>scikit-learn</string>
-					<key>platform</key>
-					<string>usercontribScikit</string>
-					<key>uniqueIdentifier</key>
-					<string>Scikit</string>
-				</dict>
-			</dict>
-			<key>pymc</key>
-			<dict>
-				<key>date</key>
-				<date>2024-05-05T15:29:19Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Bayesian Modeling</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
-					<key>authorLinkText</key>
-					<string>Paulo S. Costa, Xavier Yang</string>
-					<key>name</key>
-					<string>PyMC</string>
-					<key>platform</key>
-					<string>usercontribpymc</string>
-					<key>uniqueIdentifier</key>
-					<string>pymc</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 		<key>uninstalled</key>
 		<dict>
 			<key>Bambi</key>
@@ -4284,6 +4251,29 @@ $("h1").each(function() {
 					<string>Requests</string>
 				</dict>
 			</dict>
+			<key>Scikit</key>
+			<dict>
+				<key>date</key>
+				<date>2024-07-27T19:11:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Machine Learning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>usercontribScikit</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit</string>
+				</dict>
+			</dict>
 			<key>Scikit-image</key>
 			<dict>
 				<key>date</key>
@@ -4739,6 +4729,29 @@ $("h1").each(function() {
 					<string>polars</string>
 				</dict>
 			</dict>
+			<key>pymc</key>
+			<dict>
+				<key>date</key>
+				<date>2024-07-27T19:11:33Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Bayesian Modeling</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
+					<key>authorLinkText</key>
+					<string>Paulo S. Costa, Xavier Yang</string>
+					<key>name</key>
+					<string>PyMC</string>
+					<key>platform</key>
+					<string>usercontribpymc</string>
+					<key>uniqueIdentifier</key>
+					<string>pymc</string>
+				</dict>
+			</dict>
 			<key>pyro</key>
 			<dict>
 				<key>date</key>
@@ -5033,6 +5046,8 @@ $("h1").each(function() {
 			<string>nx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PreliZ/PreliZ.docset</key>
 			<string>pz</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/PyMC project website/PyMC project website.docset</key>
+			<string>pm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
 			<string>pt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
