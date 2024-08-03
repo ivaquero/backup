@@ -110,7 +110,6 @@
   "scm.diffDecorationsGutterPattern": {
     "added": true
   },
-  "scm.experimental.showHistoryGraph": true,
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
@@ -131,7 +130,6 @@
       "source.fixAll.markdownlint": "always"
     }
   },
-  "markdown.experimental.updateLinksOnPaste": true,
   "markdown.extension.completion.enabled": true,
   "markdown.extension.italic.indicator": "*",
   "markdown.extension.print.theme": "light",
@@ -462,5 +460,5 @@
     }
   },
   "plantuml.server": " https://www.plantuml.com/plantuml",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
 }
