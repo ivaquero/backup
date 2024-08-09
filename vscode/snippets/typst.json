@@ -135,12 +135,12 @@
     "prefix": "col2",
     "description": "",
     "body": [
-      "#block(height: 9em,",
+      "#block(",
+      "  height: 9em,",
       "  columns()[",
       "",
-      "  ]",
-      ")",
-      ""
+      "  ],",
+      ")"
     ]
   },
   "f12": {
