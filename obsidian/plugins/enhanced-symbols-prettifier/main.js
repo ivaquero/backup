@@ -486,15 +486,13 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
         name: "Unprettify existing symbols in document",
         editorCallback: (editor) => this.prettifyInDocument(editor, true)
       });
+      let eventName = "keydown";
       if (import_obsidian2.Platform.isMobileApp) {
-        this.registerDomEvent(window, "keyup", (event) => {
-          this.keyDownEvent(event);
-        });
-      } else {
-        this.registerDomEvent(document, "keydown", (event) => {
-          this.keyDownEvent(event);
-        });
+        eventName = "keyup";
       }
+      this.registerDomEvent(window, eventName, (event) => {
+        this.keyDownEvent(event);
+      });
     });
   }
   onunload() {
@@ -560,11 +558,7 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
     let value = editor.getValue();
     const codeBlocks = this.getCodeBlocks(value);
     let matchedChars = [];
-    const searchCursor = new SearchCursor(
-      value,
-      this.getRegex(reverse),
-      0
-    );
+    const searchCursor = new SearchCursor(value, this.getRegex(reverse), 0);
     while (searchCursor.findNext() !== void 0) {
       matchedChars.push({
         from: searchCursor.from(),
@@ -586,9 +580,9 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
       );
       let replacement;
       if (reverse) {
-        replacement = (_a = Object.entries(
-          this.settings.replacements
-        ).find(([, replacement2]) => replacement2.value === symbol)) == null ? void 0 : _a[1];
+        replacement = (_a = Object.entries(this.settings.replacements).find(
+          ([, replacement2]) => replacement2.value === symbol
+        )) == null ? void 0 : _a[1];
       } else {
         replacement = this.settings.replacements[symbol];
       }
@@ -648,11 +642,28 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
         }
         const replaceCharacter = replacement.value;
         if (replaceCharacter && sequence.length > 0 && from !== -1 && typeof replaceCharacter !== "function" && !this.isCursorInUnwantedBlocks(editor)) {
-          editor.replaceRange(
-            replaceCharacter,
-            { line: cursor.line, ch: from },
-            { line: cursor.line, ch: cursor.ch }
-          );
+          const tableCell = editor.editorComponent.tableCell;
+          if (tableCell) {
+            const editorView = tableCell.cm;
+            if (editorView) {
+              const cursorPosition = editorView.state.selection.main.head - (import_obsidian2.Platform.isMobileApp ? 1 : 0);
+              const fromPosition = cursorPosition - (cursor.ch - from);
+              const toPosition = cursorPosition;
+              editorView.dispatch({
+                changes: {
+                  from: fromPosition,
+                  to: toPosition,
+                  insert: replaceCharacter
+                }
+              });
+            }
+          } else {
+            editor.replaceRange(
+              replaceCharacter,
+              { line: cursor.line, ch: from },
+              { line: cursor.line, ch: cursor.ch }
+            );
+          }
           replacement.count = replacement.count ? replacement.count + 1 : 1;
         }
       }
@@ -671,7 +682,10 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
     return result;
   }
   isCursorInUnwantedBlocks(editor) {
-    const unwantedBlocks = [/(^|[^`])(`[^`\n]+`)([^`]|$)/, /```\w*\s*[\s\S]*?```/];
+    const unwantedBlocks = [
+      /(^|[^`])(`[^`\n]+`)([^`]|$)/,
+      /```\w*\s*[\s\S]*?```/
+    ];
     return unwantedBlocks.filter((unwantedBlock) => {
       const searchCursor = new SearchCursor(
         editor.getValue(),
