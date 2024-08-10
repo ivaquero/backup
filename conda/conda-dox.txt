@@ -1,6 +1,5 @@
 conda-tree
 doc2dash
-ghp-import
 jupyter-book
 jupyter-sphinx
 keras
@@ -28,4 +27,5 @@ sphinxcontrib-spelling
 sphinxcontrib-youtube
 sphinxext-opengraph
 sphinxext-rediraffe
+sympy
 touying
