@@ -1,6 +1,5 @@
 conda-tree
 doc2dash
-jupyter-book
 jupyter-sphinx
 keras
 manim
@@ -14,8 +13,12 @@ sphinx-autoapi
 sphinx-autodoc-typehints
 sphinx-autosummary-accessors
 sphinx-basic-ng
+sphinx-book-theme
 sphinx-click
 sphinx-codeautolink
+sphinx-comments
+sphinx-copybutton
+sphinx-external-toc
 sphinx-gallery
 sphinx-inline-tabs
 sphinx-issues
@@ -23,9 +26,8 @@ sphinx-notfound-page
 sphinx-remove-toctrees
 sphinx-rtd-theme
 sphinx-sitemap
+sphinxcontrib-bibtex
 sphinxcontrib-spelling
 sphinxcontrib-youtube
 sphinxext-opengraph
 sphinxext-rediraffe
-sympy
-touying
