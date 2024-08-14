@@ -296,7 +296,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2024-06-27T16:50:21Z</date>
+				<date>2024-08-13T16:10:44Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3097,7 +3097,7 @@ $("h1").each(function() {
 			<key>https://blackjax-devs.github.io/blackjax/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-08-07T13:33:48Z</date>
+				<date>2024-08-13T15:51:47Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3125,7 +3125,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-08-08T15:07:27Z</date>
+				<date>2024-08-13T15:52:58Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3139,7 +3139,7 @@ $("h1").each(function() {
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-19T14:17:54Z</date>
+				<date>2024-08-13T16:12:40Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3167,7 +3167,7 @@ $("h1").each(function() {
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-27T15:42:52Z</date>
+				<date>2024-08-13T16:13:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
