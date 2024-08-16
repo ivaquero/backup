@@ -195,6 +195,7 @@
   "ruff.configuration": "pyproject.toml",
   "ruff.format.preview": true,
   "ruff.lint.preview": true,
+  "ruff.nativeServer": "on",
   "autoDocstring.docstringFormat": "numpy",
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -468,4 +469,5 @@
   },
   "plantuml.server": " https://www.plantuml.com/plantuml",
   "redhat.telemetry.enabled": false,
+  "julia.enableCrashReporter": false,
 }
