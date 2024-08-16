@@ -94,16 +94,6 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
-  // notebook
-  "notebook.consolidatedRunButton": true,
-  "notebook.diff.enablePreview": false,
-  "notebook.diff.ignoreOutputs": true,
-  "notebook.compactView": true,
-  "notebook.experimental.variablesView": true,
-  "notebook.formatOnSave.enabled": true,
-  "notebook.lineNumbers": "on",
-  "notebook.markup.fontSize": 18,
-  "notebook.output.minimalErrorRendering": true,
   // scm
   "scm.alwaysShowRepositories": true,
   "scm.alwaysShowActions": true,
@@ -180,10 +170,20 @@
     "dart": "dart $dir$fileName",
     "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
   },
-  // bookmarks
-  "bookmarks.saveBookmarksInProject": true,
-  "bookmarks.sideBar.expanded": true,
-  "bookmarks.useWorkaroundForFormatters": true,
+  // notebook
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+  },
+  "notebook.consolidatedRunButton": true,
+  "notebook.diff.enablePreview": false,
+  "notebook.diff.ignoreOutputs": true,
+  "notebook.compactView": true,
+  "notebook.experimental.variablesView": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 18,
+  "notebook.output.minimalErrorRendering": true,
   // python
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -193,6 +193,8 @@
     }
   },
   "ruff.configuration": "pyproject.toml",
+  "ruff.format.preview": true,
+  "ruff.lint.preview": true,
   "autoDocstring.docstringFormat": "numpy",
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -201,6 +203,10 @@
   "jupyter.interactiveWindow.textEditor.executeSelection": true,
   "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
   "jupyter.pythonExportMethod": "nbconvert",
+  // bookmarks
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
   // front end & formatters
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -354,6 +360,7 @@
     "--compile-commands-dir=.vscode",
     "--completion-parse=auto",
     "--completion-style=detailed",
+    "--enable-config",
     "--fallback-style=LLVM",
     "--function-arg-placeholders=false",
     "--header-insertion-decorators",
@@ -362,7 +369,7 @@
     "--pch-storage=memory",
     "--pretty",
     "--ranking-model=decision_forest",
-    "-j=12"
+    "-j=12",
   ],
   "clangd.fallbackFlags": [
     "-std=c++11",
