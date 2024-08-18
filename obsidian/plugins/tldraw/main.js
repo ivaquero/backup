@@ -27529,10 +27529,10 @@ var require_react_dom_development = __commonJS({
         var setErrorHandler = null;
         var setSuspenseHandler = null;
         {
-          var copyWithDeleteImpl = function(obj, path2, index3) {
-            var key = path2[index3];
+          var copyWithDeleteImpl = function(obj, path, index3) {
+            var key = path[index3];
             var updated = isArray(obj) ? obj.slice() : assign({}, obj);
-            if (index3 + 1 === path2.length) {
+            if (index3 + 1 === path.length) {
               if (isArray(updated)) {
                 updated.splice(key, 1);
               } else {
@@ -27540,11 +27540,11 @@ var require_react_dom_development = __commonJS({
               }
               return updated;
             }
-            updated[key] = copyWithDeleteImpl(obj[key], path2, index3 + 1);
+            updated[key] = copyWithDeleteImpl(obj[key], path, index3 + 1);
             return updated;
           };
-          var copyWithDelete = function(obj, path2) {
-            return copyWithDeleteImpl(obj, path2, 0);
+          var copyWithDelete = function(obj, path) {
+            return copyWithDeleteImpl(obj, path, 0);
           };
           var copyWithRenameImpl = function(obj, oldPath, newPath, index3) {
             var oldKey = oldPath[index3];
@@ -27582,17 +27582,17 @@ var require_react_dom_development = __commonJS({
             }
             return copyWithRenameImpl(obj, oldPath, newPath, 0);
           };
-          var copyWithSetImpl = function(obj, path2, index3, value) {
-            if (index3 >= path2.length) {
+          var copyWithSetImpl = function(obj, path, index3, value) {
+            if (index3 >= path.length) {
               return value;
             }
-            var key = path2[index3];
+            var key = path[index3];
             var updated = isArray(obj) ? obj.slice() : assign({}, obj);
-            updated[key] = copyWithSetImpl(obj[key], path2, index3 + 1, value);
+            updated[key] = copyWithSetImpl(obj[key], path, index3 + 1, value);
             return updated;
           };
-          var copyWithSet = function(obj, path2, value) {
-            return copyWithSetImpl(obj, path2, 0, value);
+          var copyWithSet = function(obj, path, value) {
+            return copyWithSetImpl(obj, path, 0, value);
           };
           var findHook = function(fiber, id) {
             var currentHook2 = fiber.memoizedState;
@@ -27602,10 +27602,10 @@ var require_react_dom_development = __commonJS({
             }
             return currentHook2;
           };
-          overrideHookState = function(fiber, id, path2, value) {
+          overrideHookState = function(fiber, id, path, value) {
             var hook = findHook(fiber, id);
             if (hook !== null) {
-              var newState = copyWithSet(hook.memoizedState, path2, value);
+              var newState = copyWithSet(hook.memoizedState, path, value);
               hook.memoizedState = newState;
               hook.baseState = newState;
               fiber.memoizedProps = assign({}, fiber.memoizedProps);
@@ -27615,10 +27615,10 @@ var require_react_dom_development = __commonJS({
               }
             }
           };
-          overrideHookStateDeletePath = function(fiber, id, path2) {
+          overrideHookStateDeletePath = function(fiber, id, path) {
             var hook = findHook(fiber, id);
             if (hook !== null) {
-              var newState = copyWithDelete(hook.memoizedState, path2);
+              var newState = copyWithDelete(hook.memoizedState, path);
               hook.memoizedState = newState;
               hook.baseState = newState;
               fiber.memoizedProps = assign({}, fiber.memoizedProps);
@@ -27641,8 +27641,8 @@ var require_react_dom_development = __commonJS({
               }
             }
           };
-          overrideProps = function(fiber, path2, value) {
-            fiber.pendingProps = copyWithSet(fiber.memoizedProps, path2, value);
+          overrideProps = function(fiber, path, value) {
+            fiber.pendingProps = copyWithSet(fiber.memoizedProps, path, value);
             if (fiber.alternate) {
               fiber.alternate.pendingProps = fiber.pendingProps;
             }
@@ -27651,8 +27651,8 @@ var require_react_dom_development = __commonJS({
               scheduleUpdateOnFiber(root2, fiber, SyncLane, NoTimestamp);
             }
           };
-          overridePropsDeletePath = function(fiber, path2) {
-            fiber.pendingProps = copyWithDelete(fiber.memoizedProps, path2);
+          overridePropsDeletePath = function(fiber, path) {
+            fiber.pendingProps = copyWithDelete(fiber.memoizedProps, path);
             if (fiber.alternate) {
               fiber.alternate.pendingProps = fiber.pendingProps;
             }
@@ -29114,9 +29114,6 @@ var tlFileTemplate = (frontmatter, codeblock) => {
   str += codeblock;
   return str;
 };
-
-// src/utils/parse.ts
-var import_crypto = require("crypto");
 
 // node_modules/@tldraw/editor/dist-esm/index.mjs
 var import_at = __toESM(require_at2(), 1);
@@ -33875,12 +33872,12 @@ __export(validation_exports, {
   unknown: () => unknown,
   unknownObject: () => unknownObject
 });
-function formatPath(path2) {
-  if (!path2.length) {
+function formatPath(path) {
+  if (!path.length) {
     return null;
   }
   let formattedPath = "";
-  for (const item of path2) {
+  for (const item of path) {
     if (typeof item === "number") {
       formattedPath += `.${item}`;
     } else if (item.startsWith("(")) {
@@ -33900,23 +33897,23 @@ function formatPath(path2) {
   return formattedPath;
 }
 var ValidationError = class extends Error {
-  constructor(rawMessage, path2 = []) {
-    const formattedPath = formatPath(path2);
+  constructor(rawMessage, path = []) {
+    const formattedPath = formatPath(path);
     const indentedMessage = rawMessage.split("\n").map((line, i) => i === 0 ? line : `  ${line}`).join("\n");
-    super(path2 ? `At ${formattedPath}: ${indentedMessage}` : indentedMessage);
+    super(path ? `At ${formattedPath}: ${indentedMessage}` : indentedMessage);
     __publicField(this, "name", "ValidationError");
     this.rawMessage = rawMessage;
-    this.path = path2;
+    this.path = path;
   }
 };
-function prefixError(path2, fn) {
+function prefixError(path, fn) {
   try {
     return fn();
   } catch (err) {
     if (err instanceof ValidationError) {
-      throw new ValidationError(err.rawMessage, [path2, ...err.path]);
+      throw new ValidationError(err.rawMessage, [path, ...err.path]);
     }
-    throw new ValidationError(err.toString(), [path2]);
+    throw new ValidationError(err.toString(), [path]);
   }
 }
 function typeToString(value) {
@@ -42530,19 +42527,19 @@ var Geometry2d = class {
     return area / 2;
   }
   toSimpleSvgPath() {
-    let path2 = "";
+    let path = "";
     const { vertices } = this;
     const n2 = vertices.length;
     if (n2 === 0)
-      return path2;
-    path2 += `M${vertices[0].x},${vertices[0].y}`;
+      return path;
+    path += `M${vertices[0].x},${vertices[0].y}`;
     for (let i = 1; i < n2; i++) {
-      path2 += `L${vertices[i].x},${vertices[i].y}`;
+      path += `L${vertices[i].x},${vertices[i].y}`;
     }
     if (this.isClosed) {
-      path2 += "Z";
+      path += "Z";
     }
-    return path2;
+    return path;
   }
   // eslint-disable-next-line no-restricted-syntax
   get length() {
@@ -42616,9 +42613,9 @@ var Group2d = class extends Geometry2d {
     return this.children[0].area;
   }
   toSimpleSvgPath() {
-    let path2 = "";
+    let path = "";
     for (const child of this.children) {
-      path2 += child.toSimpleSvgPath();
+      path += child.toSimpleSvgPath();
     }
     const corners = Box.FromPoints(this.vertices).corners;
     for (let i = 0, n2 = corners.length; i < n2; i++) {
@@ -42630,9 +42627,9 @@ var Group2d = class extends Geometry2d {
       const A = corner.clone().lrp(prevCorner, 4 / prevDist);
       const B = corner;
       const C = corner.clone().lrp(nextCorner, 4 / nextDist);
-      path2 += `M${A.x},${A.y} L${B.x},${B.y} L${C.x},${C.y} `;
+      path += `M${A.x},${A.y} L${B.x},${B.y} L${C.x},${C.y} `;
     }
-    return path2;
+    return path;
   }
   getLength() {
     return this.children.reduce((a, c2) => c2.isLabel ? a : a + c2.length, 0);
@@ -43604,11 +43601,11 @@ function DefaultHandle({ handle, isCoarse, className, zoom }) {
   const br = (isCoarse ? editor.options.coarseHandleRadius : editor.options.handleRadius) / zoom;
   if (handle.type === "clone") {
     const fr2 = 3 / zoom;
-    const path2 = `M0,${-fr2} A${fr2},${fr2} 0 0,1 0,${fr2}`;
+    const path = `M0,${-fr2} A${fr2},${fr2} 0 0,1 0,${fr2}`;
     const index2 = SIDES.indexOf(handle.id);
     return /* @__PURE__ */ (0, import_jsx_runtime12.jsxs)("g", { className: (0, import_classnames4.default)(`tl-handle tl-handle__${handle.type}`, className), children: [
       /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("circle", { className: "tl-handle__bg", r: br }),
-      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("path", { className: "tl-handle__fg", d: path2, transform: `rotate(${-90 + 90 * index2})` })
+      /* @__PURE__ */ (0, import_jsx_runtime12.jsx)("path", { className: "tl-handle__fg", d: path, transform: `rotate(${-90 + 90 * index2})` })
     ] });
   }
   const fr = (handle.type === "create" && isCoarse ? 3 : 4) / Math.max(zoom, 0.25);
@@ -48879,10 +48876,10 @@ var StateNode = class {
      */
     __publicField(this, "transition", (id, info = {}) => {
       var _a2;
-      const path2 = id.split(".");
+      const path = id.split(".");
       let currState = this;
-      for (let i = 0; i < path2.length; i++) {
-        const id2 = path2[i];
+      for (let i = 0; i < path.length; i++) {
+        const id2 = path[i];
         const prevChildState = currState.getCurrent();
         const nextChildState = (_a2 = currState.children) == null ? void 0 : _a2[id2];
         if (!nextChildState) {
@@ -50449,8 +50446,8 @@ var Editor = class extends import_eventemitter3.default {
    *
    * @public
    */
-  isIn(path2) {
-    const ids = path2.split(".").reverse();
+  isIn(path) {
+    const ids = path.split(".").reverse();
     let state = this.root;
     while (ids.length > 0) {
       const id = ids.pop();
@@ -50479,7 +50476,7 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   isInAny(...paths) {
-    return paths.some((path2) => this.isIn(path2));
+    return paths.some((path) => this.isIn(path));
   }
   /**
    * Set the selected tool.
@@ -50522,9 +50519,9 @@ var Editor = class extends import_eventemitter3.default {
    *
    * @public
    */
-  getStateDescendant(path2) {
+  getStateDescendant(path) {
     var _a2;
-    const ids = path2.split(".").reverse();
+    const ids = path.split(".").reverse();
     let state = this.root;
     while (ids.length > 0) {
       const id = ids.pop();
@@ -65201,7 +65198,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
     const strokeWidth = STROKE_SIZES2[shape.props.size] * shape.props.scale;
     const as = info.start.arrowhead && getArrowheadPathForType(info, "start", strokeWidth);
     const ae = info.end.arrowhead && getArrowheadPathForType(info, "end", strokeWidth);
-    const path2 = info.isStraight ? getSolidStraightArrowPath(info) : getSolidCurvedArrowPath(info);
+    const path = info.isStraight ? getSolidStraightArrowPath(info) : getSolidCurvedArrowPath(info);
     const includeMask = as && info.start.arrowhead !== "arrow" || ae && info.end.arrowhead !== "arrow" || !!labelGeometry;
     const maskId = (shape.id + "_clip").replace(":", "_");
     if (isEditing && labelGeometry) {
@@ -65269,7 +65266,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
             opacity: 0
           }
         ),
-        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("path", { d: path2 })
+        /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("path", { d: path })
       ] }),
       as && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("path", { d: as }),
       ae && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("path", { d: ae }),
@@ -65362,7 +65359,7 @@ var ArrowSvg = track(function ArrowSvg2({
   const strokeWidth = STROKE_SIZES2[shape.props.size] * shape.props.scale;
   const as = info.start.arrowhead && getArrowheadPathForType(info, "start", strokeWidth);
   const ae = info.end.arrowhead && getArrowheadPathForType(info, "end", strokeWidth);
-  const path2 = info.isStraight ? getSolidStraightArrowPath(info) : getSolidCurvedArrowPath(info);
+  const path = info.isStraight ? getSolidStraightArrowPath(info) : getSolidCurvedArrowPath(info);
   let handlePath = null;
   if (shouldDisplayHandles) {
     const sw = 2 / editor.getZoomLevel();
@@ -65449,7 +65446,7 @@ var ArrowSvg = track(function ArrowSvg2({
                 opacity: 0
               }
             ),
-            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("path", { d: path2, strokeDasharray, strokeDashoffset })
+            /* @__PURE__ */ (0, import_jsx_runtime47.jsx)("path", { d: path, strokeDasharray, strokeDashoffset })
           ] }),
           as && maskStartArrowhead && shape.props.fill !== "none" && /* @__PURE__ */ (0, import_jsx_runtime47.jsx)(
             ShapeFill,
@@ -67131,26 +67128,26 @@ function getCloudArcs(width, height, seed, size4) {
   return arcs;
 }
 function cloudOutline(width, height, seed, size4) {
-  const path2 = [];
+  const path = [];
   const arcs = getCloudArcs(width, height, seed, size4);
   for (const { center, radius, leftPoint, rightPoint } of arcs) {
-    path2.push(...getPointsOnArc(leftPoint, rightPoint, center, radius, 10));
+    path.push(...getPointsOnArc(leftPoint, rightPoint, center, radius, 10));
   }
-  return path2;
+  return path;
 }
 function getCloudPath(width, height, seed, size4) {
   const arcs = getCloudArcs(width, height, seed, size4);
-  let path2 = `M${arcs[0].leftPoint.toFixed()}`;
+  let path = `M${arcs[0].leftPoint.toFixed()}`;
   for (const { leftPoint, rightPoint, radius, center } of arcs) {
     if (center === null) {
-      path2 += ` L${rightPoint.toFixed()}`;
+      path += ` L${rightPoint.toFixed()}`;
       continue;
     }
     const arc = Vec.Clockwise(leftPoint, rightPoint, center) ? "0" : "1";
-    path2 += ` A${toDomPrecision(radius)},${toDomPrecision(radius)} 0 ${arc},1 ${rightPoint.toFixed()}`;
+    path += ` A${toDomPrecision(radius)},${toDomPrecision(radius)} 0 ${arc},1 ${rightPoint.toFixed()}`;
   }
-  path2 += " Z";
-  return path2;
+  path += " Z";
+  return path;
 }
 var DRAW_OFFSETS = {
   s: 0.5,
@@ -68140,7 +68137,7 @@ var GeoShapeUtil = class extends BaseBoxShapeUtil {
       default: {
         const geometry2 = this.editor.getShapeGeometry(shape);
         const outline = geometry2 instanceof Group2d ? geometry2.children[0].vertices : geometry2.vertices;
-        let path2;
+        let path;
         if (props.dash === "draw") {
           const polygonPoints = getRoundedPolygonPoints(
             id,
@@ -68149,17 +68146,17 @@ var GeoShapeUtil = class extends BaseBoxShapeUtil {
             strokeWidth * 2 * shape.props.scale,
             1
           );
-          path2 = getRoundedInkyPolygonPath(polygonPoints);
+          path = getRoundedInkyPolygonPath(polygonPoints);
         } else {
-          path2 = "M" + outline[0] + "L" + outline.slice(1) + "Z";
+          path = "M" + outline[0] + "L" + outline.slice(1) + "Z";
         }
         const lines = getLines(shape.props, strokeWidth);
         if (lines) {
           for (const [A, B] of lines) {
-            path2 += `M${A.x},${A.y}L${B.x},${B.y}`;
+            path += `M${A.x},${A.y}L${B.x},${B.y}`;
           }
         }
-        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("path", { d: path2 });
+        return /* @__PURE__ */ (0, import_jsx_runtime56.jsx)("path", { d: path });
       }
     }
   }
@@ -68993,19 +68990,19 @@ var LineShapeUtil = class extends ShapeUtil {
     const strokeWidth = STROKE_SIZES2[shape.props.size] * shape.props.scale;
     const spline = getGeometryForLineShape(shape);
     const { dash } = shape.props;
-    let path2;
+    let path;
     if (shape.props.spline === "line") {
       const outline = spline.points;
       if (dash === "solid" || dash === "dotted" || dash === "dashed") {
-        path2 = "M" + outline[0] + "L" + outline.slice(1);
+        path = "M" + outline[0] + "L" + outline.slice(1);
       } else {
         const [innerPathData] = getDrawLinePathData(shape.id, outline, strokeWidth);
-        path2 = innerPathData;
+        path = innerPathData;
       }
     } else {
-      path2 = getLineIndicatorPath(shape, spline, strokeWidth);
+      path = getLineIndicatorPath(shape, spline, strokeWidth);
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("path", { d: path2 });
+    return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)("path", { d: path });
   }
   toSvg(shape) {
     return /* @__PURE__ */ (0, import_jsx_runtime60.jsx)(LineShapeSvg, { shouldScale: true, shape });
@@ -87791,15 +87788,15 @@ function useTick2(isEnabled = true) {
 var CurrentState = track(function CurrentState2() {
   useTick2();
   const editor = useEditor();
-  const path2 = editor.getPath();
+  const path = editor.getPath();
   const hoverShape = editor.getHoveredShape();
   const selectedShape = editor.getOnlySelectedShape();
-  const shape = path2 === "select.idle" || !path2.includes("select.") ? hoverShape : selectedShape;
-  const shapeInfo = shape && path2.includes("select.") ? ` / ${shape.type || ""}${"geo" in shape.props ? " / " + shape.props.geo : ""} / [${Vec.ToInt(editor.getPointInShapeSpace(shape, editor.inputs.currentPagePoint))}]` : "";
-  const ruler = path2.startsWith("select.") && !path2.includes(".idle") ? ` / [${Vec.ToInt(editor.inputs.originPagePoint)}] \u2192 [${Vec.ToInt(
+  const shape = path === "select.idle" || !path.includes("select.") ? hoverShape : selectedShape;
+  const shapeInfo = shape && path.includes("select.") ? ` / ${shape.type || ""}${"geo" in shape.props ? " / " + shape.props.geo : ""} / [${Vec.ToInt(editor.getPointInShapeSpace(shape, editor.inputs.currentPagePoint))}]` : "";
+  const ruler = path.startsWith("select.") && !path.includes(".idle") ? ` / [${Vec.ToInt(editor.inputs.originPagePoint)}] \u2192 [${Vec.ToInt(
     editor.inputs.currentPagePoint
   )}] = ${Vec.Dist(editor.inputs.originPagePoint, editor.inputs.currentPagePoint).toFixed(0)}` : "";
-  return /* @__PURE__ */ (0, import_jsx_runtime119.jsx)("div", { className: "tlui-debug-panel__current-state", children: `${path2}${shapeInfo}${ruler}` });
+  return /* @__PURE__ */ (0, import_jsx_runtime119.jsx)("div", { className: "tlui-debug-panel__current-state", children: `${path}${shapeInfo}${ruler}` });
 });
 function FPS() {
   const editor = useEditor();
@@ -93387,7 +93384,7 @@ function parseTLJsonData(data) {
   return {
     meta: {
       ...meta,
-      uuid: (_a2 = meta.uuid) != null ? _a2 : (0, import_crypto.randomUUID)()
+      uuid: (_a2 = meta.uuid) != null ? _a2 : window.crypto.randomUUID()
     },
     raw: raw != null ? raw : {}
   };
@@ -93398,7 +93395,7 @@ function parseTLDataDocument(pluginVersion, fileData) {
     TLDATA_DELIMITER_START,
     TLDATA_DELIMITER_END
   );
-  return !extracted ? { meta: getTLMetaTemplate(pluginVersion, (0, import_crypto.randomUUID)()) } : migrateIfNecessary(pluginVersion, parseTLJsonData(JSON.parse(extracted)));
+  return !extracted ? { meta: getTLMetaTemplate(pluginVersion, window.crypto.randomUUID()) } : migrateIfNecessary(pluginVersion, parseTLJsonData(JSON.parse(extracted)));
 }
 
 // src/utils/wrap-react-root.ts
@@ -93805,7 +93802,6 @@ var import_obsidian4 = require("obsidian");
 
 // src/obsidian/settings/FontSearchModal.ts
 var import_obsidian3 = require("obsidian");
-var path = __toESM(require("path"));
 var fontTypes = [
   "otf",
   "ttf",
@@ -93823,8 +93819,8 @@ var FontSearchModal = class extends import_obsidian3.SuggestModal {
      * Search a path for font assets
      */
     this.searchPath = debounce2((searchPath, res) => {
-      const searchPathParsed = path.parse(searchPath);
-      const searchDir = searchPathParsed.dir.length === 0 ? "/" : searchPathParsed.dir;
+      const searchPathDir = getDir(searchPath);
+      const searchDir = searchPathDir.length === 0 ? "/" : searchPathDir;
       const dir = this.app.vault.getAbstractFileByPath(searchDir);
       if (searchPath.endsWith("/")) {
         const dir2 = this.app.vault.getAbstractFileByPath(searchPath.slice(0, searchPath.length - 1));
@@ -93872,7 +93868,7 @@ var FontSearchModal = class extends import_obsidian3.SuggestModal {
   }
   renderSuggestion(file, el) {
     const { searchPath } = this.searchRes;
-    const parsedSearchDir = path.parse(searchPath).dir;
+    const parsedSearchDir = getDir(searchPath);
     const searchDir = parsedSearchDir.length === 0 ? searchPath : parsedSearchDir;
     const text = searchPath.length === 0 ? `${file.path}${file instanceof import_obsidian3.TFolder ? "/" : ""}` : `...${file.path.substring(searchDir.length)}${file instanceof import_obsidian3.TFolder ? "/" : ""}`;
     el.createEl("div", { text });
@@ -93902,6 +93898,11 @@ function debounce2(cb, wait) {
     clearTimeout(timeout);
     timeout = setTimeout(() => cb(...args), wait);
   };
+}
+function getDir(path) {
+  const normalized = (0, import_obsidian3.normalizePath)(path);
+  const dir = normalized.slice(0, normalized.lastIndexOf("/"));
+  return dir.length === 0 ? "/" : dir;
 }
 
 // src/obsidian/plugin/settings.ts
@@ -94596,7 +94597,6 @@ async function markdownPostProcessor(plugin, element, context) {
 }
 
 // src/main.ts
-var import_crypto2 = require("crypto");
 var TldrawPlugin = class extends import_obsidian7.Plugin {
   constructor() {
     super(...arguments);
@@ -94623,7 +94623,7 @@ var TldrawPlugin = class extends import_obsidian7.Plugin {
     };
     this.createTldrFile = async (filename, foldername) => {
       filename = filename.endsWith(FILE_EXTENSION) ? filename : filename + FILE_EXTENSION;
-      const tlData = getTLDataTemplate(this.manifest.version, createRawTldrawFile(), (0, import_crypto2.randomUUID)());
+      const tlData = getTLDataTemplate(this.manifest.version, createRawTldrawFile(), window.crypto.randomUUID());
       const frontmatter = frontmatterTemplate(`${FRONTMATTER_KEY}: true`);
       const codeblock = codeBlockTemplate(tlData);
       const fileData = tlFileTemplate(frontmatter, codeblock);
