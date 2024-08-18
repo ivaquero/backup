@@ -182,7 +182,7 @@ $("h1").each(function() {
 			<key>Keras</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-09T13:21:55Z</date>
+				<date>2024-08-18T08:27:44Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -234,6 +234,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Keras</string>
+				</dict>
+			</dict>
+			<key>Makie</key>
+			<dict>
+				<key>date</key>
+				<date>2024-08-18T14:16:37Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>docs.makie.org/stable/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>mj</string>
+						<key>docsetName</key>
+						<string>Makie.jl</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.makie.org/stable/</string>
+					</dict>
+					<key>name</key>
+					<string>Makie.jl</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Makie</string>
 				</dict>
 			</dict>
 			<key>Typst</key>
@@ -1434,63 +1491,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>MLX</string>
-				</dict>
-			</dict>
-			<key>Makie</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-05T17:49:42Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>docs.makie.org/stable/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>mj</string>
-						<key>docsetName</key>
-						<string>Makie.jl</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.makie.org/stable/</string>
-					</dict>
-					<key>name</key>
-					<string>Makie.jl</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>Makie</string>
 				</dict>
 			</dict>
 			<key>Match.jl</key>
@@ -3097,7 +3097,7 @@ $("h1").each(function() {
 			<key>https://blackjax-devs.github.io/blackjax/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-08-13T15:51:47Z</date>
+				<date>2024-08-18T05:25:12Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3125,7 +3125,7 @@ $("h1").each(function() {
 			<key>https://docs.marimo.io/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-08-13T15:52:58Z</date>
+				<date>2024-08-18T05:26:50Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3209,7 +3209,7 @@ $("h1").each(function() {
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-06-27T21:00:49Z</date>
+				<date>2024-08-18T08:25:27Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
