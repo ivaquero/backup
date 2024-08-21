@@ -6,7 +6,21 @@ if you want to view the source, please visit the github repository of this plugi
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -91,8 +105,41 @@ var SearchCursor = class {
   }
 };
 
-// src/settings.ts
+// src/settings/settings.ts
 var import_obsidian = require("obsidian");
+
+// src/settings/DataExport.ts
+var DataMapper = class {
+  constructor(settings) {
+    this.settings = settings;
+  }
+  exportGroup(group) {
+    const exportData = {};
+    Object.keys(this.settings.replacements).forEach((key) => {
+      const replacement = this.settings.replacements[key];
+      if (group === "all" || replacement.group === group) {
+        exportData[key] = replacement;
+        delete exportData[key].count;
+        delete exportData[key].disabled;
+      }
+    });
+    const blob = new Blob([JSON.stringify(exportData)], {
+      type: "application/json"
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    const groupFilename = group.replace(/[^a-z0-9]/gi, "-").toLowerCase();
+    const date = new Date().toISOString().split("T")[0];
+    a.download = `enhanced-symbols-prettifier-${groupFilename}-export-${date}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+};
+
+// src/settings/settings.ts
 var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
@@ -166,17 +213,78 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
       }))
     );
   }
+  displayExport(containerEl, groups) {
+    const dataMapper = new DataMapper(this.plugin.settings);
+    const descr = document.createDocumentFragment();
+    descr.append(
+      "Share your shortcuts with the community. You can find and share shortcuts files on the ",
+      descr.createEl("a", {
+        text: "Discussions page",
+        href: "https://github.com/noam-sc/obsidian-enhanced-symbols-prettifier/discussions/categories/shortcuts"
+      }),
+      "."
+    );
+    new import_obsidian.Setting(containerEl).setName("Share your shortcuts").setDesc(descr).setHeading();
+    new import_obsidian.Setting(containerEl).setName("Import shortcuts from file").setDesc(
+      "Import other shortcuts from a JSON export file. It will override existing shortcuts."
+    ).addButton(
+      (button) => button.setButtonText("Import").setCta().onClick(() => __async(this, null, function* () {
+        const input = document.createElement("input");
+        input.type = "file";
+        input.accept = ".json";
+        input.onchange = () => __async(this, null, function* () {
+          if (input.files && input.files.length > 0) {
+            const file = input.files[0];
+            const reader = new FileReader();
+            reader.onload = () => __async(this, null, function* () {
+              let data = {};
+              try {
+                const text = reader.result;
+                data = JSON.parse(text);
+              } catch (error) {
+                new import_obsidian.Notice("Invalid JSON file");
+                return;
+              }
+              this.plugin.settings.replacements = __spreadValues(__spreadValues({}, this.plugin.settings.replacements), data);
+              yield this.plugin.saveSettings();
+              this.display();
+              new import_obsidian.Notice("Shortcuts imported");
+            });
+            reader.readAsText(file);
+          } else {
+            new import_obsidian.Notice("No file selected");
+          }
+        });
+        input.click();
+      }))
+    );
+    let dropdownItem = {};
+    new import_obsidian.Setting(containerEl).setName("Export shortcuts").setDesc("Export your shortcuts to a JSON file").addDropdown((dropdown) => {
+      dropdown.addOption("all", "All shortcuts");
+      for (const group of groups) {
+        dropdown.addOption(group, group);
+      }
+      dropdownItem = dropdown;
+    }).addButton(
+      (button) => button.setButtonText("Export").setCta().onClick(() => __async(this, null, function* () {
+        const group = dropdownItem.getValue();
+        dataMapper.exportGroup(group);
+      }))
+    );
+  }
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl("p", {
-      text: "Add or remove symbols to prettify in your notes. You can also temporarily disable a symbol by toggling the switch."
-    });
     const groups = /* @__PURE__ */ new Set();
     for (const key in this.plugin.settings.replacements) {
       const replacement = this.plugin.settings.replacements[key];
       groups.add(replacement.group);
     }
+    this.displayExport(containerEl, groups);
+    containerEl.createEl("hr");
+    new import_obsidian.Setting(containerEl).setName("Shortcuts").setDesc(
+      "Define your shortcuts here : add or remove symbols to prettify in your notes. You can also temporarily disable a symbol by toggling the switch."
+    ).setHeading();
     for (const group of groups) {
       this.displayGroup(group, containerEl);
     }
@@ -201,8 +309,10 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
         }
       }))
     );
+    containerEl.createEl("hr");
+    new import_obsidian.Setting(containerEl).setName("Reset or restore settings").setHeading();
     new import_obsidian.Setting(containerEl).setName("Reset statistics").addButton(
-      (button) => button.setButtonText("Reset").setWarning().onClick(() => __async(this, null, function* () {
+      (button) => button.setButtonText("Reset stats").setWarning().onClick(() => __async(this, null, function* () {
         for (const key in this.plugin.settings.replacements) {
           delete this.plugin.settings.replacements[key].count;
         }
@@ -222,7 +332,7 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
   }
 };
 
-// src/defaultSettings.ts
+// src/settings/defaultSettings.ts
 var DEFAULT_SETTINGS = {
   replacements: {
     "->": {
