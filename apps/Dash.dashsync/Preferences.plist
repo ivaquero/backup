@@ -3108,6 +3108,20 @@ $("h1").each(function() {
 					<string>https://blackjax-devs.github.io/blackjax/</string>
 				</dict>
 			</dict>
+			<key>https://contextily.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-08-22T15:51:57Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>contextily</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://contextily.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3148,6 +3162,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.sympy.org/latest/</string>
+				</dict>
+			</dict>
+			<key>https://geopandas.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-08-22T15:28:16Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>GeoPandas</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://geopandas.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://jax.readthedocs.io/en/latest/</key>
@@ -3276,6 +3304,20 @@ $("h1").each(function() {
 					<string>https://scikit-learn.org/stable/</string>
 				</dict>
 			</dict>
+			<key>https://scitools.org.uk/cartopy/docs/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-08-22T15:39:59Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>cartopy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scitools.org.uk/cartopy/docs/latest/</string>
+				</dict>
+			</dict>
 			<key>https://www.pymc.io/</key>
 			<dict>
 				<key>date</key>
@@ -3361,6 +3403,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://imbalanced-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://jupyterbook.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-08-22T15:40:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Python</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://jupyterbook.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://koaning.github.io/scikit-lego/</key>
@@ -5032,6 +5088,8 @@ $("h1").each(function() {
 			<string>cp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Faker/Faker.docset</key>
 			<string>fk</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/GeoPandas/GeoPandas.docset</key>
+			<string>gpd</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/JAX/JAX.docset</key>
 			<string>jx:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
@@ -5056,6 +5114,8 @@ $("h1").each(function() {
 			<string>sy</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>
 			<string>bjx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/cartopy/cartopy.docset</key>
+			<string>crs</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
 			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
