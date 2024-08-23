@@ -5116,6 +5116,8 @@ $("h1").each(function() {
 			<string>bjx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/cartopy/cartopy.docset</key>
 			<string>crs</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/contextily/contextily.docset</key>
+			<string>cx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
 			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
