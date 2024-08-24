@@ -29039,6 +29039,22 @@ var safeSecondsToMs = (s) => Math.round(s * 1e3);
 var isValidViewType = (str) => {
   return VIEW_TYPES.includes(str);
 };
+function pathBasename(path) {
+  const normalized = (0, import_obsidian.normalizePath)(path);
+  const lastIndex = normalized.lastIndexOf("/");
+  if (lastIndex === -1)
+    return path;
+  return path.slice(lastIndex + 1);
+}
+async function createAttachmentFilepath(attachmentFilename, attachTo, fileManager) {
+  const attachmentPath = await fileManager.getAvailablePathForAttachment(attachmentFilename, attachTo.path);
+  const filename = pathBasename(attachmentPath);
+  const folder = attachmentPath.slice(0, -(filename.length + 1));
+  return {
+    filename,
+    folder: folder.length === 0 ? "/" : folder
+  };
+}
 
 // src/utils/tldraw-file/tldraw-file-to-json.ts
 function isJSONPrimitive(value) {
@@ -93870,7 +93886,7 @@ var FontSearchModal = class extends import_obsidian3.SuggestModal {
     const { searchPath } = this.searchRes;
     const parsedSearchDir = getDir(searchPath);
     const searchDir = parsedSearchDir.length === 0 ? searchPath : parsedSearchDir;
-    const text = searchPath.length === 0 ? `${file.path}${file instanceof import_obsidian3.TFolder ? "/" : ""}` : `...${file.path.substring(searchDir.length)}${file instanceof import_obsidian3.TFolder ? "/" : ""}`;
+    const text = searchPath.length === 0 || searchDir === "/" ? `${file.path}${file instanceof import_obsidian3.TFolder ? "/" : ""}` : `...${file.path.substring(searchDir.length)}${file instanceof import_obsidian3.TFolder ? "/" : ""}`;
     el.createEl("div", { text });
   }
   onChooseSuggestion(value, evt) {
@@ -93901,7 +93917,10 @@ function debounce2(cb, wait) {
 }
 function getDir(path) {
   const normalized = (0, import_obsidian3.normalizePath)(path);
-  const dir = normalized.slice(0, normalized.lastIndexOf("/"));
+  const lastIndex = normalized.lastIndexOf("/");
+  if (lastIndex === -1)
+    return "/";
+  const dir = normalized.slice(0, lastIndex);
   return dir.length === 0 ? "/" : dir;
 }
 
@@ -93970,7 +93989,8 @@ var DEFAULT_SETTINGS = {
   gridMode: false,
   snapMode: false,
   debugMode: false,
-  focusMode: false
+  focusMode: false,
+  useAttachmentsFolder: true
 };
 var TldrawSettingsTab = class extends import_obsidian4.PluginSettingTab {
   constructor(app, plugin) {
@@ -93987,6 +94007,13 @@ var TldrawSettingsTab = class extends import_obsidian4.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
+    new import_obsidian4.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
+      toggle.setValue(this.plugin.settings.useAttachmentsFolder);
+      toggle.onChange(async (value) => {
+        this.plugin.settings.useAttachmentsFolder = value;
+        await this.plugin.saveSettings();
+      });
+    });
     const defaultDelay = msToSeconds(DEFAULT_SAVE_DELAY);
     const minDelay = msToSeconds(MIN_SAVE_DELAY);
     const maxDelay = msToSeconds(MAX_SAVE_DELAY);
@@ -94629,13 +94656,19 @@ var TldrawPlugin = class extends import_obsidian7.Plugin {
       const fileData = tlFileTemplate(frontmatter, codeblock);
       return await this.createFile(filename, foldername, fileData);
     };
-    this.createUntitledTldrFile = async () => {
-      const { newFilePrefix, newFileTimeFormat, folder } = this.settings;
+    /**
+     * 
+     * @param attachTo The file that is considered as the "parent" of this new file. If this is not undefined then the new untitled tldr file will be considered as an attachment.
+     * @returns 
+     */
+    this.createUntitledTldrFile = async (attachTo) => {
+      const { newFilePrefix, newFileTimeFormat, folder, useAttachmentsFolder } = this.settings;
       const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian7.moment)().format(newFileTimeFormat) : "";
       let filename = newFilePrefix + date;
       if (filename.trim() === "")
         filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian7.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
-      return await this.createTldrFile(filename, folder);
+      const res = !useAttachmentsFolder || attachTo === void 0 ? { filename, folder } : await createAttachmentFilepath(filename, attachTo, this.app.fileManager);
+      return await this.createTldrFile(res.filename, res.folder);
     };
     this.openTldrFile = async (file, location) => {
       let leaf;
@@ -94827,6 +94860,21 @@ var TldrawPlugin = class extends import_obsidian7.Plugin {
       name: "Create a new drawing in a new window",
       callback: async () => {
         await this.createAndOpenUntitledTldrFile("new-window");
+      }
+    });
+    this.addCommand({
+      id: "new-tldraw-file-embed",
+      name: "Create a new drawing and embed as attachment",
+      editorCallback: async (editor, ctx) => {
+        const { file } = ctx;
+        if (file === null) {
+          console.log(ctx);
+          throw new Error("ctx.file was null");
+        }
+        const from = editor.getCursor("from");
+        const to = editor.getCursor("to");
+        const newFile = await this.createUntitledTldrFile(file);
+        editor.replaceRange(`![[${newFile.path}]]`, from, to);
       }
     });
   }

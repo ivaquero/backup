@@ -2,9 +2,7 @@ cartopy
 conda-tree
 contextily
 geopandas
-ipykernel
+jupyter-book
 manim
-marimo
 nbconvert
 plotnine
-tabulate

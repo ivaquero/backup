@@ -3192,20 +3192,6 @@ $("h1").each(function() {
 					<string>https://jax.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
-			<key>https://ml-explore.github.io/mlx/build/html/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-08-13T16:13:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>MLX</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://ml-explore.github.io/mlx/build/html/</string>
-				</dict>
-			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3459,6 +3445,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mesa.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://ml-explore.github.io/mlx/build/html/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-08-23T20:18:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>MLX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://ml-explore.github.io/mlx/build/html/</string>
 				</dict>
 			</dict>
 			<key>https://moshi4.github.io/pyCirclize/</key>
