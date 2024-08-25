@@ -3,7 +3,6 @@ blackjax
 conda-tree
 ipykernel
 keras
-marimo
 mplfinance
 multiprocess
 nbconvert
