@@ -255,7 +255,6 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "shellcheck.exclude": [
-    "SC1090",
     "SC2154",
     "SC2034"
   ],
@@ -473,4 +472,5 @@
   "plantuml.server": " https://www.plantuml.com/plantuml",
   "redhat.telemetry.enabled": false,
   "julia.enableCrashReporter": false,
+  "MATLAB.showFeatureNotAvailableError": false,
 }
