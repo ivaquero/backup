@@ -42,7 +42,7 @@
     "editor.quickSuggestions": {
         "comments": true,
         "strings": true,
-        "other": true,
+        "other": true
     },
     // explorer
     "explorer.compactFolders": true,
@@ -94,8 +94,7 @@
     "workbench.editor.wrapTabs": true,
     "workbench.editorAssociations": {
         "*.md": "default",
-        "*.drawio.png": "hediet.vscode-drawio",
-        // "*.excalidraw": "editor.excalidraw"
+        "*.drawio.png": "hediet.vscode-drawio"
     },
     "workbench.iconTheme": "material-icon-theme",
     "workbench.sideBar.location": "right",
