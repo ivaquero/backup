@@ -4707,7 +4707,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef60(initialValue) {
+        function useRef61(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
@@ -5500,7 +5500,7 @@ var require_react_development = __commonJS({
         exports.useLayoutEffect = useLayoutEffect17;
         exports.useMemo = useMemo31;
         exports.useReducer = useReducer2;
-        exports.useRef = useRef60;
+        exports.useRef = useRef61;
         exports.useState = useState54;
         exports.useSyncExternalStore = useSyncExternalStore3;
         exports.useTransition = useTransition;
@@ -28872,9 +28872,9 @@ var require_with_selector_development = __commonJS({
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
         var useSyncExternalStore3 = shim.useSyncExternalStore;
-        var useRef60 = React73.useRef, useEffect62 = React73.useEffect, useMemo31 = React73.useMemo, useDebugValue3 = React73.useDebugValue;
+        var useRef61 = React73.useRef, useEffect62 = React73.useEffect, useMemo31 = React73.useMemo, useDebugValue3 = React73.useDebugValue;
         function useSyncExternalStoreWithSelector2(subscribe, getSnapshot2, getServerSnapshot, selector, isEqual2) {
-          var instRef = useRef60(null);
+          var instRef = useRef61(null);
           var inst3;
           if (instRef.current === null) {
             inst3 = {
@@ -93605,7 +93605,10 @@ function LocalFileMenu() {
 }
 var TldrawApp = ({ settings, initialData, setFileData, options: {
   autoFocus = true,
+  hideUi = false,
+  inputFocus = false,
   isReadonly = false,
+  selectNone = false,
   zoomToBounds = false,
   defaultFontOverrides
 } }) => {
@@ -93643,11 +93646,21 @@ var TldrawApp = ({ settings, initialData, setFileData, options: {
       removeListener();
     };
   }, [store]);
+  const editorRef = React71.useRef(null);
   return /* @__PURE__ */ React71.createElement(
     "div",
     {
-      id: "tldraw-view-root",
-      onTouchStart: (e2) => e2.stopPropagation()
+      className: "tldraw-view-root",
+      onTouchStart: (e2) => e2.stopPropagation(),
+      onBlur: !inputFocus ? void 0 : () => {
+        var _a2, _b2;
+        (_a2 = editorRef.current) == null ? void 0 : _a2.selectNone();
+        (_b2 = editorRef.current) == null ? void 0 : _b2.blur();
+      },
+      onFocus: !inputFocus ? void 0 : () => {
+        var _a2;
+        return (_a2 = editorRef.current) == null ? void 0 : _a2.focus();
+      }
     },
     /* @__PURE__ */ React71.createElement(
       Tldraw,
@@ -93655,11 +93668,16 @@ var TldrawApp = ({ settings, initialData, setFileData, options: {
         assetUrls: {
           fonts: defaultFontOverrides
         },
+        hideUi,
         overrides: uiOverrides,
         store,
         components,
         autoFocus,
         onMount: (editor) => {
+          editorRef.current = editor;
+          if (selectNone) {
+            editor.selectNone();
+          }
           const {
             themeMode,
             gridMode,
@@ -94531,37 +94549,16 @@ async function markdownPostProcessor(plugin, element, context) {
     log2("element", element);
     log2("context", context);
     internalEmbedDiv.empty();
-    internalEmbedDiv.addClass("tldraw-markdown-view");
     if (markdownEmbed) {
-      const tldrawViewHeader = internalEmbedDiv.createDiv({
-        cls: ["tldraw-view-header"]
-      });
-      tldrawViewHeader.style.display = "flex";
-      tldrawViewHeader.style.justifyContent = "space-between";
-      tldrawViewHeader.style.alignItems = "baseline";
-      const tldrawTitle = tldrawViewHeader.createDiv({
-        cls: ["embed-title", "markdown-embed-title"]
-      });
-      tldrawTitle.innerText = file.name;
-      tldrawViewHeader.createEl("button", {
-        cls: ["clickable"],
-        text: "Edit"
-      }, (el) => {
-        el.addEventListener("click", async (ev) => {
-          plugin.openTldrFile(file, "new-tab");
-        });
-      });
       internalEmbedDiv.removeClass("markdown-embed");
       internalEmbedDiv.removeClass("inline-embed");
     }
-    const tldrawViewContent = internalEmbedDiv.createDiv({
-      cls: ["tldraw-view-content"]
-    }, (el) => {
-      el.style.height = "300px";
-      el.addEventListener("click", (ev) => ev.stopPropagation());
-      el.addEventListener("focus", function tldrawFocusListener() {
-        log2(`${tldrawFocusListener.name}`);
-      });
+    const tldrawEmbedView = createTldrawEmbedView(internalEmbedDiv, {
+      file,
+      plugin
+    });
+    const tldrawEmbedViewContent = tldrawEmbedView.createDiv({
+      cls: "ptl-view-content"
     });
     const parent = internalEmbedDiv.parentElement;
     if (parent === null)
@@ -94570,10 +94567,8 @@ async function markdownPostProcessor(plugin, element, context) {
 	It is needed to ensure the attached react root component is unmounted properly.`);
     const fileData = await plugin.app.vault.read(file);
     const parsedData = parseTLDataDocument(plugin.manifest.version, fileData);
-    log2("tldrawViewContent", tldrawViewContent);
-    log2("parsedData", parsedData);
     const reactRoot = createRootAndRenderTldrawApp(
-      tldrawViewContent,
+      tldrawEmbedViewContent,
       parsedData,
       (_) => {
         console.log("Ignore saving file due to read only mode.");
@@ -94582,6 +94577,9 @@ async function markdownPostProcessor(plugin, element, context) {
       {
         isReadonly: true,
         autoFocus: false,
+        inputFocus: true,
+        selectNone: true,
+        hideUi: true,
         zoomToBounds: true,
         defaultFontOverrides: plugin.getFontOverrides()
       }
@@ -94621,6 +94619,69 @@ async function markdownPostProcessor(plugin, element, context) {
     throw new Error(`${markdownPostProcessor.name}: Unexpected`);
   }
   throw new Error(`${markdownPostProcessor.name}: Unexpected`);
+}
+function createTldrawViewHeader(embedViewContent, {
+  file,
+  plugin,
+  selectEmbedText
+}) {
+  const tldrawViewHeader = embedViewContent.createDiv({
+    cls: ["ptl-embed-context-bar"]
+  });
+  const tldrawTitle = tldrawViewHeader.createDiv({
+    cls: ["ptl-embed-title-bar"]
+  }, (el) => {
+    el.onClickEvent((ev) => {
+      selectEmbedText(ev);
+      ev.stopPropagation();
+    });
+  });
+  tldrawTitle.innerText = file.name;
+  const actionBar = tldrawViewHeader.createDiv({ cls: "ptl-embed-action-bar" });
+  new import_obsidian6.ButtonComponent(actionBar).setClass("clickable-icon").setIcon(MARKDOWN_ICON_NAME).setTooltip("Open as markdown").onClick(() => {
+    plugin.openTldrFile(file, "new-tab", "markdown");
+  });
+  new import_obsidian6.ButtonComponent(actionBar).setClass("clickable-icon").setIcon(TLDRAW_ICON_NAME).setTooltip("Edit").onClick(() => {
+    plugin.openTldrFile(file, "new-tab");
+  });
+  new import_obsidian6.ButtonComponent(actionBar).setClass("clickable-icon").setIcon("view").setTooltip("Read-only view").onClick((ev) => {
+    plugin.openTldrFile(file, "new-tab", "tldraw-read-only");
+  });
+  return tldrawViewHeader;
+}
+function createTldrawEmbedView(internalEmbedDiv, {
+  file,
+  plugin
+}) {
+  return internalEmbedDiv.createDiv({
+    cls: "ptl-markdown-embed"
+  }, (el) => {
+    const viewHeader = createTldrawViewHeader(el, {
+      file,
+      plugin,
+      selectEmbedText: (ev) => {
+        internalEmbedDiv.dispatchEvent(new MouseEvent("click", {
+          bubbles: ev.bubbles,
+          cancelable: ev.cancelable,
+          clientX: ev.clientX,
+          clientY: ev.clientY
+        }));
+      }
+    });
+    el.addEventListener("click", (ev) => ev.stopPropagation());
+    viewHeader.hide();
+    internalEmbedDiv.addEventListener("focusin", () => {
+      var _a2;
+      (_a2 = plugin.app.workspace.getActiveViewOfType(import_obsidian6.MarkdownView)) == null ? void 0 : _a2.editor.setCursor(0, 0);
+      viewHeader.show();
+    });
+    internalEmbedDiv.addEventListener("focusout", (event) => {
+      if (event.relatedTarget instanceof Node && internalEmbedDiv.contains(event.relatedTarget)) {
+        return;
+      }
+      viewHeader.hide();
+    });
+  });
 }
 
 // src/main.ts
@@ -94670,7 +94731,7 @@ var TldrawPlugin = class extends import_obsidian7.Plugin {
       const res = !useAttachmentsFolder || attachTo === void 0 ? { filename, folder } : await createAttachmentFilepath(filename, attachTo, this.app.fileManager);
       return await this.createTldrFile(res.filename, res.folder);
     };
-    this.openTldrFile = async (file, location) => {
+    this.openTldrFile = async (file, location, viewType = VIEW_TYPE_TLDRAW) => {
       let leaf;
       if (location === "current-tab")
         leaf = this.app.workspace.getLeaf(false);
@@ -94683,7 +94744,7 @@ var TldrawPlugin = class extends import_obsidian7.Plugin {
       else
         leaf = this.app.workspace.getLeaf(false);
       await leaf.openFile(file);
-      await this.updateViewMode(VIEW_TYPE_TLDRAW, leaf);
+      await this.updateViewMode(viewType, leaf);
     };
     this.createAndOpenUntitledTldrFile = async (location) => {
       const file = await this.createUntitledTldrFile();

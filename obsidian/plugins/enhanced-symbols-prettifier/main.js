@@ -118,7 +118,7 @@ var DataMapper = class {
     Object.keys(this.settings.replacements).forEach((key) => {
       const replacement = this.settings.replacements[key];
       if (group === "all" || replacement.group === group) {
-        exportData[key] = replacement;
+        exportData[key] = __spreadValues({}, replacement);
         delete exportData[key].count;
         delete exportData[key].disabled;
       }
@@ -139,17 +139,118 @@ var DataMapper = class {
   }
 };
 
+// src/finder/ShortcutsFinder.ts
+var ShortcutsFinder = class {
+  constructor(plugin, excluded_shortcuts = [], excluded_words = []) {
+    this.top_words = {};
+    this.suggested_shortcuts = {};
+    this.excluded_shortcuts = [];
+    this.excluded_words = [];
+    this.plugin = plugin;
+    this.excluded_shortcuts = excluded_shortcuts;
+    this.excluded_words = excluded_words;
+  }
+  findShortcuts() {
+    return __async(this, null, function* () {
+      yield this.fetchDocuments();
+      return this.findSuggestedShortcuts();
+    });
+  }
+  findSuggestedShortcuts() {
+    Object.keys(this.top_words).forEach((word) => {
+      const shortcut = this.findShortcutAssociated(word);
+      if (!this.suggested_shortcuts[shortcut]) {
+        this.suggested_shortcuts[shortcut] = {};
+      }
+      this.suggested_shortcuts[shortcut][word] = this.top_words[word];
+    });
+    Object.keys(this.suggested_shortcuts).forEach((shortcut) => {
+      const words = this.suggested_shortcuts[shortcut];
+      const maxWord = Object.keys(words).reduce(
+        (a, b) => words[a] > words[b] ? a : b
+      );
+      this.suggested_shortcuts[shortcut] = { [maxWord]: words[maxWord] };
+    });
+    this.excluded_shortcuts.forEach((shortcut) => {
+      if (this.suggested_shortcuts[shortcut]) {
+        delete this.suggested_shortcuts[shortcut];
+      }
+    });
+    return this.suggested_shortcuts;
+  }
+  findShortcutAssociated(word) {
+    if (word.length == 4) {
+      return word[0] + word[3];
+    }
+    word = word.replace(/[^a-zA-ZÀ-ÿ]/g, "");
+    const consonants = word.match(/[^aeiou]/g);
+    if (consonants && consonants.length >= 3) {
+      return consonants.slice(0, 3).join("");
+    }
+    return word.slice(0, 3);
+  }
+  fetchDocuments() {
+    return __async(this, null, function* () {
+      const files = this.plugin.app.vault.getMarkdownFiles();
+      const documents = yield Promise.all(
+        files.map((file) => this.plugin.app.vault.cachedRead(file))
+      );
+      this.findTopWords(documents);
+    });
+  }
+  findTopWords(documents) {
+    const threeLetterWords = {};
+    const wordCount = documents.reduce((acc, doc) => {
+      const words = doc.split(/\s+/);
+      words.forEach((word) => {
+        word = word.replace(/[^a-zA-ZÀ-ÿ'-]/g, "");
+        if (this.excluded_words.includes(word)) {
+          return;
+        }
+        if (word.length == 3) {
+          if (threeLetterWords[word]) {
+            threeLetterWords[word]++;
+          } else {
+            threeLetterWords[word] = 1;
+          }
+        }
+        if (word.length < 4) {
+          return;
+        }
+        if (acc[word]) {
+          acc[word]++;
+        } else {
+          acc[word] = 1;
+        }
+      });
+      return acc;
+    }, {});
+    const sortedThreeLetterWords = Object.keys(threeLetterWords).sort((a, b) => threeLetterWords[b] - threeLetterWords[a]);
+    this.excluded_shortcuts.push(...sortedThreeLetterWords.slice(0, 15));
+    const sortedFilteredWords = Object.keys(wordCount).sort((a, b) => wordCount[b] - wordCount[a]);
+    this.top_words = sortedFilteredWords.slice(0, 100).reduce((acc, word) => {
+      acc[word] = wordCount[word];
+      return acc;
+    }, {});
+  }
+};
+
 // src/settings/settings.ts
+var DEFAULT_SHORTCUTS_DISPLAYED = 10;
+var DEFAULT_SHORTCUTS_INCREMENT = 5;
+var DEFAULT_SHORTCUTS_GROUP = "Words";
 var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
+    this.shortcutsToDisplay = {};
+    this.shortcutsDisplayed = DEFAULT_SHORTCUTS_DISPLAYED;
     this.plugin = plugin;
   }
   displayReplacement(replacement, i, containerEl) {
     const value = replacement.value;
     let key = replacement.replaced;
     new import_obsidian.Setting(containerEl).setName(`${i}.`).setDesc(
-      `${replacement.count ? replacement.count + " total replacement" + (replacement.count > 1 ? "s" : "") : ""}`
+      `${replacement.count ? "Triggered " + replacement.count + " time" + (replacement.count > 1 ? "s" : "") : ""}`
     ).addText(
       (text) => text.setPlaceholder("To replace").setValue(key).onChange((index) => __async(this, null, function* () {
         this.plugin.settings.replacements[key].replaced = index;
@@ -201,7 +302,7 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
       }
     }
     new import_obsidian.Setting(containerEl).setName("Add new symbol").addButton(
-      (button) => button.setButtonText("Add").setCta().onClick(() => __async(this, null, function* () {
+      (button) => button.setIcon("plus").setCta().onClick(() => __async(this, null, function* () {
         this.plugin.settings.replacements[""] = {
           replaced: "",
           value: "",
@@ -272,9 +373,124 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
       }))
     );
   }
+  displaySuggestedShorcut(containerEl, shortcut, value, count) {
+    new import_obsidian.Setting(containerEl).setName(`Replace '${shortcut}' with '${value}'`).setDesc(`Found ${count} time${count > 1 ? "s" : ""}`).addText(
+      (text) => text.setPlaceholder("To replace").setValue(shortcut).onChange((editedShortcut) => __async(this, null, function* () {
+        shortcut = editedShortcut;
+      }))
+    ).addButton(
+      (button) => button.setButtonText("Ignore").onClick(() => __async(this, null, function* () {
+        if (!this.plugin.settings.exclusions) {
+          this.plugin.settings.exclusions = [];
+        }
+        this.plugin.settings.exclusions.push(shortcut);
+        yield this.plugin.saveSettings();
+        this.display();
+      }))
+    ).addButton(
+      (button) => button.setButtonText("Add").setCta().onClick(() => __async(this, null, function* () {
+        this.plugin.settings.replacements[shortcut] = {
+          replaced: shortcut,
+          value,
+          disabled: false,
+          group: DEFAULT_SHORTCUTS_GROUP
+        };
+        yield this.plugin.saveSettings();
+        this.display();
+        new import_obsidian.Notice("Shortcut added");
+      }))
+    );
+  }
+  displayFinder(containerEl) {
+    const excluded_shortcuts = this.plugin.settings.exclusions || [];
+    for (const key in this.plugin.settings.replacements) {
+      const replacement = this.plugin.settings.replacements[key];
+      excluded_shortcuts.push(replacement.replaced);
+    }
+    const excluded_words = Object.keys(
+      this.plugin.settings.replacements
+    ).map((key) => this.plugin.settings.replacements[key].value);
+    const shortcutsFinder = new ShortcutsFinder(
+      this.plugin,
+      excluded_shortcuts,
+      excluded_words
+    );
+    new import_obsidian.Setting(containerEl).setName("Find most used words").setDesc(
+      "Find the most used words in your notes to create shorcuts for them. This operation may take a while depending on the number of notes in your vault."
+    ).addButton(
+      (button) => button.setIcon("file-search").setCta().onClick(() => __async(this, null, function* () {
+        this.shortcutsDisplayed = DEFAULT_SHORTCUTS_DISPLAYED;
+        button.setDisabled(true);
+        const shortcuts = yield shortcutsFinder.findShortcuts();
+        this.shortcutsToDisplay = shortcuts;
+        this.display();
+        new import_obsidian.Notice("End of search");
+      }))
+    );
+    if (Object.keys(this.shortcutsToDisplay).length > 0) {
+      new import_obsidian.Setting(containerEl).setName("Suggested shortcuts").setDesc(
+        "Here are the most used words in your notes. You can add them as shortcuts with the suggested one or customize them."
+      ).setHeading();
+      let counter = 0;
+      for (const shortcut in this.shortcutsToDisplay) {
+        if (this.plugin.settings.exclusions && this.plugin.settings.exclusions.includes(shortcut)) {
+          continue;
+        }
+        const shortcutItem = this.shortcutsToDisplay[shortcut];
+        const replacement = Object.keys(shortcutItem)[0];
+        const count = shortcutItem[replacement];
+        this.displaySuggestedShorcut(
+          containerEl,
+          shortcut,
+          replacement,
+          count
+        );
+        counter++;
+        if (counter === this.shortcutsDisplayed) {
+          break;
+        }
+      }
+      if (Object.keys(this.shortcutsToDisplay).length > this.shortcutsDisplayed) {
+        new import_obsidian.Setting(containerEl).setName("Show more shortcuts").addButton(
+          (button) => button.setButtonText("Show more").onClick(() => {
+            this.shortcutsDisplayed += DEFAULT_SHORTCUTS_INCREMENT;
+            this.display();
+          })
+        );
+      }
+    }
+  }
+  displayReset(containerEl) {
+    new import_obsidian.Setting(containerEl).setName("Reset or restore settings").setHeading();
+    new import_obsidian.Setting(containerEl).setName("Reset statistics").addButton(
+      (button) => button.setIcon("trash").setWarning().onClick(() => __async(this, null, function* () {
+        for (const key in this.plugin.settings.replacements) {
+          delete this.plugin.settings.replacements[key].count;
+        }
+        yield this.plugin.saveSettings();
+        this.display();
+      }))
+    );
+    new import_obsidian.Setting(containerEl).setName("Restore settings to default").addButton(
+      (button) => button.setIcon("archive-restore").setWarning().onClick(() => __async(this, null, function* () {
+        yield this.plugin.restoreDefaultSettings();
+        this.display();
+      }))
+    );
+    new import_obsidian.Setting(containerEl).setName("Empty ignored shortcuts").setDesc(
+      "Remove all ignored shortcuts from the find most used shortcuts feature."
+    ).addButton(
+      (button) => button.setIcon("trash").setWarning().onClick(() => __async(this, null, function* () {
+        this.plugin.settings.exclusions = [];
+        yield this.plugin.saveSettings();
+        this.display();
+      }))
+    );
+  }
   display() {
     const { containerEl } = this;
     containerEl.empty();
+    this.displayFinder(containerEl);
     const groups = /* @__PURE__ */ new Set();
     for (const key in this.plugin.settings.replacements) {
       const replacement = this.plugin.settings.replacements[key];
@@ -310,22 +526,7 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
       }))
     );
     containerEl.createEl("hr");
-    new import_obsidian.Setting(containerEl).setName("Reset or restore settings").setHeading();
-    new import_obsidian.Setting(containerEl).setName("Reset statistics").addButton(
-      (button) => button.setButtonText("Reset stats").setWarning().onClick(() => __async(this, null, function* () {
-        for (const key in this.plugin.settings.replacements) {
-          delete this.plugin.settings.replacements[key].count;
-        }
-        yield this.plugin.saveSettings();
-        this.display();
-      }))
-    );
-    new import_obsidian.Setting(containerEl).setName("Restore settings to default").addButton(
-      (button) => button.setButtonText("Restore settings").setWarning().onClick(() => __async(this, null, function* () {
-        yield this.plugin.restoreDefaultSettings();
-        this.display();
-      }))
-    );
+    this.displayReset(containerEl);
     containerEl.createEl("p", {
       text: "Made by Noam Schmitt based on the Symbols Prettifier plugin by Florian Woelki."
     });
@@ -520,6 +721,11 @@ var DEFAULT_SETTINGS = {
       value: "\u2227",
       group: "Mathematical Operators"
     },
+    "+/-": {
+      replaced: "+/-",
+      value: "\xB1",
+      group: "Mathematical Operators"
+    },
     "...": {
       replaced: "...",
       value: "\u2026",
@@ -575,7 +781,8 @@ var DEFAULT_SETTINGS = {
       value: "\u03B5",
       group: "Greek Letters"
     }
-  }
+  },
+  exclusions: []
 };
 
 // src/main.ts
@@ -709,6 +916,7 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
       replacement.count = replacement.count ? replacement.count + 1 : 1;
     });
     editor.setValue(value);
+    this.saveSettings();
     if (replacementsCount === 0) {
       new import_obsidian2.Notice("No symbols found to replace");
     } else if (replacementsCount === 1) {
@@ -775,6 +983,7 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
             );
           }
           replacement.count = replacement.count ? replacement.count + 1 : 1;
+          this.saveSettings();
         }
       }
     }
