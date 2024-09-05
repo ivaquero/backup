@@ -105,6 +105,276 @@ var SearchCursor = class {
   }
 };
 
+// src/settings/defaultSettings.ts
+var FLEXIBLE_WORDS_START = ["(", "\xAB", "'", '"', "*"];
+var FLEXIBLE_WORDS_END = [
+  ".",
+  ",",
+  "!",
+  "?",
+  ":",
+  ";",
+  ")",
+  "\xBB",
+  "'",
+  '"',
+  "Enter",
+  "\n",
+  "*"
+];
+var DEFAULT_SETTINGS = {
+  replacements: {
+    "->": {
+      replaced: "->",
+      value: "\u2192",
+      group: "Arrows"
+    },
+    "<-": {
+      replaced: "<-",
+      value: "\u2190",
+      group: "Arrows"
+    },
+    "<->": {
+      replaced: "<->",
+      value: "\u2194",
+      group: "Arrows"
+    },
+    "<=>": {
+      replaced: "<=>",
+      value: "\u21D4",
+      group: "Arrows"
+    },
+    "=": {
+      replaced: "<=",
+      value: "\u21D0",
+      group: "Arrows"
+    },
+    "=>": {
+      replaced: "=>",
+      value: "\u21D2",
+      group: "Arrows"
+    },
+    "=/=": {
+      replaced: "=/=",
+      value: "\u2260",
+      group: "Mathematical Operators"
+    },
+    "~=": {
+      replaced: "~=",
+      value: "\u2248",
+      group: "Mathematical Operators"
+    },
+    "----": {
+      replaced: "----",
+      value: "\u2014",
+      group: "Miscellaneous"
+    },
+    "(c)": {
+      replaced: "(c)",
+      value: "\xA9",
+      group: "Miscellaneous"
+    },
+    "(r)": {
+      replaced: "(r)",
+      value: "\xAE",
+      group: "Miscellaneous"
+    },
+    "/!\\": {
+      replaced: "/!\\",
+      value: "\u26A0",
+      group: "Miscellaneous"
+    },
+    "(1)": {
+      replaced: "(1)",
+      value: "1\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(2)": {
+      replaced: "(2)",
+      value: "2\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(3)": {
+      replaced: "(3)",
+      value: "3\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(4)": {
+      replaced: "(4)",
+      value: "4\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(5)": {
+      replaced: "(5)",
+      value: "5\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(6)": {
+      replaced: "(6)",
+      value: "6\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(7)": {
+      replaced: "(7)",
+      value: "7\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(8)": {
+      replaced: "(8)",
+      value: "8\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(9)": {
+      replaced: "(9)",
+      value: "9\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "(10)": {
+      replaced: "(10)",
+      value: "\u{1F51F}",
+      group: "Numbers"
+    },
+    "(0)": {
+      replaced: "(0)",
+      value: "0\uFE0F\u20E3",
+      group: "Numbers"
+    },
+    "w/": {
+      replaced: "w/",
+      value: "with",
+      group: "Words"
+    },
+    "w/o": {
+      replaced: "w/o",
+      value: "without",
+      group: "Words"
+    },
+    "->>": {
+      replaced: "->>",
+      value: "\u21C9",
+      group: "Arrows"
+    },
+    "<<-": {
+      replaced: "<<-",
+      value: "\u21C7",
+      group: "Arrows"
+    },
+    "=>>": {
+      replaced: "=>>",
+      value: "\u21C9",
+      group: "Arrows"
+    },
+    "<<=": {
+      replaced: "<<=",
+      value: "\u21C7",
+      group: "Arrows"
+    },
+    "===": {
+      replaced: "===",
+      value: "\u2261",
+      group: "Mathematical Operators"
+    },
+    "!=": {
+      replaced: "!=",
+      value: "\u2260",
+      group: "Mathematical Operators"
+    },
+    "=<": {
+      replaced: "=<",
+      value: "\u2264",
+      group: "Mathematical Operators"
+    },
+    ">=": {
+      replaced: ">=",
+      value: "\u2265",
+      group: "Mathematical Operators"
+    },
+    "<<": {
+      replaced: "<<",
+      value: "\u226A",
+      group: "Mathematical Operators"
+    },
+    ">>": {
+      replaced: ">>",
+      value: "\u226B",
+      group: "Mathematical Operators"
+    },
+    "||": {
+      replaced: "||",
+      value: "\u2225",
+      group: "Mathematical Operators"
+    },
+    "&&": {
+      replaced: "&&",
+      value: "\u2227",
+      group: "Mathematical Operators"
+    },
+    "+/-": {
+      replaced: "+/-",
+      value: "\xB1",
+      group: "Mathematical Operators"
+    },
+    "...": {
+      replaced: "...",
+      value: "\u2026",
+      group: "Miscellaneous"
+    },
+    sqrt: {
+      replaced: "sqrt",
+      value: "\u221A",
+      group: "Mathematical Operators"
+    },
+    pi: {
+      replaced: "pi",
+      value: "\u03C0",
+      group: "Mathematical Operators"
+    },
+    inf: {
+      replaced: "inf",
+      value: "\u221E",
+      group: "Mathematical Operators"
+    },
+    sum: {
+      replaced: "sum",
+      value: "\u2211",
+      group: "Mathematical Operators"
+    },
+    prod: {
+      replaced: "prod",
+      value: "\u220F",
+      group: "Mathematical Operators"
+    },
+    delta: {
+      replaced: "delta",
+      value: "\u0394",
+      group: "Greek Letters"
+    },
+    alpha: {
+      replaced: "alpha",
+      value: "\u03B1",
+      group: "Greek Letters"
+    },
+    beta: {
+      replaced: "beta",
+      value: "\u03B2",
+      group: "Greek Letters"
+    },
+    gamma: {
+      replaced: "gamma",
+      value: "\u03B3",
+      group: "Greek Letters"
+    },
+    epsilon: {
+      replaced: "epsilon",
+      value: "\u03B5",
+      group: "Greek Letters"
+    }
+  },
+  exclusions: [],
+  flexibleWordsStart: true,
+  flexibleWordsEnd: true
+};
+
 // src/settings/settings.ts
 var import_obsidian = require("obsidian");
 
@@ -460,6 +730,25 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
       }
     }
   }
+  displayBehaviorSection(containerEl) {
+    new import_obsidian.Setting(containerEl).setName("Behavior settings").setHeading();
+    new import_obsidian.Setting(containerEl).setName("Flexible start word boundaries").setDesc(
+      "Loosen the word boundary detection by allowing symbols or punctuation (like quotes, commas, or parentheses) before a word."
+    ).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.flexibleWordsStart || DEFAULT_SETTINGS.flexibleWordsStart).onChange((value) => __async(this, null, function* () {
+        this.plugin.settings.flexibleWordsStart = value;
+        yield this.plugin.saveSettings();
+      }))
+    );
+    new import_obsidian.Setting(containerEl).setName("Flexible end word boundaries").setDesc(
+      "Allow punctuation or symbols immediately after a word to be part of the word boundary, enabling substitutions even when the word isn't followed by a space."
+    ).addToggle(
+      (toggle) => toggle.setValue(this.plugin.settings.flexibleWordsEnd || DEFAULT_SETTINGS.flexibleWordsEnd).onChange((value) => __async(this, null, function* () {
+        this.plugin.settings.flexibleWordsEnd = value;
+        yield this.plugin.saveSettings();
+      }))
+    );
+  }
   displayReset(containerEl) {
     new import_obsidian.Setting(containerEl).setName("Reset or restore settings").setHeading();
     new import_obsidian.Setting(containerEl).setName("Reset statistics").addButton(
@@ -490,6 +779,7 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
   display() {
     const { containerEl } = this;
     containerEl.empty();
+    this.displayBehaviorSection(containerEl);
     this.displayFinder(containerEl);
     const groups = /* @__PURE__ */ new Set();
     for (const key in this.plugin.settings.replacements) {
@@ -533,260 +823,18 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
   }
 };
 
-// src/settings/defaultSettings.ts
-var DEFAULT_SETTINGS = {
-  replacements: {
-    "->": {
-      replaced: "->",
-      value: "\u2192",
-      group: "Arrows"
-    },
-    "<-": {
-      replaced: "<-",
-      value: "\u2190",
-      group: "Arrows"
-    },
-    "<->": {
-      replaced: "<->",
-      value: "\u2194",
-      group: "Arrows"
-    },
-    "<=>": {
-      replaced: "<=>",
-      value: "\u21D4",
-      group: "Arrows"
-    },
-    "=": {
-      replaced: "<=",
-      value: "\u21D0",
-      group: "Arrows"
-    },
-    "=>": {
-      replaced: "=>",
-      value: "\u21D2",
-      group: "Arrows"
-    },
-    "=/=": {
-      replaced: "=/=",
-      value: "\u2260",
-      group: "Mathematical Operators"
-    },
-    "~=": {
-      replaced: "~=",
-      value: "\u2248",
-      group: "Mathematical Operators"
-    },
-    "----": {
-      replaced: "----",
-      value: "\u2014",
-      group: "Miscellaneous"
-    },
-    "(c)": {
-      replaced: "(c)",
-      value: "\xA9",
-      group: "Miscellaneous"
-    },
-    "(r)": {
-      replaced: "(r)",
-      value: "\xAE",
-      group: "Miscellaneous"
-    },
-    "/!\\": {
-      replaced: "/!\\",
-      value: "\u26A0",
-      group: "Miscellaneous"
-    },
-    "(1)": {
-      replaced: "(1)",
-      value: "1\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(2)": {
-      replaced: "(2)",
-      value: "2\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(3)": {
-      replaced: "(3)",
-      value: "3\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(4)": {
-      replaced: "(4)",
-      value: "4\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(5)": {
-      replaced: "(5)",
-      value: "5\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(6)": {
-      replaced: "(6)",
-      value: "6\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(7)": {
-      replaced: "(7)",
-      value: "7\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(8)": {
-      replaced: "(8)",
-      value: "8\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(9)": {
-      replaced: "(9)",
-      value: "9\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "(10)": {
-      replaced: "(10)",
-      value: "\u{1F51F}",
-      group: "Numbers"
-    },
-    "(0)": {
-      replaced: "(0)",
-      value: "0\uFE0F\u20E3",
-      group: "Numbers"
-    },
-    "w/": {
-      replaced: "w/",
-      value: "with",
-      group: "Words"
-    },
-    "w/o": {
-      replaced: "w/o",
-      value: "without",
-      group: "Words"
-    },
-    "->>": {
-      replaced: "->>",
-      value: "\u21C9",
-      group: "Arrows"
-    },
-    "<<-": {
-      replaced: "<<-",
-      value: "\u21C7",
-      group: "Arrows"
-    },
-    "=>>": {
-      replaced: "=>>",
-      value: "\u21C9",
-      group: "Arrows"
-    },
-    "<<=": {
-      replaced: "<<=",
-      value: "\u21C7",
-      group: "Arrows"
-    },
-    "===": {
-      replaced: "===",
-      value: "\u2261",
-      group: "Mathematical Operators"
-    },
-    "!=": {
-      replaced: "!=",
-      value: "\u2260",
-      group: "Mathematical Operators"
-    },
-    "=<": {
-      replaced: "=<",
-      value: "\u2264",
-      group: "Mathematical Operators"
-    },
-    ">=": {
-      replaced: ">=",
-      value: "\u2265",
-      group: "Mathematical Operators"
-    },
-    "<<": {
-      replaced: "<<",
-      value: "\u226A",
-      group: "Mathematical Operators"
-    },
-    ">>": {
-      replaced: ">>",
-      value: "\u226B",
-      group: "Mathematical Operators"
-    },
-    "||": {
-      replaced: "||",
-      value: "\u2225",
-      group: "Mathematical Operators"
-    },
-    "&&": {
-      replaced: "&&",
-      value: "\u2227",
-      group: "Mathematical Operators"
-    },
-    "+/-": {
-      replaced: "+/-",
-      value: "\xB1",
-      group: "Mathematical Operators"
-    },
-    "...": {
-      replaced: "...",
-      value: "\u2026",
-      group: "Miscellaneous"
-    },
-    sqrt: {
-      replaced: "sqrt",
-      value: "\u221A",
-      group: "Mathematical Operators"
-    },
-    pi: {
-      replaced: "pi",
-      value: "\u03C0",
-      group: "Mathematical Operators"
-    },
-    inf: {
-      replaced: "inf",
-      value: "\u221E",
-      group: "Mathematical Operators"
-    },
-    sum: {
-      replaced: "sum",
-      value: "\u2211",
-      group: "Mathematical Operators"
-    },
-    prod: {
-      replaced: "prod",
-      value: "\u220F",
-      group: "Mathematical Operators"
-    },
-    delta: {
-      replaced: "delta",
-      value: "\u0394",
-      group: "Greek Letters"
-    },
-    alpha: {
-      replaced: "alpha",
-      value: "\u03B1",
-      group: "Greek Letters"
-    },
-    beta: {
-      replaced: "beta",
-      value: "\u03B2",
-      group: "Greek Letters"
-    },
-    gamma: {
-      replaced: "gamma",
-      value: "\u03B3",
-      group: "Greek Letters"
-    },
-    epsilon: {
-      replaced: "epsilon",
-      value: "\u03B5",
-      group: "Greek Letters"
-    }
-  },
-  exclusions: []
-};
-
 // src/main.ts
 var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
+  constructor() {
+    super(...arguments);
+    this.lastReplacement = {
+      active: false,
+      sequence: "",
+      from: 0,
+      line: 0,
+      key: ""
+    };
+  }
   onload() {
     return __async(this, null, function* () {
       yield this.loadSettings();
@@ -925,8 +973,34 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
       new import_obsidian2.Notice(`Replaced ${replacementsCount} symbols`);
     }
   }
+  applyReplacement(editor, cursor, from, replaceCharacter) {
+    const tableCell = editor.editorComponent.tableCell;
+    if (tableCell) {
+      const editorView = tableCell.cm;
+      if (editorView) {
+        const cursorPosition = editorView.state.selection.main.head - (import_obsidian2.Platform.isMobileApp ? 1 : 0);
+        const fromPosition = cursorPosition - (cursor.ch - from);
+        const toPosition = cursorPosition;
+        editorView.dispatch({
+          changes: {
+            from: fromPosition,
+            to: toPosition,
+            insert: replaceCharacter
+          }
+        });
+      }
+    } else {
+      editor.replaceRange(
+        replaceCharacter,
+        { line: cursor.line, ch: from },
+        { line: cursor.line, ch: cursor.ch }
+      );
+    }
+  }
   keyDownEvent(event) {
     var _a;
+    const lastReplacementTemp = __spreadValues({}, this.lastReplacement);
+    this.lastReplacement.active = false;
     const editor = (_a = this.app.workspace.activeEditor) == null ? void 0 : _a.editor;
     if (editor) {
       const cursor = editor.getCursor();
@@ -936,11 +1010,11 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
         isSpacebar = line.charAt(cursor.ch - 1) === " ";
         cursor.ch = cursor.ch - 1;
       }
-      if (event.key === " " || isSpacebar) {
+      if (this.isWordEnd(event, isSpacebar)) {
         let from = -1;
         let sequence = "";
         for (let i = cursor.ch - 1; i >= 0; i--) {
-          if (line.charAt(i) === " ") {
+          if (this.isWordStart(line, i)) {
             const excludeWhitespace = i + 1;
             from = excludeWhitespace;
             sequence = line.slice(excludeWhitespace, cursor.ch);
@@ -959,34 +1033,55 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
           return;
         }
         const replaceCharacter = replacement.value;
-        if (replaceCharacter && sequence.length > 0 && from !== -1 && typeof replaceCharacter !== "function" && !this.isCursorInUnwantedBlocks(editor)) {
-          const tableCell = editor.editorComponent.tableCell;
-          if (tableCell) {
-            const editorView = tableCell.cm;
-            if (editorView) {
-              const cursorPosition = editorView.state.selection.main.head - (import_obsidian2.Platform.isMobileApp ? 1 : 0);
-              const fromPosition = cursorPosition - (cursor.ch - from);
-              const toPosition = cursorPosition;
-              editorView.dispatch({
-                changes: {
-                  from: fromPosition,
-                  to: toPosition,
-                  insert: replaceCharacter
-                }
-              });
-            }
-          } else {
-            editor.replaceRange(
-              replaceCharacter,
-              { line: cursor.line, ch: from },
-              { line: cursor.line, ch: cursor.ch }
-            );
-          }
+        if (replaceCharacter && sequence.length > 0 && from !== -1 && !this.isCursorInUnwantedBlocks(editor)) {
+          this.applyReplacement(
+            editor,
+            cursor,
+            from,
+            replaceCharacter
+          );
+          this.lastReplacement = {
+            active: true,
+            sequence,
+            from,
+            line: cursor.line,
+            key: event.key
+          };
           replacement.count = replacement.count ? replacement.count + 1 : 1;
           this.saveSettings();
         }
+      } else if (event.key === "Backspace" || event.key === "Delete" && import_obsidian2.Platform.isMacOS) {
+        if (!lastReplacementTemp.active)
+          return;
+        const replacement = this.settings.replacements[lastReplacementTemp.sequence];
+        if (!replacement || replacement.disabled)
+          return;
+        const isCursorValid = cursor.line === lastReplacementTemp.line && lastReplacementTemp.from === cursor.ch - replacement.value.length;
+        if (!isCursorValid)
+          return;
+        const lastCharacter = lastReplacementTemp.key;
+        let replaceCharacter = replacement.replaced;
+        if (lastCharacter == "Enter") {
+          replaceCharacter += "\n";
+        } else {
+          replaceCharacter += lastCharacter;
+        }
+        this.applyReplacement(
+          editor,
+          cursor,
+          lastReplacementTemp.from,
+          replaceCharacter
+        );
+        this.lastReplacement.active = false;
+        this.saveSettings();
       }
     }
+  }
+  isWordStart(line, i) {
+    return line.charAt(i) === " " || this.settings.flexibleWordsStart && FLEXIBLE_WORDS_START.includes(line.charAt(i));
+  }
+  isWordEnd(event, isSpacebar) {
+    return event.key === " " || isSpacebar || this.settings.flexibleWordsEnd && FLEXIBLE_WORDS_END.includes(event.key);
   }
   escapeRegExp(string) {
     return string.replace(/[.*+?^!${}()|[<>\]\\]/g, "\\$&");

@@ -3292,6 +3292,20 @@ $("h1").each(function() {
 					<string>https://jax.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://mamba.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-09-05T00:56:43Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>mamba</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mamba.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -5236,6 +5250,8 @@ $("h1").each(function() {
 			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
 			<string>lp</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/mamba/mamba.docset</key>
+			<string>mm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/marimo/marimo.docset</key>
 			<string>mo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>

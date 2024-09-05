@@ -180,6 +180,11 @@
       "value": "∧",
       "group": "Mathematical Operators"
     },
+    "+/-": {
+      "replaced": "+/-",
+      "value": "±",
+      "group": "Mathematical Operators"
+    },
     "...": {
       "replaced": "...",
       "value": "…",
@@ -240,5 +245,6 @@
       "value": "⇐",
       "group": "Arrows"
     }
-  }
+  },
+  "exclusions": []
 }
