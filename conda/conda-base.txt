@@ -1,5 +1,4 @@
 cmakelang
 conda-tree
-mamba
 pip
-touying
+python-pptx
