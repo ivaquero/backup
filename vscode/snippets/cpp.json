@@ -56,14 +56,8 @@
     "body": [
       "int main() {",
       "  ",
+      "  return 0;",
       "}"
-    ]
-  },
-  "coln": {
-    "prefix": "coln",
-    "description": "",
-    "body": [
-      "cout << Name << endl;"
     ]
   },
   "prf": {
@@ -74,7 +68,7 @@
     ]
   },
   "f": {
-    "prefix": "f",
+    "prefix": "for",
     "description": "",
     "body": [
       "for (auto i = 0; i < 5; i++) {",
@@ -82,18 +76,10 @@
     ]
   },
   "fi": {
-    "prefix": "fi",
+    "prefix": "forit",
     "description": "",
     "body": [
       "for (auto it = v.begin(); it != v.end(); it++) {",
-      "}"
-    ]
-  },
-  "fir": {
-    "prefix": "fir",
-    "description": "",
-    "body": [
-      "for (auto it = L1.rbegin(); it != L1.rend(); it++) {",
       "}"
     ]
   },
@@ -104,20 +90,11 @@
       "void test() {}"
     ]
   },
-  "veci": {
-    "prefix": "veci",
+  "coln": {
+    "prefix": "coln",
     "description": "",
     "body": [
-      "vector<int>"
-    ]
-  },
-  "ucout": {
-    "prefix": "ucout",
-    "description": "",
-    "body": [
-      "using std::cout;",
-      "using std::endl;",
-      ""
+      "std::cout << Name << std::endl;"
     ]
   },
   "covec": {
@@ -127,7 +104,7 @@
       "cout << \"w1: \";",
       "for (int i : w1)",
       "  std::cout << i << \", \";",
-      "cout << endl;",
+      "std::cout << std::endl;",
       ""
     ]
   }

@@ -151,23 +151,24 @@
     "MD036": false,
     "MD037": false,
     "MD041": false,
+    "MD042": false
   },
   "markdowntable.showMenu.csvToTable": true,
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
-    "c": "clang $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "clang++ -std=c++20 $dir$fileName -o $dir$fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out",
+    "cpp": "cd $dir && clang++ -std=c++11 $fileName && ./a.out && rm ./a.out",
     "javascript": "node run --allow-net $fullFileName",
     "typescript": "ts-node",
     "python": "$(which python) -u $fullFileName",
-    "rust": "rustc $dir$fileName && $dir$fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $fileNameWithoutExt",
     "julia": "julia",
     "shellscript": "bash",
     "go": "go run",
-    "dart": "dart $dir$fileName",
-    "matlab": "matlab -nosplash -nodesktop -r $dir$fileNameWithoutExt"
+    "dart": "cd $dir && dart $fileName",
+    "matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt"
   },
   // notebook
   "notebook.codeActionsOnSave": {
