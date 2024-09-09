@@ -158,7 +158,7 @@
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
-    "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out",
+    "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out && rm ./a.out",
     "cpp": "cd $dir && clang++ -std=c++11 $fileName && ./a.out && rm ./a.out",
     "javascript": "node run --allow-net $fullFileName",
     "typescript": "ts-node",
@@ -469,7 +469,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  "plantuml.server": " https://www.plantuml.com/plantuml",
   "redhat.telemetry.enabled": false,
   "julia.enableCrashReporter": false,
   "MATLAB.showFeatureNotAvailableError": false,
