@@ -419,8 +419,6 @@
     "jsonc",
     "!plaintext"
   ],
-  // go
-  "go.formatTool": "goimports",
   // julia
   "[julia]": {
     "editor.defaultFormatter": "julialang.language-julia"
