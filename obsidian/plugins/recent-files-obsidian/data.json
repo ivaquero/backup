@@ -1,40 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "教学-学习观",
-      "path": "drafts/教学-学习观.md"
+      "basename": "面试-中电科",
+      "path": "logs/面试-中电科.md"
     },
     {
-      "basename": "andreyvkh",
-      "path": "drafts/andreyvkh.md"
+      "basename": "面试-郑航",
+      "path": "logs/面试-郑航.md"
     },
     {
-      "basename": "简历-杨鑫斌-数据",
-      "path": "resumes/简历-杨鑫斌-数据.pdf"
+      "basename": "东亚-朝鲜",
+      "path": "public/东亚-朝鲜.md"
     },
     {
-      "basename": "杨鑫斌-数据",
-      "path": "resumes/杨鑫斌-数据.pdf"
+      "basename": "C-01-基础回顾",
+      "path": "articles/C-01-基础回顾.pdf"
     },
     {
-      "basename": "Resume-Yang-Xinbin",
-      "path": "resumes/Resume-Yang-Xinbin.pdf"
+      "basename": "东亚-韩国",
+      "path": "articles/东亚-韩国.pdf"
     },
     {
-      "basename": "photo-yy",
-      "path": "resumes/photo-yy.jpg"
+      "basename": "bylun",
+      "path": "images/education/bylun.png"
     },
     {
-      "basename": "photo",
-      "path": "resumes/photo.png"
-    },
-    {
-      "basename": "sorting",
-      "path": "images/sorting.mp4"
-    },
-    {
-      "basename": "matlab-packaging",
-      "path": "images/matlab-packaging.png"
+      "basename": "doi",
+      "path": "images/education/doi.png"
     },
     {
       "basename": "aed",
@@ -45,44 +37,48 @@
       "path": "images/education/eugene.png"
     },
     {
-      "basename": "doi",
-      "path": "images/education/doi.png"
+      "basename": "sorting",
+      "path": "images/sorting.mp4"
     },
     {
-      "basename": "bylun",
-      "path": "images/education/bylun.png"
+      "basename": "photo",
+      "path": "resumes/photo.png"
     },
     {
-      "basename": "big-o",
-      "path": "images/algo/big-o.png"
+      "basename": "photo-yy",
+      "path": "resumes/photo-yy.jpg"
     },
     {
-      "basename": "infix2prefix",
-      "path": "images/algo/infix2prefix.png"
+      "basename": "Resume-Yang-Xinbin",
+      "path": "resumes/Resume-Yang-Xinbin.pdf"
     },
     {
-      "basename": "infix2postfix",
-      "path": "images/algo/infix2postfix.png"
+      "basename": "杨鑫斌-数据",
+      "path": "resumes/杨鑫斌-数据.pdf"
     },
     {
-      "basename": "infix-revers",
-      "path": "images/algo/infix-revers.png"
+      "basename": "简历-杨鑫斌-数据",
+      "path": "resumes/简历-杨鑫斌-数据.pdf"
+    },
+    {
+      "basename": "andreyvkh",
+      "path": "drafts/andreyvkh.md"
+    },
+    {
+      "basename": "教学-学习观",
+      "path": "drafts/教学-学习观.md"
     },
     {
       "basename": "面试-英文",
       "path": "drafts/面试-英文.md"
     },
     {
-      "basename": "面试-生物方向",
-      "path": "drafts/面试-生物方向.md"
-    },
-    {
-      "basename": "面试-数据方向",
-      "path": "drafts/面试-数据方向.md"
-    },
-    {
       "basename": "知乎-河南农大",
       "path": "drafts/知乎-河南农大.md"
+    },
+    {
+      "basename": "面试-生物方向",
+      "path": "drafts/面试-生物方向.md"
     }
   ],
   "omittedPaths": []

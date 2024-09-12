@@ -4707,7 +4707,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef61(initialValue) {
+        function useRef62(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
@@ -4723,7 +4723,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create2, deps);
         }
-        function useCallback52(callback, deps) {
+        function useCallback53(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
@@ -5489,7 +5489,7 @@ var require_react_development = __commonJS({
         exports.memo = memo28;
         exports.startTransition = startTransition;
         exports.unstable_act = act;
-        exports.useCallback = useCallback52;
+        exports.useCallback = useCallback53;
         exports.useContext = useContext18;
         exports.useDebugValue = useDebugValue3;
         exports.useDeferredValue = useDeferredValue;
@@ -5500,7 +5500,7 @@ var require_react_development = __commonJS({
         exports.useLayoutEffect = useLayoutEffect17;
         exports.useMemo = useMemo31;
         exports.useReducer = useReducer2;
-        exports.useRef = useRef61;
+        exports.useRef = useRef62;
         exports.useState = useState54;
         exports.useSyncExternalStore = useSyncExternalStore3;
         exports.useTransition = useTransition;
@@ -5532,7 +5532,7 @@ var require_react_jsx_runtime_development = __commonJS({
     if (true) {
       (function() {
         "use strict";
-        var React73 = require_react();
+        var React74 = require_react();
         var REACT_ELEMENT_TYPE = Symbol.for("react.element");
         var REACT_PORTAL_TYPE = Symbol.for("react.portal");
         var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -5558,7 +5558,7 @@ var require_react_jsx_runtime_development = __commonJS({
           }
           return null;
         }
-        var ReactSharedInternals = React73.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React74.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function error(format) {
           {
             {
@@ -7129,9 +7129,9 @@ var require_react_dom_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var React73 = require_react();
+        var React74 = require_react();
         var Scheduler = require_scheduler();
-        var ReactSharedInternals = React73.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React74.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         var suppressWarning = false;
         function setSuppressWarning(newSuppressWarning) {
           {
@@ -8736,7 +8736,7 @@ var require_react_dom_development = __commonJS({
           {
             if (props.value == null) {
               if (typeof props.children === "object" && props.children !== null) {
-                React73.Children.forEach(props.children, function(child) {
+                React74.Children.forEach(props.children, function(child) {
                   if (child == null) {
                     return;
                   }
@@ -17183,7 +17183,7 @@ var require_react_dom_development = __commonJS({
           }
         }
         var fakeInternalInstance = {};
-        var emptyRefsObject = new React73.Component().refs;
+        var emptyRefsObject = new React74.Component().refs;
         var didWarnAboutStateAssignmentForComponent;
         var didWarnAboutUninitializedState;
         var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -28731,8 +28731,8 @@ var require_use_sync_external_store_shim_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var React73 = require_react();
-        var ReactSharedInternals = React73.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var React74 = require_react();
+        var ReactSharedInternals = React74.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function error(format) {
           {
             {
@@ -28762,13 +28762,13 @@ var require_use_sync_external_store_shim_development = __commonJS({
           return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y;
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
-        var useState54 = React73.useState, useEffect62 = React73.useEffect, useLayoutEffect17 = React73.useLayoutEffect, useDebugValue3 = React73.useDebugValue;
+        var useState54 = React74.useState, useEffect62 = React74.useEffect, useLayoutEffect17 = React74.useLayoutEffect, useDebugValue3 = React74.useDebugValue;
         var didWarnOld18Alpha = false;
         var didWarnUncachedGetSnapshot = false;
         function useSyncExternalStore3(subscribe, getSnapshot2, getServerSnapshot) {
           {
             if (!didWarnOld18Alpha) {
-              if (React73.startTransition !== void 0) {
+              if (React74.startTransition !== void 0) {
                 didWarnOld18Alpha = true;
                 error("You are using an outdated, pre-release alpha of React 18 that does not support useSyncExternalStore. The use-sync-external-store shim will not work correctly. Upgrade to a newer pre-release.");
               }
@@ -28833,7 +28833,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
         var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
         var isServerEnvironment = !canUseDOM;
         var shim = isServerEnvironment ? useSyncExternalStore$1 : useSyncExternalStore3;
-        var useSyncExternalStore$2 = React73.useSyncExternalStore !== void 0 ? React73.useSyncExternalStore : shim;
+        var useSyncExternalStore$2 = React74.useSyncExternalStore !== void 0 ? React74.useSyncExternalStore : shim;
         exports.useSyncExternalStore = useSyncExternalStore$2;
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
@@ -28865,16 +28865,16 @@ var require_with_selector_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var React73 = require_react();
+        var React74 = require_react();
         var shim = require_shim();
         function is(x, y) {
           return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y;
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
         var useSyncExternalStore3 = shim.useSyncExternalStore;
-        var useRef61 = React73.useRef, useEffect62 = React73.useEffect, useMemo31 = React73.useMemo, useDebugValue3 = React73.useDebugValue;
+        var useRef62 = React74.useRef, useEffect62 = React74.useEffect, useMemo31 = React74.useMemo, useDebugValue3 = React74.useDebugValue;
         function useSyncExternalStoreWithSelector2(subscribe, getSnapshot2, getServerSnapshot, selector, isEqual2) {
-          var instRef = useRef61(null);
+          var instRef = useRef62(null);
           var inst3;
           if (instRef.current === null) {
             inst3 = {
@@ -28963,16 +28963,17 @@ __export(main_exports, {
   default: () => TldrawPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian12 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 
 // src/obsidian/TldrawView.ts
 var import_obsidian7 = require("obsidian");
 
 // src/utils/constants.ts
 var VIEW_TYPE_TLDRAW = "tldraw-view";
+var VIEW_TYPE_TLDRAW_FILE = "tldraw-file";
 var VIEW_TYPE_TLDRAW_READ_ONLY = "tldraw-read-only";
 var VIEW_TYPE_MARKDOWN = "markdown";
-var VIEW_TYPES = [VIEW_TYPE_MARKDOWN, VIEW_TYPE_TLDRAW, VIEW_TYPE_TLDRAW_READ_ONLY];
+var VIEW_TYPES = [VIEW_TYPE_MARKDOWN, VIEW_TYPE_TLDRAW, VIEW_TYPE_TLDRAW_FILE, VIEW_TYPE_TLDRAW_READ_ONLY];
 var TLDRAW_VERSION = "2.4.4";
 var FILE_EXTENSION = ".md";
 var FRONTMATTER_KEY = "tldraw-file";
@@ -30062,14 +30063,14 @@ var PerformanceTracker = class {
       cancelAnimationFrame(this.frame);
     const duration = (performance.now() - this.startTime) / 1e3;
     const fps = duration === 0 ? 0 : Math.floor(this.frames / duration);
-    const background = fps > 55 ? PERFORMANCE_COLORS.Good : fps > 30 ? PERFORMANCE_COLORS.Mid : PERFORMANCE_COLORS.Poor;
-    const color = background === PERFORMANCE_COLORS.Mid ? "black" : "white";
+    const background2 = fps > 55 ? PERFORMANCE_COLORS.Good : fps > 30 ? PERFORMANCE_COLORS.Mid : PERFORMANCE_COLORS.Poor;
+    const color = background2 === PERFORMANCE_COLORS.Mid ? "black" : "white";
     const capitalized = this.name[0].toUpperCase() + this.name.slice(1);
     console.debug(
       `%cPerf%c ${capitalized} %c${fps}%c fps`,
       `color: white; background: ${PERFORMANCE_PREFIX_COLOR};padding: 2px;border-radius: 3px;`,
       "font-weight: normal",
-      `font-weight: bold; padding: 2px; background: ${background};color: ${color};`,
+      `font-weight: bold; padding: 2px; background: ${background2};color: ${color};`,
       "font-weight: normal"
     );
   }
@@ -46392,7 +46393,7 @@ async function getSvgJsx(editor, shapes, opts = {}) {
     throw Error("No document");
   const {
     scale = 1,
-    background = false,
+    background: background2 = false,
     padding = editor.options.defaultSvgPadding,
     preserveAspectRatio = false
   } = opts;
@@ -46514,7 +46515,7 @@ async function getSvgJsx(editor, shapes, opts = {}) {
       strokeLinecap: "round",
       strokeLinejoin: "round",
       style: {
-        backgroundColor: background ? singleFrameShapeId ? theme.solid : theme.background : "transparent"
+        backgroundColor: background2 ? singleFrameShapeId ? theme.solid : theme.background : "transparent"
       },
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime30.jsx)("defs", { children: defChildren }),
@@ -92972,7 +92973,7 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
     pageId,
     bounds,
     scale,
-    background,
+    background: background2,
     padding,
     darkMode,
     preserveAspectRatio,
@@ -93005,7 +93006,7 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
       const svgResult = await editor.getSvgString([...shapeIds], {
         bounds,
         scale,
-        background,
+        background: background2,
         padding,
         darkMode,
         preserveAspectRatio
@@ -93046,7 +93047,7 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
     pageId,
     bounds,
     scale,
-    background,
+    background2,
     padding,
     darkMode,
     preserveAspectRatio,
@@ -93473,8 +93474,7 @@ function wrapReactRoot(tldrawContainer, createReactRoot) {
 }
 
 // src/components/TldrawApp.tsx
-var React71 = __toESM(require_react());
-var import_react120 = __toESM(require_react());
+var React72 = __toESM(require_react());
 var import_client2 = __toESM(require_client());
 
 // node_modules/use-debounce/dist/index.module.js
@@ -93851,31 +93851,149 @@ function createRawTldrawFile(store) {
 
 // src/components/TldrawApp.tsx
 var import_obsidian6 = require("obsidian");
+
+// src/hooks/useTldrawAppHook.ts
+var React71 = __toESM(require_react());
+
+// src/hooks/useViewModeController.ts
+var import_react120 = __toESM(require_react());
+function maybeBox(boxLike) {
+  return boxLike === void 0 ? void 0 : Box.From(boxLike);
+}
+function useViewModeState(editorRef, {
+  controller,
+  initialBounds,
+  initialImageSize
+}) {
+  var _a2;
+  const [bounds, setImageBounds] = (0, import_react120.useState)(maybeBox(initialBounds));
+  const [imageSize, setImageSize] = (0, import_react120.useState)(initialImageSize);
+  const [displayImage, setDisplayImage] = (0, import_react120.useState)((controller == null ? void 0 : controller.getViewMode()) === "image");
+  const [viewOptions, setImageViewOptions] = (0, import_react120.useState)((_a2 = controller == null ? void 0 : controller.getViewOptions()) != null ? _a2 : {});
+  (0, import_react120.useEffect)(() => {
+    const removeViewModeImageListener = controller == null ? void 0 : controller.setOnChangeHandlers({
+      onViewMode: (mode) => {
+        var _a3;
+        setDisplayImage(mode === "image");
+        const bounds2 = (_a3 = editorRef == null ? void 0 : editorRef.current) == null ? void 0 : _a3.getViewportPageBounds();
+        if (bounds2) {
+          controller.setImageBounds(bounds2);
+        }
+      },
+      onImageBounds: setImageBounds,
+      onImageSize: setImageSize,
+      onViewOptions: (o) => {
+        setImageViewOptions({
+          ...o
+        });
+      }
+    });
+    return () => {
+      removeViewModeImageListener == null ? void 0 : removeViewModeImageListener();
+    };
+  }, []);
+  return {
+    displayImage,
+    imageSize,
+    viewOptions: {
+      ...viewOptions,
+      bounds: maybeBox(bounds)
+    }
+  };
+}
+
+// src/hooks/useTldrawAppHook.ts
+function useTldrawAppHook({
+  debouncedSaveDataToFile,
+  editorRef,
+  initialTool,
+  isReadonly,
+  plugin,
+  selectNone,
+  storeMetaRef,
+  viewMode,
+  zoomToBounds
+}) {
+  const viewModeState = useViewModeState(editorRef, viewMode);
+  const storeListenerDisposer = React71.useRef(void 0);
+  const onMount = React71.useCallback((editor) => {
+    var _a2, _b2;
+    const { store } = editor;
+    if (storeMetaRef.current) {
+      storeMetaRef.current.store = store;
+    }
+    (_a2 = storeListenerDisposer.current) == null ? void 0 : _a2.call(storeListenerDisposer);
+    storeListenerDisposer.current = store.listen(debouncedSaveDataToFile, {
+      scope: "document"
+    });
+    editorRef.current = editor;
+    if (selectNone) {
+      editor.selectNone();
+    }
+    const {
+      themeMode,
+      gridMode,
+      debugMode,
+      snapMode,
+      focusMode,
+      toolSelected
+    } = plugin.settings;
+    editor.setCurrentTool(initialTool != null ? initialTool : toolSelected);
+    let darkMode = true;
+    if (themeMode === "dark")
+      darkMode = true;
+    else if (themeMode === "light")
+      darkMode = false;
+    else
+      darkMode = isObsidianThemeDark();
+    editor.user.updateUserPreferences({
+      colorScheme: darkMode ? "dark" : "light",
+      isSnapMode: snapMode
+    });
+    editor.updateInstanceState({
+      isReadonly,
+      isGridMode: gridMode,
+      isDebugMode: debugMode,
+      isFocusMode: focusMode
+    });
+    const zoomBounds = (_b2 = viewModeState.bounds) != null ? _b2 : editor.getCurrentPageBounds();
+    if (zoomToBounds && zoomBounds) {
+      editor.zoomToBounds(zoomBounds, {
+        // Define an inset to 0 so that it is consistent with TldrawImage component
+        inset: 0,
+        animation: { duration: 0 }
+      });
+    }
+  }, [viewModeState]);
+  return {
+    onMount,
+    viewModeState
+  };
+}
+
+// src/components/TldrawApp.tsx
 var components = (plugin) => ({
-  MainMenu: () => /* @__PURE__ */ React71.createElement(DefaultMainMenu, null, /* @__PURE__ */ React71.createElement(LocalFileMenu, { plugin }), /* @__PURE__ */ React71.createElement(DefaultMainMenuContent, null))
+  MainMenu: () => /* @__PURE__ */ React72.createElement(DefaultMainMenu, null, /* @__PURE__ */ React72.createElement(LocalFileMenu, { plugin }), /* @__PURE__ */ React72.createElement(DefaultMainMenuContent, null))
 });
 function LocalFileMenu(props) {
   const actions = useActions();
-  return /* @__PURE__ */ React71.createElement(TldrawUiMenuSubmenu, { id: "file", label: "menu.file" }, import_obsidian6.Platform.isMobile ? /* @__PURE__ */ React71.createElement(React71.Fragment, null) : /* @__PURE__ */ React71.createElement(TldrawUiMenuItem, { ...actions[SAVE_FILE_COPY_ACTION] }), /* @__PURE__ */ React71.createElement(TldrawUiMenuItem, { ...actions[SAVE_FILE_COPY_IN_VAULT_ACTION] }), /* @__PURE__ */ React71.createElement(TldrawUiMenuItem, { ...actions[OPEN_FILE_ACTION] }));
+  return /* @__PURE__ */ React72.createElement(TldrawUiMenuSubmenu, { id: "file", label: "menu.file" }, import_obsidian6.Platform.isMobile ? /* @__PURE__ */ React72.createElement(React72.Fragment, null) : /* @__PURE__ */ React72.createElement(TldrawUiMenuItem, { ...actions[SAVE_FILE_COPY_ACTION] }), /* @__PURE__ */ React72.createElement(TldrawUiMenuItem, { ...actions[SAVE_FILE_COPY_IN_VAULT_ACTION] }), /* @__PURE__ */ React72.createElement(TldrawUiMenuItem, { ...actions[OPEN_FILE_ACTION] }));
 }
 var TldrawApp = ({ plugin, initialData, setFileData, options: {
   autoFocus = true,
+  controller,
   hideUi = false,
+  initialBounds,
+  initialImageSize,
+  initialTool,
   inputFocus = false,
   isReadonly = false,
+  persistenceKey,
   selectNone = false,
-  zoomToBounds = false,
-  defaultFontOverrides
+  zoomToBounds = false
 } }) => {
   const saveDelayInMs = safeSecondsToMs(plugin.settings.saveFileDelay);
-  const [
-    { meta, store },
-    /**
-     * #NOTE: Could be used to reuse the same tldraw instance while changing the document over to a new one.
-     */
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setMetaStore
-  ] = (0, import_react120.useState)(() => {
+  const storeMetaRef = React72.useRef((() => {
     if (initialData.store) {
       return initialData;
     }
@@ -93886,27 +94004,37 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
         initialData: initialData.raw
       })
     };
-  });
+  })());
   const debouncedSaveDataToFile = c((e2) => {
+    const { meta, store } = storeMetaRef.current;
     setFileData({
       meta,
       tldrawFile: createRawTldrawFile(store)
     });
   }, saveDelayInMs);
-  (0, import_react120.useEffect)(() => {
-    const removeListener = store.listen(debouncedSaveDataToFile, {
-      scope: "document"
-    });
-    return () => {
-      removeListener();
-    };
-  }, [store]);
-  const editorRef = React71.useRef(null);
-  return /* @__PURE__ */ React71.createElement(
+  const editorRef = React72.useRef(null);
+  const {
+    onMount,
+    viewModeState: { displayImage, imageSize, viewOptions }
+  } = useTldrawAppHook({
+    debouncedSaveDataToFile,
+    editorRef,
+    initialTool,
+    isReadonly,
+    plugin,
+    storeMetaRef,
+    selectNone,
+    zoomToBounds,
+    viewMode: {
+      controller,
+      initialBounds,
+      initialImageSize
+    }
+  });
+  return /* @__PURE__ */ React72.createElement(
     "div",
     {
       className: "tldraw-view-root",
-      onTouchStart: (e2) => e2.stopPropagation(),
       onBlur: !inputFocus ? void 0 : () => {
         var _a2, _b2;
         (_a2 = editorRef.current) == null ? void 0 : _a2.selectNone();
@@ -93917,61 +94045,65 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
         return (_a2 = editorRef.current) == null ? void 0 : _a2.focus();
       }
     },
-    /* @__PURE__ */ React71.createElement(
-      Tldraw,
+    displayImage ? /* @__PURE__ */ React72.createElement("div", { className: "ptl-tldraw-image-container", style: {
+      width: "100%",
+      height: "100%"
+    } }, /* @__PURE__ */ React72.createElement("div", { className: "ptl-tldraw-image", style: {
+      width: (imageSize == null ? void 0 : imageSize.width) || void 0,
+      height: (imageSize == null ? void 0 : imageSize.height) || void 0
+    } }, /* @__PURE__ */ React72.createElement(
+      TldrawImage,
       {
-        assetUrls: {
-          fonts: defaultFontOverrides
-        },
-        hideUi,
-        overrides: uiOverrides(plugin),
-        store,
-        components: components(plugin),
-        autoFocus,
-        onMount: (editor) => {
-          editorRef.current = editor;
-          if (selectNone) {
-            editor.selectNone();
-          }
-          const {
-            themeMode,
-            gridMode,
-            debugMode,
-            snapMode,
-            focusMode,
-            toolSelected
-          } = plugin.settings;
-          editor.setCurrentTool(toolSelected);
-          let darkMode = true;
-          if (themeMode === "dark")
-            darkMode = true;
-          else if (themeMode === "light")
-            darkMode = false;
-          else
-            darkMode = isObsidianThemeDark();
-          editor.user.updateUserPreferences({
-            colorScheme: darkMode ? "dark" : "light",
-            isSnapMode: snapMode
-          });
-          editor.updateInstanceState({
-            isReadonly,
-            isGridMode: gridMode,
-            isDebugMode: debugMode,
-            isFocusMode: focusMode
-          });
-          const bounds = editor.getCurrentPageBounds();
-          if (zoomToBounds && bounds) {
-            editor.zoomToBounds(bounds, { animation: { duration: 0 } });
-          }
-        }
+        snapshot: storeMetaRef.current.store.getStoreSnapshot(),
+        padding: 0,
+        ...viewOptions
       }
+    ))) : /* @__PURE__ */ React72.createElement(
+      "div",
+      {
+        onTouchStart: (e2) => e2.stopPropagation(),
+        style: {
+          width: "100%",
+          height: "100%"
+        }
+      },
+      persistenceKey === void 0 ? /* @__PURE__ */ React72.createElement(
+        Tldraw,
+        {
+          assetUrls: {
+            fonts: plugin.getFontOverrides(),
+            icons: plugin.getIconOverrides()
+          },
+          hideUi,
+          overrides: uiOverrides(plugin),
+          store: storeMetaRef.current.store,
+          components: components(plugin),
+          autoFocus,
+          onMount
+        }
+      ) : /* @__PURE__ */ React72.createElement(
+        Tldraw,
+        {
+          persistenceKey,
+          snapshot: storeMetaRef.current.store.getStoreSnapshot(),
+          assetUrls: {
+            fonts: plugin.getFontOverrides(),
+            icons: plugin.getIconOverrides()
+          },
+          hideUi,
+          overrides: uiOverrides(plugin),
+          components: components(plugin),
+          autoFocus,
+          onMount
+        }
+      )
     )
   );
 };
 var createRootAndRenderTldrawApp = (node, initialData, setFileData, plugin, options = {}) => {
   const root = (0, import_client2.createRoot)(node);
   root.render(
-    /* @__PURE__ */ React71.createElement(
+    /* @__PURE__ */ React72.createElement(
       TldrawApp,
       {
         setFileData,
@@ -93987,6 +94119,9 @@ var createRootAndRenderTldrawApp = (node, initialData, setFileData, plugin, opti
 // src/obsidian/TldrawMixins.ts
 function TldrawLoadableMixin(Base) {
   class _TldrawLoadableMixin extends Base {
+    get tldrawContainer() {
+      return this.containerEl.children[1];
+    }
     /**
      * Adds the entry point `tldraw-view-content` for the {@linkcode reactRoot},
      * and the "View as markdown" action button.
@@ -94004,9 +94139,7 @@ function TldrawLoadableMixin(Base) {
       (_a2 = this.reactRoot) == null ? void 0 : _a2.unmount();
     }
     getTldrawOptions() {
-      return {
-        defaultFontOverrides: this.plugin.getFontOverrides()
-      };
+      return {};
     }
     createReactRoot(entryPoint, tldata) {
       return createRootAndRenderTldrawApp(
@@ -94024,7 +94157,7 @@ function TldrawLoadableMixin(Base) {
      */
     async setTlData(tldata, useIframe = false) {
       var _a2;
-      const tldrawContainer = this.containerEl.children[1];
+      const tldrawContainer = this.tldrawContainer;
       (_a2 = this.reactRoot) == null ? void 0 : _a2.unmount();
       if (!useIframe) {
         this.reactRoot = this.createReactRoot(tldrawContainer, tldata);
@@ -94086,20 +94219,63 @@ var TldrawView = class extends TldrawLoadableMixin(import_obsidian7.TextFileView
   clear() {
   }
 };
+var TldrawFileView = class extends TldrawView {
+  constructor() {
+    super(...arguments);
+    this.setFileData = async (data) => {
+      console.log("Saving document.");
+      if (!TldrawFileView.isTldrFile(this.file))
+        return;
+      await this.app.vault.modify(
+        this.file,
+        JSON.stringify(
+          tldrawFileToJson(data.tldrawFile)
+        )
+      );
+    };
+  }
+  static isTldrFile(tFile) {
+    return tFile !== null && tFile.extension === "tldr";
+  }
+  getViewType() {
+    return VIEW_TYPE_TLDRAW_FILE;
+  }
+  onload() {
+    this.contentEl.addClass("tldraw-view-content");
+  }
+  async onLoadFile(file) {
+    console.log("tldraw file view on load file");
+    if (!TldrawFileView.isTldrFile(file)) {
+      this.tldrawContainer.createDiv({
+        text: 'This file is not a ".tldr" file!'
+      });
+      return;
+    }
+    return super.onLoadFile(file);
+  }
+  setViewData(data, clear) {
+    this.setTlData({
+      meta: getTLMetaTemplate(this.plugin.manifest.version),
+      ...data.length === 0 ? { raw: void 0 } : { store: migrateTldrawFileDataIfNecessary(data) }
+    });
+  }
+  getTldrawOptions() {
+    var _a2;
+    return {
+      ...super.getTldrawOptions(),
+      persistenceKey: (_a2 = this.file) == null ? void 0 : _a2.path
+    };
+  }
+};
 
 // src/obsidian/TldrawSettingsTab.ts
-var import_obsidian9 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 
-// src/obsidian/settings/FontSearchModal.ts
+// src/obsidian/modal/FileSearchModal.ts
 var import_obsidian8 = require("obsidian");
-var fontTypes = [
-  "otf",
-  "ttf",
-  "woff",
-  "woff2"
-];
-var FontSearchModal = class extends import_obsidian8.SuggestModal {
+var FileSearchModal = class extends import_obsidian8.SuggestModal {
   constructor(plugin, options) {
+    var _a2;
     super(plugin.app);
     this.searchRes = {
       searchPath: "",
@@ -94119,17 +94295,21 @@ var FontSearchModal = class extends import_obsidian8.SuggestModal {
         }
         return res({
           searchPath,
-          results: filterSearchPath(dir2, searchPath)
+          currDir: dir2,
+          results: this.filterSearchPath(dir2, searchPath)
         });
       }
       res({
         searchPath,
-        results: !(dir instanceof import_obsidian8.TFolder) ? [] : filterSearchPath(dir, searchPath)
+        results: !(dir instanceof import_obsidian8.TFolder) ? [] : this.filterSearchPath(dir, searchPath)
       });
     }, 100);
     this.plugin = plugin;
-    this.setFont = options.setFont;
+    this.extensions = options.extensions;
+    this.onEmptyStateText = options.onEmptyStateText;
+    this.setSelection = options.setSelection;
     this.initialValue = options.initialValue;
+    this.selectDir = (_a2 = options.selectDir) != null ? _a2 : false;
   }
   onOpen() {
     super.onOpen();
@@ -94147,7 +94327,13 @@ var FontSearchModal = class extends import_obsidian8.SuggestModal {
       const resolver = (r2) => {
         this.searchResolver = void 0;
         this.searchRes = r2;
-        return res(r2.results);
+        const suggestions = r2.results.sort((a, b) => a instanceof import_obsidian8.TFolder && b instanceof import_obsidian8.TFolder || a instanceof import_obsidian8.TFile && b instanceof import_obsidian8.TFolder ? a.path.localeCompare(b.path) : a instanceof import_obsidian8.TFolder ? -1 : 1);
+        return res(
+          r2.currDir === void 0 || !this.selectDir ? suggestions : [
+            r2.currDir,
+            ...suggestions
+          ]
+        );
       };
       this.searchResolver = resolver;
       if (lastResolver) {
@@ -94157,6 +94343,11 @@ var FontSearchModal = class extends import_obsidian8.SuggestModal {
     });
   }
   renderSuggestion(file, el) {
+    var _a2, _b2;
+    if (file.path === ((_b2 = (_a2 = this.searchRes) == null ? void 0 : _a2.currDir) == null ? void 0 : _b2.path)) {
+      el.createEl("div", { text: `Use this directory (${file.path})` });
+      return;
+    }
     const { searchPath } = this.searchRes;
     const parsedSearchDir = getDir(searchPath);
     const searchDir = parsedSearchDir.length === 0 ? searchPath : parsedSearchDir;
@@ -94164,23 +94355,27 @@ var FontSearchModal = class extends import_obsidian8.SuggestModal {
     el.createEl("div", { text });
   }
   onChooseSuggestion(value, evt) {
-    this.setFont(value.path);
+    this.setSelection(value);
     this.close();
   }
   selectSuggestion(value, evt) {
-    if (value instanceof import_obsidian8.TFile) {
+    var _a2, _b2;
+    if (value instanceof import_obsidian8.TFile || value.path === ((_b2 = (_a2 = this.searchRes) == null ? void 0 : _a2.currDir) == null ? void 0 : _b2.path)) {
       this.onChooseSuggestion(value, evt);
       return;
     }
     this.changeInputValue(`${value.path}/`);
   }
   onNoSuggestion() {
-    this.emptyStateText = `No folders or fonts at "${this.searchRes.searchPath}".`;
+    this.emptyStateText = this.onEmptyStateText(this.searchRes.searchPath);
     return super.onNoSuggestion();
   }
+  filterSearchPath(tFolder, searchPath) {
+    return filterSearchPath(tFolder, searchPath, this.extensions);
+  }
 };
-function filterSearchPath(tFolder, searchPath) {
-  return tFolder.children.map((e2) => !(e2 instanceof import_obsidian8.TFolder) && !(e2 instanceof import_obsidian8.TFile) ? void 0 : e2 instanceof import_obsidian8.TFolder ? e2 : fontTypes.includes(e2.extension) ? e2 : void 0).filter((e2) => e2 !== void 0).filter((e2) => e2.path.startsWith(searchPath));
+function filterSearchPath(tFolder, searchPath, extensions) {
+  return tFolder.children.map((e2) => !(e2 instanceof import_obsidian8.TFolder) && !(e2 instanceof import_obsidian8.TFile) ? void 0 : e2 instanceof import_obsidian8.TFolder ? e2 : extensions === void 0 ? e2 : extensions.includes(e2.extension) ? e2 : void 0).filter((e2) => e2 !== void 0).filter((e2) => e2.path.startsWith(searchPath));
 }
 function debounce2(cb, wait) {
   let timeout;
@@ -94189,6 +94384,160 @@ function debounce2(cb, wait) {
     timeout = setTimeout(() => cb(...args), wait);
   };
 }
+
+// src/obsidian/settings/constants.ts
+var fontTypes = [
+  "otf",
+  "ttf",
+  "woff",
+  "woff2"
+];
+var iconExtensions = [
+  "svg"
+];
+var iconTypes2 = [
+  "align-bottom",
+  "align-center-horizontal",
+  "align-center-vertical",
+  "align-left",
+  "align-right",
+  "align-top",
+  "arrow-left",
+  "arrowhead-arrow",
+  "arrowhead-bar",
+  "arrowhead-diamond",
+  "arrowhead-dot",
+  "arrowhead-none",
+  "arrowhead-square",
+  "arrowhead-triangle-inverted",
+  "arrowhead-triangle",
+  "blob",
+  "bring-forward",
+  "bring-to-front",
+  "broken",
+  "check-circle",
+  "check",
+  "chevron-down",
+  "chevron-left",
+  "chevron-right",
+  "chevron-up",
+  "chevrons-ne",
+  "chevrons-sw",
+  "clipboard-copied",
+  "clipboard-copy",
+  "color",
+  "cross-2",
+  "cross-circle",
+  "dash-dashed",
+  "dash-dotted",
+  "dash-draw",
+  "dash-solid",
+  "disconnected",
+  "discord",
+  "distribute-horizontal",
+  "distribute-vertical",
+  "dot",
+  "dots-horizontal",
+  "dots-vertical",
+  "drag-handle-dots",
+  "duplicate",
+  "edit",
+  "external-link",
+  "fill-fill",
+  "fill-none",
+  "fill-pattern",
+  "fill-semi",
+  "fill-solid",
+  "follow",
+  "following",
+  "font-draw",
+  "font-mono",
+  "font-sans",
+  "font-serif",
+  "geo-arrow-down",
+  "geo-arrow-left",
+  "geo-arrow-right",
+  "geo-arrow-up",
+  "geo-check-box",
+  "geo-cloud",
+  "geo-diamond",
+  "geo-ellipse",
+  "geo-heart",
+  "geo-hexagon",
+  "geo-octagon",
+  "geo-oval",
+  "geo-pentagon",
+  "geo-rectangle",
+  "geo-rhombus-2",
+  "geo-rhombus",
+  "geo-star",
+  "geo-trapezoid",
+  "geo-triangle",
+  "geo-x-box",
+  "github",
+  "group",
+  "horizontal-align-end",
+  "horizontal-align-middle",
+  "horizontal-align-start",
+  "info-circle",
+  "leading",
+  "link",
+  "lock",
+  "menu",
+  "minus",
+  "mixed",
+  "pack",
+  "plus",
+  "question-mark-circle",
+  "question-mark",
+  "redo",
+  "reset-zoom",
+  "rotate-ccw",
+  "rotate-cw",
+  "send-backward",
+  "send-to-back",
+  "share-1",
+  "size-extra-large",
+  "size-large",
+  "size-medium",
+  "size-small",
+  "spline-cubic",
+  "spline-line",
+  "stack-horizontal",
+  "stack-vertical",
+  "status-offline",
+  "stretch-horizontal",
+  "stretch-vertical",
+  "text-align-center",
+  "text-align-left",
+  "text-align-right",
+  "toggle-off",
+  "toggle-on",
+  "tool-arrow",
+  "tool-eraser",
+  "tool-frame",
+  "tool-hand",
+  "tool-highlight",
+  "tool-laser",
+  "tool-line",
+  "tool-media",
+  "tool-note",
+  "tool-pencil",
+  "tool-pointer",
+  "tool-screenshot",
+  "tool-text",
+  "trash",
+  "twitter",
+  "undo",
+  "ungroup",
+  "unlock",
+  "vertical-align-end",
+  "vertical-align-middle",
+  "vertical-align-start",
+  "warning-triangle",
+  "zoom-in",
+  "zoom-out"
+];
 
 // src/obsidian/plugin/settings.ts
 function processFontOverrides(overrides, getResourcePath) {
@@ -94210,38 +94559,165 @@ function processFontOverrides(overrides, getResourcePath) {
   }
   return processed;
 }
+function processIconOverrides(overrides, getResourcePath) {
+  if (overrides === void 0)
+    return void 0;
+  const processed = {};
+  for (const [iconName, override] of Object.entries(overrides)) {
+    if (override === void 0)
+      continue;
+    processed[iconName] = getResourcePath(override);
+  }
+  return processed;
+}
 function addIfDefined(object2, key, value) {
   if (value !== void 0) {
     object2[key] = value;
   }
 }
-function getFontOverrideOrUndefinedForDefault(font, original, updates) {
+function getOverrideOrUndefinedForDefault(key, original, updates) {
   var _a2;
-  return updates[font] === null ? void 0 : (_a2 = updates[font]) != null ? _a2 : original == null ? void 0 : original[font];
+  return updates[key] === null ? void 0 : (_a2 = updates[key]) != null ? _a2 : original == null ? void 0 : original[key];
 }
 function updateFontOverrides(original, updates) {
   const object2 = {};
   addIfDefined(
     object2,
     "draw",
-    getFontOverrideOrUndefinedForDefault("draw", original, updates)
+    getOverrideOrUndefinedForDefault("draw", original, updates)
   );
   addIfDefined(
     object2,
     "sansSerif",
-    getFontOverrideOrUndefinedForDefault("sansSerif", original, updates)
+    getOverrideOrUndefinedForDefault("sansSerif", original, updates)
   );
   addIfDefined(
     object2,
     "serif",
-    getFontOverrideOrUndefinedForDefault("serif", original, updates)
+    getOverrideOrUndefinedForDefault("serif", original, updates)
   );
   addIfDefined(
     object2,
     "monospace",
-    getFontOverrideOrUndefinedForDefault("monospace", original, updates)
+    getOverrideOrUndefinedForDefault("monospace", original, updates)
   );
   return object2;
+}
+function updateIconOverrides(original, updates) {
+  const object2 = {};
+  for (const iconName of iconTypes2) {
+    addIfDefined(
+      object2,
+      iconName,
+      getOverrideOrUndefinedForDefault(iconName, original, updates)
+    );
+  }
+  return object2;
+}
+
+// src/obsidian/settings/icon-overrides.ts
+var import_obsidian9 = require("obsidian");
+function createIconOverridesSettingsEl(plugin, containerEl) {
+  const currentValue = () => {
+    var _a2, _b2;
+    return Object.entries((_b2 = (_a2 = plugin.settings.icons) == null ? void 0 : _a2.overrides) != null ? _b2 : {}).filter((e2) => e2[1] !== void 0);
+  };
+  let resetButton;
+  const saveIconSettings = async (updates) => {
+    var _a2;
+    plugin.settings.icons = updates === null ? void 0 : {
+      overrides: updateIconOverrides(
+        (_a2 = plugin.settings.icons) == null ? void 0 : _a2.overrides,
+        updates
+      )
+    };
+    await plugin.saveSettings();
+    resetButton == null ? void 0 : resetButton.setDisabled(currentValue().length === 0);
+  };
+  new import_obsidian9.Setting(containerEl).setName("Use icon set").setDesc("Select a folder to load an icon set from. This option will only update an override if an icon name in the provided folder matches one of the names below.").addButton((button) => {
+    button.setIcon("file-search").onClick(() => {
+      new FileSearchModal(plugin, {
+        setSelection: async (file) => {
+          if (file instanceof import_obsidian9.TFolder) {
+            const updates = {};
+            for (const child of file.children) {
+              if (!(child instanceof import_obsidian9.TFile))
+                continue;
+              if (iconExtensions.includes(child.extension) && iconTypes2.includes(child.basename)) {
+                updates[child.basename] = child.path;
+              }
+            }
+            await saveIconSettings(updates);
+            new import_obsidian9.Notice(`Updated icon overrides for ${Object.entries(updates).length}`);
+          }
+        },
+        selectDir: true,
+        extensions: [],
+        onEmptyStateText: (searchPath) => `No folders found at "${searchPath}"`
+      }).open();
+    });
+  }).addExtraButton((button) => {
+    resetButton = button.setIcon("rotate-ccw").setTooltip("Clear all overrides").setDisabled(currentValue().length === 0).onClick(async () => {
+      await saveIconSettings(null);
+    });
+  });
+  const newIconOverrideSetting = (icon) => {
+    const currentValue2 = () => {
+      var _a2, _b2;
+      return (_b2 = (_a2 = plugin.settings.icons) == null ? void 0 : _a2.overrides) == null ? void 0 : _b2[icon];
+    };
+    let resetButton2;
+    const setIcon = async (iconPath) => {
+      var _a2;
+      if (iconPath !== null && iconPath.length === 0) {
+        iconPath = null;
+      }
+      await saveIconSettings({ [icon]: iconPath });
+      if (iconPath) {
+        new import_obsidian9.Notice(`Updated icon override for "${icon}" to "${iconPath}"`);
+      } else {
+        new import_obsidian9.Notice(`Reset icon "${icon}" to default.`);
+      }
+      textInput == null ? void 0 : textInput.setValue((_a2 = currentValue2()) != null ? _a2 : "");
+      resetButton2 == null ? void 0 : resetButton2.setDisabled(currentValue2() === void 0);
+    };
+    let textInput;
+    const current = currentValue2();
+    return new import_obsidian9.Setting(containerEl).addText((text) => {
+      textInput = text.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
+      textInput.inputEl.readOnly = true;
+    }).addButton((button) => {
+      button.setIcon("file-search").onClick(() => {
+        new FileSearchModal(plugin, {
+          extensions: [...iconExtensions],
+          initialValue: currentValue2(),
+          onEmptyStateText: (searchPath) => `No folders or icons found at "${searchPath}"`,
+          setSelection: (file) => setIcon(file.path)
+        }).open();
+      });
+    }).addExtraButton((button) => {
+      resetButton2 = button.setIcon("rotate-ccw").setTooltip("Use default").setDisabled(current === void 0).onClick(async () => {
+        await setIcon(null);
+      });
+    });
+  };
+  containerEl.createEl("h2", { text: "Individual icon overrides." });
+  containerEl.createEl("p", {
+    text: "Click an icon name to view the default in your web browser. All of the default icons are hosted on "
+  }, (el) => {
+    el.createEl("a", {
+      text: "tldraw's GitHub repository",
+      href: "https://github.com/tldraw/tldraw/tree/main/assets/icons/icon"
+    });
+    el.appendText(".");
+  });
+  for (const icon of iconTypes2) {
+    const setting = newIconOverrideSetting(icon);
+    setting.nameEl.createEl("a", {
+      text: icon,
+      href: `https://github.com/tldraw/tldraw/blob/main/assets/icons/icon/${icon}.svg`
+    });
+  }
 }
 
 // src/obsidian/TldrawSettingsTab.ts
@@ -94258,7 +94734,7 @@ var DEFAULT_SETTINGS = {
   focusMode: false,
   useAttachmentsFolder: true
 };
-var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
+var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -94267,13 +94743,13 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     this.containerEl.createEl("h1", { text: "File" });
-    new import_obsidian9.Setting(containerEl).setName("Save folder").setDesc("The folder that tldraw files will be created in.").addText(
+    new import_obsidian10.Setting(containerEl).setName("Save folder").setDesc("The folder that tldraw files will be created in.").addText(
       (text2) => text2.setPlaceholder("root").setValue(this.plugin.settings.folder).onChange(async (value) => {
         this.plugin.settings.folder = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian9.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
+    new import_obsidian10.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.useAttachmentsFolder);
       toggle.onChange(async (value) => {
         this.plugin.settings.useAttachmentsFolder = value;
@@ -94283,7 +94759,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
     const defaultDelay = msToSeconds(DEFAULT_SAVE_DELAY);
     const minDelay = msToSeconds(MIN_SAVE_DELAY);
     const maxDelay = msToSeconds(MAX_SAVE_DELAY);
-    const saveDelaySetting = new import_obsidian9.Setting(containerEl).setName("Save delay").setDesc(
+    const saveDelaySetting = new import_obsidian10.Setting(containerEl).setName("Save delay").setDesc(
       `The delay in seconds to automatically save after a change has been made to a tlraw drawing. Must be a value between ${minDelay} and ${maxDelay} (1 hour). Requires reloading any tldraw files you may have open in a tab.`
     ).addText(
       (text2) => text2.setPlaceholder(`${defaultDelay}`).setValue(`${this.plugin.settings.saveFileDelay}`).onChange(async (value) => {
@@ -94300,7 +94776,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
       cls: "ptl-default-code",
       text: `DEFAULT: [${DEFAULT_SETTINGS.saveFileDelay}]`
     });
-    const filePrefixSettings = new import_obsidian9.Setting(containerEl).setName("New file prefix").setDesc(
+    const filePrefixSettings = new import_obsidian10.Setting(containerEl).setName("New file prefix").setDesc(
       "When creating a new tldraw file, the file name will automatically prepend the prefix. Can be left empty, however if both the prefix and time format are empty, it will use the defaults to name the file."
     ).addText(
       (text2) => text2.setPlaceholder("Prefix").setValue(this.plugin.settings.newFilePrefix).onChange(async (value) => {
@@ -94313,7 +94789,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
       cls: "ptl-default-code"
     });
     let dateFormatSampleEl;
-    const dateFormat = new import_obsidian9.Setting(containerEl).setName("New file time format").setDesc(
+    const dateFormat = new import_obsidian10.Setting(containerEl).setName("New file time format").setDesc(
       "When creating a new tldraw file, this represents the time format that will get appended to the file name. It can be left empty, however if both the Prefix and Time Format are empty, it will use the defaults to name the file. "
     ).addMomentFormat((format) => {
       dateFormatSampleEl = format.setDefaultFormat(DEFAULT_SETTINGS.newFileTimeFormat).setPlaceholder(DEFAULT_SETTINGS.newFileTimeFormat).setValue(this.plugin.settings.newFileTimeFormat).onChange(async (value) => {
@@ -94339,7 +94815,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
       });
     });
     this.containerEl.createEl("h1", { text: "Start up" });
-    new import_obsidian9.Setting(containerEl).setName("Theme").setDesc(
+    new import_obsidian10.Setting(containerEl).setName("Theme").setDesc(
       "When opening a tldraw file, this setting decides what theme should be applied."
     ).addDropdown((cb) => {
       cb.addOption("light", "Light theme").addOption("dark", "Dark theme").addOption("match-theme", "Match theme").setValue(this.plugin.settings.themeMode).onChange(async (value) => {
@@ -94347,7 +94823,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian9.Setting(containerEl).setName("Default tool").setDesc(
+    new import_obsidian10.Setting(containerEl).setName("Default tool").setDesc(
       "When opening a tldraw file, this setting decides which tool should be selected."
     ).addDropdown((cb) => {
       cb.addOption("select", "Select").addOption("hand", "Hand").addOption("draw", "Draw").addOption("text", "Text").addOption("eraser", "Eraser").addOption("highlight", "Highlight").addOption("rectangle", "Rectangle").addOption("ellipse", "Ellipse").setValue(this.plugin.settings.toolSelected).onChange(async (value) => {
@@ -94355,7 +94831,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian9.Setting(containerEl).setName("Grid mode").setDesc(
+    new import_obsidian10.Setting(containerEl).setName("Grid mode").setDesc(
       "When opening tldraw files, this setting determines whether grid mode is enabled. Keep in mind that enabling grid mode will both show a grid and enforce snap-to-grid functionality."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.gridMode);
@@ -94364,7 +94840,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian9.Setting(containerEl).setName("Snap mode").setDesc(
+    new import_obsidian10.Setting(containerEl).setName("Snap mode").setDesc(
       "When opening tldraw files, this setting determines whether snap mode is enabled. Snap mode is a feature that places guides on shapes as you move them, ensuring they align with specific points or positions for precise placement."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.snapMode);
@@ -94373,7 +94849,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian9.Setting(containerEl).setName("Focus mode").setDesc(
+    new import_obsidian10.Setting(containerEl).setName("Focus mode").setDesc(
       "When opening tldraw files, this setting determines whether to launch tldraw in focus mode. Great if you like to use tldraw to quickly jot something down."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.focusMode);
@@ -94382,7 +94858,7 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian9.Setting(containerEl).setName("Debug mode").setDesc(
+    new import_obsidian10.Setting(containerEl).setName("Debug mode").setDesc(
       "When opening tldraw files, this setting toggles the tldraw debug mode. Debug mode is useful for the developer."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.debugMode);
@@ -94417,23 +94893,25 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
           }
           await saveFontSettings({ [args.font]: fontPath });
           if (fontPath) {
-            new import_obsidian9.Notice(`Updated font override for "${args.font}" to "${fontPath}"`);
+            new import_obsidian10.Notice(`Updated font override for "${args.font}" to "${fontPath}"`);
           } else {
-            new import_obsidian9.Notice(`Reset font "${args.font}" to default.`);
+            new import_obsidian10.Notice(`Reset font "${args.font}" to default.`);
           }
           textInput == null ? void 0 : textInput.setValue((_a2 = currentValue()) != null ? _a2 : "");
           resetButton == null ? void 0 : resetButton.setDisabled(currentValue() === void 0);
         };
         let textInput;
         const current = currentValue();
-        return new import_obsidian9.Setting(containerEl).setName(args.name).setDesc(`Appears as "${args.appearsAs}" in the style panel.`).addText((text2) => {
+        return new import_obsidian10.Setting(containerEl).setName(args.name).setDesc(`Appears as "${args.appearsAs}" in the style panel.`).addText((text2) => {
           textInput = text2.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
           textInput.inputEl.readOnly = true;
         }).addButton((button) => {
           button.setIcon("file-search").onClick(() => {
-            new FontSearchModal(this.plugin, {
-              setFont,
-              initialValue: currentValue()
+            new FileSearchModal(this.plugin, {
+              extensions: [...fontTypes],
+              initialValue: currentValue(),
+              onEmptyStateText: (searchPath) => `No folders or fonts at "${searchPath}".`,
+              setSelection: (file) => setFont(file.path)
             }).open();
           });
         }).addExtraButton((button) => {
@@ -94463,11 +94941,16 @@ var TldrawSettingsTab = class extends import_obsidian9.PluginSettingTab {
         appearsAs: "mono"
       });
     }
+    {
+      this.containerEl.createEl("h1", { text: "Icons" });
+      this.containerEl.createEl("h2", { text: "Default icon overrides" });
+      createIconOverridesSettingsEl(this.plugin, this.containerEl);
+    }
   }
 };
 
 // src/components/StatusBarViewMode.tsx
-var React72 = __toESM(require_react());
+var React73 = __toESM(require_react());
 var import_client3 = __toESM(require_client());
 
 // node_modules/zustand/esm/vanilla.mjs
@@ -94589,7 +95072,7 @@ var StatusBarViewMode = () => {
   const setTldrawView = () => setViewMode(VIEW_TYPE_TLDRAW, "react");
   const setMarkdownView = () => setViewMode(VIEW_TYPE_MARKDOWN, "react");
   const setTldrawReadOnly = () => setViewMode(VIEW_TYPE_TLDRAW_READ_ONLY, "react");
-  return /* @__PURE__ */ React72.createElement("div", { className: "ptl-statusbar-viewmode-box" }, /* @__PURE__ */ React72.createElement("div", { className: "ptl-statusbar-viewmode-btn-box" }, /* @__PURE__ */ React72.createElement(
+  return /* @__PURE__ */ React73.createElement("div", { className: "ptl-statusbar-viewmode-box" }, /* @__PURE__ */ React73.createElement("div", { className: "ptl-statusbar-viewmode-btn-box" }, /* @__PURE__ */ React73.createElement(
     "button",
     {
       type: "button",
@@ -94598,7 +95081,7 @@ var StatusBarViewMode = () => {
       onClick: setTldrawView
     },
     "TL"
-  ), /* @__PURE__ */ React72.createElement(
+  ), /* @__PURE__ */ React73.createElement(
     "button",
     {
       type: "button",
@@ -94607,7 +95090,7 @@ var StatusBarViewMode = () => {
       onClick: setMarkdownView
     },
     "MD"
-  ), /* @__PURE__ */ React72.createElement(
+  ), /* @__PURE__ */ React73.createElement(
     "button",
     {
       type: "button",
@@ -94621,7 +95104,7 @@ var StatusBarViewMode = () => {
 var createReactStatusBarViewMode = (htmlElement) => {
   const root = (0, import_client3.createRoot)(htmlElement);
   root.render(
-    /* @__PURE__ */ React72.createElement(React72.StrictMode, null, /* @__PURE__ */ React72.createElement(StatusBarViewMode, null))
+    /* @__PURE__ */ React73.createElement(React73.StrictMode, null, /* @__PURE__ */ React73.createElement(StatusBarViewMode, null))
   );
   return root;
 };
@@ -94661,7 +95144,7 @@ function around1(obj, method, createWrapper) {
 }
 
 // src/obsidian/TldrawReadonly.ts
-var import_obsidian10 = require("obsidian");
+var import_obsidian11 = require("obsidian");
 
 // src/utils/logging/index.ts
 function logClass(targetClass, target, ...args) {
@@ -94673,12 +95156,14 @@ function logFn(target, ...args) {
 var LOGGING_ENABLED = false;
 
 // src/obsidian/menu/index.ts
-function pluginMenuLabel(menuItem) {
-  return menuItem.setIcon(TLDRAW_ICON_NAME).setIsLabel(true).setTitle("Tldraw in Obsidian");
+function pluginMenuLabel(menuItem, {
+  title = "Tldraw in Obsidian"
+} = {}) {
+  return menuItem.setIcon(TLDRAW_ICON_NAME).setIsLabel(true).setTitle(title);
 }
 
 // src/obsidian/TldrawReadonly.ts
-var TldrawReadonly = class extends TldrawLoadableMixin(import_obsidian10.FileView) {
+var TldrawReadonly = class extends TldrawLoadableMixin(import_obsidian11.FileView) {
   constructor(leaf, plugin) {
     super(leaf);
     this.setFileData = () => {
@@ -94698,7 +95183,7 @@ var TldrawReadonly = class extends TldrawLoadableMixin(import_obsidian10.FileVie
     this.addAction(TLDRAW_ICON_NAME, "Edit", async () => {
       const { file } = this;
       if (file !== null && file.path.endsWith(TLDRAW_FILE_EXTENSION)) {
-        this.create(file, "new-tab", "tldraw-view");
+        this.plugin.updateViewMode(VIEW_TYPE_TLDRAW_FILE);
       } else {
         this.plugin.updateViewMode(VIEW_TYPE_TLDRAW);
       }
@@ -94753,7 +95238,7 @@ var TldrawReadonly = class extends TldrawLoadableMixin(import_obsidian10.FileVie
       )
     });
     await this.plugin.openTldrFile(newFile, location, viewType);
-    new import_obsidian10.Notice(`Created a new file for editing "${newFile.path}"`);
+    new import_obsidian11.Notice(`Created a new file for editing "${newFile.path}"`);
   }
 };
 
@@ -94782,7 +95267,7 @@ function pluginBuild(Base, args) {
 }
 
 // src/obsidian/plugin/markdown-post-processor.ts
-var import_obsidian11 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 
 // src/utils/debug-mutation-observer.ts
 var durationTreshold = 0;
@@ -94802,6 +95287,154 @@ var CustomMutationObserver = class extends MutationObserver {
   }
 };
 
+// src/obsidian/factories/createTldrawAppViewModeController.ts
+function createTldrawAppViewModeController(initialBounds) {
+  return {
+    viewMode: "image",
+    viewOptions: {
+      // TODO: Create a plugin setting that allows the use of other image formats for previewing.
+      format: "svg",
+      background: true,
+      bounds: initialBounds
+      // FIXME: Image aspect ratio is ruined in reading mode when viewing with png format due to 300px height restriction on `.ptl-markdown-embed .ptl-view-content`
+      // format: 'png',
+      // preserveAspectRatio: '',
+    },
+    onChangeHandlers: void 0,
+    getViewMode() {
+      return this.viewMode;
+    },
+    getViewOptions() {
+      return this.viewOptions;
+    },
+    setImageBounds(bounds) {
+      var _a2;
+      this.viewOptions.bounds = bounds;
+      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onImageBounds(bounds);
+    },
+    setViewMode(viewMode) {
+      var _a2;
+      this.viewMode = viewMode;
+      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onViewMode(viewMode);
+    },
+    setImageSize(size4) {
+      var _a2;
+      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onImageSize(size4);
+    },
+    setOnChangeHandlers(handlers) {
+      this.onChangeHandlers = handlers;
+      return () => {
+        if (this.onChangeHandlers === handlers) {
+          this.onChangeHandlers = void 0;
+        }
+      };
+    },
+    toggleBackground() {
+      var _a2;
+      this.viewOptions.background = !this.viewOptions.background;
+      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onViewOptions(this.viewOptions);
+    },
+    toggleInteractive() {
+      if (this.viewMode !== "image") {
+        this.setViewMode("image");
+      } else {
+        this.setViewMode("interactive");
+      }
+    }
+  };
+}
+
+// src/obsidian/menu/create-embed-menu.ts
+var import_obsidian12 = require("obsidian");
+function background(menuItem, controller) {
+  var _a2;
+  return menuItem.setTitle("Show background").setChecked(
+    (_a2 = controller.getViewOptions().background) != null ? _a2 : null
+  );
+}
+function interactiveMode(menuItem, controller) {
+  return menuItem.setTitle("Interactive Mode").setIcon("hand").setChecked(
+    controller.getViewMode() === "interactive"
+  );
+}
+function openMdNewTab(menuItem) {
+  return menuItem.setIcon(MARKDOWN_ICON_NAME).setTitle("Open as markdown (new tab)");
+}
+function editNewTab(menuItem) {
+  return menuItem.setIcon("pencil").setTitle("Edit drawing (new tab)");
+}
+function readOnlyNewTab(menuItem) {
+  return menuItem.setIcon("eye").setTitle("Read-only view (new tab)");
+}
+function boundsText(bounds) {
+  const { w, h, x, y } = bounds;
+  return `size=${w.toFixed(0)},${h.toFixed(0)};pos=${x.toFixed(0)},${y.toFixed(0)}`;
+}
+function createEmbedMenu({
+  controller,
+  plugin,
+  selectEmbedLinkText,
+  tFile
+}) {
+  const bounds = controller.getViewOptions().bounds;
+  return new import_obsidian12.Menu().addItem((item) => pluginMenuLabel(item, {
+    title: tFile.name
+  })).addItem((item) => background(item, controller).onClick(() => {
+    controller.toggleBackground();
+    background(item, controller);
+  })).addItem((item) => interactiveMode(item, controller).onClick(() => {
+    controller.toggleInteractive();
+    interactiveMode(item, controller);
+  })).addItem((item) => item.setTitle("Select embed link text").setIcon("text-cursor").onClick(selectEmbedLinkText)).addSeparator().addItem((item) => openMdNewTab(item).onClick(() => {
+    plugin.openTldrFile(tFile, "new-tab", "markdown");
+  })).addItem((item) => editNewTab(item).onClick(() => {
+    plugin.openTldrFile(tFile, "new-tab", "tldraw-view");
+  })).addItem((item) => readOnlyNewTab(item).onClick(() => plugin.openTldrFile(tFile, "new-tab", "tldraw-read-only"))).addSeparator().addItem((item) => item.setIsLabel(true).setIcon("info").setTitle(`Bounds: ${bounds ? boundsText(bounds) : "[No bounds set]"}`)).addItem((item) => item.setIcon("frame").setTitle("Copy bounds").setDisabled(bounds === void 0).onClick(() => {
+    if (bounds) {
+      window.navigator.clipboard.writeText(boundsText(bounds));
+    }
+  }));
+}
+
+// src/obsidian/helpers/show-embed-context-menu.ts
+function showEmbedContextMenu(ev, {
+  tFile,
+  plugin,
+  controller,
+  focusContainer
+}) {
+  createEmbedMenu({
+    tFile,
+    plugin,
+    controller: {
+      toggleBackground: () => {
+        return controller.toggleBackground();
+      },
+      toggleInteractive: () => {
+        controller.toggleInteractive();
+        focusContainer.focus();
+      },
+      getViewMode: () => {
+        return controller.getViewMode();
+      },
+      getViewOptions: () => {
+        return controller.getViewOptions();
+      }
+    },
+    selectEmbedLinkText: (ev2) => {
+      focusContainer.dispatchEvent(new MouseEvent("click", {
+        bubbles: ev2.bubbles,
+        cancelable: ev2.cancelable,
+        clientX: ev2.clientX,
+        clientY: ev2.clientY
+      }));
+    }
+  }).showAtMouseEvent(ev != null ? ev : (
+    // simulate click when it ev is undefined, e.g. MouseEvent not given because it was a touch event.
+    new MouseEvent("click")
+  ));
+}
+
 // src/obsidian/plugin/markdown-post-processor.ts
 async function markdownPostProcessor(plugin, element, context) {
   const log2 = (...args) => !LOGGING_ENABLED ? () => {
@@ -94812,7 +95445,7 @@ async function markdownPostProcessor(plugin, element, context) {
     return;
   }
   const file = plugin.app.vault.getAbstractFileByPath(context.sourcePath);
-  if (!(file instanceof import_obsidian11.TFile))
+  if (!(file instanceof import_obsidian13.TFile))
     return;
   if (!context.frontmatter || context.frontmatter["tldraw-file"] !== true) {
     return;
@@ -94851,59 +95484,62 @@ async function markdownPostProcessor(plugin, element, context) {
       internalEmbedDiv.removeClass("markdown-embed");
       internalEmbedDiv.removeClass("inline-embed");
     }
-    const tldrawEmbedView = createTldrawEmbedView(internalEmbedDiv, {
+    const embedValues = parseEmbedValues(internalEmbedDiv);
+    const controller = createTldrawAppViewModeController(embedValues.bounds);
+    const { tldrawEmbedViewContent } = createTldrawEmbedView(internalEmbedDiv, {
       file,
-      plugin
-    });
-    const tldrawEmbedViewContent = tldrawEmbedView.createDiv({
-      cls: "ptl-view-content"
+      plugin,
+      controller
     });
     const parent = internalEmbedDiv.parentElement;
     if (parent === null)
       throw Error(`${markdownPostProcessor.name}: No parent element for internalEmbedDiv.
 
 	It is needed to ensure the attached react root component is unmounted properly.`);
-    const fileData = await plugin.app.vault.read(file);
-    const parsedData = parseTLDataDocument(plugin.manifest.version, fileData);
-    const reactRoot = createRootAndRenderTldrawApp(
-      tldrawEmbedViewContent,
-      parsedData,
-      (_) => {
-        console.log("Ignore saving file due to read only mode.");
-      },
-      plugin,
-      {
-        isReadonly: true,
-        autoFocus: false,
-        inputFocus: true,
-        selectNone: true,
-        hideUi: true,
-        zoomToBounds: true,
-        defaultFontOverrides: plugin.getFontOverrides()
-      }
-    );
+    let reactRoot;
     let timer = null;
+    const activateReactRoot = async () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+      try {
+        reactRoot = await createReactTldrawAppRoot({
+          controller,
+          file,
+          plugin,
+          tldrawEmbedViewContent,
+          embedValues
+        });
+      } catch (e2) {
+        console.error("There was an error while mounting the tldraw app: ", e2);
+      }
+    };
     const markdownObserverFn = (m) => {
-      var _a2;
-      log2(`${markdownObserverFn.name}`);
-      if (!["alt", "width", "height"].contains((_a2 = m[0]) == null ? void 0 : _a2.attributeName)) {
+      if (reactRoot === void 0) {
+        activateReactRoot().then(() => {
+          observerParent.observe(parent, { childList: true });
+        });
+        return;
+      }
+      const { target, attributeName } = m[0];
+      if (!(target instanceof HTMLElement) || !["alt", "width", "height"].contains(attributeName)) {
         return;
       }
       if (timer) {
         clearTimeout(timer);
       }
+      const { bounds, imageSize } = parseEmbedValues(target);
       timer = setTimeout(async () => {
-        timer = null;
-        internalEmbedDiv.empty();
+        controller.setImageSize(imageSize);
+        controller.setImageBounds(bounds);
       }, 500);
     };
     const observer = new CustomMutationObserver(markdownObserverFn, "markdownPostProcessorObserverFn");
     observer.observe(internalEmbedDiv, { attributes: true });
     const observerParent = new CustomMutationObserver(function markdownParentObserverFn(m) {
-      log2(`${markdownParentObserverFn.name}`);
       if (!parent.contains(internalEmbedDiv)) {
-        log2(`${markdownParentObserverFn.name}: Unmounting react root`);
-        reactRoot.unmount();
+        reactRoot == null ? void 0 : reactRoot.unmount();
+        reactRoot = void 0;
         if (timer) {
           clearTimeout(timer);
         }
@@ -94912,72 +95548,130 @@ async function markdownPostProcessor(plugin, element, context) {
       }
     }, "markdownPostProcessorObserverFn");
     observerParent.observe(parent, { childList: true });
+    await activateReactRoot();
     return;
   } else if (!isInternal && isMarkdownView) {
     throw new Error(`${markdownPostProcessor.name}: Unexpected`);
   }
   throw new Error(`${markdownPostProcessor.name}: Unexpected`);
 }
-function createTldrawViewHeader(embedViewContent, {
-  file,
-  plugin,
-  selectEmbedText
-}) {
-  const tldrawViewHeader = embedViewContent.createDiv({
-    cls: ["ptl-embed-context-bar"]
-  });
-  const tldrawTitle = tldrawViewHeader.createDiv({
-    cls: ["ptl-embed-title-bar"]
-  }, (el) => {
-    el.onClickEvent((ev) => {
-      selectEmbedText(ev);
-      ev.stopPropagation();
-    });
-  });
-  tldrawTitle.innerText = file.name;
-  const actionBar = tldrawViewHeader.createDiv({ cls: "ptl-embed-action-bar" });
-  new import_obsidian11.ButtonComponent(actionBar).setClass("clickable-icon").setIcon(MARKDOWN_ICON_NAME).setTooltip("Open as markdown").onClick(() => {
-    plugin.openTldrFile(file, "new-tab", "markdown");
-  });
-  new import_obsidian11.ButtonComponent(actionBar).setClass("clickable-icon").setIcon(TLDRAW_ICON_NAME).setTooltip("Edit").onClick(() => {
-    plugin.openTldrFile(file, "new-tab");
-  });
-  new import_obsidian11.ButtonComponent(actionBar).setClass("clickable-icon").setIcon("view").setTooltip("Read-only view").onClick((ev) => {
-    plugin.openTldrFile(file, "new-tab", "tldraw-read-only");
-  });
-  return tldrawViewHeader;
-}
 function createTldrawEmbedView(internalEmbedDiv, {
   file,
-  plugin
+  plugin,
+  controller
 }) {
-  return internalEmbedDiv.createDiv({
-    cls: "ptl-markdown-embed"
-  }, (el) => {
-    const viewHeader = createTldrawViewHeader(el, {
-      file,
-      plugin,
-      selectEmbedText: (ev) => {
-        internalEmbedDiv.dispatchEvent(new MouseEvent("click", {
-          bubbles: ev.bubbles,
-          cancelable: ev.cancelable,
-          clientX: ev.clientX,
-          clientY: ev.clientY
-        }));
-      }
-    });
-    el.addEventListener("click", (ev) => ev.stopPropagation());
-    viewHeader.hide();
-    internalEmbedDiv.addEventListener("focusin", () => {
-      viewHeader.show();
-    });
-    internalEmbedDiv.addEventListener("focusout", (event) => {
-      if (event.relatedTarget instanceof Node && internalEmbedDiv.contains(event.relatedTarget)) {
+  const tldrawEmbedView = internalEmbedDiv.createDiv({ cls: "ptl-markdown-embed" });
+  const tldrawEmbedViewContent = tldrawEmbedView.createDiv({ cls: "ptl-view-content" });
+  tldrawEmbedView.addEventListener("click", (ev) => {
+    if (controller.getViewMode() === "interactive") {
+      ev.stopPropagation();
+    }
+  });
+  tldrawEmbedViewContent.addEventListener("contextmenu", (ev) => {
+    if (ev.button === 2) {
+      showEmbedContextMenu(ev, {
+        plugin,
+        controller,
+        focusContainer: internalEmbedDiv,
+        tFile: file
+      });
+    }
+    ev.preventDefault();
+  });
+  internalEmbedDiv.addEventListener("focusout", (event) => {
+    if (event.relatedTarget instanceof Node) {
+      if (event.relatedTarget instanceof HTMLTextAreaElement) {
         return;
       }
-      viewHeader.hide();
-    });
+      if (event.target === internalEmbedDiv && internalEmbedDiv.contains(event.relatedTarget)) {
+        return;
+      }
+      if (internalEmbedDiv.contains(event.relatedTarget)) {
+        return;
+      }
+    }
+    controller.setViewMode("image");
   });
+  {
+    let longPressTimer;
+    tldrawEmbedViewContent.addEventListener("touchstart", (ev) => {
+      clearTimeout(longPressTimer);
+      longPressTimer = setTimeout(() => showEmbedContextMenu(void 0, {
+        plugin,
+        controller,
+        focusContainer: tldrawEmbedView,
+        tFile: file
+      }), 500);
+    }, { passive: true });
+    tldrawEmbedViewContent.addEventListener("touchmove", (ev) => {
+      clearTimeout(longPressTimer);
+    });
+    tldrawEmbedViewContent.addEventListener("touchend", (ev) => {
+      clearTimeout(longPressTimer);
+    });
+  }
+  return {
+    tldrawEmbedView,
+    tldrawEmbedViewContent
+  };
+}
+function parseEmbedValues(el, imageBounds = {
+  pos: { x: 0, y: 0 },
+  size: {
+    w: Number.NaN,
+    h: Number.NaN
+  }
+}) {
+  var _a2, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
+  const alt = (_b2 = (_a2 = el.attributes.getNamedItem("alt")) == null ? void 0 : _a2.value) != null ? _b2 : "";
+  const altSplit = alt.split(";").map((e2) => e2.trim());
+  const altEntries = altSplit.map((e2) => e2.split("="));
+  const altNamedProps = Object.fromEntries(altEntries);
+  const posValue = (_d = (_c = altNamedProps["pos"]) == null ? void 0 : _c.split(",").map((e2) => Number.parseFloat(e2))) != null ? _d : [];
+  const pos = { x: (_e = posValue.at(0)) != null ? _e : imageBounds.pos.x, y: (_f = posValue.at(1)) != null ? _f : imageBounds.pos.y };
+  const sizeValue = (_h = (_g = altNamedProps["size"]) == null ? void 0 : _g.split(",").map((e2) => Number.parseFloat(e2))) != null ? _h : [];
+  const size4 = { w: (_i = sizeValue.at(0)) != null ? _i : imageBounds.size.w, h: (_j = sizeValue.at(1)) != null ? _j : imageBounds.size.h };
+  const bounds = Number.isNaN(pos.x) || Number.isNaN(pos.y) || Number.isNaN(size4.w) || Number.isNaN(size4.h) ? void 0 : { pos, size: size4 };
+  const imageSize = {
+    width: Number.parseFloat((_l = (_k = el.attributes.getNamedItem("width")) == null ? void 0 : _k.value) != null ? _l : ""),
+    height: Number.parseFloat((_n = (_m = el.attributes.getNamedItem("height")) == null ? void 0 : _m.value) != null ? _n : "")
+  };
+  return {
+    bounds: bounds === void 0 ? void 0 : {
+      ...bounds.pos,
+      ...bounds.size
+    },
+    imageSize
+  };
+}
+async function createReactTldrawAppRoot({
+  controller,
+  file,
+  plugin,
+  tldrawEmbedViewContent,
+  embedValues
+}) {
+  const fileData = await plugin.app.vault.read(file);
+  const parsedData = parseTLDataDocument(plugin.manifest.version, fileData);
+  const { bounds, imageSize } = embedValues;
+  return createRootAndRenderTldrawApp(
+    tldrawEmbedViewContent,
+    parsedData,
+    (_) => {
+      console.log("Ignore saving file due to read only mode.");
+    },
+    plugin,
+    {
+      isReadonly: true,
+      controller,
+      inputFocus: true,
+      selectNone: true,
+      initialTool: "hand",
+      initialBounds: bounds,
+      initialImageSize: imageSize,
+      zoomToBounds: true
+    }
+  );
 }
 
 // src/obsidian/plugin/commands.ts
@@ -95007,9 +95701,18 @@ function registerCommands(plugin) {
   });
   plugin.addCommand({
     id: "new-tldraw-file-new-tab",
-    name: "Create a new drawing in a new tab",
+    name: "Create a new drawing (.md) in a new tab",
     callback: async () => {
       await plugin.createAndOpenUntitledTldrFile("new-tab");
+    }
+  });
+  plugin.addCommand({
+    id: "new-tldraw-file-new-tab-2",
+    name: "Create a new drawing (.tldr) in a new tab",
+    callback: async () => {
+      await plugin.createAndOpenUntitledTldrFile("new-tab", {
+        inMarkdown: false
+      });
     }
   });
   plugin.addCommand({
@@ -95067,7 +95770,7 @@ function registerCommands(plugin) {
 }
 
 // src/main.ts
-var TldrawPlugin = class extends import_obsidian12.Plugin {
+var TldrawPlugin = class extends import_obsidian14.Plugin {
   constructor() {
     super(...arguments);
     this.transientUpdate = false;
@@ -95083,6 +95786,12 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
     this.setTldrawView = async (leaf) => {
       await leaf.setViewState({
         type: VIEW_TYPE_TLDRAW,
+        state: { ...leaf.view.getState(), manuallyTriggered: true }
+      });
+    };
+    this.setTldrawFileView = async (leaf) => {
+      await leaf.setViewState({
+        type: VIEW_TYPE_TLDRAW_FILE,
         state: { ...leaf.view.getState(), manuallyTriggered: true }
       });
     };
@@ -95112,11 +95821,8 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
       attachTo,
       tlStore
     } = {}) => {
-      const { newFilePrefix, newFileTimeFormat, folder, useAttachmentsFolder } = this.settings;
-      const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian12.moment)().format(newFileTimeFormat) : "";
-      let filename = newFilePrefix + date;
-      if (filename.trim() === "")
-        filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian12.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
+      const filename = this.createDefaultFilename();
+      const { folder, useAttachmentsFolder } = this.settings;
       const res = !useAttachmentsFolder || attachTo === void 0 ? { filename, folder } : await createAttachmentFilepath(filename, attachTo, this.app.fileManager);
       return await this.createTldrFile(res.filename, {
         tlStore,
@@ -95138,9 +95844,20 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
       await leaf.openFile(file);
       await this.updateViewMode(viewType, leaf);
     };
-    this.createAndOpenUntitledTldrFile = async (location) => {
-      const file = await this.createUntitledTldrFile();
-      this.openTldrFile(file, location);
+    this.createAndOpenUntitledTldrFile = async (location, {
+      inMarkdown = true
+    } = {}) => {
+      if (inMarkdown) {
+        const file = await this.createUntitledTldrFile();
+        this.openTldrFile(file, location);
+      } else {
+        const filename = this.createDefaultFilename();
+        this.openTldrFile(
+          await this.createFile(`${filename}.tldr`, this.settings.folder),
+          location,
+          VIEW_TYPE_TLDRAW_FILE
+        );
+      }
     };
   }
   async onload() {
@@ -95152,10 +95869,14 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
       VIEW_TYPE_TLDRAW_READ_ONLY,
       (leaf) => new TldrawReadonly(leaf, this)
     );
+    this.registerView(
+      VIEW_TYPE_TLDRAW_FILE,
+      (leaf) => new TldrawFileView(leaf, this)
+    );
     await this.loadSettings();
     this.addSettingTab(new TldrawSettingsTab(this.app, this));
-    (0, import_obsidian12.addIcon)(TLDRAW_ICON_NAME, TLDRAW_ICON);
-    (0, import_obsidian12.addIcon)(MARKDOWN_ICON_NAME, MARKDOWN_ICON);
+    (0, import_obsidian14.addIcon)(TLDRAW_ICON_NAME, TLDRAW_ICON);
+    (0, import_obsidian14.addIcon)(MARKDOWN_ICON_NAME, MARKDOWN_ICON);
     this.addRibbonIcon(
       TLDRAW_ICON_NAME,
       RIBBON_NEW_FILE,
@@ -95177,7 +95898,7 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
     this.registerCommands();
     this.switchToTldrawViewAfterLoad();
     this.registerMarkdownPostProcessor((e2, c2) => markdownPostProcessor(this, e2, c2));
-    this.registerExtensions(["tldr"], VIEW_TYPE_TLDRAW_READ_ONLY);
+    this.registerExtensions(["tldr"], VIEW_TYPE_TLDRAW_FILE);
   }
   onunload() {
     this.unsubscribeToViewModeState();
@@ -95186,7 +95907,7 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
   registerEvents() {
     const self2 = this;
     this.register(
-      around(import_obsidian12.WorkspaceLeaf.prototype, {
+      around(import_obsidian14.WorkspaceLeaf.prototype, {
         setViewState(next) {
           return function(state, ...rest) {
             const leaf = this;
@@ -95203,7 +95924,7 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
                 const file = self2.app.vault.getAbstractFileByPath(
                   filePath
                 );
-                if (file instanceof import_obsidian12.TFile) {
+                if (file instanceof import_obsidian14.TFile) {
                   self2.setLeafFileViewMode(view, leaf, file);
                   self2.updateStatusBarViewMode(view);
                 }
@@ -95219,7 +95940,7 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
       this.app.workspace.on("editor-menu", (menu, editor, source) => {
         const file = source.file;
         const leaf = this.app.workspace.getLeaf(false);
-        if (!leaf || !(file instanceof import_obsidian12.TFile))
+        if (!leaf || !(file instanceof import_obsidian14.TFile))
           return;
         if (!this.isTldrawFile(file))
           return;
@@ -95232,7 +95953,7 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
     );
     this.registerEvent(
       this.app.workspace.on("file-menu", (menu, file, source, leaf) => {
-        if (!(file instanceof import_obsidian12.TFile))
+        if (!(file instanceof import_obsidian14.TFile))
           return;
         if (file.path.endsWith(TLDRAW_FILE_EXTENSION)) {
           menu.addItem((item) => pluginMenuLabel(
@@ -95244,8 +95965,8 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
                   await this.app.vault.read(file)
                 )
               });
-              await this.openTldrFile(newFile, "new-tab", "tldraw-view");
-              new import_obsidian12.Notice(`Created a new file for editing "${newFile.path}"`);
+              await this.openTldrFile(newFile, "new-tab", VIEW_TYPE_TLDRAW_FILE);
+              new import_obsidian14.Notice(`Created a new file for editing "${newFile.path}"`);
             });
           });
           return;
@@ -95334,12 +96055,16 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
       case VIEW_TYPE_TLDRAW_READ_ONLY:
         await this.setTldrawViewPreview(leaf);
         break;
+      case VIEW_TYPE_TLDRAW_FILE:
+        await this.setTldrawViewPreview(leaf);
+        break;
       default:
+        console.warn("Uknown tldraw plugin view: ", view);
         await this.setMarkdownView(leaf);
     }
   }
   async createFile(filename, foldername, data) {
-    const folderpath = (0, import_obsidian12.normalizePath)(foldername || this.settings.folder);
+    const folderpath = (0, import_obsidian14.normalizePath)(foldername || this.settings.folder);
     await checkAndCreateFolder(folderpath, this.app.vault);
     const fname = getNewUniqueFilepath(
       this.app.vault,
@@ -95347,6 +96072,14 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
       folderpath
     );
     return await this.app.vault.create(fname, data != null ? data : "");
+  }
+  createDefaultFilename() {
+    const { newFilePrefix, newFileTimeFormat } = this.settings;
+    const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian14.moment)().format(newFileTimeFormat) : "";
+    let filename = newFilePrefix + date;
+    if (filename.trim() === "")
+      filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian14.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
+    return filename;
   }
   isTldrawFile(file) {
     if (!file)
@@ -95357,7 +96090,7 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
   switchToTldrawViewAfterLoad() {
     this.app.workspace.onLayoutReady(() => {
       for (let leaf of this.app.workspace.getLeavesOfType("markdown")) {
-        if (leaf.view instanceof import_obsidian12.MarkdownView && leaf.view.file && this.isTldrawFile(leaf.view.file)) {
+        if (leaf.view instanceof import_obsidian14.MarkdownView && leaf.view.file && this.isTldrawFile(leaf.view.file)) {
           this.updateViewMode(VIEW_TYPE_TLDRAW, leaf);
         }
       }
@@ -95377,6 +96110,12 @@ var TldrawPlugin = class extends import_obsidian12.Plugin {
     var _a2;
     return processFontOverrides((_a2 = this.settings.fonts) == null ? void 0 : _a2.overrides, (font) => {
       return this.app.vault.adapter.getResourcePath(font).split("?")[0];
+    });
+  }
+  getIconOverrides() {
+    var _a2;
+    return processIconOverrides((_a2 = this.settings.icons) == null ? void 0 : _a2.overrides, (icon) => {
+      return this.app.vault.adapter.getResourcePath(icon).split("?")[0];
     });
   }
 };
