@@ -296,7 +296,7 @@ $("h1").each(function() {
 			<key>RocketPy</key>
 			<dict>
 				<key>date</key>
-				<date>2024-08-28T15:10:32Z</date>
+				<date>2024-09-13T13:55:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3236,20 +3236,6 @@ $("h1").each(function() {
 					<string>https://contextily.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
-			<key>https://docs.manim.community/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-07-07T08:21:35Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Manim</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.manim.community/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3461,6 +3447,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://causalpy.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://docs.manim.community/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-09-12T16:21:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Manim</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.manim.community/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://docs.marimo.io/</key>
