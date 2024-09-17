@@ -9,7 +9,12 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __knownSymbol = (name, symbol) => (symbol = Symbol[name]) ? symbol : Symbol.for("Symbol." + name);
+var __typeError = (msg2) => {
+  throw TypeError(msg2);
+};
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
@@ -34,19 +39,48 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var __decorateClass = (decorators, target, key, kind) => {
-  var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc(target, key) : target;
-  for (var i = decorators.length - 1, decorator; i >= 0; i--)
-    if (decorator = decorators[i])
-      result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp(target, key, result);
-  return result;
+var __decoratorStart = (base) => {
+  var _a3;
+  return [, , , __create((_a3 = base == null ? void 0 : base[__knownSymbol("metadata")]) != null ? _a3 : null)];
 };
-var __publicField = (obj, key, value) => {
-  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+var __decoratorStrings = ["class", "method", "getter", "setter", "accessor", "field", "value", "get", "set"];
+var __expectFn = (fn) => fn !== void 0 && typeof fn !== "function" ? __typeError("Function expected") : fn;
+var __decoratorContext = (kind, name, done, metadata, fns) => ({ kind: __decoratorStrings[kind], name, metadata, addInitializer: (fn) => done._ ? __typeError("Already initialized") : fns.push(__expectFn(fn || null)) });
+var __decoratorMetadata = (array2, target) => __defNormalProp(target, __knownSymbol("metadata"), array2[3]);
+var __runInitializers = (array2, flags, self2, value) => {
+  for (var i = 0, fns = array2[flags >> 1], n2 = fns && fns.length; i < n2; i++) flags & 1 ? fns[i].call(self2) : value = fns[i].call(self2, value);
   return value;
 };
+var __decorateElement = (array2, flags, name, decorators, target, extra) => {
+  var fn, it, done, ctx, access, k = flags & 7, s = !!(flags & 8), p = !!(flags & 16);
+  var j = k > 3 ? array2.length + 1 : k ? s ? 1 : 2 : 0, key = __decoratorStrings[k + 5];
+  var initializers = k > 3 && (array2[j - 1] = []), extraInitializers = array2[j] || (array2[j] = []);
+  var desc = k && (!p && !s && (target = target.prototype), k < 5 && (k > 3 || !p) && __getOwnPropDesc(k < 4 ? target : { get [name]() {
+    return __privateGet(this, extra);
+  }, set [name](x) {
+    return __privateSet(this, extra, x);
+  } }, name));
+  k ? p && k < 4 && __name(extra, (k > 2 ? "set " : k > 1 ? "get " : "") + name) : __name(target, name);
+  for (var i = decorators.length - 1; i >= 0; i--) {
+    ctx = __decoratorContext(k, name, done = {}, array2[3], extraInitializers);
+    if (k) {
+      ctx.static = s, ctx.private = p, access = ctx.access = { has: p ? (x) => __privateIn(target, x) : (x) => name in x };
+      if (k ^ 3) access.get = p ? (x) => (k ^ 1 ? __privateGet : __privateMethod)(x, target, k ^ 4 ? extra : desc.get) : (x) => x[name];
+      if (k > 2) access.set = p ? (x, y) => __privateSet(x, target, y, k ^ 4 ? extra : desc.set) : (x, y) => x[name] = y;
+    }
+    it = (0, decorators[i])(k ? k < 4 ? p ? extra : desc[key] : k > 4 ? void 0 : { get: desc.get, set: desc.set } : target, ctx), done._ = 1;
+    if (k ^ 4 || it === void 0) __expectFn(it) && (k > 4 ? initializers.unshift(it) : k ? p ? extra = it : desc[key] = it : target = it);
+    else if (typeof it !== "object" || it === null) __typeError("Object expected");
+    else __expectFn(fn = it.get) && (desc.get = fn), __expectFn(fn = it.set) && (desc.set = fn), __expectFn(fn = it.init) && initializers.unshift(fn);
+  }
+  return k || __decoratorMetadata(array2, target), desc && __defProp(target, name, desc), p ? k ^ 4 ? extra : desc : target;
+};
+var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+var __accessCheck = (obj, member, msg2) => member.has(obj) || __typeError("Cannot " + msg2);
+var __privateIn = (member, obj) => Object(obj) !== obj ? __typeError('Cannot use the "in" operator on this value') : member.has(obj);
+var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read from private field"), getter ? getter.call(obj) : member.get(obj));
+var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
+var __privateMethod = (obj, member, method) => (__accessCheck(obj, member, "access private method"), method);
 
 // node_modules/core-js/internals/global-this.js
 var require_global_this = __commonJS({
@@ -58,7 +92,7 @@ var require_global_this = __commonJS({
     module2.exports = // eslint-disable-next-line es/no-global-this -- safe
     check(typeof globalThis == "object" && globalThis) || check(typeof window == "object" && window) || // eslint-disable-next-line no-restricted-globals -- safe
     check(typeof self == "object" && self) || check(typeof global == "object" && global) || check(typeof exports == "object" && exports) || // eslint-disable-next-line no-new-func -- fallback
-    function() {
+    /* @__PURE__ */ function() {
       return this;
     }() || Function("return this")();
   }
@@ -208,8 +242,7 @@ var require_require_object_coercible = __commonJS({
     var isNullOrUndefined = require_is_null_or_undefined();
     var $TypeError = TypeError;
     module2.exports = function(it) {
-      if (isNullOrUndefined(it))
-        throw new $TypeError("Can't call method on " + it);
+      if (isNullOrUndefined(it)) throw new $TypeError("Can't call method on " + it);
       return it;
     };
   }
@@ -306,8 +339,7 @@ var require_environment_v8_version = __commonJS({
       match = userAgent.match(/Edge\/(\d+)/);
       if (!match || match[1] >= 74) {
         match = userAgent.match(/Chrome\/(\d+)/);
-        if (match)
-          version2 = +match[1];
+        if (match) version2 = +match[1];
       }
     }
     module2.exports = version2;
@@ -380,8 +412,7 @@ var require_a_callable = __commonJS({
     var tryToString = require_try_to_string();
     var $TypeError = TypeError;
     module2.exports = function(argument) {
-      if (isCallable(argument))
-        return argument;
+      if (isCallable(argument)) return argument;
       throw new $TypeError(tryToString(argument) + " is not a function");
     };
   }
@@ -410,12 +441,9 @@ var require_ordinary_to_primitive = __commonJS({
     var $TypeError = TypeError;
     module2.exports = function(input, pref) {
       var fn, val;
-      if (pref === "string" && isCallable(fn = input.toString) && !isObject(val = call2(fn, input)))
-        return val;
-      if (isCallable(fn = input.valueOf) && !isObject(val = call2(fn, input)))
-        return val;
-      if (pref !== "string" && isCallable(fn = input.toString) && !isObject(val = call2(fn, input)))
-        return val;
+      if (pref === "string" && isCallable(fn = input.toString) && !isObject(val = call2(fn, input))) return val;
+      if (isCallable(fn = input.valueOf) && !isObject(val = call2(fn, input))) return val;
+      if (pref !== "string" && isCallable(fn = input.toString) && !isObject(val = call2(fn, input))) return val;
       throw new $TypeError("Can't convert object to primitive value");
     };
   }
@@ -456,10 +484,10 @@ var require_shared_store = __commonJS({
     var SHARED = "__core-js_shared__";
     var store = module2.exports = globalThis2[SHARED] || defineGlobalProperty(SHARED, {});
     (store.versions || (store.versions = [])).push({
-      version: "3.38.0",
+      version: "3.38.1",
       mode: IS_PURE ? "pure" : "global",
       copyright: "\xA9 2014-2024 Denis Pushkarev (zloirock.ru)",
-      license: "https://github.com/zloirock/core-js/blob/v3.38.0/LICENSE",
+      license: "https://github.com/zloirock/core-js/blob/v3.38.1/LICENSE",
       source: "https://github.com/zloirock/core-js"
     });
   }
@@ -550,20 +578,16 @@ var require_to_primitive = __commonJS({
     var $TypeError = TypeError;
     var TO_PRIMITIVE = wellKnownSymbol("toPrimitive");
     module2.exports = function(input, pref) {
-      if (!isObject(input) || isSymbol(input))
-        return input;
+      if (!isObject(input) || isSymbol(input)) return input;
       var exoticToPrim = getMethod2(input, TO_PRIMITIVE);
       var result;
       if (exoticToPrim) {
-        if (pref === void 0)
-          pref = "default";
+        if (pref === void 0) pref = "default";
         result = call2(exoticToPrim, input, pref);
-        if (!isObject(result) || isSymbol(result))
-          return result;
+        if (!isObject(result) || isSymbol(result)) return result;
         throw new $TypeError("Can't convert object to primitive value");
       }
-      if (pref === void 0)
-        pref = "number";
+      if (pref === void 0) pref = "number";
       return ordinaryToPrimitive(input, pref);
     };
   }
@@ -629,13 +653,11 @@ var require_object_get_own_property_descriptor = __commonJS({
     exports.f = DESCRIPTORS ? $getOwnPropertyDescriptor : function getOwnPropertyDescriptor(O, P) {
       O = toIndexedObject(O);
       P = toPropertyKey(P);
-      if (IE8_DOM_DEFINE)
-        try {
-          return $getOwnPropertyDescriptor(O, P);
-        } catch (error) {
-        }
-      if (hasOwn(O, P))
-        return createPropertyDescriptor(!call2(propertyIsEnumerableModule.f, O, P), O[P]);
+      if (IE8_DOM_DEFINE) try {
+        return $getOwnPropertyDescriptor(O, P);
+      } catch (error) {
+      }
+      if (hasOwn(O, P)) return createPropertyDescriptor(!call2(propertyIsEnumerableModule.f, O, P), O[P]);
     };
   }
 });
@@ -664,8 +686,7 @@ var require_an_object = __commonJS({
     var $String = String;
     var $TypeError = TypeError;
     module2.exports = function(argument) {
-      if (isObject(argument))
-        return argument;
+      if (isObject(argument)) return argument;
       throw new $TypeError($String(argument) + " is not an object");
     };
   }
@@ -706,15 +727,12 @@ var require_object_define_property = __commonJS({
       anObject(O);
       P = toPropertyKey(P);
       anObject(Attributes);
-      if (IE8_DOM_DEFINE)
-        try {
-          return $defineProperty(O, P, Attributes);
-        } catch (error) {
-        }
-      if ("get" in Attributes || "set" in Attributes)
-        throw new $TypeError("Accessors not supported");
-      if ("value" in Attributes)
-        O[P] = Attributes.value;
+      if (IE8_DOM_DEFINE) try {
+        return $defineProperty(O, P, Attributes);
+      } catch (error) {
+      }
+      if ("get" in Attributes || "set" in Attributes) throw new $TypeError("Accessors not supported");
+      if ("value" in Attributes) O[P] = Attributes.value;
       return O;
     };
   }
@@ -841,8 +859,7 @@ var require_internal_state = __commonJS({
       store.has = store.has;
       store.set = store.set;
       set = function(it, metadata) {
-        if (store.has(it))
-          throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
+        if (store.has(it)) throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
         metadata.facade = it;
         store.set(it, metadata);
         return metadata;
@@ -857,8 +874,7 @@ var require_internal_state = __commonJS({
       STATE = sharedKey("state");
       hiddenKeys[STATE] = true;
       set = function(it, metadata) {
-        if (hasOwn(it, STATE))
-          throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
+        if (hasOwn(it, STATE)) throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
         metadata.facade = it;
         createNonEnumerableProperty(it, STATE, metadata);
         return metadata;
@@ -910,25 +926,19 @@ var require_make_built_in = __commonJS({
       if (stringSlice($String(name), 0, 7) === "Symbol(") {
         name = "[" + replace($String(name), /^Symbol\(([^)]*)\).*$/, "$1") + "]";
       }
-      if (options && options.getter)
-        name = "get " + name;
-      if (options && options.setter)
-        name = "set " + name;
+      if (options && options.getter) name = "get " + name;
+      if (options && options.setter) name = "set " + name;
       if (!hasOwn(value, "name") || CONFIGURABLE_FUNCTION_NAME && value.name !== name) {
-        if (DESCRIPTORS)
-          defineProperty(value, "name", { value: name, configurable: true });
-        else
-          value.name = name;
+        if (DESCRIPTORS) defineProperty(value, "name", { value: name, configurable: true });
+        else value.name = name;
       }
       if (CONFIGURABLE_LENGTH && options && hasOwn(options, "arity") && value.length !== options.arity) {
         defineProperty(value, "length", { value: options.arity });
       }
       try {
         if (options && hasOwn(options, "constructor") && options.constructor) {
-          if (DESCRIPTORS)
-            defineProperty(value, "prototype", { writable: false });
-        } else if (value.prototype)
-          value.prototype = void 0;
+          if (DESCRIPTORS) defineProperty(value, "prototype", { writable: false });
+        } else if (value.prototype) value.prototype = void 0;
       } catch (error) {
       }
       var state = enforceInternalState(value);
@@ -952,34 +962,26 @@ var require_define_built_in = __commonJS({
     var makeBuiltIn = require_make_built_in();
     var defineGlobalProperty = require_define_global_property();
     module2.exports = function(O, key, value, options) {
-      if (!options)
-        options = {};
+      if (!options) options = {};
       var simple = options.enumerable;
       var name = options.name !== void 0 ? options.name : key;
-      if (isCallable(value))
-        makeBuiltIn(value, name, options);
+      if (isCallable(value)) makeBuiltIn(value, name, options);
       if (options.global) {
-        if (simple)
-          O[key] = value;
-        else
-          defineGlobalProperty(key, value);
+        if (simple) O[key] = value;
+        else defineGlobalProperty(key, value);
       } else {
         try {
-          if (!options.unsafe)
-            delete O[key];
-          else if (O[key])
-            simple = true;
+          if (!options.unsafe) delete O[key];
+          else if (O[key]) simple = true;
         } catch (error) {
         }
-        if (simple)
-          O[key] = value;
-        else
-          definePropertyModule.f(O, key, {
-            value,
-            enumerable: false,
-            configurable: !options.nonConfigurable,
-            writable: !options.nonWritable
-          });
+        if (simple) O[key] = value;
+        else definePropertyModule.f(O, key, {
+          value,
+          enumerable: false,
+          configurable: !options.nonConfigurable,
+          writable: !options.nonWritable
+        });
       }
       return O;
     };
@@ -1060,21 +1062,16 @@ var require_array_includes = __commonJS({
       return function($this, el, fromIndex) {
         var O = toIndexedObject($this);
         var length = lengthOfArrayLike(O);
-        if (length === 0)
-          return !IS_INCLUDES && -1;
+        if (length === 0) return !IS_INCLUDES && -1;
         var index2 = toAbsoluteIndex(fromIndex, length);
         var value;
-        if (IS_INCLUDES && el !== el)
-          while (length > index2) {
-            value = O[index2++];
-            if (value !== value)
-              return true;
-          }
-        else
-          for (; length > index2; index2++) {
-            if ((IS_INCLUDES || index2 in O) && O[index2] === el)
-              return IS_INCLUDES || index2 || 0;
-          }
+        if (IS_INCLUDES && el !== el) while (length > index2) {
+          value = O[index2++];
+          if (value !== value) return true;
+        }
+        else for (; length > index2; index2++) {
+          if ((IS_INCLUDES || index2 in O) && O[index2] === el) return IS_INCLUDES || index2 || 0;
+        }
         return !IS_INCLUDES && -1;
       };
     };
@@ -1104,12 +1101,10 @@ var require_object_keys_internal = __commonJS({
       var i = 0;
       var result = [];
       var key;
-      for (key in O)
-        !hasOwn(hiddenKeys, key) && hasOwn(O, key) && push(result, key);
-      while (names.length > i)
-        if (hasOwn(O, key = names[i++])) {
-          ~indexOf(result, key) || push(result, key);
-        }
+      for (key in O) !hasOwn(hiddenKeys, key) && hasOwn(O, key) && push(result, key);
+      while (names.length > i) if (hasOwn(O, key = names[i++])) {
+        ~indexOf(result, key) || push(result, key);
+      }
       return result;
     };
   }
@@ -1236,25 +1231,22 @@ var require_export = __commonJS({
       } else {
         target = globalThis2[TARGET] && globalThis2[TARGET].prototype;
       }
-      if (target)
-        for (key in source) {
-          sourceProperty = source[key];
-          if (options.dontCallGetSet) {
-            descriptor = getOwnPropertyDescriptor(target, key);
-            targetProperty = descriptor && descriptor.value;
-          } else
-            targetProperty = target[key];
-          FORCED = isForced(GLOBAL ? key : TARGET + (STATIC ? "." : "#") + key, options.forced);
-          if (!FORCED && targetProperty !== void 0) {
-            if (typeof sourceProperty == typeof targetProperty)
-              continue;
-            copyConstructorProperties(sourceProperty, targetProperty);
-          }
-          if (options.sham || targetProperty && targetProperty.sham) {
-            createNonEnumerableProperty(sourceProperty, "sham", true);
-          }
-          defineBuiltIn(target, key, sourceProperty, options);
+      if (target) for (key in source) {
+        sourceProperty = source[key];
+        if (options.dontCallGetSet) {
+          descriptor = getOwnPropertyDescriptor(target, key);
+          targetProperty = descriptor && descriptor.value;
+        } else targetProperty = target[key];
+        FORCED = isForced(GLOBAL ? key : TARGET + (STATIC ? "." : "#") + key, options.forced);
+        if (!FORCED && targetProperty !== void 0) {
+          if (typeof sourceProperty == typeof targetProperty) continue;
+          copyConstructorProperties(sourceProperty, targetProperty);
         }
+        if (options.sham || targetProperty && targetProperty.sham) {
+          createNonEnumerableProperty(sourceProperty, "sham", true);
+        }
+        defineBuiltIn(target, key, sourceProperty, options);
+      }
     };
   }
 });
@@ -1288,8 +1280,7 @@ var require_object_define_properties = __commonJS({
       var length = keys.length;
       var index2 = 0;
       var key;
-      while (length > index2)
-        definePropertyModule.f(O, key = keys[index2++], props[key]);
+      while (length > index2) definePropertyModule.f(O, key = keys[index2++], props[key]);
       return O;
     };
   }
@@ -1353,8 +1344,7 @@ var require_object_create = __commonJS({
       }
       NullProtoObject = typeof document != "undefined" ? document.domain && activeXDocument ? NullProtoObjectViaActiveX(activeXDocument) : NullProtoObjectViaIFrame() : NullProtoObjectViaActiveX(activeXDocument);
       var length = enumBugKeys.length;
-      while (length--)
-        delete NullProtoObject[PROTOTYPE][enumBugKeys[length]];
+      while (length--) delete NullProtoObject[PROTOTYPE][enumBugKeys[length]];
       return NullProtoObject();
     };
     hiddenKeys[IE_PROTO] = true;
@@ -1365,8 +1355,7 @@ var require_object_create = __commonJS({
         result = new EmptyConstructor();
         EmptyConstructor[PROTOTYPE] = null;
         result[IE_PROTO] = O;
-      } else
-        result = NullProtoObject();
+      } else result = NullProtoObject();
       return Properties === void 0 ? result : definePropertiesModule.f(result, Properties);
     };
   }
@@ -1464,8 +1453,7 @@ var require_does_not_exceed_safe_integer = __commonJS({
     var $TypeError = TypeError;
     var MAX_SAFE_INTEGER = 9007199254740991;
     module2.exports = function(it) {
-      if (it > MAX_SAFE_INTEGER)
-        throw $TypeError("Maximum allowed index exceeded");
+      if (it > MAX_SAFE_INTEGER) throw $TypeError("Maximum allowed index exceeded");
       return it;
     };
   }
@@ -1478,8 +1466,7 @@ var require_function_uncurry_this_clause = __commonJS({
     var classofRaw = require_classof_raw();
     var uncurryThis = require_function_uncurry_this();
     module2.exports = function(fn) {
-      if (classofRaw(fn) === "Function")
-        return uncurryThis(fn);
+      if (classofRaw(fn) === "Function") return uncurryThis(fn);
     };
   }
 });
@@ -1556,7 +1543,7 @@ var require_classof = __commonJS({
     var wellKnownSymbol = require_well_known_symbol();
     var TO_STRING_TAG = wellKnownSymbol("toStringTag");
     var $Object = Object;
-    var CORRECT_ARGUMENTS = classofRaw(function() {
+    var CORRECT_ARGUMENTS = classofRaw(/* @__PURE__ */ function() {
       return arguments;
     }()) === "Arguments";
     var tryGet = function(it, key) {
@@ -1589,8 +1576,7 @@ var require_is_constructor = __commonJS({
     var exec = uncurryThis(constructorRegExp.exec);
     var INCORRECT_TO_STRING = !constructorRegExp.test(noop3);
     var isConstructorModern = function isConstructor(argument) {
-      if (!isCallable(argument))
-        return false;
+      if (!isCallable(argument)) return false;
       try {
         construct(noop3, [], argument);
         return true;
@@ -1599,8 +1585,7 @@ var require_is_constructor = __commonJS({
       }
     };
     var isConstructorLegacy = function isConstructor(argument) {
-      if (!isCallable(argument))
-        return false;
+      if (!isCallable(argument)) return false;
       switch (classof(argument)) {
         case "AsyncFunction":
         case "GeneratorFunction":
@@ -1637,12 +1622,10 @@ var require_array_species_constructor = __commonJS({
       var C;
       if (isArray(originalArray)) {
         C = originalArray.constructor;
-        if (isConstructor(C) && (C === $Array || isArray(C.prototype)))
-          C = void 0;
+        if (isConstructor(C) && (C === $Array || isArray(C.prototype))) C = void 0;
         else if (isObject(C)) {
           C = C[SPECIES];
-          if (C === null)
-            C = void 0;
+          if (C === null) C = void 0;
         }
       }
       return C === void 0 ? $Array : C;
@@ -1773,8 +1756,7 @@ var require_to_string = __commonJS({
     var classof = require_classof();
     var $String = String;
     module2.exports = function(argument) {
-      if (classof(argument) === "Symbol")
-        throw new TypeError("Cannot convert a Symbol value to a string");
+      if (classof(argument) === "Symbol") throw new TypeError("Cannot convert a Symbol value to a string");
       return $String(argument);
     };
   }
@@ -1833,22 +1815,14 @@ var require_regexp_flags = __commonJS({
     module2.exports = function() {
       var that = anObject(this);
       var result = "";
-      if (that.hasIndices)
-        result += "d";
-      if (that.global)
-        result += "g";
-      if (that.ignoreCase)
-        result += "i";
-      if (that.multiline)
-        result += "m";
-      if (that.dotAll)
-        result += "s";
-      if (that.unicode)
-        result += "u";
-      if (that.unicodeSets)
-        result += "v";
-      if (that.sticky)
-        result += "y";
+      if (that.hasIndices) result += "d";
+      if (that.global) result += "g";
+      if (that.ignoreCase) result += "i";
+      if (that.multiline) result += "m";
+      if (that.dotAll) result += "s";
+      if (that.unicode) result += "u";
+      if (that.unicodeSets) result += "v";
+      if (that.sticky) result += "y";
       return result;
     };
   }
@@ -1976,8 +1950,7 @@ var require_regexp_exec = __commonJS({
         if (NPCG_INCLUDED) {
           reCopy = new RegExp("^" + source + "$(?!\\s)", flags);
         }
-        if (UPDATES_LAST_INDEX_WRONG)
-          lastIndex = re.lastIndex;
+        if (UPDATES_LAST_INDEX_WRONG) lastIndex = re.lastIndex;
         match = call2(nativeExec, sticky ? reCopy : re, strCopy);
         if (sticky) {
           if (match) {
@@ -1985,16 +1958,14 @@ var require_regexp_exec = __commonJS({
             match[0] = stringSlice(match[0], charsAdded);
             match.index = re.lastIndex;
             re.lastIndex += match[0].length;
-          } else
-            re.lastIndex = 0;
+          } else re.lastIndex = 0;
         } else if (UPDATES_LAST_INDEX_WRONG && match) {
           re.lastIndex = re.global ? match.index + match[0].length : lastIndex;
         }
         if (NPCG_INCLUDED && match && match.length > 1) {
           call2(nativeReplace, match[0], reCopy, function() {
             for (i = 1; i < arguments.length - 2; i++) {
-              if (arguments[i] === void 0)
-                match[i] = void 0;
+              if (arguments[i] === void 0) match[i] = void 0;
             }
           });
         }
@@ -2094,8 +2065,7 @@ var require_fix_regexp_well_known_symbol_logic = __commonJS({
         defineBuiltIn(String.prototype, KEY, methods[0]);
         defineBuiltIn(RegExpPrototype, SYMBOL, methods[1]);
       }
-      if (SHAM)
-        createNonEnumerableProperty(RegExpPrototype[SYMBOL], "sham", true);
+      if (SHAM) createNonEnumerableProperty(RegExpPrototype[SYMBOL], "sham", true);
     };
   }
 });
@@ -2117,8 +2087,7 @@ var require_string_multibyte = __commonJS({
         var position = toIntegerOrInfinity(pos);
         var size4 = S.length;
         var first, second;
-        if (position < 0 || position >= size4)
-          return CONVERT_TO_STRING ? "" : void 0;
+        if (position < 0 || position >= size4) return CONVERT_TO_STRING ? "" : void 0;
         first = charCodeAt(S, position);
         return first < 55296 || first > 56319 || position + 1 === size4 || (second = charCodeAt(S, position + 1)) < 56320 || second > 57343 ? CONVERT_TO_STRING ? charAt(S, position) : first : CONVERT_TO_STRING ? stringSlice(S, position, position + 2) : (first - 55296 << 10) + (second - 56320) + 65536;
       };
@@ -2181,14 +2150,11 @@ var require_get_substitution = __commonJS({
             break;
           default:
             var n2 = +ch;
-            if (n2 === 0)
-              return match;
+            if (n2 === 0) return match;
             if (n2 > m) {
               var f = floor2(n2 / 10);
-              if (f === 0)
-                return match;
-              if (f <= m)
-                return captures[f - 1] === void 0 ? charAt(ch, 1) : captures[f - 1] + charAt(ch, 1);
+              if (f === 0) return match;
+              if (f <= m) return captures[f - 1] === void 0 ? charAt(ch, 1) : captures[f - 1] + charAt(ch, 1);
               return match;
             }
             capture = captures[n2 - 1];
@@ -2213,12 +2179,10 @@ var require_regexp_exec_abstract = __commonJS({
       var exec = R.exec;
       if (isCallable(exec)) {
         var result = call2(exec, R, S);
-        if (result !== null)
-          anObject(result);
+        if (result !== null) anObject(result);
         return result;
       }
-      if (classof(R) === "RegExp")
-        return call2(regexpExec, R, S);
+      if (classof(R) === "RegExp") return call2(regexpExec, R, S);
       throw new $TypeError("RegExp#exec called on incompatible receiver");
     };
   }
@@ -2290,12 +2254,10 @@ var require_es_string_replace = __commonJS({
           var S = toString(string2);
           if (typeof replaceValue == "string" && stringIndexOf(replaceValue, UNSAFE_SUBSTITUTE) === -1 && stringIndexOf(replaceValue, "$<") === -1) {
             var res = maybeCallNative(nativeReplace, rx, S, replaceValue);
-            if (res.done)
-              return res.value;
+            if (res.done) return res.value;
           }
           var functionalReplace = isCallable(replaceValue);
-          if (!functionalReplace)
-            replaceValue = toString(replaceValue);
+          if (!functionalReplace) replaceValue = toString(replaceValue);
           var global2 = rx.global;
           var fullUnicode;
           if (global2) {
@@ -2306,14 +2268,11 @@ var require_es_string_replace = __commonJS({
           var result;
           while (true) {
             result = regExpExec(rx, S);
-            if (result === null)
-              break;
+            if (result === null) break;
             push(results, result);
-            if (!global2)
-              break;
+            if (!global2) break;
             var matchStr = toString(result[0]);
-            if (matchStr === "")
-              rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+            if (matchStr === "") rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
           }
           var accumulatedResult = "";
           var nextSourcePosition = 0;
@@ -2323,13 +2282,11 @@ var require_es_string_replace = __commonJS({
             var position = max2(min3(toIntegerOrInfinity(result.index), S.length), 0);
             var captures = [];
             var replacement;
-            for (var j = 1; j < result.length; j++)
-              push(captures, maybeToString(result[j]));
+            for (var j = 1; j < result.length; j++) push(captures, maybeToString(result[j]));
             var namedCaptures = result.groups;
             if (functionalReplace) {
               var replacerArgs = concat([matched], captures, position, S);
-              if (namedCaptures !== void 0)
-                push(replacerArgs, namedCaptures);
+              if (namedCaptures !== void 0) push(replacerArgs, namedCaptures);
               replacement = toString(apply(replaceValue, void 0, replacerArgs));
             } else {
               replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
@@ -2410,20 +2367,16 @@ var require_es_string_replace_all = __commonJS({
           IS_REG_EXP = isRegExp(searchValue);
           if (IS_REG_EXP) {
             flags = toString(requireObjectCoercible(getRegExpFlags(searchValue)));
-            if (!~indexOf(flags, "g"))
-              throw new $TypeError("`.replaceAll` does not allow non-global regexes");
+            if (!~indexOf(flags, "g")) throw new $TypeError("`.replaceAll` does not allow non-global regexes");
           }
           replacer = getMethod2(searchValue, REPLACE);
-          if (replacer)
-            return call2(replacer, searchValue, O, replaceValue);
-          if (IS_PURE && IS_REG_EXP)
-            return replace(toString(O), searchValue, replaceValue);
+          if (replacer) return call2(replacer, searchValue, O, replaceValue);
+          if (IS_PURE && IS_REG_EXP) return replace(toString(O), searchValue, replaceValue);
         }
         string2 = toString(O);
         searchString = toString(searchValue);
         functionalReplace = isCallable(replaceValue);
-        if (!functionalReplace)
-          replaceValue = toString(replaceValue);
+        if (!functionalReplace) replaceValue = toString(replaceValue);
         searchLength = searchString.length;
         advanceBy = max2(1, searchLength);
         position = indexOf(string2, searchString);
@@ -3596,7 +3549,7 @@ var require_lodash3 = __commonJS({
     function eq(value, other) {
       return value === other || value !== value && other !== other;
     }
-    var isArguments = baseIsArguments(function() {
+    var isArguments = baseIsArguments(/* @__PURE__ */ function() {
       return arguments;
     }()) ? baseIsArguments : function(value) {
       return isObjectLike(value) && hasOwnProperty2.call(value, "callee") && !propertyIsEnumerable.call(value, "callee");
@@ -3650,7 +3603,7 @@ var require_react_development = __commonJS({
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
         }
-        var ReactVersion = "18.2.0";
+        var ReactVersion = "18.3.1";
         var REACT_ELEMENT_TYPE = Symbol.for("react.element");
         var REACT_PORTAL_TYPE = Symbol.for("react.portal");
         var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
@@ -4699,7 +4652,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context2);
         }
-        function useState54(initialState2) {
+        function useState56(initialState2) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState2);
         }
@@ -4707,11 +4660,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef62(initialValue) {
+        function useRef61(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect62(create2, deps) {
+        function useEffect63(create2, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create2, deps);
         }
@@ -5478,6 +5431,7 @@ var require_react_development = __commonJS({
         exports.StrictMode = REACT_STRICT_MODE_TYPE;
         exports.Suspense = REACT_SUSPENSE_TYPE;
         exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals;
+        exports.act = act;
         exports.cloneElement = cloneElement$1;
         exports.createContext = createContext19;
         exports.createElement = createElement$1;
@@ -5493,15 +5447,15 @@ var require_react_development = __commonJS({
         exports.useContext = useContext18;
         exports.useDebugValue = useDebugValue3;
         exports.useDeferredValue = useDeferredValue;
-        exports.useEffect = useEffect62;
+        exports.useEffect = useEffect63;
         exports.useId = useId3;
         exports.useImperativeHandle = useImperativeHandle2;
         exports.useInsertionEffect = useInsertionEffect;
         exports.useLayoutEffect = useLayoutEffect17;
         exports.useMemo = useMemo31;
         exports.useReducer = useReducer2;
-        exports.useRef = useRef62;
-        exports.useState = useState54;
+        exports.useRef = useRef61;
+        exports.useState = useState56;
         exports.useSyncExternalStore = useSyncExternalStore3;
         exports.useTransition = useTransition;
         exports.version = ReactVersion;
@@ -6325,6 +6279,7 @@ var require_react_jsx_runtime_development = __commonJS({
             }
           }
         }
+        var didWarnAboutKeySpread = {};
         function jsxWithValidation(type, props, key, isStaticChildren, source, self2) {
           {
             var validType = isValidElementType(type);
@@ -6372,6 +6327,20 @@ var require_react_jsx_runtime_development = __commonJS({
                   }
                 } else {
                   validateChildKeys(children, type);
+                }
+              }
+            }
+            {
+              if (hasOwnProperty2.call(props, "key")) {
+                var componentName = getComponentNameFromType(type);
+                var keys = Object.keys(props).filter(function(k) {
+                  return k !== "key";
+                });
+                var beforeExample = keys.length > 0 ? "{key: someKey, " + keys.join(": ..., ") + ": ...}" : "{key: someKey}";
+                if (!didWarnAboutKeySpread[componentName + beforeExample]) {
+                  var afterExample = keys.length > 0 ? "{" + keys.join(": ..., ") + ": ...}" : "{}";
+                  error('A props object containing a "key" prop is being spread into JSX:\n  let props = %s;\n  <%s {...props} />\nReact keys must be passed directly to JSX without using spread:\n  let props = %s;\n  <%s key={someKey} {...props} />', beforeExample, componentName, afterExample, componentName);
+                  didWarnAboutKeySpread[componentName + beforeExample] = true;
                 }
               }
             }
@@ -6485,8 +6454,7 @@ var require_eventemitter3 = __commonJS({
     }
     if (Object.create) {
       Events.prototype = /* @__PURE__ */ Object.create(null);
-      if (!new Events().__proto__)
-        prefix = false;
+      if (!new Events().__proto__) prefix = false;
     }
     function EE(fn, context, once) {
       this.fn = fn;
@@ -6498,19 +6466,14 @@ var require_eventemitter3 = __commonJS({
         throw new TypeError("The listener must be a function");
       }
       var listener = new EE(fn, context || emitter, once), evt = prefix ? prefix + event : event;
-      if (!emitter._events[evt])
-        emitter._events[evt] = listener, emitter._eventsCount++;
-      else if (!emitter._events[evt].fn)
-        emitter._events[evt].push(listener);
-      else
-        emitter._events[evt] = [emitter._events[evt], listener];
+      if (!emitter._events[evt]) emitter._events[evt] = listener, emitter._eventsCount++;
+      else if (!emitter._events[evt].fn) emitter._events[evt].push(listener);
+      else emitter._events[evt] = [emitter._events[evt], listener];
       return emitter;
     }
     function clearEvent(emitter, evt) {
-      if (--emitter._eventsCount === 0)
-        emitter._events = new Events();
-      else
-        delete emitter._events[evt];
+      if (--emitter._eventsCount === 0) emitter._events = new Events();
+      else delete emitter._events[evt];
     }
     function EventEmitter2() {
       this._events = new Events();
@@ -6518,11 +6481,9 @@ var require_eventemitter3 = __commonJS({
     }
     EventEmitter2.prototype.eventNames = function eventNames() {
       var names = [], events, name;
-      if (this._eventsCount === 0)
-        return names;
+      if (this._eventsCount === 0) return names;
       for (name in events = this._events) {
-        if (has.call(events, name))
-          names.push(prefix ? name.slice(1) : name);
+        if (has.call(events, name)) names.push(prefix ? name.slice(1) : name);
       }
       if (Object.getOwnPropertySymbols) {
         return names.concat(Object.getOwnPropertySymbols(events));
@@ -6531,10 +6492,8 @@ var require_eventemitter3 = __commonJS({
     };
     EventEmitter2.prototype.listeners = function listeners(event) {
       var evt = prefix ? prefix + event : event, handlers = this._events[evt];
-      if (!handlers)
-        return [];
-      if (handlers.fn)
-        return [handlers.fn];
+      if (!handlers) return [];
+      if (handlers.fn) return [handlers.fn];
       for (var i = 0, l = handlers.length, ee = new Array(l); i < l; i++) {
         ee[i] = handlers[i].fn;
       }
@@ -6542,20 +6501,16 @@ var require_eventemitter3 = __commonJS({
     };
     EventEmitter2.prototype.listenerCount = function listenerCount(event) {
       var evt = prefix ? prefix + event : event, listeners = this._events[evt];
-      if (!listeners)
-        return 0;
-      if (listeners.fn)
-        return 1;
+      if (!listeners) return 0;
+      if (listeners.fn) return 1;
       return listeners.length;
     };
     EventEmitter2.prototype.emit = function emit(event, a1, a2, a3, a4, a5) {
       var evt = prefix ? prefix + event : event;
-      if (!this._events[evt])
-        return false;
+      if (!this._events[evt]) return false;
       var listeners = this._events[evt], len = arguments.length, args, i;
       if (listeners.fn) {
-        if (listeners.once)
-          this.removeListener(event, listeners.fn, void 0, true);
+        if (listeners.once) this.removeListener(event, listeners.fn, void 0, true);
         switch (len) {
           case 1:
             return listeners.fn.call(listeners.context), true;
@@ -6577,8 +6532,7 @@ var require_eventemitter3 = __commonJS({
       } else {
         var length = listeners.length, j;
         for (i = 0; i < length; i++) {
-          if (listeners[i].once)
-            this.removeListener(event, listeners[i].fn, void 0, true);
+          if (listeners[i].once) this.removeListener(event, listeners[i].fn, void 0, true);
           switch (len) {
             case 1:
               listeners[i].fn.call(listeners[i].context);
@@ -6593,10 +6547,9 @@ var require_eventemitter3 = __commonJS({
               listeners[i].fn.call(listeners[i].context, a1, a2, a3);
               break;
             default:
-              if (!args)
-                for (j = 1, args = new Array(len - 1); j < len; j++) {
-                  args[j - 1] = arguments[j];
-                }
+              if (!args) for (j = 1, args = new Array(len - 1); j < len; j++) {
+                args[j - 1] = arguments[j];
+              }
               listeners[i].fn.apply(listeners[i].context, args);
           }
         }
@@ -6611,8 +6564,7 @@ var require_eventemitter3 = __commonJS({
     };
     EventEmitter2.prototype.removeListener = function removeListener(event, fn, context, once) {
       var evt = prefix ? prefix + event : event;
-      if (!this._events[evt])
-        return this;
+      if (!this._events[evt]) return this;
       if (!fn) {
         clearEvent(this, evt);
         return this;
@@ -6628,10 +6580,8 @@ var require_eventemitter3 = __commonJS({
             events.push(listeners[i]);
           }
         }
-        if (events.length)
-          this._events[evt] = events.length === 1 ? events[0] : events;
-        else
-          clearEvent(this, evt);
+        if (events.length) this._events[evt] = events.length === 1 ? events[0] : events;
+        else clearEvent(this, evt);
       }
       return this;
     };
@@ -6639,8 +6589,7 @@ var require_eventemitter3 = __commonJS({
       var evt;
       if (event) {
         evt = prefix ? prefix + event : event;
-        if (this._events[evt])
-          clearEvent(this, evt);
+        if (this._events[evt]) clearEvent(this, evt);
       } else {
         this._events = new Events();
         this._eventsCount = 0;
@@ -7205,7 +7154,7 @@ var require_react_dom_development = __commonJS({
         var enableSuspenseAvoidThisFallback = false;
         var disableCommentsAsDOMContainers = true;
         var enableCustomElementPropertySupport = false;
-        var warnAboutStringRefs = false;
+        var warnAboutStringRefs = true;
         var enableSchedulingProfiler = true;
         var enableProfilerTimer = true;
         var enableProfilerCommitHooks = true;
@@ -7351,6 +7300,7 @@ var require_react_dom_development = __commonJS({
           }
           switch (typeof value) {
             case "function":
+            // $FlowIssue symbol is perfectly valid here
             case "symbol":
               return true;
             case "boolean": {
@@ -8365,6 +8315,7 @@ var require_react_dom_development = __commonJS({
               return "SuspenseList";
             case TracingMarkerComponent:
               return "TracingMarker";
+            // The display name for this tags come from the user-provided type:
             case ClassComponent:
             case FunctionComponent:
             case IncompleteClassComponent:
@@ -9362,6 +9313,10 @@ var require_react_dom_development = __commonJS({
             return typeof props.is === "string";
           }
           switch (tagName) {
+            // These are reserved SVG and MathML elements.
+            // We don't mind this list too much because we expect it to never grow.
+            // The alternative is to track the namespace in a few places which is convoluted.
+            // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
             case "annotation-xml":
             case "color-profile":
             case "font-face":
@@ -12191,6 +12146,7 @@ var require_react_dom_development = __commonJS({
         }
         function getEventPriority(domEventName) {
           switch (domEventName) {
+            // Used by SimpleEventPlugin:
             case "cancel":
             case "click":
             case "close":
@@ -12226,14 +12182,20 @@ var require_react_dom_development = __commonJS({
             case "touchend":
             case "touchstart":
             case "volumechange":
+            // Used by polyfills:
+            // eslint-disable-next-line no-fallthrough
             case "change":
             case "selectionchange":
             case "textInput":
             case "compositionstart":
             case "compositionend":
             case "compositionupdate":
+            // Only enableCreateEventHandleAPI:
+            // eslint-disable-next-line no-fallthrough
             case "beforeblur":
             case "afterblur":
+            // Not used by React but could be by user code:
+            // eslint-disable-next-line no-fallthrough
             case "beforeinput":
             case "blur":
             case "fullscreenchange":
@@ -12258,6 +12220,8 @@ var require_react_dom_development = __commonJS({
             case "toggle":
             case "touchmove":
             case "wheel":
+            // Not used by React but could be by user code:
+            // eslint-disable-next-line no-fallthrough
             case "mouseenter":
             case "mouseleave":
             case "pointerenter":
@@ -12489,8 +12453,7 @@ var require_react_dom_development = __commonJS({
           button: 0,
           buttons: 0,
           relatedTarget: function(event) {
-            if (event.relatedTarget === void 0)
-              return event.fromElement === event.srcElement ? event.toElement : event.fromElement;
+            if (event.relatedTarget === void 0) return event.fromElement === event.srcElement ? event.toElement : event.fromElement;
             return event.relatedTarget;
           },
           movementX: function(event) {
@@ -13206,43 +13169,42 @@ var require_react_dom_development = __commonJS({
           var indexWithinFocus = 0;
           var node = outerNode;
           var parentNode = null;
-          outer:
+          outer: while (true) {
+            var next = null;
             while (true) {
-              var next = null;
-              while (true) {
-                if (node === anchorNode && (anchorOffset === 0 || node.nodeType === TEXT_NODE)) {
-                  start = length + anchorOffset;
-                }
-                if (node === focusNode && (focusOffset === 0 || node.nodeType === TEXT_NODE)) {
-                  end = length + focusOffset;
-                }
-                if (node.nodeType === TEXT_NODE) {
-                  length += node.nodeValue.length;
-                }
-                if ((next = node.firstChild) === null) {
-                  break;
-                }
-                parentNode = node;
-                node = next;
+              if (node === anchorNode && (anchorOffset === 0 || node.nodeType === TEXT_NODE)) {
+                start = length + anchorOffset;
               }
-              while (true) {
-                if (node === outerNode) {
-                  break outer;
-                }
-                if (parentNode === anchorNode && ++indexWithinAnchor === anchorOffset) {
-                  start = length;
-                }
-                if (parentNode === focusNode && ++indexWithinFocus === focusOffset) {
-                  end = length;
-                }
-                if ((next = node.nextSibling) !== null) {
-                  break;
-                }
-                node = parentNode;
-                parentNode = node.parentNode;
+              if (node === focusNode && (focusOffset === 0 || node.nodeType === TEXT_NODE)) {
+                end = length + focusOffset;
               }
+              if (node.nodeType === TEXT_NODE) {
+                length += node.nodeValue.length;
+              }
+              if ((next = node.firstChild) === null) {
+                break;
+              }
+              parentNode = node;
               node = next;
             }
+            while (true) {
+              if (node === outerNode) {
+                break outer;
+              }
+              if (parentNode === anchorNode && ++indexWithinAnchor === anchorOffset) {
+                start = length;
+              }
+              if (parentNode === focusNode && ++indexWithinFocus === focusOffset) {
+                end = length;
+              }
+              if ((next = node.nextSibling) !== null) {
+                break;
+              }
+              node = parentNode;
+              parentNode = node.parentNode;
+            }
+            node = next;
+          }
           if (start === -1 || end === -1) {
             return null;
           }
@@ -13445,6 +13407,7 @@ var require_react_dom_development = __commonJS({
         function extractEvents$3(dispatchQueue, domEventName, targetInst, nativeEvent, nativeEventTarget, eventSystemFlags, targetContainer) {
           var targetNode = targetInst ? getNodeFromInstance(targetInst) : window;
           switch (domEventName) {
+            // Track the input node that has focus.
             case "focusin":
               if (isTextInputElement(targetNode) || targetNode.contentEditable === "true") {
                 activeElement$1 = targetNode;
@@ -13457,6 +13420,8 @@ var require_react_dom_development = __commonJS({
               activeElementInst$1 = null;
               lastSelection = null;
               break;
+            // Don't fire the event while the user is dragging. This matches the
+            // semantics of the native select event.
             case "mousedown":
               mouseDown = true;
               break;
@@ -13466,10 +13431,20 @@ var require_react_dom_development = __commonJS({
               mouseDown = false;
               constructSelectEvent(dispatchQueue, nativeEvent, nativeEventTarget);
               break;
+            // Chrome and IE fire non-standard event when selection is changed (and
+            // sometimes when it hasn't). IE's event fires out of order with respect
+            // to key and input events on deletion, so we discard it.
+            //
+            // Firefox doesn't support selectionchange, so check selection status
+            // after each key entry. The selection changes after keydown and before
+            // keyup, but we check on keydown as well in the case of holding down a
+            // key, when multiple keydown events are fired but only one keyup is.
+            // This is also our approach for IE handling, for the reason above.
             case "selectionchange":
               if (skipSelectionChangeEvent) {
                 break;
               }
+            // falls through
             case "keydown":
             case "keyup":
               constructSelectEvent(dispatchQueue, nativeEvent, nativeEventTarget);
@@ -13552,6 +13527,7 @@ var require_react_dom_development = __commonJS({
               if (getEventCharCode(nativeEvent) === 0) {
                 return;
               }
+            /* falls through */
             case "keydown":
             case "keyup":
               SyntheticEventCtor = SyntheticKeyboardEvent;
@@ -13572,11 +13548,14 @@ var require_react_dom_development = __commonJS({
               if (nativeEvent.button === 2) {
                 return;
               }
+            /* falls through */
             case "auxclick":
             case "dblclick":
             case "mousedown":
             case "mousemove":
             case "mouseup":
+            // TODO: Disabled elements should not respond to mouse events
+            /* falls through */
             case "mouseout":
             case "mouseover":
             case "contextmenu":
@@ -13784,45 +13763,44 @@ var require_react_dom_development = __commonJS({
             var targetContainerNode = targetContainer;
             if (targetInst !== null) {
               var node = targetInst;
-              mainLoop:
-                while (true) {
-                  if (node === null) {
-                    return;
-                  }
-                  var nodeTag = node.tag;
-                  if (nodeTag === HostRoot || nodeTag === HostPortal) {
-                    var container = node.stateNode.containerInfo;
-                    if (isMatchingRootContainer(container, targetContainerNode)) {
-                      break;
-                    }
-                    if (nodeTag === HostPortal) {
-                      var grandNode = node.return;
-                      while (grandNode !== null) {
-                        var grandTag = grandNode.tag;
-                        if (grandTag === HostRoot || grandTag === HostPortal) {
-                          var grandContainer = grandNode.stateNode.containerInfo;
-                          if (isMatchingRootContainer(grandContainer, targetContainerNode)) {
-                            return;
-                          }
-                        }
-                        grandNode = grandNode.return;
-                      }
-                    }
-                    while (container !== null) {
-                      var parentNode = getClosestInstanceFromNode(container);
-                      if (parentNode === null) {
-                        return;
-                      }
-                      var parentTag = parentNode.tag;
-                      if (parentTag === HostComponent || parentTag === HostText) {
-                        node = ancestorInst = parentNode;
-                        continue mainLoop;
-                      }
-                      container = container.parentNode;
-                    }
-                  }
-                  node = node.return;
+              mainLoop: while (true) {
+                if (node === null) {
+                  return;
                 }
+                var nodeTag = node.tag;
+                if (nodeTag === HostRoot || nodeTag === HostPortal) {
+                  var container = node.stateNode.containerInfo;
+                  if (isMatchingRootContainer(container, targetContainerNode)) {
+                    break;
+                  }
+                  if (nodeTag === HostPortal) {
+                    var grandNode = node.return;
+                    while (grandNode !== null) {
+                      var grandTag = grandNode.tag;
+                      if (grandTag === HostRoot || grandTag === HostPortal) {
+                        var grandContainer = grandNode.stateNode.containerInfo;
+                        if (isMatchingRootContainer(grandContainer, targetContainerNode)) {
+                          return;
+                        }
+                      }
+                      grandNode = grandNode.return;
+                    }
+                  }
+                  while (container !== null) {
+                    var parentNode = getClosestInstanceFromNode(container);
+                    if (parentNode === null) {
+                      return;
+                    }
+                    var parentTag = parentNode.tag;
+                    if (parentTag === HostComponent || parentTag === HostText) {
+                      node = ancestorInst = parentNode;
+                      continue mainLoop;
+                    }
+                    container = container.parentNode;
+                  }
+                }
+                node = node.return;
+              }
             }
           }
           batchedUpdates(function() {
@@ -14102,10 +14080,8 @@ var require_react_dom_development = __commonJS({
               } else if (typeof nextProp === "number") {
                 setTextContent(domElement, "" + nextProp);
               }
-            } else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING)
-              ;
-            else if (propKey === AUTOFOCUS)
-              ;
+            } else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING) ;
+            else if (propKey === AUTOFOCUS) ;
             else if (registrationNameDependencies.hasOwnProperty(propKey)) {
               if (nextProp != null) {
                 if (typeof nextProp !== "function") {
@@ -14321,12 +14297,9 @@ var require_react_dom_development = __commonJS({
                   styleUpdates[styleName] = "";
                 }
               }
-            } else if (propKey === DANGEROUSLY_SET_INNER_HTML || propKey === CHILDREN)
-              ;
-            else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING)
-              ;
-            else if (propKey === AUTOFOCUS)
-              ;
+            } else if (propKey === DANGEROUSLY_SET_INNER_HTML || propKey === CHILDREN) ;
+            else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING) ;
+            else if (propKey === AUTOFOCUS) ;
             else if (registrationNameDependencies.hasOwnProperty(propKey)) {
               if (!updatePayload) {
                 updatePayload = [];
@@ -14385,8 +14358,7 @@ var require_react_dom_development = __commonJS({
               if (typeof nextProp === "string" || typeof nextProp === "number") {
                 (updatePayload = updatePayload || []).push(propKey, "" + nextProp);
               }
-            } else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING)
-              ;
+            } else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING) ;
             else if (registrationNameDependencies.hasOwnProperty(propKey)) {
               if (nextProp != null) {
                 if (typeof nextProp !== "function") {
@@ -14497,6 +14469,8 @@ var require_react_dom_development = __commonJS({
             for (var _i = 0; _i < attributes.length; _i++) {
               var name = attributes[_i].name.toLowerCase();
               switch (name) {
+                // Controlled attributes are not validated
+                // TODO: Only ignore them on controlled tags.
                 case "value":
                   break;
                 case "checked":
@@ -14543,12 +14517,10 @@ var require_react_dom_development = __commonJS({
             typeof isCustomComponentTag === "boolean") {
               var serverValue = void 0;
               var propertyInfo = isCustomComponentTag && enableCustomElementPropertySupport ? null : getPropertyInfo(propKey);
-              if (rawProps[SUPPRESS_HYDRATION_WARNING] === true)
-                ;
+              if (rawProps[SUPPRESS_HYDRATION_WARNING] === true) ;
               else if (propKey === SUPPRESS_CONTENT_EDITABLE_WARNING || propKey === SUPPRESS_HYDRATION_WARNING || // Controlled attributes are not validated
               // TODO: Only ignore them on controlled tags.
-              propKey === "value" || propKey === "checked" || propKey === "selected")
-                ;
+              propKey === "value" || propKey === "checked" || propKey === "selected") ;
               else if (propKey === DANGEROUSLY_SET_INNER_HTML) {
                 var serverHTML = domElement.innerHTML;
                 var nextHtml = nextProp ? nextProp[HTML$1] : void 0;
@@ -14766,24 +14738,37 @@ var require_react_dom_development = __commonJS({
           };
           var isTagValidWithParent = function(tag, parentTag) {
             switch (parentTag) {
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-inselect
               case "select":
                 return tag === "option" || tag === "optgroup" || tag === "#text";
               case "optgroup":
                 return tag === "option" || tag === "#text";
+              // Strictly speaking, seeing an <option> doesn't mean we're in a <select>
+              // but
               case "option":
                 return tag === "#text";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intd
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-incaption
+              // No special behavior since these rules fall back to "in body" mode for
+              // all except special table nodes which cause bad parsing behavior anyway.
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intr
               case "tr":
                 return tag === "th" || tag === "td" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intbody
               case "tbody":
               case "thead":
               case "tfoot":
                 return tag === "tr" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-incolgroup
               case "colgroup":
                 return tag === "col" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-intable
               case "table":
                 return tag === "caption" || tag === "colgroup" || tag === "tbody" || tag === "tfoot" || tag === "thead" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/syntax.html#parsing-main-inhead
               case "head":
                 return tag === "base" || tag === "basefont" || tag === "bgsound" || tag === "link" || tag === "meta" || tag === "title" || tag === "noscript" || tag === "noframes" || tag === "style" || tag === "script" || tag === "template";
+              // https://html.spec.whatwg.org/multipage/semantics.html#the-html-element
               case "html":
                 return tag === "head" || tag === "body" || tag === "frameset";
               case "frameset":
@@ -15344,8 +15329,7 @@ var require_react_dom_development = __commonJS({
           {
             if (instance.nodeType === ELEMENT_NODE) {
               warnForDeletedHydratableElement(parentContainer, instance);
-            } else if (instance.nodeType === COMMENT_NODE)
-              ;
+            } else if (instance.nodeType === COMMENT_NODE) ;
             else {
               warnForDeletedHydratableText(parentContainer, instance);
             }
@@ -15357,8 +15341,7 @@ var require_react_dom_development = __commonJS({
             if (parentNode !== null) {
               if (instance.nodeType === ELEMENT_NODE) {
                 warnForDeletedHydratableElement(parentNode, instance);
-              } else if (instance.nodeType === COMMENT_NODE)
-                ;
+              } else if (instance.nodeType === COMMENT_NODE) ;
               else {
                 warnForDeletedHydratableText(parentNode, instance);
               }
@@ -15370,8 +15353,7 @@ var require_react_dom_development = __commonJS({
             if (isConcurrentMode || parentProps[SUPPRESS_HYDRATION_WARNING$1] !== true) {
               if (instance.nodeType === ELEMENT_NODE) {
                 warnForDeletedHydratableElement(parentInstance, instance);
-              } else if (instance.nodeType === COMMENT_NODE)
-                ;
+              } else if (instance.nodeType === COMMENT_NODE) ;
               else {
                 warnForDeletedHydratableText(parentInstance, instance);
               }
@@ -15391,15 +15373,13 @@ var require_react_dom_development = __commonJS({
         function didNotFindHydratableInstanceWithinSuspenseInstance(parentInstance, type, props) {
           {
             var parentNode = parentInstance.parentNode;
-            if (parentNode !== null)
-              warnForInsertedHydratedElement(parentNode, type);
+            if (parentNode !== null) warnForInsertedHydratedElement(parentNode, type);
           }
         }
         function didNotFindHydratableTextInstanceWithinSuspenseInstance(parentInstance, text) {
           {
             var parentNode = parentInstance.parentNode;
-            if (parentNode !== null)
-              warnForInsertedHydratedText(parentNode, text);
+            if (parentNode !== null) warnForInsertedHydratedText(parentNode, text);
           }
         }
         function didNotFindHydratableInstance(parentType, parentProps, parentInstance, type, props, isConcurrentMode) {
@@ -15986,8 +15966,7 @@ var require_react_dom_development = __commonJS({
               }
               case SuspenseComponent: {
                 var suspenseState = returnFiber.memoizedState;
-                if (suspenseState.dehydrated !== null)
-                  didNotHydrateInstanceWithinSuspenseInstance(suspenseState.dehydrated, instance);
+                if (suspenseState.dehydrated !== null) didNotHydrateInstanceWithinSuspenseInstance(suspenseState.dehydrated, instance);
                 break;
               }
             }
@@ -16066,18 +16045,17 @@ var require_react_dom_development = __commonJS({
               case SuspenseComponent: {
                 var suspenseState = returnFiber.memoizedState;
                 var _parentInstance = suspenseState.dehydrated;
-                if (_parentInstance !== null)
-                  switch (fiber.tag) {
-                    case HostComponent:
-                      var _type2 = fiber.type;
-                      var _props2 = fiber.pendingProps;
-                      didNotFindHydratableInstanceWithinSuspenseInstance(_parentInstance, _type2);
-                      break;
-                    case HostText:
-                      var _text2 = fiber.pendingProps;
-                      didNotFindHydratableTextInstanceWithinSuspenseInstance(_parentInstance, _text2);
-                      break;
-                  }
+                if (_parentInstance !== null) switch (fiber.tag) {
+                  case HostComponent:
+                    var _type2 = fiber.type;
+                    var _props2 = fiber.pendingProps;
+                    didNotFindHydratableInstanceWithinSuspenseInstance(_parentInstance, _type2);
+                    break;
+                  case HostText:
+                    var _text2 = fiber.pendingProps;
+                    didNotFindHydratableTextInstanceWithinSuspenseInstance(_parentInstance, _text2);
+                    break;
+                }
                 break;
               }
               default:
@@ -16502,1279 +16480,6 @@ var require_react_dom_development = __commonJS({
             pendingLegacyContextWarning = /* @__PURE__ */ new Map();
           };
         }
-        function resolveDefaultProps(Component2, baseProps) {
-          if (Component2 && Component2.defaultProps) {
-            var props = assign({}, baseProps);
-            var defaultProps = Component2.defaultProps;
-            for (var propName in defaultProps) {
-              if (props[propName] === void 0) {
-                props[propName] = defaultProps[propName];
-              }
-            }
-            return props;
-          }
-          return baseProps;
-        }
-        var valueCursor = createCursor(null);
-        var rendererSigil;
-        {
-          rendererSigil = {};
-        }
-        var currentlyRenderingFiber = null;
-        var lastContextDependency = null;
-        var lastFullyObservedContext = null;
-        var isDisallowedContextReadInDEV = false;
-        function resetContextDependencies() {
-          currentlyRenderingFiber = null;
-          lastContextDependency = null;
-          lastFullyObservedContext = null;
-          {
-            isDisallowedContextReadInDEV = false;
-          }
-        }
-        function enterDisallowedContextReadInDEV() {
-          {
-            isDisallowedContextReadInDEV = true;
-          }
-        }
-        function exitDisallowedContextReadInDEV() {
-          {
-            isDisallowedContextReadInDEV = false;
-          }
-        }
-        function pushProvider(providerFiber, context, nextValue) {
-          {
-            push(valueCursor, context._currentValue, providerFiber);
-            context._currentValue = nextValue;
-            {
-              if (context._currentRenderer !== void 0 && context._currentRenderer !== null && context._currentRenderer !== rendererSigil) {
-                error("Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.");
-              }
-              context._currentRenderer = rendererSigil;
-            }
-          }
-        }
-        function popProvider(context, providerFiber) {
-          var currentValue = valueCursor.current;
-          pop(valueCursor, providerFiber);
-          {
-            {
-              context._currentValue = currentValue;
-            }
-          }
-        }
-        function scheduleContextWorkOnParentPath(parent, renderLanes2, propagationRoot) {
-          var node = parent;
-          while (node !== null) {
-            var alternate = node.alternate;
-            if (!isSubsetOfLanes(node.childLanes, renderLanes2)) {
-              node.childLanes = mergeLanes(node.childLanes, renderLanes2);
-              if (alternate !== null) {
-                alternate.childLanes = mergeLanes(alternate.childLanes, renderLanes2);
-              }
-            } else if (alternate !== null && !isSubsetOfLanes(alternate.childLanes, renderLanes2)) {
-              alternate.childLanes = mergeLanes(alternate.childLanes, renderLanes2);
-            }
-            if (node === propagationRoot) {
-              break;
-            }
-            node = node.return;
-          }
-          {
-            if (node !== propagationRoot) {
-              error("Expected to find the propagation root when scheduling context work. This error is likely caused by a bug in React. Please file an issue.");
-            }
-          }
-        }
-        function propagateContextChange(workInProgress2, context, renderLanes2) {
-          {
-            propagateContextChange_eager(workInProgress2, context, renderLanes2);
-          }
-        }
-        function propagateContextChange_eager(workInProgress2, context, renderLanes2) {
-          var fiber = workInProgress2.child;
-          if (fiber !== null) {
-            fiber.return = workInProgress2;
-          }
-          while (fiber !== null) {
-            var nextFiber = void 0;
-            var list = fiber.dependencies;
-            if (list !== null) {
-              nextFiber = fiber.child;
-              var dependency = list.firstContext;
-              while (dependency !== null) {
-                if (dependency.context === context) {
-                  if (fiber.tag === ClassComponent) {
-                    var lane = pickArbitraryLane(renderLanes2);
-                    var update = createUpdate(NoTimestamp, lane);
-                    update.tag = ForceUpdate;
-                    var updateQueue = fiber.updateQueue;
-                    if (updateQueue === null)
-                      ;
-                    else {
-                      var sharedQueue = updateQueue.shared;
-                      var pending = sharedQueue.pending;
-                      if (pending === null) {
-                        update.next = update;
-                      } else {
-                        update.next = pending.next;
-                        pending.next = update;
-                      }
-                      sharedQueue.pending = update;
-                    }
-                  }
-                  fiber.lanes = mergeLanes(fiber.lanes, renderLanes2);
-                  var alternate = fiber.alternate;
-                  if (alternate !== null) {
-                    alternate.lanes = mergeLanes(alternate.lanes, renderLanes2);
-                  }
-                  scheduleContextWorkOnParentPath(fiber.return, renderLanes2, workInProgress2);
-                  list.lanes = mergeLanes(list.lanes, renderLanes2);
-                  break;
-                }
-                dependency = dependency.next;
-              }
-            } else if (fiber.tag === ContextProvider) {
-              nextFiber = fiber.type === workInProgress2.type ? null : fiber.child;
-            } else if (fiber.tag === DehydratedFragment) {
-              var parentSuspense = fiber.return;
-              if (parentSuspense === null) {
-                throw new Error("We just came from a parent so we must have had a parent. This is a bug in React.");
-              }
-              parentSuspense.lanes = mergeLanes(parentSuspense.lanes, renderLanes2);
-              var _alternate = parentSuspense.alternate;
-              if (_alternate !== null) {
-                _alternate.lanes = mergeLanes(_alternate.lanes, renderLanes2);
-              }
-              scheduleContextWorkOnParentPath(parentSuspense, renderLanes2, workInProgress2);
-              nextFiber = fiber.sibling;
-            } else {
-              nextFiber = fiber.child;
-            }
-            if (nextFiber !== null) {
-              nextFiber.return = fiber;
-            } else {
-              nextFiber = fiber;
-              while (nextFiber !== null) {
-                if (nextFiber === workInProgress2) {
-                  nextFiber = null;
-                  break;
-                }
-                var sibling = nextFiber.sibling;
-                if (sibling !== null) {
-                  sibling.return = nextFiber.return;
-                  nextFiber = sibling;
-                  break;
-                }
-                nextFiber = nextFiber.return;
-              }
-            }
-            fiber = nextFiber;
-          }
-        }
-        function prepareToReadContext(workInProgress2, renderLanes2) {
-          currentlyRenderingFiber = workInProgress2;
-          lastContextDependency = null;
-          lastFullyObservedContext = null;
-          var dependencies = workInProgress2.dependencies;
-          if (dependencies !== null) {
-            {
-              var firstContext = dependencies.firstContext;
-              if (firstContext !== null) {
-                if (includesSomeLane(dependencies.lanes, renderLanes2)) {
-                  markWorkInProgressReceivedUpdate();
-                }
-                dependencies.firstContext = null;
-              }
-            }
-          }
-        }
-        function readContext(context) {
-          {
-            if (isDisallowedContextReadInDEV) {
-              error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
-            }
-          }
-          var value = context._currentValue;
-          if (lastFullyObservedContext === context)
-            ;
-          else {
-            var contextItem = {
-              context,
-              memoizedValue: value,
-              next: null
-            };
-            if (lastContextDependency === null) {
-              if (currentlyRenderingFiber === null) {
-                throw new Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
-              }
-              lastContextDependency = contextItem;
-              currentlyRenderingFiber.dependencies = {
-                lanes: NoLanes,
-                firstContext: contextItem
-              };
-            } else {
-              lastContextDependency = lastContextDependency.next = contextItem;
-            }
-          }
-          return value;
-        }
-        var concurrentQueues = null;
-        function pushConcurrentUpdateQueue(queue) {
-          if (concurrentQueues === null) {
-            concurrentQueues = [queue];
-          } else {
-            concurrentQueues.push(queue);
-          }
-        }
-        function finishQueueingConcurrentUpdates() {
-          if (concurrentQueues !== null) {
-            for (var i = 0; i < concurrentQueues.length; i++) {
-              var queue = concurrentQueues[i];
-              var lastInterleavedUpdate = queue.interleaved;
-              if (lastInterleavedUpdate !== null) {
-                queue.interleaved = null;
-                var firstInterleavedUpdate = lastInterleavedUpdate.next;
-                var lastPendingUpdate = queue.pending;
-                if (lastPendingUpdate !== null) {
-                  var firstPendingUpdate = lastPendingUpdate.next;
-                  lastPendingUpdate.next = firstInterleavedUpdate;
-                  lastInterleavedUpdate.next = firstPendingUpdate;
-                }
-                queue.pending = lastInterleavedUpdate;
-              }
-            }
-            concurrentQueues = null;
-          }
-        }
-        function enqueueConcurrentHookUpdate(fiber, queue, update, lane) {
-          var interleaved = queue.interleaved;
-          if (interleaved === null) {
-            update.next = update;
-            pushConcurrentUpdateQueue(queue);
-          } else {
-            update.next = interleaved.next;
-            interleaved.next = update;
-          }
-          queue.interleaved = update;
-          return markUpdateLaneFromFiberToRoot(fiber, lane);
-        }
-        function enqueueConcurrentHookUpdateAndEagerlyBailout(fiber, queue, update, lane) {
-          var interleaved = queue.interleaved;
-          if (interleaved === null) {
-            update.next = update;
-            pushConcurrentUpdateQueue(queue);
-          } else {
-            update.next = interleaved.next;
-            interleaved.next = update;
-          }
-          queue.interleaved = update;
-        }
-        function enqueueConcurrentClassUpdate(fiber, queue, update, lane) {
-          var interleaved = queue.interleaved;
-          if (interleaved === null) {
-            update.next = update;
-            pushConcurrentUpdateQueue(queue);
-          } else {
-            update.next = interleaved.next;
-            interleaved.next = update;
-          }
-          queue.interleaved = update;
-          return markUpdateLaneFromFiberToRoot(fiber, lane);
-        }
-        function enqueueConcurrentRenderForLane(fiber, lane) {
-          return markUpdateLaneFromFiberToRoot(fiber, lane);
-        }
-        var unsafe_markUpdateLaneFromFiberToRoot = markUpdateLaneFromFiberToRoot;
-        function markUpdateLaneFromFiberToRoot(sourceFiber, lane) {
-          sourceFiber.lanes = mergeLanes(sourceFiber.lanes, lane);
-          var alternate = sourceFiber.alternate;
-          if (alternate !== null) {
-            alternate.lanes = mergeLanes(alternate.lanes, lane);
-          }
-          {
-            if (alternate === null && (sourceFiber.flags & (Placement | Hydrating)) !== NoFlags) {
-              warnAboutUpdateOnNotYetMountedFiberInDEV(sourceFiber);
-            }
-          }
-          var node = sourceFiber;
-          var parent = sourceFiber.return;
-          while (parent !== null) {
-            parent.childLanes = mergeLanes(parent.childLanes, lane);
-            alternate = parent.alternate;
-            if (alternate !== null) {
-              alternate.childLanes = mergeLanes(alternate.childLanes, lane);
-            } else {
-              {
-                if ((parent.flags & (Placement | Hydrating)) !== NoFlags) {
-                  warnAboutUpdateOnNotYetMountedFiberInDEV(sourceFiber);
-                }
-              }
-            }
-            node = parent;
-            parent = parent.return;
-          }
-          if (node.tag === HostRoot) {
-            var root2 = node.stateNode;
-            return root2;
-          } else {
-            return null;
-          }
-        }
-        var UpdateState = 0;
-        var ReplaceState = 1;
-        var ForceUpdate = 2;
-        var CaptureUpdate = 3;
-        var hasForceUpdate = false;
-        var didWarnUpdateInsideUpdate;
-        var currentlyProcessingQueue;
-        {
-          didWarnUpdateInsideUpdate = false;
-          currentlyProcessingQueue = null;
-        }
-        function initializeUpdateQueue(fiber) {
-          var queue = {
-            baseState: fiber.memoizedState,
-            firstBaseUpdate: null,
-            lastBaseUpdate: null,
-            shared: {
-              pending: null,
-              interleaved: null,
-              lanes: NoLanes
-            },
-            effects: null
-          };
-          fiber.updateQueue = queue;
-        }
-        function cloneUpdateQueue(current2, workInProgress2) {
-          var queue = workInProgress2.updateQueue;
-          var currentQueue = current2.updateQueue;
-          if (queue === currentQueue) {
-            var clone = {
-              baseState: currentQueue.baseState,
-              firstBaseUpdate: currentQueue.firstBaseUpdate,
-              lastBaseUpdate: currentQueue.lastBaseUpdate,
-              shared: currentQueue.shared,
-              effects: currentQueue.effects
-            };
-            workInProgress2.updateQueue = clone;
-          }
-        }
-        function createUpdate(eventTime, lane) {
-          var update = {
-            eventTime,
-            lane,
-            tag: UpdateState,
-            payload: null,
-            callback: null,
-            next: null
-          };
-          return update;
-        }
-        function enqueueUpdate(fiber, update, lane) {
-          var updateQueue = fiber.updateQueue;
-          if (updateQueue === null) {
-            return null;
-          }
-          var sharedQueue = updateQueue.shared;
-          {
-            if (currentlyProcessingQueue === sharedQueue && !didWarnUpdateInsideUpdate) {
-              error("An update (setState, replaceState, or forceUpdate) was scheduled from inside an update function. Update functions should be pure, with zero side-effects. Consider using componentDidUpdate or a callback.");
-              didWarnUpdateInsideUpdate = true;
-            }
-          }
-          if (isUnsafeClassRenderPhaseUpdate()) {
-            var pending = sharedQueue.pending;
-            if (pending === null) {
-              update.next = update;
-            } else {
-              update.next = pending.next;
-              pending.next = update;
-            }
-            sharedQueue.pending = update;
-            return unsafe_markUpdateLaneFromFiberToRoot(fiber, lane);
-          } else {
-            return enqueueConcurrentClassUpdate(fiber, sharedQueue, update, lane);
-          }
-        }
-        function entangleTransitions(root2, fiber, lane) {
-          var updateQueue = fiber.updateQueue;
-          if (updateQueue === null) {
-            return;
-          }
-          var sharedQueue = updateQueue.shared;
-          if (isTransitionLane(lane)) {
-            var queueLanes = sharedQueue.lanes;
-            queueLanes = intersectLanes(queueLanes, root2.pendingLanes);
-            var newQueueLanes = mergeLanes(queueLanes, lane);
-            sharedQueue.lanes = newQueueLanes;
-            markRootEntangled(root2, newQueueLanes);
-          }
-        }
-        function enqueueCapturedUpdate(workInProgress2, capturedUpdate) {
-          var queue = workInProgress2.updateQueue;
-          var current2 = workInProgress2.alternate;
-          if (current2 !== null) {
-            var currentQueue = current2.updateQueue;
-            if (queue === currentQueue) {
-              var newFirst = null;
-              var newLast = null;
-              var firstBaseUpdate = queue.firstBaseUpdate;
-              if (firstBaseUpdate !== null) {
-                var update = firstBaseUpdate;
-                do {
-                  var clone = {
-                    eventTime: update.eventTime,
-                    lane: update.lane,
-                    tag: update.tag,
-                    payload: update.payload,
-                    callback: update.callback,
-                    next: null
-                  };
-                  if (newLast === null) {
-                    newFirst = newLast = clone;
-                  } else {
-                    newLast.next = clone;
-                    newLast = clone;
-                  }
-                  update = update.next;
-                } while (update !== null);
-                if (newLast === null) {
-                  newFirst = newLast = capturedUpdate;
-                } else {
-                  newLast.next = capturedUpdate;
-                  newLast = capturedUpdate;
-                }
-              } else {
-                newFirst = newLast = capturedUpdate;
-              }
-              queue = {
-                baseState: currentQueue.baseState,
-                firstBaseUpdate: newFirst,
-                lastBaseUpdate: newLast,
-                shared: currentQueue.shared,
-                effects: currentQueue.effects
-              };
-              workInProgress2.updateQueue = queue;
-              return;
-            }
-          }
-          var lastBaseUpdate = queue.lastBaseUpdate;
-          if (lastBaseUpdate === null) {
-            queue.firstBaseUpdate = capturedUpdate;
-          } else {
-            lastBaseUpdate.next = capturedUpdate;
-          }
-          queue.lastBaseUpdate = capturedUpdate;
-        }
-        function getStateFromUpdate(workInProgress2, queue, update, prevState, nextProps, instance) {
-          switch (update.tag) {
-            case ReplaceState: {
-              var payload = update.payload;
-              if (typeof payload === "function") {
-                {
-                  enterDisallowedContextReadInDEV();
-                }
-                var nextState = payload.call(instance, prevState, nextProps);
-                {
-                  if (workInProgress2.mode & StrictLegacyMode) {
-                    setIsStrictModeForDevtools(true);
-                    try {
-                      payload.call(instance, prevState, nextProps);
-                    } finally {
-                      setIsStrictModeForDevtools(false);
-                    }
-                  }
-                  exitDisallowedContextReadInDEV();
-                }
-                return nextState;
-              }
-              return payload;
-            }
-            case CaptureUpdate: {
-              workInProgress2.flags = workInProgress2.flags & ~ShouldCapture | DidCapture;
-            }
-            case UpdateState: {
-              var _payload = update.payload;
-              var partialState;
-              if (typeof _payload === "function") {
-                {
-                  enterDisallowedContextReadInDEV();
-                }
-                partialState = _payload.call(instance, prevState, nextProps);
-                {
-                  if (workInProgress2.mode & StrictLegacyMode) {
-                    setIsStrictModeForDevtools(true);
-                    try {
-                      _payload.call(instance, prevState, nextProps);
-                    } finally {
-                      setIsStrictModeForDevtools(false);
-                    }
-                  }
-                  exitDisallowedContextReadInDEV();
-                }
-              } else {
-                partialState = _payload;
-              }
-              if (partialState === null || partialState === void 0) {
-                return prevState;
-              }
-              return assign({}, prevState, partialState);
-            }
-            case ForceUpdate: {
-              hasForceUpdate = true;
-              return prevState;
-            }
-          }
-          return prevState;
-        }
-        function processUpdateQueue(workInProgress2, props, instance, renderLanes2) {
-          var queue = workInProgress2.updateQueue;
-          hasForceUpdate = false;
-          {
-            currentlyProcessingQueue = queue.shared;
-          }
-          var firstBaseUpdate = queue.firstBaseUpdate;
-          var lastBaseUpdate = queue.lastBaseUpdate;
-          var pendingQueue = queue.shared.pending;
-          if (pendingQueue !== null) {
-            queue.shared.pending = null;
-            var lastPendingUpdate = pendingQueue;
-            var firstPendingUpdate = lastPendingUpdate.next;
-            lastPendingUpdate.next = null;
-            if (lastBaseUpdate === null) {
-              firstBaseUpdate = firstPendingUpdate;
-            } else {
-              lastBaseUpdate.next = firstPendingUpdate;
-            }
-            lastBaseUpdate = lastPendingUpdate;
-            var current2 = workInProgress2.alternate;
-            if (current2 !== null) {
-              var currentQueue = current2.updateQueue;
-              var currentLastBaseUpdate = currentQueue.lastBaseUpdate;
-              if (currentLastBaseUpdate !== lastBaseUpdate) {
-                if (currentLastBaseUpdate === null) {
-                  currentQueue.firstBaseUpdate = firstPendingUpdate;
-                } else {
-                  currentLastBaseUpdate.next = firstPendingUpdate;
-                }
-                currentQueue.lastBaseUpdate = lastPendingUpdate;
-              }
-            }
-          }
-          if (firstBaseUpdate !== null) {
-            var newState = queue.baseState;
-            var newLanes = NoLanes;
-            var newBaseState = null;
-            var newFirstBaseUpdate = null;
-            var newLastBaseUpdate = null;
-            var update = firstBaseUpdate;
-            do {
-              var updateLane = update.lane;
-              var updateEventTime = update.eventTime;
-              if (!isSubsetOfLanes(renderLanes2, updateLane)) {
-                var clone = {
-                  eventTime: updateEventTime,
-                  lane: updateLane,
-                  tag: update.tag,
-                  payload: update.payload,
-                  callback: update.callback,
-                  next: null
-                };
-                if (newLastBaseUpdate === null) {
-                  newFirstBaseUpdate = newLastBaseUpdate = clone;
-                  newBaseState = newState;
-                } else {
-                  newLastBaseUpdate = newLastBaseUpdate.next = clone;
-                }
-                newLanes = mergeLanes(newLanes, updateLane);
-              } else {
-                if (newLastBaseUpdate !== null) {
-                  var _clone = {
-                    eventTime: updateEventTime,
-                    // This update is going to be committed so we never want uncommit
-                    // it. Using NoLane works because 0 is a subset of all bitmasks, so
-                    // this will never be skipped by the check above.
-                    lane: NoLane,
-                    tag: update.tag,
-                    payload: update.payload,
-                    callback: update.callback,
-                    next: null
-                  };
-                  newLastBaseUpdate = newLastBaseUpdate.next = _clone;
-                }
-                newState = getStateFromUpdate(workInProgress2, queue, update, newState, props, instance);
-                var callback = update.callback;
-                if (callback !== null && // If the update was already committed, we should not queue its
-                // callback again.
-                update.lane !== NoLane) {
-                  workInProgress2.flags |= Callback;
-                  var effects = queue.effects;
-                  if (effects === null) {
-                    queue.effects = [update];
-                  } else {
-                    effects.push(update);
-                  }
-                }
-              }
-              update = update.next;
-              if (update === null) {
-                pendingQueue = queue.shared.pending;
-                if (pendingQueue === null) {
-                  break;
-                } else {
-                  var _lastPendingUpdate = pendingQueue;
-                  var _firstPendingUpdate = _lastPendingUpdate.next;
-                  _lastPendingUpdate.next = null;
-                  update = _firstPendingUpdate;
-                  queue.lastBaseUpdate = _lastPendingUpdate;
-                  queue.shared.pending = null;
-                }
-              }
-            } while (true);
-            if (newLastBaseUpdate === null) {
-              newBaseState = newState;
-            }
-            queue.baseState = newBaseState;
-            queue.firstBaseUpdate = newFirstBaseUpdate;
-            queue.lastBaseUpdate = newLastBaseUpdate;
-            var lastInterleaved = queue.shared.interleaved;
-            if (lastInterleaved !== null) {
-              var interleaved = lastInterleaved;
-              do {
-                newLanes = mergeLanes(newLanes, interleaved.lane);
-                interleaved = interleaved.next;
-              } while (interleaved !== lastInterleaved);
-            } else if (firstBaseUpdate === null) {
-              queue.shared.lanes = NoLanes;
-            }
-            markSkippedUpdateLanes(newLanes);
-            workInProgress2.lanes = newLanes;
-            workInProgress2.memoizedState = newState;
-          }
-          {
-            currentlyProcessingQueue = null;
-          }
-        }
-        function callCallback(callback, context) {
-          if (typeof callback !== "function") {
-            throw new Error("Invalid argument passed as callback. Expected a function. Instead " + ("received: " + callback));
-          }
-          callback.call(context);
-        }
-        function resetHasForceUpdateBeforeProcessing() {
-          hasForceUpdate = false;
-        }
-        function checkHasForceUpdateAfterProcessing() {
-          return hasForceUpdate;
-        }
-        function commitUpdateQueue(finishedWork, finishedQueue, instance) {
-          var effects = finishedQueue.effects;
-          finishedQueue.effects = null;
-          if (effects !== null) {
-            for (var i = 0; i < effects.length; i++) {
-              var effect = effects[i];
-              var callback = effect.callback;
-              if (callback !== null) {
-                effect.callback = null;
-                callCallback(callback, instance);
-              }
-            }
-          }
-        }
-        var fakeInternalInstance = {};
-        var emptyRefsObject = new React74.Component().refs;
-        var didWarnAboutStateAssignmentForComponent;
-        var didWarnAboutUninitializedState;
-        var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
-        var didWarnAboutLegacyLifecyclesAndDerivedState;
-        var didWarnAboutUndefinedDerivedState;
-        var warnOnUndefinedDerivedState;
-        var warnOnInvalidCallback;
-        var didWarnAboutDirectlyAssigningPropsToState;
-        var didWarnAboutContextTypeAndContextTypes;
-        var didWarnAboutInvalidateContextType;
-        {
-          didWarnAboutStateAssignmentForComponent = /* @__PURE__ */ new Set();
-          didWarnAboutUninitializedState = /* @__PURE__ */ new Set();
-          didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate = /* @__PURE__ */ new Set();
-          didWarnAboutLegacyLifecyclesAndDerivedState = /* @__PURE__ */ new Set();
-          didWarnAboutDirectlyAssigningPropsToState = /* @__PURE__ */ new Set();
-          didWarnAboutUndefinedDerivedState = /* @__PURE__ */ new Set();
-          didWarnAboutContextTypeAndContextTypes = /* @__PURE__ */ new Set();
-          didWarnAboutInvalidateContextType = /* @__PURE__ */ new Set();
-          var didWarnOnInvalidCallback = /* @__PURE__ */ new Set();
-          warnOnInvalidCallback = function(callback, callerName) {
-            if (callback === null || typeof callback === "function") {
-              return;
-            }
-            var key = callerName + "_" + callback;
-            if (!didWarnOnInvalidCallback.has(key)) {
-              didWarnOnInvalidCallback.add(key);
-              error("%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callerName, callback);
-            }
-          };
-          warnOnUndefinedDerivedState = function(type, partialState) {
-            if (partialState === void 0) {
-              var componentName = getComponentNameFromType(type) || "Component";
-              if (!didWarnAboutUndefinedDerivedState.has(componentName)) {
-                didWarnAboutUndefinedDerivedState.add(componentName);
-                error("%s.getDerivedStateFromProps(): A valid state object (or null) must be returned. You have returned undefined.", componentName);
-              }
-            }
-          };
-          Object.defineProperty(fakeInternalInstance, "_processChildContext", {
-            enumerable: false,
-            value: function() {
-              throw new Error("_processChildContext is not available in React 16+. This likely means you have multiple copies of React and are attempting to nest a React 15 tree inside a React 16 tree using unstable_renderSubtreeIntoContainer, which isn't supported. Try to make sure you have only one copy of React (and ideally, switch to ReactDOM.createPortal).");
-            }
-          });
-          Object.freeze(fakeInternalInstance);
-        }
-        function applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, nextProps) {
-          var prevState = workInProgress2.memoizedState;
-          var partialState = getDerivedStateFromProps(nextProps, prevState);
-          {
-            if (workInProgress2.mode & StrictLegacyMode) {
-              setIsStrictModeForDevtools(true);
-              try {
-                partialState = getDerivedStateFromProps(nextProps, prevState);
-              } finally {
-                setIsStrictModeForDevtools(false);
-              }
-            }
-            warnOnUndefinedDerivedState(ctor, partialState);
-          }
-          var memoizedState = partialState === null || partialState === void 0 ? prevState : assign({}, prevState, partialState);
-          workInProgress2.memoizedState = memoizedState;
-          if (workInProgress2.lanes === NoLanes) {
-            var updateQueue = workInProgress2.updateQueue;
-            updateQueue.baseState = memoizedState;
-          }
-        }
-        var classComponentUpdater = {
-          isMounted,
-          enqueueSetState: function(inst3, payload, callback) {
-            var fiber = get(inst3);
-            var eventTime = requestEventTime();
-            var lane = requestUpdateLane(fiber);
-            var update = createUpdate(eventTime, lane);
-            update.payload = payload;
-            if (callback !== void 0 && callback !== null) {
-              {
-                warnOnInvalidCallback(callback, "setState");
-              }
-              update.callback = callback;
-            }
-            var root2 = enqueueUpdate(fiber, update, lane);
-            if (root2 !== null) {
-              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
-              entangleTransitions(root2, fiber, lane);
-            }
-            {
-              markStateUpdateScheduled(fiber, lane);
-            }
-          },
-          enqueueReplaceState: function(inst3, payload, callback) {
-            var fiber = get(inst3);
-            var eventTime = requestEventTime();
-            var lane = requestUpdateLane(fiber);
-            var update = createUpdate(eventTime, lane);
-            update.tag = ReplaceState;
-            update.payload = payload;
-            if (callback !== void 0 && callback !== null) {
-              {
-                warnOnInvalidCallback(callback, "replaceState");
-              }
-              update.callback = callback;
-            }
-            var root2 = enqueueUpdate(fiber, update, lane);
-            if (root2 !== null) {
-              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
-              entangleTransitions(root2, fiber, lane);
-            }
-            {
-              markStateUpdateScheduled(fiber, lane);
-            }
-          },
-          enqueueForceUpdate: function(inst3, callback) {
-            var fiber = get(inst3);
-            var eventTime = requestEventTime();
-            var lane = requestUpdateLane(fiber);
-            var update = createUpdate(eventTime, lane);
-            update.tag = ForceUpdate;
-            if (callback !== void 0 && callback !== null) {
-              {
-                warnOnInvalidCallback(callback, "forceUpdate");
-              }
-              update.callback = callback;
-            }
-            var root2 = enqueueUpdate(fiber, update, lane);
-            if (root2 !== null) {
-              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
-              entangleTransitions(root2, fiber, lane);
-            }
-            {
-              markForceUpdateScheduled(fiber, lane);
-            }
-          }
-        };
-        function checkShouldComponentUpdate(workInProgress2, ctor, oldProps, newProps, oldState, newState, nextContext) {
-          var instance = workInProgress2.stateNode;
-          if (typeof instance.shouldComponentUpdate === "function") {
-            var shouldUpdate = instance.shouldComponentUpdate(newProps, newState, nextContext);
-            {
-              if (workInProgress2.mode & StrictLegacyMode) {
-                setIsStrictModeForDevtools(true);
-                try {
-                  shouldUpdate = instance.shouldComponentUpdate(newProps, newState, nextContext);
-                } finally {
-                  setIsStrictModeForDevtools(false);
-                }
-              }
-              if (shouldUpdate === void 0) {
-                error("%s.shouldComponentUpdate(): Returned undefined instead of a boolean value. Make sure to return true or false.", getComponentNameFromType(ctor) || "Component");
-              }
-            }
-            return shouldUpdate;
-          }
-          if (ctor.prototype && ctor.prototype.isPureReactComponent) {
-            return !shallowEqual(oldProps, newProps) || !shallowEqual(oldState, newState);
-          }
-          return true;
-        }
-        function checkClassInstance(workInProgress2, ctor, newProps) {
-          var instance = workInProgress2.stateNode;
-          {
-            var name = getComponentNameFromType(ctor) || "Component";
-            var renderPresent = instance.render;
-            if (!renderPresent) {
-              if (ctor.prototype && typeof ctor.prototype.render === "function") {
-                error("%s(...): No `render` method found on the returned component instance: did you accidentally return an object from the constructor?", name);
-              } else {
-                error("%s(...): No `render` method found on the returned component instance: you may have forgotten to define `render`.", name);
-              }
-            }
-            if (instance.getInitialState && !instance.getInitialState.isReactClassApproved && !instance.state) {
-              error("getInitialState was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Did you mean to define a state property instead?", name);
-            }
-            if (instance.getDefaultProps && !instance.getDefaultProps.isReactClassApproved) {
-              error("getDefaultProps was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Use a static property to define defaultProps instead.", name);
-            }
-            if (instance.propTypes) {
-              error("propTypes was defined as an instance property on %s. Use a static property to define propTypes instead.", name);
-            }
-            if (instance.contextType) {
-              error("contextType was defined as an instance property on %s. Use a static property to define contextType instead.", name);
-            }
-            {
-              if (instance.contextTypes) {
-                error("contextTypes was defined as an instance property on %s. Use a static property to define contextTypes instead.", name);
-              }
-              if (ctor.contextType && ctor.contextTypes && !didWarnAboutContextTypeAndContextTypes.has(ctor)) {
-                didWarnAboutContextTypeAndContextTypes.add(ctor);
-                error("%s declares both contextTypes and contextType static properties. The legacy contextTypes property will be ignored.", name);
-              }
-            }
-            if (typeof instance.componentShouldUpdate === "function") {
-              error("%s has a method called componentShouldUpdate(). Did you mean shouldComponentUpdate()? The name is phrased as a question because the function is expected to return a value.", name);
-            }
-            if (ctor.prototype && ctor.prototype.isPureReactComponent && typeof instance.shouldComponentUpdate !== "undefined") {
-              error("%s has a method called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.", getComponentNameFromType(ctor) || "A pure component");
-            }
-            if (typeof instance.componentDidUnmount === "function") {
-              error("%s has a method called componentDidUnmount(). But there is no such lifecycle method. Did you mean componentWillUnmount()?", name);
-            }
-            if (typeof instance.componentDidReceiveProps === "function") {
-              error("%s has a method called componentDidReceiveProps(). But there is no such lifecycle method. If you meant to update the state in response to changing props, use componentWillReceiveProps(). If you meant to fetch data or run side-effects or mutations after React has updated the UI, use componentDidUpdate().", name);
-            }
-            if (typeof instance.componentWillRecieveProps === "function") {
-              error("%s has a method called componentWillRecieveProps(). Did you mean componentWillReceiveProps()?", name);
-            }
-            if (typeof instance.UNSAFE_componentWillRecieveProps === "function") {
-              error("%s has a method called UNSAFE_componentWillRecieveProps(). Did you mean UNSAFE_componentWillReceiveProps()?", name);
-            }
-            var hasMutatedProps = instance.props !== newProps;
-            if (instance.props !== void 0 && hasMutatedProps) {
-              error("%s(...): When calling super() in `%s`, make sure to pass up the same props that your component's constructor was passed.", name, name);
-            }
-            if (instance.defaultProps) {
-              error("Setting defaultProps as an instance property on %s is not supported and will be ignored. Instead, define defaultProps as a static property on %s.", name, name);
-            }
-            if (typeof instance.getSnapshotBeforeUpdate === "function" && typeof instance.componentDidUpdate !== "function" && !didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate.has(ctor)) {
-              didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate.add(ctor);
-              error("%s: getSnapshotBeforeUpdate() should be used with componentDidUpdate(). This component defines getSnapshotBeforeUpdate() only.", getComponentNameFromType(ctor));
-            }
-            if (typeof instance.getDerivedStateFromProps === "function") {
-              error("%s: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name);
-            }
-            if (typeof instance.getDerivedStateFromError === "function") {
-              error("%s: getDerivedStateFromError() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name);
-            }
-            if (typeof ctor.getSnapshotBeforeUpdate === "function") {
-              error("%s: getSnapshotBeforeUpdate() is defined as a static method and will be ignored. Instead, declare it as an instance method.", name);
-            }
-            var _state = instance.state;
-            if (_state && (typeof _state !== "object" || isArray(_state))) {
-              error("%s.state: must be set to an object or null", name);
-            }
-            if (typeof instance.getChildContext === "function" && typeof ctor.childContextTypes !== "object") {
-              error("%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().", name);
-            }
-          }
-        }
-        function adoptClassInstance(workInProgress2, instance) {
-          instance.updater = classComponentUpdater;
-          workInProgress2.stateNode = instance;
-          set(instance, workInProgress2);
-          {
-            instance._reactInternalInstance = fakeInternalInstance;
-          }
-        }
-        function constructClassInstance(workInProgress2, ctor, props) {
-          var isLegacyContextConsumer = false;
-          var unmaskedContext = emptyContextObject;
-          var context = emptyContextObject;
-          var contextType = ctor.contextType;
-          {
-            if ("contextType" in ctor) {
-              var isValid = (
-                // Allow null for conditional declaration
-                contextType === null || contextType !== void 0 && contextType.$$typeof === REACT_CONTEXT_TYPE && contextType._context === void 0
-              );
-              if (!isValid && !didWarnAboutInvalidateContextType.has(ctor)) {
-                didWarnAboutInvalidateContextType.add(ctor);
-                var addendum = "";
-                if (contextType === void 0) {
-                  addendum = " However, it is set to undefined. This can be caused by a typo or by mixing up named and default imports. This can also happen due to a circular dependency, so try moving the createContext() call to a separate file.";
-                } else if (typeof contextType !== "object") {
-                  addendum = " However, it is set to a " + typeof contextType + ".";
-                } else if (contextType.$$typeof === REACT_PROVIDER_TYPE) {
-                  addendum = " Did you accidentally pass the Context.Provider instead?";
-                } else if (contextType._context !== void 0) {
-                  addendum = " Did you accidentally pass the Context.Consumer instead?";
-                } else {
-                  addendum = " However, it is set to an object with keys {" + Object.keys(contextType).join(", ") + "}.";
-                }
-                error("%s defines an invalid contextType. contextType should point to the Context object returned by React.createContext().%s", getComponentNameFromType(ctor) || "Component", addendum);
-              }
-            }
-          }
-          if (typeof contextType === "object" && contextType !== null) {
-            context = readContext(contextType);
-          } else {
-            unmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
-            var contextTypes = ctor.contextTypes;
-            isLegacyContextConsumer = contextTypes !== null && contextTypes !== void 0;
-            context = isLegacyContextConsumer ? getMaskedContext(workInProgress2, unmaskedContext) : emptyContextObject;
-          }
-          var instance = new ctor(props, context);
-          {
-            if (workInProgress2.mode & StrictLegacyMode) {
-              setIsStrictModeForDevtools(true);
-              try {
-                instance = new ctor(props, context);
-              } finally {
-                setIsStrictModeForDevtools(false);
-              }
-            }
-          }
-          var state = workInProgress2.memoizedState = instance.state !== null && instance.state !== void 0 ? instance.state : null;
-          adoptClassInstance(workInProgress2, instance);
-          {
-            if (typeof ctor.getDerivedStateFromProps === "function" && state === null) {
-              var componentName = getComponentNameFromType(ctor) || "Component";
-              if (!didWarnAboutUninitializedState.has(componentName)) {
-                didWarnAboutUninitializedState.add(componentName);
-                error("`%s` uses `getDerivedStateFromProps` but its initial state is %s. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `%s`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape.", componentName, instance.state === null ? "null" : "undefined", componentName);
-              }
-            }
-            if (typeof ctor.getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function") {
-              var foundWillMountName = null;
-              var foundWillReceivePropsName = null;
-              var foundWillUpdateName = null;
-              if (typeof instance.componentWillMount === "function" && instance.componentWillMount.__suppressDeprecationWarning !== true) {
-                foundWillMountName = "componentWillMount";
-              } else if (typeof instance.UNSAFE_componentWillMount === "function") {
-                foundWillMountName = "UNSAFE_componentWillMount";
-              }
-              if (typeof instance.componentWillReceiveProps === "function" && instance.componentWillReceiveProps.__suppressDeprecationWarning !== true) {
-                foundWillReceivePropsName = "componentWillReceiveProps";
-              } else if (typeof instance.UNSAFE_componentWillReceiveProps === "function") {
-                foundWillReceivePropsName = "UNSAFE_componentWillReceiveProps";
-              }
-              if (typeof instance.componentWillUpdate === "function" && instance.componentWillUpdate.__suppressDeprecationWarning !== true) {
-                foundWillUpdateName = "componentWillUpdate";
-              } else if (typeof instance.UNSAFE_componentWillUpdate === "function") {
-                foundWillUpdateName = "UNSAFE_componentWillUpdate";
-              }
-              if (foundWillMountName !== null || foundWillReceivePropsName !== null || foundWillUpdateName !== null) {
-                var _componentName = getComponentNameFromType(ctor) || "Component";
-                var newApiName = typeof ctor.getDerivedStateFromProps === "function" ? "getDerivedStateFromProps()" : "getSnapshotBeforeUpdate()";
-                if (!didWarnAboutLegacyLifecyclesAndDerivedState.has(_componentName)) {
-                  didWarnAboutLegacyLifecyclesAndDerivedState.add(_componentName);
-                  error("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://reactjs.org/link/unsafe-component-lifecycles", _componentName, newApiName, foundWillMountName !== null ? "\n  " + foundWillMountName : "", foundWillReceivePropsName !== null ? "\n  " + foundWillReceivePropsName : "", foundWillUpdateName !== null ? "\n  " + foundWillUpdateName : "");
-                }
-              }
-            }
-          }
-          if (isLegacyContextConsumer) {
-            cacheContext(workInProgress2, unmaskedContext, context);
-          }
-          return instance;
-        }
-        function callComponentWillMount(workInProgress2, instance) {
-          var oldState = instance.state;
-          if (typeof instance.componentWillMount === "function") {
-            instance.componentWillMount();
-          }
-          if (typeof instance.UNSAFE_componentWillMount === "function") {
-            instance.UNSAFE_componentWillMount();
-          }
-          if (oldState !== instance.state) {
-            {
-              error("%s.componentWillMount(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", getComponentNameFromFiber(workInProgress2) || "Component");
-            }
-            classComponentUpdater.enqueueReplaceState(instance, instance.state, null);
-          }
-        }
-        function callComponentWillReceiveProps(workInProgress2, instance, newProps, nextContext) {
-          var oldState = instance.state;
-          if (typeof instance.componentWillReceiveProps === "function") {
-            instance.componentWillReceiveProps(newProps, nextContext);
-          }
-          if (typeof instance.UNSAFE_componentWillReceiveProps === "function") {
-            instance.UNSAFE_componentWillReceiveProps(newProps, nextContext);
-          }
-          if (instance.state !== oldState) {
-            {
-              var componentName = getComponentNameFromFiber(workInProgress2) || "Component";
-              if (!didWarnAboutStateAssignmentForComponent.has(componentName)) {
-                didWarnAboutStateAssignmentForComponent.add(componentName);
-                error("%s.componentWillReceiveProps(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", componentName);
-              }
-            }
-            classComponentUpdater.enqueueReplaceState(instance, instance.state, null);
-          }
-        }
-        function mountClassInstance(workInProgress2, ctor, newProps, renderLanes2) {
-          {
-            checkClassInstance(workInProgress2, ctor, newProps);
-          }
-          var instance = workInProgress2.stateNode;
-          instance.props = newProps;
-          instance.state = workInProgress2.memoizedState;
-          instance.refs = emptyRefsObject;
-          initializeUpdateQueue(workInProgress2);
-          var contextType = ctor.contextType;
-          if (typeof contextType === "object" && contextType !== null) {
-            instance.context = readContext(contextType);
-          } else {
-            var unmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
-            instance.context = getMaskedContext(workInProgress2, unmaskedContext);
-          }
-          {
-            if (instance.state === newProps) {
-              var componentName = getComponentNameFromType(ctor) || "Component";
-              if (!didWarnAboutDirectlyAssigningPropsToState.has(componentName)) {
-                didWarnAboutDirectlyAssigningPropsToState.add(componentName);
-                error("%s: It is not recommended to assign props directly to state because updates to props won't be reflected in state. In most cases, it is better to use props directly.", componentName);
-              }
-            }
-            if (workInProgress2.mode & StrictLegacyMode) {
-              ReactStrictModeWarnings.recordLegacyContextWarning(workInProgress2, instance);
-            }
-            {
-              ReactStrictModeWarnings.recordUnsafeLifecycleWarnings(workInProgress2, instance);
-            }
-          }
-          instance.state = workInProgress2.memoizedState;
-          var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
-          if (typeof getDerivedStateFromProps === "function") {
-            applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, newProps);
-            instance.state = workInProgress2.memoizedState;
-          }
-          if (typeof ctor.getDerivedStateFromProps !== "function" && typeof instance.getSnapshotBeforeUpdate !== "function" && (typeof instance.UNSAFE_componentWillMount === "function" || typeof instance.componentWillMount === "function")) {
-            callComponentWillMount(workInProgress2, instance);
-            processUpdateQueue(workInProgress2, newProps, instance, renderLanes2);
-            instance.state = workInProgress2.memoizedState;
-          }
-          if (typeof instance.componentDidMount === "function") {
-            var fiberFlags = Update;
-            {
-              fiberFlags |= LayoutStatic;
-            }
-            if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
-              fiberFlags |= MountLayoutDev;
-            }
-            workInProgress2.flags |= fiberFlags;
-          }
-        }
-        function resumeMountClassInstance(workInProgress2, ctor, newProps, renderLanes2) {
-          var instance = workInProgress2.stateNode;
-          var oldProps = workInProgress2.memoizedProps;
-          instance.props = oldProps;
-          var oldContext = instance.context;
-          var contextType = ctor.contextType;
-          var nextContext = emptyContextObject;
-          if (typeof contextType === "object" && contextType !== null) {
-            nextContext = readContext(contextType);
-          } else {
-            var nextLegacyUnmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
-            nextContext = getMaskedContext(workInProgress2, nextLegacyUnmaskedContext);
-          }
-          var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
-          var hasNewLifecycles = typeof getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function";
-          if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillReceiveProps === "function" || typeof instance.componentWillReceiveProps === "function")) {
-            if (oldProps !== newProps || oldContext !== nextContext) {
-              callComponentWillReceiveProps(workInProgress2, instance, newProps, nextContext);
-            }
-          }
-          resetHasForceUpdateBeforeProcessing();
-          var oldState = workInProgress2.memoizedState;
-          var newState = instance.state = oldState;
-          processUpdateQueue(workInProgress2, newProps, instance, renderLanes2);
-          newState = workInProgress2.memoizedState;
-          if (oldProps === newProps && oldState === newState && !hasContextChanged() && !checkHasForceUpdateAfterProcessing()) {
-            if (typeof instance.componentDidMount === "function") {
-              var fiberFlags = Update;
-              {
-                fiberFlags |= LayoutStatic;
-              }
-              if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
-                fiberFlags |= MountLayoutDev;
-              }
-              workInProgress2.flags |= fiberFlags;
-            }
-            return false;
-          }
-          if (typeof getDerivedStateFromProps === "function") {
-            applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, newProps);
-            newState = workInProgress2.memoizedState;
-          }
-          var shouldUpdate = checkHasForceUpdateAfterProcessing() || checkShouldComponentUpdate(workInProgress2, ctor, oldProps, newProps, oldState, newState, nextContext);
-          if (shouldUpdate) {
-            if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillMount === "function" || typeof instance.componentWillMount === "function")) {
-              if (typeof instance.componentWillMount === "function") {
-                instance.componentWillMount();
-              }
-              if (typeof instance.UNSAFE_componentWillMount === "function") {
-                instance.UNSAFE_componentWillMount();
-              }
-            }
-            if (typeof instance.componentDidMount === "function") {
-              var _fiberFlags = Update;
-              {
-                _fiberFlags |= LayoutStatic;
-              }
-              if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
-                _fiberFlags |= MountLayoutDev;
-              }
-              workInProgress2.flags |= _fiberFlags;
-            }
-          } else {
-            if (typeof instance.componentDidMount === "function") {
-              var _fiberFlags2 = Update;
-              {
-                _fiberFlags2 |= LayoutStatic;
-              }
-              if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
-                _fiberFlags2 |= MountLayoutDev;
-              }
-              workInProgress2.flags |= _fiberFlags2;
-            }
-            workInProgress2.memoizedProps = newProps;
-            workInProgress2.memoizedState = newState;
-          }
-          instance.props = newProps;
-          instance.state = newState;
-          instance.context = nextContext;
-          return shouldUpdate;
-        }
-        function updateClassInstance(current2, workInProgress2, ctor, newProps, renderLanes2) {
-          var instance = workInProgress2.stateNode;
-          cloneUpdateQueue(current2, workInProgress2);
-          var unresolvedOldProps = workInProgress2.memoizedProps;
-          var oldProps = workInProgress2.type === workInProgress2.elementType ? unresolvedOldProps : resolveDefaultProps(workInProgress2.type, unresolvedOldProps);
-          instance.props = oldProps;
-          var unresolvedNewProps = workInProgress2.pendingProps;
-          var oldContext = instance.context;
-          var contextType = ctor.contextType;
-          var nextContext = emptyContextObject;
-          if (typeof contextType === "object" && contextType !== null) {
-            nextContext = readContext(contextType);
-          } else {
-            var nextUnmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
-            nextContext = getMaskedContext(workInProgress2, nextUnmaskedContext);
-          }
-          var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
-          var hasNewLifecycles = typeof getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function";
-          if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillReceiveProps === "function" || typeof instance.componentWillReceiveProps === "function")) {
-            if (unresolvedOldProps !== unresolvedNewProps || oldContext !== nextContext) {
-              callComponentWillReceiveProps(workInProgress2, instance, newProps, nextContext);
-            }
-          }
-          resetHasForceUpdateBeforeProcessing();
-          var oldState = workInProgress2.memoizedState;
-          var newState = instance.state = oldState;
-          processUpdateQueue(workInProgress2, newProps, instance, renderLanes2);
-          newState = workInProgress2.memoizedState;
-          if (unresolvedOldProps === unresolvedNewProps && oldState === newState && !hasContextChanged() && !checkHasForceUpdateAfterProcessing() && !enableLazyContextPropagation) {
-            if (typeof instance.componentDidUpdate === "function") {
-              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
-                workInProgress2.flags |= Update;
-              }
-            }
-            if (typeof instance.getSnapshotBeforeUpdate === "function") {
-              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
-                workInProgress2.flags |= Snapshot;
-              }
-            }
-            return false;
-          }
-          if (typeof getDerivedStateFromProps === "function") {
-            applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, newProps);
-            newState = workInProgress2.memoizedState;
-          }
-          var shouldUpdate = checkHasForceUpdateAfterProcessing() || checkShouldComponentUpdate(workInProgress2, ctor, oldProps, newProps, oldState, newState, nextContext) || // TODO: In some cases, we'll end up checking if context has changed twice,
-          // both before and after `shouldComponentUpdate` has been called. Not ideal,
-          // but I'm loath to refactor this function. This only happens for memoized
-          // components so it's not that common.
-          enableLazyContextPropagation;
-          if (shouldUpdate) {
-            if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillUpdate === "function" || typeof instance.componentWillUpdate === "function")) {
-              if (typeof instance.componentWillUpdate === "function") {
-                instance.componentWillUpdate(newProps, newState, nextContext);
-              }
-              if (typeof instance.UNSAFE_componentWillUpdate === "function") {
-                instance.UNSAFE_componentWillUpdate(newProps, newState, nextContext);
-              }
-            }
-            if (typeof instance.componentDidUpdate === "function") {
-              workInProgress2.flags |= Update;
-            }
-            if (typeof instance.getSnapshotBeforeUpdate === "function") {
-              workInProgress2.flags |= Snapshot;
-            }
-          } else {
-            if (typeof instance.componentDidUpdate === "function") {
-              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
-                workInProgress2.flags |= Update;
-              }
-            }
-            if (typeof instance.getSnapshotBeforeUpdate === "function") {
-              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
-                workInProgress2.flags |= Snapshot;
-              }
-            }
-            workInProgress2.memoizedProps = newProps;
-            workInProgress2.memoizedState = newState;
-          }
-          instance.props = newProps;
-          instance.state = newState;
-          instance.context = nextContext;
-          return shouldUpdate;
-        }
         var didWarnAboutMaps;
         var didWarnAboutGenerators;
         var didWarnAboutStringRefs;
@@ -17807,6 +16512,9 @@ var require_react_dom_development = __commonJS({
             error('Each child in a list should have a unique "key" prop. See https://reactjs.org/link/warning-keys for more information.');
           };
         }
+        function isReactClass(type) {
+          return type.prototype && type.prototype.isReactComponent;
+        }
         function coerceRef(returnFiber, current2, element) {
           var mixedRef = element.ref;
           if (mixedRef !== null && typeof mixedRef !== "function" && typeof mixedRef !== "object") {
@@ -17814,11 +16522,14 @@ var require_react_dom_development = __commonJS({
               if ((returnFiber.mode & StrictLegacyMode || warnAboutStringRefs) && // We warn in ReactElement.js if owner and self are equal for string refs
               // because these cannot be automatically converted to an arrow function
               // using a codemod. Therefore, we don't have to warn about string refs again.
-              !(element._owner && element._self && element._owner.stateNode !== element._self)) {
+              !(element._owner && element._self && element._owner.stateNode !== element._self) && // Will already throw with "Function components cannot have string refs"
+              !(element._owner && element._owner.tag !== ClassComponent) && // Will already warn with "Function components cannot be given refs"
+              !(typeof element.type === "function" && !isReactClass(element.type)) && // Will already throw with "Element ref was specified as a string (someStringRef) but no owner was set"
+              element._owner) {
                 var componentName = getComponentNameFromFiber(returnFiber) || "Component";
                 if (!didWarnAboutStringRefs[componentName]) {
                   {
-                    error('A string ref, "%s", has been found within a strict mode tree. String refs are a source of potential bugs and should be avoided. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', mixedRef);
+                    error('Component "%s" contains the string ref "%s". Support for string refs will be removed in a future major release. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref', componentName, mixedRef);
                   }
                   didWarnAboutStringRefs[componentName] = true;
                 }
@@ -17847,9 +16558,6 @@ var require_react_dom_development = __commonJS({
               }
               var ref = function(value) {
                 var refs = resolvedInst.refs;
-                if (refs === emptyRefsObject) {
-                  refs = resolvedInst.refs = {};
-                }
                 if (value === null) {
                   delete refs[stringRef];
                 } else {
@@ -18540,6 +17248,672 @@ var require_react_dom_development = __commonJS({
           while (child !== null) {
             resetWorkInProgress(child, lanes);
             child = child.sibling;
+          }
+        }
+        var valueCursor = createCursor(null);
+        var rendererSigil;
+        {
+          rendererSigil = {};
+        }
+        var currentlyRenderingFiber = null;
+        var lastContextDependency = null;
+        var lastFullyObservedContext = null;
+        var isDisallowedContextReadInDEV = false;
+        function resetContextDependencies() {
+          currentlyRenderingFiber = null;
+          lastContextDependency = null;
+          lastFullyObservedContext = null;
+          {
+            isDisallowedContextReadInDEV = false;
+          }
+        }
+        function enterDisallowedContextReadInDEV() {
+          {
+            isDisallowedContextReadInDEV = true;
+          }
+        }
+        function exitDisallowedContextReadInDEV() {
+          {
+            isDisallowedContextReadInDEV = false;
+          }
+        }
+        function pushProvider(providerFiber, context, nextValue) {
+          {
+            push(valueCursor, context._currentValue, providerFiber);
+            context._currentValue = nextValue;
+            {
+              if (context._currentRenderer !== void 0 && context._currentRenderer !== null && context._currentRenderer !== rendererSigil) {
+                error("Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.");
+              }
+              context._currentRenderer = rendererSigil;
+            }
+          }
+        }
+        function popProvider(context, providerFiber) {
+          var currentValue = valueCursor.current;
+          pop(valueCursor, providerFiber);
+          {
+            {
+              context._currentValue = currentValue;
+            }
+          }
+        }
+        function scheduleContextWorkOnParentPath(parent, renderLanes2, propagationRoot) {
+          var node = parent;
+          while (node !== null) {
+            var alternate = node.alternate;
+            if (!isSubsetOfLanes(node.childLanes, renderLanes2)) {
+              node.childLanes = mergeLanes(node.childLanes, renderLanes2);
+              if (alternate !== null) {
+                alternate.childLanes = mergeLanes(alternate.childLanes, renderLanes2);
+              }
+            } else if (alternate !== null && !isSubsetOfLanes(alternate.childLanes, renderLanes2)) {
+              alternate.childLanes = mergeLanes(alternate.childLanes, renderLanes2);
+            }
+            if (node === propagationRoot) {
+              break;
+            }
+            node = node.return;
+          }
+          {
+            if (node !== propagationRoot) {
+              error("Expected to find the propagation root when scheduling context work. This error is likely caused by a bug in React. Please file an issue.");
+            }
+          }
+        }
+        function propagateContextChange(workInProgress2, context, renderLanes2) {
+          {
+            propagateContextChange_eager(workInProgress2, context, renderLanes2);
+          }
+        }
+        function propagateContextChange_eager(workInProgress2, context, renderLanes2) {
+          var fiber = workInProgress2.child;
+          if (fiber !== null) {
+            fiber.return = workInProgress2;
+          }
+          while (fiber !== null) {
+            var nextFiber = void 0;
+            var list = fiber.dependencies;
+            if (list !== null) {
+              nextFiber = fiber.child;
+              var dependency = list.firstContext;
+              while (dependency !== null) {
+                if (dependency.context === context) {
+                  if (fiber.tag === ClassComponent) {
+                    var lane = pickArbitraryLane(renderLanes2);
+                    var update = createUpdate(NoTimestamp, lane);
+                    update.tag = ForceUpdate;
+                    var updateQueue = fiber.updateQueue;
+                    if (updateQueue === null) ;
+                    else {
+                      var sharedQueue = updateQueue.shared;
+                      var pending = sharedQueue.pending;
+                      if (pending === null) {
+                        update.next = update;
+                      } else {
+                        update.next = pending.next;
+                        pending.next = update;
+                      }
+                      sharedQueue.pending = update;
+                    }
+                  }
+                  fiber.lanes = mergeLanes(fiber.lanes, renderLanes2);
+                  var alternate = fiber.alternate;
+                  if (alternate !== null) {
+                    alternate.lanes = mergeLanes(alternate.lanes, renderLanes2);
+                  }
+                  scheduleContextWorkOnParentPath(fiber.return, renderLanes2, workInProgress2);
+                  list.lanes = mergeLanes(list.lanes, renderLanes2);
+                  break;
+                }
+                dependency = dependency.next;
+              }
+            } else if (fiber.tag === ContextProvider) {
+              nextFiber = fiber.type === workInProgress2.type ? null : fiber.child;
+            } else if (fiber.tag === DehydratedFragment) {
+              var parentSuspense = fiber.return;
+              if (parentSuspense === null) {
+                throw new Error("We just came from a parent so we must have had a parent. This is a bug in React.");
+              }
+              parentSuspense.lanes = mergeLanes(parentSuspense.lanes, renderLanes2);
+              var _alternate = parentSuspense.alternate;
+              if (_alternate !== null) {
+                _alternate.lanes = mergeLanes(_alternate.lanes, renderLanes2);
+              }
+              scheduleContextWorkOnParentPath(parentSuspense, renderLanes2, workInProgress2);
+              nextFiber = fiber.sibling;
+            } else {
+              nextFiber = fiber.child;
+            }
+            if (nextFiber !== null) {
+              nextFiber.return = fiber;
+            } else {
+              nextFiber = fiber;
+              while (nextFiber !== null) {
+                if (nextFiber === workInProgress2) {
+                  nextFiber = null;
+                  break;
+                }
+                var sibling = nextFiber.sibling;
+                if (sibling !== null) {
+                  sibling.return = nextFiber.return;
+                  nextFiber = sibling;
+                  break;
+                }
+                nextFiber = nextFiber.return;
+              }
+            }
+            fiber = nextFiber;
+          }
+        }
+        function prepareToReadContext(workInProgress2, renderLanes2) {
+          currentlyRenderingFiber = workInProgress2;
+          lastContextDependency = null;
+          lastFullyObservedContext = null;
+          var dependencies = workInProgress2.dependencies;
+          if (dependencies !== null) {
+            {
+              var firstContext = dependencies.firstContext;
+              if (firstContext !== null) {
+                if (includesSomeLane(dependencies.lanes, renderLanes2)) {
+                  markWorkInProgressReceivedUpdate();
+                }
+                dependencies.firstContext = null;
+              }
+            }
+          }
+        }
+        function readContext(context) {
+          {
+            if (isDisallowedContextReadInDEV) {
+              error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
+            }
+          }
+          var value = context._currentValue;
+          if (lastFullyObservedContext === context) ;
+          else {
+            var contextItem = {
+              context,
+              memoizedValue: value,
+              next: null
+            };
+            if (lastContextDependency === null) {
+              if (currentlyRenderingFiber === null) {
+                throw new Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
+              }
+              lastContextDependency = contextItem;
+              currentlyRenderingFiber.dependencies = {
+                lanes: NoLanes,
+                firstContext: contextItem
+              };
+            } else {
+              lastContextDependency = lastContextDependency.next = contextItem;
+            }
+          }
+          return value;
+        }
+        var concurrentQueues = null;
+        function pushConcurrentUpdateQueue(queue) {
+          if (concurrentQueues === null) {
+            concurrentQueues = [queue];
+          } else {
+            concurrentQueues.push(queue);
+          }
+        }
+        function finishQueueingConcurrentUpdates() {
+          if (concurrentQueues !== null) {
+            for (var i = 0; i < concurrentQueues.length; i++) {
+              var queue = concurrentQueues[i];
+              var lastInterleavedUpdate = queue.interleaved;
+              if (lastInterleavedUpdate !== null) {
+                queue.interleaved = null;
+                var firstInterleavedUpdate = lastInterleavedUpdate.next;
+                var lastPendingUpdate = queue.pending;
+                if (lastPendingUpdate !== null) {
+                  var firstPendingUpdate = lastPendingUpdate.next;
+                  lastPendingUpdate.next = firstInterleavedUpdate;
+                  lastInterleavedUpdate.next = firstPendingUpdate;
+                }
+                queue.pending = lastInterleavedUpdate;
+              }
+            }
+            concurrentQueues = null;
+          }
+        }
+        function enqueueConcurrentHookUpdate(fiber, queue, update, lane) {
+          var interleaved = queue.interleaved;
+          if (interleaved === null) {
+            update.next = update;
+            pushConcurrentUpdateQueue(queue);
+          } else {
+            update.next = interleaved.next;
+            interleaved.next = update;
+          }
+          queue.interleaved = update;
+          return markUpdateLaneFromFiberToRoot(fiber, lane);
+        }
+        function enqueueConcurrentHookUpdateAndEagerlyBailout(fiber, queue, update, lane) {
+          var interleaved = queue.interleaved;
+          if (interleaved === null) {
+            update.next = update;
+            pushConcurrentUpdateQueue(queue);
+          } else {
+            update.next = interleaved.next;
+            interleaved.next = update;
+          }
+          queue.interleaved = update;
+        }
+        function enqueueConcurrentClassUpdate(fiber, queue, update, lane) {
+          var interleaved = queue.interleaved;
+          if (interleaved === null) {
+            update.next = update;
+            pushConcurrentUpdateQueue(queue);
+          } else {
+            update.next = interleaved.next;
+            interleaved.next = update;
+          }
+          queue.interleaved = update;
+          return markUpdateLaneFromFiberToRoot(fiber, lane);
+        }
+        function enqueueConcurrentRenderForLane(fiber, lane) {
+          return markUpdateLaneFromFiberToRoot(fiber, lane);
+        }
+        var unsafe_markUpdateLaneFromFiberToRoot = markUpdateLaneFromFiberToRoot;
+        function markUpdateLaneFromFiberToRoot(sourceFiber, lane) {
+          sourceFiber.lanes = mergeLanes(sourceFiber.lanes, lane);
+          var alternate = sourceFiber.alternate;
+          if (alternate !== null) {
+            alternate.lanes = mergeLanes(alternate.lanes, lane);
+          }
+          {
+            if (alternate === null && (sourceFiber.flags & (Placement | Hydrating)) !== NoFlags) {
+              warnAboutUpdateOnNotYetMountedFiberInDEV(sourceFiber);
+            }
+          }
+          var node = sourceFiber;
+          var parent = sourceFiber.return;
+          while (parent !== null) {
+            parent.childLanes = mergeLanes(parent.childLanes, lane);
+            alternate = parent.alternate;
+            if (alternate !== null) {
+              alternate.childLanes = mergeLanes(alternate.childLanes, lane);
+            } else {
+              {
+                if ((parent.flags & (Placement | Hydrating)) !== NoFlags) {
+                  warnAboutUpdateOnNotYetMountedFiberInDEV(sourceFiber);
+                }
+              }
+            }
+            node = parent;
+            parent = parent.return;
+          }
+          if (node.tag === HostRoot) {
+            var root2 = node.stateNode;
+            return root2;
+          } else {
+            return null;
+          }
+        }
+        var UpdateState = 0;
+        var ReplaceState = 1;
+        var ForceUpdate = 2;
+        var CaptureUpdate = 3;
+        var hasForceUpdate = false;
+        var didWarnUpdateInsideUpdate;
+        var currentlyProcessingQueue;
+        {
+          didWarnUpdateInsideUpdate = false;
+          currentlyProcessingQueue = null;
+        }
+        function initializeUpdateQueue(fiber) {
+          var queue = {
+            baseState: fiber.memoizedState,
+            firstBaseUpdate: null,
+            lastBaseUpdate: null,
+            shared: {
+              pending: null,
+              interleaved: null,
+              lanes: NoLanes
+            },
+            effects: null
+          };
+          fiber.updateQueue = queue;
+        }
+        function cloneUpdateQueue(current2, workInProgress2) {
+          var queue = workInProgress2.updateQueue;
+          var currentQueue = current2.updateQueue;
+          if (queue === currentQueue) {
+            var clone = {
+              baseState: currentQueue.baseState,
+              firstBaseUpdate: currentQueue.firstBaseUpdate,
+              lastBaseUpdate: currentQueue.lastBaseUpdate,
+              shared: currentQueue.shared,
+              effects: currentQueue.effects
+            };
+            workInProgress2.updateQueue = clone;
+          }
+        }
+        function createUpdate(eventTime, lane) {
+          var update = {
+            eventTime,
+            lane,
+            tag: UpdateState,
+            payload: null,
+            callback: null,
+            next: null
+          };
+          return update;
+        }
+        function enqueueUpdate(fiber, update, lane) {
+          var updateQueue = fiber.updateQueue;
+          if (updateQueue === null) {
+            return null;
+          }
+          var sharedQueue = updateQueue.shared;
+          {
+            if (currentlyProcessingQueue === sharedQueue && !didWarnUpdateInsideUpdate) {
+              error("An update (setState, replaceState, or forceUpdate) was scheduled from inside an update function. Update functions should be pure, with zero side-effects. Consider using componentDidUpdate or a callback.");
+              didWarnUpdateInsideUpdate = true;
+            }
+          }
+          if (isUnsafeClassRenderPhaseUpdate()) {
+            var pending = sharedQueue.pending;
+            if (pending === null) {
+              update.next = update;
+            } else {
+              update.next = pending.next;
+              pending.next = update;
+            }
+            sharedQueue.pending = update;
+            return unsafe_markUpdateLaneFromFiberToRoot(fiber, lane);
+          } else {
+            return enqueueConcurrentClassUpdate(fiber, sharedQueue, update, lane);
+          }
+        }
+        function entangleTransitions(root2, fiber, lane) {
+          var updateQueue = fiber.updateQueue;
+          if (updateQueue === null) {
+            return;
+          }
+          var sharedQueue = updateQueue.shared;
+          if (isTransitionLane(lane)) {
+            var queueLanes = sharedQueue.lanes;
+            queueLanes = intersectLanes(queueLanes, root2.pendingLanes);
+            var newQueueLanes = mergeLanes(queueLanes, lane);
+            sharedQueue.lanes = newQueueLanes;
+            markRootEntangled(root2, newQueueLanes);
+          }
+        }
+        function enqueueCapturedUpdate(workInProgress2, capturedUpdate) {
+          var queue = workInProgress2.updateQueue;
+          var current2 = workInProgress2.alternate;
+          if (current2 !== null) {
+            var currentQueue = current2.updateQueue;
+            if (queue === currentQueue) {
+              var newFirst = null;
+              var newLast = null;
+              var firstBaseUpdate = queue.firstBaseUpdate;
+              if (firstBaseUpdate !== null) {
+                var update = firstBaseUpdate;
+                do {
+                  var clone = {
+                    eventTime: update.eventTime,
+                    lane: update.lane,
+                    tag: update.tag,
+                    payload: update.payload,
+                    callback: update.callback,
+                    next: null
+                  };
+                  if (newLast === null) {
+                    newFirst = newLast = clone;
+                  } else {
+                    newLast.next = clone;
+                    newLast = clone;
+                  }
+                  update = update.next;
+                } while (update !== null);
+                if (newLast === null) {
+                  newFirst = newLast = capturedUpdate;
+                } else {
+                  newLast.next = capturedUpdate;
+                  newLast = capturedUpdate;
+                }
+              } else {
+                newFirst = newLast = capturedUpdate;
+              }
+              queue = {
+                baseState: currentQueue.baseState,
+                firstBaseUpdate: newFirst,
+                lastBaseUpdate: newLast,
+                shared: currentQueue.shared,
+                effects: currentQueue.effects
+              };
+              workInProgress2.updateQueue = queue;
+              return;
+            }
+          }
+          var lastBaseUpdate = queue.lastBaseUpdate;
+          if (lastBaseUpdate === null) {
+            queue.firstBaseUpdate = capturedUpdate;
+          } else {
+            lastBaseUpdate.next = capturedUpdate;
+          }
+          queue.lastBaseUpdate = capturedUpdate;
+        }
+        function getStateFromUpdate(workInProgress2, queue, update, prevState, nextProps, instance) {
+          switch (update.tag) {
+            case ReplaceState: {
+              var payload = update.payload;
+              if (typeof payload === "function") {
+                {
+                  enterDisallowedContextReadInDEV();
+                }
+                var nextState = payload.call(instance, prevState, nextProps);
+                {
+                  if (workInProgress2.mode & StrictLegacyMode) {
+                    setIsStrictModeForDevtools(true);
+                    try {
+                      payload.call(instance, prevState, nextProps);
+                    } finally {
+                      setIsStrictModeForDevtools(false);
+                    }
+                  }
+                  exitDisallowedContextReadInDEV();
+                }
+                return nextState;
+              }
+              return payload;
+            }
+            case CaptureUpdate: {
+              workInProgress2.flags = workInProgress2.flags & ~ShouldCapture | DidCapture;
+            }
+            // Intentional fallthrough
+            case UpdateState: {
+              var _payload = update.payload;
+              var partialState;
+              if (typeof _payload === "function") {
+                {
+                  enterDisallowedContextReadInDEV();
+                }
+                partialState = _payload.call(instance, prevState, nextProps);
+                {
+                  if (workInProgress2.mode & StrictLegacyMode) {
+                    setIsStrictModeForDevtools(true);
+                    try {
+                      _payload.call(instance, prevState, nextProps);
+                    } finally {
+                      setIsStrictModeForDevtools(false);
+                    }
+                  }
+                  exitDisallowedContextReadInDEV();
+                }
+              } else {
+                partialState = _payload;
+              }
+              if (partialState === null || partialState === void 0) {
+                return prevState;
+              }
+              return assign({}, prevState, partialState);
+            }
+            case ForceUpdate: {
+              hasForceUpdate = true;
+              return prevState;
+            }
+          }
+          return prevState;
+        }
+        function processUpdateQueue(workInProgress2, props, instance, renderLanes2) {
+          var queue = workInProgress2.updateQueue;
+          hasForceUpdate = false;
+          {
+            currentlyProcessingQueue = queue.shared;
+          }
+          var firstBaseUpdate = queue.firstBaseUpdate;
+          var lastBaseUpdate = queue.lastBaseUpdate;
+          var pendingQueue = queue.shared.pending;
+          if (pendingQueue !== null) {
+            queue.shared.pending = null;
+            var lastPendingUpdate = pendingQueue;
+            var firstPendingUpdate = lastPendingUpdate.next;
+            lastPendingUpdate.next = null;
+            if (lastBaseUpdate === null) {
+              firstBaseUpdate = firstPendingUpdate;
+            } else {
+              lastBaseUpdate.next = firstPendingUpdate;
+            }
+            lastBaseUpdate = lastPendingUpdate;
+            var current2 = workInProgress2.alternate;
+            if (current2 !== null) {
+              var currentQueue = current2.updateQueue;
+              var currentLastBaseUpdate = currentQueue.lastBaseUpdate;
+              if (currentLastBaseUpdate !== lastBaseUpdate) {
+                if (currentLastBaseUpdate === null) {
+                  currentQueue.firstBaseUpdate = firstPendingUpdate;
+                } else {
+                  currentLastBaseUpdate.next = firstPendingUpdate;
+                }
+                currentQueue.lastBaseUpdate = lastPendingUpdate;
+              }
+            }
+          }
+          if (firstBaseUpdate !== null) {
+            var newState = queue.baseState;
+            var newLanes = NoLanes;
+            var newBaseState = null;
+            var newFirstBaseUpdate = null;
+            var newLastBaseUpdate = null;
+            var update = firstBaseUpdate;
+            do {
+              var updateLane = update.lane;
+              var updateEventTime = update.eventTime;
+              if (!isSubsetOfLanes(renderLanes2, updateLane)) {
+                var clone = {
+                  eventTime: updateEventTime,
+                  lane: updateLane,
+                  tag: update.tag,
+                  payload: update.payload,
+                  callback: update.callback,
+                  next: null
+                };
+                if (newLastBaseUpdate === null) {
+                  newFirstBaseUpdate = newLastBaseUpdate = clone;
+                  newBaseState = newState;
+                } else {
+                  newLastBaseUpdate = newLastBaseUpdate.next = clone;
+                }
+                newLanes = mergeLanes(newLanes, updateLane);
+              } else {
+                if (newLastBaseUpdate !== null) {
+                  var _clone = {
+                    eventTime: updateEventTime,
+                    // This update is going to be committed so we never want uncommit
+                    // it. Using NoLane works because 0 is a subset of all bitmasks, so
+                    // this will never be skipped by the check above.
+                    lane: NoLane,
+                    tag: update.tag,
+                    payload: update.payload,
+                    callback: update.callback,
+                    next: null
+                  };
+                  newLastBaseUpdate = newLastBaseUpdate.next = _clone;
+                }
+                newState = getStateFromUpdate(workInProgress2, queue, update, newState, props, instance);
+                var callback = update.callback;
+                if (callback !== null && // If the update was already committed, we should not queue its
+                // callback again.
+                update.lane !== NoLane) {
+                  workInProgress2.flags |= Callback;
+                  var effects = queue.effects;
+                  if (effects === null) {
+                    queue.effects = [update];
+                  } else {
+                    effects.push(update);
+                  }
+                }
+              }
+              update = update.next;
+              if (update === null) {
+                pendingQueue = queue.shared.pending;
+                if (pendingQueue === null) {
+                  break;
+                } else {
+                  var _lastPendingUpdate = pendingQueue;
+                  var _firstPendingUpdate = _lastPendingUpdate.next;
+                  _lastPendingUpdate.next = null;
+                  update = _firstPendingUpdate;
+                  queue.lastBaseUpdate = _lastPendingUpdate;
+                  queue.shared.pending = null;
+                }
+              }
+            } while (true);
+            if (newLastBaseUpdate === null) {
+              newBaseState = newState;
+            }
+            queue.baseState = newBaseState;
+            queue.firstBaseUpdate = newFirstBaseUpdate;
+            queue.lastBaseUpdate = newLastBaseUpdate;
+            var lastInterleaved = queue.shared.interleaved;
+            if (lastInterleaved !== null) {
+              var interleaved = lastInterleaved;
+              do {
+                newLanes = mergeLanes(newLanes, interleaved.lane);
+                interleaved = interleaved.next;
+              } while (interleaved !== lastInterleaved);
+            } else if (firstBaseUpdate === null) {
+              queue.shared.lanes = NoLanes;
+            }
+            markSkippedUpdateLanes(newLanes);
+            workInProgress2.lanes = newLanes;
+            workInProgress2.memoizedState = newState;
+          }
+          {
+            currentlyProcessingQueue = null;
+          }
+        }
+        function callCallback(callback, context) {
+          if (typeof callback !== "function") {
+            throw new Error("Invalid argument passed as callback. Expected a function. Instead " + ("received: " + callback));
+          }
+          callback.call(context);
+        }
+        function resetHasForceUpdateBeforeProcessing() {
+          hasForceUpdate = false;
+        }
+        function checkHasForceUpdateAfterProcessing() {
+          return hasForceUpdate;
+        }
+        function commitUpdateQueue(finishedWork, finishedQueue, instance) {
+          var effects = finishedQueue.effects;
+          finishedQueue.effects = null;
+          if (effects !== null) {
+            for (var i = 0; i < effects.length; i++) {
+              var effect = effects[i];
+              var callback = effect.callback;
+              if (callback !== null) {
+                effect.callback = null;
+                callCallback(callback, instance);
+              }
+            }
           }
         }
         var NO_CONTEXT = {};
@@ -20639,6 +20013,625 @@ var require_react_dom_development = __commonJS({
             child = child.sibling;
           }
         }
+        function resolveDefaultProps(Component2, baseProps) {
+          if (Component2 && Component2.defaultProps) {
+            var props = assign({}, baseProps);
+            var defaultProps = Component2.defaultProps;
+            for (var propName in defaultProps) {
+              if (props[propName] === void 0) {
+                props[propName] = defaultProps[propName];
+              }
+            }
+            return props;
+          }
+          return baseProps;
+        }
+        var fakeInternalInstance = {};
+        var didWarnAboutStateAssignmentForComponent;
+        var didWarnAboutUninitializedState;
+        var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
+        var didWarnAboutLegacyLifecyclesAndDerivedState;
+        var didWarnAboutUndefinedDerivedState;
+        var warnOnUndefinedDerivedState;
+        var warnOnInvalidCallback;
+        var didWarnAboutDirectlyAssigningPropsToState;
+        var didWarnAboutContextTypeAndContextTypes;
+        var didWarnAboutInvalidateContextType;
+        var didWarnAboutLegacyContext$1;
+        {
+          didWarnAboutStateAssignmentForComponent = /* @__PURE__ */ new Set();
+          didWarnAboutUninitializedState = /* @__PURE__ */ new Set();
+          didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate = /* @__PURE__ */ new Set();
+          didWarnAboutLegacyLifecyclesAndDerivedState = /* @__PURE__ */ new Set();
+          didWarnAboutDirectlyAssigningPropsToState = /* @__PURE__ */ new Set();
+          didWarnAboutUndefinedDerivedState = /* @__PURE__ */ new Set();
+          didWarnAboutContextTypeAndContextTypes = /* @__PURE__ */ new Set();
+          didWarnAboutInvalidateContextType = /* @__PURE__ */ new Set();
+          didWarnAboutLegacyContext$1 = /* @__PURE__ */ new Set();
+          var didWarnOnInvalidCallback = /* @__PURE__ */ new Set();
+          warnOnInvalidCallback = function(callback, callerName) {
+            if (callback === null || typeof callback === "function") {
+              return;
+            }
+            var key = callerName + "_" + callback;
+            if (!didWarnOnInvalidCallback.has(key)) {
+              didWarnOnInvalidCallback.add(key);
+              error("%s(...): Expected the last optional `callback` argument to be a function. Instead received: %s.", callerName, callback);
+            }
+          };
+          warnOnUndefinedDerivedState = function(type, partialState) {
+            if (partialState === void 0) {
+              var componentName = getComponentNameFromType(type) || "Component";
+              if (!didWarnAboutUndefinedDerivedState.has(componentName)) {
+                didWarnAboutUndefinedDerivedState.add(componentName);
+                error("%s.getDerivedStateFromProps(): A valid state object (or null) must be returned. You have returned undefined.", componentName);
+              }
+            }
+          };
+          Object.defineProperty(fakeInternalInstance, "_processChildContext", {
+            enumerable: false,
+            value: function() {
+              throw new Error("_processChildContext is not available in React 16+. This likely means you have multiple copies of React and are attempting to nest a React 15 tree inside a React 16 tree using unstable_renderSubtreeIntoContainer, which isn't supported. Try to make sure you have only one copy of React (and ideally, switch to ReactDOM.createPortal).");
+            }
+          });
+          Object.freeze(fakeInternalInstance);
+        }
+        function applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, nextProps) {
+          var prevState = workInProgress2.memoizedState;
+          var partialState = getDerivedStateFromProps(nextProps, prevState);
+          {
+            if (workInProgress2.mode & StrictLegacyMode) {
+              setIsStrictModeForDevtools(true);
+              try {
+                partialState = getDerivedStateFromProps(nextProps, prevState);
+              } finally {
+                setIsStrictModeForDevtools(false);
+              }
+            }
+            warnOnUndefinedDerivedState(ctor, partialState);
+          }
+          var memoizedState = partialState === null || partialState === void 0 ? prevState : assign({}, prevState, partialState);
+          workInProgress2.memoizedState = memoizedState;
+          if (workInProgress2.lanes === NoLanes) {
+            var updateQueue = workInProgress2.updateQueue;
+            updateQueue.baseState = memoizedState;
+          }
+        }
+        var classComponentUpdater = {
+          isMounted,
+          enqueueSetState: function(inst3, payload, callback) {
+            var fiber = get(inst3);
+            var eventTime = requestEventTime();
+            var lane = requestUpdateLane(fiber);
+            var update = createUpdate(eventTime, lane);
+            update.payload = payload;
+            if (callback !== void 0 && callback !== null) {
+              {
+                warnOnInvalidCallback(callback, "setState");
+              }
+              update.callback = callback;
+            }
+            var root2 = enqueueUpdate(fiber, update, lane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitions(root2, fiber, lane);
+            }
+            {
+              markStateUpdateScheduled(fiber, lane);
+            }
+          },
+          enqueueReplaceState: function(inst3, payload, callback) {
+            var fiber = get(inst3);
+            var eventTime = requestEventTime();
+            var lane = requestUpdateLane(fiber);
+            var update = createUpdate(eventTime, lane);
+            update.tag = ReplaceState;
+            update.payload = payload;
+            if (callback !== void 0 && callback !== null) {
+              {
+                warnOnInvalidCallback(callback, "replaceState");
+              }
+              update.callback = callback;
+            }
+            var root2 = enqueueUpdate(fiber, update, lane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitions(root2, fiber, lane);
+            }
+            {
+              markStateUpdateScheduled(fiber, lane);
+            }
+          },
+          enqueueForceUpdate: function(inst3, callback) {
+            var fiber = get(inst3);
+            var eventTime = requestEventTime();
+            var lane = requestUpdateLane(fiber);
+            var update = createUpdate(eventTime, lane);
+            update.tag = ForceUpdate;
+            if (callback !== void 0 && callback !== null) {
+              {
+                warnOnInvalidCallback(callback, "forceUpdate");
+              }
+              update.callback = callback;
+            }
+            var root2 = enqueueUpdate(fiber, update, lane);
+            if (root2 !== null) {
+              scheduleUpdateOnFiber(root2, fiber, lane, eventTime);
+              entangleTransitions(root2, fiber, lane);
+            }
+            {
+              markForceUpdateScheduled(fiber, lane);
+            }
+          }
+        };
+        function checkShouldComponentUpdate(workInProgress2, ctor, oldProps, newProps, oldState, newState, nextContext) {
+          var instance = workInProgress2.stateNode;
+          if (typeof instance.shouldComponentUpdate === "function") {
+            var shouldUpdate = instance.shouldComponentUpdate(newProps, newState, nextContext);
+            {
+              if (workInProgress2.mode & StrictLegacyMode) {
+                setIsStrictModeForDevtools(true);
+                try {
+                  shouldUpdate = instance.shouldComponentUpdate(newProps, newState, nextContext);
+                } finally {
+                  setIsStrictModeForDevtools(false);
+                }
+              }
+              if (shouldUpdate === void 0) {
+                error("%s.shouldComponentUpdate(): Returned undefined instead of a boolean value. Make sure to return true or false.", getComponentNameFromType(ctor) || "Component");
+              }
+            }
+            return shouldUpdate;
+          }
+          if (ctor.prototype && ctor.prototype.isPureReactComponent) {
+            return !shallowEqual(oldProps, newProps) || !shallowEqual(oldState, newState);
+          }
+          return true;
+        }
+        function checkClassInstance(workInProgress2, ctor, newProps) {
+          var instance = workInProgress2.stateNode;
+          {
+            var name = getComponentNameFromType(ctor) || "Component";
+            var renderPresent = instance.render;
+            if (!renderPresent) {
+              if (ctor.prototype && typeof ctor.prototype.render === "function") {
+                error("%s(...): No `render` method found on the returned component instance: did you accidentally return an object from the constructor?", name);
+              } else {
+                error("%s(...): No `render` method found on the returned component instance: you may have forgotten to define `render`.", name);
+              }
+            }
+            if (instance.getInitialState && !instance.getInitialState.isReactClassApproved && !instance.state) {
+              error("getInitialState was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Did you mean to define a state property instead?", name);
+            }
+            if (instance.getDefaultProps && !instance.getDefaultProps.isReactClassApproved) {
+              error("getDefaultProps was defined on %s, a plain JavaScript class. This is only supported for classes created using React.createClass. Use a static property to define defaultProps instead.", name);
+            }
+            if (instance.propTypes) {
+              error("propTypes was defined as an instance property on %s. Use a static property to define propTypes instead.", name);
+            }
+            if (instance.contextType) {
+              error("contextType was defined as an instance property on %s. Use a static property to define contextType instead.", name);
+            }
+            {
+              if (ctor.childContextTypes && !didWarnAboutLegacyContext$1.has(ctor) && // Strict Mode has its own warning for legacy context, so we can skip
+              // this one.
+              (workInProgress2.mode & StrictLegacyMode) === NoMode) {
+                didWarnAboutLegacyContext$1.add(ctor);
+                error("%s uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() instead\n\n.Learn more about this warning here: https://reactjs.org/link/legacy-context", name);
+              }
+              if (ctor.contextTypes && !didWarnAboutLegacyContext$1.has(ctor) && // Strict Mode has its own warning for legacy context, so we can skip
+              // this one.
+              (workInProgress2.mode & StrictLegacyMode) === NoMode) {
+                didWarnAboutLegacyContext$1.add(ctor);
+                error("%s uses the legacy contextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() with static contextType instead.\n\nLearn more about this warning here: https://reactjs.org/link/legacy-context", name);
+              }
+              if (instance.contextTypes) {
+                error("contextTypes was defined as an instance property on %s. Use a static property to define contextTypes instead.", name);
+              }
+              if (ctor.contextType && ctor.contextTypes && !didWarnAboutContextTypeAndContextTypes.has(ctor)) {
+                didWarnAboutContextTypeAndContextTypes.add(ctor);
+                error("%s declares both contextTypes and contextType static properties. The legacy contextTypes property will be ignored.", name);
+              }
+            }
+            if (typeof instance.componentShouldUpdate === "function") {
+              error("%s has a method called componentShouldUpdate(). Did you mean shouldComponentUpdate()? The name is phrased as a question because the function is expected to return a value.", name);
+            }
+            if (ctor.prototype && ctor.prototype.isPureReactComponent && typeof instance.shouldComponentUpdate !== "undefined") {
+              error("%s has a method called shouldComponentUpdate(). shouldComponentUpdate should not be used when extending React.PureComponent. Please extend React.Component if shouldComponentUpdate is used.", getComponentNameFromType(ctor) || "A pure component");
+            }
+            if (typeof instance.componentDidUnmount === "function") {
+              error("%s has a method called componentDidUnmount(). But there is no such lifecycle method. Did you mean componentWillUnmount()?", name);
+            }
+            if (typeof instance.componentDidReceiveProps === "function") {
+              error("%s has a method called componentDidReceiveProps(). But there is no such lifecycle method. If you meant to update the state in response to changing props, use componentWillReceiveProps(). If you meant to fetch data or run side-effects or mutations after React has updated the UI, use componentDidUpdate().", name);
+            }
+            if (typeof instance.componentWillRecieveProps === "function") {
+              error("%s has a method called componentWillRecieveProps(). Did you mean componentWillReceiveProps()?", name);
+            }
+            if (typeof instance.UNSAFE_componentWillRecieveProps === "function") {
+              error("%s has a method called UNSAFE_componentWillRecieveProps(). Did you mean UNSAFE_componentWillReceiveProps()?", name);
+            }
+            var hasMutatedProps = instance.props !== newProps;
+            if (instance.props !== void 0 && hasMutatedProps) {
+              error("%s(...): When calling super() in `%s`, make sure to pass up the same props that your component's constructor was passed.", name, name);
+            }
+            if (instance.defaultProps) {
+              error("Setting defaultProps as an instance property on %s is not supported and will be ignored. Instead, define defaultProps as a static property on %s.", name, name);
+            }
+            if (typeof instance.getSnapshotBeforeUpdate === "function" && typeof instance.componentDidUpdate !== "function" && !didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate.has(ctor)) {
+              didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate.add(ctor);
+              error("%s: getSnapshotBeforeUpdate() should be used with componentDidUpdate(). This component defines getSnapshotBeforeUpdate() only.", getComponentNameFromType(ctor));
+            }
+            if (typeof instance.getDerivedStateFromProps === "function") {
+              error("%s: getDerivedStateFromProps() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name);
+            }
+            if (typeof instance.getDerivedStateFromError === "function") {
+              error("%s: getDerivedStateFromError() is defined as an instance method and will be ignored. Instead, declare it as a static method.", name);
+            }
+            if (typeof ctor.getSnapshotBeforeUpdate === "function") {
+              error("%s: getSnapshotBeforeUpdate() is defined as a static method and will be ignored. Instead, declare it as an instance method.", name);
+            }
+            var _state = instance.state;
+            if (_state && (typeof _state !== "object" || isArray(_state))) {
+              error("%s.state: must be set to an object or null", name);
+            }
+            if (typeof instance.getChildContext === "function" && typeof ctor.childContextTypes !== "object") {
+              error("%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().", name);
+            }
+          }
+        }
+        function adoptClassInstance(workInProgress2, instance) {
+          instance.updater = classComponentUpdater;
+          workInProgress2.stateNode = instance;
+          set(instance, workInProgress2);
+          {
+            instance._reactInternalInstance = fakeInternalInstance;
+          }
+        }
+        function constructClassInstance(workInProgress2, ctor, props) {
+          var isLegacyContextConsumer = false;
+          var unmaskedContext = emptyContextObject;
+          var context = emptyContextObject;
+          var contextType = ctor.contextType;
+          {
+            if ("contextType" in ctor) {
+              var isValid = (
+                // Allow null for conditional declaration
+                contextType === null || contextType !== void 0 && contextType.$$typeof === REACT_CONTEXT_TYPE && contextType._context === void 0
+              );
+              if (!isValid && !didWarnAboutInvalidateContextType.has(ctor)) {
+                didWarnAboutInvalidateContextType.add(ctor);
+                var addendum = "";
+                if (contextType === void 0) {
+                  addendum = " However, it is set to undefined. This can be caused by a typo or by mixing up named and default imports. This can also happen due to a circular dependency, so try moving the createContext() call to a separate file.";
+                } else if (typeof contextType !== "object") {
+                  addendum = " However, it is set to a " + typeof contextType + ".";
+                } else if (contextType.$$typeof === REACT_PROVIDER_TYPE) {
+                  addendum = " Did you accidentally pass the Context.Provider instead?";
+                } else if (contextType._context !== void 0) {
+                  addendum = " Did you accidentally pass the Context.Consumer instead?";
+                } else {
+                  addendum = " However, it is set to an object with keys {" + Object.keys(contextType).join(", ") + "}.";
+                }
+                error("%s defines an invalid contextType. contextType should point to the Context object returned by React.createContext().%s", getComponentNameFromType(ctor) || "Component", addendum);
+              }
+            }
+          }
+          if (typeof contextType === "object" && contextType !== null) {
+            context = readContext(contextType);
+          } else {
+            unmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
+            var contextTypes = ctor.contextTypes;
+            isLegacyContextConsumer = contextTypes !== null && contextTypes !== void 0;
+            context = isLegacyContextConsumer ? getMaskedContext(workInProgress2, unmaskedContext) : emptyContextObject;
+          }
+          var instance = new ctor(props, context);
+          {
+            if (workInProgress2.mode & StrictLegacyMode) {
+              setIsStrictModeForDevtools(true);
+              try {
+                instance = new ctor(props, context);
+              } finally {
+                setIsStrictModeForDevtools(false);
+              }
+            }
+          }
+          var state = workInProgress2.memoizedState = instance.state !== null && instance.state !== void 0 ? instance.state : null;
+          adoptClassInstance(workInProgress2, instance);
+          {
+            if (typeof ctor.getDerivedStateFromProps === "function" && state === null) {
+              var componentName = getComponentNameFromType(ctor) || "Component";
+              if (!didWarnAboutUninitializedState.has(componentName)) {
+                didWarnAboutUninitializedState.add(componentName);
+                error("`%s` uses `getDerivedStateFromProps` but its initial state is %s. This is not recommended. Instead, define the initial state by assigning an object to `this.state` in the constructor of `%s`. This ensures that `getDerivedStateFromProps` arguments have a consistent shape.", componentName, instance.state === null ? "null" : "undefined", componentName);
+              }
+            }
+            if (typeof ctor.getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function") {
+              var foundWillMountName = null;
+              var foundWillReceivePropsName = null;
+              var foundWillUpdateName = null;
+              if (typeof instance.componentWillMount === "function" && instance.componentWillMount.__suppressDeprecationWarning !== true) {
+                foundWillMountName = "componentWillMount";
+              } else if (typeof instance.UNSAFE_componentWillMount === "function") {
+                foundWillMountName = "UNSAFE_componentWillMount";
+              }
+              if (typeof instance.componentWillReceiveProps === "function" && instance.componentWillReceiveProps.__suppressDeprecationWarning !== true) {
+                foundWillReceivePropsName = "componentWillReceiveProps";
+              } else if (typeof instance.UNSAFE_componentWillReceiveProps === "function") {
+                foundWillReceivePropsName = "UNSAFE_componentWillReceiveProps";
+              }
+              if (typeof instance.componentWillUpdate === "function" && instance.componentWillUpdate.__suppressDeprecationWarning !== true) {
+                foundWillUpdateName = "componentWillUpdate";
+              } else if (typeof instance.UNSAFE_componentWillUpdate === "function") {
+                foundWillUpdateName = "UNSAFE_componentWillUpdate";
+              }
+              if (foundWillMountName !== null || foundWillReceivePropsName !== null || foundWillUpdateName !== null) {
+                var _componentName = getComponentNameFromType(ctor) || "Component";
+                var newApiName = typeof ctor.getDerivedStateFromProps === "function" ? "getDerivedStateFromProps()" : "getSnapshotBeforeUpdate()";
+                if (!didWarnAboutLegacyLifecyclesAndDerivedState.has(_componentName)) {
+                  didWarnAboutLegacyLifecyclesAndDerivedState.add(_componentName);
+                  error("Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n%s uses %s but also contains the following legacy lifecycles:%s%s%s\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://reactjs.org/link/unsafe-component-lifecycles", _componentName, newApiName, foundWillMountName !== null ? "\n  " + foundWillMountName : "", foundWillReceivePropsName !== null ? "\n  " + foundWillReceivePropsName : "", foundWillUpdateName !== null ? "\n  " + foundWillUpdateName : "");
+                }
+              }
+            }
+          }
+          if (isLegacyContextConsumer) {
+            cacheContext(workInProgress2, unmaskedContext, context);
+          }
+          return instance;
+        }
+        function callComponentWillMount(workInProgress2, instance) {
+          var oldState = instance.state;
+          if (typeof instance.componentWillMount === "function") {
+            instance.componentWillMount();
+          }
+          if (typeof instance.UNSAFE_componentWillMount === "function") {
+            instance.UNSAFE_componentWillMount();
+          }
+          if (oldState !== instance.state) {
+            {
+              error("%s.componentWillMount(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", getComponentNameFromFiber(workInProgress2) || "Component");
+            }
+            classComponentUpdater.enqueueReplaceState(instance, instance.state, null);
+          }
+        }
+        function callComponentWillReceiveProps(workInProgress2, instance, newProps, nextContext) {
+          var oldState = instance.state;
+          if (typeof instance.componentWillReceiveProps === "function") {
+            instance.componentWillReceiveProps(newProps, nextContext);
+          }
+          if (typeof instance.UNSAFE_componentWillReceiveProps === "function") {
+            instance.UNSAFE_componentWillReceiveProps(newProps, nextContext);
+          }
+          if (instance.state !== oldState) {
+            {
+              var componentName = getComponentNameFromFiber(workInProgress2) || "Component";
+              if (!didWarnAboutStateAssignmentForComponent.has(componentName)) {
+                didWarnAboutStateAssignmentForComponent.add(componentName);
+                error("%s.componentWillReceiveProps(): Assigning directly to this.state is deprecated (except inside a component's constructor). Use setState instead.", componentName);
+              }
+            }
+            classComponentUpdater.enqueueReplaceState(instance, instance.state, null);
+          }
+        }
+        function mountClassInstance(workInProgress2, ctor, newProps, renderLanes2) {
+          {
+            checkClassInstance(workInProgress2, ctor, newProps);
+          }
+          var instance = workInProgress2.stateNode;
+          instance.props = newProps;
+          instance.state = workInProgress2.memoizedState;
+          instance.refs = {};
+          initializeUpdateQueue(workInProgress2);
+          var contextType = ctor.contextType;
+          if (typeof contextType === "object" && contextType !== null) {
+            instance.context = readContext(contextType);
+          } else {
+            var unmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
+            instance.context = getMaskedContext(workInProgress2, unmaskedContext);
+          }
+          {
+            if (instance.state === newProps) {
+              var componentName = getComponentNameFromType(ctor) || "Component";
+              if (!didWarnAboutDirectlyAssigningPropsToState.has(componentName)) {
+                didWarnAboutDirectlyAssigningPropsToState.add(componentName);
+                error("%s: It is not recommended to assign props directly to state because updates to props won't be reflected in state. In most cases, it is better to use props directly.", componentName);
+              }
+            }
+            if (workInProgress2.mode & StrictLegacyMode) {
+              ReactStrictModeWarnings.recordLegacyContextWarning(workInProgress2, instance);
+            }
+            {
+              ReactStrictModeWarnings.recordUnsafeLifecycleWarnings(workInProgress2, instance);
+            }
+          }
+          instance.state = workInProgress2.memoizedState;
+          var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
+          if (typeof getDerivedStateFromProps === "function") {
+            applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, newProps);
+            instance.state = workInProgress2.memoizedState;
+          }
+          if (typeof ctor.getDerivedStateFromProps !== "function" && typeof instance.getSnapshotBeforeUpdate !== "function" && (typeof instance.UNSAFE_componentWillMount === "function" || typeof instance.componentWillMount === "function")) {
+            callComponentWillMount(workInProgress2, instance);
+            processUpdateQueue(workInProgress2, newProps, instance, renderLanes2);
+            instance.state = workInProgress2.memoizedState;
+          }
+          if (typeof instance.componentDidMount === "function") {
+            var fiberFlags = Update;
+            {
+              fiberFlags |= LayoutStatic;
+            }
+            if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
+              fiberFlags |= MountLayoutDev;
+            }
+            workInProgress2.flags |= fiberFlags;
+          }
+        }
+        function resumeMountClassInstance(workInProgress2, ctor, newProps, renderLanes2) {
+          var instance = workInProgress2.stateNode;
+          var oldProps = workInProgress2.memoizedProps;
+          instance.props = oldProps;
+          var oldContext = instance.context;
+          var contextType = ctor.contextType;
+          var nextContext = emptyContextObject;
+          if (typeof contextType === "object" && contextType !== null) {
+            nextContext = readContext(contextType);
+          } else {
+            var nextLegacyUnmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
+            nextContext = getMaskedContext(workInProgress2, nextLegacyUnmaskedContext);
+          }
+          var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
+          var hasNewLifecycles = typeof getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function";
+          if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillReceiveProps === "function" || typeof instance.componentWillReceiveProps === "function")) {
+            if (oldProps !== newProps || oldContext !== nextContext) {
+              callComponentWillReceiveProps(workInProgress2, instance, newProps, nextContext);
+            }
+          }
+          resetHasForceUpdateBeforeProcessing();
+          var oldState = workInProgress2.memoizedState;
+          var newState = instance.state = oldState;
+          processUpdateQueue(workInProgress2, newProps, instance, renderLanes2);
+          newState = workInProgress2.memoizedState;
+          if (oldProps === newProps && oldState === newState && !hasContextChanged() && !checkHasForceUpdateAfterProcessing()) {
+            if (typeof instance.componentDidMount === "function") {
+              var fiberFlags = Update;
+              {
+                fiberFlags |= LayoutStatic;
+              }
+              if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
+                fiberFlags |= MountLayoutDev;
+              }
+              workInProgress2.flags |= fiberFlags;
+            }
+            return false;
+          }
+          if (typeof getDerivedStateFromProps === "function") {
+            applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, newProps);
+            newState = workInProgress2.memoizedState;
+          }
+          var shouldUpdate = checkHasForceUpdateAfterProcessing() || checkShouldComponentUpdate(workInProgress2, ctor, oldProps, newProps, oldState, newState, nextContext);
+          if (shouldUpdate) {
+            if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillMount === "function" || typeof instance.componentWillMount === "function")) {
+              if (typeof instance.componentWillMount === "function") {
+                instance.componentWillMount();
+              }
+              if (typeof instance.UNSAFE_componentWillMount === "function") {
+                instance.UNSAFE_componentWillMount();
+              }
+            }
+            if (typeof instance.componentDidMount === "function") {
+              var _fiberFlags = Update;
+              {
+                _fiberFlags |= LayoutStatic;
+              }
+              if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
+                _fiberFlags |= MountLayoutDev;
+              }
+              workInProgress2.flags |= _fiberFlags;
+            }
+          } else {
+            if (typeof instance.componentDidMount === "function") {
+              var _fiberFlags2 = Update;
+              {
+                _fiberFlags2 |= LayoutStatic;
+              }
+              if ((workInProgress2.mode & StrictEffectsMode) !== NoMode) {
+                _fiberFlags2 |= MountLayoutDev;
+              }
+              workInProgress2.flags |= _fiberFlags2;
+            }
+            workInProgress2.memoizedProps = newProps;
+            workInProgress2.memoizedState = newState;
+          }
+          instance.props = newProps;
+          instance.state = newState;
+          instance.context = nextContext;
+          return shouldUpdate;
+        }
+        function updateClassInstance(current2, workInProgress2, ctor, newProps, renderLanes2) {
+          var instance = workInProgress2.stateNode;
+          cloneUpdateQueue(current2, workInProgress2);
+          var unresolvedOldProps = workInProgress2.memoizedProps;
+          var oldProps = workInProgress2.type === workInProgress2.elementType ? unresolvedOldProps : resolveDefaultProps(workInProgress2.type, unresolvedOldProps);
+          instance.props = oldProps;
+          var unresolvedNewProps = workInProgress2.pendingProps;
+          var oldContext = instance.context;
+          var contextType = ctor.contextType;
+          var nextContext = emptyContextObject;
+          if (typeof contextType === "object" && contextType !== null) {
+            nextContext = readContext(contextType);
+          } else {
+            var nextUnmaskedContext = getUnmaskedContext(workInProgress2, ctor, true);
+            nextContext = getMaskedContext(workInProgress2, nextUnmaskedContext);
+          }
+          var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
+          var hasNewLifecycles = typeof getDerivedStateFromProps === "function" || typeof instance.getSnapshotBeforeUpdate === "function";
+          if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillReceiveProps === "function" || typeof instance.componentWillReceiveProps === "function")) {
+            if (unresolvedOldProps !== unresolvedNewProps || oldContext !== nextContext) {
+              callComponentWillReceiveProps(workInProgress2, instance, newProps, nextContext);
+            }
+          }
+          resetHasForceUpdateBeforeProcessing();
+          var oldState = workInProgress2.memoizedState;
+          var newState = instance.state = oldState;
+          processUpdateQueue(workInProgress2, newProps, instance, renderLanes2);
+          newState = workInProgress2.memoizedState;
+          if (unresolvedOldProps === unresolvedNewProps && oldState === newState && !hasContextChanged() && !checkHasForceUpdateAfterProcessing() && !enableLazyContextPropagation) {
+            if (typeof instance.componentDidUpdate === "function") {
+              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
+                workInProgress2.flags |= Update;
+              }
+            }
+            if (typeof instance.getSnapshotBeforeUpdate === "function") {
+              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
+                workInProgress2.flags |= Snapshot;
+              }
+            }
+            return false;
+          }
+          if (typeof getDerivedStateFromProps === "function") {
+            applyDerivedStateFromProps(workInProgress2, ctor, getDerivedStateFromProps, newProps);
+            newState = workInProgress2.memoizedState;
+          }
+          var shouldUpdate = checkHasForceUpdateAfterProcessing() || checkShouldComponentUpdate(workInProgress2, ctor, oldProps, newProps, oldState, newState, nextContext) || // TODO: In some cases, we'll end up checking if context has changed twice,
+          // both before and after `shouldComponentUpdate` has been called. Not ideal,
+          // but I'm loath to refactor this function. This only happens for memoized
+          // components so it's not that common.
+          enableLazyContextPropagation;
+          if (shouldUpdate) {
+            if (!hasNewLifecycles && (typeof instance.UNSAFE_componentWillUpdate === "function" || typeof instance.componentWillUpdate === "function")) {
+              if (typeof instance.componentWillUpdate === "function") {
+                instance.componentWillUpdate(newProps, newState, nextContext);
+              }
+              if (typeof instance.UNSAFE_componentWillUpdate === "function") {
+                instance.UNSAFE_componentWillUpdate(newProps, newState, nextContext);
+              }
+            }
+            if (typeof instance.componentDidUpdate === "function") {
+              workInProgress2.flags |= Update;
+            }
+            if (typeof instance.getSnapshotBeforeUpdate === "function") {
+              workInProgress2.flags |= Snapshot;
+            }
+          } else {
+            if (typeof instance.componentDidUpdate === "function") {
+              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
+                workInProgress2.flags |= Update;
+              }
+            }
+            if (typeof instance.getSnapshotBeforeUpdate === "function") {
+              if (unresolvedOldProps !== current2.memoizedProps || oldState !== current2.memoizedState) {
+                workInProgress2.flags |= Snapshot;
+              }
+            }
+            workInProgress2.memoizedProps = newProps;
+            workInProgress2.memoizedState = newState;
+          }
+          instance.props = newProps;
+          instance.state = newState;
+          instance.context = nextContext;
+          return shouldUpdate;
+        }
         function createCapturedValueAtFiber(value, source) {
           return {
             value,
@@ -20929,6 +20922,7 @@ var require_react_dom_development = __commonJS({
         var didWarnAboutReassigningProps;
         var didWarnAboutRevealOrder;
         var didWarnAboutTailOptions;
+        var didWarnAboutDefaultPropsOnFunctionComponent;
         {
           didWarnAboutBadClass = {};
           didWarnAboutModulePatternComponent = {};
@@ -20938,6 +20932,7 @@ var require_react_dom_development = __commonJS({
           didWarnAboutReassigningProps = false;
           didWarnAboutRevealOrder = {};
           didWarnAboutTailOptions = {};
+          didWarnAboutDefaultPropsOnFunctionComponent = {};
         }
         function reconcileChildren(current2, workInProgress2, nextChildren, renderLanes2) {
           if (current2 === null) {
@@ -21029,6 +21024,13 @@ var require_react_dom_development = __commonJS({
                   "prop",
                   getComponentNameFromType(type)
                 );
+              }
+              if (Component2.defaultProps !== void 0) {
+                var componentName = getComponentNameFromType(type) || "Unknown";
+                if (!didWarnAboutDefaultPropsOnFunctionComponent[componentName]) {
+                  error("%s: Support for defaultProps will be removed from memo components in a future major release. Use JavaScript default parameters instead.", componentName);
+                  didWarnAboutDefaultPropsOnFunctionComponent[componentName] = true;
+                }
               }
             }
             var child = createFiberFromTypeAndProps(Component2.type, null, nextProps, workInProgress2, workInProgress2.mode, renderLanes2);
@@ -21658,6 +21660,13 @@ var require_react_dom_development = __commonJS({
               if (!didWarnAboutFunctionRefs[warningKey]) {
                 didWarnAboutFunctionRefs[warningKey] = true;
                 error("Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?%s", info);
+              }
+            }
+            if (Component2.defaultProps !== void 0) {
+              var componentName = getComponentNameFromType(Component2) || "Unknown";
+              if (!didWarnAboutDefaultPropsOnFunctionComponent[componentName]) {
+                error("%s: Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead.", componentName);
+                didWarnAboutDefaultPropsOnFunctionComponent[componentName] = true;
               }
             }
             if (typeof Component2.getDerivedStateFromProps === "function") {
@@ -22656,8 +22665,7 @@ var require_react_dom_development = __commonJS({
             while (node !== null) {
               if (node.tag === HostComponent || node.tag === HostText) {
                 appendInitialChild(parent, node.stateNode);
-              } else if (node.tag === HostPortal)
-                ;
+              } else if (node.tag === HostPortal) ;
               else if (node.child !== null) {
                 node.child.return = node;
                 node = node.child;
@@ -23611,20 +23619,19 @@ var require_react_dom_development = __commonJS({
                     onPostCommit(id, phase, passiveEffectDuration, commitTime2);
                   }
                   var parentFiber = finishedWork.return;
-                  outer:
-                    while (parentFiber !== null) {
-                      switch (parentFiber.tag) {
-                        case HostRoot:
-                          var root2 = parentFiber.stateNode;
-                          root2.passiveEffectDuration += passiveEffectDuration;
-                          break outer;
-                        case Profiler:
-                          var parentStateNode = parentFiber.stateNode;
-                          parentStateNode.passiveEffectDuration += passiveEffectDuration;
-                          break outer;
-                      }
-                      parentFiber = parentFiber.return;
+                  outer: while (parentFiber !== null) {
+                    switch (parentFiber.tag) {
+                      case HostRoot:
+                        var root2 = parentFiber.stateNode;
+                        root2.passiveEffectDuration += passiveEffectDuration;
+                        break outer;
+                      case Profiler:
+                        var parentStateNode = parentFiber.stateNode;
+                        parentStateNode.passiveEffectDuration += passiveEffectDuration;
+                        break outer;
                     }
+                    parentFiber = parentFiber.return;
+                  }
                   break;
                 }
               }
@@ -23771,20 +23778,19 @@ var require_react_dom_development = __commonJS({
                     }
                     enqueuePendingPassiveProfilerEffect(finishedWork);
                     var parentFiber = finishedWork.return;
-                    outer:
-                      while (parentFiber !== null) {
-                        switch (parentFiber.tag) {
-                          case HostRoot:
-                            var root2 = parentFiber.stateNode;
-                            root2.effectDuration += effectDuration;
-                            break outer;
-                          case Profiler:
-                            var parentStateNode = parentFiber.stateNode;
-                            parentStateNode.effectDuration += effectDuration;
-                            break outer;
-                        }
-                        parentFiber = parentFiber.return;
+                    outer: while (parentFiber !== null) {
+                      switch (parentFiber.tag) {
+                        case HostRoot:
+                          var root2 = parentFiber.stateNode;
+                          root2.effectDuration += effectDuration;
+                          break outer;
+                        case Profiler:
+                          var parentStateNode = parentFiber.stateNode;
+                          parentStateNode.effectDuration += effectDuration;
+                          break outer;
                       }
+                      parentFiber = parentFiber.return;
+                    }
                   }
                 }
                 break;
@@ -23876,8 +23882,7 @@ var require_react_dom_development = __commonJS({
                     captureCommitPhaseError(finishedWork, finishedWork.return, error2);
                   }
                 }
-              } else if ((node.tag === OffscreenComponent || node.tag === LegacyHiddenComponent) && node.memoizedState !== null && node !== finishedWork)
-                ;
+              } else if ((node.tag === OffscreenComponent || node.tag === LegacyHiddenComponent) && node.memoizedState !== null && node !== finishedWork) ;
               else if (node.child !== null) {
                 node.child.return = node;
                 node = node.child;
@@ -23995,31 +24000,30 @@ var require_react_dom_development = __commonJS({
         }
         function getHostSibling(fiber) {
           var node = fiber;
-          siblings:
-            while (true) {
-              while (node.sibling === null) {
-                if (node.return === null || isHostParent(node.return)) {
-                  return null;
-                }
-                node = node.return;
+          siblings: while (true) {
+            while (node.sibling === null) {
+              if (node.return === null || isHostParent(node.return)) {
+                return null;
               }
-              node.sibling.return = node.return;
-              node = node.sibling;
-              while (node.tag !== HostComponent && node.tag !== HostText && node.tag !== DehydratedFragment) {
-                if (node.flags & Placement) {
-                  continue siblings;
-                }
-                if (node.child === null || node.tag === HostPortal) {
-                  continue siblings;
-                } else {
-                  node.child.return = node;
-                  node = node.child;
-                }
+              node = node.return;
+            }
+            node.sibling.return = node.return;
+            node = node.sibling;
+            while (node.tag !== HostComponent && node.tag !== HostText && node.tag !== DehydratedFragment) {
+              if (node.flags & Placement) {
+                continue siblings;
               }
-              if (!(node.flags & Placement)) {
-                return node.stateNode;
+              if (node.child === null || node.tag === HostPortal) {
+                continue siblings;
+              } else {
+                node.child.return = node;
+                node = node.child;
               }
             }
+            if (!(node.flags & Placement)) {
+              return node.stateNode;
+            }
+          }
         }
         function commitPlacement(finishedWork) {
           var parentFiber = getHostParentFiber(finishedWork);
@@ -24041,6 +24045,7 @@ var require_react_dom_development = __commonJS({
               insertOrAppendPlacementNodeIntoContainer(finishedWork, _before, _parent);
               break;
             }
+            // eslint-disable-next-line-no-fallthrough
             default:
               throw new Error("Invalid host parent fiber. This error is likely caused by a bug in React. Please file an issue.");
           }
@@ -24055,8 +24060,7 @@ var require_react_dom_development = __commonJS({
             } else {
               appendChildToContainer(parent, stateNode);
             }
-          } else if (tag === HostPortal)
-            ;
+          } else if (tag === HostPortal) ;
           else {
             var child = node.child;
             if (child !== null) {
@@ -24079,8 +24083,7 @@ var require_react_dom_development = __commonJS({
             } else {
               appendChild(parent, stateNode);
             }
-          } else if (tag === HostPortal)
-            ;
+          } else if (tag === HostPortal) ;
           else {
             var child = node.child;
             if (child !== null) {
@@ -24098,27 +24101,26 @@ var require_react_dom_development = __commonJS({
         function commitDeletionEffects(root2, returnFiber, deletedFiber) {
           {
             var parent = returnFiber;
-            findParent:
-              while (parent !== null) {
-                switch (parent.tag) {
-                  case HostComponent: {
-                    hostParent = parent.stateNode;
-                    hostParentIsContainer = false;
-                    break findParent;
-                  }
-                  case HostRoot: {
-                    hostParent = parent.stateNode.containerInfo;
-                    hostParentIsContainer = true;
-                    break findParent;
-                  }
-                  case HostPortal: {
-                    hostParent = parent.stateNode.containerInfo;
-                    hostParentIsContainer = true;
-                    break findParent;
-                  }
+            findParent: while (parent !== null) {
+              switch (parent.tag) {
+                case HostComponent: {
+                  hostParent = parent.stateNode;
+                  hostParentIsContainer = false;
+                  break findParent;
                 }
-                parent = parent.return;
+                case HostRoot: {
+                  hostParent = parent.stateNode.containerInfo;
+                  hostParentIsContainer = true;
+                  break findParent;
+                }
+                case HostPortal: {
+                  hostParent = parent.stateNode.containerInfo;
+                  hostParentIsContainer = true;
+                  break findParent;
+                }
               }
+              parent = parent.return;
+            }
             if (hostParent === null) {
               throw new Error("Expected to find a host parent. This error is likely caused by a bug in React. Please file an issue.");
             }
@@ -24143,6 +24145,7 @@ var require_react_dom_development = __commonJS({
                 safelyDetachRef(deletedFiber, nearestMountedAncestor);
               }
             }
+            // eslint-disable-next-line-no-fallthrough
             case HostText: {
               {
                 var prevHostParent = hostParent;
@@ -25404,6 +25407,9 @@ var require_react_dom_development = __commonJS({
             case RootFatalErrored: {
               throw new Error("Root did not complete. This is a bug in React.");
             }
+            // Flow knows about invariant, so it complains if I add a break
+            // statement, but eslint doesn't know about invariant, so it complains
+            // if I do. eslint-disable-next-line no-fallthrough
             case RootErrored: {
               commitRoot(root2, workInProgressRootRecoverableErrors, workInProgressTransitions);
               break;
@@ -27030,67 +27036,71 @@ var require_react_dom_development = __commonJS({
           } else if (typeof type === "string") {
             fiberTag = HostComponent;
           } else {
-            getTag:
-              switch (type) {
-                case REACT_FRAGMENT_TYPE:
-                  return createFiberFromFragment(pendingProps.children, mode, lanes, key);
-                case REACT_STRICT_MODE_TYPE:
-                  fiberTag = Mode;
-                  mode |= StrictLegacyMode;
-                  if ((mode & ConcurrentMode) !== NoMode) {
-                    mode |= StrictEffectsMode;
-                  }
-                  break;
-                case REACT_PROFILER_TYPE:
-                  return createFiberFromProfiler(pendingProps, mode, lanes, key);
-                case REACT_SUSPENSE_TYPE:
-                  return createFiberFromSuspense(pendingProps, mode, lanes, key);
-                case REACT_SUSPENSE_LIST_TYPE:
-                  return createFiberFromSuspenseList(pendingProps, mode, lanes, key);
-                case REACT_OFFSCREEN_TYPE:
-                  return createFiberFromOffscreen(pendingProps, mode, lanes, key);
-                case REACT_LEGACY_HIDDEN_TYPE:
-                case REACT_SCOPE_TYPE:
-                case REACT_CACHE_TYPE:
-                case REACT_TRACING_MARKER_TYPE:
-                case REACT_DEBUG_TRACING_MODE_TYPE:
-                default: {
-                  if (typeof type === "object" && type !== null) {
-                    switch (type.$$typeof) {
-                      case REACT_PROVIDER_TYPE:
-                        fiberTag = ContextProvider;
-                        break getTag;
-                      case REACT_CONTEXT_TYPE:
-                        fiberTag = ContextConsumer;
-                        break getTag;
-                      case REACT_FORWARD_REF_TYPE:
-                        fiberTag = ForwardRef;
-                        {
-                          resolvedType = resolveForwardRefForHotReloading(resolvedType);
-                        }
-                        break getTag;
-                      case REACT_MEMO_TYPE:
-                        fiberTag = MemoComponent;
-                        break getTag;
-                      case REACT_LAZY_TYPE:
-                        fiberTag = LazyComponent;
-                        resolvedType = null;
-                        break getTag;
-                    }
-                  }
-                  var info = "";
-                  {
-                    if (type === void 0 || typeof type === "object" && type !== null && Object.keys(type).length === 0) {
-                      info += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.";
-                    }
-                    var ownerName = owner ? getComponentNameFromFiber(owner) : null;
-                    if (ownerName) {
-                      info += "\n\nCheck the render method of `" + ownerName + "`.";
-                    }
-                  }
-                  throw new Error("Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) " + ("but got: " + (type == null ? type : typeof type) + "." + info));
+            getTag: switch (type) {
+              case REACT_FRAGMENT_TYPE:
+                return createFiberFromFragment(pendingProps.children, mode, lanes, key);
+              case REACT_STRICT_MODE_TYPE:
+                fiberTag = Mode;
+                mode |= StrictLegacyMode;
+                if ((mode & ConcurrentMode) !== NoMode) {
+                  mode |= StrictEffectsMode;
                 }
+                break;
+              case REACT_PROFILER_TYPE:
+                return createFiberFromProfiler(pendingProps, mode, lanes, key);
+              case REACT_SUSPENSE_TYPE:
+                return createFiberFromSuspense(pendingProps, mode, lanes, key);
+              case REACT_SUSPENSE_LIST_TYPE:
+                return createFiberFromSuspenseList(pendingProps, mode, lanes, key);
+              case REACT_OFFSCREEN_TYPE:
+                return createFiberFromOffscreen(pendingProps, mode, lanes, key);
+              case REACT_LEGACY_HIDDEN_TYPE:
+              // eslint-disable-next-line no-fallthrough
+              case REACT_SCOPE_TYPE:
+              // eslint-disable-next-line no-fallthrough
+              case REACT_CACHE_TYPE:
+              // eslint-disable-next-line no-fallthrough
+              case REACT_TRACING_MARKER_TYPE:
+              // eslint-disable-next-line no-fallthrough
+              case REACT_DEBUG_TRACING_MODE_TYPE:
+              // eslint-disable-next-line no-fallthrough
+              default: {
+                if (typeof type === "object" && type !== null) {
+                  switch (type.$$typeof) {
+                    case REACT_PROVIDER_TYPE:
+                      fiberTag = ContextProvider;
+                      break getTag;
+                    case REACT_CONTEXT_TYPE:
+                      fiberTag = ContextConsumer;
+                      break getTag;
+                    case REACT_FORWARD_REF_TYPE:
+                      fiberTag = ForwardRef;
+                      {
+                        resolvedType = resolveForwardRefForHotReloading(resolvedType);
+                      }
+                      break getTag;
+                    case REACT_MEMO_TYPE:
+                      fiberTag = MemoComponent;
+                      break getTag;
+                    case REACT_LAZY_TYPE:
+                      fiberTag = LazyComponent;
+                      resolvedType = null;
+                      break getTag;
+                  }
+                }
+                var info = "";
+                {
+                  if (type === void 0 || typeof type === "object" && type !== null && Object.keys(type).length === 0) {
+                    info += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.";
+                  }
+                  var ownerName = owner ? getComponentNameFromFiber(owner) : null;
+                  if (ownerName) {
+                    info += "\n\nCheck the render method of `" + ownerName + "`.";
+                  }
+                }
+                throw new Error("Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) " + ("but got: " + (type == null ? type : typeof type) + "." + info));
               }
+            }
           }
           var fiber = createFiber(fiberTag, pendingProps, key, mode);
           fiber.elementType = type;
@@ -27293,7 +27303,7 @@ var require_react_dom_development = __commonJS({
           initializeUpdateQueue(uninitializedFiber);
           return root2;
         }
-        var ReactVersion = "18.2.0";
+        var ReactVersion = "18.3.1";
         function createPortal2(children, containerInfo, implementation) {
           var key = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : null;
           {
@@ -28020,8 +28030,13 @@ var require_react_dom_development = __commonJS({
           }
           return getPublicRootInstance(root2);
         }
+        var didWarnAboutFindDOMNode = false;
         function findDOMNode(componentOrElement) {
           {
+            if (!didWarnAboutFindDOMNode) {
+              didWarnAboutFindDOMNode = true;
+              error("findDOMNode is deprecated and will be removed in the next major release. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node");
+            }
             var owner = ReactCurrentOwner$3.current;
             if (owner !== null && owner.stateNode !== null) {
               var warnedAboutRefsInRender = owner.stateNode._warnedAboutRefsInRender;
@@ -28083,7 +28098,14 @@ var require_react_dom_development = __commonJS({
           }
           return legacyRenderSubtreeIntoContainer(parentComponent, element, containerNode, false, callback);
         }
+        var didWarnAboutUnmountComponentAtNode = false;
         function unmountComponentAtNode(container) {
+          {
+            if (!didWarnAboutUnmountComponentAtNode) {
+              didWarnAboutUnmountComponentAtNode = true;
+              error("unmountComponentAtNode is deprecated and will be removed in the next major release. Switch to the createRoot API. Learn more: https://reactjs.org/link/switch-to-createroot");
+            }
+          }
           if (!isValidContainerLegacy(container)) {
             throw new Error("unmountComponentAtNode(...): Target container is not a DOM element.");
           }
@@ -28273,13 +28295,14 @@ var require_lz_string = __commonJS({
       }
       var LZString2 = {
         compressToBase64: function(input) {
-          if (input == null)
-            return "";
+          if (input == null) return "";
           var res = LZString2._compress(input, 6, function(a) {
             return keyStrBase64.charAt(a);
           });
           switch (res.length % 4) {
+            // To produce valid Base64
             default:
+            // When could this happen ?
             case 0:
               return res;
             case 1:
@@ -28291,26 +28314,21 @@ var require_lz_string = __commonJS({
           }
         },
         decompressFromBase64: function(input) {
-          if (input == null)
-            return "";
-          if (input == "")
-            return null;
+          if (input == null) return "";
+          if (input == "") return null;
           return LZString2._decompress(input.length, 32, function(index2) {
             return getBaseValue(keyStrBase64, input.charAt(index2));
           });
         },
         compressToUTF16: function(input) {
-          if (input == null)
-            return "";
+          if (input == null) return "";
           return LZString2._compress(input, 15, function(a) {
             return f(a + 32);
           }) + " ";
         },
         decompressFromUTF16: function(compressed) {
-          if (compressed == null)
-            return "";
-          if (compressed == "")
-            return null;
+          if (compressed == null) return "";
+          if (compressed == "") return null;
           return LZString2._decompress(compressed.length, 16384, function(index2) {
             return compressed.charCodeAt(index2) - 32;
           });
@@ -28344,18 +28362,15 @@ var require_lz_string = __commonJS({
         },
         //compress into a string that is already URI encoded
         compressToEncodedURIComponent: function(input) {
-          if (input == null)
-            return "";
+          if (input == null) return "";
           return LZString2._compress(input, 6, function(a) {
             return keyStrUriSafe.charAt(a);
           });
         },
         //decompress from an output of compressToEncodedURIComponent
         decompressFromEncodedURIComponent: function(input) {
-          if (input == null)
-            return "";
-          if (input == "")
-            return null;
+          if (input == null) return "";
+          if (input == "") return null;
           input = input.replace(/ /g, "+");
           return LZString2._decompress(input.length, 32, function(index2) {
             return getBaseValue(keyStrUriSafe, input.charAt(index2));
@@ -28367,8 +28382,7 @@ var require_lz_string = __commonJS({
           });
         },
         _compress: function(uncompressed, bitsPerChar, getCharFromInt) {
-          if (uncompressed == null)
-            return "";
+          if (uncompressed == null) return "";
           var i, value, context_dictionary = {}, context_dictionaryToCreate = {}, context_c = "", context_wc = "", context_w = "", context_enlargeIn = 2, context_dictSize = 3, context_numBits = 2, context_data = [], context_data_val = 0, context_data_position = 0, ii;
           for (ii = 0; ii < uncompressed.length; ii += 1) {
             context_c = uncompressed.charAt(ii);
@@ -28553,16 +28567,13 @@ var require_lz_string = __commonJS({
             if (context_data_position == bitsPerChar - 1) {
               context_data.push(getCharFromInt(context_data_val));
               break;
-            } else
-              context_data_position++;
+            } else context_data_position++;
           }
           return context_data.join("");
         },
         decompress: function(compressed) {
-          if (compressed == null)
-            return "";
-          if (compressed == "")
-            return null;
+          if (compressed == null) return "";
+          if (compressed == "") return null;
           return LZString2._decompress(compressed.length, 32768, function(index2) {
             return compressed.charCodeAt(index2);
           });
@@ -28762,7 +28773,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
           return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y;
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
-        var useState54 = React74.useState, useEffect62 = React74.useEffect, useLayoutEffect17 = React74.useLayoutEffect, useDebugValue3 = React74.useDebugValue;
+        var useState56 = React74.useState, useEffect63 = React74.useEffect, useLayoutEffect17 = React74.useLayoutEffect, useDebugValue3 = React74.useDebugValue;
         var didWarnOld18Alpha = false;
         var didWarnUncachedGetSnapshot = false;
         function useSyncExternalStore3(subscribe, getSnapshot2, getServerSnapshot) {
@@ -28784,7 +28795,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
               }
             }
           }
-          var _useState = useState54({
+          var _useState = useState56({
             inst: {
               value,
               getSnapshot: getSnapshot2
@@ -28799,7 +28810,7 @@ var require_use_sync_external_store_shim_development = __commonJS({
               });
             }
           }, [subscribe, value, getSnapshot2]);
-          useEffect62(function() {
+          useEffect63(function() {
             if (checkIfSnapshotChanged(inst3)) {
               forceUpdate({
                 inst: inst3
@@ -28872,9 +28883,9 @@ var require_with_selector_development = __commonJS({
         }
         var objectIs = typeof Object.is === "function" ? Object.is : is;
         var useSyncExternalStore3 = shim.useSyncExternalStore;
-        var useRef62 = React74.useRef, useEffect62 = React74.useEffect, useMemo31 = React74.useMemo, useDebugValue3 = React74.useDebugValue;
+        var useRef61 = React74.useRef, useEffect63 = React74.useEffect, useMemo31 = React74.useMemo, useDebugValue3 = React74.useDebugValue;
         function useSyncExternalStoreWithSelector2(subscribe, getSnapshot2, getServerSnapshot, selector, isEqual2) {
-          var instRef = useRef62(null);
+          var instRef = useRef61(null);
           var inst3;
           if (instRef.current === null) {
             inst3 = {
@@ -28929,7 +28940,7 @@ var require_with_selector_development = __commonJS({
             return [getSnapshotWithSelector, getServerSnapshotWithSelector];
           }, [getSnapshot2, getServerSnapshot, selector, isEqual2]), getSelection = _useMemo[0], getServerSelection = _useMemo[1];
           var value = useSyncExternalStore3(subscribe, getSelection, getServerSelection);
-          useEffect62(function() {
+          useEffect63(function() {
             inst3.hasValue = true;
             inst3.value = value;
           }, [value]);
@@ -28998,16 +29009,14 @@ var import_obsidian = require("obsidian");
 function getDir(path) {
   const normalized = (0, import_obsidian.normalizePath)(path);
   const lastIndex = normalized.lastIndexOf("/");
-  if (lastIndex === -1)
-    return "/";
+  if (lastIndex === -1) return "/";
   const dir = normalized.slice(0, lastIndex);
   return dir.length === 0 ? "/" : dir;
 }
 function pathBasename(path) {
   const normalized = (0, import_obsidian.normalizePath)(path);
   const lastIndex = normalized.lastIndexOf("/");
-  if (lastIndex === -1)
-    return path;
+  if (lastIndex === -1) return path;
   return path.slice(lastIndex + 1);
 }
 
@@ -29078,13 +29087,11 @@ function isJSONPrimitive(value) {
   return false;
 }
 function pruneNonJSONValues(data) {
-  if (data === void 0)
-    return void 0;
+  if (data === void 0) return void 0;
   if (isJSONPrimitive(data)) {
     return data;
   }
-  if (typeof data !== "object")
-    return void 0;
+  if (typeof data !== "object") return void 0;
   if (Array.isArray(data)) {
     return data.map(pruneNonJSONValues).filter((item) => item !== void 0);
   }
@@ -29190,10 +29197,10 @@ function equals(a, b) {
   return shallowEquals;
 }
 function singleton(key, init) {
-  var _a2;
+  var _a3;
   const symbol = Symbol.for(`com.tldraw.state/${key}`);
   const global2 = globalThis;
-  (_a2 = global2[symbol]) != null ? _a2 : global2[symbol] = init();
+  (_a3 = global2[symbol]) != null ? _a3 : global2[symbol] = init();
   return global2[symbol];
 }
 var EMPTY_ARRAY = singleton("empty_array", () => Object.freeze([]));
@@ -29484,8 +29491,7 @@ var __EffectScheduler__ = class {
     __publicField(this, "_scheduleEffect");
     /** @internal */
     __publicField(this, "maybeExecute", () => {
-      if (!this._isActivelyListening)
-        return;
+      if (!this._isActivelyListening) return;
       this.execute();
     });
     this.name = name;
@@ -29510,10 +29516,8 @@ var __EffectScheduler__ = class {
   }
   /** @internal */
   maybeScheduleEffect() {
-    if (!this._isActivelyListening)
-      return;
-    if (this.lastReactedEpoch === getGlobalEpoch())
-      return;
+    if (!this._isActivelyListening) return;
+    if (this.lastReactedEpoch === getGlobalEpoch()) return;
     if (this.parents.length && !haveParentsChanged(this)) {
       this.lastReactedEpoch = getGlobalEpoch();
       return;
@@ -29584,8 +29588,8 @@ function reactor(name, fn, options) {
   return {
     scheduler,
     start: (options2) => {
-      var _a2;
-      const force = (_a2 = options2 == null ? void 0 : options2.force) != null ? _a2 : false;
+      var _a3;
+      const force = (_a3 = options2 == null ? void 0 : options2.force) != null ? _a3 : false;
       scheduler.attach();
       if (force) {
         scheduler.scheduleEffect();
@@ -29638,9 +29642,9 @@ var Transaction = class {
   abort() {
     inst2.globalEpoch++;
     this.initialAtomValues.forEach((value, atom2) => {
-      var _a2;
+      var _a3;
       atom2.set(value);
-      (_a2 = atom2.historyBuffer) == null ? void 0 : _a2.clear();
+      (_a3 = atom2.historyBuffer) == null ? void 0 : _a3.clear();
     });
     this.commit();
   }
@@ -29676,7 +29680,7 @@ function traverse(reactors, child) {
   }
 }
 function flushChanges(atoms) {
-  var _a2;
+  var _a3;
   if (inst2.globalIsReacting) {
     throw new Error("cannot change atoms during reaction cycle");
   }
@@ -29691,7 +29695,7 @@ function flushChanges(atoms) {
       r2.maybeScheduleEffect();
     }
     let updateDepth = 0;
-    while ((_a2 = inst2.cleanupReactors) == null ? void 0 : _a2.size) {
+    while ((_a3 = inst2.cleanupReactors) == null ? void 0 : _a3.size) {
       if (updateDepth++ > 1e3) {
         throw new Error("Reaction update depth limit exceeded");
       }
@@ -29707,9 +29711,9 @@ function flushChanges(atoms) {
   }
 }
 function atomDidChange(atom2, previousValue) {
-  var _a2;
+  var _a3;
   if (inst2.globalIsReacting) {
-    const rs = (_a2 = inst2.cleanupReactors) != null ? _a2 : inst2.cleanupReactors = /* @__PURE__ */ new Set();
+    const rs = (_a3 = inst2.cleanupReactors) != null ? _a3 : inst2.cleanupReactors = /* @__PURE__ */ new Set();
     atom2.children.visit((child) => traverse(rs, child));
   } else if (!inst2.currentTransaction) {
     flushChanges([atom2]);
@@ -29757,12 +29761,11 @@ var __Atom__ = class {
     __publicField(this, "lastChangedEpoch", getGlobalEpoch());
     __publicField(this, "children", new ArraySet());
     __publicField(this, "historyBuffer");
-    var _a2;
+    var _a3;
     this.name = name;
     this.current = current;
-    this.isEqual = (_a2 = options == null ? void 0 : options.isEqual) != null ? _a2 : null;
-    if (!options)
-      return;
+    this.isEqual = (_a3 = options == null ? void 0 : options.isEqual) != null ? _a3 : null;
+    if (!options) return;
     if (options.historyLength) {
       this.historyBuffer = new HistoryBuffer(options.historyLength);
     }
@@ -29776,8 +29779,8 @@ var __Atom__ = class {
     return this.current;
   }
   set(value, diff) {
-    var _a2, _b2, _c, _d;
-    if ((_b2 = (_a2 = this.isEqual) == null ? void 0 : _a2.call(this, this.current, value)) != null ? _b2 : equals(this.current, value)) {
+    var _a3, _b2, _c, _d;
+    if ((_b2 = (_a3 = this.isEqual) == null ? void 0 : _a3.call(this, this.current, value)) != null ? _b2 : equals(this.current, value)) {
       return this.current;
     }
     advanceGlobalEpoch();
@@ -29798,12 +29801,12 @@ var __Atom__ = class {
     return this.set(updater(this.current));
   }
   getDiffSince(epoch) {
-    var _a2, _b2;
+    var _a3, _b2;
     maybeCaptureParent(this);
     if (epoch >= this.lastChangedEpoch) {
       return EMPTY_ARRAY;
     }
-    return (_b2 = (_a2 = this.historyBuffer) == null ? void 0 : _a2.getChangesSince(epoch)) != null ? _b2 : RESET_VALUE;
+    return (_b2 = (_a3 = this.historyBuffer) == null ? void 0 : _a3.getChangesSince(epoch)) != null ? _b2 : RESET_VALUE;
   }
 };
 var _Atom = singleton("Atom", () => __Atom__);
@@ -29814,8 +29817,7 @@ function atom(name, initialValue, options) {
 // node_modules/@tldraw/state/dist-esm/lib/warnings.mjs
 var didWarnComputedGetter = false;
 function logComputedGetterWarning() {
-  if (didWarnComputedGetter)
-    return;
+  if (didWarnComputedGetter) return;
   didWarnComputedGetter = true;
   console.warn(
     `Using \`@computed\` as a decorator for getters is deprecated and will be removed in the near future. Please refactor to use \`@computed\` as a decorator for methods.
@@ -29871,21 +29873,21 @@ var __UNSAFE__Computed = class {
     __publicField(this, "error", null);
     __publicField(this, "computeDiff");
     __publicField(this, "isEqual");
-    var _a2;
+    var _a3;
     this.name = name;
     this.derive = derive;
     if (options == null ? void 0 : options.historyLength) {
       this.historyBuffer = new HistoryBuffer(options.historyLength);
     }
     this.computeDiff = options == null ? void 0 : options.computeDiff;
-    this.isEqual = (_a2 = options == null ? void 0 : options.isEqual) != null ? _a2 : equals;
+    this.isEqual = (_a3 = options == null ? void 0 : options.isEqual) != null ? _a3 : equals;
   }
   // eslint-disable-next-line no-restricted-syntax
   get isActivelyListening() {
     return !this.children.isEmpty;
   }
   __unsafe__getWithoutCapture(ignoreErrors) {
-    var _a2, _b2;
+    var _a3, _b2;
     const isNew = this.lastChangedEpoch === GLOBAL_START_EPOCH;
     const globalEpoch = getGlobalEpoch();
     if (!isNew && (this.lastCheckedEpoch === globalEpoch || this.isActivelyListening && getIsReacting() && this.lastTraversedEpoch < getReactionEpoch() || !haveParentsChanged(this))) {
@@ -29911,7 +29913,7 @@ var __UNSAFE__Computed = class {
           this.historyBuffer.pushEntry(
             this.lastChangedEpoch,
             getGlobalEpoch(),
-            (_b2 = diff != null ? diff : (_a2 = this.computeDiff) == null ? void 0 : _a2.call(this, this.state, newState, this.lastCheckedEpoch, getGlobalEpoch())) != null ? _b2 : RESET_VALUE
+            (_b2 = diff != null ? diff : (_a3 = this.computeDiff) == null ? void 0 : _a3.call(this, this.state, newState, this.lastCheckedEpoch, getGlobalEpoch())) != null ? _b2 : RESET_VALUE
           );
         }
         this.lastChangedEpoch = getGlobalEpoch();
@@ -29930,8 +29932,7 @@ var __UNSAFE__Computed = class {
         this.historyBuffer.clear();
       }
       this.error = { thrownValue: e2 };
-      if (!ignoreErrors)
-        throw e2;
+      if (!ignoreErrors) throw e2;
       return this.state;
     } finally {
       stopCapturingParents();
@@ -29945,13 +29946,13 @@ var __UNSAFE__Computed = class {
     }
   }
   getDiffSince(epoch) {
-    var _a2, _b2;
+    var _a3, _b2;
     this.__unsafe__getWithoutCapture(true);
     maybeCaptureParent(this);
     if (epoch >= this.lastChangedEpoch) {
       return EMPTY_ARRAY;
     }
-    return (_b2 = (_a2 = this.historyBuffer) == null ? void 0 : _a2.getChangesSince(epoch)) != null ? _b2 : RESET_VALUE;
+    return (_b2 = (_a3 = this.historyBuffer) == null ? void 0 : _a3.getChangesSince(epoch)) != null ? _b2 : RESET_VALUE;
   }
 };
 var _Computed = singleton("Computed", () => __UNSAFE__Computed);
@@ -30043,8 +30044,7 @@ var PerformanceTracker = class {
     __publicField(this, "frame", null);
     __publicField(this, "recordFrame", () => {
       this.frames++;
-      if (!this.started)
-        return;
+      if (!this.started) return;
       this.frame = requestAnimationFrame(this.recordFrame);
     });
   }
@@ -30052,15 +30052,13 @@ var PerformanceTracker = class {
     this.name = name;
     this.frames = 0;
     this.started = true;
-    if (this.frame !== null)
-      cancelAnimationFrame(this.frame);
+    if (this.frame !== null) cancelAnimationFrame(this.frame);
     this.frame = requestAnimationFrame(this.recordFrame);
     this.startTime = performance.now();
   }
   stop() {
     this.started = false;
-    if (this.frame !== null)
-      cancelAnimationFrame(this.frame);
+    if (this.frame !== null) cancelAnimationFrame(this.frame);
     const duration = (performance.now() - this.startTime) / 1e3;
     const fps = duration === 0 ? 0 : Math.floor(this.frames / duration);
     const background2 = fps > 55 ? PERFORMANCE_COLORS.Good : fps > 30 ? PERFORMANCE_COLORS.Mid : PERFORMANCE_COLORS.Poor;
@@ -30082,15 +30080,14 @@ var PerformanceTracker = class {
 // node_modules/@tldraw/utils/dist-esm/lib/array.mjs
 function dedupe(input, equals2) {
   const result = [];
-  mainLoop:
-    for (const item of input) {
-      for (const existing of result) {
-        if (equals2 ? equals2(item, existing) : item === existing) {
-          continue mainLoop;
-        }
+  mainLoop: for (const item of input) {
+    for (const existing of result) {
+      if (equals2 ? equals2(item, existing) : item === existing) {
+        continue mainLoop;
       }
-      result.push(item);
     }
+    result.push(item);
+  }
   return result;
 }
 function compact(arr) {
@@ -30112,10 +30109,8 @@ function minBy(arr, fn) {
   return min3;
 }
 function areArraysShallowEqual(arr1, arr2) {
-  if (arr1 === arr2)
-    return true;
-  if (arr1.length !== arr2.length)
-    return false;
+  if (arr1 === arr2) return true;
+  if (arr1.length !== arr2.length) return false;
   for (let i = 0; i < arr1.length; i++) {
     if (!Object.is(arr1[i], arr2[i])) {
       return false;
@@ -30214,8 +30209,7 @@ function debounce(callback, wait) {
     return state.promise;
   };
   fn.cancel = () => {
-    if (!state)
-      return;
+    if (!state) return;
     clearTimeout(state.timeout);
   };
   return fn;
@@ -30224,8 +30218,7 @@ function debounce(callback, wait) {
 // node_modules/@tldraw/utils/dist-esm/lib/error.mjs
 var annotationsByError = /* @__PURE__ */ new WeakMap();
 function annotateError(error, annotations) {
-  if (typeof error !== "object" || error === null)
-    return;
+  if (typeof error !== "object" || error === null) return;
   let currentAnnotations = annotationsByError.get(error);
   if (!currentAnnotations) {
     currentAnnotations = { tags: {}, extras: {} };
@@ -30365,24 +30358,23 @@ function isApngAnimated(buffer) {
     let current_index = 0;
     let full_length = 0;
     let needle_buffer = "";
-    outer:
-      while (current_index < haystack.length) {
-        const next_index = current_index + chunksize;
-        const chunk = haystack.subarray(current_index, next_index);
-        const decoded = decoder.decode(chunk, { stream: true });
-        const text = needle_buffer + decoded;
-        let match;
-        let last_index = -1;
-        while ((match = needle.exec(text)) !== null) {
-          last_index = match.index - needle_buffer.length;
-          position = full_length + last_index;
-          break outer;
-        }
-        current_index = next_index;
-        full_length += decoded.length;
-        const needle_index = last_index > -1 ? last_index + needle_length : decoded.length - needle_length;
-        needle_buffer = decoded.slice(needle_index);
+    outer: while (current_index < haystack.length) {
+      const next_index = current_index + chunksize;
+      const chunk = haystack.subarray(current_index, next_index);
+      const decoded = decoder.decode(chunk, { stream: true });
+      const text = needle_buffer + decoded;
+      let match;
+      let last_index = -1;
+      while ((match = needle.exec(text)) !== null) {
+        last_index = match.index - needle_buffer.length;
+        position = full_length + last_index;
+        break outer;
       }
+      current_index = next_index;
+      full_length += decoded.length;
+      const needle_index = last_index > -1 ? last_index + needle_length : decoded.length - needle_length;
+      needle_buffer = decoded.slice(needle_index);
+    }
     if (position >= 0) {
       position += fromIndex >= 0 ? fromIndex : full_haystack_length + fromIndex;
     }
@@ -30724,7 +30716,7 @@ var crc = (current, previous) => {
 };
 var LEN_SIZE = 4;
 var CRC_SIZE = 4;
-var PngHelpers = class {
+var PngHelpers = class _PngHelpers {
   static isPng(view, offset4) {
     if (view.getUint8(offset4 + 0) === 137 && view.getUint8(offset4 + 1) === 80 && view.getUint8(offset4 + 2) === 78 && view.getUint8(offset4 + 3) === 71 && view.getUint8(offset4 + 4) === 13 && view.getUint8(offset4 + 5) === 10 && view.getUint8(offset4 + 6) === 26 && view.getUint8(offset4 + 7) === 10) {
       return true;
@@ -30741,7 +30733,7 @@ var PngHelpers = class {
   }
   static readChunks(view, offset4 = 0) {
     const chunks = {};
-    if (!PngHelpers.isPng(view, offset4)) {
+    if (!_PngHelpers.isPng(view, offset4)) {
       throw new Error("Not a PNG");
     }
     offset4 += 8;
@@ -30749,7 +30741,7 @@ var PngHelpers = class {
       const start = offset4;
       const len = view.getInt32(offset4);
       offset4 += 4;
-      const chunkType = PngHelpers.getChunkType(view, offset4);
+      const chunkType = _PngHelpers.getChunkType(view, offset4);
       if (chunkType === "IDAT" && chunks[chunkType]) {
         offset4 += len + LEN_SIZE + CRC_SIZE;
         continue;
@@ -30774,18 +30766,18 @@ var PngHelpers = class {
     };
   }
   static findChunk(view, type) {
-    const chunks = PngHelpers.readChunks(view);
+    const chunks = _PngHelpers.readChunks(view);
     return chunks[type];
   }
   static setPhysChunk(view, dpr = 1, options) {
     let offset4 = 46;
     let size4 = 0;
-    const res1 = PngHelpers.findChunk(view, "pHYs");
+    const res1 = _PngHelpers.findChunk(view, "pHYs");
     if (res1) {
       offset4 = res1.start;
       size4 = res1.size;
     }
-    const res2 = PngHelpers.findChunk(view, "IDAT");
+    const res2 = _PngHelpers.findChunk(view, "IDAT");
     if (res2) {
       offset4 = res2.start;
       size4 = 0;
@@ -30853,7 +30845,7 @@ var DEFAULT_SUPPORTED_MEDIA_TYPE_LIST = [
   ...DEFAULT_SUPPORTED_IMAGE_TYPES,
   ...DEFAULT_SUPPORT_VIDEO_TYPES
 ].join(",");
-var MediaHelpers = class {
+var MediaHelpers = class _MediaHelpers {
   /**
    * Load a video from a url.
    * @public
@@ -30894,8 +30886,8 @@ var MediaHelpers = class {
    * @public
    */
   static async getVideoSize(blob) {
-    return MediaHelpers.usingObjectURL(blob, async (url) => {
-      const video = await MediaHelpers.loadVideo(url);
+    return _MediaHelpers.usingObjectURL(blob, async (url) => {
+      const video = await _MediaHelpers.loadVideo(url);
       return { w: video.videoWidth, h: video.videoHeight };
     });
   }
@@ -30906,7 +30898,7 @@ var MediaHelpers = class {
    * @public
    */
   static async getImageSize(blob) {
-    const image = await MediaHelpers.usingObjectURL(blob, MediaHelpers.loadImage);
+    const image = await _MediaHelpers.usingObjectURL(blob, _MediaHelpers.loadImage);
     try {
       if (blob.type === "image/png") {
         const view = new DataView(await blob.arrayBuffer());
@@ -31040,17 +31032,13 @@ function mapObjectMapValues(object2, mapper) {
   return result;
 }
 function areObjectsShallowEqual(obj1, obj2) {
-  if (obj1 === obj2)
-    return true;
+  if (obj1 === obj2) return true;
   const keys1 = new Set(Object.keys(obj1));
   const keys2 = new Set(Object.keys(obj2));
-  if (keys1.size !== keys2.size)
-    return false;
+  if (keys1.size !== keys2.size) return false;
   for (const key of keys1) {
-    if (!keys2.has(key))
-      return false;
-    if (!Object.is(obj1[key], obj2[key]))
-      return false;
+    if (!keys2.has(key)) return false;
+    if (!Object.is(obj1[key], obj2[key])) return false;
   }
   return true;
 }
@@ -31074,8 +31062,7 @@ function validateInteger(int) {
   }
 }
 function isNotUndefined(n2) {
-  if (n2 === void 0)
-    throw Error("n is undefined");
+  if (n2 === void 0) throw Error("n is undefined");
 }
 function incrementInteger(x) {
   validateInteger(x);
@@ -31091,10 +31078,8 @@ function incrementInteger(x) {
     }
   }
   if (carry) {
-    if (head === "Z")
-      return "a0";
-    if (head === "z")
-      return void 0;
+    if (head === "Z") return "a0";
+    if (head === "z") return void 0;
     const h = String.fromCharCode(head.charCodeAt(0) + 1);
     if (h > "a") {
       digs.push("0");
@@ -31120,10 +31105,8 @@ function decrementInteger(x) {
     }
   }
   if (borrow) {
-    if (head === "a")
-      return "Z" + DIGITS.slice(-1);
-    if (head === "A")
-      return void 0;
+    if (head === "a") return "Z" + DIGITS.slice(-1);
+    if (head === "A") return void 0;
     const h = String.fromCharCode(head.charCodeAt(0) - 1);
     if (h < "Z") {
       digs.push(DIGITS.slice(-1));
@@ -31182,10 +31165,8 @@ function validateOrder(index2) {
   }
 }
 function generateKeyBetween(a, b) {
-  if (a !== void 0)
-    validateOrder(a);
-  if (b !== void 0)
-    validateOrder(b);
+  if (a !== void 0) validateOrder(a);
+  if (b !== void 0) validateOrder(b);
   if (a !== void 0 && b !== void 0 && a >= b) {
     throw new Error(a + " >= " + b);
   }
@@ -31193,8 +31174,7 @@ function generateKeyBetween(a, b) {
     return INTEGER_ZERO;
   }
   if (a === void 0) {
-    if (b === void 0)
-      throw Error("b is undefined");
+    if (b === void 0) throw Error("b is undefined");
     const ib2 = getIntegerPart(b);
     const fb2 = b.slice(ib2.length);
     if (ib2 === SMALLEST_INTEGER) {
@@ -31225,10 +31205,8 @@ function generateKeyBetween(a, b) {
   return i < b ? i : ia + midpoint(fa, void 0);
 }
 function generateNKeysBetween(a, b, n2) {
-  if (n2 === 0)
-    return [];
-  if (n2 === 1)
-    return [generateKeyBetween(a, b)];
+  if (n2 === 0) return [];
+  if (n2 === 1) return [generateKeyBetween(a, b)];
   if (b === void 0) {
     let c22 = generateKeyBetween(a, b);
     const result = [c22];
@@ -31558,9 +31536,9 @@ function createDebugValueBase(def) {
   return Object.assign(valueAtom, def);
 }
 function getStoredInitialValue(name) {
-  var _a2;
+  var _a3;
   try {
-    return JSON.parse((_a2 = getFromSessionStorage(`tldraw_debug:${name}`)) != null ? _a2 : "null");
+    return JSON.parse((_a3 = getFromSessionStorage(`tldraw_debug:${name}`)) != null ? _a3 : "null");
   } catch (err) {
     return null;
   }
@@ -31573,8 +31551,8 @@ function readEnv(fn) {
   }
 }
 function getDefaultValue(def) {
-  var _a2, _b2, _c, _d, _e, _f;
-  const env = (_c = (_b2 = (_a2 = readEnv(() => process.env.TLDRAW_ENV)) != null ? _a2 : readEnv(() => process.env.VERCEL_PUBLIC_TLDRAW_ENV)) != null ? _b2 : readEnv(() => process.env.NEXT_PUBLIC_TLDRAW_ENV)) != null ? _c : (
+  var _a3, _b2, _c, _d, _e, _f;
+  const env = (_c = (_b2 = (_a3 = readEnv(() => process.env.TLDRAW_ENV)) != null ? _a3 : readEnv(() => process.env.VERCEL_PUBLIC_TLDRAW_ENV)) != null ? _b2 : readEnv(() => process.env.NEXT_PUBLIC_TLDRAW_ENV)) != null ? _c : (
     // default to production because if we don't have one of these, this is probably a library use
     "production"
   );
@@ -31612,8 +31590,8 @@ var IncrementalSetConstructor = class {
    * @public
    */
   get() {
-    var _a2, _b2, _c, _d, _e, _f;
-    const numRemoved = (_c = (_b2 = (_a2 = this.diff) == null ? void 0 : _a2.removed) == null ? void 0 : _b2.size) != null ? _c : 0;
+    var _a3, _b2, _c, _d, _e, _f;
+    const numRemoved = (_c = (_b2 = (_a3 = this.diff) == null ? void 0 : _a3.removed) == null ? void 0 : _b2.size) != null ? _c : 0;
     const numAdded = (_f = (_e = (_d = this.diff) == null ? void 0 : _d.added) == null ? void 0 : _e.size) != null ? _f : 0;
     if (numRemoved === 0 && numAdded === 0) {
       return void 0;
@@ -31628,8 +31606,8 @@ var IncrementalSetConstructor = class {
    * @internal
    */
   _add(item, wasAlreadyPresent) {
-    var _a2, _b2, _c, _d, _e;
-    (_a2 = this.nextValue) != null ? _a2 : this.nextValue = new Set(this.previousValue);
+    var _a3, _b2, _c, _d, _e;
+    (_a3 = this.nextValue) != null ? _a3 : this.nextValue = new Set(this.previousValue);
     this.nextValue.add(item);
     (_b2 = this.diff) != null ? _b2 : this.diff = {};
     if (wasAlreadyPresent) {
@@ -31646,17 +31624,15 @@ var IncrementalSetConstructor = class {
    * @public
    */
   add(item) {
-    var _a2, _b2, _c;
+    var _a3, _b2, _c;
     const wasAlreadyPresent = this.previousValue.has(item);
     if (wasAlreadyPresent) {
-      const wasRemoved = (_b2 = (_a2 = this.diff) == null ? void 0 : _a2.removed) == null ? void 0 : _b2.has(item);
-      if (!wasRemoved)
-        return;
+      const wasRemoved = (_b2 = (_a3 = this.diff) == null ? void 0 : _a3.removed) == null ? void 0 : _b2.has(item);
+      if (!wasRemoved) return;
       return this._add(item, wasAlreadyPresent);
     }
     const isCurrentlyPresent = (_c = this.nextValue) == null ? void 0 : _c.has(item);
-    if (isCurrentlyPresent)
-      return;
+    if (isCurrentlyPresent) return;
     this._add(item, wasAlreadyPresent);
   }
   /**
@@ -31667,8 +31643,8 @@ var IncrementalSetConstructor = class {
    * @internal
    */
   _remove(item, wasAlreadyPresent) {
-    var _a2, _b2, _c, _d, _e;
-    (_a2 = this.nextValue) != null ? _a2 : this.nextValue = new Set(this.previousValue);
+    var _a3, _b2, _c, _d, _e;
+    (_a3 = this.nextValue) != null ? _a3 : this.nextValue = new Set(this.previousValue);
     this.nextValue.delete(item);
     (_b2 = this.diff) != null ? _b2 : this.diff = {};
     if (wasAlreadyPresent) {
@@ -31685,17 +31661,15 @@ var IncrementalSetConstructor = class {
    * @public
    */
   remove(item) {
-    var _a2, _b2, _c, _d;
+    var _a3, _b2, _c, _d;
     const wasAlreadyPresent = this.previousValue.has(item);
     if (!wasAlreadyPresent) {
-      const wasAdded = (_b2 = (_a2 = this.diff) == null ? void 0 : _a2.added) == null ? void 0 : _b2.has(item);
-      if (!wasAdded)
-        return;
+      const wasAdded = (_b2 = (_a3 = this.diff) == null ? void 0 : _a3.added) == null ? void 0 : _b2.has(item);
+      if (!wasAdded) return;
       return this._remove(item, wasAlreadyPresent);
     }
     const hasAlreadyBeenRemoved = (_d = (_c = this.diff) == null ? void 0 : _c.removed) == null ? void 0 : _d.has(item);
-    if (hasAlreadyBeenRemoved)
-      return;
+    if (hasAlreadyBeenRemoved) return;
     this._remove(item, wasAlreadyPresent);
   }
 };
@@ -31716,7 +31690,7 @@ var nanoid = (size4 = 21) => crypto.getRandomValues(new Uint8Array(size4)).reduc
 }, "");
 
 // node_modules/@tldraw/store/dist-esm/lib/RecordType.mjs
-var RecordType = class {
+var RecordType = class _RecordType {
   constructor(typeName, config) {
     __publicField(this, "createDefaultProperties");
     __publicField(this, "validator");
@@ -31738,17 +31712,16 @@ var RecordType = class {
     __publicField(this, "isInstance", (record) => {
       return (record == null ? void 0 : record.typeName) === this.typeName;
     });
-    var _a2, _b2;
+    var _a3, _b2;
     this.typeName = typeName;
     this.createDefaultProperties = config.createDefaultProperties;
-    this.validator = (_a2 = config.validator) != null ? _a2 : { validate: (r2) => r2 };
+    this.validator = (_a3 = config.validator) != null ? _a3 : { validate: (r2) => r2 };
     this.scope = (_b2 = config.scope) != null ? _b2 : "document";
     this.ephemeralKeys = config.ephemeralKeys;
     const ephemeralKeySet = /* @__PURE__ */ new Set();
     if (config.ephemeralKeys) {
       for (const [key, isEphemeral] of objectMapEntries(config.ephemeralKeys)) {
-        if (isEphemeral)
-          ephemeralKeySet.add(key);
+        if (isEphemeral) ephemeralKeySet.add(key);
       }
     }
     this.ephemeralKeySet = ephemeralKeySet;
@@ -31835,11 +31808,9 @@ var RecordType = class {
    * @returns Whether the id is an id of this type.
    */
   isId(id) {
-    if (!id)
-      return false;
+    if (!id) return false;
     for (let i = 0; i < this.typeName.length; i++) {
-      if (id[i] !== this.typeName[i])
-        return false;
+      if (id[i] !== this.typeName[i]) return false;
     }
     return id[this.typeName.length] === ":";
   }
@@ -31858,7 +31829,7 @@ var RecordType = class {
    * @returns The new RecordType.
    */
   withDefaultProperties(createDefaultProperties) {
-    return new RecordType(this.typeName, {
+    return new _RecordType(this.typeName, {
       createDefaultProperties,
       validator: this.validator,
       scope: this.scope,
@@ -31950,8 +31921,7 @@ var import_lodash3 = __toESM(require_lodash3(), 1);
 
 // node_modules/@tldraw/store/dist-esm/lib/setUtils.mjs
 function intersectSets(sets) {
-  if (sets.length === 0)
-    return /* @__PURE__ */ new Set();
+  if (sets.length === 0) return /* @__PURE__ */ new Set();
   const first = sets[0];
   const rest = sets.slice(1);
   const result = /* @__PURE__ */ new Set();
@@ -31963,11 +31933,11 @@ function intersectSets(sets) {
   return result;
 }
 function diffSets(prev, next) {
-  var _a2, _b2;
+  var _a3, _b2;
   const result = {};
   for (const val of next) {
     if (!prev.has(val)) {
-      (_a2 = result.added) != null ? _a2 : result.added = /* @__PURE__ */ new Set();
+      (_a3 = result.added) != null ? _a3 : result.added = /* @__PURE__ */ new Set();
       result.added.add(val);
     }
   }
@@ -31985,12 +31955,9 @@ function objectMatchesQuery(query, object2) {
   for (const [key, _matcher] of Object.entries(query)) {
     const matcher = _matcher;
     const value = object2[key];
-    if ("eq" in matcher && value !== matcher.eq)
-      return false;
-    if ("neq" in matcher && value === matcher.neq)
-      return false;
-    if ("gt" in matcher && (typeof value !== "number" || value <= matcher.gt))
-      return false;
+    if ("eq" in matcher && value !== matcher.eq) return false;
+    if ("neq" in matcher && value === matcher.neq) return false;
+    if ("gt" in matcher && (typeof value !== "number" || value <= matcher.gt)) return false;
   }
   return true;
 }
@@ -32064,8 +32031,7 @@ var StoreQueries = class {
           return this.history.get();
         }
         const diff = this.history.getDiffSince(lastComputedEpoch);
-        if (diff === RESET_VALUE)
-          return this.history.get();
+        if (diff === RESET_VALUE) return this.history.get();
         const res = { added: {}, removed: {}, updated: {} };
         let numAdded = 0;
         let numRemoved = 0;
@@ -32170,28 +32136,26 @@ var StoreQueries = class {
     return computed(
       "index:" + typeName + ":" + property,
       (prevValue, lastComputedEpoch) => {
-        if (isUninitialized(prevValue))
-          return fromScratch();
+        if (isUninitialized(prevValue)) return fromScratch();
         const history = typeHistory.getDiffSince(lastComputedEpoch);
         if (history === RESET_VALUE) {
           return fromScratch();
         }
         const setConstructors = /* @__PURE__ */ new Map();
         const add = (value, id) => {
-          var _a2;
+          var _a3;
           let setConstructor = setConstructors.get(value);
           if (!setConstructor)
             setConstructor = new IncrementalSetConstructor(
-              (_a2 = prevValue.get(value)) != null ? _a2 : /* @__PURE__ */ new Set()
+              (_a3 = prevValue.get(value)) != null ? _a3 : /* @__PURE__ */ new Set()
             );
           setConstructor.add(id);
           setConstructors.set(value, setConstructor);
         };
         const remove2 = (value, id) => {
-          var _a2;
+          var _a3;
           let set = setConstructors.get(value);
-          if (!set)
-            set = new IncrementalSetConstructor((_a2 = prevValue.get(value)) != null ? _a2 : /* @__PURE__ */ new Set());
+          if (!set) set = new IncrementalSetConstructor((_a3 = prevValue.get(value)) != null ? _a3 : /* @__PURE__ */ new Set());
           set.remove(id);
           setConstructors.set(value, set);
         };
@@ -32223,12 +32187,9 @@ var StoreQueries = class {
         let nextDiff = void 0;
         for (const [value, setConstructor] of setConstructors) {
           const result = setConstructor.get();
-          if (!result)
-            continue;
-          if (!nextValue)
-            nextValue = new Map(prevValue);
-          if (!nextDiff)
-            nextDiff = /* @__PURE__ */ new Map();
+          if (!result) continue;
+          if (!nextValue) nextValue = new Map(prevValue);
+          if (!nextDiff) nextDiff = /* @__PURE__ */ new Map();
           if (result.value.size === 0) {
             nextValue.delete(value);
           } else {
@@ -32256,9 +32217,9 @@ var StoreQueries = class {
   record(typeName, queryCreator = () => ({}), name = "record:" + typeName + (queryCreator ? ":" + queryCreator.toString() : "")) {
     const ids = this.ids(typeName, queryCreator, name);
     return computed(name, () => {
-      var _a2;
+      var _a3;
       for (const id of ids.get()) {
-        return (_a2 = this.atoms.get()[id]) == null ? void 0 : _a2.get();
+        return (_a3 = this.atoms.get()[id]) == null ? void 0 : _a3.get();
       }
       return void 0;
     });
@@ -32400,8 +32361,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleBeforeCreate(record, source) {
-    if (!this._isEnabled)
-      return record;
+    if (!this._isEnabled) return record;
     const handlers = this._beforeCreateHandlers[record.typeName];
     if (handlers) {
       let r2 = record;
@@ -32414,8 +32374,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleAfterCreate(record, source) {
-    if (!this._isEnabled)
-      return;
+    if (!this._isEnabled) return;
     const handlers = this._afterCreateHandlers[record.typeName];
     if (handlers) {
       for (const handler of handlers) {
@@ -32425,8 +32384,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleBeforeChange(prev, next, source) {
-    if (!this._isEnabled)
-      return next;
+    if (!this._isEnabled) return next;
     const handlers = this._beforeChangeHandlers[next.typeName];
     if (handlers) {
       let r2 = next;
@@ -32439,8 +32397,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleAfterChange(prev, next, source) {
-    if (!this._isEnabled)
-      return;
+    if (!this._isEnabled) return;
     const handlers = this._afterChangeHandlers[next.typeName];
     if (handlers) {
       for (const handler of handlers) {
@@ -32450,8 +32407,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleBeforeDelete(record, source) {
-    if (!this._isEnabled)
-      return true;
+    if (!this._isEnabled) return true;
     const handlers = this._beforeDeleteHandlers[record.typeName];
     if (handlers) {
       for (const handler of handlers) {
@@ -32464,8 +32420,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleAfterDelete(record, source) {
-    if (!this._isEnabled)
-      return;
+    if (!this._isEnabled) return;
     const handlers = this._afterDeleteHandlers[record.typeName];
     if (handlers) {
       for (const handler of handlers) {
@@ -32475,8 +32430,7 @@ var StoreSideEffects = class {
   }
   /** @internal */
   handleOperationComplete(source) {
-    if (!this._isEnabled)
-      return;
+    if (!this._isEnabled) return;
     for (const handler of this._operationCompleteHandlers) {
       handler(source);
     }
@@ -32508,8 +32462,7 @@ var StoreSideEffects = class {
       }
     }
     return () => {
-      for (const dispose of disposes)
-        dispose();
+      for (const dispose of disposes) dispose();
     };
   }
   /**
@@ -32543,8 +32496,7 @@ var StoreSideEffects = class {
    */
   registerBeforeCreateHandler(typeName, handler) {
     const handlers = this._beforeCreateHandlers[typeName];
-    if (!handlers)
-      this._beforeCreateHandlers[typeName] = [];
+    if (!handlers) this._beforeCreateHandlers[typeName] = [];
     this._beforeCreateHandlers[typeName].push(handler);
     return () => remove(this._beforeCreateHandlers[typeName], handler);
   }
@@ -32572,8 +32524,7 @@ var StoreSideEffects = class {
    */
   registerAfterCreateHandler(typeName, handler) {
     const handlers = this._afterCreateHandlers[typeName];
-    if (!handlers)
-      this._afterCreateHandlers[typeName] = [];
+    if (!handlers) this._afterCreateHandlers[typeName] = [];
     this._afterCreateHandlers[typeName].push(handler);
     return () => remove(this._afterCreateHandlers[typeName], handler);
   }
@@ -32605,8 +32556,7 @@ var StoreSideEffects = class {
    */
   registerBeforeChangeHandler(typeName, handler) {
     const handlers = this._beforeChangeHandlers[typeName];
-    if (!handlers)
-      this._beforeChangeHandlers[typeName] = [];
+    if (!handlers) this._beforeChangeHandlers[typeName] = [];
     this._beforeChangeHandlers[typeName].push(handler);
     return () => remove(this._beforeChangeHandlers[typeName], handler);
   }
@@ -32633,8 +32583,7 @@ var StoreSideEffects = class {
    */
   registerAfterChangeHandler(typeName, handler) {
     const handlers = this._afterChangeHandlers[typeName];
-    if (!handlers)
-      this._afterChangeHandlers[typeName] = [];
+    if (!handlers) this._afterChangeHandlers[typeName] = [];
     this._afterChangeHandlers[typeName].push(handler);
     return () => remove(this._afterChangeHandlers[typeName], handler);
   }
@@ -32663,8 +32612,7 @@ var StoreSideEffects = class {
    */
   registerBeforeDeleteHandler(typeName, handler) {
     const handlers = this._beforeDeleteHandlers[typeName];
-    if (!handlers)
-      this._beforeDeleteHandlers[typeName] = [];
+    if (!handlers) this._beforeDeleteHandlers[typeName] = [];
     this._beforeDeleteHandlers[typeName].push(handler);
     return () => remove(this._beforeDeleteHandlers[typeName], handler);
   }
@@ -32694,8 +32642,7 @@ var StoreSideEffects = class {
    */
   registerAfterDeleteHandler(typeName, handler) {
     const handlers = this._afterDeleteHandlers[typeName];
-    if (!handlers)
-      this._afterDeleteHandlers[typeName] = [];
+    if (!handlers) this._afterDeleteHandlers[typeName] = [];
     this._afterDeleteHandlers[typeName].push(handler);
     return () => remove(this._afterDeleteHandlers[typeName], handler);
   }
@@ -32844,8 +32791,7 @@ var Store = class {
               phaseOverride != null ? phaseOverride : "updateRecord",
               initialValue
             );
-            if (validated === initialValue)
-              continue;
+            if (validated === initialValue) continue;
             recordAtom.set(devFreeze(record));
             didChange = true;
             const updated = recordAtom.__unsafe__getWithoutCapture();
@@ -32871,8 +32817,7 @@ var Store = class {
         if (map) {
           this.atoms.set(map);
         }
-        if (!didChange)
-          return;
+        if (!didChange) return;
         this.updateHistory({
           added: additions,
           updated: updates,
@@ -32893,8 +32838,7 @@ var Store = class {
         if (this.sideEffects.isEnabled()) {
           for (const id of ids) {
             const atom2 = this.atoms.__unsafe__getWithoutCapture()[id];
-            if (!atom2)
-              continue;
+            if (!atom2) continue;
             if (this.sideEffects.handleBeforeDelete(atom2.get(), source) === false) {
               cancelled.add(id);
             }
@@ -32904,14 +32848,10 @@ var Store = class {
         this.atoms.update((atoms) => {
           let result = void 0;
           for (const id of ids) {
-            if (cancelled.has(id))
-              continue;
-            if (!(id in atoms))
-              continue;
-            if (!result)
-              result = { ...atoms };
-            if (!removed)
-              removed = {};
+            if (cancelled.has(id)) continue;
+            if (!(id in atoms)) continue;
+            if (!result) result = { ...atoms };
+            if (!removed) removed = {};
             delete result[id];
             const record = atoms[id].get();
             removed[id] = record;
@@ -32919,8 +32859,7 @@ var Store = class {
           }
           return result != null ? result : atoms;
         });
-        if (!removed)
-          return;
+        if (!removed) return;
         this.updateHistory({ added: {}, updated: {}, removed });
       });
     });
@@ -32931,8 +32870,8 @@ var Store = class {
      * @public
      */
     __publicField(this, "get", (id) => {
-      var _a2;
-      return (_a2 = this.atoms.get()[id]) == null ? void 0 : _a2.get();
+      var _a3;
+      return (_a3 = this.atoms.get()[id]) == null ? void 0 : _a3.get();
     });
     /**
      * Get the value of a store record by its id without updating its epoch.
@@ -32941,8 +32880,8 @@ var Store = class {
      * @public
      */
     __publicField(this, "unsafeGetWithoutCapture", (id) => {
-      var _a2;
-      return (_a2 = this.atoms.get()[id]) == null ? void 0 : _a2.__unsafe__getWithoutCapture();
+      var _a3;
+      return (_a3 = this.atoms.__unsafe__getWithoutCapture()[id]) == null ? void 0 : _a3.__unsafe__getWithoutCapture();
     });
     /**
      * Creates a JSON payload from the record store.
@@ -33009,12 +32948,12 @@ var Store = class {
      * @returns A function to remove the listener.
      */
     __publicField(this, "listen", (onHistory, filters) => {
-      var _a2, _b2;
+      var _a3, _b2;
       this._flushHistory();
       const listener = {
         onHistory,
         filters: {
-          source: (_a2 = filters == null ? void 0 : filters.source) != null ? _a2 : "all",
+          source: (_a3 = filters == null ? void 0 : filters.source) != null ? _a3 : "all",
           scope: (_b2 = filters == null ? void 0 : filters.scope) != null ? _b2 : "all"
         }
       };
@@ -33155,18 +33094,15 @@ var Store = class {
           if (filters.scope !== "all") {
             if (filters.scope === "document") {
               documentChanges != null ? documentChanges : documentChanges = this.filterChangesByScope(changes, "document");
-              if (!documentChanges)
-                continue;
+              if (!documentChanges) continue;
               onHistory({ changes: documentChanges, source });
             } else if (filters.scope === "session") {
               instanceChanges != null ? instanceChanges : instanceChanges = this.filterChangesByScope(changes, "session");
-              if (!instanceChanges)
-                continue;
+              if (!instanceChanges) continue;
               onHistory({ changes: instanceChanges, source });
             } else {
               presenceChanges != null ? presenceChanges : presenceChanges = this.filterChangesByScope(changes, "presence");
-              if (!presenceChanges)
-                continue;
+              if (!presenceChanges) continue;
               onHistory({ changes: presenceChanges, source });
             }
           } else {
@@ -33331,12 +33267,10 @@ var Store = class {
             if (type.ephemeralKeySet.has(key) || Object.is(value, getOwnProperty(existing, key))) {
               continue;
             }
-            if (!changed)
-              changed = { ...existing };
+            if (!changed) changed = { ...existing };
             changed[key] = value;
           }
-          if (changed)
-            toPut.push(changed);
+          if (changed) toPut.push(changed);
         } else {
           toPut.push(to);
         }
@@ -33353,8 +33287,8 @@ var Store = class {
   /** @internal */
   ensureStoreIsUsable() {
     this.atomic(() => {
-      var _a2, _b2;
-      (_a2 = this._integrityChecker) != null ? _a2 : this._integrityChecker = this.schema.createIntegrityChecker(this);
+      var _a3, _b2;
+      (_a3 = this._integrityChecker) != null ? _a3 : this._integrityChecker = this.schema.createIntegrityChecker(this);
       (_b2 = this._integrityChecker) == null ? void 0 : _b2.call(this);
     });
   }
@@ -33368,12 +33302,9 @@ var Store = class {
   }
   addDiffForAfterEvent(before, after) {
     assert(this.pendingAfterEvents, "must be in event operation");
-    if (before === after)
-      return;
-    if (before && after)
-      assert(before.id === after.id);
-    if (!before && !after)
-      return;
+    if (before === after) return;
+    if (before && after) assert(before.id === after.id);
+    if (!before && !after) return;
     const id = (before || after).id;
     const existing = this.pendingAfterEvents.get(id);
     if (existing) {
@@ -33388,8 +33319,7 @@ var Store = class {
     while (this.pendingAfterEvents) {
       const events = this.pendingAfterEvents;
       this.pendingAfterEvents = null;
-      if (!this.sideEffects.isEnabled())
-        continue;
+      if (!this.sideEffects.isEnabled()) continue;
       updateDepth++;
       if (updateDepth > 100) {
         throw new Error("Maximum store update depth exceeded, bailing out");
@@ -33412,8 +33342,7 @@ var Store = class {
   atomic(fn, runCallbacks = true) {
     return transact(() => {
       if (this._isInAtomicOp) {
-        if (!this.pendingAfterEvents)
-          this.pendingAfterEvents = /* @__PURE__ */ new Map();
+        if (!this.pendingAfterEvents) this.pendingAfterEvents = /* @__PURE__ */ new Map();
         return fn();
       }
       this.pendingAfterEvents = /* @__PURE__ */ new Map();
@@ -33439,8 +33368,7 @@ var Store = class {
   }
 };
 function squashHistoryEntries(entries) {
-  if (entries.length === 0)
-    return [];
+  if (entries.length === 0) return [];
   const chunked = [];
   let chunk = [entries[0]];
   let entry;
@@ -33504,7 +33432,7 @@ function createComputedCache(name, derive, isEqual2) {
 
 // node_modules/@tldraw/store/dist-esm/lib/migrate.mjs
 function squashDependsOn(sequence) {
-  var _a2;
+  var _a3;
   const result = [];
   for (let i = sequence.length - 1; i >= 0; i--) {
     const elem = sequence[i];
@@ -33514,7 +33442,7 @@ function squashDependsOn(sequence) {
       if (prev) {
         result[0] = {
           ...prev,
-          dependsOn: dependsOn.concat((_a2 = prev.dependsOn) != null ? _a2 : [])
+          dependsOn: dependsOn.concat((_a3 = prev.dependsOn) != null ? _a3 : [])
         };
       }
     } else {
@@ -33542,18 +33470,18 @@ function createMigrationIds(sequenceId, versions) {
   );
 }
 function createRecordMigrationSequence(opts) {
-  var _a2;
+  var _a3;
   const sequenceId = opts.sequenceId;
   return createMigrationSequence({
     sequenceId,
-    retroactive: (_a2 = opts.retroactive) != null ? _a2 : true,
+    retroactive: (_a3 = opts.retroactive) != null ? _a3 : true,
     sequence: opts.sequence.map(
       (m) => "id" in m ? {
         ...m,
         scope: "record",
         filter: (r2) => {
-          var _a3, _b2, _c, _d;
-          return r2.typeName === opts.recordType && ((_b2 = (_a3 = m.filter) == null ? void 0 : _a3.call(m, r2)) != null ? _b2 : true) && ((_d = (_c = opts.filter) == null ? void 0 : _c.call(opts, r2)) != null ? _d : true);
+          var _a4, _b2, _c, _d;
+          return r2.typeName === opts.recordType && ((_b2 = (_a4 = m.filter) == null ? void 0 : _a4.call(m, r2)) != null ? _b2 : true) && ((_d = (_c = opts.filter) == null ? void 0 : _c.call(opts, r2)) != null ? _d : true);
         }
       } : m
     )
@@ -33638,10 +33566,8 @@ var MigrationFailureReason = /* @__PURE__ */ ((MigrationFailureReason2) => {
 
 // node_modules/@tldraw/store/dist-esm/lib/StoreSchema.mjs
 function upgradeSchema(schema) {
-  if (schema.schemaVersion > 2 || schema.schemaVersion < 1)
-    return Result.err("Bad schema version");
-  if (schema.schemaVersion === 2)
-    return Result.ok(schema);
+  if (schema.schemaVersion > 2 || schema.schemaVersion < 1) return Result.err("Bad schema version");
+  if (schema.schemaVersion === 2) return Result.ok(schema);
   const result = {
     schemaVersion: 2,
     sequences: {}
@@ -33656,14 +33582,14 @@ function upgradeSchema(schema) {
   }
   return Result.ok(result);
 }
-var StoreSchema = class {
+var StoreSchema = class _StoreSchema {
   constructor(types, options) {
     __publicField(this, "migrations", {});
     __publicField(this, "sortedMigrations");
-    var _a2, _b2;
+    var _a3, _b2;
     this.types = types;
     this.options = options;
-    for (const m of (_a2 = options.migrations) != null ? _a2 : []) {
+    for (const m of (_a3 = options.migrations) != null ? _a3 : []) {
       assert(!this.migrations[m.sequenceId], `Duplicate migration sequenceId ${m.sequenceId}`);
       validateMigrations(m);
       this.migrations[m.sequenceId] = m;
@@ -33671,8 +33597,7 @@ var StoreSchema = class {
     const allMigrations = Object.values(this.migrations).flatMap((m) => m.sequence);
     this.sortedMigrations = sortMigrations(allMigrations);
     for (const migration of this.sortedMigrations) {
-      if (!((_b2 = migration.dependsOn) == null ? void 0 : _b2.length))
-        continue;
+      if (!((_b2 = migration.dependsOn) == null ? void 0 : _b2.length)) continue;
       for (const dep of migration.dependsOn) {
         const depMigration = allMigrations.find((m) => m.id === dep);
         assert(depMigration, `Migration '${migration.id}' depends on missing migration '${dep}'`);
@@ -33680,7 +33605,7 @@ var StoreSchema = class {
     }
   }
   static create(types, options) {
-    return new StoreSchema(types, options != null ? options : {});
+    return new _StoreSchema(types, options != null ? options : {});
   }
   validateRecord(store, record, phase, recordBefore) {
     try {
@@ -33770,13 +33695,11 @@ var StoreSchema = class {
     record = structuredClone(record);
     try {
       for (const migration of migrationsToApply) {
-        if (migration.scope === "store")
-          throw new Error(
-            /* won't happen, just for TS */
-          );
+        if (migration.scope === "store") throw new Error(
+          /* won't happen, just for TS */
+        );
         const shouldApply = migration.filter ? migration.filter(record) : true;
-        if (!shouldApply)
-          continue;
+        if (!shouldApply) continue;
         const result = migration[direction](record);
         if (result) {
           record = structuredClone(result);
@@ -33805,8 +33728,7 @@ var StoreSchema = class {
         if (migration.scope === "record") {
           for (const [id, record] of Object.entries(store)) {
             const shouldApply = migration.filter ? migration.filter(record) : true;
-            if (!shouldApply)
-              continue;
+            if (!shouldApply) continue;
             const result = migration.up(record);
             if (result) {
               store[id] = structuredClone(result);
@@ -33829,8 +33751,8 @@ var StoreSchema = class {
   }
   /** @internal */
   createIntegrityChecker(store) {
-    var _a2, _b2, _c;
-    return (_c = (_b2 = (_a2 = this.options).createIntegrityChecker) == null ? void 0 : _b2.call(_a2, store)) != null ? _c : void 0;
+    var _a3, _b2, _c;
+    return (_c = (_b2 = (_a3 = this.options).createIntegrityChecker) == null ? void 0 : _b2.call(_a3, store)) != null ? _c : void 0;
   }
   serialize() {
     return {
@@ -33947,10 +33869,8 @@ function prefixError(path, fn) {
   }
 }
 function typeToString(value) {
-  if (value === null)
-    return "null";
-  if (Array.isArray(value))
-    return "an array";
+  if (value === null) return "null";
+  if (Array.isArray(value)) return "an array";
   const type = typeof value;
   switch (type) {
     case "bigint":
@@ -33968,7 +33888,7 @@ function typeToString(value) {
       exhaustiveSwitchError(type);
   }
 }
-var Validator = class {
+var Validator = class _Validator {
   constructor(validationFn, validateUsingKnownGoodVersionFn) {
     this.validationFn = validationFn;
     this.validateUsingKnownGoodVersionFn = validateUsingKnownGoodVersionFn;
@@ -34021,7 +33941,7 @@ var Validator = class {
    * if the value can't be converted to the new type, or return the new type otherwise.
    */
   refine(otherValidationFn) {
-    return new Validator(
+    return new _Validator(
       (value) => {
         return otherValidationFn(this.validate(value));
       },
@@ -34059,8 +33979,7 @@ var ArrayOfValidator = class extends Validator {
         return arr;
       },
       (knownGoodValue, newValue) => {
-        if (!itemValidator.validateUsingKnownGoodVersion)
-          return this.validate(newValue);
+        if (!itemValidator.validateUsingKnownGoodVersion) return this.validate(newValue);
         const arr = array.validate(newValue);
         let isDifferent = knownGoodValue.length !== arr.length;
         for (let i = 0; i < arr.length; i++) {
@@ -34101,7 +34020,7 @@ var ArrayOfValidator = class extends Validator {
     });
   }
 };
-var ObjectValidator = class extends Validator {
+var ObjectValidator = class _ObjectValidator extends Validator {
   constructor(config, shouldAllowUnknownProperties = false) {
     super(
       (object2) => {
@@ -34166,7 +34085,7 @@ var ObjectValidator = class extends Validator {
     this.shouldAllowUnknownProperties = shouldAllowUnknownProperties;
   }
   allowUnknownProperties() {
-    return new ObjectValidator(this.config, true);
+    return new _ObjectValidator(this.config, true);
   }
   /**
    * Extend an object validator by adding additional properties.
@@ -34183,10 +34102,10 @@ var ObjectValidator = class extends Validator {
    * ```
    */
   extend(extension) {
-    return new ObjectValidator({ ...this.config, ...extension });
+    return new _ObjectValidator({ ...this.config, ...extension });
   }
 };
-var UnionValidator = class extends Validator {
+var UnionValidator = class _UnionValidator extends Validator {
   constructor(key, config, unknownValueValidation, useNumberKeys) {
     super(
       (input) => {
@@ -34239,7 +34158,7 @@ var UnionValidator = class extends Validator {
     return { matchingSchema, variant };
   }
   validateUnknownVariants(unknownValueValidation) {
-    return new UnionValidator(this.key, this.config, unknownValueValidation, this.useNumberKeys);
+    return new _UnionValidator(this.key, this.config, unknownValueValidation, this.useNumberKeys);
   }
 };
 var DictValidator = class extends Validator {
@@ -34320,24 +34239,19 @@ var number = typeofValidator("number").check((number2) => {
   }
 });
 var positiveNumber = number.check((value) => {
-  if (value < 0)
-    throw new ValidationError(`Expected a positive number, got ${value}`);
+  if (value < 0) throw new ValidationError(`Expected a positive number, got ${value}`);
 });
 var nonZeroNumber = number.check((value) => {
-  if (value <= 0)
-    throw new ValidationError(`Expected a non-zero positive number, got ${value}`);
+  if (value <= 0) throw new ValidationError(`Expected a non-zero positive number, got ${value}`);
 });
 var integer = number.check((value) => {
-  if (!Number.isInteger(value))
-    throw new ValidationError(`Expected an integer, got ${value}`);
+  if (!Number.isInteger(value)) throw new ValidationError(`Expected an integer, got ${value}`);
 });
 var positiveInteger = integer.check((value) => {
-  if (value < 0)
-    throw new ValidationError(`Expected a positive integer, got ${value}`);
+  if (value < 0) throw new ValidationError(`Expected a positive integer, got ${value}`);
 });
 var nonZeroInteger = integer.check((value) => {
-  if (value <= 0)
-    throw new ValidationError(`Expected a non-zero positive integer, got ${value}`);
+  if (value <= 0) throw new ValidationError(`Expected a non-zero positive integer, got ${value}`);
 });
 var boolean = typeofValidator("boolean");
 var bigint = typeofValidator("bigint");
@@ -34499,15 +34413,12 @@ function setEnum(values) {
 function optional(validator) {
   return new Validator(
     (value) => {
-      if (value === void 0)
-        return void 0;
+      if (value === void 0) return void 0;
       return validator.validate(value);
     },
     (knownGoodValue, newValue) => {
-      if (knownGoodValue === void 0 && newValue === void 0)
-        return void 0;
-      if (newValue === void 0)
-        return void 0;
+      if (knownGoodValue === void 0 && newValue === void 0) return void 0;
+      if (newValue === void 0) return void 0;
       if (validator.validateUsingKnownGoodVersion && knownGoodValue !== void 0) {
         return validator.validateUsingKnownGoodVersion(knownGoodValue, newValue);
       }
@@ -34518,13 +34429,11 @@ function optional(validator) {
 function nullable(validator) {
   return new Validator(
     (value) => {
-      if (value === null)
-        return null;
+      if (value === null) return null;
       return validator.validate(value);
     },
     (knownGoodValue, newValue) => {
-      if (newValue === null)
-        return null;
+      if (newValue === null) return null;
       if (validator.validateUsingKnownGoodVersion && knownGoodValue !== null) {
         return validator.validateUsingKnownGoodVersion(knownGoodValue, newValue);
       }
@@ -34551,8 +34460,7 @@ function parseUrl(str) {
 }
 var validLinkProtocols = /* @__PURE__ */ new Set(["http:", "https:", "mailto:"]);
 var linkUrl = string.check((value) => {
-  if (value === "")
-    return;
+  if (value === "") return;
   const url = parseUrl(value);
   if (!validLinkProtocols.has(url.protocol.toLowerCase())) {
     throw new ValidationError(
@@ -34562,8 +34470,7 @@ var linkUrl = string.check((value) => {
 });
 var validSrcProtocols = /* @__PURE__ */ new Set(["http:", "https:", "data:", "asset:"]);
 var srcUrl = string.check((value) => {
-  if (value === "")
-    return;
+  if (value === "") return;
   const url = parseUrl(value);
   if (!validSrcProtocols.has(url.protocol.toLowerCase())) {
     throw new ValidationError(
@@ -34572,8 +34479,7 @@ var srcUrl = string.check((value) => {
   }
 });
 var httpUrl = string.check((value) => {
-  if (value === "")
-    return;
+  if (value === "") return;
   const url = parseUrl(value);
   if (!url.protocol.toLowerCase().match(/^https?:$/)) {
     throw new ValidationError(
@@ -34703,7 +34609,7 @@ function createBindingRecordType(bindings) {
 }
 
 // node_modules/@tldraw/tlschema/dist-esm/styles/StyleProp.mjs
-var StyleProp = class {
+var StyleProp = class _StyleProp {
   /** @internal */
   constructor(id, defaultValue, type) {
     this.id = id;
@@ -34734,7 +34640,7 @@ var StyleProp = class {
    */
   static define(uniqueId2, options) {
     const { defaultValue, type = validation_exports.any } = options;
-    return new StyleProp(uniqueId2, defaultValue, type);
+    return new _StyleProp(uniqueId2, defaultValue, type);
   }
   /**
    * Define a new {@link StyleProp} as a list of possible values.
@@ -34805,8 +34711,8 @@ var rootShapeMigrations = createRecordMigrationSequence({
     {
       id: rootShapeVersions.HoistOpacity,
       up: (record) => {
-        var _a2;
-        record.opacity = Number((_a2 = record.props.opacity) != null ? _a2 : "1");
+        var _a3;
+        record.opacity = Number((_a3 = record.props.opacity) != null ? _a3 : "1");
         delete record.props.opacity;
       },
       down: (record) => {
@@ -34834,13 +34740,11 @@ var rootShapeMigrations = createRecordMigrationSequence({
   ]
 });
 function isShape(record) {
-  if (!record)
-    return false;
+  if (!record) return false;
   return record.typeName === "shape";
 }
 function isShapeId(id) {
-  if (!id)
-    return false;
+  if (!id) return false;
   return id.startsWith("shape:");
 }
 function createShapeId(id) {
@@ -36225,7 +36129,7 @@ var instancePageStateMigrations = createRecordMigrationSequence({
     {
       id: instancePageStateVersions.RenamePropertiesAgain,
       up: (record) => {
-        var _a2, _b2;
+        var _a3, _b2;
         record.selectedShapeIds = record.selectedIds;
         delete record.selectedIds;
         record.hintingShapeIds = record.hintingIds;
@@ -36236,7 +36140,7 @@ var instancePageStateMigrations = createRecordMigrationSequence({
         delete record.hoveredId;
         record.editingShapeId = record.editingId;
         delete record.editingId;
-        record.croppingShapeId = (_b2 = (_a2 = record.croppingShapeId) != null ? _a2 : record.croppingId) != null ? _b2 : null;
+        record.croppingShapeId = (_b2 = (_a3 = record.croppingShapeId) != null ? _a3 : record.croppingId) != null ? _b2 : null;
         delete record.croppingId;
         record.focusedGroupId = record.focusLayerId;
         delete record.focusLayerId;
@@ -37017,8 +36921,7 @@ var EMBED_DEFINITIONS = [
     },
     fromEmbedUrl: (url) => {
       const urlObj = safeParseUrl(url);
-      if (!urlObj)
-        return;
+      if (!urlObj) return;
       const matches = urlObj.pathname.match(/^\/maps\/embed\/v1\/view\/?$/);
       if (matches && urlObj.searchParams.has("center") && urlObj.searchParams.get("zoom")) {
         const zoom = urlObj.searchParams.get("zoom");
@@ -37148,8 +37051,7 @@ var EMBED_DEFINITIONS = [
     isAspectRatioLocked: true,
     toEmbedUrl: (url) => {
       const urlObj = safeParseUrl(url);
-      if (!urlObj)
-        return;
+      if (!urlObj) return;
       const hostname = urlObj.hostname.replace(/^www./, "");
       if (hostname === "youtu.be") {
         const videoId = urlObj.pathname.split("/").filter(Boolean)[0];
@@ -37162,8 +37064,7 @@ var EMBED_DEFINITIONS = [
     },
     fromEmbedUrl: (url) => {
       const urlObj = safeParseUrl(url);
-      if (!urlObj)
-        return;
+      if (!urlObj) return;
       const hostname = urlObj.hostname.replace(/^www./, "");
       if (hostname === "youtube.com") {
         const matches = urlObj.pathname.match(/^\/embed\/([^/]+)\/?/);
@@ -37263,8 +37164,7 @@ var EMBED_DEFINITIONS = [
     toEmbedUrl: (url) => {
       const urlObj = safeParseUrl(url);
       if (urlObj && urlObj.pathname.match(/\/([^/]+)\/([^/]+)/)) {
-        if (!url.split("/").pop())
-          return;
+        if (!url.split("/").pop()) return;
         return url;
       }
       return;
@@ -37272,8 +37172,7 @@ var EMBED_DEFINITIONS = [
     fromEmbedUrl: (url) => {
       const urlObj = safeParseUrl(url);
       if (urlObj && urlObj.pathname.match(/\/([^/]+)\/([^/]+)/)) {
-        if (!url.split("/").pop())
-          return;
+        if (!url.split("/").pop()) return;
         return url;
       }
       return;
@@ -38205,10 +38104,10 @@ function createTLSchema({
   bindings = defaultBindingSchemas,
   migrations
 } = {}) {
-  var _a2;
+  var _a3;
   const stylesById = /* @__PURE__ */ new Map();
   for (const shape of objectMapValues(shapes)) {
-    for (const style of getShapePropKeysByStyle((_a2 = shape.props) != null ? _a2 : {}).keys()) {
+    for (const style of getShapePropKeysByStyle((_a3 = shape.props) != null ? _a3 : {}).keys()) {
       if (stylesById.has(style.id) && stylesById.get(style.id) !== style) {
         throw new Error(`Multiple StyleProp instances with the same id: ${style.id}`);
       }
@@ -38299,8 +38198,8 @@ var LANGUAGES = [
 
 // node_modules/@tldraw/tlschema/dist-esm/translations/translations.mjs
 function getDefaultTranslationLocale() {
-  var _a2;
-  const locales = typeof window !== "undefined" ? (_a2 = window.navigator.languages) != null ? _a2 : ["en"] : ["en"];
+  var _a3;
+  const locales = typeof window !== "undefined" ? (_a3 = window.navigator.languages) != null ? _a3 : ["en"] : ["en"];
   return _getDefaultTranslationLocale(locales);
 }
 function _getDefaultTranslationLocale(locales) {
@@ -38356,8 +38255,8 @@ function useStateTracking(name, render) {
       `useStateTracking(${name})`,
       // this is what `scheduler.execute()` will call
       () => {
-        var _a2;
-        return (_a2 = renderRef.current) == null ? void 0 : _a2.call(renderRef);
+        var _a3;
+        return (_a3 = renderRef.current) == null ? void 0 : _a3.call(renderRef);
       },
       // this is what will be invoked when @tldraw/state detects a change in an upstream reactive value
       {
@@ -38394,9 +38293,9 @@ var ProxyHandlers = {
    * @see https://github.com/facebook/react/blob/2d80a0cd690bb5650b6c8a6c079a87b5dc42bd15/packages/react-reconciler/src/ReactFiberHooks.old.js#L460
    */
   apply(Component2, thisArg, argumentsList) {
-    var _a2, _b2;
+    var _a3, _b2;
     return useStateTracking(
-      (_b2 = (_a2 = Component2.displayName) != null ? _a2 : Component2.name) != null ? _b2 : "tracked(???)",
+      (_b2 = (_a3 = Component2.displayName) != null ? _a3 : Component2.name) != null ? _b2 : "tracked(???)",
       () => Component2.apply(thisArg, argumentsList)
     );
   }
@@ -38493,11 +38392,11 @@ var import_react42 = __toESM(require_react(), 1);
 var import_classnames11 = __toESM(require_classnames(), 1);
 
 // node_modules/@tldraw/editor/dist-esm/version.mjs
-var version = "2.4.4";
+var version = "2.4.6";
 var publishDates = {
   major: "2024-06-28T10:56:07.893Z",
   minor: "2024-07-22T16:42:50.301Z",
-  patch: "2024-08-05T17:56:04.722Z"
+  patch: "2024-08-29T10:01:17.530Z"
 };
 
 // node_modules/@tldraw/editor/dist-esm/lib/components/ErrorBoundary.mjs
@@ -38513,8 +38412,8 @@ var ErrorBoundary = class extends React2.Component {
     return { error };
   }
   componentDidCatch(error) {
-    var _a2, _b2;
-    (_b2 = (_a2 = this.props).onError) == null ? void 0 : _b2.call(_a2, error);
+    var _a3, _b2;
+    (_b2 = (_a3 = this.props).onError) == null ? void 0 : _b2.call(_a3, error);
   }
   render() {
     const { error } = this.state;
@@ -38573,10 +38472,8 @@ var import_react9 = __toESM(require_react(), 1);
 function useTransform(ref, x, y, scale, rotate, additionalOffset) {
   (0, import_react9.useLayoutEffect)(() => {
     const elm = ref.current;
-    if (!elm)
-      return;
-    if (x === void 0)
-      return;
+    if (!elm) return;
+    if (x === void 0) return;
     let trans = `translate(${x}px, ${y}px)`;
     if (scale !== void 0) {
       trans += ` scale(${scale})`;
@@ -38615,7 +38512,7 @@ var EASINGS = {
 };
 
 // node_modules/@tldraw/editor/dist-esm/lib/primitives/Vec.mjs
-var Vec = class {
+var Vec = class _Vec {
   constructor(x = 0, y = 0, z = 1) {
     this.x = x;
     this.y = y;
@@ -38638,8 +38535,7 @@ var Vec = class {
     return this;
   }
   rot(r2) {
-    if (r2 === 0)
-      return this;
+    if (r2 === 0) return this;
     const { x, y } = this;
     const s = Math.sin(r2);
     const c2 = Math.cos(r2);
@@ -38648,8 +38544,7 @@ var Vec = class {
     return this;
   }
   rotWith(C, r2) {
-    if (r2 === 0)
-      return this;
+    if (r2 === 0) return this;
     const x = this.x - C.x;
     const y = this.y - C.y;
     const s = Math.sin(r2);
@@ -38660,7 +38555,7 @@ var Vec = class {
   }
   clone() {
     const { x, y, z } = this;
-    return new Vec(x, y, z);
+    return new _Vec(x, y, z);
   }
   sub(V2) {
     this.x -= V2.x;
@@ -38727,7 +38622,7 @@ var Vec = class {
     return this;
   }
   nudge(B, distance) {
-    const tan = Vec.Tan(B, this);
+    const tan = _Vec.Tan(B, this);
     return this.add(tan.mul(distance));
   }
   neg() {
@@ -38741,19 +38636,19 @@ var Vec = class {
     return this;
   }
   dpr(V2) {
-    return Vec.Dpr(this, V2);
+    return _Vec.Dpr(this, V2);
   }
   cpr(V2) {
-    return Vec.Cpr(this, V2);
+    return _Vec.Cpr(this, V2);
   }
   len2() {
-    return Vec.Len2(this);
+    return _Vec.Len2(this);
   }
   len() {
-    return Vec.Len(this);
+    return _Vec.Len(this);
   }
   pry(V2) {
-    return Vec.Pry(this, V2);
+    return _Vec.Pry(this, V2);
   }
   per() {
     const { x, y } = this;
@@ -38762,19 +38657,19 @@ var Vec = class {
     return this;
   }
   uni() {
-    return Vec.Uni(this);
+    return _Vec.Uni(this);
   }
   tan(V2) {
-    return Vec.Tan(this, V2);
+    return _Vec.Tan(this, V2);
   }
   dist(V2) {
-    return Vec.Dist(this, V2);
+    return _Vec.Dist(this, V2);
   }
   distanceToLineSegment(A, B) {
-    return Vec.DistanceToLineSegment(A, B, this);
+    return _Vec.DistanceToLineSegment(A, B, this);
   }
   slope(B) {
-    return Vec.Slope(this, B);
+    return _Vec.Slope(this, B);
   }
   snapToGrid(gridSize) {
     this.x = Math.round(this.x / gridSize) * gridSize;
@@ -38782,10 +38677,10 @@ var Vec = class {
     return this;
   }
   angle(B) {
-    return Vec.Angle(this, B);
+    return _Vec.Angle(this, B);
   }
   toAngle() {
-    return Vec.ToAngle(this);
+    return _Vec.ToAngle(this);
   }
   lrp(B, t3) {
     this.x = this.x + (B.x - this.x) * t3;
@@ -38793,10 +38688,10 @@ var Vec = class {
     return this;
   }
   equals(B) {
-    return Vec.Equals(this, B);
+    return _Vec.Equals(this, B);
   }
   equalsXY(x, y) {
-    return Vec.EqualsXY(this, x, y);
+    return _Vec.EqualsXY(this, x, y);
   }
   norm() {
     const l = this.len();
@@ -38805,58 +38700,58 @@ var Vec = class {
     return this;
   }
   toFixed() {
-    return Vec.ToFixed(this);
+    return _Vec.ToFixed(this);
   }
   toString() {
-    return Vec.ToString(Vec.ToFixed(this));
+    return _Vec.ToString(_Vec.ToFixed(this));
   }
   toJson() {
-    return Vec.ToJson(this);
+    return _Vec.ToJson(this);
   }
   toArray() {
-    return Vec.ToArray(this);
+    return _Vec.ToArray(this);
   }
   static Add(A, B) {
-    return new Vec(A.x + B.x, A.y + B.y);
+    return new _Vec(A.x + B.x, A.y + B.y);
   }
   static AddXY(A, x, y) {
-    return new Vec(A.x + x, A.y + y);
+    return new _Vec(A.x + x, A.y + y);
   }
   static Sub(A, B) {
-    return new Vec(A.x - B.x, A.y - B.y);
+    return new _Vec(A.x - B.x, A.y - B.y);
   }
   static SubXY(A, x, y) {
-    return new Vec(A.x - x, A.y - y);
+    return new _Vec(A.x - x, A.y - y);
   }
   static AddScalar(A, n2) {
-    return new Vec(A.x + n2, A.y + n2);
+    return new _Vec(A.x + n2, A.y + n2);
   }
   static SubScalar(A, n2) {
-    return new Vec(A.x - n2, A.y - n2);
+    return new _Vec(A.x - n2, A.y - n2);
   }
   static Div(A, t3) {
-    return new Vec(A.x / t3, A.y / t3);
+    return new _Vec(A.x / t3, A.y / t3);
   }
   static Mul(A, t3) {
-    return new Vec(A.x * t3, A.y * t3);
+    return new _Vec(A.x * t3, A.y * t3);
   }
   static DivV(A, B) {
-    return new Vec(A.x / B.x, A.y / B.y);
+    return new _Vec(A.x / B.x, A.y / B.y);
   }
   static MulV(A, B) {
-    return new Vec(A.x * B.x, A.y * B.y);
+    return new _Vec(A.x * B.x, A.y * B.y);
   }
   static Neg(A) {
-    return new Vec(-A.x, -A.y);
+    return new _Vec(-A.x, -A.y);
   }
   /**
    * Get the perpendicular vector to A.
    */
   static Per(A) {
-    return new Vec(A.y, -A.x);
+    return new _Vec(A.y, -A.x);
   }
   static Abs(A) {
-    return new Vec(Math.abs(A.x), Math.abs(A.y));
+    return new _Vec(Math.abs(A.x), Math.abs(A.y));
   }
   // Get the distance between two points.
   static Dist(A, B) {
@@ -38877,7 +38772,7 @@ var Vec = class {
     return A.x * B.x + A.y * B.y;
   }
   static Cross(A, V2) {
-    return new Vec(
+    return new _Vec(
       A.y * V2.z - A.z * V2.y,
       A.z * V2.x - A.x * V2.z
       // A.z = A.x * V.y - A.y * V.x
@@ -38899,40 +38794,40 @@ var Vec = class {
    * Get the projection of A onto B.
    */
   static Pry(A, B) {
-    return Vec.Dpr(A, B) / Vec.Len(B);
+    return _Vec.Dpr(A, B) / _Vec.Len(B);
   }
   /**
    * Get the unit vector of A.
    */
   static Uni(A) {
-    return Vec.Div(A, Vec.Len(A));
+    return _Vec.Div(A, _Vec.Len(A));
   }
   static Tan(A, B) {
-    return Vec.Uni(Vec.Sub(A, B));
+    return _Vec.Uni(_Vec.Sub(A, B));
   }
   static Min(A, B) {
-    return new Vec(Math.min(A.x, B.x), Math.min(A.y, B.y));
+    return new _Vec(Math.min(A.x, B.x), Math.min(A.y, B.y));
   }
   static Max(A, B) {
-    return new Vec(Math.max(A.x, B.x), Math.max(A.y, B.y));
+    return new _Vec(Math.max(A.x, B.x), Math.max(A.y, B.y));
   }
   static From({ x, y, z = 1 }) {
-    return new Vec(x, y, z);
+    return new _Vec(x, y, z);
   }
   static FromArray(v) {
-    return new Vec(v[0], v[1]);
+    return new _Vec(v[0], v[1]);
   }
   static Rot(A, r2 = 0) {
     const s = Math.sin(r2);
     const c2 = Math.cos(r2);
-    return new Vec(A.x * c2 - A.y * s, A.x * s + A.y * c2);
+    return new _Vec(A.x * c2 - A.y * s, A.x * s + A.y * c2);
   }
   static RotWith(A, C, r2) {
     const x = A.x - C.x;
     const y = A.y - C.y;
     const s = Math.sin(r2);
     const c2 = Math.cos(r2);
-    return new Vec(C.x + (x * c2 - y * s), C.y + (x * s + y * c2));
+    return new _Vec(C.x + (x * c2 - y * s), C.y + (x * s + y * c2));
   }
   /**
    * Get the nearest point on a line with a known unit vector that passes through point A
@@ -38946,44 +38841,36 @@ var Vec = class {
    * @param P - A point not on the line to test.
    */
   static NearestPointOnLineThroughPoint(A, u2, P) {
-    return Vec.Mul(u2, Vec.Sub(P, A).pry(u2)).add(A);
+    return _Vec.Mul(u2, _Vec.Sub(P, A).pry(u2)).add(A);
   }
   static NearestPointOnLineSegment(A, B, P, clamp6 = true) {
-    if (Vec.Equals(A, P))
-      return Vec.From(P);
-    if (Vec.Equals(B, P))
-      return Vec.From(P);
-    const u2 = Vec.Tan(B, A);
-    const C = Vec.Add(A, Vec.Mul(u2, Vec.Sub(P, A).pry(u2)));
+    if (_Vec.Equals(A, P)) return _Vec.From(P);
+    if (_Vec.Equals(B, P)) return _Vec.From(P);
+    const u2 = _Vec.Tan(B, A);
+    const C = _Vec.Add(A, _Vec.Mul(u2, _Vec.Sub(P, A).pry(u2)));
     if (clamp6) {
-      if (C.x < Math.min(A.x, B.x))
-        return Vec.Cast(A.x < B.x ? A : B);
-      if (C.x > Math.max(A.x, B.x))
-        return Vec.Cast(A.x > B.x ? A : B);
-      if (C.y < Math.min(A.y, B.y))
-        return Vec.Cast(A.y < B.y ? A : B);
-      if (C.y > Math.max(A.y, B.y))
-        return Vec.Cast(A.y > B.y ? A : B);
+      if (C.x < Math.min(A.x, B.x)) return _Vec.Cast(A.x < B.x ? A : B);
+      if (C.x > Math.max(A.x, B.x)) return _Vec.Cast(A.x > B.x ? A : B);
+      if (C.y < Math.min(A.y, B.y)) return _Vec.Cast(A.y < B.y ? A : B);
+      if (C.y > Math.max(A.y, B.y)) return _Vec.Cast(A.y > B.y ? A : B);
     }
     return C;
   }
   static DistanceToLineThroughPoint(A, u2, P) {
-    return Vec.Dist(P, Vec.NearestPointOnLineThroughPoint(A, u2, P));
+    return _Vec.Dist(P, _Vec.NearestPointOnLineThroughPoint(A, u2, P));
   }
   static DistanceToLineSegment(A, B, P, clamp6 = true) {
-    return Vec.Dist(P, Vec.NearestPointOnLineSegment(A, B, P, clamp6));
+    return _Vec.Dist(P, _Vec.NearestPointOnLineSegment(A, B, P, clamp6));
   }
   static Snap(A, step = 1) {
-    return new Vec(Math.round(A.x / step) * step, Math.round(A.y / step) * step);
+    return new _Vec(Math.round(A.x / step) * step, Math.round(A.y / step) * step);
   }
   static Cast(A) {
-    if (A instanceof Vec)
-      return A;
-    return Vec.From(A);
+    if (A instanceof _Vec) return A;
+    return _Vec.From(A);
   }
   static Slope(A, B) {
-    if (A.x === B.y)
-      return NaN;
+    if (A.x === B.y) return NaN;
     return (A.y - B.y) / (A.x - B.x);
   }
   static IsNaN(A) {
@@ -39000,10 +38887,10 @@ var Vec = class {
    * @returns The interpolated point.
    */
   static Lrp(A, B, t3) {
-    return Vec.Sub(B, A).mul(t3).add(A);
+    return _Vec.Sub(B, A).mul(t3).add(A);
   }
   static Med(A, B) {
-    return new Vec((A.x + B.x) / 2, (A.y + B.y) / 2);
+    return new _Vec((A.x + B.x) / 2, (A.y + B.y) / 2);
   }
   static Equals(A, B) {
     return Math.abs(A.x - B.x) < 1e-4 && Math.abs(A.y - B.y) < 1e-4;
@@ -39015,40 +38902,39 @@ var Vec = class {
     return (C.x - A.x) * (B.y - A.y) - (B.x - A.x) * (C.y - A.y) < 0;
   }
   static Rescale(A, n2) {
-    const l = Vec.Len(A);
-    return new Vec(n2 * A.x / l, n2 * A.y / l);
+    const l = _Vec.Len(A);
+    return new _Vec(n2 * A.x / l, n2 * A.y / l);
   }
   static ScaleWithOrigin(A, scale, origin) {
-    return Vec.Sub(A, origin).mul(scale).add(origin);
+    return _Vec.Sub(A, origin).mul(scale).add(origin);
   }
   static ToFixed(A) {
-    return new Vec(toFixed(A.x), toFixed(A.y));
+    return new _Vec(toFixed(A.x), toFixed(A.y));
   }
   static ToInt(A) {
-    var _a2;
-    return new Vec(
+    var _a3;
+    return new _Vec(
       parseInt(A.x.toFixed(0)),
       parseInt(A.y.toFixed(0)),
-      parseInt(((_a2 = A.z) != null ? _a2 : 0).toFixed(0))
+      parseInt(((_a3 = A.z) != null ? _a3 : 0).toFixed(0))
     );
   }
   static ToCss(A) {
     return `${A.x},${A.y}`;
   }
   static Nudge(A, B, distance) {
-    return Vec.Add(A, Vec.Tan(B, A).mul(distance));
+    return _Vec.Add(A, _Vec.Tan(B, A).mul(distance));
   }
   static ToString(A) {
     return `${A.x}, ${A.y}`;
   }
   static ToAngle(A) {
     let r2 = Math.atan2(A.y, A.x);
-    if (r2 < 0)
-      r2 += Math.PI * 2;
+    if (r2 < 0) r2 += Math.PI * 2;
     return r2;
   }
   static FromAngle(r2, length = 1) {
-    return new Vec(Math.cos(r2) * length, Math.sin(r2) * length);
+    return new _Vec(Math.cos(r2) * length, Math.sin(r2) * length);
   }
   static ToArray(A) {
     return [A.x, A.y, A.z];
@@ -39059,7 +38945,7 @@ var Vec = class {
   }
   static Average(arr) {
     const len = arr.length;
-    const avg = new Vec(0, 0);
+    const avg = new _Vec(0, 0);
     if (len === 0) {
       return avg;
     }
@@ -39070,9 +38956,9 @@ var Vec = class {
   }
   static Clamp(A, min3, max2) {
     if (max2 === void 0) {
-      return new Vec(Math.min(Math.max(A.x, min3)), Math.min(Math.max(A.y, min3)));
+      return new _Vec(Math.min(Math.max(A.x, min3)), Math.min(Math.max(A.y, min3)));
     }
-    return new Vec(Math.min(Math.max(A.x, min3), max2), Math.min(Math.max(A.y, min3), max2));
+    return new _Vec(Math.min(Math.max(A.x, min3), max2), Math.min(Math.max(A.y, min3), max2));
   }
   /**
    * Get an array of points (with simulated pressure) between two points.
@@ -39085,14 +38971,14 @@ var Vec = class {
     const results = [];
     for (let i = 0; i < steps; i++) {
       const t3 = EASINGS.easeInQuad(i / (steps - 1));
-      const point = Vec.Lrp(A, B, t3);
+      const point = _Vec.Lrp(A, B, t3);
       point.z = Math.min(1, 0.5 + Math.abs(0.5 - ease(t3)) * 0.65);
       results.push(point);
     }
     return results;
   }
   static SnapToGrid(A, gridSize = 8) {
-    return new Vec(Math.round(A.x / gridSize) * gridSize, Math.round(A.y / gridSize) * gridSize);
+    return new _Vec(Math.round(A.x / gridSize) * gridSize, Math.round(A.y / gridSize) * gridSize);
   }
 };
 var ease = (t3) => t3 < 0.5 ? 2 * t3 * t3 : -1 + (4 - 2 * t3) * t3;
@@ -39112,8 +38998,7 @@ function clamp2(n2, min3, max2) {
   return Math.max(min3, typeof max2 !== "undefined" ? Math.min(n2, max2) : n2);
 }
 function toPrecision(n2, precision = 1e10) {
-  if (!n2)
-    return 0;
+  if (!n2) return 0;
   return Math.round(n2 * precision) / precision;
 }
 function approximately(a, b, precision = 1e-6) {
@@ -39153,10 +39038,8 @@ function clampRadians(r2) {
 function snapAngle(r2, segments) {
   const seg = PI2 / segments;
   let ang = Math.floor((clampRadians(r2) + seg / 2) / seg) * seg % PI2;
-  if (ang < PI)
-    ang += PI2;
-  if (ang > PI)
-    ang -= PI2;
+  if (ang < PI) ang += PI2;
+  if (ang > PI) ang -= PI2;
   return ang;
 }
 function areAnglesCompatible(a, b) {
@@ -39184,14 +39067,10 @@ function getPolygonVertices(width, height, sides2) {
     const t3 = -HALF_PI + i * step;
     const x = cx + cx * Math.cos(t3);
     const y = cy + cy * Math.sin(t3);
-    if (x < minX)
-      minX = x;
-    if (y < minY)
-      minY = y;
-    if (x > maxX)
-      maxX = x;
-    if (y > maxY)
-      maxY = y;
+    if (x < minX) minX = x;
+    if (y < minY) minY = y;
+    if (x > maxX) maxX = x;
+    if (y > maxY) maxY = y;
     pointsOnPerimeter.push(new Vec(x, y));
   }
   const w = maxX - minX;
@@ -39227,11 +39106,9 @@ function pointInPolygon(A, points) {
   let b;
   for (let i = 0; i < points.length; i++) {
     a = points[i];
-    if (a.x === A.x && a.y === A.y)
-      return true;
+    if (a.x === A.x && a.y === A.y) return true;
     b = points[(i + 1) % points.length];
-    if (Vec.Dist(A, a) + Vec.Dist(A, b) === Vec.Dist(a, b))
-      return true;
+    if (Vec.Dist(A, a) + Vec.Dist(A, b) === Vec.Dist(a, b)) return true;
     if (a.y <= A.y) {
       if (b.y > A.y && cross(a, b, A) > 0) {
         windingNumber += 1;
@@ -39276,8 +39153,7 @@ function getPointInArcT(mAB, A, B, P) {
 }
 function getArcMeasure(A, B, sweepFlag, largeArcFlag) {
   const m = 2 * ((B - A) % PI2) % PI2 - (B - A) % PI2;
-  if (!largeArcFlag)
-    return m;
+  if (!largeArcFlag) return m;
   return (PI2 - Math.abs(m)) * (sweepFlag ? 1 : -1);
 }
 function centerOfCircleFromThreePoints(a, b, c2) {
@@ -39348,12 +39224,9 @@ var ZOOM_TO_FIT_PADDING = 128;
 
 // node_modules/@tldraw/editor/dist-esm/lib/utils/dom.mjs
 function loopToHtmlElement(elm) {
-  if (elm instanceof HTMLElement)
-    return elm;
-  if (elm.parentElement)
-    return loopToHtmlElement(elm.parentElement);
-  else
-    throw Error("Could not find a parent element of an HTML type!");
+  if (elm instanceof HTMLElement) return elm;
+  if (elm.parentElement) return loopToHtmlElement(elm.parentElement);
+  else throw Error("Could not find a parent element of an HTML type!");
 }
 function preventDefault(event) {
   event.preventDefault();
@@ -39362,11 +39235,11 @@ function preventDefault(event) {
   }
 }
 function setPointerCapture(element, event) {
-  var _a2;
+  var _a3;
   element.setPointerCapture(event.pointerId);
   if (debugFlags.logPointerCaptures.get()) {
     const trackingObj = pointerCaptureTrackingObject.get();
-    trackingObj.set(element, ((_a2 = trackingObj.get(element)) != null ? _a2 : 0) + 1);
+    trackingObj.set(element, ((_a3 = trackingObj.get(element)) != null ? _a3 : 0) + 1);
     console.warn("setPointerCapture called on element:", element, event);
   }
 }
@@ -39389,8 +39262,7 @@ function releasePointerCapture(element, event) {
 }
 var stopEventPropagation = (e2) => e2.stopPropagation();
 var setStyleProperty = (elm, property, value) => {
-  if (!elm)
-    return;
+  if (!elm) return;
   elm.style.setProperty(property, value);
 };
 
@@ -39420,8 +39292,7 @@ function useCanvasEvents() {
     function canvasEvents() {
       let lastX, lastY;
       function onPointerDown(e2) {
-        if (e2.isKilled)
-          return;
+        if (e2.isKilled) return;
         if (e2.button === RIGHT_MOUSE_BUTTON) {
           editor.dispatch({
             type: "pointer",
@@ -39431,8 +39302,7 @@ function useCanvasEvents() {
           });
           return;
         }
-        if (e2.button !== 0 && e2.button !== 1 && e2.button !== 5)
-          return;
+        if (e2.button !== 0 && e2.button !== 1 && e2.button !== 5) return;
         setPointerCapture(e2.currentTarget, e2);
         editor.dispatch({
           type: "pointer",
@@ -39442,10 +39312,8 @@ function useCanvasEvents() {
         });
       }
       function onPointerMove(e2) {
-        if (e2.isKilled)
-          return;
-        if (e2.clientX === lastX && e2.clientY === lastY)
-          return;
+        if (e2.isKilled) return;
+        if (e2.clientX === lastX && e2.clientY === lastY) return;
         lastX = e2.clientX;
         lastY = e2.clientY;
         editor.dispatch({
@@ -39456,10 +39324,8 @@ function useCanvasEvents() {
         });
       }
       function onPointerUp(e2) {
-        if (e2.isKilled)
-          return;
-        if (e2.button !== 0 && e2.button !== 1 && e2.button !== 2 && e2.button !== 5)
-          return;
+        if (e2.isKilled) return;
+        if (e2.button !== 0 && e2.button !== 1 && e2.button !== 2 && e2.button !== 5) return;
         lastX = e2.clientX;
         lastY = e2.clientY;
         releasePointerCapture(e2.currentTarget, e2);
@@ -39471,18 +39337,14 @@ function useCanvasEvents() {
         });
       }
       function onPointerEnter(e2) {
-        if (e2.isKilled)
-          return;
-        if (editor.getInstanceState().isPenMode && e2.pointerType !== "pen")
-          return;
+        if (e2.isKilled) return;
+        if (editor.getInstanceState().isPenMode && e2.pointerType !== "pen") return;
         const canHover = e2.pointerType === "mouse" || e2.pointerType === "pen";
         editor.updateInstanceState({ isHoveringCanvas: canHover ? true : null });
       }
       function onPointerLeave(e2) {
-        if (e2.isKilled)
-          return;
-        if (editor.getInstanceState().isPenMode && e2.pointerType !== "pen")
-          return;
+        if (e2.isKilled) return;
+        if (editor.getInstanceState().isPenMode && e2.pointerType !== "pen") return;
         const canHover = e2.pointerType === "mouse" || e2.pointerType === "pen";
         editor.updateInstanceState({ isHoveringCanvas: canHover ? false : null });
       }
@@ -39494,8 +39356,7 @@ function useCanvasEvents() {
       function onTouchEnd(e2) {
         ;
         e2.isKilled = true;
-        if (!(e2.target instanceof HTMLElement))
-          return;
+        if (!(e2.target instanceof HTMLElement)) return;
         if (e2.target.tagName !== "A" && e2.target.tagName !== "TEXTAREA" && // When in EditingShape state, we are actually clicking on a 'DIV'
         // not A/TEXTAREA element yet. So, to preserve cursor position
         // for edit mode on mobile we need to not preventDefault.
@@ -39508,10 +39369,9 @@ function useCanvasEvents() {
         preventDefault(e2);
       }
       async function onDrop(e2) {
-        var _a2, _b2;
+        var _a3, _b2;
         preventDefault(e2);
-        if (!((_b2 = (_a2 = e2.dataTransfer) == null ? void 0 : _a2.files) == null ? void 0 : _b2.length))
-          return;
+        if (!((_b2 = (_a3 = e2.dataTransfer) == null ? void 0 : _a3.files) == null ? void 0 : _b2.length)) return;
         const files = Array.from(e2.dataTransfer.files);
         await editor.putExternalContent({
           type: "files",
@@ -39549,8 +39409,7 @@ function useCoarsePointer() {
     let isCoarse = editor.getInstanceState().isCoarsePointer;
     const handlePointerDown = (e2) => {
       const isCoarseEvent = e2.pointerType !== "mouse";
-      if (isCoarse === isCoarseEvent)
-        return;
+      if (isCoarse === isCoarseEvent) return;
       isCoarse = isCoarseEvent;
       editor.updateInstanceState({ isCoarsePointer: isCoarseEvent });
     };
@@ -39559,8 +39418,7 @@ function useCoarsePointer() {
     const isForcedFinePointer = editor.environment.isFirefox && !editor.environment.isAndroid && !editor.environment.isIos;
     const handleMediaQueryChange = () => {
       const next = isForcedFinePointer ? false : mql.matches;
-      if (isCoarse !== next)
-        return;
+      if (isCoarse !== next) return;
       isCoarse = next;
       editor.updateInstanceState({ isCoarsePointer: next });
     };
@@ -39598,8 +39456,7 @@ function useDocumentEvents() {
   const container = useContainer();
   const isAppFocused = useValue("isFocused", () => editor.getIsFocused(), [editor]);
   (0, import_react14.useEffect)(() => {
-    if (typeof window === "undefined" || !("matchMedia" in window))
-      return;
+    if (typeof window === "undefined" || !("matchMedia" in window)) return;
     let remove2 = null;
     const updatePixelRatio = () => {
       if (remove2 != null) {
@@ -39632,15 +39489,13 @@ function useDocumentEvents() {
     };
   }, [editor]);
   (0, import_react14.useEffect)(() => {
-    if (!isAppFocused)
-      return;
+    if (!isAppFocused) return;
     const handleKeyDown = (e2) => {
       if (e2.altKey && // todo: When should we allow the alt key to be used? Perhaps states should declare which keys matter to them?
       (editor.isIn("zoom") || !editor.getPath().endsWith(".idle")) && !isFocusingInput()) {
         preventDefault(e2);
       }
-      if (e2.isKilled)
-        return;
+      if (e2.isKilled) return;
       e2.isKilled = true;
       switch (e2.key) {
         case "=":
@@ -39665,8 +39520,7 @@ function useDocumentEvents() {
           if (editor.getEditingShape() || editor.getSelectedShapeIds().length > 0) {
             e2.preventDefault();
           }
-          if (editor.getOpenMenus().length > 0)
-            return;
+          if (editor.getOpenMenus().length > 0) return;
           if (!editor.inputs.keys.has("Escape")) {
             editor.inputs.keys.add("Escape");
             editor.cancel();
@@ -39692,8 +39546,7 @@ function useDocumentEvents() {
       editor.dispatch(info);
     };
     const handleKeyUp = (e2) => {
-      if (e2.isKilled)
-        return;
+      if (e2.isKilled) return;
       e2.isKilled = true;
       if (isFocusingInput() || editor.getIsMenuOpen()) {
         return;
@@ -39713,12 +39566,12 @@ function useDocumentEvents() {
       editor.dispatch(info);
     };
     function handleTouchStart(e2) {
-      var _a2, _b2;
+      var _a3, _b2;
       if (container.contains(e2.target)) {
         const touchXPosition = e2.touches[0].pageX;
         const touchXRadius = e2.touches[0].radiusX || 0;
         if (touchXPosition - touchXRadius < 10 || touchXPosition + touchXRadius > editor.getViewportScreenBounds().width - 10) {
-          if (((_a2 = e2.target) == null ? void 0 : _a2.tagName) === "BUTTON") {
+          if (((_a3 = e2.target) == null ? void 0 : _a3.tagName) === "BUTTON") {
             ;
             (_b2 = e2.target) == null ? void 0 : _b2.click();
           }
@@ -39765,15 +39618,14 @@ function useFixSafariDoubleTapZoomPencilEvents(ref) {
   const editor = useEditor();
   (0, import_react15.useEffect)(() => {
     const elm = ref.current;
-    if (!elm)
-      return;
+    if (!elm) return;
     const handleEvent = (e2) => {
-      var _a2;
+      var _a3;
       if (e2 instanceof PointerEvent && e2.pointerType === "pen") {
         ;
         e2.isKilled = true;
         const { target } = e2;
-        if (IGNORED_TAGS.includes((_a2 = target.tagName) == null ? void 0 : _a2.toLocaleLowerCase()) || editor.isIn("select.editing_shape")) {
+        if (IGNORED_TAGS.includes((_a3 = target.tagName) == null ? void 0 : _a3.toLocaleLowerCase()) || editor.isIn("select.editing_shape")) {
           return;
         }
         preventDefault(e2);
@@ -39794,8 +39646,7 @@ function clamp3(v, min3, max2) {
 }
 var V = {
   toVector(v, fallback) {
-    if (v === void 0)
-      v = fallback;
+    if (v === void 0) v = fallback;
     return Array.isArray(v) ? v : [v, v];
   },
   add(v1, v2) {
@@ -39814,17 +39665,13 @@ var V = {
   }
 };
 function rubberband(distance, dimension, constant) {
-  if (dimension === 0 || Math.abs(dimension) === Infinity)
-    return Math.pow(distance, constant * 5);
+  if (dimension === 0 || Math.abs(dimension) === Infinity) return Math.pow(distance, constant * 5);
   return distance * dimension * constant / (dimension + constant * distance);
 }
 function rubberbandIfOutOfBounds(position, min3, max2, constant = 0.15) {
-  if (constant === 0)
-    return clamp3(position, min3, max2);
-  if (position < min3)
-    return -rubberband(min3 - position, max2 - min3, constant) + min3;
-  if (position > max2)
-    return +rubberband(position - max2, max2 - min3, constant) + max2;
+  if (constant === 0) return clamp3(position, min3, max2);
+  if (position < min3) return -rubberband(min3 - position, max2 - min3, constant) + min3;
+  if (position > max2) return +rubberband(position - max2, max2 - min3, constant) + max2;
   return position;
 }
 function computeRubberband(bounds, [Vx, Vy], [Rx, Ry]) {
@@ -39834,13 +39681,11 @@ function computeRubberband(bounds, [Vx, Vy], [Rx, Ry]) {
 
 // node_modules/@use-gesture/core/dist/actions-fe213e88.esm.js
 function _toPrimitive(input, hint) {
-  if (typeof input !== "object" || input === null)
-    return input;
+  if (typeof input !== "object" || input === null) return input;
   var prim = input[Symbol.toPrimitive];
   if (prim !== void 0) {
     var res = prim.call(input, hint || "default");
-    if (typeof res !== "object")
-      return res;
+    if (typeof res !== "object") return res;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (hint === "string" ? String : Number)(input);
@@ -39907,8 +39752,7 @@ var EVENT_TYPE_MAP = {
   }
 };
 function capitalize(string2) {
-  if (!string2)
-    return "";
+  if (!string2) return "";
   return string2[0].toUpperCase() + string2.slice(1);
 }
 var actionsWithoutCaptureSupported = ["enter", "leave"];
@@ -39924,12 +39768,10 @@ var pointerCaptureEvents = ["gotpointercapture", "lostpointercapture"];
 function parseProp(prop) {
   let eventKey = prop.substring(2).toLowerCase();
   const passive = !!~eventKey.indexOf("passive");
-  if (passive)
-    eventKey = eventKey.replace("passive", "");
+  if (passive) eventKey = eventKey.replace("passive", "");
   const captureKey = pointerCaptureEvents.includes(eventKey) ? "capturecapture" : "capture";
   const capture = !!~eventKey.indexOf(captureKey);
-  if (capture)
-    eventKey = eventKey.replace("capture", "");
+  if (capture) eventKey = eventKey.replace("capture", "");
   return {
     device: eventKey,
     capture,
@@ -39945,10 +39787,8 @@ function isTouch(event) {
   return "touches" in event;
 }
 function getPointerType(event) {
-  if (isTouch(event))
-    return "touch";
-  if ("pointerType" in event)
-    return event.pointerType;
+  if (isTouch(event)) return "touch";
+  if ("pointerType" in event) return event.pointerType;
   return "mouse";
 }
 function getCurrentTargetTouchList(event) {
@@ -40001,8 +39841,7 @@ function wheelValues(event) {
 }
 function getEventDetails(event) {
   const payload = {};
-  if ("buttons" in event)
-    payload.buttons = event.buttons;
+  if ("buttons" in event) payload.buttons = event.buttons;
   if ("shiftKey" in event) {
     const {
       shiftKey,
@@ -40029,10 +39868,8 @@ function call(v, ...args) {
 function noop2() {
 }
 function chain(...fns) {
-  if (fns.length === 0)
-    return noop2;
-  if (fns.length === 1)
-    return fns[0];
+  if (fns.length === 0) return noop2;
+  if (fns.length === 1) return fns[0];
   return function() {
     let result;
     for (const fn of fns) {
@@ -40054,8 +39891,7 @@ var Engine = class {
       this.state = {};
       this.computeValues([0, 0]);
       this.computeInitial();
-      if (this.init)
-        this.init();
+      if (this.init) this.init();
       this.reset();
     }
   }
@@ -40145,8 +39981,7 @@ var Engine = class {
     let dt = 0;
     if (event) {
       state.event = event;
-      if (config.preventDefault && event.cancelable)
-        state.event.preventDefault();
+      if (config.preventDefault && event.cancelable) state.event.preventDefault();
       state.type = event.type;
       shared.touches = this.ctrl.pointerIds.size || this.ctrl.touchIds.size;
       shared.locked = !!document.pointerLockElement;
@@ -40160,8 +39995,7 @@ var Engine = class {
       const _absoluteDelta = state._delta.map(Math.abs);
       V.addTo(state._distance, _absoluteDelta);
     }
-    if (this.axisIntent)
-      this.axisIntent(event);
+    if (this.axisIntent) this.axisIntent(event);
     const [_m0, _m1] = state._movement;
     const [t0, t1] = config.threshold;
     const {
@@ -40169,19 +40003,14 @@ var Engine = class {
       values
     } = state;
     if (config.hasCustomTransform) {
-      if (_step[0] === false)
-        _step[0] = Math.abs(_m0) >= t0 && values[0];
-      if (_step[1] === false)
-        _step[1] = Math.abs(_m1) >= t1 && values[1];
+      if (_step[0] === false) _step[0] = Math.abs(_m0) >= t0 && values[0];
+      if (_step[1] === false) _step[1] = Math.abs(_m1) >= t1 && values[1];
     } else {
-      if (_step[0] === false)
-        _step[0] = Math.abs(_m0) >= t0 && Math.sign(_m0) * t0;
-      if (_step[1] === false)
-        _step[1] = Math.abs(_m1) >= t1 && Math.sign(_m1) * t1;
+      if (_step[0] === false) _step[0] = Math.abs(_m0) >= t0 && Math.sign(_m0) * t0;
+      if (_step[1] === false) _step[1] = Math.abs(_m1) >= t1 && Math.sign(_m1) * t1;
     }
     state.intentional = _step[0] !== false || _step[1] !== false;
-    if (!state.intentional)
-      return;
+    if (!state.intentional) return;
     const movement = [0, 0];
     if (config.hasCustomTransform) {
       const [v0, v1] = values;
@@ -40191,8 +40020,7 @@ var Engine = class {
       movement[0] = _step[0] !== false ? _m0 - _step[0] : 0;
       movement[1] = _step[1] !== false ? _m1 - _step[1] : 0;
     }
-    if (this.restrictToAxis && !state._blocked)
-      this.restrictToAxis(movement);
+    if (this.restrictToAxis && !state._blocked) this.restrictToAxis(movement);
     const previousOffset = state.offset;
     const gestureIsActive = state._active && !state._blocked || state.active;
     if (gestureIsActive) {
@@ -40201,10 +40029,8 @@ var Engine = class {
       state.active = shared[this.ingKey] = state._active;
       if (event) {
         if (state.first) {
-          if ("bounds" in config)
-            state._bounds = call(config.bounds, state);
-          if (this.setup)
-            this.setup();
+          if ("bounds" in config) state._bounds = call(config.bounds, state);
+          if (this.setup) this.setup();
         }
         state.movement = movement;
         this.computeOffset();
@@ -40235,15 +40061,12 @@ var Engine = class {
     const state = this.state;
     const shared = this.shared;
     const config = this.config;
-    if (!state._active)
-      this.clean();
-    if ((state._blocked || !state.intentional) && !state._force && !config.triggerAllEvents)
-      return;
+    if (!state._active) this.clean();
+    if ((state._blocked || !state.intentional) && !state._force && !config.triggerAllEvents) return;
     const memo28 = this.handler(_objectSpread2(_objectSpread2(_objectSpread2({}, shared), state), {}, {
       [this.aliasKey]: state.values
     }));
-    if (memo28 !== void 0)
-      state.memo = memo28;
+    if (memo28 !== void 0) state.memo = memo28;
   }
   clean() {
     this.eventStore.clean();
@@ -40328,10 +40151,8 @@ var commonConfigResolver = {
     }
   },
   from(value) {
-    if (typeof value === "function")
-      return value;
-    if (value != null)
-      return V.toVector(value);
+    if (typeof value === "function") return value;
+    if (value != null) return V.toVector(value);
   },
   transform(value, _k, config) {
     const transform = value || config.shared.transform;
@@ -40380,8 +40201,7 @@ var coordinatesConfigResolver = _objectSpread2(_objectSpread2({}, commonConfigRe
     axis
   }) {
     this.lockDirection = axis === "lock";
-    if (!this.lockDirection)
-      return axis;
+    if (!this.lockDirection) return axis;
   },
   axisThreshold(value = DEFAULT_AXIS_THRESHOLD) {
     return value;
@@ -40453,22 +40273,17 @@ var dragConfigResolver = _objectSpread2(_objectSpread2({}, coordinatesConfigReso
     } = {}
   }) {
     this.pointerLock = lock && SUPPORT.pointerLock;
-    if (SUPPORT.touch && touch)
-      return "touch";
-    if (this.pointerLock)
-      return "mouse";
-    if (SUPPORT.pointer && !mouse)
-      return "pointer";
-    if (SUPPORT.touch)
-      return "touch";
+    if (SUPPORT.touch && touch) return "touch";
+    if (this.pointerLock) return "mouse";
+    if (SUPPORT.pointer && !mouse) return "pointer";
+    if (SUPPORT.touch) return "touch";
     return "mouse";
   },
   preventScrollAxis(value, _k, {
     preventScroll
   }) {
     this.preventScrollDelay = typeof preventScroll === "number" ? preventScroll : preventScroll || preventScroll === void 0 && value ? DEFAULT_PREVENT_SCROLL_DELAY : void 0;
-    if (!SUPPORT.touchscreen || preventScroll === false)
-      return void 0;
+    if (!SUPPORT.touchscreen || preventScroll === false) return void 0;
     return value ? value : preventScroll !== void 0 ? "y" : void 0;
   },
   pointerCapture(_v, _k, {
@@ -40514,8 +40329,7 @@ var dragConfigResolver = _objectSpread2(_objectSpread2({}, coordinatesConfigReso
     }
   },
   axisThreshold(value) {
-    if (!value)
-      return DEFAULT_DRAG_AXIS_THRESHOLD;
+    if (!value) return DEFAULT_DRAG_AXIS_THRESHOLD;
     return _objectSpread2(_objectSpread2({}, DEFAULT_DRAG_AXIS_THRESHOLD), value);
   },
   keyboardDisplacement(value = DEFAULT_KEYBOARD_DISPLACEMENT) {
@@ -40612,24 +40426,19 @@ var PinchEngine = class extends Engine {
     const [_m0, _m1] = state._movement;
     if (!state.axis) {
       const axisMovementDifference = Math.abs(_m0) * SCALE_ANGLE_RATIO_INTENT_DEG - Math.abs(_m1);
-      if (axisMovementDifference < 0)
-        state.axis = "angle";
-      else if (axisMovementDifference > 0)
-        state.axis = "scale";
+      if (axisMovementDifference < 0) state.axis = "angle";
+      else if (axisMovementDifference > 0) state.axis = "scale";
     }
   }
   restrictToAxis(v) {
     if (this.config.lockDirection) {
-      if (this.state.axis === "scale")
-        v[1] = 0;
-      else if (this.state.axis === "angle")
-        v[0] = 0;
+      if (this.state.axis === "scale") v[1] = 0;
+      else if (this.state.axis === "angle") v[0] = 0;
     }
   }
   cancel() {
     const state = this.state;
-    if (state.canceled)
-      return;
+    if (state.canceled) return;
     setTimeout(() => {
       state.canceled = true;
       state._active = false;
@@ -40642,39 +40451,32 @@ var PinchEngine = class extends Engine {
     const state = this.state;
     const ctrlTouchIds = this.ctrl.touchIds;
     if (state._active) {
-      if (state._touchIds.every((id) => ctrlTouchIds.has(id)))
-        return;
+      if (state._touchIds.every((id) => ctrlTouchIds.has(id))) return;
     }
-    if (ctrlTouchIds.size < 2)
-      return;
+    if (ctrlTouchIds.size < 2) return;
     this.start(event);
     state._touchIds = Array.from(ctrlTouchIds).slice(0, 2);
     const payload = touchDistanceAngle(event, state._touchIds);
-    if (!payload)
-      return;
+    if (!payload) return;
     this.pinchStart(event, payload);
   }
   pointerStart(event) {
-    if (event.buttons != null && event.buttons % 2 !== 1)
-      return;
+    if (event.buttons != null && event.buttons % 2 !== 1) return;
     this.ctrl.setEventIds(event);
     event.target.setPointerCapture(event.pointerId);
     const state = this.state;
     const _pointerEvents = state._pointerEvents;
     const ctrlPointerIds = this.ctrl.pointerIds;
     if (state._active) {
-      if (Array.from(_pointerEvents.keys()).every((id) => ctrlPointerIds.has(id)))
-        return;
+      if (Array.from(_pointerEvents.keys()).every((id) => ctrlPointerIds.has(id))) return;
     }
     if (_pointerEvents.size < 2) {
       _pointerEvents.set(event.pointerId, event);
     }
-    if (state._pointerEvents.size < 2)
-      return;
+    if (state._pointerEvents.size < 2) return;
     this.start(event);
     const payload = distanceAngle(...Array.from(_pointerEvents.values()));
-    if (!payload)
-      return;
+    if (!payload) return;
     this.pinchStart(event, payload);
   }
   pinchStart(event, payload) {
@@ -40686,11 +40488,9 @@ var PinchEngine = class extends Engine {
     this.emit();
   }
   touchMove(event) {
-    if (!this.state._active)
-      return;
+    if (!this.state._active) return;
     const payload = touchDistanceAngle(event, this.state._touchIds);
-    if (!payload)
-      return;
+    if (!payload) return;
     this.pinchMove(event, payload);
   }
   pointerMove(event) {
@@ -40698,11 +40498,9 @@ var PinchEngine = class extends Engine {
     if (_pointerEvents.has(event.pointerId)) {
       _pointerEvents.set(event.pointerId, event);
     }
-    if (!this.state._active)
-      return;
+    if (!this.state._active) return;
     const payload = distanceAngle(...Array.from(_pointerEvents.values()));
-    if (!payload)
-      return;
+    if (!payload) return;
     this.pinchMove(event, payload);
   }
   pinchMove(event, payload) {
@@ -40710,8 +40508,7 @@ var PinchEngine = class extends Engine {
     const prev_a = state._values[1];
     const delta_a = payload.angle - prev_a;
     let delta_turns = 0;
-    if (Math.abs(delta_a) > 270)
-      delta_turns += Math.sign(delta_a);
+    if (Math.abs(delta_a) > 270) delta_turns += Math.sign(delta_a);
     this.computeValues([payload.distance, payload.angle - 360 * delta_turns]);
     state.origin = payload.origin;
     state.turns = delta_turns;
@@ -40721,8 +40518,7 @@ var PinchEngine = class extends Engine {
   }
   touchEnd(event) {
     this.ctrl.setEventIds(event);
-    if (!this.state._active)
-      return;
+    if (!this.state._active) return;
     if (this.state._touchIds.some((id) => !this.ctrl.touchIds.has(id))) {
       this.state._active = false;
       this.compute(event);
@@ -40739,8 +40535,7 @@ var PinchEngine = class extends Engine {
     if (state._pointerEvents.has(event.pointerId)) {
       state._pointerEvents.delete(event.pointerId);
     }
-    if (!state._active)
-      return;
+    if (!state._active) return;
     if (state._pointerEvents.size < 2) {
       state._active = false;
       this.compute(event);
@@ -40748,11 +40543,9 @@ var PinchEngine = class extends Engine {
     }
   }
   gestureStart(event) {
-    if (event.cancelable)
-      event.preventDefault();
+    if (event.cancelable) event.preventDefault();
     const state = this.state;
-    if (state._active)
-      return;
+    if (state._active) return;
     this.start(event);
     this.computeValues([event.scale, event.rotation]);
     state.origin = [event.clientX, event.clientY];
@@ -40760,10 +40553,8 @@ var PinchEngine = class extends Engine {
     this.emit();
   }
   gestureMove(event) {
-    if (event.cancelable)
-      event.preventDefault();
-    if (!this.state._active)
-      return;
+    if (event.cancelable) event.preventDefault();
+    if (!this.state._active) return;
     const state = this.state;
     this.computeValues([event.scale, event.rotation]);
     state.origin = [event.clientX, event.clientY];
@@ -40774,20 +40565,16 @@ var PinchEngine = class extends Engine {
     this.emit();
   }
   gestureEnd(event) {
-    if (!this.state._active)
-      return;
+    if (!this.state._active) return;
     this.state._active = false;
     this.compute(event);
     this.emit();
   }
   wheel(event) {
     const modifierKey = this.config.modifierKey;
-    if (modifierKey && (Array.isArray(modifierKey) ? !modifierKey.find((k) => event[k]) : !event[modifierKey]))
-      return;
-    if (!this.state._active)
-      this.wheelStart(event);
-    else
-      this.wheelChange(event);
+    if (modifierKey && (Array.isArray(modifierKey) ? !modifierKey.find((k) => event[k]) : !event[modifierKey])) return;
+    if (!this.state._active) this.wheelStart(event);
+    else this.wheelChange(event);
     this.timeoutStore.add("wheelEnd", this.wheelEnd.bind(this));
   }
   wheelStart(event) {
@@ -40815,8 +40602,7 @@ This message will only appear in development mode.`);
     this.emit();
   }
   wheelEnd() {
-    if (!this.state._active)
-      return;
+    if (!this.state._active) return;
     this.state._active = false;
     this.compute();
     this.emit();
@@ -40845,15 +40631,11 @@ var pinchConfigResolver = _objectSpread2(_objectSpread2({}, commonConfigResolver
     } = {}
   }) {
     const sharedConfig = shared;
-    if (sharedConfig.target && !SUPPORT.touch && SUPPORT.gesture)
-      return "gesture";
-    if (SUPPORT.touch && touch)
-      return "touch";
+    if (sharedConfig.target && !SUPPORT.touch && SUPPORT.gesture) return "gesture";
+    if (SUPPORT.touch && touch) return "touch";
     if (SUPPORT.touchscreen) {
-      if (SUPPORT.pointer)
-        return "pointer";
-      if (SUPPORT.touch)
-        return "touch";
+      if (SUPPORT.pointer) return "pointer";
+      if (SUPPORT.touch) return "touch";
     }
   },
   bounds(_v, _k, {
@@ -40874,8 +40656,7 @@ var pinchConfigResolver = _objectSpread2(_objectSpread2({}, commonConfigResolver
       });
       return [A.min, A.max];
     };
-    if (typeof scaleBounds !== "function" && typeof angleBounds !== "function")
-      return [_scaleBounds(), _angleBounds()];
+    if (typeof scaleBounds !== "function" && typeof angleBounds !== "function") return [_scaleBounds(), _angleBounds()];
     return (state) => [_scaleBounds(state), _angleBounds(state)];
   },
   threshold(value, _k, config) {
@@ -40884,8 +40665,7 @@ var pinchConfigResolver = _objectSpread2(_objectSpread2({}, commonConfigResolver
     return threshold;
   },
   modifierKey(value) {
-    if (value === void 0)
-      return "ctrlKey";
+    if (value === void 0) return "ctrlKey";
     return value;
   },
   pinchOnWheel(value = true) {
@@ -40901,8 +40681,7 @@ var WheelEngine = class extends CoordinatesEngine {
     _defineProperty(this, "ingKey", "wheeling");
   }
   wheel(event) {
-    if (!this.state._active)
-      this.start(event);
+    if (!this.state._active) this.start(event);
     this.wheelChange(event);
     this.timeoutStore.add("wheelEnd", this.wheelEnd.bind(this));
   }
@@ -40915,8 +40694,7 @@ var WheelEngine = class extends CoordinatesEngine {
     this.emit();
   }
   wheelEnd() {
-    if (!this.state._active)
-      return;
+    if (!this.state._active) return;
     this.state._active = false;
     this.compute();
     this.emit();
@@ -40951,32 +40729,27 @@ var import_react16 = __toESM(require_react());
 
 // node_modules/@use-gesture/core/dist/use-gesture-core.esm.js
 function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null)
-    return {};
+  if (source == null) return {};
   var target = {};
   var sourceKeys = Object.keys(source);
   var key, i;
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0)
-      continue;
+    if (excluded.indexOf(key) >= 0) continue;
     target[key] = source[key];
   }
   return target;
 }
 function _objectWithoutProperties(source, excluded) {
-  if (source == null)
-    return {};
+  if (source == null) return {};
   var target = _objectWithoutPropertiesLoose(source, excluded);
   var key, i;
   if (Object.getOwnPropertySymbols) {
     var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
     for (i = 0; i < sourceSymbolKeys.length; i++) {
       key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0)
-        continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key))
-        continue;
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
       target[key] = source[key];
     }
   }
@@ -41016,8 +40789,7 @@ function resolveWith(config = {}, resolvers) {
       case "function":
         if (true) {
           const r2 = resolver.call(result, config[key], key, config);
-          if (!Number.isNaN(r2))
-            result[key] = r2;
+          if (!Number.isNaN(r2)) result[key] = r2;
         } else {
           result[key] = resolver.call(result, config[key], key, config);
         }
@@ -41026,8 +40798,7 @@ function resolveWith(config = {}, resolvers) {
         result[key] = resolveWith(config[key], resolver);
         break;
       case "boolean":
-        if (resolver)
-          result[key] = config[key];
+        if (resolver) result[key] = config[key];
         break;
     }
   }
@@ -41106,8 +40877,7 @@ var TimeoutStore = class {
   }
   remove(key) {
     const timeout = this._timeouts.get(key);
-    if (timeout)
-      window.clearTimeout(timeout);
+    if (timeout) window.clearTimeout(timeout);
   }
   clean() {
     this._timeouts.forEach((timeout) => void window.clearTimeout(timeout));
@@ -41139,10 +40909,8 @@ var Controller = class {
       this.touchIds = new Set(touchIds(event));
       return this.touchIds;
     } else if ("pointerId" in event) {
-      if (event.type === "pointerup" || event.type === "pointercancel")
-        this.pointerIds.delete(event.pointerId);
-      else if (event.type === "pointerdown")
-        this.pointerIds.add(event.pointerId);
+      if (event.type === "pointerup" || event.type === "pointercancel") this.pointerIds.delete(event.pointerId);
+      else if (event.type === "pointerdown") this.pointerIds.add(event.pointerId);
       return this.pointerIds;
     }
   }
@@ -41161,8 +40929,7 @@ var Controller = class {
     }
   }
   effect() {
-    if (this.config.shared.target)
-      this.bind();
+    if (this.config.shared.target) this.bind();
     return () => this._targetEventStore.clean();
   }
   bind(...args) {
@@ -41171,8 +40938,7 @@ var Controller = class {
     let target;
     if (sharedConfig.target) {
       target = sharedConfig.target();
-      if (!target)
-        return;
+      if (!target) return;
     }
     if (sharedConfig.enabled) {
       for (const gestureKey of this.gestures) {
@@ -41194,8 +40960,7 @@ var Controller = class {
     for (const handlerProp in props) {
       props[handlerProp] = chain(...props[handlerProp]);
     }
-    if (!target)
-      return props;
+    if (!target) return props;
     for (const handlerProp in props) {
       const {
         device,
@@ -41215,26 +40980,19 @@ function setupGesture(ctrl, gestureKey) {
   ctrl.gestureTimeoutStores[gestureKey] = new TimeoutStore();
 }
 function resolveGestures(ctrl, internalHandlers) {
-  if (internalHandlers.drag)
-    setupGesture(ctrl, "drag");
-  if (internalHandlers.wheel)
-    setupGesture(ctrl, "wheel");
-  if (internalHandlers.scroll)
-    setupGesture(ctrl, "scroll");
-  if (internalHandlers.move)
-    setupGesture(ctrl, "move");
-  if (internalHandlers.pinch)
-    setupGesture(ctrl, "pinch");
-  if (internalHandlers.hover)
-    setupGesture(ctrl, "hover");
+  if (internalHandlers.drag) setupGesture(ctrl, "drag");
+  if (internalHandlers.wheel) setupGesture(ctrl, "wheel");
+  if (internalHandlers.scroll) setupGesture(ctrl, "scroll");
+  if (internalHandlers.move) setupGesture(ctrl, "move");
+  if (internalHandlers.pinch) setupGesture(ctrl, "pinch");
+  if (internalHandlers.hover) setupGesture(ctrl, "hover");
 }
 var bindToProps = (props, eventOptions, withPassiveOption) => (device, action, handler, options = {}, isNative = false) => {
   var _options$capture, _options$passive;
   const capture = (_options$capture = options.capture) !== null && _options$capture !== void 0 ? _options$capture : eventOptions.capture;
   const passive = (_options$passive = options.passive) !== null && _options$passive !== void 0 ? _options$passive : eventOptions.passive;
   let handlerProp = isNative ? device : toHandlerProp(device, action, capture);
-  if (withPassiveOption && passive)
-    handlerProp += "Passive";
+  if (withPassiveOption && passive) handlerProp += "Passive";
   props[handlerProp] = props[handlerProp] || [];
   props[handlerProp].push(handler);
 };
@@ -41254,8 +41012,7 @@ function sortHandlers(_handlers2) {
   return [handlers, native, actions];
 }
 function registerGesture(actions, handlers, handlerKey, key, internalHandlers, config) {
-  if (!actions.has(handlerKey))
-    return;
+  if (!actions.has(handlerKey)) return;
   if (!EngineMap.has(key)) {
     if (true) {
       console.warn(`[@use-gesture]: You've created a custom handler that that uses the \`${key}\` gesture but isn't properly configured.
@@ -41268,12 +41025,9 @@ Please add \`${key}Action\` when creating your handler.`);
   const endKey = handlerKey + "End";
   const fn = (state) => {
     let memo28 = void 0;
-    if (state.first && startKey in handlers)
-      handlers[startKey](state);
-    if (handlerKey in handlers)
-      memo28 = handlers[handlerKey](state);
-    if (state.last && endKey in handlers)
-      handlers[endKey](state);
+    if (state.first && startKey in handlers) handlers[startKey](state);
+    if (handlerKey in handlers) memo28 = handlers[handlerKey](state);
+    if (state.last && endKey in handlers) handlers[endKey](state);
     return memo28;
   };
   internalHandlers[key] = fn;
@@ -41387,8 +41141,7 @@ function useGestureEvents(ref) {
       preventDefault(event);
       stopEventPropagation(event);
       const delta = normalizeWheel(event);
-      if (delta.x === 0 && delta.y === 0)
-        return;
+      if (delta.x === 0 && delta.y === 0) return;
       const info = {
         type: "wheel",
         name: "wheel",
@@ -41410,10 +41163,8 @@ function useGestureEvents(ref) {
       const elm = ref.current;
       pinchState = "not sure";
       const { event, origin, da } = gesture;
-      if (event instanceof WheelEvent)
-        return;
-      if (!(event.target === elm || (elm == null ? void 0 : elm.contains(event.target))))
-        return;
+      if (event instanceof WheelEvent) return;
+      if (!(event.target === elm || (elm == null ? void 0 : elm.contains(event.target)))) return;
       prevPointBetweenFingers.x = origin[0];
       prevPointBetweenFingers.y = origin[1];
       initPointBetweenFingers.x = origin[0];
@@ -41459,10 +41210,8 @@ function useGestureEvents(ref) {
     const onPinch = (gesture) => {
       const elm = ref.current;
       const { event, origin, offset: offset4, da } = gesture;
-      if (event instanceof WheelEvent)
-        return;
-      if (!(event.target === elm || (elm == null ? void 0 : elm.contains(event.target))))
-        return;
+      if (event instanceof WheelEvent) return;
+      if (!(event.target === elm || (elm == null ? void 0 : elm.contains(event.target)))) return;
       const isSafariTrackpadPinch = gesture.type === "gesturechange" || gesture.type === "gestureend";
       currDistanceBetweenFingers = da[0];
       const dx = origin[0] - prevPointBetweenFingers.x;
@@ -41501,10 +41250,8 @@ function useGestureEvents(ref) {
     const onPinchEnd = (gesture) => {
       const elm = ref.current;
       const { event, origin, offset: offset4 } = gesture;
-      if (event instanceof WheelEvent)
-        return;
-      if (!(event.target === elm || (elm == null ? void 0 : elm.contains(event.target))))
-        return;
+      if (event instanceof WheelEvent) return;
+      if (!(event.target === elm || (elm == null ? void 0 : elm.contains(event.target)))) return;
       const scale = offset4[0];
       pinchState = "not sure";
       editor.timers.requestAnimationFrame(() => {
@@ -41550,13 +41297,11 @@ function useHandleEvents(id, handleId) {
   const editor = useEditor();
   return React6.useMemo(() => {
     const onPointerDown = (e2) => {
-      if (e2.isKilled)
-        return;
+      if (e2.isKilled) return;
       const target = loopToHtmlElement(e2.currentTarget);
       setPointerCapture(target, e2);
       const { shape, handle } = getHandle(editor, id, handleId);
-      if (!handle)
-        return;
+      if (!handle) return;
       editor.dispatch({
         type: "pointer",
         target: "handle",
@@ -41568,15 +41313,12 @@ function useHandleEvents(id, handleId) {
     };
     let lastX, lastY;
     const onPointerMove = (e2) => {
-      if (e2.isKilled)
-        return;
-      if (e2.clientX === lastX && e2.clientY === lastY)
-        return;
+      if (e2.isKilled) return;
+      if (e2.clientX === lastX && e2.clientY === lastY) return;
       lastX = e2.clientX;
       lastY = e2.clientY;
       const { shape, handle } = getHandle(editor, id, handleId);
-      if (!handle)
-        return;
+      if (!handle) return;
       editor.dispatch({
         type: "pointer",
         target: "handle",
@@ -41587,13 +41329,11 @@ function useHandleEvents(id, handleId) {
       });
     };
     const onPointerUp = (e2) => {
-      if (e2.isKilled)
-        return;
+      if (e2.isKilled) return;
       const target = loopToHtmlElement(e2.currentTarget);
       releasePointerCapture(target, e2);
       const { shape, handle } = getHandle(editor, id, handleId);
-      if (!handle)
-        return;
+      if (!handle) return;
       editor.dispatch({
         type: "pointer",
         target: "handle",
@@ -41615,7 +41355,7 @@ function useHandleEvents(id, handleId) {
 var import_react18 = __toESM(require_react(), 1);
 
 // node_modules/@tldraw/editor/dist-esm/lib/primitives/Box.mjs
-var _Box = class {
+var _Box = class _Box {
   constructor(x = 0, y = 0, w = 0, h = 0) {
     __publicField(this, "x", 0);
     __publicField(this, "y", 0);
@@ -41897,8 +41637,7 @@ var _Box = class {
     return new _Box(center.x - size4.x / 2, center.y - size4.y / 2, size4.x, size4.y);
   }
   static FromPoints(points) {
-    if (points.length === 0)
-      return new _Box();
+    if (points.length === 0) return new _Box();
     let minX = Infinity;
     let minY = Infinity;
     let maxX = -Infinity;
@@ -41967,31 +41706,23 @@ var _Box = class {
       const isTall = aspectRatio < bw / bh;
       switch (handle) {
         case "top_left": {
-          if (isTall)
-            b0y = b1y + tw;
-          else
-            b0x = b1x + th;
+          if (isTall) b0y = b1y + tw;
+          else b0x = b1x + th;
           break;
         }
         case "top_right": {
-          if (isTall)
-            b0y = b1y + tw;
-          else
-            b1x = b0x - th;
+          if (isTall) b0y = b1y + tw;
+          else b1x = b0x - th;
           break;
         }
         case "bottom_right": {
-          if (isTall)
-            b1y = b0y - tw;
-          else
-            b1x = b0x - th;
+          if (isTall) b1y = b0y - tw;
+          else b1x = b0x - th;
           break;
         }
         case "bottom_left": {
-          if (isTall)
-            b1y = b0y - tw;
-          else
-            b0x = b1x + th;
+          if (isTall) b1y = b0y - tw;
+          else b0x = b1x + th;
           break;
         }
         case "bottom":
@@ -42044,20 +41775,19 @@ var _Box = class {
     return new _Box(other.x, other.y, Math.max(1, other.w), Math.max(1, other.h));
   }
 };
-var Box = _Box;
-__publicField(Box, "Collides", (A, B) => {
+__publicField(_Box, "Collides", (A, B) => {
   return !(A.maxX < B.minX || A.minX > B.maxX || A.maxY < B.minY || A.minY > B.maxY);
 });
-__publicField(Box, "Contains", (A, B) => {
+__publicField(_Box, "Contains", (A, B) => {
   return A.minX < B.minX && A.minY < B.minY && A.maxY > B.maxY && A.maxX > B.maxX;
 });
-__publicField(Box, "Includes", (A, B) => {
+__publicField(_Box, "Includes", (A, B) => {
   return _Box.Collides(A, B) || _Box.Contains(A, B);
 });
-__publicField(Box, "ContainsPoint", (A, B, margin = 0) => {
+__publicField(_Box, "ContainsPoint", (A, B, margin = 0) => {
   return !(B.x < A.minX - margin || B.y < A.minY - margin || B.x > A.maxX + margin || B.y > A.maxY + margin);
 });
-__publicField(Box, "Common", (boxes) => {
+__publicField(_Box, "Common", (boxes) => {
   let minX = Infinity;
   let minY = Infinity;
   let maxX = -Infinity;
@@ -42071,7 +41801,7 @@ __publicField(Box, "Common", (boxes) => {
   }
   return new _Box(minX, minY, maxX - minX, maxY - minY);
 });
-__publicField(Box, "Sides", (A, inset = 0) => {
+__publicField(_Box, "Sides", (A, inset = 0) => {
   const { corners } = A;
   if (inset) {
   }
@@ -42082,6 +41812,7 @@ __publicField(Box, "Sides", (A, inset = 0) => {
     [corners[3], corners[0]]
   ];
 });
+var Box = _Box;
 function flipSelectionHandleY(handle) {
   switch (handle) {
     case "top":
@@ -42129,8 +41860,7 @@ function useScreenBounds(ref) {
     let prevBounds = new Box();
     function updateScreenBounds() {
       const container2 = ref.current;
-      if (!container2)
-        return null;
+      if (!container2) return null;
       const rect = container2.getBoundingClientRect();
       const next = new Box(
         rect.left || rect.x,
@@ -42138,8 +41868,7 @@ function useScreenBounds(ref) {
         Math.max(rect.width, 1),
         Math.max(rect.height, 1)
       );
-      if (prevBounds.equals(next))
-        return;
+      if (prevBounds.equals(next)) return;
       editor.updateViewportScreenBounds(next);
       prevBounds = next;
     }
@@ -42150,8 +41879,7 @@ function useScreenBounds(ref) {
     const interval = editor.timers.setInterval(updateBounds, 1e3);
     window.addEventListener("resize", updateBounds);
     const resizeObserver = new ResizeObserver((entries) => {
-      if (!entries[0].contentRect)
-        return;
+      if (!entries[0].contentRect) return;
       updateBounds();
     });
     const container = ref.current;
@@ -42187,7 +41915,7 @@ var getNearestScrollableContainer = (element) => {
 };
 
 // node_modules/@tldraw/editor/dist-esm/lib/primitives/Mat.mjs
-var _Mat = class {
+var _Mat = class _Mat {
   constructor(a, b, c2, d, e2, f) {
     __publicField(this, "a", 1);
     __publicField(this, "b", 0);
@@ -42226,10 +41954,8 @@ var _Mat = class {
     return this;
   }
   rotate(r2, cx, cy) {
-    if (r2 === 0)
-      return this;
-    if (cx === void 0)
-      return this.multiply(_Mat.Rotate(r2));
+    if (r2 === 0) return this;
+    if (cx === void 0) return this.multiply(_Mat.Rotate(r2));
     return this.translate(cx, cy).multiply(_Mat.Rotate(r2)).translate(-cx, -cy);
   }
   translate(x, y) {
@@ -42285,13 +42011,11 @@ var _Mat = class {
     return new _Mat(1, 0, 0, 1, x, y);
   }
   static Rotate(r2, cx, cy) {
-    if (r2 === 0)
-      return _Mat.Identity();
+    if (r2 === 0) return _Mat.Identity();
     const cosAngle = Math.cos(r2);
     const sinAngle = Math.sin(r2);
     const rotationMatrix = new _Mat(cosAngle, sinAngle, -sinAngle, cosAngle, 0, 0);
-    if (cx === void 0)
-      return rotationMatrix;
+    if (cx === void 0) return rotationMatrix;
     return _Mat.Compose(_Mat.Translate(cx, cy), rotationMatrix, _Mat.Translate(-cx, -cy));
   }
   static Multiply(m1, m2) {
@@ -42413,13 +42137,12 @@ var _Mat = class {
     return m instanceof _Mat ? m : _Mat.From(m);
   }
 };
-var Mat = _Mat;
-__publicField(Mat, "Scale", (x, y, cx, cy) => {
+__publicField(_Mat, "Scale", (x, y, cx, cy) => {
   const scaleMatrix = new _Mat(x, 0, 0, y, 0, 0);
-  if (cx === void 0)
-    return scaleMatrix;
+  if (cx === void 0) return scaleMatrix;
   return _Mat.Compose(_Mat.Translate(cx, cy), scaleMatrix, _Mat.Translate(-cx, -cy));
 });
+var Mat = _Mat;
 
 // node_modules/@tldraw/editor/dist-esm/lib/utils/nearestMultiple.mjs
 function gcd(a, b) {
@@ -42427,8 +42150,7 @@ function gcd(a, b) {
 }
 function nearestMultiple(float) {
   const decimal = float.toString().split(".")[1];
-  if (!decimal)
-    return 1;
+  if (!decimal) return 1;
   const denominator = Math.pow(10, decimal.length);
   const numerator = parseInt(decimal, 10);
   return denominator / gcd(numerator, denominator);
@@ -42450,10 +42172,10 @@ var Geometry2d = class {
     __publicField(this, "_bounds");
     __publicField(this, "_area");
     __publicField(this, "_length");
-    var _a2;
+    var _a3;
     this.isFilled = opts.isFilled;
     this.isClosed = opts.isClosed;
-    this.isLabel = (_a2 = opts.isLabel) != null ? _a2 : false;
+    this.isLabel = (_a3 = opts.isLabel) != null ? _a3 : false;
     this.debugColor = opts.debugColor;
     this.ignore = opts.ignore;
   }
@@ -42471,8 +42193,7 @@ var Geometry2d = class {
     return point.dist(this.nearestPoint(point)) * (this.isClosed && (this.isFilled || hitInside) && pointInPolygon(point, this.vertices) ? -1 : 1);
   }
   distanceToLineSegment(A, B) {
-    if (A.equals(B))
-      return this.distanceToPoint(A);
+    if (A.equals(B)) return this.distanceToPoint(A);
     const { vertices } = this;
     let nearest;
     let dist = Infinity;
@@ -42486,8 +42207,7 @@ var Geometry2d = class {
         nearest = q;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return this.isClosed && this.isFilled && pointInPolygon(nearest, this.vertices) ? -dist : dist;
   }
   hitTestLineSegment(A, B, distance = 0) {
@@ -42507,8 +42227,7 @@ var Geometry2d = class {
         nearest = q;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   isPointInBounds(point, margin = 0) {
@@ -42560,8 +42279,7 @@ var Geometry2d = class {
     let path = "";
     const { vertices } = this;
     const n2 = vertices.length;
-    if (n2 === 0)
-      return path;
+    if (n2 === 0) return path;
     path += `M${vertices[0].x},${vertices[0].y}`;
     for (let i = 1; i < n2; i++) {
       path += `L${vertices[i].x},${vertices[i].y}`;
@@ -42573,8 +42291,7 @@ var Geometry2d = class {
   }
   // eslint-disable-next-line no-restricted-syntax
   get length() {
-    if (this._length)
-      return this._length;
+    if (this._length) return this._length;
     this._length = this.getLength();
     return this._length;
   }
@@ -42603,8 +42320,7 @@ var Group2d = class extends Geometry2d {
         this.children.push(child);
       }
     }
-    if (this.children.length === 0)
-      throw Error("Group2d must have at least one child");
+    if (this.children.length === 0) throw Error("Group2d must have at least one child");
   }
   getVertices() {
     return this.children.filter((c2) => !c2.isLabel).flatMap((c2) => c2.vertices);
@@ -42626,8 +42342,7 @@ var Group2d = class extends Geometry2d {
         nearest = p;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   distanceToPoint(point, hitInside = false) {
@@ -42674,8 +42389,7 @@ function useTick(isEnabled = true) {
   const [_, setTick] = (0, import_react19.useState)(0);
   const editor = useEditor();
   (0, import_react19.useEffect)(() => {
-    if (!isEnabled)
-      return;
+    if (!isEnabled) return;
     const update = () => setTick((tick2) => tick2 + 1);
     editor.on("tick", update);
     return () => {
@@ -42707,10 +42421,9 @@ var GeometryDebuggingView = track(function GeometryDebuggingView2({
         overflow: "visible"
       },
       children: renderingShapes.map((result) => {
-        var _a2;
+        var _a3;
         const shape = editor.getShape(result.id);
-        if (shape.type === "group")
-          return null;
+        if (shape.type === "group") return null;
         const geometry = editor.getShapeGeometry(shape);
         const pageTransform = editor.getShapePageTransform(shape);
         const pointInShapeSpace = editor.getPointInShapeSpace(shape, currentPagePoint);
@@ -42729,7 +42442,7 @@ var GeometryDebuggingView = track(function GeometryDebuggingView2({
               showStroke && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
                 "g",
                 {
-                  stroke: (_a2 = geometry.debugColor) != null ? _a2 : "red",
+                  stroke: (_a3 = geometry.debugColor) != null ? _a3 : "red",
                   opacity: "1",
                   strokeWidth: 2 / zoomLevel,
                   fill: "none",
@@ -42791,8 +42504,8 @@ function usePeerIds() {
     "userIds",
     () => uniq(editor.getCollaborators().map((p) => p.userId)).sort(),
     { isEqual: (a, b) => {
-      var _a2;
-      return a.join(",") === ((_a2 = b.join) == null ? void 0 : _a2.call(b, ","));
+      var _a3;
+      return a.join(",") === ((_a3 = b.join) == null ? void 0 : _a3.call(b, ","));
     } },
     [editor]
   );
@@ -42922,8 +42635,8 @@ function getStateFromElapsedTime(editor, elapsed) {
   return elapsed > editor.options.collaboratorInactiveTimeoutMs ? "inactive" : elapsed > editor.options.collaboratorIdleTimeoutMs ? "idle" : "active";
 }
 function useCollaboratorState(editor, latestPresence) {
-  var _a2;
-  const rLastActivityTimestamp = (0, import_react20.useRef)((_a2 = latestPresence == null ? void 0 : latestPresence.lastActivityTimestamp) != null ? _a2 : -1);
+  var _a3;
+  const rLastActivityTimestamp = (0, import_react20.useRef)((_a3 = latestPresence == null ? void 0 : latestPresence.lastActivityTimestamp) != null ? _a3 : -1);
   const [state, setState] = (0, import_react20.useState)(
     () => getStateFromElapsedTime(editor, Date.now() - rLastActivityTimestamp.current)
   );
@@ -42967,12 +42680,11 @@ var Shape = (0, import_react21.memo)(function Shape2({
   useQuickReactor(
     "set shape stuff",
     () => {
-      var _a2;
+      var _a3;
       const shape2 = editor.getShape(id);
-      if (!shape2)
-        return;
+      if (!shape2) return;
       const prev = memoizedStuffRef.current;
-      const clipPath = (_a2 = editor.getShapeClipPath(id)) != null ? _a2 : "none";
+      const clipPath = (_a3 = editor.getShapeClipPath(id)) != null ? _a3 : "none";
       if (clipPath !== prev.clipPath) {
         setStyleProperty(containerRef.current, "clip-path", clipPath);
         setStyleProperty(bgContainerRef.current, "clip-path", clipPath);
@@ -43017,8 +42729,7 @@ var Shape = (0, import_react21.memo)(function Shape2({
     "set display",
     () => {
       const shape2 = editor.getShape(id);
-      if (!shape2)
-        return;
+      if (!shape2) return;
       const culledShapes = editor.getCulledShapes();
       const isCulled = culledShapes.has(id);
       if (isCulled !== memoizedStuffRef.current.isCulled) {
@@ -43033,8 +42744,7 @@ var Shape = (0, import_react21.memo)(function Shape2({
     (error) => editor.annotateError(error, { origin: "shape", willCrashApp: false }),
     [editor]
   );
-  if (!shape)
-    return null;
+  if (!shape) return null;
   const isFilledShape = "fill" in shape.props && shape.props.fill !== "none";
   return /* @__PURE__ */ (0, import_jsx_runtime7.jsxs)(import_jsx_runtime7.Fragment, { children: [
     util.backgroundComponent && /* @__PURE__ */ (0, import_jsx_runtime7.jsx)(
@@ -43081,11 +42791,11 @@ var InnerShapeBackground = (0, import_react21.memo)(
     return useStateTracking(
       "InnerShape:" + shape.type,
       () => {
-        var _a2;
+        var _a3;
         return (
           // always fetch the latest shape from the store even if the props/meta have not changed, to avoid
           // calling the render method with stale data.
-          (_a2 = util.backgroundComponent) == null ? void 0 : _a2.call(util, util.editor.store.unsafeGetWithoutCapture(shape.id))
+          (_a3 = util.backgroundComponent) == null ? void 0 : _a3.call(util, util.editor.store.unsafeGetWithoutCapture(shape.id))
         );
       }
     );
@@ -43138,12 +42848,10 @@ function DefaultCanvas({ className }) {
     () => {
       const shapeSvgDefsByKey = /* @__PURE__ */ new Map();
       for (const util of objectMapValues(editor.shapeUtils)) {
-        if (!util)
-          return;
+        if (!util) return;
         const defs = util.getCanvasSvgDefs();
         for (const { key, component: Component2 } of defs) {
-          if (shapeSvgDefsByKey.has(key))
-            continue;
+          if (shapeSvgDefsByKey.has(key)) continue;
           shapeSvgDefsByKey.set(key, /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Component2, {}, key));
         }
       }
@@ -43212,8 +42920,7 @@ function DefaultCanvas({ className }) {
 }
 function InFrontOfTheCanvasWrapper() {
   const { InFrontOfTheCanvas } = useEditorComponents();
-  if (!InFrontOfTheCanvas)
-    return null;
+  if (!InFrontOfTheCanvas) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(InFrontOfTheCanvas, {});
 }
 function GridWrapper() {
@@ -43222,8 +42929,7 @@ function GridWrapper() {
   const { x, y, z } = useValue("camera", () => editor.getCamera(), [editor]);
   const isGridMode = useValue("isGridMode", () => editor.getInstanceState().isGridMode, [editor]);
   const { Grid } = useEditorComponents();
-  if (!(Grid && isGridMode))
-    return null;
+  if (!(Grid && isGridMode)) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Grid, { x, y, z, size: gridSize });
 }
 function ScribbleWrapper() {
@@ -43231,24 +42937,21 @@ function ScribbleWrapper() {
   const scribbles = useValue("scribbles", () => editor.getInstanceState().scribbles, [editor]);
   const zoomLevel = useValue("zoomLevel", () => editor.getZoomLevel(), [editor]);
   const { Scribble } = useEditorComponents();
-  if (!(Scribble && scribbles.length))
-    return null;
+  if (!(Scribble && scribbles.length)) return null;
   return scribbles.map((scribble) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Scribble, { className: "tl-user-scribble", scribble, zoom: zoomLevel }, scribble.id));
 }
 function BrushWrapper() {
   const editor = useEditor();
   const brush = useValue("brush", () => editor.getInstanceState().brush, [editor]);
   const { Brush } = useEditorComponents();
-  if (!(Brush && brush))
-    return null;
+  if (!(Brush && brush)) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Brush, { className: "tl-user-brush", brush });
 }
 function ZoomBrushWrapper() {
   const editor = useEditor();
   const zoomBrush = useValue("zoomBrush", () => editor.getInstanceState().zoomBrush, [editor]);
   const { ZoomBrush } = useEditorComponents();
-  if (!(ZoomBrush && zoomBrush))
-    return null;
+  if (!(ZoomBrush && zoomBrush)) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(ZoomBrush, { className: "tl-user-brush tl-zoom-brush", brush: zoomBrush });
 }
 function SnapIndicatorWrapper() {
@@ -43256,8 +42959,7 @@ function SnapIndicatorWrapper() {
   const lines = useValue("snapLines", () => editor.snaps.getIndicators(), [editor]);
   const zoomLevel = useValue("zoomLevel", () => editor.getZoomLevel(), [editor]);
   const { SnapIndicator } = useEditorComponents();
-  if (!(SnapIndicator && lines.length > 0))
-    return null;
+  if (!(SnapIndicator && lines.length > 0)) return null;
   return lines.map((line) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(SnapIndicator, { className: "tl-user-snapline", line, zoom: zoomLevel }, line.id));
 }
 function HandlesWrapper() {
@@ -43266,20 +42968,16 @@ function HandlesWrapper() {
     "handles shapeIdWithHandles",
     () => {
       const { isReadonly, isChangingStyle } = editor.getInstanceState();
-      if (isReadonly || isChangingStyle)
-        return false;
+      if (isReadonly || isChangingStyle) return false;
       const onlySelectedShape = editor.getOnlySelectedShape();
-      if (!onlySelectedShape)
-        return false;
+      if (!onlySelectedShape) return false;
       const handles = editor.getShapeHandles(onlySelectedShape);
-      if (!handles)
-        return false;
+      if (!handles) return false;
       return onlySelectedShape.id;
     },
     [editor]
   );
-  if (!shapeIdWithHandles)
-    return null;
+  if (!shapeIdWithHandles) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(HandlesWrapperInner, { shapeId: shapeIdWithHandles });
 }
 function HandlesWrapperInner({ shapeId }) {
@@ -43297,8 +42995,7 @@ function HandlesWrapperInner({ shapeId }) {
     "handles",
     () => {
       const handles2 = editor.getShapeHandles(shapeId);
-      if (!handles2)
-        return null;
+      if (!handles2) return null;
       const minDistBetweenVirtualHandlesAndRegularHandles = (isCoarse ? editor.options.coarseHandleRadius : editor.options.handleRadius) / zoomLevel * 2;
       return handles2.filter(
         (handle) => (
@@ -43341,8 +43038,7 @@ function HandleWrapper({
 }) {
   const events = useHandleEvents(shapeId, handle.id);
   const { Handle } = useEditorComponents();
-  if (!Handle)
-    return null;
+  if (!Handle) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)("g", { "aria-label": "handle", transform: `translate(${handle.x}, ${handle.y})`, ...events, children: /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(Handle, { shapeId, handle, zoom, isCoarse }) });
 }
 function ShapesWithSVGs() {
@@ -43373,8 +43069,7 @@ function ReflowIfNeeded() {
         return;
       culledShapesRef.current = culledShapes;
       const canvas = document.getElementsByClassName("tl-canvas");
-      if (canvas.length === 0)
-        return;
+      if (canvas.length === 0) return;
       const _height = canvas[0].offsetHeight;
     },
     [editor]
@@ -43402,10 +43097,8 @@ function HintedShapeIndicator() {
   const editor = useEditor();
   const { ShapeIndicator } = useEditorComponents();
   const ids = useValue("hinting shape ids", () => dedupe(editor.getHintingShapeIds()), [editor]);
-  if (!ids.length)
-    return null;
-  if (!ShapeIndicator)
-    return null;
+  if (!ids.length) return null;
+  if (!ShapeIndicator) return null;
   return ids.map((id) => /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(ShapeIndicator, { className: "tl-user-indicator__hint", shapeId: id }, id + "_hinting"));
 }
 function CursorDef() {
@@ -43439,8 +43132,7 @@ function DebugSvgCopy({ id }) {
     [editor, id]
   );
   (0, import_react22.useEffect)(() => {
-    if (!isInRoot)
-      return;
+    if (!isInRoot) return;
     let latest = null;
     const unsubscribe = react("shape to svg", async () => {
       const renderId = Math.random();
@@ -43448,15 +43140,13 @@ function DebugSvgCopy({ id }) {
       const isSingleFrame = editor.isShapeOfType(id, "frame");
       const padding = isSingleFrame ? 0 : 10;
       let bounds = editor.getShapePageBounds(id);
-      if (!bounds)
-        return;
+      if (!bounds) return;
       bounds = bounds.clone().expandBy(padding);
       const result = await editor.getSvgString([id], {
         padding,
         background: editor.getInstanceState().exportBackground
       });
-      if (latest !== renderId || !result)
-        return;
+      if (latest !== renderId || !result) return;
       const svgDataUrl = `data:image/svg+xml;utf8,${encodeURIComponent(result.svg)}`;
       setImage({ src: svgDataUrl, bounds });
     });
@@ -43465,8 +43155,7 @@ function DebugSvgCopy({ id }) {
       unsubscribe();
     };
   }, [editor, id, isInRoot]);
-  if (!isInRoot || !image)
-    return null;
+  if (!isInRoot || !image) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(
     "img",
     {
@@ -43496,8 +43185,7 @@ function SelectionForegroundWrapper() {
     [editor]
   );
   const { SelectionForeground } = useEditorComponents();
-  if (!selectionBounds || !SelectionForeground)
-    return null;
+  if (!selectionBounds || !SelectionForeground) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(SelectionForeground, { bounds: selectionBounds, rotation: selectionRotation });
 }
 function SelectionBackgroundWrapper() {
@@ -43511,14 +43199,12 @@ function SelectionBackgroundWrapper() {
     [editor]
   );
   const { SelectionBackground } = useEditorComponents();
-  if (!selectionBounds || !SelectionBackground)
-    return null;
+  if (!selectionBounds || !SelectionBackground) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(SelectionBackground, { bounds: selectionBounds, rotation: selectionRotation });
 }
 function OnTheCanvasWrapper() {
   const { OnTheCanvas } = useEditorComponents();
-  if (!OnTheCanvas)
-    return null;
+  if (!OnTheCanvas) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime8.jsx)(OnTheCanvas, {});
 }
 function MovingCameraHitTestBlocker() {
@@ -43574,8 +43260,7 @@ var DefaultCursor = (0, import_react24.memo)(function DefaultCursor2({
 }) {
   const rCursor = (0, import_react24.useRef)(null);
   useTransform(rCursor, point == null ? void 0 : point.x, point == null ? void 0 : point.y, 1 / zoom);
-  if (!point)
-    return null;
+  if (!point) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)("div", { ref: rCursor, className: (0, import_classnames3.default)("tl-overlays__item", className), children: [
     /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("svg", { className: "tl-cursor", children: /* @__PURE__ */ (0, import_jsx_runtime10.jsx)("use", { href: "#cursor", color }) }),
     chatMessage ? /* @__PURE__ */ (0, import_jsx_runtime10.jsxs)(import_jsx_runtime10.Fragment, { children: [
@@ -43691,8 +43376,7 @@ function getSvgPathFromPoints(points, closed = true) {
 
 // node_modules/@tldraw/editor/dist-esm/lib/components/default-components/DefaultScribble.mjs
 function DefaultScribble({ scribble, zoom, color, opacity, className }) {
-  if (!scribble.points.length)
-    return null;
+  if (!scribble.points.length) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime15.jsx)("svg", { className: className ? (0, import_classnames5.default)("tl-overlays__item", className) : className, children: /* @__PURE__ */ (0, import_jsx_runtime15.jsx)(
     "path",
     {
@@ -43714,8 +43398,7 @@ function DefaultSelectionBackground({ bounds, rotation }) {
   useTransform(rDiv, bounds.x, bounds.y, 1, rotation);
   React7.useLayoutEffect(() => {
     const div = rDiv.current;
-    if (!div)
-      return;
+    if (!div) return;
     div.style.width = toDomPrecision(Math.max(1, bounds.width)) + "px";
     div.style.height = toDomPrecision(Math.max(1, bounds.height)) + "px";
   }, [bounds.width, bounds.height]);
@@ -43777,8 +43460,7 @@ var EvenInnererIndicator = ({ shape, util }) => {
 var InnerIndicator = ({ editor, id }) => {
   const shape = useValue("shape for indicator", () => editor.store.get(id), [editor, id]);
   const { ShapeIndicatorErrorFallback } = useEditorComponents();
-  if (!shape || shape.isLocked)
-    return null;
+  if (!shape || shape.isLocked) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(
     OptionalErrorBoundary,
     {
@@ -43801,19 +43483,16 @@ var DefaultShapeIndicator = (0, import_react27.memo)(function DefaultShapeIndica
     "indicator transform",
     () => {
       const elm = rIndicator.current;
-      if (!elm)
-        return;
+      if (!elm) return;
       const pageTransform = editor.getShapePageTransform(shapeId);
-      if (!pageTransform)
-        return;
+      if (!pageTransform) return;
       elm.style.setProperty("transform", pageTransform.toCssString());
     },
     [editor, shapeId]
   );
   (0, import_react27.useLayoutEffect)(() => {
     const elm = rIndicator.current;
-    if (!elm)
-      return;
+    if (!elm) return;
     elm.style.setProperty("display", hidden ? "none" : "block");
   }, [hidden]);
   return /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("svg", { ref: rIndicator, className: (0, import_classnames7.default)("tl-overlays__item", className), children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)("g", { className: "tl-shape-indicator", stroke: color != null ? color : "var(--color-selected)", opacity, children: /* @__PURE__ */ (0, import_jsx_runtime19.jsx)(InnerIndicator, { editor, id: shapeId }) }) });
@@ -43857,8 +43536,7 @@ var DefaultShapeIndicators = (0, import_react28.memo)(function DefaultShapeIndic
           const instanceState = editor.getInstanceState();
           if (instanceState.isHoveringCanvas && !instanceState.isCoarsePointer) {
             const hovered = editor.getHoveredShapeId();
-            if (hovered)
-              next.add(hovered);
+            if (hovered) next.add(hovered);
           }
         }
       }
@@ -43878,8 +43556,7 @@ var DefaultShapeIndicators = (0, import_react28.memo)(function DefaultShapeIndic
   );
   const renderingShapes = useValue("rendering shapes", () => editor.getRenderingShapes(), [editor]);
   const { ShapeIndicator } = useEditorComponents();
-  if (!ShapeIndicator)
-    return null;
+  if (!ShapeIndicator) return null;
   return renderingShapes.map(({ id }) => /* @__PURE__ */ (0, import_jsx_runtime21.jsx)(ShapeIndicator, { shapeId: id, hidden: !idsToDisplay.has(id) }, id + "_indicator"));
 });
 
@@ -44127,8 +43804,8 @@ var runtime = {
   openWindow: (url, target) => window.open(url, target, "noopener noreferrer"),
   refreshPage: () => window.location.reload(),
   hardReset: async () => {
-    var _a2;
-    return await ((_a2 = window.__tldraw__hardReset) == null ? void 0 : _a2.call(window));
+    var _a3;
+    return await ((_a3 = window.__tldraw__hardReset) == null ? void 0 : _a3.call(window));
   }
 };
 
@@ -44145,7 +43822,7 @@ function refreshPage() {
 // node_modules/@tldraw/editor/dist-esm/lib/components/default-components/DefaultErrorFallback.mjs
 var BASE_ERROR_URL = "https://github.com/tldraw/tldraw/issues/new";
 var DefaultErrorFallback = ({ error, editor }) => {
-  var _a2;
+  var _a3;
   const containerRef = (0, import_react31.useRef)(null);
   const [shouldShowError, setShouldShowError] = (0, import_react31.useState)(true);
   const [didCopy, setDidCopy] = (0, import_react31.useState)(false);
@@ -44153,7 +43830,7 @@ var DefaultErrorFallback = ({ error, editor }) => {
   let Canvas = null;
   try {
     const components2 = useEditorComponents();
-    Canvas = (_a2 = components2.Canvas) != null ? _a2 : null;
+    Canvas = (_a3 = components2.Canvas) != null ? _a3 : null;
   } catch (e2) {
   }
   const errorMessage = error instanceof Error ? error.message : String(error);
@@ -44173,11 +43850,11 @@ var DefaultErrorFallback = ({ error, editor }) => {
   );
   const [isDarkMode, setIsDarkMode] = (0, import_react31.useState)(null);
   (0, import_react31.useLayoutEffect)(() => {
-    var _a3;
+    var _a4;
     if (isDarkModeFromApp !== null) {
       setIsDarkMode(isDarkModeFromApp);
     }
-    let parent = (_a3 = containerRef.current) == null ? void 0 : _a3.parentElement;
+    let parent = (_a4 = containerRef.current) == null ? void 0 : _a4.parentElement;
     let foundParentThemeClass = false;
     while (parent) {
       if (parent.classList.contains("tl-theme__dark") || parent.classList.contains("tl-theme__light")) {
@@ -44387,9 +44064,9 @@ function getRandomColor() {
   return USER_COLORS[Math.floor(Math.random() * USER_COLORS.length)];
 }
 function userPrefersReducedMotion() {
-  var _a2, _b2, _c;
+  var _a3, _b2, _c;
   if (typeof window !== "undefined" && "matchMedia" in window) {
-    return (_c = (_b2 = (_a2 = window.matchMedia) == null ? void 0 : _a2.call(window, "(prefers-reduced-motion: reduce)")) == null ? void 0 : _b2.matches) != null ? _c : false;
+    return (_c = (_b2 = (_a3 = window.matchMedia) == null ? void 0 : _a3.call(window, "(prefers-reduced-motion: reduce)")) == null ? void 0 : _b2.matches) != null ? _c : false;
   }
   return false;
 }
@@ -44427,8 +44104,8 @@ function migrateUserPreferences(userData) {
   }
 }
 function loadUserPreferences() {
-  var _a2;
-  const userData = (_a2 = JSON.parse(getFromLocalStorage(USER_DATA_KEY) || "null")) != null ? _a2 : null;
+  var _a3;
+  const userData = (_a3 = JSON.parse(getFromLocalStorage(USER_DATA_KEY) || "null")) != null ? _a3 : null;
   return migrateUserPreferences(userData);
 }
 var globalUserPreferences = atom("globalUserData", null);
@@ -44488,9 +44165,9 @@ var defaultLocalStorageUserPrefs = computed(
   () => getUserPreferences()
 );
 function createTLUser(opts = {}) {
-  var _a2, _b2;
+  var _a3, _b2;
   return {
-    userPreferences: (_a2 = opts.userPreferences) != null ? _a2 : defaultLocalStorageUserPrefs,
+    userPreferences: (_a3 = opts.userPreferences) != null ? _a3 : defaultLocalStorageUserPrefs,
     setUserPreferences: (_b2 = opts.setUserPreferences) != null ? _b2 : setUserPreferences
   };
 }
@@ -44504,8 +44181,7 @@ var import_client = __toESM(require_client(), 1);
 var tabIdKey = "TLDRAW_TAB_ID_v2";
 var window2 = globalThis.window;
 function iOS() {
-  if (!window2)
-    return false;
+  if (!window2) return false;
   return ["iPad Simulator", "iPhone Simulator", "iPod Simulator", "iPad", "iPhone", "iPod"].includes(
     // eslint-disable-next-line deprecation/deprecation
     window2.navigator.platform
@@ -44579,8 +44255,7 @@ function createSessionStateSnapshotSignal(store) {
   const $allPageIds = store.query.ids("page");
   return computed("sessionStateSnapshot", () => {
     const instanceState = store.get(TLINSTANCE_ID);
-    if (!instanceState)
-      return null;
+    if (!instanceState) return null;
     const allPageIds = [...$allPageIds.get()];
     return {
       version: CURRENT_SESSION_STATE_SNAPSHOT_VERSION,
@@ -44591,13 +44266,13 @@ function createSessionStateSnapshotSignal(store) {
       isToolLocked: instanceState.isToolLocked,
       isGridMode: instanceState.isGridMode,
       pageStates: allPageIds.map((id) => {
-        var _a2, _b2, _c, _d, _e;
+        var _a3, _b2, _c, _d, _e;
         const ps = store.get(InstancePageStateRecordType.createId(id));
         const camera = store.get(CameraRecordType.createId(id));
         return {
           pageId: id,
           camera: {
-            x: (_a2 = camera == null ? void 0 : camera.x) != null ? _a2 : 0,
+            x: (_a3 = camera == null ? void 0 : camera.x) != null ? _a3 : 0,
             y: (_b2 = camera == null ? void 0 : camera.y) != null ? _b2 : 0,
             z: (_c = camera == null ? void 0 : camera.z) != null ? _c : 1
           },
@@ -44610,8 +44285,7 @@ function createSessionStateSnapshotSignal(store) {
 }
 function loadSessionStateSnapshotIntoStore(store, snapshot) {
   const res = migrateAndValidateSessionStateSnapshot(snapshot);
-  if (!res)
-    return;
+  if (!res) return;
   const instanceState = store.schema.types.instance.create({
     id: TLINSTANCE_ID,
     ...pluckPreservingValues(store.get(TLINSTANCE_ID)),
@@ -44646,18 +44320,17 @@ function loadSessionStateSnapshotIntoStore(store, snapshot) {
   });
 }
 function extractSessionStateFromLegacySnapshot(store) {
-  var _a2;
+  var _a3;
   const instanceRecords = [];
   for (const record of Object.values(store)) {
-    if ((_a2 = record.typeName) == null ? void 0 : _a2.match(/^(instance.*|pointer|camera)$/)) {
+    if ((_a3 = record.typeName) == null ? void 0 : _a3.match(/^(instance.*|pointer|camera)$/)) {
       instanceRecords.push(record);
     }
   }
   const oldInstance = instanceRecords.filter(
     (r2) => r2.typeName === "instance" && r2.id !== TLINSTANCE_ID
   )[0];
-  if (!oldInstance)
-    return null;
+  if (!oldInstance) return null;
   const result = {
     version: CURRENT_SESSION_STATE_SNAPSHOT_VERSION,
     currentPageId: oldInstance.currentPageId,
@@ -44667,8 +44340,8 @@ function extractSessionStateFromLegacySnapshot(store) {
     isToolLocked: !!oldInstance.isToolLocked,
     isGridMode: false,
     pageStates: instanceRecords.filter((r2) => r2.typeName === "instance_page_state" && r2.instanceId === oldInstance.id).map((ps) => {
-      var _a3;
-      const camera = (_a3 = store[ps.cameraId]) != null ? _a3 : { x: 0, y: 0, z: 1 };
+      var _a4;
+      const camera = (_a4 = store[ps.cameraId]) != null ? _a4 : { x: 0, y: 0, z: 1 };
       return {
         pageId: ps.pageId,
         camera: {
@@ -44768,10 +44441,8 @@ function intersectLineSegmentLineSegment(a1, a2, b1, b2) {
   const ua_t = BVx * ABy - BVy * ABx;
   const ub_t = AVx * ABy - AVy * ABx;
   const u_b = BVy * AVx - BVx * AVy;
-  if (ua_t === 0 || ub_t === 0)
-    return null;
-  if (u_b === 0)
-    return null;
+  if (ua_t === 0 || ub_t === 0) return null;
+  if (u_b === 0) return null;
   if (u_b !== 0) {
     const ua = ua_t / u_b;
     const ub = ub_t / u_b;
@@ -44786,10 +44457,8 @@ function intersectLineSegmentCircle(a1, a2, c2, r2) {
   const b = 2 * ((a2.x - a1.x) * (a1.x - c2.x) + (a2.y - a1.y) * (a1.y - c2.y));
   const cc = c2.x * c2.x + c2.y * c2.y + a1.x * a1.x + a1.y * a1.y - 2 * (c2.x * a1.x + c2.y * a1.y) - r2 * r2;
   const deter = b * b - 4 * a * cc;
-  if (deter < 0)
-    return null;
-  if (deter === 0)
-    return null;
+  if (deter < 0) return null;
+  if (deter === 0) return null;
   const e2 = Math.sqrt(deter);
   const u1 = (-b + e2) / (2 * a);
   const u2 = (-b - e2) / (2 * a);
@@ -44797,12 +44466,9 @@ function intersectLineSegmentCircle(a1, a2, c2, r2) {
     return null;
   }
   const result = [];
-  if (0 <= u1 && u1 <= 1)
-    result.push(Vec.Lrp(a1, a2, u1));
-  if (0 <= u2 && u2 <= 1)
-    result.push(Vec.Lrp(a1, a2, u2));
-  if (result.length === 0)
-    return null;
+  if (0 <= u1 && u1 <= 1) result.push(Vec.Lrp(a1, a2, u1));
+  if (0 <= u2 && u2 <= 1) result.push(Vec.Lrp(a1, a2, u2));
+  if (result.length === 0) return null;
   return result;
 }
 function intersectLineSegmentPolyline(a1, a2, points) {
@@ -44810,11 +44476,9 @@ function intersectLineSegmentPolyline(a1, a2, points) {
   let segmentIntersection;
   for (let i = 0, n2 = points.length - 1; i < n2; i++) {
     segmentIntersection = intersectLineSegmentLineSegment(a1, a2, points[i], points[i + 1]);
-    if (segmentIntersection)
-      result.push(segmentIntersection);
+    if (segmentIntersection) result.push(segmentIntersection);
   }
-  if (result.length === 0)
-    return null;
+  if (result.length === 0) return null;
   return result;
 }
 function intersectLineSegmentPolygon(a1, a2, points) {
@@ -44827,11 +44491,9 @@ function intersectLineSegmentPolygon(a1, a2, points) {
       points[i - 1],
       points[i % points.length]
     );
-    if (segmentIntersection)
-      result.push(segmentIntersection);
+    if (segmentIntersection) result.push(segmentIntersection);
   }
-  if (result.length === 0)
-    return null;
+  if (result.length === 0) return null;
   return result;
 }
 function intersectCircleCircle(c1, r1, c2, r2) {
@@ -44852,11 +44514,9 @@ function intersectCirclePolygon(c2, r2, points) {
     a = points[i];
     b = points[(i + 1) % points.length];
     int = intersectLineSegmentCircle(a, b, c2, r2);
-    if (int)
-      result.push(...int);
+    if (int) result.push(...int);
   }
-  if (result.length === 0)
-    return null;
+  if (result.length === 0) return null;
   return result;
 }
 function intersectCirclePolyline(c2, r2, points) {
@@ -44866,11 +44526,9 @@ function intersectCirclePolyline(c2, r2, points) {
     a = points[i - 1];
     b = points[i];
     int = intersectLineSegmentCircle(a, b, c2, r2);
-    if (int)
-      result.push(...int);
+    if (int) result.push(...int);
   }
-  if (result.length === 0)
-    return null;
+  if (result.length === 0) return null;
   return result;
 }
 function ccw(A, B, C) {
@@ -44915,8 +44573,7 @@ function intersectPolygonPolygon(polygonA, polygonB) {
       }
     }
   }
-  if (result.size === 0)
-    return null;
+  if (result.size === 0) return null;
   return orderClockwise([...result.values()]);
 }
 function getPointId(point) {
@@ -44934,8 +44591,7 @@ function polygonsIntersect(a, b) {
     for (let j = 0, m = b.length; j < m; j++) {
       b0 = b[j];
       b1 = b[(j + 1) % m];
-      if (linesIntersect(a0, a1, b0, b1))
-        return true;
+      if (linesIntersect(a0, a1, b0, b1)) return true;
     }
   }
   return false;
@@ -44948,8 +44604,7 @@ function polygonIntersectsPolyline(polygon, polyline) {
     for (let j = 1, m = polyline.length; j < m; j++) {
       c2 = polyline[j - 1];
       d = polyline[j];
-      if (linesIntersect(a, b, c2, d))
-        return true;
+      if (linesIntersect(a, b, c2, d)) return true;
     }
   }
   return false;
@@ -44982,19 +44637,14 @@ var Edge2d = class extends Geometry2d {
   }
   nearestPoint(point) {
     const { start, end, u: u2, ul: l } = this;
-    if (l === 0)
-      return start;
+    if (l === 0) return start;
     const k = Vec.Sub(point, start).dpr(u2) / l;
     const cx = start.x + u2.x * k;
-    if (cx < Math.min(start.x, end.x))
-      return start.x < end.x ? start : end;
-    if (cx > Math.max(start.x, end.x))
-      return start.x > end.x ? start : end;
+    if (cx < Math.min(start.x, end.x)) return start.x < end.x ? start : end;
+    if (cx > Math.max(start.x, end.x)) return start.x > end.x ? start : end;
     const cy = start.y + u2.y * k;
-    if (cy < Math.min(start.y, end.y))
-      return start.y < end.y ? start : end;
-    if (cy > Math.max(start.y, end.y))
-      return start.y > end.y ? start : end;
+    if (cy < Math.min(start.y, end.y)) return start.y < end.y ? start : end;
+    if (cy > Math.max(start.y, end.y)) return start.y > end.y ? start : end;
     return new Vec(cx, cy);
   }
   hitTestLineSegment(A, B, distance = 0) {
@@ -45051,8 +44701,7 @@ var Polyline2d = class extends Geometry2d {
         dist = d;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   hitTestLineSegment(A, B, distance = 0) {
@@ -45066,11 +44715,9 @@ var Polyline2d = class extends Geometry2d {
   }
   getSvgPathData() {
     const { vertices } = this;
-    if (vertices.length < 2)
-      return "";
+    if (vertices.length < 2) return "";
     return vertices.reduce((acc, vertex, i) => {
-      if (i === 0)
-        return `M ${vertex.x} ${vertex.y}`;
+      if (i === 0) return `M ${vertex.x} ${vertex.y}`;
       return `${acc} L ${vertex.x} ${vertex.y}`;
     }, "");
   }
@@ -45758,8 +45405,7 @@ var defaultTldrawOptions = {
 
 // node_modules/@tldraw/editor/dist-esm/lib/utils/SharedStylesMap.mjs
 function sharedStyleEquals(a, b) {
-  if (!b)
-    return false;
+  if (!b) return false;
   switch (a.type) {
     case "mixed":
       return b.type === "mixed";
@@ -45780,10 +45426,8 @@ var ReadonlySharedStyleMap = class {
   }
   getAsKnownValue(prop) {
     const value = this.get(prop);
-    if (!value)
-      return void 0;
-    if (value.type === "mixed")
-      return void 0;
+    if (!value) return void 0;
+    if (value.type === "mixed") return void 0;
     return value.value;
   }
   // eslint-disable-next-line no-restricted-syntax
@@ -45791,19 +45435,15 @@ var ReadonlySharedStyleMap = class {
     return this.map.size;
   }
   equals(other) {
-    if (this.size !== other.size)
-      return false;
+    if (this.size !== other.size) return false;
     const checkedKeys = /* @__PURE__ */ new Set();
     for (const [styleProp, value] of this) {
-      if (!sharedStyleEquals(value, other.get(styleProp)))
-        return false;
+      if (!sharedStyleEquals(value, other.get(styleProp))) return false;
       checkedKeys.add(styleProp);
     }
     for (const [styleProp, value] of other) {
-      if (checkedKeys.has(styleProp))
-        continue;
-      if (!sharedStyleEquals(value, this.get(styleProp)))
-        return false;
+      if (checkedKeys.has(styleProp)) continue;
+      if (!sharedStyleEquals(value, this.get(styleProp))) return false;
     }
     return true;
   }
@@ -45859,11 +45499,11 @@ function getDefaultCdnBaseUrl() {
 
 // node_modules/@tldraw/editor/dist-esm/lib/utils/getIncrementedName.mjs
 function getIncrementedName(name, others) {
-  var _a2;
+  var _a3;
   let result = name;
   const set = new Set(others);
   while (set.has(result)) {
-    result = ((_a2 = /^.*(\d+)$/.exec(result)) == null ? void 0 : _a2[1]) ? result.replace(/(\d+)(?=\D?)$/, (m) => {
+    result = ((_a3 = /^.*(\d+)$/.exec(result)) == null ? void 0 : _a3[1]) ? result.replace(/(\d+)(?=\D?)$/, (m) => {
       return (+m + 1).toString();
     }) : `${result} 1`;
   }
@@ -45872,8 +45512,7 @@ function getIncrementedName(name, others) {
 
 // node_modules/@tldraw/editor/dist-esm/lib/utils/reorderShapes.mjs
 function getReorderingShapesChanges(editor, operation, ids) {
-  if (ids.length === 0)
-    return [];
+  if (ids.length === 0) return [];
   const parents = /* @__PURE__ */ new Map();
   for (const shape of compact(ids.map((id) => editor.getShape(id)))) {
     const { parentId } = shape;
@@ -45910,8 +45549,7 @@ function getReorderingShapesChanges(editor, operation, ids) {
 }
 function reorderToBack(moving, children, changes) {
   const len = children.length;
-  if (moving.size === len)
-    return;
+  if (moving.size === len) return;
   let below;
   let above;
   for (let i = 0; i < len; i++) {
@@ -45935,8 +45573,7 @@ function reorderToBack(moving, children, changes) {
 }
 function reorderToFront(moving, children, changes) {
   const len = children.length;
-  if (moving.size === len)
-    return;
+  if (moving.size === len) return;
   let below;
   let above;
   for (let i = len - 1; i > -1; i--) {
@@ -45959,25 +45596,22 @@ function reorderToFront(moving, children, changes) {
   }
 }
 function reorderForward(moving, children, changes) {
-  var _a2;
+  var _a3;
   const len = children.length;
-  if (moving.size === len)
-    return;
+  if (moving.size === len) return;
   let state = { name: "skipping" };
   for (let i = 0; i < len; i++) {
     const isMoving = moving.has(children[i]);
     switch (state.name) {
       case "skipping": {
-        if (!isMoving)
-          continue;
+        if (!isMoving) continue;
         state = { name: "selecting", selectIndex: i };
         break;
       }
       case "selecting": {
-        if (isMoving)
-          continue;
+        if (isMoving) continue;
         const { selectIndex } = state;
-        getIndicesBetween(children[i].index, (_a2 = children[i + 1]) == null ? void 0 : _a2.index, i - selectIndex).forEach(
+        getIndicesBetween(children[i].index, (_a3 = children[i + 1]) == null ? void 0 : _a3.index, i - selectIndex).forEach(
           (index2, k) => changes.push({ ...children[selectIndex + k], index: index2 })
         );
         state = { name: "skipping" };
@@ -45987,24 +45621,21 @@ function reorderForward(moving, children, changes) {
   }
 }
 function reorderBackward(moving, children, changes) {
-  var _a2;
+  var _a3;
   const len = children.length;
-  if (moving.size === len)
-    return;
+  if (moving.size === len) return;
   let state = { name: "skipping" };
   for (let i = len - 1; i > -1; i--) {
     const isMoving = moving.has(children[i]);
     switch (state.name) {
       case "skipping": {
-        if (!isMoving)
-          continue;
+        if (!isMoving) continue;
         state = { name: "selecting", selectIndex: i };
         break;
       }
       case "selecting": {
-        if (isMoving)
-          continue;
-        getIndicesBetween((_a2 = children[i - 1]) == null ? void 0 : _a2.index, children[i].index, state.selectIndex - i).forEach(
+        if (isMoving) continue;
+        getIndicesBetween((_a3 = children[i - 1]) == null ? void 0 : _a3.index, children[i].index, state.selectIndex - i).forEach(
           (index2, k) => {
             changes.push({ ...children[i + k + 1], index: index2 });
           }
@@ -46067,23 +45698,19 @@ function applyRotationToSnapshotShapes({
   );
   const changes = [];
   shapeSnapshots.forEach(({ shape }) => {
-    var _a2, _b2, _c;
+    var _a3, _b2, _c;
     const current = editor.getShape(shape.id);
-    if (!current)
-      return;
+    if (!current) return;
     const util = editor.getShapeUtil(shape);
     if (stage === "start" || stage === "one-off") {
-      const changeStart = (_a2 = util.onRotateStart) == null ? void 0 : _a2.call(util, shape);
-      if (changeStart)
-        changes.push(changeStart);
+      const changeStart = (_a3 = util.onRotateStart) == null ? void 0 : _a3.call(util, shape);
+      if (changeStart) changes.push(changeStart);
     }
     const changeUpdate = (_b2 = util.onRotate) == null ? void 0 : _b2.call(util, shape, current);
-    if (changeUpdate)
-      changes.push(changeUpdate);
+    if (changeUpdate) changes.push(changeUpdate);
     if (stage === "end" || stage === "one-off") {
       const changeEnd = (_c = util.onRotateEnd) == null ? void 0 : _c.call(util, shape, current);
-      if (changeEnd)
-        changes.push(changeEnd);
+      if (changeEnd) changes.push(changeEnd);
     }
   });
   if (changes.length > 0) {
@@ -46178,8 +45805,7 @@ var bindingsIndex = (editor) => {
 // node_modules/@tldraw/editor/dist-esm/lib/editor/derivations/notVisibleShapes.mjs
 function isShapeNotVisible(editor, id, viewportPageBounds) {
   const maskedPageBounds = editor.getShapeMaskedPageBounds(id);
-  if (maskedPageBounds === void 0)
-    return true;
+  if (maskedPageBounds === void 0) return true;
   return !viewportPageBounds.includes(maskedPageBounds);
 }
 var notVisibleShapes = (editor) => {
@@ -46199,8 +45825,7 @@ var notVisibleShapes = (editor) => {
       return fromScratch(editor);
     }
     const nextValue = fromScratch(editor);
-    if (prevValue.size !== nextValue.size)
-      return nextValue;
+    if (prevValue.size !== nextValue.size) return nextValue;
     for (const prev of prevValue) {
       if (!nextValue.has(prev)) {
         return nextValue;
@@ -46238,8 +45863,7 @@ var parentsToChildren = (store) => {
       if (diff === RESET_VALUE) {
         return fromScratch();
       }
-      if (diff.length === 0)
-        return lastValue;
+      if (diff.length === 0) return lastValue;
       let newValue = null;
       const ensureNewArray = (parentId) => {
         if (!newValue) {
@@ -46256,17 +45880,14 @@ var parentsToChildren = (store) => {
       for (let i = 0, n2 = diff.length; i < n2; i++) {
         changes = diff[i];
         for (const record of Object.values(changes.added)) {
-          if (!isShape(record))
-            continue;
+          if (!isShape(record)) continue;
           ensureNewArray(record.parentId);
           newValue[record.parentId].push(record.id);
           toSort.add(newValue[record.parentId]);
         }
         for (const [from, to] of Object.values(changes.updated)) {
-          if (!isShape(to))
-            continue;
-          if (!isShape(from))
-            continue;
+          if (!isShape(to)) continue;
+          if (!isShape(from)) continue;
           if (from.parentId !== to.parentId) {
             ensureNewArray(from.parentId);
             ensureNewArray(to.parentId);
@@ -46281,8 +45902,7 @@ var parentsToChildren = (store) => {
           }
         }
         for (const record of Object.values(changes.removed)) {
-          if (!isShape(record))
-            continue;
+          if (!isShape(record)) continue;
           ensureNewArray(record.parentId);
           newValue[record.parentId].splice(newValue[record.parentId].indexOf(record.id), 1);
         }
@@ -46301,8 +45921,7 @@ var parentsToChildren = (store) => {
 var isShapeInPage = (store, pageId, shape) => {
   while (!isPageId(shape.parentId)) {
     const parent = store.get(shape.parentId);
-    if (!parent)
-      return false;
+    if (!parent) return false;
     shape = parent;
   }
   return shape.parentId === pageId;
@@ -46378,26 +45997,23 @@ function SvgExportContextProvider({
 }
 function useSvgExportContext() {
   const ctx = (0, import_react33.useContext)(Context);
-  if (!ctx)
-    return null;
+  if (!ctx) return null;
   return { isDarkMode: ctx.isDarkMode };
 }
 
 // node_modules/@tldraw/editor/dist-esm/lib/editor/getSvgJsx.mjs
 async function getSvgJsx(editor, shapes, opts = {}) {
-  var _a2, _b2, _c;
+  var _a3, _b2, _c;
   const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-  if (ids.length === 0)
-    return;
-  if (!window.document)
-    throw Error("No document");
+  if (ids.length === 0) return;
+  if (!window.document) throw Error("No document");
   const {
     scale = 1,
     background: background2 = false,
     padding = editor.options.defaultSvgPadding,
     preserveAspectRatio = false
   } = opts;
-  const isDarkMode = (_a2 = opts.darkMode) != null ? _a2 : editor.user.getIsDarkMode();
+  const isDarkMode = (_a3 = opts.darkMode) != null ? _a3 : editor.user.getIsDarkMode();
   const theme = getDefaultColorTheme({ isDarkMode });
   const shapeIdsToInclude = editor.getShapeAndDescendantIds(ids);
   const renderingShapes = editor.getUnorderedRenderingShapes(false).filter(({ id }) => shapeIdsToInclude.has(id));
@@ -46407,8 +46023,7 @@ async function getSvgJsx(editor, shapes, opts = {}) {
   } else {
     for (const { id } of renderingShapes) {
       const maskedPageBounds = editor.getShapeMaskedPageBounds(id);
-      if (!maskedPageBounds)
-        continue;
+      if (!maskedPageBounds) continue;
       if (bbox) {
         bbox.union(maskedPageBounds);
       } else {
@@ -46416,8 +46031,7 @@ async function getSvgJsx(editor, shapes, opts = {}) {
       }
     }
   }
-  if (!bbox)
-    return;
+  if (!bbox) return;
   const singleFrameShapeId = ids.length === 1 && editor.isShapeOfType(editor.getShape(ids[0]), "frame") ? ids[0] : null;
   if (!singleFrameShapeId) {
     bbox.expandBy(padding);
@@ -46433,12 +46047,10 @@ async function getSvgJsx(editor, shapes, opts = {}) {
   const exportContext = {
     isDarkMode,
     addExportDef: (def) => {
-      if (exportDefPromisesById.has(def.key))
-        return;
+      if (exportDefPromisesById.has(def.key)) return;
       const promise = (async () => {
         const element = await def.getElement();
-        if (!element)
-          return;
+        if (!element) return;
         defChildren.push(/* @__PURE__ */ (0, import_jsx_runtime30.jsx)(import_react34.Fragment, { children: element }, defChildren.length));
       })();
       exportDefPromisesById.set(def.key, promise);
@@ -46446,14 +46058,12 @@ async function getSvgJsx(editor, shapes, opts = {}) {
   };
   const unorderedShapeElements = (await Promise.all(
     renderingShapes.map(async ({ id, opacity, index: index2, backgroundIndex }) => {
-      var _a3, _b3;
-      if (id === singleFrameShapeId)
-        return [];
+      var _a4, _b3;
+      if (id === singleFrameShapeId) return [];
       const shape = editor.getShape(id);
-      if (editor.isShapeOfType(shape, "group"))
-        return [];
+      if (editor.isShapeOfType(shape, "group")) return [];
       const util = editor.getShapeUtil(shape);
-      let toSvgResult = await ((_a3 = util.toSvg) == null ? void 0 : _a3.call(util, shape, exportContext));
+      let toSvgResult = await ((_a4 = util.toSvg) == null ? void 0 : _a4.call(util, shape, exportContext));
       let toBackgroundSvgResult = await ((_b3 = util.toBackgroundSvg) == null ? void 0 : _b3.call(util, shape, exportContext));
       if (!toSvgResult && !toBackgroundSvgResult) {
         const bounds = editor.getShapePageBounds(shape);
@@ -46587,8 +46197,7 @@ var ClickManager = class {
     __publicField(this, "handlePointerEvent", (info) => {
       switch (info.name) {
         case "pointer_down": {
-          if (!this._clickState)
-            return info;
+          if (!this._clickState) return info;
           this._clickScreenPoint = Vec.From(info.point);
           if (this._previousScreenPoint && Vec.Dist2(this._previousScreenPoint, this._clickScreenPoint) > MAX_CLICK_DISTANCE ** 2) {
             this._clickState = "idle";
@@ -46641,8 +46250,7 @@ var ClickManager = class {
           return info;
         }
         case "pointer_up": {
-          if (!this._clickState)
-            return info;
+          if (!this._clickState) return info;
           this._clickScreenPoint = Vec.From(info.point);
           switch (this._clickState) {
             case "pendingTriple": {
@@ -46794,8 +46402,7 @@ var EdgeScrollManager = class {
     const { editor } = this;
     if (!editor.inputs.isDragging || editor.inputs.isPanning || editor.getCameraOptions().isLocked)
       return;
-    if (proximityFactor.x === 0 && proximityFactor.y === 0)
-      return;
+    if (proximityFactor.x === 0 && proximityFactor.y === 0) return;
     const screenBounds = editor.getViewportScreenBounds();
     const screenSizeFactorX = screenBounds.w < 1e3 ? 0.612 : 1;
     const screenSizeFactorY = screenBounds.h < 1e3 ? 0.612 : 1;
@@ -46904,8 +46511,8 @@ var FocusManager = class {
     this.editor.getContainer().blur();
   }
   dispose() {
-    var _a2;
-    (_a2 = this.disposeSideEffectListener) == null ? void 0 : _a2.call(this);
+    var _a3;
+    (_a3 = this.disposeSideEffectListener) == null ? void 0 : _a3.call(this);
   }
 };
 
@@ -46941,7 +46548,7 @@ var EmptyStackItem = class {
   }
 };
 var EMPTY_STACK_ITEM = new EmptyStackItem();
-var StackItem = class {
+var StackItem = class _StackItem {
   constructor(head, tail) {
     __publicField(this, "length");
     this.head = head;
@@ -46949,7 +46556,7 @@ var StackItem = class {
     this.length = tail.length + 1;
   }
   push(head) {
-    return new StackItem(head, this);
+    return new _StackItem(head, this);
   }
   toArray() {
     return Array.from(this);
@@ -47019,7 +46626,7 @@ var HistoryManager = class {
       pushToRedoStack,
       toMark = void 0
     }) => {
-      var _a2;
+      var _a3;
       const previousState = this.state;
       this.state = "paused";
       try {
@@ -47032,7 +46639,7 @@ var HistoryManager = class {
         }
         let didFindMark = false;
         if (isPendingDiffEmpty) {
-          while (((_a2 = undos.head) == null ? void 0 : _a2.type) === "stop") {
+          while (((_a3 = undos.head) == null ? void 0 : _a3.type) === "stop") {
             const mark = undos.head;
             undos = undos.tail;
             if (pushToRedoStack) {
@@ -47045,27 +46652,24 @@ var HistoryManager = class {
           }
         }
         if (!didFindMark) {
-          loop:
-            while (undos.head) {
-              const undo = undos.head;
-              undos = undos.tail;
-              if (pushToRedoStack) {
-                redos = redos.push(undo);
-              }
-              switch (undo.type) {
-                case "diff":
-                  squashRecordDiffsMutable(diffToUndo, [reverseRecordsDiff(undo.diff)]);
-                  break;
-                case "stop":
-                  if (!toMark)
-                    break loop;
-                  if (undo.id === toMark)
-                    break loop;
-                  break;
-                default:
-                  exhaustiveSwitchError(undo);
-              }
+          loop: while (undos.head) {
+            const undo = undos.head;
+            undos = undos.tail;
+            if (pushToRedoStack) {
+              redos = redos.push(undo);
             }
+            switch (undo.type) {
+              case "diff":
+                squashRecordDiffsMutable(diffToUndo, [reverseRecordsDiff(undo.diff)]);
+                break;
+              case "stop":
+                if (!toMark) break loop;
+                if (undo.id === toMark) break loop;
+                break;
+              default:
+                exhaustiveSwitchError(undo);
+            }
+          }
         }
         this.store.applyDiff(diffToUndo, { ignoreEphemeralKeys: true });
         this.store.ensureStoreIsUsable();
@@ -47080,7 +46684,7 @@ var HistoryManager = class {
       return this;
     });
     __publicField(this, "redo", () => {
-      var _a2;
+      var _a3;
       const previousState = this.state;
       this.state = "paused";
       try {
@@ -47089,7 +46693,7 @@ var HistoryManager = class {
         if (redos.length === 0) {
           return this;
         }
-        while (((_a2 = redos.head) == null ? void 0 : _a2.type) === "stop") {
+        while (((_a3 = redos.head) == null ? void 0 : _a3.type) === "stop") {
           undos = undos.push(redos.head);
           redos = redos.tail;
         }
@@ -47121,7 +46725,7 @@ var HistoryManager = class {
       return this;
     });
     __publicField(this, "squashToMark", (id) => {
-      var _a2;
+      var _a3;
       let top = this.stacks.get().undos;
       const popped = [];
       while (top.head && !(top.head.type === "stop" && top.head.id === id)) {
@@ -47130,7 +46734,7 @@ var HistoryManager = class {
         }
         top = top.tail;
       }
-      if (!top.head || ((_a2 = top.head) == null ? void 0 : _a2.id) !== id) {
+      if (!top.head || ((_a3 = top.head) == null ? void 0 : _a3.id) !== id) {
         console.error("Could not find mark to squash to: ", id);
         return this;
       }
@@ -47155,12 +46759,11 @@ var HistoryManager = class {
       });
       return id;
     });
-    var _a2;
+    var _a3;
     this.store = opts.store;
-    this.annotateError = (_a2 = opts.annotateError) != null ? _a2 : noop;
+    this.annotateError = (_a3 = opts.annotateError) != null ? _a3 : noop;
     this.dispose = this.store.addHistoryInterceptor((entry, source) => {
-      if (source !== "user")
-        return;
+      if (source !== "user") return;
       switch (this.state) {
         case "recording":
           this.pendingDiff.apply(entry.changes);
@@ -47177,8 +46780,7 @@ var HistoryManager = class {
     });
   }
   flushPendingDiff() {
-    if (this.pendingDiff.isEmpty())
-      return;
+    if (this.pendingDiff.isEmpty()) return;
     const diff = this.pendingDiff.clear();
     this.stacks.update(({ undos, redos }) => ({
       undos: undos.push({ type: "diff", diff }),
@@ -47241,7 +46843,7 @@ var ScribbleManager = class {
     __publicField(this, "scribbleItems", /* @__PURE__ */ new Map());
     __publicField(this, "state", "paused");
     __publicField(this, "addScribble", (scribble, id = uniqueId()) => {
-      var _a2;
+      var _a3;
       const item = {
         id,
         scribble: {
@@ -47257,7 +46859,7 @@ var ScribbleManager = class {
           state: "starting"
         },
         timeoutMs: 0,
-        delayRemaining: (_a2 = scribble.delay) != null ? _a2 : 0,
+        delayRemaining: (_a3 = scribble.delay) != null ? _a3 : 0,
         prev: null,
         next: null
       };
@@ -47271,8 +46873,7 @@ var ScribbleManager = class {
      */
     __publicField(this, "stop", (id) => {
       const item = this.scribbleItems.get(id);
-      if (!item)
-        throw Error(`Scribble with id ${id} not found`);
+      if (!item) throw Error(`Scribble with id ${id} not found`);
       item.delayRemaining = Math.min(item.delayRemaining, 200);
       item.scribble.state = "stopping";
       return item;
@@ -47285,8 +46886,7 @@ var ScribbleManager = class {
      */
     __publicField(this, "addPoint", (id, x, y) => {
       const item = this.scribbleItems.get(id);
-      if (!item)
-        throw Error(`Scribble with id ${id} not found`);
+      if (!item) throw Error(`Scribble with id ${id} not found`);
       const { prev } = item;
       const point = { x, y, z: 0.5 };
       if (!prev || Vec.Dist(prev, point) >= 1) {
@@ -47301,8 +46901,7 @@ var ScribbleManager = class {
      * @public
      */
     __publicField(this, "tick", (elapsed) => {
-      if (this.scribbleItems.size === 0)
-        return;
+      if (this.scribbleItems.size === 0) return;
       this.editor.run(() => {
         this.scribbleItems.forEach((item) => {
           if (item.scribble.state === "starting") {
@@ -47385,13 +46984,12 @@ var ScribbleManager = class {
 // node_modules/@tldraw/editor/dist-esm/lib/editor/managers/SnapManager/BoundsSnaps.mjs
 var __defProp2 = Object.defineProperty;
 var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-var __decorateClass2 = (decorators, target, key, kind) => {
+var __decorateClass = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc2(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
     if (decorator = decorators[i])
       result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp2(target, key, result);
+  if (kind && result) __defProp2(target, key, result);
   return result;
 };
 var round = (x) => {
@@ -47407,8 +47005,7 @@ function findAdjacentGaps(gaps, shapeId, gapLength, direction, intersection) {
       intersection[1]
     )
   );
-  if (matches.length === 0)
-    return [];
+  if (matches.length === 0) return [];
   const nextNodes = /* @__PURE__ */ new Set();
   matches.forEach((match) => {
     const node = direction === "forward" ? match.endNode.id : match.startNode.id;
@@ -47459,14 +47056,12 @@ var BoundsSnaps = class {
   getSnapPointsCache() {
     const { editor } = this;
     return editor.store.createComputedCache("snapPoints", (shape) => {
-      var _a2;
+      var _a3;
       const pageTransform = editor.getShapePageTransform(shape.id);
-      if (!pageTransform)
-        return void 0;
+      if (!pageTransform) return void 0;
       const boundsSnapGeometry = editor.getShapeUtil(shape).getBoundsSnapGeometry(shape);
-      const snapPoints = (_a2 = boundsSnapGeometry.points) != null ? _a2 : editor.getShapeGeometry(shape).bounds.cornersAndCenter;
-      if (!pageTransform || !snapPoints)
-        return void 0;
+      const snapPoints = (_a3 = boundsSnapGeometry.points) != null ? _a3 : editor.getShapeGeometry(shape).bounds.cornersAndCenter;
+      if (!pageTransform || !snapPoints) return void 0;
       return snapPoints.map((point, i) => {
         const { x, y } = Mat.applyToPoint(pageTransform, point);
         return { x, y, id: `${shape.id}:${i}` };
@@ -47474,8 +47069,8 @@ var BoundsSnaps = class {
     });
   }
   getSnapPoints(shapeId) {
-    var _a2;
-    return (_a2 = this.getSnapPointsCache().get(shapeId)) != null ? _a2 : [];
+    var _a3;
+    return (_a3 = this.getSnapPointsCache().get(shapeId)) != null ? _a3 : [];
   }
   getSnappablePoints() {
     const snapPointsCache = this.getSnapPointsCache();
@@ -47585,7 +47180,7 @@ var BoundsSnaps = class {
     initialSelectionSnapPoints,
     dragDelta
   }) {
-    var _a2, _b2, _c, _d;
+    var _a3, _b2, _c, _d;
     const snapThreshold = this.manager.getSnapThreshold();
     const visibleSnapPointsNotInSelection = this.getSnappablePoints();
     const selectionPageBounds = initialSelectionPageBounds.clone().translate(dragDelta);
@@ -47614,7 +47209,7 @@ var BoundsSnaps = class {
       minOffset
     });
     const nudge = new Vec(
-      lockedAxis === "x" ? 0 : (_b2 = (_a2 = nearestSnapsX[0]) == null ? void 0 : _a2.nudge) != null ? _b2 : 0,
+      lockedAxis === "x" ? 0 : (_b2 = (_a3 = nearestSnapsX[0]) == null ? void 0 : _a3.nudge) != null ? _b2 : 0,
       lockedAxis === "y" ? 0 : (_d = (_c = nearestSnapsY[0]) == null ? void 0 : _c.nudge) != null ? _d : 0
     );
     minOffset.x = 0;
@@ -47658,7 +47253,7 @@ var BoundsSnaps = class {
     isAspectRatioLocked,
     isResizingFromCenter
   }) {
-    var _a2, _b2, _c, _d;
+    var _a3, _b2, _c, _d;
     const snapThreshold = this.manager.getSnapThreshold();
     const {
       box: unsnappedResizedPageBounds,
@@ -47696,7 +47291,7 @@ var BoundsSnaps = class {
       selectionSnapPoints
     });
     const nudge = new Vec(
-      isXLocked ? 0 : (_b2 = (_a2 = nearestSnapsX[0]) == null ? void 0 : _a2.nudge) != null ? _b2 : 0,
+      isXLocked ? 0 : (_b2 = (_a3 = nearestSnapsX[0]) == null ? void 0 : _a3.nudge) != null ? _b2 : 0,
       isYLocked ? 0 : (_d = (_c = nearestSnapsY[0]) == null ? void 0 : _c.nudge) != null ? _d : 0
     );
     if (isAspectRatioLocked && isSelectionCorner(handle) && nudge.len() !== 0) {
@@ -47977,8 +47572,7 @@ var BoundsSnaps = class {
     const result = [];
     if (nearestSnapsX.length > 0) {
       for (const snap of nearestSnapsX) {
-        if (snap.type === "points")
-          continue;
+        if (snap.type === "points") continue;
         const {
           gap: { breadthIntersection, startEdge, startNode, endNode, length, endEdge }
         } = snap;
@@ -48072,8 +47666,7 @@ var BoundsSnaps = class {
     }
     if (nearestSnapsY.length > 0) {
       for (const snap of nearestSnapsY) {
-        if (snap.type === "points")
-          continue;
+        if (snap.type === "points") continue;
         const {
           gap: { breadthIntersection, startEdge, startNode, endNode, length, endEdge }
         } = snap;
@@ -48170,16 +47763,16 @@ var BoundsSnaps = class {
     return result;
   }
 };
-__decorateClass2([
+__decorateClass([
   computed
 ], BoundsSnaps.prototype, "getSnapPointsCache", 1);
-__decorateClass2([
+__decorateClass([
   computed
 ], BoundsSnaps.prototype, "getSnappablePoints", 1);
-__decorateClass2([
+__decorateClass([
   computed
 ], BoundsSnaps.prototype, "getSnappableGapNodes", 1);
-__decorateClass2([
+__decorateClass([
   computed
 ], BoundsSnaps.prototype, "getVisibleGaps", 1);
 function getResizeSnapPointsForHandle(handle, selectionPageBounds) {
@@ -48239,13 +47832,12 @@ function getResizeSnapPointsForHandle(handle, selectionPageBounds) {
 // node_modules/@tldraw/editor/dist-esm/lib/editor/managers/SnapManager/HandleSnaps.mjs
 var __defProp3 = Object.defineProperty;
 var __getOwnPropDesc3 = Object.getOwnPropertyDescriptor;
-var __decorateClass3 = (decorators, target, key, kind) => {
+var __decorateClass2 = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc3(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
     if (decorator = decorators[i])
       result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp3(target, key, result);
+  if (kind && result) __defProp3(target, key, result);
   return result;
 };
 var defaultGetSelfSnapOutline = () => null;
@@ -48259,19 +47851,19 @@ var HandleSnaps = class {
   getSnapGeometryCache() {
     const { editor } = this;
     return editor.store.createComputedCache("handle snap geometry", (shape) => {
-      var _a2, _b2, _c;
+      var _a3, _b2, _c;
       const snapGeometry = editor.getShapeUtil(shape).getHandleSnapGeometry(shape);
       return {
         outline: snapGeometry.outline === void 0 ? editor.getShapeGeometry(shape) : snapGeometry.outline,
-        points: (_a2 = snapGeometry.points) != null ? _a2 : [],
+        points: (_a3 = snapGeometry.points) != null ? _a3 : [],
         getSelfSnapOutline: (_b2 = snapGeometry.getSelfSnapOutline) != null ? _b2 : defaultGetSelfSnapOutline,
         getSelfSnapPoints: (_c = snapGeometry.getSelfSnapPoints) != null ? _c : defaultGetSelfSnapPoints
       };
     });
   }
   *iterateSnapPointsInPageSpace(currentShapeId, currentHandle) {
-    var _a2, _b2;
-    const selfSnapPoints = (_a2 = this.getSnapGeometryCache().get(currentShapeId)) == null ? void 0 : _a2.getSelfSnapPoints(currentHandle);
+    var _a3, _b2;
+    const selfSnapPoints = (_a3 = this.getSnapGeometryCache().get(currentShapeId)) == null ? void 0 : _a3.getSelfSnapPoints(currentHandle);
     if (selfSnapPoints && selfSnapPoints.length) {
       const shapePageTransform = assertExists(this.editor.getShapePageTransform(currentShapeId));
       for (const point of selfSnapPoints) {
@@ -48279,11 +47871,9 @@ var HandleSnaps = class {
       }
     }
     for (const shapeId of this.manager.getSnappableShapes()) {
-      if (shapeId === currentShapeId)
-        continue;
+      if (shapeId === currentShapeId) continue;
       const snapPoints = (_b2 = this.getSnapGeometryCache().get(shapeId)) == null ? void 0 : _b2.points;
-      if (!snapPoints || !snapPoints.length)
-        continue;
+      if (!snapPoints || !snapPoints.length) continue;
       const shapePageTransform = assertExists(this.editor.getShapePageTransform(shapeId));
       for (const point of snapPoints) {
         yield shapePageTransform.applyToPoint(point);
@@ -48291,17 +47881,15 @@ var HandleSnaps = class {
     }
   }
   *iterateSnapOutlines(currentShapeId, currentHandle) {
-    var _a2, _b2;
-    const selfSnapOutline = (_a2 = this.getSnapGeometryCache().get(currentShapeId)) == null ? void 0 : _a2.getSelfSnapOutline(currentHandle);
+    var _a3, _b2;
+    const selfSnapOutline = (_a3 = this.getSnapGeometryCache().get(currentShapeId)) == null ? void 0 : _a3.getSelfSnapOutline(currentHandle);
     if (selfSnapOutline) {
       yield { shapeId: currentShapeId, outline: selfSnapOutline };
     }
     for (const shapeId of this.manager.getSnappableShapes()) {
-      if (shapeId === currentShapeId)
-        continue;
+      if (shapeId === currentShapeId) continue;
       const snapOutline = (_b2 = this.getSnapGeometryCache().get(shapeId)) == null ? void 0 : _b2.outline;
-      if (!snapOutline)
-        continue;
+      if (!snapOutline) continue;
       yield { shapeId, outline: snapOutline };
     }
   }
@@ -48319,8 +47907,7 @@ var HandleSnaps = class {
         nearestSnapPoint = snapPoint;
       }
     }
-    if (nearestSnapPoint)
-      return nearestSnapPoint;
+    if (nearestSnapPoint) return nearestSnapPoint;
     let minDistanceForOutline = snapThreshold;
     let nearestPointOnOutline = null;
     for (const { shapeId, outline } of this.iterateSnapOutlines(currentShapeId, handle)) {
@@ -48333,8 +47920,7 @@ var HandleSnaps = class {
         nearestPointOnOutline = nearestInPageSpace;
       }
     }
-    if (nearestPointOnOutline)
-      return nearestPointOnOutline;
+    if (nearestPointOnOutline) return nearestPointOnOutline;
     return null;
   }
   snapHandle({
@@ -48357,20 +47943,19 @@ var HandleSnaps = class {
     return null;
   }
 };
-__decorateClass3([
+__decorateClass2([
   computed
 ], HandleSnaps.prototype, "getSnapGeometryCache", 1);
 
 // node_modules/@tldraw/editor/dist-esm/lib/editor/managers/SnapManager/SnapManager.mjs
 var __defProp4 = Object.defineProperty;
 var __getOwnPropDesc4 = Object.getOwnPropertyDescriptor;
-var __decorateClass4 = (decorators, target, key, kind) => {
+var __decorateClass3 = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc4(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
     if (decorator = decorators[i])
       result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp4(target, key, result);
+  if (kind && result) __defProp4(target, key, result);
   return result;
 };
 var SnapManager = class {
@@ -48383,8 +47968,8 @@ var SnapManager = class {
     this.handles = new HandleSnaps(this);
   }
   getIndicators() {
-    var _a2;
-    return (_a2 = this._snapIndicators.get()) != null ? _a2 : EMPTY_ARRAY;
+    var _a3;
+    return (_a3 = this._snapIndicators.get()) != null ? _a3 : EMPTY_ARRAY;
   }
   clearIndicators() {
     if (this.getIndicators().length) {
@@ -48398,7 +47983,7 @@ var SnapManager = class {
     return 8 / this.editor.getZoomLevel();
   }
   getSnappableShapes() {
-    var _a2;
+    var _a3;
     const { editor } = this;
     const renderingBounds = editor.getViewportPageBounds();
     const selectedShapeIds = editor.getSelectedShapeIds();
@@ -48412,17 +47997,13 @@ var SnapManager = class {
       }
       const sortedChildIds = editor.getSortedChildIdsForParent(parentId);
       for (const childId of sortedChildIds) {
-        if (selectedShapeIds.includes(childId))
-          continue;
+        if (selectedShapeIds.includes(childId)) continue;
         const childShape = editor.getShape(childId);
-        if (!childShape)
-          continue;
+        if (!childShape) continue;
         const util = editor.getShapeUtil(childShape);
-        if (!util.canSnap(childShape))
-          continue;
+        if (!util.canSnap(childShape)) continue;
         const pageBounds = editor.getShapePageBounds(childId);
-        if (!(pageBounds && renderingBounds.includes(pageBounds)))
-          continue;
+        if (!(pageBounds && renderingBounds.includes(pageBounds))) continue;
         if (editor.isShapeOfType(childShape, "group")) {
           collectSnappableShapesFromParent(childId);
           continue;
@@ -48430,20 +48011,20 @@ var SnapManager = class {
         snappableShapes.add(childId);
       }
     };
-    collectSnappableShapesFromParent((_a2 = this.getCurrentCommonAncestor()) != null ? _a2 : editor.getCurrentPageId());
+    collectSnappableShapesFromParent((_a3 = this.getCurrentCommonAncestor()) != null ? _a3 : editor.getCurrentPageId());
     return snappableShapes;
   }
   getCurrentCommonAncestor() {
     return this.editor.findCommonAncestor(this.editor.getSelectedShapes());
   }
 };
-__decorateClass4([
+__decorateClass3([
   computed
 ], SnapManager.prototype, "getSnapThreshold", 1);
-__decorateClass4([
+__decorateClass3([
   computed
 ], SnapManager.prototype, "getSnappableShapes", 1);
-__decorateClass4([
+__decorateClass3([
   computed
 ], SnapManager.prototype, "getCurrentCommonAncestor", 1);
 
@@ -48465,8 +48046,8 @@ var TextManager = class {
   constructor(editor) {
     __publicField(this, "baseElm");
     __publicField(this, "measureText", (textToMeasure, opts) => {
-      var _a2;
-      const elm = (_a2 = this.baseElm) == null ? void 0 : _a2.cloneNode();
+      var _a3;
+      const elm = (_a3 = this.baseElm) == null ? void 0 : _a3.cloneNode();
       this.baseElm.insertAdjacentElement("afterend", elm);
       elm.setAttribute("dir", "auto");
       elm.style.setProperty("unicode-bidi", "plaintext");
@@ -48511,7 +48092,7 @@ var TextManager = class {
    * word/white-space characters within any text nodes it contains.
    */
   measureElementTextNodeSpans(element, { shouldTruncateToFirstLine = false } = {}) {
-    var _a2;
+    var _a3;
     const spans = [];
     const elmBounds = element.getBoundingClientRect();
     const offsetX = -elmBounds.left;
@@ -48525,9 +48106,8 @@ var TextManager = class {
     let prevCharLeftForRTLTest = 0;
     let didTruncate = false;
     for (const childNode of element.childNodes) {
-      if (childNode.nodeType !== Node.TEXT_NODE)
-        continue;
-      for (const char of (_a2 = childNode.textContent) != null ? _a2 : "") {
+      if (childNode.nodeType !== Node.TEXT_NODE) continue;
+      for (const char of (_a3 = childNode.textContent) != null ? _a3 : "") {
         range.setStart(textNode, idx);
         range.setEnd(textNode, idx + char.length);
         const rects = range.getClientRects();
@@ -48584,10 +48164,9 @@ var TextManager = class {
    * algorithm of the current browser in e.g. an SVG export.
    */
   measureTextSpans(textToMeasure, opts) {
-    var _a2;
-    if (textToMeasure === "")
-      return [];
-    const elm = (_a2 = this.baseElm) == null ? void 0 : _a2.cloneNode();
+    var _a3;
+    if (textToMeasure === "") return [];
+    const elm = (_a3 = this.baseElm) == null ? void 0 : _a3.cloneNode();
     this.baseElm.insertAdjacentElement("afterend", elm);
     const elementWidth = Math.ceil(opts.width - opts.padding * 2);
     elm.setAttribute("dir", "auto");
@@ -48649,9 +48228,9 @@ var TickManager = class {
     __publicField(this, "isPaused", true);
     __publicField(this, "now", 0);
     __publicField(this, "start", () => {
-      var _a2;
+      var _a3;
       this.isPaused = false;
-      (_a2 = this.cancelRaf) == null ? void 0 : _a2.call(this);
+      (_a3 = this.cancelRaf) == null ? void 0 : _a3.call(this);
       this.cancelRaf = throttleToNextFrame2(this.tick);
       this.now = Date.now();
     });
@@ -48669,9 +48248,9 @@ var TickManager = class {
     });
     // Clear the listener
     __publicField(this, "dispose", () => {
-      var _a2;
+      var _a3;
       this.isPaused = true;
-      (_a2 = this.cancelRaf) == null ? void 0 : _a2.call(this);
+      (_a3 = this.cancelRaf) == null ? void 0 : _a3.call(this);
     });
     __publicField(this, "prevPoint", new Vec());
     __publicField(this, "updatePointerVelocity", (elapsed) => {
@@ -48681,17 +48260,14 @@ var TickManager = class {
           inputs: { currentScreenPoint, pointerVelocity }
         }
       } = this;
-      if (elapsed === 0)
-        return;
+      if (elapsed === 0) return;
       const delta = Vec.Sub(currentScreenPoint, prevPoint);
       this.prevPoint = currentScreenPoint.clone();
       const length = delta.len();
       const direction = length ? delta.div(length) : new Vec(0, 0);
       const next = pointerVelocity.clone().lrp(direction.mul(length / elapsed), 0.5);
-      if (Math.abs(next.x) < 0.01)
-        next.x = 0;
-      if (Math.abs(next.y) < 0.01)
-        next.y = 0;
+      if (Math.abs(next.x) < 0.01) next.x = 0;
+      if (Math.abs(next.y) < 0.01) next.y = 0;
       if (!pointerVelocity.equals(next)) {
         this.editor.inputs.pointerVelocity = next;
       }
@@ -48705,13 +48281,12 @@ var TickManager = class {
 // node_modules/@tldraw/editor/dist-esm/lib/editor/managers/UserPreferencesManager.mjs
 var __defProp5 = Object.defineProperty;
 var __getOwnPropDesc5 = Object.getOwnPropertyDescriptor;
-var __decorateClass5 = (decorators, target, key, kind) => {
+var __decorateClass4 = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc5(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
     if (decorator = decorators[i])
       result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp5(target, key, result);
+  if (kind && result) __defProp5(target, key, result);
   return result;
 };
 var UserPreferencesManager = class {
@@ -48725,8 +48300,7 @@ var UserPreferencesManager = class {
     });
     this.user = user;
     this.inferDarkMode = inferDarkMode;
-    if (typeof window === "undefined" || !("matchMedia" in window))
-      return;
+    if (typeof window === "undefined" || !("matchMedia" in window)) return;
     const darkModeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     if (darkModeMediaQuery == null ? void 0 : darkModeMediaQuery.matches) {
       this.systemColorScheme.set("dark");
@@ -48766,79 +48340,79 @@ var UserPreferencesManager = class {
     }
   }
   getEdgeScrollSpeed() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().edgeScrollSpeed) != null ? _a2 : defaultUserPreferences.edgeScrollSpeed;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().edgeScrollSpeed) != null ? _a3 : defaultUserPreferences.edgeScrollSpeed;
   }
   getAnimationSpeed() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().animationSpeed) != null ? _a2 : defaultUserPreferences.animationSpeed;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().animationSpeed) != null ? _a3 : defaultUserPreferences.animationSpeed;
   }
   getId() {
     return this.user.userPreferences.get().id;
   }
   getName() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().name) != null ? _a2 : defaultUserPreferences.name;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().name) != null ? _a3 : defaultUserPreferences.name;
   }
   getLocale() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().locale) != null ? _a2 : defaultUserPreferences.locale;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().locale) != null ? _a3 : defaultUserPreferences.locale;
   }
   getColor() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().color) != null ? _a2 : defaultUserPreferences.color;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().color) != null ? _a3 : defaultUserPreferences.color;
   }
   getIsSnapMode() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().isSnapMode) != null ? _a2 : defaultUserPreferences.isSnapMode;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().isSnapMode) != null ? _a3 : defaultUserPreferences.isSnapMode;
   }
   getIsWrapMode() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().isWrapMode) != null ? _a2 : defaultUserPreferences.isWrapMode;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().isWrapMode) != null ? _a3 : defaultUserPreferences.isWrapMode;
   }
   getIsDynamicResizeMode() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().isDynamicSizeMode) != null ? _a2 : defaultUserPreferences.isDynamicSizeMode;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().isDynamicSizeMode) != null ? _a3 : defaultUserPreferences.isDynamicSizeMode;
   }
   getIsPasteAtCursorMode() {
-    var _a2;
-    return (_a2 = this.user.userPreferences.get().isPasteAtCursorMode) != null ? _a2 : defaultUserPreferences.isPasteAtCursorMode;
+    var _a3;
+    return (_a3 = this.user.userPreferences.get().isPasteAtCursorMode) != null ? _a3 : defaultUserPreferences.isPasteAtCursorMode;
   }
 };
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getUserPreferences", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getIsDarkMode", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getEdgeScrollSpeed", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getAnimationSpeed", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getId", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getName", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getLocale", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getColor", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getIsSnapMode", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getIsWrapMode", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getIsDynamicResizeMode", 1);
-__decorateClass5([
+__decorateClass4([
   computed
 ], UserPreferencesManager.prototype, "getIsPasteAtCursorMode", 1);
 
@@ -48905,13 +48479,13 @@ var StateNode = class {
      * @public
      */
     __publicField(this, "transition", (id, info = {}) => {
-      var _a2;
+      var _a3;
       const path = id.split(".");
       let currState = this;
       for (let i = 0; i < path.length; i++) {
         const id2 = path[i];
         const prevChildState = currState.getCurrent();
-        const nextChildState = (_a2 = currState.children) == null ? void 0 : _a2[id2];
+        const nextChildState = (_a3 = currState.children) == null ? void 0 : _a3[id2];
         if (!nextChildState) {
           throw Error(`${currState.id} - no child state exists with the id ${id2}.`);
         }
@@ -48919,30 +48493,29 @@ var StateNode = class {
           prevChildState == null ? void 0 : prevChildState.exit(info, id2);
           currState._current.set(nextChildState);
           nextChildState.enter(info, (prevChildState == null ? void 0 : prevChildState.id) || "initial");
-          if (!nextChildState.getIsActive())
-            break;
+          if (!nextChildState.getIsActive()) break;
         }
         currState = nextChildState;
       }
       return this;
     });
     __publicField(this, "handleEvent", (info) => {
-      var _a2;
+      var _a3;
       const cbName = EVENT_NAME_MAP[info.name];
       const currentActiveChild = this._current.__unsafe__getWithoutCapture();
-      (_a2 = this[cbName]) == null ? void 0 : _a2.call(this, info);
+      (_a3 = this[cbName]) == null ? void 0 : _a3.call(this, info);
       if (this._isActive.__unsafe__getWithoutCapture() && currentActiveChild && currentActiveChild === this._current.__unsafe__getWithoutCapture()) {
         currentActiveChild.handleEvent(info);
       }
     });
     // todo: move this logic into transition
     __publicField(this, "enter", (info, from) => {
-      var _a2;
+      var _a3;
       if (debugFlags.measurePerformance.get() && STATE_NODES_TO_MEASURE.includes(this.id)) {
         this.performanceTracker.start(this.id);
       }
       this._isActive.set(true);
-      (_a2 = this.onEnter) == null ? void 0 : _a2.call(this, info, from);
+      (_a3 = this.onEnter) == null ? void 0 : _a3.call(this, info, from);
       if (this.children && this.initial && this.getIsActive()) {
         const initial = this.children[this.initial];
         this._current.set(initial);
@@ -48951,12 +48524,12 @@ var StateNode = class {
     });
     // todo: move this logic into transition
     __publicField(this, "exit", (info, from) => {
-      var _a2, _b2;
+      var _a3, _b2;
       if (debugFlags.measurePerformance.get() && this.performanceTracker.isStarted()) {
         this.performanceTracker.stop();
       }
       this._isActive.set(false);
-      (_a2 = this.onExit) == null ? void 0 : _a2.call(this, info, from);
+      (_a3 = this.onExit) == null ? void 0 : _a3.call(this, info, from);
       if (!this.getIsActive()) {
         (_b2 = this.getCurrent()) == null ? void 0 : _b2.exit(info, from);
       }
@@ -49066,12 +48639,12 @@ var RootState = class extends StateNode {
   constructor() {
     super(...arguments);
     __publicField(this, "onKeyDown", (info) => {
-      var _a2;
+      var _a3;
       switch (info.code) {
         case "KeyZ": {
           if (!(info.shiftKey || info.ctrlKey)) {
             const currentTool = this.getCurrent();
-            if (currentTool && ((_a2 = currentTool.getCurrent()) == null ? void 0 : _a2.id) === "idle" && this.children["zoom"]) {
+            if (currentTool && ((_a3 = currentTool.getCurrent()) == null ? void 0 : _a3.id) === "idle" && this.children["zoom"]) {
               this.editor.setCurrentTool("zoom", { ...info, onInteractionEnd: currentTool.id });
             }
           }
@@ -49088,13 +48661,12 @@ __publicField(RootState, "children", () => []);
 // node_modules/@tldraw/editor/dist-esm/lib/editor/Editor.mjs
 var __defProp6 = Object.defineProperty;
 var __getOwnPropDesc6 = Object.getOwnPropertyDescriptor;
-var __decorateClass6 = (decorators, target, key, kind) => {
+var __decorateClass5 = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc6(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
     if (decorator = decorators[i])
       result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp6(target, key, result);
+  if (kind && result) __defProp6(target, key, result);
   return result;
 };
 var Editor = class extends import_eventemitter3.default {
@@ -49111,7 +48683,7 @@ var Editor = class extends import_eventemitter3.default {
     inferDarkMode,
     options
   }) {
-    var _a2;
+    var _a3;
     super();
     __publicField(this, "options");
     /**
@@ -49258,8 +48830,8 @@ var Editor = class extends import_eventemitter3.default {
       return this;
     });
     __publicField(this, "_updateCurrentPageState", (partial) => {
-      var _a2;
-      this.store.update((_a2 = partial.id) != null ? _a2 : this.getCurrentPageState().id, (state) => ({
+      var _a3;
+      this.store.update((_a3 = partial.id) != null ? _a3 : this.getCurrentPageState().id, (state) => ({
         ...state,
         ...partial
       }));
@@ -49284,15 +48856,13 @@ var Editor = class extends import_eventemitter3.default {
     __publicField(this, "_cameraStateTimeoutRemaining", 0);
     __publicField(this, "_decayCameraStateTimeout", (elapsed) => {
       this._cameraStateTimeoutRemaining -= elapsed;
-      if (this._cameraStateTimeoutRemaining > 0)
-        return;
+      if (this._cameraStateTimeoutRemaining > 0) return;
       this.off("tick", this._decayCameraStateTimeout);
       this._cameraState.set("idle");
     });
     __publicField(this, "_tickCameraState", () => {
       this._cameraStateTimeoutRemaining = this.options.cameraMovingTimeoutMs;
-      if (this._cameraState.__unsafe__getWithoutCapture() !== "idle")
-        return;
+      if (this._cameraState.__unsafe__getWithoutCapture() !== "idle") return;
       this._cameraState.set("moving");
       this.on("tick", this._decayCameraStateTimeout);
     });
@@ -49308,24 +48878,20 @@ var Editor = class extends import_eventemitter3.default {
     __publicField(this, "animatingShapes", /* @__PURE__ */ new Map());
     /** @internal */
     __publicField(this, "_updateShapes", (_partials) => {
-      if (this.getInstanceState().isReadonly)
-        return;
+      if (this.getInstanceState().isReadonly) return;
       this.run(() => {
-        var _a2, _b2, _c;
+        var _a3, _b2, _c;
         const updates = [];
         let shape;
         let updated;
         for (let i = 0, n2 = _partials.length; i < n2; i++) {
           const partial = _partials[i];
-          if (!partial)
-            continue;
+          if (!partial) continue;
           shape = this.getShape(partial.id);
-          if (!shape)
-            continue;
+          if (!shape) continue;
           updated = applyPartialToRecordWithProps(shape, partial);
-          if (updated === shape)
-            continue;
-          updated = (_c = (_b2 = (_a2 = this.getShapeUtil(shape)).onBeforeUpdate) == null ? void 0 : _b2.call(_a2, shape, updated)) != null ? _c : updated;
+          if (updated === shape) continue;
+          updated = (_c = (_b2 = (_a3 = this.getShapeUtil(shape)).onBeforeUpdate) == null ? void 0 : _b2.call(_a3, shape, updated)) != null ? _c : updated;
           updates.push(updated);
         }
         this.store.put(updates);
@@ -49483,8 +49049,7 @@ var Editor = class extends import_eventemitter3.default {
     });
     __publicField(this, "_pendingEventsForNextTick", []);
     __publicField(this, "_flushEventForTick", (info) => {
-      if (this.getCrashingError())
-        return this;
+      if (this.getCrashingError()) return this;
       const { inputs } = this;
       const { type } = info;
       if (info.type === "misc") {
@@ -49528,14 +49093,12 @@ var Editor = class extends import_eventemitter3.default {
       const cameraOptions = this._cameraOptions.__unsafe__getWithoutCapture();
       switch (type) {
         case "pinch": {
-          if (cameraOptions.isLocked)
-            return;
+          if (cameraOptions.isLocked) return;
           clearTimeout(this._longPressTimeout);
           this._updateInputsFromEvent(info);
           switch (info.name) {
             case "pinch_start": {
-              if (inputs.isPinching)
-                return;
+              if (inputs.isPinching) return;
               if (!inputs.isEditing) {
                 this._pinchStart = this.getCamera().z;
                 if (!this._selectedShapeIdsAtPointerDown.length) {
@@ -49548,8 +49111,7 @@ var Editor = class extends import_eventemitter3.default {
               return;
             }
             case "pinch": {
-              if (!inputs.isPinching)
-                return;
+              if (!inputs.isPinching) return;
               const {
                 point: { z = 1 },
                 delta: { x: dx, y: dy }
@@ -49576,8 +49138,7 @@ var Editor = class extends import_eventemitter3.default {
               return;
             }
             case "pinch_end": {
-              if (!inputs.isPinching)
-                return this;
+              if (!inputs.isPinching) return this;
               inputs.isPinching = false;
               const { _selectedShapeIdsAtPointerDown: shapesToReselect } = this;
               this.setSelectedShapes(this._selectedShapeIdsAtPointerDown);
@@ -49597,8 +49158,7 @@ var Editor = class extends import_eventemitter3.default {
           }
         }
         case "wheel": {
-          if (cameraOptions.isLocked)
-            return;
+          if (cameraOptions.isLocked) return;
           this._updateInputsFromEvent(info);
           if (this.getIsMenuOpen()) {
           } else {
@@ -49611,8 +49171,7 @@ var Editor = class extends import_eventemitter3.default {
               const { x: cx, y: cy, z: cz } = unsafe__withoutCapture(() => this.getCamera());
               const { x: dx, y: dy, z: dz = 0 } = info.delta;
               let behavior = wheelBehavior;
-              if (inputs.ctrlKey)
-                behavior = wheelBehavior === "pan" ? "zoom" : "pan";
+              if (inputs.ctrlKey) behavior = wheelBehavior === "pan" ? "zoom" : "pan";
               switch (behavior) {
                 case "zoom": {
                   const { x, y } = this.inputs.currentScreenPoint;
@@ -49649,15 +49208,13 @@ var Editor = class extends import_eventemitter3.default {
           break;
         }
         case "pointer": {
-          if (inputs.isPinching)
-            return;
+          if (inputs.isPinching) return;
           this._updateInputsFromEvent(info);
           const { isPen } = info;
           const { isPenMode } = instanceState;
           switch (info.name) {
             case "pointer_down": {
-              if (isPenMode && !isPen)
-                return;
+              if (isPenMode && !isPen) return;
               this.clearOpenMenus();
               if (!this.inputs.isPanning) {
                 this._longPressTimeout = this.timers.setTimeout(() => {
@@ -49669,13 +49226,11 @@ var Editor = class extends import_eventemitter3.default {
                 }, this.options.longPressDurationMs);
               }
               this._selectedShapeIdsAtPointerDown = this.getSelectedShapeIds();
-              if (info.button === LEFT_MOUSE_BUTTON)
-                this.capturedPointerId = info.pointerId;
+              if (info.button === LEFT_MOUSE_BUTTON) this.capturedPointerId = info.pointerId;
               inputs.buttons.add(info.button);
               inputs.isPointing = true;
               inputs.isDragging = false;
-              if (!isPenMode && isPen)
-                this.updateInstanceState({ isPenMode: true });
+              if (!isPenMode && isPen) this.updateInstanceState({ isPenMode: true });
               if (info.button === STYLUS_ERASER_BUTTON) {
                 this._restoreToolId = this.getCurrentToolId();
                 this.complete();
@@ -49695,8 +49250,7 @@ var Editor = class extends import_eventemitter3.default {
               break;
             }
             case "pointer_move": {
-              if (!isPen && isPenMode)
-                return;
+              if (!isPen && isPenMode) return;
               const { x: cx, y: cy, z: cz } = unsafe__withoutCapture(() => this.getCamera());
               if (this.inputs.isPanning && this.inputs.isPointing) {
                 const { currentScreenPoint, previousScreenPoint } = this.inputs;
@@ -49720,10 +49274,8 @@ var Editor = class extends import_eventemitter3.default {
               inputs.isPointing = false;
               clearTimeout(this._longPressTimeout);
               inputs.buttons.delete(info.button);
-              if (this.getIsMenuOpen())
-                return;
-              if (instanceState.isPenMode && !isPen)
-                return;
+              if (this.getIsMenuOpen()) return;
+              if (instanceState.isPenMode && !isPen) return;
               if (this.capturedPointerId === info.pointerId) {
                 this.capturedPointerId = null;
                 info.button = 0;
@@ -49762,12 +49314,9 @@ var Editor = class extends import_eventemitter3.default {
           break;
         }
         case "keyboard": {
-          if (info.key === "ShiftRight")
-            info.key = "ShiftLeft";
-          if (info.key === "AltRight")
-            info.key = "AltLeft";
-          if (info.code === "ControlRight")
-            info.code = "ControlLeft";
+          if (info.key === "ShiftRight") info.key = "ShiftLeft";
+          if (info.key === "AltRight") info.key = "AltLeft";
+          if (info.code === "ControlRight") info.code = "ControlLeft";
           switch (info.name) {
             case "key_down": {
               inputs.keys.add(info.code);
@@ -49851,7 +49400,7 @@ var Editor = class extends import_eventemitter3.default {
     for (const Util of allShapeUtils) {
       const util = new Util(this);
       _shapeUtils[Util.type] = util;
-      const propKeysByStyle = getShapePropKeysByStyle((_a2 = Util.props) != null ? _a2 : {});
+      const propKeysByStyle = getShapePropKeysByStyle((_a3 = Util.props) != null ? _a3 : {});
       _styleProps[Util.type] = propKeysByStyle;
       for (const style of propKeysByStyle.keys()) {
         if (!allStylesById.has(style.id)) {
@@ -49886,39 +49435,33 @@ var Editor = class extends import_eventemitter3.default {
         (id) => !shapesNoLongerInPage.has(id)
       );
       if (selectedShapeIds.length !== prevPageState.selectedShapeIds.length) {
-        if (!nextPageState)
-          nextPageState = { ...prevPageState };
+        if (!nextPageState) nextPageState = { ...prevPageState };
         nextPageState.selectedShapeIds = selectedShapeIds;
       }
       const erasingShapeIds = prevPageState.erasingShapeIds.filter(
         (id) => !shapesNoLongerInPage.has(id)
       );
       if (erasingShapeIds.length !== prevPageState.erasingShapeIds.length) {
-        if (!nextPageState)
-          nextPageState = { ...prevPageState };
+        if (!nextPageState) nextPageState = { ...prevPageState };
         nextPageState.erasingShapeIds = erasingShapeIds;
       }
       if (prevPageState.hoveredShapeId && shapesNoLongerInPage.has(prevPageState.hoveredShapeId)) {
-        if (!nextPageState)
-          nextPageState = { ...prevPageState };
+        if (!nextPageState) nextPageState = { ...prevPageState };
         nextPageState.hoveredShapeId = null;
       }
       if (prevPageState.editingShapeId && shapesNoLongerInPage.has(prevPageState.editingShapeId)) {
-        if (!nextPageState)
-          nextPageState = { ...prevPageState };
+        if (!nextPageState) nextPageState = { ...prevPageState };
         nextPageState.editingShapeId = null;
       }
       const hintingShapeIds = prevPageState.hintingShapeIds.filter(
         (id) => !shapesNoLongerInPage.has(id)
       );
       if (hintingShapeIds.length !== prevPageState.hintingShapeIds.length) {
-        if (!nextPageState)
-          nextPageState = { ...prevPageState };
+        if (!nextPageState) nextPageState = { ...prevPageState };
         nextPageState.hintingShapeIds = hintingShapeIds;
       }
       if (prevPageState.focusedGroupId && shapesNoLongerInPage.has(prevPageState.focusedGroupId)) {
-        if (!nextPageState)
-          nextPageState = { ...prevPageState };
+        if (!nextPageState) nextPageState = { ...prevPageState };
         nextPageState.focusedGroupId = null;
       }
       return nextPageState;
@@ -49930,15 +49473,14 @@ var Editor = class extends import_eventemitter3.default {
     let invalidBindingTypes = /* @__PURE__ */ new Set();
     this.disposables.add(
       this.sideEffects.registerOperationCompleteHandler(() => {
-        var _a3, _b2, _c, _d;
+        var _a4, _b2, _c, _d;
         deletedShapeIds.clear();
         for (const parentId of invalidParents) {
           invalidParents.delete(parentId);
           const parent = this.getShape(parentId);
-          if (!parent)
-            continue;
+          if (!parent) continue;
           const util = this.getShapeUtil(parent);
-          const changes = (_a3 = util.onChildrenChange) == null ? void 0 : _a3.call(util, parent);
+          const changes = (_a4 = util.onChildrenChange) == null ? void 0 : _a4.call(util, parent);
           if (changes == null ? void 0 : changes.length) {
             this.updateShapes(changes);
           }
@@ -49965,11 +49507,11 @@ var Editor = class extends import_eventemitter3.default {
       this.sideEffects.register({
         shape: {
           afterChange: (shapeBefore, shapeAfter) => {
-            var _a3, _b2, _c, _d;
+            var _a4, _b2, _c, _d;
             for (const binding of this.getBindingsInvolvingShape(shapeAfter)) {
               invalidBindingTypes.add(binding.type);
               if (binding.fromId === shapeAfter.id) {
-                (_b2 = (_a3 = this.getBindingUtil(binding)).onAfterChangeFromShape) == null ? void 0 : _b2.call(_a3, {
+                (_b2 = (_a4 = this.getBindingUtil(binding)).onAfterChangeFromShape) == null ? void 0 : _b2.call(_a4, {
                   binding,
                   shapeBefore,
                   shapeAfter
@@ -49985,14 +49527,13 @@ var Editor = class extends import_eventemitter3.default {
             }
             if (shapeBefore.parentId !== shapeAfter.parentId) {
               const notifyBindingAncestryChange = (id) => {
-                var _a4, _b3, _c2, _d2;
+                var _a5, _b3, _c2, _d2;
                 const descendantShape = this.getShape(id);
-                if (!descendantShape)
-                  return;
+                if (!descendantShape) return;
                 for (const binding of this.getBindingsInvolvingShape(descendantShape)) {
                   invalidBindingTypes.add(binding.type);
                   if (binding.fromId === descendantShape.id) {
-                    (_b3 = (_a4 = this.getBindingUtil(binding)).onAfterChangeFromShape) == null ? void 0 : _b3.call(_a4, {
+                    (_b3 = (_a5 = this.getBindingUtil(binding)).onAfterChangeFromShape) == null ? void 0 : _b3.call(_a5, {
                       binding,
                       shapeBefore: descendantShape,
                       shapeAfter: descendantShape
@@ -50016,8 +49557,7 @@ var Editor = class extends import_eventemitter3.default {
                 allMovingIds.add(id);
               });
               for (const instancePageState of this.getPageStates()) {
-                if (instancePageState.pageId === shapeAfter.parentId)
-                  continue;
+                if (instancePageState.pageId === shapeAfter.parentId) continue;
                 const nextPageState = cleanupInstancePageState(instancePageState, allMovingIds);
                 if (nextPageState) {
                   this.store.put([nextPageState]);
@@ -50032,9 +49572,8 @@ var Editor = class extends import_eventemitter3.default {
             }
           },
           beforeDelete: (shape) => {
-            var _a3, _b2, _c, _d;
-            if (deletedShapeIds.has(shape.id))
-              return;
+            var _a4, _b2, _c, _d;
+            if (deletedShapeIds.has(shape.id)) return;
             if (shape.parentId && isShapeId(shape.parentId)) {
               invalidParents.add(shape.parentId);
             }
@@ -50045,7 +49584,7 @@ var Editor = class extends import_eventemitter3.default {
               deleteBindingIds.push(binding.id);
               const util = this.getBindingUtil(binding);
               if (binding.fromId === shape.id) {
-                (_a3 = util.onBeforeIsolateToShape) == null ? void 0 : _a3.call(util, { binding, removedShape: shape });
+                (_a4 = util.onBeforeIsolateToShape) == null ? void 0 : _a4.call(util, { binding, removedShape: shape });
                 (_b2 = util.onBeforeDeleteFromShape) == null ? void 0 : _b2.call(util, { binding, shape });
               } else {
                 (_c = util.onBeforeIsolateFromShape) == null ? void 0 : _c.call(util, { binding, removedShape: shape });
@@ -50068,39 +49607,37 @@ var Editor = class extends import_eventemitter3.default {
         },
         binding: {
           beforeCreate: (binding) => {
-            var _a3, _b2;
-            const next = (_b2 = (_a3 = this.getBindingUtil(binding)).onBeforeCreate) == null ? void 0 : _b2.call(_a3, { binding });
-            if (next)
-              return next;
+            var _a4, _b2;
+            const next = (_b2 = (_a4 = this.getBindingUtil(binding)).onBeforeCreate) == null ? void 0 : _b2.call(_a4, { binding });
+            if (next) return next;
             return binding;
           },
           afterCreate: (binding) => {
-            var _a3, _b2;
+            var _a4, _b2;
             invalidBindingTypes.add(binding.type);
-            (_b2 = (_a3 = this.getBindingUtil(binding)).onAfterCreate) == null ? void 0 : _b2.call(_a3, { binding });
+            (_b2 = (_a4 = this.getBindingUtil(binding)).onAfterCreate) == null ? void 0 : _b2.call(_a4, { binding });
           },
           beforeChange: (bindingBefore, bindingAfter) => {
-            var _a3, _b2;
-            const updated = (_b2 = (_a3 = this.getBindingUtil(bindingAfter)).onBeforeChange) == null ? void 0 : _b2.call(_a3, {
+            var _a4, _b2;
+            const updated = (_b2 = (_a4 = this.getBindingUtil(bindingAfter)).onBeforeChange) == null ? void 0 : _b2.call(_a4, {
               bindingBefore,
               bindingAfter
             });
-            if (updated)
-              return updated;
+            if (updated) return updated;
             return bindingAfter;
           },
           afterChange: (bindingBefore, bindingAfter) => {
-            var _a3, _b2;
+            var _a4, _b2;
             invalidBindingTypes.add(bindingAfter.type);
-            (_b2 = (_a3 = this.getBindingUtil(bindingAfter)).onAfterChange) == null ? void 0 : _b2.call(_a3, { bindingBefore, bindingAfter });
+            (_b2 = (_a4 = this.getBindingUtil(bindingAfter)).onAfterChange) == null ? void 0 : _b2.call(_a4, { bindingBefore, bindingAfter });
           },
           beforeDelete: (binding) => {
-            var _a3, _b2;
-            (_b2 = (_a3 = this.getBindingUtil(binding)).onBeforeDelete) == null ? void 0 : _b2.call(_a3, { binding });
+            var _a4, _b2;
+            (_b2 = (_a4 = this.getBindingUtil(binding)).onBeforeDelete) == null ? void 0 : _b2.call(_a4, { binding });
           },
           afterDelete: (binding) => {
-            var _a3, _b2;
-            (_b2 = (_a3 = this.getBindingUtil(binding)).onAfterDelete) == null ? void 0 : _b2.call(_a3, { binding });
+            var _a4, _b2;
+            (_b2 = (_a4 = this.getBindingUtil(binding)).onAfterDelete) == null ? void 0 : _b2.call(_a4, { binding });
             invalidBindingTypes.add(binding.type);
           }
         },
@@ -50118,8 +49655,8 @@ var Editor = class extends import_eventemitter3.default {
             }
           },
           afterDelete: (record, source) => {
-            var _a3, _b2;
-            if (((_a3 = this.getInstanceState()) == null ? void 0 : _a3.currentPageId) === record.id) {
+            var _a4, _b2;
+            if (((_a4 = this.getInstanceState()) == null ? void 0 : _a4.currentPageId) === record.id) {
               const backupPageId = (_b2 = this.getPages().find((p) => p.id !== record.id)) == null ? void 0 : _b2.id;
               if (backupPageId) {
                 this.store.put([{ ...this.getInstanceState(), currentPageId: backupPageId }]);
@@ -50134,9 +49671,9 @@ var Editor = class extends import_eventemitter3.default {
         },
         instance: {
           afterChange: (prev, next, source) => {
-            var _a3;
+            var _a4;
             if (!this.store.has(next.currentPageId)) {
-              const backupPageId = this.store.has(prev.currentPageId) ? prev.currentPageId : (_a3 = this.getPages()[0]) == null ? void 0 : _a3.id;
+              const backupPageId = this.store.has(prev.currentPageId) ? prev.currentPageId : (_a4 = this.getPages()[0]) == null ? void 0 : _a4.id;
               if (backupPageId) {
                 this.store.update(next.id, (instance) => ({
                   ...instance,
@@ -50152,8 +49689,8 @@ var Editor = class extends import_eventemitter3.default {
           afterChange: (prev, next) => {
             if ((prev == null ? void 0 : prev.selectedShapeIds) !== (next == null ? void 0 : next.selectedShapeIds)) {
               const filtered = next.selectedShapeIds.filter((id) => {
-                var _a3, _b2;
-                let parentId = (_a3 = this.getShape(id)) == null ? void 0 : _a3.parentId;
+                var _a4, _b2;
+                let parentId = (_a4 = this.getShape(id)) == null ? void 0 : _a4.parentId;
                 while (isShapeId(parentId)) {
                   if (next.selectedShapeIds.includes(parentId)) {
                     return false;
@@ -50381,9 +49918,9 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   run(fn, opts) {
-    var _a2;
+    var _a3;
     const previousIgnoreShapeLock = this._shouldIgnoreShapeLock;
-    this._shouldIgnoreShapeLock = (_a2 = opts == null ? void 0 : opts.ignoreShapeLock) != null ? _a2 : previousIgnoreShapeLock;
+    this._shouldIgnoreShapeLock = (_a3 = opts == null ? void 0 : opts.ignoreShapeLock) != null ? _a3 : previousIgnoreShapeLock;
     try {
       this.history.batch(fn, opts);
     } finally {
@@ -50481,16 +50018,13 @@ var Editor = class extends import_eventemitter3.default {
     let state = this.root;
     while (ids.length > 0) {
       const id = ids.pop();
-      if (!id)
-        return true;
+      if (!id) return true;
       const current = state.getCurrent();
       if ((current == null ? void 0 : current.id) === id) {
-        if (ids.length === 0)
-          return true;
+        if (ids.length === 0) return true;
         state = current;
         continue;
-      } else
-        return false;
+      } else return false;
     }
     return false;
   }
@@ -50530,11 +50064,10 @@ var Editor = class extends import_eventemitter3.default {
     return this.root.getCurrent();
   }
   getCurrentToolId() {
-    var _a2;
+    var _a3;
     const currentTool = this.getCurrentTool();
-    if (!currentTool)
-      return "";
-    return (_a2 = currentTool.getCurrentToolIdMask()) != null ? _a2 : currentTool.id;
+    if (!currentTool) return "";
+    return (_a3 = currentTool.getCurrentToolIdMask()) != null ? _a3 : currentTool.id;
   }
   /**
    * Get a descendant by its path.
@@ -50550,16 +50083,14 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   getStateDescendant(path) {
-    var _a2;
+    var _a3;
     const ids = path.split(".").reverse();
     let state = this.root;
     while (ids.length > 0) {
       const id = ids.pop();
-      if (!id)
-        return state;
-      const childState = (_a2 = state.children) == null ? void 0 : _a2[id];
-      if (!childState)
-        return void 0;
+      if (!id) return state;
+      const childState = (_a3 = state.children) == null ? void 0 : _a3[id];
+      if (!childState) return void 0;
       state = childState;
     }
     return state;
@@ -50715,8 +50246,7 @@ var Editor = class extends import_eventemitter3.default {
         const ids = shapes.map((shape) => typeof shape === "string" ? shape : shape.id);
         const { selectedShapeIds: prevSelectedShapeIds } = this.getCurrentPageState();
         const prevSet = new Set(prevSelectedShapeIds);
-        if (ids.length === prevSet.size && ids.every((id) => prevSet.has(id)))
-          return null;
+        if (ids.length === prevSet.size && ids.every((id) => prevSet.has(id))) return null;
         this.store.put([{ ...this.getCurrentPageState(), selectedShapeIds: ids }]);
       },
       { history: "record-preserveRedoStack" }
@@ -50730,11 +50260,10 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   isAncestorSelected(shape) {
-    var _a2;
-    const id = typeof shape === "string" ? shape : (_a2 = shape == null ? void 0 : shape.id) != null ? _a2 : null;
+    var _a3;
+    const id = typeof shape === "string" ? shape : (_a3 = shape == null ? void 0 : shape.id) != null ? _a3 : null;
     const _shape = this.getShape(id);
-    if (!_shape)
-      return false;
+    if (!_shape) return false;
     const selectedShapeIds = this.getSelectedShapeIds();
     return !!this.findShapeAncestor(_shape, (parent) => selectedShapeIds.includes(parent.id));
   }
@@ -50786,8 +50315,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   selectAll() {
     const ids = this.getSortedChildIdsForParent(this.getCurrentPageId());
-    if (ids.length <= 0)
-      return this;
+    if (ids.length <= 0) return this;
     this.setSelectedShapes(this._getUnlockedShapeIds(ids));
     return this;
   }
@@ -50808,8 +50336,8 @@ var Editor = class extends import_eventemitter3.default {
     return this;
   }
   getOnlySelectedShapeId() {
-    var _a2, _b2;
-    return (_b2 = (_a2 = this.getOnlySelectedShape()) == null ? void 0 : _a2.id) != null ? _b2 : null;
+    var _a3, _b2;
+    return (_b2 = (_a3 = this.getOnlySelectedShape()) == null ? void 0 : _a3.id) != null ? _b2 : null;
   }
   getOnlySelectedShape() {
     const selectedShapes = this.getSelectedShapes();
@@ -50817,8 +50345,7 @@ var Editor = class extends import_eventemitter3.default {
   }
   getSelectionPageBounds() {
     const selectedShapeIds = this.getCurrentPageState().selectedShapeIds;
-    if (selectedShapeIds.length === 0)
-      return null;
+    if (selectedShapeIds.length === 0) return null;
     return Box.Common(compact(selectedShapeIds.map((id) => this.getShapePageBounds(id))));
   }
   getSelectionRotation() {
@@ -50827,8 +50354,7 @@ var Editor = class extends import_eventemitter3.default {
     let rotation = 0;
     for (let i = 0, n2 = selectedShapeIds.length; i < n2; i++) {
       const pageTransform = this.getShapePageTransform(selectedShapeIds[i]);
-      if (!pageTransform)
-        continue;
+      if (!pageTransform) continue;
       if (foundFirst) {
         if (pageTransform.rotation() !== rotation) {
           return 0;
@@ -50858,8 +50384,7 @@ var Editor = class extends import_eventemitter3.default {
     const boxFromRotatedVertices = Box.FromPoints(
       this.getSelectedShapeIds().flatMap((id) => {
         const pageTransform = this.getShapePageTransform(id);
-        if (!pageTransform)
-          return [];
+        if (!pageTransform) return [];
         return pageTransform.applyToPoints(this.getShapeGeometry(id).bounds.corners);
       }).map((p) => p.rot(-selectionRotation))
     );
@@ -50868,15 +50393,14 @@ var Editor = class extends import_eventemitter3.default {
   }
   getSelectionRotatedScreenBounds() {
     const bounds = this.getSelectionRotatedPageBounds();
-    if (!bounds)
-      return void 0;
+    if (!bounds) return void 0;
     const { x, y } = this.pageToScreen(bounds.point);
     const zoom = this.getZoomLevel();
     return new Box(x, y, bounds.width * zoom, bounds.height * zoom);
   }
   getFocusedGroupId() {
-    var _a2;
-    return (_a2 = this.getCurrentPageState().focusedGroupId) != null ? _a2 : this.getCurrentPageId();
+    var _a3;
+    return (_a3 = this.getCurrentPageState().focusedGroupId) != null ? _a3 : this.getCurrentPageId();
   }
   getFocusedGroup() {
     const focusedGroupId = this.getFocusedGroupId();
@@ -50890,8 +50414,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   setFocusedGroup(shape) {
-    var _a2;
-    const id = typeof shape === "string" ? shape : (_a2 = shape == null ? void 0 : shape.id) != null ? _a2 : null;
+    var _a3;
+    const id = typeof shape === "string" ? shape : (_a3 = shape == null ? void 0 : shape.id) != null ? _a3 : null;
     if (id !== null) {
       const shape2 = this.getShape(id);
       if (!shape2) {
@@ -50903,8 +50427,7 @@ var Editor = class extends import_eventemitter3.default {
         );
       }
     }
-    if (id === this.getFocusedGroupId())
-      return this;
+    if (id === this.getFocusedGroupId()) return this;
     return this.run(
       () => {
         this.store.update(this.getCurrentPageState().id, (s) => ({ ...s, focusedGroupId: id }));
@@ -50918,14 +50441,14 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   popFocusedGroupId() {
-    var _a2;
+    var _a3;
     const focusedGroup = this.getFocusedGroup();
     if (focusedGroup) {
       const match = this.findShapeAncestor(
         focusedGroup,
         (shape) => this.isShapeOfType(shape, "group")
       );
-      this.setFocusedGroup((_a2 = match == null ? void 0 : match.id) != null ? _a2 : null);
+      this.setFocusedGroup((_a3 = match == null ? void 0 : match.id) != null ? _a3 : null);
       this.select(focusedGroup.id);
     } else {
       this.setFocusedGroup(null);
@@ -50954,8 +50477,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   setEditingShape(shape) {
-    var _a2;
-    const id = typeof shape === "string" ? shape : (_a2 = shape == null ? void 0 : shape.id) != null ? _a2 : null;
+    var _a3;
+    const id = typeof shape === "string" ? shape : (_a3 = shape == null ? void 0 : shape.id) != null ? _a3 : null;
     if (id !== this.getEditingShapeId()) {
       if (id) {
         const shape2 = this.getShape(id);
@@ -50999,10 +50522,9 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   setHoveredShape(shape) {
-    var _a2;
-    const id = typeof shape === "string" ? shape : (_a2 = shape == null ? void 0 : shape.id) != null ? _a2 : null;
-    if (id === this.getHoveredShapeId())
-      return this;
+    var _a3;
+    const id = typeof shape === "string" ? shape : (_a3 = shape == null ? void 0 : shape.id) != null ? _a3 : null;
+    if (id === this.getHoveredShapeId()) return this;
     this.run(
       () => {
         this.updateCurrentPageState({ hoveredShapeId: id });
@@ -51106,8 +50628,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   setCroppingShape(shape) {
-    var _a2;
-    const id = typeof shape === "string" ? shape : (_a2 = shape == null ? void 0 : shape.id) != null ? _a2 : null;
+    var _a3;
+    const id = typeof shape === "string" ? shape : (_a3 = shape == null ? void 0 : shape.id) != null ? _a3 : null;
     if (id !== this.getCroppingShapeId()) {
       this.run(
         () => {
@@ -51141,11 +50663,9 @@ var Editor = class extends import_eventemitter3.default {
   }
   getViewportPageBoundsForFollowing() {
     const followingUserId = this.getInstanceState().followingUserId;
-    if (!followingUserId)
-      return null;
+    if (!followingUserId) return null;
     const leaderPresence = this.getCollaborators().find((c2) => c2.userId === followingUserId);
-    if (!leaderPresence)
-      return null;
+    if (!leaderPresence) return null;
     const { w: lw, h: lh } = leaderPresence.screenBounds;
     const { x: lx, y: ly, z: lz2 } = leaderPresence.camera;
     const theirViewport = new Box(-lx, -ly, lw / lz2, lh / lz2);
@@ -51162,8 +50682,7 @@ var Editor = class extends import_eventemitter3.default {
   }
   getCameraForFollowing() {
     const viewport = this.getViewportPageBoundsForFollowing();
-    if (!viewport)
-      return null;
+    if (!viewport) return null;
     return {
       x: -viewport.x,
       y: -viewport.y,
@@ -51184,10 +50703,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public */
   getInitialZoom() {
     const cameraOptions = this.getCameraOptions();
-    if (!cameraOptions.constraints)
-      return 1;
-    if (cameraOptions.constraints.initialZoom === "default")
-      return 1;
+    if (!cameraOptions.constraints) return 1;
+    if (cameraOptions.constraints.initialZoom === "default") return 1;
     const { zx, zy } = getCameraFitXFitY(this, cameraOptions);
     switch (cameraOptions.constraints.initialZoom) {
       case "fit-min": {
@@ -51230,10 +50747,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public */
   getBaseZoom() {
     const cameraOptions = this.getCameraOptions();
-    if (!cameraOptions.constraints)
-      return 1;
-    if (cameraOptions.constraints.baseZoom === "default")
-      return 1;
+    if (!cameraOptions.constraints) return 1;
+    if (cameraOptions.constraints.baseZoom === "default") return 1;
     const { zx, zy } = getCameraFitXFitY(this, cameraOptions);
     switch (cameraOptions.constraints.baseZoom) {
       case "fit-min": {
@@ -51290,13 +50805,12 @@ var Editor = class extends import_eventemitter3.default {
    *
    * @public */
   setCameraOptions(options) {
-    var _a2;
+    var _a3;
     const next = structuredClone({
       ...this._cameraOptions.__unsafe__getWithoutCapture(),
       ...options
     });
-    if (((_a2 = next.zoomSteps) == null ? void 0 : _a2.length) < 1)
-      next.zoomSteps = [1];
+    if (((_a3 = next.zoomSteps) == null ? void 0 : _a3.length) < 1) next.zoomSteps = [1];
     this._cameraOptions.set(next);
     return this;
   }
@@ -51350,17 +50864,13 @@ var Editor = class extends import_eventemitter3.default {
               break;
             }
             case "contain": {
-              if (z < zx)
-                x = originX;
-              else
-                x = clamp2(x, minX + freeW, minX);
+              if (z < zx) x = originX;
+              else x = clamp2(x, minX + freeW, minX);
               break;
             }
             case "inside": {
-              if (z < zx)
-                x = clamp2(x, minX, (vsb.w - px) / z - bounds.w);
-              else
-                x = clamp2(x, minX + freeW, minX);
+              if (z < zx) x = clamp2(x, minX, (vsb.w - px) / z - bounds.w);
+              else x = clamp2(x, minX + freeW, minX);
               break;
             }
             case "outside": {
@@ -51380,17 +50890,13 @@ var Editor = class extends import_eventemitter3.default {
               break;
             }
             case "contain": {
-              if (z < zy)
-                y = originY;
-              else
-                y = clamp2(y, minY + freeH, minY);
+              if (z < zy) y = originY;
+              else y = clamp2(y, minY + freeH, minY);
               break;
             }
             case "inside": {
-              if (z < zy)
-                y = clamp2(y, minY, (vsb.h - py) / z - bounds.h);
-              else
-                y = clamp2(y, minY + freeH, minY);
+              if (z < zy) y = clamp2(y, minY, (vsb.h - py) / z - bounds.h);
+              else y = clamp2(y, minY + freeH, minY);
               break;
             }
             case "outside": {
@@ -51424,7 +50930,7 @@ var Editor = class extends import_eventemitter3.default {
       return this;
     }
     transact(() => {
-      var _a2;
+      var _a3;
       const camera = { ...currentCamera, x, y, z };
       this.run(
         () => {
@@ -51446,7 +50952,7 @@ var Editor = class extends import_eventemitter3.default {
           altKey: this.inputs.altKey,
           shiftKey: this.inputs.shiftKey,
           button: 0,
-          isPen: (_a2 = this.getInstanceState().isPenMode) != null ? _a2 : false
+          isPen: (_a3 = this.getInstanceState().isPenMode) != null ? _a3 : false
         };
         if (opts == null ? void 0 : opts.immediate) {
           this._flushEventForTick(event);
@@ -51475,19 +50981,15 @@ var Editor = class extends import_eventemitter3.default {
    */
   setCamera(point, opts) {
     const { isLocked } = this._cameraOptions.__unsafe__getWithoutCapture();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     this.stopCameraAnimation();
     if (this.getInstanceState().followingUserId) {
       this.stopFollowingUser();
     }
     const _point = Vec.Cast(point);
-    if (!Number.isFinite(_point.x))
-      _point.x = 0;
-    if (!Number.isFinite(_point.y))
-      _point.y = 0;
-    if (_point.z === void 0 || !Number.isFinite(_point.z))
-      point.z = this.getZoomLevel();
+    if (!Number.isFinite(_point.x)) _point.x = 0;
+    if (!Number.isFinite(_point.y)) _point.y = 0;
+    if (_point.z === void 0 || !Number.isFinite(_point.z)) point.z = this.getZoomLevel();
     const camera = this.getConstrainedCamera(_point, opts);
     if (opts == null ? void 0 : opts.animation) {
       const { width, height } = this.getViewportScreenBounds();
@@ -51520,8 +51022,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   centerOnPoint(point, opts) {
     const { isLocked } = this.getCameraOptions();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const { width: pw, height: ph } = this.getViewportPageBounds();
     this.setCamera(new Vec(-(point.x - pw / 2), -(point.y - ph / 2), this.getCamera().z), opts);
     return this;
@@ -51541,8 +51042,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   zoomToFit(opts) {
     const ids = [...this.getCurrentPageShapeIds()];
-    if (ids.length <= 0)
-      return this;
+    if (ids.length <= 0) return this;
     const pageBounds = Box.Common(compact(ids.map((id) => this.getShapePageBounds(id))));
     this.zoomToBounds(pageBounds, opts);
     return this;
@@ -51564,8 +51064,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   resetZoom(point = this.getViewportScreenCenter(), opts) {
     const { isLocked, constraints } = this.getCameraOptions();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const currentCamera = this.getCamera();
     const { x: cx, y: cy, z: cz } = currentCamera;
     const { x, y } = point;
@@ -51599,8 +51098,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   zoomIn(point = this.getViewportScreenCenter(), opts) {
     const { isLocked } = this.getCameraOptions();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const { x: cx, y: cy, z: cz } = this.getCamera();
     const { zoomSteps } = this.getCameraOptions();
     if (zoomSteps !== null && zoomSteps.length > 1) {
@@ -51609,8 +51107,7 @@ var Editor = class extends import_eventemitter3.default {
       for (let i = 1; i < zoomSteps.length; i++) {
         const z1 = zoomSteps[i - 1] * baseZoom;
         const z2 = zoomSteps[i] * baseZoom;
-        if (z2 - cz <= (z2 - z1) / 2)
-          continue;
+        if (z2 - cz <= (z2 - z1) / 2) continue;
         zoom = z2;
         break;
       }
@@ -51642,8 +51139,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   zoomOut(point = this.getViewportScreenCenter(), opts) {
     const { isLocked } = this.getCameraOptions();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const { zoomSteps } = this.getCameraOptions();
     if (zoomSteps !== null && zoomSteps.length > 1) {
       const baseZoom = this.getBaseZoom();
@@ -51652,8 +51148,7 @@ var Editor = class extends import_eventemitter3.default {
       for (let i = zoomSteps.length - 1; i > 0; i--) {
         const z1 = zoomSteps[i - 1] * baseZoom;
         const z2 = zoomSteps[i] * baseZoom;
-        if (z2 - cz >= (z2 - z1) / 2)
-          continue;
+        if (z2 - cz >= (z2 - z1) / 2) continue;
         zoom = z1;
         break;
       }
@@ -51683,8 +51178,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   zoomToSelection(opts) {
     const { isLocked } = this.getCameraOptions();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const selectionPageBounds = this.getSelectionPageBounds();
     if (selectionPageBounds) {
       this.zoomToBounds(selectionPageBounds, {
@@ -51710,12 +51204,11 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   zoomToBounds(bounds, opts) {
-    var _a2;
+    var _a3;
     const cameraOptions = this._cameraOptions.__unsafe__getWithoutCapture();
-    if (cameraOptions.isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (cameraOptions.isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const viewportScreenBounds = this.getViewportScreenBounds();
-    const inset = (_a2 = opts == null ? void 0 : opts.inset) != null ? _a2 : Math.min(ZOOM_TO_FIT_PADDING, viewportScreenBounds.width * 0.28);
+    const inset = (_a3 = opts == null ? void 0 : opts.inset) != null ? _a3 : Math.min(ZOOM_TO_FIT_PADDING, viewportScreenBounds.width * 0.28);
     const baseZoom = this.getBaseZoom();
     const zoomMin = cameraOptions.zoomSteps[0];
     const zoomMax = last(cameraOptions.zoomSteps);
@@ -51756,8 +51249,7 @@ var Editor = class extends import_eventemitter3.default {
   }
   /** @internal */
   _animateViewport(ms) {
-    if (!this._viewportAnimation)
-      return;
+    if (!this._viewportAnimation) return;
     this._viewportAnimation.elapsed += ms;
     const { elapsed, easing, duration, start, end } = this._viewportAnimation;
     if (elapsed > duration) {
@@ -51778,8 +51270,7 @@ var Editor = class extends import_eventemitter3.default {
   /** @internal */
   _animateToViewport(targetViewportPage, opts = { animation: DEFAULT_ANIMATION_OPTIONS }) {
     const { animation, ...rest } = opts;
-    if (!animation)
-      return;
+    if (!animation) return;
     const { duration = 0, easing = EASINGS.easeInOutCubic } = animation;
     const animationSpeed = this.user.getAnimationSpeed();
     const viewportPageBounds = this.getViewportPageBounds();
@@ -51824,11 +51315,9 @@ var Editor = class extends import_eventemitter3.default {
    */
   slideCamera(opts = {}) {
     const { isLocked } = this.getCameraOptions();
-    if (isLocked && !(opts == null ? void 0 : opts.force))
-      return this;
+    if (isLocked && !(opts == null ? void 0 : opts.force)) return this;
     const animationSpeed = this.user.getAnimationSpeed();
-    if (animationSpeed === 0)
-      return this;
+    if (animationSpeed === 0) return this;
     this.stopCameraAnimation();
     const {
       speed,
@@ -51870,8 +51359,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   zoomToUser(userId, opts = { animation: { duration: 500 } }) {
     const presence = this.getCollaborators().find((c2) => c2.userId === userId);
-    if (!presence)
-      return this;
+    if (!presence) return this;
     this.run(() => {
       if (this.getInstanceState().followingUserId !== null) {
         this.stopFollowingUser();
@@ -51889,8 +51377,7 @@ var Editor = class extends import_eventemitter3.default {
       this.timers.setTimeout(() => {
         const highlightedUserIds2 = [...this.getInstanceState().highlightedUserIds];
         const index2 = highlightedUserIds2.indexOf(userId);
-        if (index2 < 0)
-          return;
+        if (index2 < 0) return;
         highlightedUserIds2.splice(index2, 1);
         this.updateInstanceState({ highlightedUserIds: highlightedUserIds2 });
       }, this.options.collaboratorIdleTimeoutMs);
@@ -51975,13 +51462,13 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   screenToPage(point) {
-    var _a2;
+    var _a3;
     const { screenBounds } = this.store.unsafeGetWithoutCapture(TLINSTANCE_ID);
     const { x: cx, y: cy, z: cz = 1 } = this.getCamera();
     return new Vec(
       (point.x - screenBounds.x) / cz - cx,
       (point.y - screenBounds.y) / cz - cy,
-      (_a2 = point.z) != null ? _a2 : 0.5
+      (_a3 = point.z) != null ? _a3 : 0.5
     );
   }
   /**
@@ -51997,13 +51484,13 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   pageToScreen(point) {
-    var _a2;
+    var _a3;
     const { screenBounds } = this.store.unsafeGetWithoutCapture(TLINSTANCE_ID);
     const { x: cx, y: cy, z: cz = 1 } = this.getCamera();
     return new Vec(
       (point.x + cx) * cz + screenBounds.x,
       (point.y + cy) * cz + screenBounds.y,
-      (_a2 = point.z) != null ? _a2 : 0.5
+      (_a3 = point.z) != null ? _a3 : 0.5
     );
   }
   /**
@@ -52019,9 +51506,9 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   pageToViewport(point) {
-    var _a2;
+    var _a3;
     const { x: cx, y: cy, z: cz = 1 } = this.getCamera();
-    return new Vec((point.x + cx) * cz, (point.y + cy) * cz, (_a2 = point.z) != null ? _a2 : 0.5);
+    return new Vec((point.x + cx) * cz, (point.y + cy) * cz, (_a3 = point.z) != null ? _a3 : 0.5);
   }
   _getCollaboratorsQuery() {
     return this.store.query.records("instance_presence", () => ({
@@ -52030,8 +51517,7 @@ var Editor = class extends import_eventemitter3.default {
   }
   getCollaborators() {
     const allPresenceRecords = this._getCollaboratorsQuery().get();
-    if (!allPresenceRecords.length)
-      return EMPTY_ARRAY;
+    if (!allPresenceRecords.length) return EMPTY_ARRAY;
     const userIds = [...new Set(allPresenceRecords.map((c2) => c2.userId))].sort();
     return userIds.map((id) => {
       const latestPresence = allPresenceRecords.filter((c2) => c2.userId === id).sort((a, b) => b.lastActivityTimestamp - a.lastActivityTimestamp)[0];
@@ -52104,8 +51590,7 @@ var Editor = class extends import_eventemitter3.default {
           this.stopFollowingUser();
           return;
         }
-        if (this._isLockedOnFollowingUser.get())
-          return;
+        if (this._isLockedOnFollowingUser.get()) return;
         const animationSpeed = this.user.getAnimationSpeed();
         if (animationSpeed === 0) {
           this._isLockedOnFollowingUser.set(true);
@@ -52173,8 +51658,7 @@ var Editor = class extends import_eventemitter3.default {
     const erasingShapeIds = this.getErasingShapeIds();
     const addShapeById = (id, opacity, isAncestorErasing) => {
       const shape = this.getShape(id);
-      if (!shape)
-        return;
+      if (!shape) return;
       opacity *= shape.opacity;
       let isShapeErasing = false;
       const util = this.getShapeUtil(shape);
@@ -52195,8 +51679,7 @@ var Editor = class extends import_eventemitter3.default {
       nextIndex += 1;
       nextBackgroundIndex += 1;
       const childIds = this.getSortedChildIdsForParent(id);
-      if (!childIds.length)
-        return;
+      if (!childIds.length) return;
       let backgroundIndexToRestore = null;
       if (util.providesBackgroundForChildren(shape)) {
         backgroundIndexToRestore = nextBackgroundIndex;
@@ -52348,11 +51831,9 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   updatePage(partial) {
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     const prev = this.getPage(partial.id);
-    if (!prev)
-      return this;
+    if (!prev) return this;
     return this.run(() => this.store.update(partial.id, (page) => ({ ...page, ...partial })));
   }
   /**
@@ -52370,14 +51851,12 @@ var Editor = class extends import_eventemitter3.default {
    */
   createPage(page) {
     this.run(() => {
-      var _a2;
-      if (this.getInstanceState().isReadonly)
-        return;
-      if (this.getPages().length >= this.options.maxPages)
-        return;
+      var _a3;
+      if (this.getInstanceState().isReadonly) return;
+      if (this.getPages().length >= this.options.maxPages) return;
       const pages = this.getPages();
       const name = getIncrementedName(
-        (_a2 = page.name) != null ? _a2 : "Page 1",
+        (_a3 = page.name) != null ? _a3 : "Page 1",
         pages.map((p) => p.name)
       );
       let index2 = page.index;
@@ -52409,18 +51888,15 @@ var Editor = class extends import_eventemitter3.default {
   deletePage(page) {
     const id = typeof page === "string" ? page : page.id;
     this.run(() => {
-      var _a2;
-      if (this.getInstanceState().isReadonly)
-        return;
+      var _a3;
+      if (this.getInstanceState().isReadonly) return;
       const pages = this.getPages();
-      if (pages.length === 1)
-        return;
+      if (pages.length === 1) return;
       const deletedPage = this.getPage(id);
-      if (!deletedPage)
-        return;
+      if (!deletedPage) return;
       if (id === this.getCurrentPageId()) {
         const index2 = pages.findIndex((page2) => page2.id === id);
-        const next = (_a2 = pages[index2 - 1]) != null ? _a2 : pages[index2 + 1];
+        const next = (_a3 = pages[index2 - 1]) != null ? _a3 : pages[index2 + 1];
         this.setCurrentPage(next.id);
       }
       this.store.remove([deletedPage.id]);
@@ -52436,18 +51912,16 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   duplicatePage(page, createId = PageRecordType.createId()) {
-    if (this.getPages().length >= this.options.maxPages)
-      return this;
+    if (this.getPages().length >= this.options.maxPages) return this;
     const id = typeof page === "string" ? page : page.id;
     const freshPage = this.getPage(id);
-    if (!freshPage)
-      return this;
+    if (!freshPage) return this;
     const prevCamera = { ...this.getCamera() };
     const content = this.getContentFromCurrentPage(this.getSortedChildIdsForParent(freshPage.id));
     this.run(() => {
-      var _a2;
+      var _a3;
       const pages = this.getPages();
-      const index2 = getIndexBetween(freshPage.index, (_a2 = pages[pages.indexOf(freshPage) + 1]) == null ? void 0 : _a2.index);
+      const index2 = getIndexBetween(freshPage.index, (_a3 = pages[pages.indexOf(freshPage) + 1]) == null ? void 0 : _a3.index);
       this.createPage({ name: freshPage.name + " Copy", id: createId, index: index2 });
       this.setCurrentPage(createId);
       this.setCamera(prevCamera);
@@ -52472,8 +51946,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   renamePage(page, name) {
     const id = typeof page === "string" ? page : page.id;
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     this.updatePage({ id, name });
     return this;
   }
@@ -52501,10 +51974,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   createAssets(assets) {
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (assets.length <= 0)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (assets.length <= 0) return this;
     this.run(() => this.store.put(assets), { history: "ignore" });
     return this;
   }
@@ -52521,10 +51992,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   updateAssets(assets) {
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (assets.length <= 0)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (assets.length <= 0) return this;
     this.run(
       () => {
         this.store.put(
@@ -52551,11 +52020,9 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   deleteAssets(assets) {
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     const ids = typeof assets[0] === "string" ? assets : assets.map((a) => a.id);
-    if (ids.length <= 0)
-      return this;
+    if (ids.length <= 0) return this;
     this.run(() => this.store.remove(ids), { history: "ignore" });
     return this;
   }
@@ -52575,11 +52042,9 @@ var Editor = class extends import_eventemitter3.default {
     return this.store.get(typeof asset === "string" ? asset : asset.id);
   }
   async resolveAssetUrl(assetId, context) {
-    if (!assetId)
-      return null;
+    if (!assetId) return null;
     const asset = this.getAsset(assetId);
-    if (!asset)
-      return null;
+    if (!asset) return null;
     const { screenScale = 1, shouldResolveToOriginal = false } = context;
     const zoomStepFunction = (zoom) => Math.pow(2, Math.ceil(Math.log2(zoom)));
     const steppedScreenScale = Math.max(0.125, zoomStepFunction(screenScale));
@@ -52625,8 +52090,8 @@ var Editor = class extends import_eventemitter3.default {
   }
   _getShapeHandlesCache() {
     return this.store.createComputedCache("handles", (shape) => {
-      var _a2, _b2;
-      return (_b2 = (_a2 = this.getShapeUtil(shape)).getHandles) == null ? void 0 : _b2.call(_a2, shape);
+      var _a3, _b2;
+      return (_b2 = (_a3 = this.getShapeUtil(shape)).getHandles) == null ? void 0 : _b2.call(_a3, shape);
     });
   }
   /**
@@ -52662,17 +52127,16 @@ var Editor = class extends import_eventemitter3.default {
   getShapeLocalTransform(shape) {
     const id = typeof shape === "string" ? shape : shape.id;
     const freshShape = this.getShape(id);
-    if (!freshShape)
-      throw Error("Editor.getTransform: shape not found");
+    if (!freshShape) throw Error("Editor.getTransform: shape not found");
     return Mat.Identity().translate(freshShape.x, freshShape.y).rotate(freshShape.rotation);
   }
   _getShapePageTransformCache() {
     return this.store.createComputedCache("pageTransformCache", (shape) => {
-      var _a2;
+      var _a3;
       if (isPageId(shape.parentId)) {
         return this.getShapeLocalTransform(shape);
       }
-      const parentTransform = (_a2 = this._getShapePageTransformCache().get(shape.parentId)) != null ? _a2 : Mat.Identity();
+      const parentTransform = (_a3 = this._getShapePageTransformCache().get(shape.parentId)) != null ? _a3 : Mat.Identity();
       return Mat.Compose(parentTransform, this.getShapeLocalTransform(shape));
     });
   }
@@ -52689,12 +52153,11 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   getShapeParentTransform(shape) {
-    var _a2;
+    var _a3;
     const id = typeof shape === "string" ? shape : shape.id;
     const freshShape = this.getShape(id);
-    if (!freshShape || isPageId(freshShape.parentId))
-      return Mat.Identity();
-    return (_a2 = this._getShapePageTransformCache().get(freshShape.parentId)) != null ? _a2 : Mat.Identity();
+    if (!freshShape || isPageId(freshShape.parentId)) return Mat.Identity();
+    return (_a3 = this._getShapePageTransformCache().get(freshShape.parentId)) != null ? _a3 : Mat.Identity();
   }
   /**
    * Get the transform of a shape in the current page space.
@@ -52710,15 +52173,14 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   getShapePageTransform(shape) {
-    var _a2;
+    var _a3;
     const id = typeof shape === "string" ? shape : shape.id;
-    return (_a2 = this._getShapePageTransformCache().get(id)) != null ? _a2 : Mat.Identity();
+    return (_a3 = this._getShapePageTransformCache().get(id)) != null ? _a3 : Mat.Identity();
   }
   _getShapePageBoundsCache() {
     return this.store.createComputedCache("pageBoundsCache", (shape) => {
       const pageTransform = this._getShapePageTransformCache().get(shape.id);
-      if (!pageTransform)
-        return new Box();
+      if (!pageTransform) return new Box();
       const result = Box.FromPoints(
         Mat.applyToPoints(pageTransform, this.getShapeGeometry(shape).vertices)
       );
@@ -52744,14 +52206,12 @@ var Editor = class extends import_eventemitter3.default {
   _getShapeClipPathCache() {
     return this.store.createComputedCache("clipPathCache", (shape) => {
       const pageMask = this._getShapeMaskCache().get(shape.id);
-      if (!pageMask)
-        return void 0;
+      if (!pageMask) return void 0;
       if (pageMask.length === 0) {
         return `polygon(0px 0px, 0px 0px, 0px 0px)`;
       }
       const pageTransform = this._getShapePageTransformCache().get(shape.id);
-      if (!pageTransform)
-        return void 0;
+      if (!pageTransform) return void 0;
       const localMask = Mat.applyToPoints(Mat.Inverse(pageTransform), pageMask);
       return `polygon(${localMask.map((p) => `${p.x}px ${p.y}px`).join(",")})`;
     });
@@ -52776,21 +52236,18 @@ var Editor = class extends import_eventemitter3.default {
   }
   _getShapeMaskCache() {
     return this.store.createComputedCache("pageMaskCache", (shape) => {
-      if (isPageId(shape.parentId))
-        return void 0;
+      if (isPageId(shape.parentId)) return void 0;
       const frameAncestors = this.getShapeAncestors(shape.id).filter(
         (shape2) => this.isShapeOfType(shape2, "frame")
       );
-      if (frameAncestors.length === 0)
-        return void 0;
+      if (frameAncestors.length === 0) return void 0;
       const pageMask = frameAncestors.map(
         (s) => (
           // Apply the frame transform to the frame outline to get the frame outline in the current page space
           this._getShapePageTransformCache().get(s.id).applyToPoints(this.getShapeGeometry(s).vertices)
         )
       ).reduce((acc, b) => {
-        if (!(b && acc))
-          return void 0;
+        if (!(b && acc)) return void 0;
         const intersection = intersectPolygonPolygon(acc, b);
         if (intersection) {
           return intersection.map(Vec.Cast);
@@ -52833,25 +52290,20 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   getShapeMaskedPageBounds(shape) {
-    if (typeof shape !== "string")
-      shape = shape.id;
+    if (typeof shape !== "string") shape = shape.id;
     return this._getShapeMaskedPageBoundsCache().get(shape);
   }
   _getShapeMaskedPageBoundsCache() {
     return this.store.createComputedCache("shapeMaskedPageBoundsCache", (shape) => {
       const pageBounds = this._getShapePageBoundsCache().get(shape.id);
-      if (!pageBounds)
-        return;
+      if (!pageBounds) return;
       const pageMask = this._getShapeMaskCache().get(shape.id);
       if (pageMask) {
-        if (pageMask.length === 0)
-          return void 0;
+        if (pageMask.length === 0) return void 0;
         const { corners } = pageBounds;
-        if (corners.every((p, i) => p && Vec.Equals(p, pageMask[i])))
-          return pageBounds.clone();
+        if (corners.every((p, i) => p && Vec.Equals(p, pageMask[i]))) return pageBounds.clone();
         const intersection = intersectPolygonPolygon(pageMask, corners);
-        if (!intersection)
-          return;
+        if (!intersection) return;
         return Box.FromPoints(intersection);
       }
       return pageBounds;
@@ -52873,16 +52325,14 @@ var Editor = class extends import_eventemitter3.default {
   getShapeAncestors(shape, acc = []) {
     const id = typeof shape === "string" ? shape : shape.id;
     const freshShape = this.getShape(id);
-    if (!freshShape)
-      return acc;
+    if (!freshShape) return acc;
     const parentId = freshShape.parentId;
     if (isPageId(parentId)) {
       acc.reverse();
       return acc;
     }
     const parent = this.store.get(parentId);
-    if (!parent)
-      return acc;
+    if (!parent) return acc;
     acc.push(parent);
     return this.getShapeAncestors(parent, acc);
   }
@@ -52903,14 +52353,11 @@ var Editor = class extends import_eventemitter3.default {
   findShapeAncestor(shape, predicate) {
     const id = typeof shape === "string" ? shape : shape.id;
     const freshShape = this.getShape(id);
-    if (!freshShape)
-      return;
+    if (!freshShape) return;
     const parentId = freshShape.parentId;
-    if (isPageId(parentId))
-      return;
+    if (isPageId(parentId)) return;
     const parent = this.getShape(parentId);
-    if (!parent)
-      return;
+    if (!parent) return;
     return predicate(parent) ? parent : this.findShapeAncestor(parent, predicate);
   }
   /**
@@ -52924,10 +52371,8 @@ var Editor = class extends import_eventemitter3.default {
   hasAncestor(shape, ancestorId) {
     const id = typeof shape === "string" ? shape : shape == null ? void 0 : shape.id;
     const freshShape = id && this.getShape(id);
-    if (!freshShape)
-      return false;
-    if (freshShape.parentId === ancestorId)
-      return true;
+    if (!freshShape) return false;
+    if (freshShape.parentId === ancestorId) return true;
     return this.hasAncestor(this.getShapeParent(freshShape), ancestorId);
   }
   /**
@@ -52937,7 +52382,7 @@ var Editor = class extends import_eventemitter3.default {
    * @param predicate - The predicate to match.
    */
   findCommonAncestor(shapes, predicate) {
-    var _a2;
+    var _a3;
     if (shapes.length === 0) {
       return;
     }
@@ -52948,7 +52393,7 @@ var Editor = class extends import_eventemitter3.default {
       if (isPageId(parentId)) {
         return;
       }
-      return predicate ? (_a2 = this.findShapeAncestor(freshShapes[0], predicate)) == null ? void 0 : _a2.id : parentId;
+      return predicate ? (_a3 = this.findShapeAncestor(freshShapes[0], predicate)) == null ? void 0 : _a3.id : parentId;
     }
     const [nodeA, ...others] = freshShapes;
     let ancestor = this.getShapeParent(nodeA);
@@ -52966,10 +52411,8 @@ var Editor = class extends import_eventemitter3.default {
   }
   isShapeOrAncestorLocked(arg) {
     const shape = typeof arg === "string" ? this.getShape(arg) : arg;
-    if (shape === void 0)
-      return false;
-    if (shape.isLocked)
-      return true;
+    if (shape === void 0) return false;
+    if (shape.isLocked) return true;
     return this.isShapeOrAncestorLocked(this.getShapeParent(shape));
   }
   _notVisibleShapes() {
@@ -52992,8 +52435,7 @@ var Editor = class extends import_eventemitter3.default {
     let commonBounds;
     this.getCurrentPageShapeIdsSorted().forEach((shapeId) => {
       const bounds = this.getShapeMaskedPageBounds(shapeId);
-      if (!bounds)
-        return;
+      if (!bounds) return;
       if (!commonBounds) {
         commonBounds = bounds.clone();
       } else {
@@ -53037,13 +52479,10 @@ var Editor = class extends import_eventemitter3.default {
     let inMarginClosestToEdgeDistance = Infinity;
     let inMarginClosestToEdgeHit = null;
     const shapesToCheck = (opts.renderingOnly ? this.getCurrentPageRenderingShapesSorted() : this.getCurrentPageShapesSorted()).filter((shape) => {
-      if (shape.isLocked && !hitLocked || this.isShapeOfType(shape, "group"))
-        return false;
+      if (shape.isLocked && !hitLocked || this.isShapeOfType(shape, "group")) return false;
       const pageMask = this.getShapeMask(shape);
-      if (pageMask && !pointInPolygon(point, pageMask))
-        return false;
-      if (filter2)
-        return filter2(shape);
+      if (pageMask && !pointInPolygon(point, pageMask)) return false;
+      if (filter2) return filter2(shape);
       return true;
     });
     for (let i = shapesToCheck.length - 1; i >= 0; i--) {
@@ -53074,8 +52513,7 @@ var Editor = class extends import_eventemitter3.default {
       if (isGroup) {
         let minDistance = Infinity;
         for (const childGeometry of geometry.children) {
-          if (childGeometry.isLabel && !hitLabels)
-            continue;
+          if (childGeometry.isLabel && !hitLabels) continue;
           const tDistance = childGeometry.distanceToPoint(pointInShapeSpace, hitInside);
           if (tDistance < minDistance) {
             minDistance = tDistance;
@@ -53098,8 +52536,7 @@ var Editor = class extends import_eventemitter3.default {
           if (geometry.isFilled || isGroup && geometry.children[0].isFilled) {
             return inMarginClosestToEdgeHit || shape;
           } else {
-            if (this.getShapePageBounds(shape).contains(viewportPageBounds))
-              continue;
+            if (this.getShapePageBounds(shape).contains(viewportPageBounds)) continue;
             if (Math.abs(distance) < margin) {
               if (Math.abs(distance) < inMarginClosestToEdgeDistance) {
                 inMarginClosestToEdgeDistance = Math.abs(distance);
@@ -53157,8 +52594,7 @@ var Editor = class extends import_eventemitter3.default {
     const { hitInside = false, margin = 0 } = opts;
     const id = typeof shape === "string" ? shape : shape.id;
     const pageMask = this.getShapeMask(id);
-    if (pageMask && !pointInPolygon(point, pageMask))
-      return false;
+    if (pageMask && !pointInPolygon(point, pageMask)) return false;
     return this.getShapeGeometry(id).hitTestPoint(
       this.getPointInShapeSpace(shape, point),
       margin,
@@ -53200,13 +52636,10 @@ var Editor = class extends import_eventemitter3.default {
   getPointInParentSpace(shape, point) {
     const id = typeof shape === "string" ? shape : shape.id;
     const freshShape = this.getShape(id);
-    if (!freshShape)
-      return new Vec(0, 0);
-    if (isPageId(freshShape.parentId))
-      return Vec.From(point);
+    if (!freshShape) return new Vec(0, 0);
+    if (isPageId(freshShape.parentId)) return Vec.From(point);
     const parentTransform = this.getShapePageTransform(freshShape.parentId);
-    if (!parentTransform)
-      return Vec.From(point);
+    if (!parentTransform) return Vec.From(point);
     return parentTransform.clone().invert().applyToPoint(point);
   }
   getCurrentPageShapes() {
@@ -53226,8 +52659,7 @@ var Editor = class extends import_eventemitter3.default {
   }
   isShapeOfType(arg, type) {
     const shape = typeof arg === "string" ? this.getShape(arg) : arg;
-    if (!shape)
-      return false;
+    if (!shape) return false;
     return shape.type === type;
   }
   /**
@@ -53244,8 +52676,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   getShape(shape) {
     const id = typeof shape === "string" ? shape : shape.id;
-    if (!isShapeId(id))
-      return void 0;
+    if (!isShapeId(id)) return void 0;
     return this.store.get(id);
   }
   /**
@@ -53261,11 +52692,9 @@ var Editor = class extends import_eventemitter3.default {
    */
   getShapeParent(shape) {
     const id = typeof shape === "string" ? shape : shape == null ? void 0 : shape.id;
-    if (!id)
-      return void 0;
+    if (!id) return void 0;
     const freshShape = this.getShape(id);
-    if (freshShape === void 0 || !isShapeId(freshShape.parentId))
-      return void 0;
+    if (freshShape === void 0 || !isShapeId(freshShape.parentId)) return void 0;
     return this.store.get(freshShape.parentId);
   }
   /**
@@ -53305,21 +52734,19 @@ var Editor = class extends import_eventemitter3.default {
   isShapeInPage(shape, pageId = this.getCurrentPageId()) {
     const id = typeof shape === "string" ? shape : shape.id;
     const shapeToCheck = this.getShape(id);
-    if (!shapeToCheck)
-      return false;
+    if (!shapeToCheck) return false;
     let shapeIsInPage = false;
     if (shapeToCheck.parentId === pageId) {
       shapeIsInPage = true;
     } else {
       let parent = this.getShape(shapeToCheck.parentId);
-      isInPageSearch:
-        while (parent) {
-          if (parent.parentId === pageId) {
-            shapeIsInPage = true;
-            break isInPageSearch;
-          }
-          parent = this.getShape(parent.parentId);
+      isInPageSearch: while (parent) {
+        if (parent.parentId === pageId) {
+          shapeIsInPage = true;
+          break isInPageSearch;
         }
+        parent = this.getShape(parent.parentId);
+      }
     }
     return shapeIsInPage;
   }
@@ -53335,8 +52762,7 @@ var Editor = class extends import_eventemitter3.default {
   getAncestorPageId(shape) {
     const id = typeof shape === "string" ? shape : shape == null ? void 0 : shape.id;
     const _shape = id && this.getShape(id);
-    if (!_shape)
-      return void 0;
+    if (!_shape) return void 0;
     if (isPageId(_shape.parentId)) {
       return _shape.parentId;
     } else {
@@ -53362,8 +52788,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   reparentShapes(shapes, parentId, insertIndex) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (ids.length === 0)
-      return this;
+    if (ids.length === 0) return this;
     const changes = [];
     const parentTransform = isPageId(parentId) ? Mat.Identity() : this.getShapePageTransform(parentId);
     const parentPageRotation = parentTransform.rotation();
@@ -53397,11 +52822,9 @@ var Editor = class extends import_eventemitter3.default {
         for (let i = 0; i < shapesToReparent.length; i++) {
           const shape = shapesToReparent[i];
           const pageTransform = this.getShapePageTransform(shape);
-          if (!pageTransform)
-            continue;
+          if (!pageTransform) continue;
           const pagePoint = pageTransform.point();
-          if (!pagePoint)
-            continue;
+          if (!pagePoint) continue;
           const newPoint = invertedParentTransform.applyToPoint(pagePoint);
           const newRotation = pageTransform.rotation() - parentPageRotation;
           changes.push({
@@ -53453,8 +52876,7 @@ var Editor = class extends import_eventemitter3.default {
   getSortedChildIdsForParent(parent) {
     const parentId = typeof parent === "string" ? parent : parent.id;
     const ids = this._parentIdsToChildIds.get()[parentId];
-    if (!ids)
-      return EMPTY_ARRAY;
+    if (!ids) return EMPTY_ARRAY;
     return ids;
   }
   /**
@@ -53474,8 +52896,7 @@ var Editor = class extends import_eventemitter3.default {
     const parentId = typeof parent === "string" ? parent : parent.id;
     const children = this.getSortedChildIdsForParent(parentId);
     for (const id of children) {
-      if (visitor(id) === false)
-        continue;
+      if (visitor(id) === false) continue;
       this.visitDescendants(id, visitor);
     }
     return this;
@@ -53540,14 +52961,14 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   getOutermostSelectableShape(shape, filter2) {
-    var _a2;
+    var _a3;
     const id = typeof shape === "string" ? shape : shape.id;
     const freshShape = this.getShape(id);
     let match = freshShape;
     let node = freshShape;
     const focusedGroup = this.getFocusedGroup();
     while (node) {
-      if (this.isShapeOfType(node, "group") && (focusedGroup == null ? void 0 : focusedGroup.id) !== node.id && !this.hasAncestor(focusedGroup, node.id) && ((_a2 = filter2 == null ? void 0 : filter2(node)) != null ? _a2 : true)) {
+      if (this.isShapeOfType(node, "group") && (focusedGroup == null ? void 0 : focusedGroup.id) !== node.id && !this.hasAncestor(focusedGroup, node.id) && ((_a3 = filter2 == null ? void 0 : filter2(node)) != null ? _a3 : true)) {
         match = node;
       } else if ((focusedGroup == null ? void 0 : focusedGroup.id) === node.id) {
         break;
@@ -53593,11 +53014,10 @@ var Editor = class extends import_eventemitter3.default {
    * `fromId` or `toId`. If a type is provided, only bindings of that type are returned.
    */
   getBindingsInvolvingShape(shape, type) {
-    var _a2;
+    var _a3;
     const id = typeof shape === "string" ? shape : shape.id;
-    const result = (_a2 = this._getBindingsIndexCache().get(id)) != null ? _a2 : EMPTY_ARRAY;
-    if (!type)
-      return result;
+    const result = (_a3 = this._getBindingsIndexCache().get(id)) != null ? _a3 : EMPTY_ARRAY;
+    if (!type) return result;
     return result.filter((b) => b.type === type);
   }
   /**
@@ -53605,20 +53025,18 @@ var Editor = class extends import_eventemitter3.default {
    * binding, but the `type`, `toId`, and `fromId` must all be provided.
    */
   createBindings(partials) {
-    var _a2;
+    var _a3;
     const bindings = [];
     for (const partial of partials) {
       const fromShape = this.getShape(partial.fromId);
       const toShape = this.getShape(partial.toId);
-      if (!fromShape || !toShape)
-        continue;
-      if (!this.canBindShapes({ fromShape, toShape, binding: partial }))
-        continue;
+      if (!fromShape || !toShape) continue;
+      if (!this.canBindShapes({ fromShape, toShape, binding: partial })) continue;
       const util = this.getBindingUtil(partial.type);
       const defaultProps = util.getDefaultProps();
       const binding = this.store.schema.types.binding.create({
         ...partial,
-        id: (_a2 = partial.id) != null ? _a2 : createBindingId(),
+        id: (_a3 = partial.id) != null ? _a3 : createBindingId(),
         props: {
           ...defaultProps,
           ...partial.props
@@ -53644,20 +53062,15 @@ var Editor = class extends import_eventemitter3.default {
   updateBindings(partials) {
     const updated = [];
     for (const partial of partials) {
-      if (!partial)
-        continue;
+      if (!partial) continue;
       const current = this.getBinding(partial.id);
-      if (!current)
-        continue;
+      if (!current) continue;
       const updatedBinding = applyPartialToRecordWithProps(current, partial);
-      if (updatedBinding === current)
-        continue;
+      if (updatedBinding === current) continue;
       const fromShape = this.getShape(updatedBinding.fromId);
       const toShape = this.getShape(updatedBinding.toId);
-      if (!fromShape || !toShape)
-        continue;
-      if (!this.canBindShapes({ fromShape, toShape, binding: updatedBinding }))
-        continue;
+      if (!fromShape || !toShape) continue;
+      if (!this.canBindShapes({ fromShape, toShape, binding: updatedBinding })) continue;
       updated.push(updatedBinding);
     }
     this.store.put(updated);
@@ -53678,13 +53091,12 @@ var Editor = class extends import_eventemitter3.default {
     const ids = bindings.map((binding) => typeof binding === "string" ? binding : binding.id);
     if (isolateShapes) {
       this.store.atomic(() => {
-        var _a2, _b2;
+        var _a3, _b2;
         for (const id of ids) {
           const binding = this.getBinding(id);
-          if (!binding)
-            continue;
+          if (!binding) continue;
           const util = this.getBindingUtil(binding);
-          (_a2 = util.onBeforeIsolateFromShape) == null ? void 0 : _a2.call(util, { binding, removedShape: this.getShape(binding.toId) });
+          (_a3 = util.onBeforeIsolateFromShape) == null ? void 0 : _a3.call(util, { binding, removedShape: this.getShape(binding.toId) });
           (_b2 = util.onBeforeIsolateToShape) == null ? void 0 : _b2.call(util, { binding, removedShape: this.getShape(binding.fromId) });
           this.store.remove([id]);
         }
@@ -53730,21 +53142,19 @@ var Editor = class extends import_eventemitter3.default {
    */
   rotateShapesBy(shapes, delta) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (ids.length <= 0)
-      return this;
+    if (ids.length <= 0) return this;
     const snapshot = getRotationSnapshot({ editor: this });
-    if (!snapshot)
-      return this;
+    if (!snapshot) return this;
     applyRotationToSnapshotShapes({ delta, snapshot, editor: this, stage: "one-off" });
     return this;
   }
   getChangesToTranslateShape(initialShape, newShapeCoords) {
-    var _a2, _b2, _c, _d, _e, _f;
+    var _a3, _b2, _c, _d, _e, _f;
     let workingShape = initialShape;
     const util = this.getShapeUtil(initialShape);
     workingShape = applyPartialToRecordWithProps(
       workingShape,
-      (_b2 = (_a2 = util.onTranslateStart) == null ? void 0 : _a2.call(util, workingShape)) != null ? _b2 : void 0
+      (_b2 = (_a3 = util.onTranslateStart) == null ? void 0 : _a3.call(util, workingShape)) != null ? _b2 : void 0
     );
     workingShape = applyPartialToRecordWithProps(workingShape, {
       id: initialShape.id,
@@ -53776,15 +53186,13 @@ var Editor = class extends import_eventemitter3.default {
    */
   nudgeShapes(shapes, offset4) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (ids.length <= 0)
-      return this;
+    if (ids.length <= 0) return this;
     const changes = [];
     for (const id of ids) {
       const shape = this.getShape(id);
       const localDelta = Vec.From(offset4);
       const parentTransform = this.getShapeParentTransform(shape);
-      if (parentTransform)
-        localDelta.rot(-parentTransform.rotation());
+      if (parentTransform) localDelta.rot(-parentTransform.rotation());
       changes.push(this.getChangesToTranslateShape(shape, localDelta.add(shape)));
     }
     this.updateShapes(changes);
@@ -53807,8 +53215,7 @@ var Editor = class extends import_eventemitter3.default {
   duplicateShapes(shapes, offset4) {
     this.run(() => {
       const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-      if (ids.length <= 0)
-        return this;
+      if (ids.length <= 0) return this;
       const initialIds = new Set(ids);
       const shapeIdSet = this.getShapeAndDescendantIds(ids);
       const orderedShapeIds = [...shapeIdSet].reverse();
@@ -53820,12 +53227,11 @@ var Editor = class extends import_eventemitter3.default {
         this,
         shapeIdSet,
         (bindingIdsToMaintain) => {
-          var _a2;
+          var _a3;
           const bindingsToCreate2 = [];
           for (const originalId of bindingIdsToMaintain) {
             const originalBinding = this.getBinding(originalId);
-            if (!originalBinding)
-              continue;
+            if (!originalBinding) continue;
             const duplicatedId = createBindingId();
             bindingsToCreate2.push({
               ...originalBinding,
@@ -53838,8 +53244,7 @@ var Editor = class extends import_eventemitter3.default {
           for (const originalId of orderedShapeIds) {
             const duplicatedId = assertExists(shapeIds.get(originalId));
             const originalShape = this.getShape(originalId);
-            if (!originalShape)
-              continue;
+            if (!originalShape) continue;
             let ox = 0;
             let oy = 0;
             if (offset4 && initialIds.has(originalId)) {
@@ -53860,7 +53265,7 @@ var Editor = class extends import_eventemitter3.default {
               x: originalShape.x + ox,
               y: originalShape.y + oy,
               index: index2,
-              parentId: (_a2 = shapeIds.get(originalShape.parentId)) != null ? _a2 : originalShape.parentId
+              parentId: (_a3 = shapeIds.get(originalShape.parentId)) != null ? _a3 : originalShape.parentId
             });
           }
           return { shapesToCreate: shapesToCreate2, bindingsToCreate: bindingsToCreate2 };
@@ -53901,18 +53306,13 @@ var Editor = class extends import_eventemitter3.default {
    */
   moveShapesToPage(shapes, pageId) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (ids.length === 0)
-      return this;
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (ids.length === 0) return this;
+    if (this.getInstanceState().isReadonly) return this;
     const currentPageId = this.getCurrentPageId();
-    if (pageId === currentPageId)
-      return this;
-    if (!this.store.has(pageId))
-      return this;
+    if (pageId === currentPageId) return this;
+    if (!this.store.has(pageId)) return this;
     const content = this.getContentFromCurrentPage(ids);
-    if (!content)
-      return this;
+    if (!content) return this;
     if (this.getPageShapeIds(pageId).size + content.shapes.length > this.options.maxShapesPerPage) {
       alertMaxShapes(this, pageId);
       return this;
@@ -53942,8 +53342,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   toggleLock(shapes) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly || ids.length === 0)
-      return this;
+    if (this.getInstanceState().isReadonly || ids.length === 0) return this;
     let allLocked = true, allUnlocked = true;
     const shapesToToggle = [];
     for (const id of ids) {
@@ -53991,8 +53390,7 @@ var Editor = class extends import_eventemitter3.default {
   sendToBack(shapes) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
     const changes = getReorderingShapesChanges(this, "toBack", ids);
-    if (changes)
-      this.updateShapes(changes);
+    if (changes) this.updateShapes(changes);
     return this;
   }
   /**
@@ -54011,8 +53409,7 @@ var Editor = class extends import_eventemitter3.default {
   sendBackward(shapes) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
     const changes = getReorderingShapesChanges(this, "backward", ids);
-    if (changes)
-      this.updateShapes(changes);
+    if (changes) this.updateShapes(changes);
     return this;
   }
   /**
@@ -54031,8 +53428,7 @@ var Editor = class extends import_eventemitter3.default {
   bringForward(shapes) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
     const changes = getReorderingShapesChanges(this, "forward", ids);
-    if (changes)
-      this.updateShapes(changes);
+    if (changes) this.updateShapes(changes);
     return this;
   }
   /**
@@ -54051,8 +53447,7 @@ var Editor = class extends import_eventemitter3.default {
   bringToFront(shapes) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
     const changes = getReorderingShapesChanges(this, "toFront", ids);
-    if (changes)
-      this.updateShapes(changes);
+    if (changes) this.updateShapes(changes);
     return this;
   }
   /**
@@ -54071,11 +53466,9 @@ var Editor = class extends import_eventemitter3.default {
    */
   flipShapes(shapes, operation) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     let shapesToFlip = compact(ids.map((id) => this.getShape(id)));
-    if (!shapesToFlip.length)
-      return this;
+    if (!shapesToFlip.length) return this;
     shapesToFlip = compact(
       shapesToFlip.map((shape) => {
         if (this.isShapeOfType(shape, "group")) {
@@ -54091,8 +53484,7 @@ var Editor = class extends import_eventemitter3.default {
       for (const shape of shapesToFlip) {
         const bounds = this.getShapeGeometry(shape).bounds;
         const initialPageTransform = this.getShapePageTransform(shape.id);
-        if (!initialPageTransform)
-          continue;
+        if (!initialPageTransform) continue;
         this.resizeShape(
           shape.id,
           { x: operation === "horizontal" ? -1 : 1, y: operation === "vertical" ? -1 : 1 },
@@ -54127,16 +53519,13 @@ var Editor = class extends import_eventemitter3.default {
    */
   stackShapes(shapes, operation, gap) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     const shapesToStack = ids.map((id) => this.getShape(id)).filter((shape) => {
-      if (!shape)
-        return false;
+      if (!shape) return false;
       return this.getShapeUtil(shape).canBeLaidOut(shape);
     });
     const len = shapesToStack.length;
-    if (gap === 0 && len < 3 || len < 2)
-      return this;
+    if (gap === 0 && len < 3 || len < 2) return this;
     const pageBounds = Object.fromEntries(
       shapesToStack.map((shape) => [shape.id, this.getShapePageBounds(shape)])
     );
@@ -54188,14 +53577,13 @@ var Editor = class extends import_eventemitter3.default {
     const changes = [];
     let v = pageBounds[shapesToStack[0].id][max2];
     shapesToStack.forEach((shape, i) => {
-      var _a2, _b2;
-      if (i === 0)
-        return;
+      var _a3, _b2;
+      if (i === 0) return;
       const delta = { x: 0, y: 0 };
       delta[val] = v + shapeGap - pageBounds[shape.id][val];
       const parent = this.getShapeParent(shape);
       const localDelta = parent ? Vec.Rot(delta, -this.getShapePageTransform(parent).decompose().rotation) : delta;
-      const translateStartChanges = (_b2 = (_a2 = this.getShapeUtil(shape)).onTranslateStart) == null ? void 0 : _b2.call(_a2, shape);
+      const translateStartChanges = (_b2 = (_a3 = this.getShapeUtil(shape)).onTranslateStart) == null ? void 0 : _b2.call(_a3, shape);
       changes.push(
         translateStartChanges ? {
           ...translateStartChanges,
@@ -54225,15 +53613,12 @@ var Editor = class extends import_eventemitter3.default {
    * @param gap - The padding to apply to the packed shapes. Defaults to 16.
    */
   packShapes(shapes, gap) {
-    var _a2, _b2;
+    var _a3, _b2;
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (ids.length < 2)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (ids.length < 2) return this;
     const shapesToPack = ids.map((id) => this.getShape(id)).filter((shape2) => {
-      if (!shape2)
-        return false;
+      if (!shape2) return false;
       return this.getShapeUtil(shape2).canBeLaidOut(shape2);
     });
     const shapePageBounds = {};
@@ -54260,16 +53645,14 @@ var Editor = class extends import_eventemitter3.default {
       bounds = nextShapePageBounds[shape.id];
       for (let i2 = spaces.length - 1; i2 >= 0; i2--) {
         space = spaces[i2];
-        if (bounds.width > space.width || bounds.height > space.height)
-          continue;
+        if (bounds.width > space.width || bounds.height > space.height) continue;
         bounds.x = space.x;
         bounds.y = space.y;
         height = Math.max(height, bounds.maxY);
         width = Math.max(width, bounds.maxX);
         if (bounds.width === space.width && bounds.height === space.height) {
           last22 = spaces.pop();
-          if (i2 < spaces.length)
-            spaces[i2] = last22;
+          if (i2 < spaces.length) spaces[i2] = last22;
         } else if (bounds.height === space.height) {
           space.x += bounds.width + gap;
           space.width -= bounds.width + gap;
@@ -54301,15 +53684,14 @@ var Editor = class extends import_eventemitter3.default {
       nextBounds = nextShapePageBounds[shape.id];
       const delta = Vec.Sub(nextBounds.point, bounds.point).add(centerDelta);
       const parentTransform = this.getShapeParentTransform(shape);
-      if (parentTransform)
-        delta.rot(-parentTransform.rotation());
+      if (parentTransform) delta.rot(-parentTransform.rotation());
       const change = {
         id: shape.id,
         type: shape.type,
         x: shape.x + delta.x,
         y: shape.y + delta.y
       };
-      const translateStartChange = (_b2 = (_a2 = this.getShapeUtil(shape)).onTranslateStart) == null ? void 0 : _b2.call(_a2, {
+      const translateStartChange = (_b2 = (_a3 = this.getShapeUtil(shape)).onTranslateStart) == null ? void 0 : _b2.call(_a3, {
         ...shape,
         ...change
       });
@@ -54340,10 +53722,8 @@ var Editor = class extends import_eventemitter3.default {
    */
   alignShapes(shapes, operation) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (ids.length < 2)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (ids.length < 2) return this;
     const shapesToAlign = compact(ids.map((id) => this.getShape(id)));
     const shapePageBounds = Object.fromEntries(
       shapesToAlign.map((shape) => [shape.id, this.getShapePageBounds(shape)])
@@ -54352,8 +53732,7 @@ var Editor = class extends import_eventemitter3.default {
     const changes = [];
     shapesToAlign.forEach((shape) => {
       const pageBounds = shapePageBounds[shape.id];
-      if (!pageBounds)
-        return;
+      if (!pageBounds) return;
       const delta = { x: 0, y: 0 };
       switch (operation) {
         case "top": {
@@ -54404,10 +53783,8 @@ var Editor = class extends import_eventemitter3.default {
    */
   distributeShapes(shapes, operation) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (ids.length < 3)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (ids.length < 3) return this;
     const len = ids.length;
     const shapesToDistribute = compact(ids.map((id) => this.getShape(id)));
     const pageBounds = Object.fromEntries(
@@ -54465,10 +53842,8 @@ var Editor = class extends import_eventemitter3.default {
    */
   stretchShapes(shapes, operation) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (ids.length < 2)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (ids.length < 2) return this;
     const shapesToStretch = compact(ids.map((id) => this.getShape(id)));
     const shapeBounds = Object.fromEntries(ids.map((id) => [id, this.getShapeGeometry(id).bounds]));
     const shapePageBounds = Object.fromEntries(ids.map((id) => [id, this.getShapePageBounds(id)]));
@@ -54478,14 +53853,12 @@ var Editor = class extends import_eventemitter3.default {
         this.run(() => {
           for (const shape of shapesToStretch) {
             const pageRotation = this.getShapePageTransform(shape).rotation();
-            if (pageRotation % PI2)
-              continue;
+            if (pageRotation % PI2) continue;
             const bounds = shapeBounds[shape.id];
             const pageBounds = shapePageBounds[shape.id];
             const localOffset = new Vec(0, commonBounds.minY - pageBounds.minY);
             const parentTransform = this.getShapeParentTransform(shape);
-            if (parentTransform)
-              localOffset.rot(-parentTransform.rotation());
+            if (parentTransform) localOffset.rot(-parentTransform.rotation());
             const { x, y } = Vec.Add(localOffset, shape);
             this.updateShapes([{ id: shape.id, type: shape.type, x, y }]);
             const scale = new Vec(1, commonBounds.height / pageBounds.height);
@@ -54505,12 +53878,10 @@ var Editor = class extends import_eventemitter3.default {
             const bounds = shapeBounds[shape.id];
             const pageBounds = shapePageBounds[shape.id];
             const pageRotation = this.getShapePageTransform(shape).rotation();
-            if (pageRotation % PI2)
-              continue;
+            if (pageRotation % PI2) continue;
             const localOffset = new Vec(commonBounds.minX - pageBounds.minX, 0);
             const parentTransform = this.getShapeParentTransform(shape);
-            if (parentTransform)
-              localOffset.rot(-parentTransform.rotation());
+            if (parentTransform) localOffset.rot(-parentTransform.rotation());
             const { x, y } = Vec.Add(localOffset, shape);
             this.updateShapes([{ id: shape.id, type: shape.type, x, y }]);
             const scale = new Vec(commonBounds.width / pageBounds.width, 1);
@@ -54537,30 +53908,22 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   resizeShape(shape, scale, options = {}) {
-    var _a2, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
+    var _a3, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l;
     const id = typeof shape === "string" ? shape : shape.id;
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (!Number.isFinite(scale.x))
-      scale = new Vec(1, scale.y);
-    if (!Number.isFinite(scale.y))
-      scale = new Vec(scale.x, 1);
-    const initialShape = (_a2 = options.initialShape) != null ? _a2 : this.getShape(id);
-    if (!initialShape)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (!Number.isFinite(scale.x)) scale = new Vec(1, scale.y);
+    if (!Number.isFinite(scale.y)) scale = new Vec(scale.x, 1);
+    const initialShape = (_a3 = options.initialShape) != null ? _a3 : this.getShape(id);
+    if (!initialShape) return this;
     const scaleOrigin = (_c = options.scaleOrigin) != null ? _c : (_b2 = this.getShapePageBounds(id)) == null ? void 0 : _b2.center;
-    if (!scaleOrigin)
-      return this;
+    if (!scaleOrigin) return this;
     const pageTransform = options.initialPageTransform ? Mat.Cast(options.initialPageTransform) : this.getShapePageTransform(id);
-    if (!pageTransform)
-      return this;
+    if (!pageTransform) return this;
     const pageRotation = pageTransform.rotation();
-    if (pageRotation == null)
-      return this;
+    if (pageRotation == null) return this;
     const scaleAxisRotation = (_d = options.scaleAxisRotation) != null ? _d : pageRotation;
     const initialBounds = (_e = options.initialBounds) != null ? _e : this.getShapeGeometry(id).bounds;
-    if (!initialBounds)
-      return this;
+    if (!initialBounds) return this;
     const isAspectRatioLocked = (_f = options.isAspectRatioLocked) != null ? _f : this.getShapeUtil(initialShape).isAspectRatioLocked(initialShape);
     if (!areAnglesCompatible(pageRotation, scaleAxisRotation)) {
       return this._resizeUnalignedShape(id, scale, {
@@ -54699,8 +54062,7 @@ var Editor = class extends import_eventemitter3.default {
     const pageTransform = this.getShapePageTransform(id);
     const currentPageCenter = pageBounds.center;
     const shapePageTransformOrigin = pageTransform.point();
-    if (!currentPageCenter || !shapePageTransformOrigin)
-      return this;
+    if (!currentPageCenter || !shapePageTransformOrigin) return this;
     const pageDelta = Vec.Sub(postScaleShapePageCenter, currentPageCenter);
     const postScaleShapePagePoint = Vec.Add(shapePageTransformOrigin, pageDelta);
     const { x, y } = this.getPointInParentSpace(id, postScaleShapePagePoint);
@@ -54761,10 +54123,8 @@ var Editor = class extends import_eventemitter3.default {
     if (!Array.isArray(shapes)) {
       throw Error("Editor.createShapes: must provide an array of shapes or shape partials");
     }
-    if (this.getInstanceState().isReadonly)
-      return this;
-    if (shapes.length <= 0)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
+    if (shapes.length <= 0) return this;
     const currentPageShapeIds = this.getCurrentPageShapeIds();
     const maxShapesReached = shapes.length + currentPageShapeIds.size > this.options.maxShapesPerPage;
     if (maxShapesReached) {
@@ -54773,10 +54133,10 @@ var Editor = class extends import_eventemitter3.default {
     }
     const focusedGroupId = this.getFocusedGroupId();
     this.run(() => {
-      var _a2, _b2, _c, _d, _e;
+      var _a3, _b2, _c, _d, _e;
       const currentPageShapesSorted = this.getCurrentPageShapesSorted();
       const partials = shapes.map((partial) => {
-        var _a3, _b3, _c2, _d2, _e2;
+        var _a4, _b3, _c2, _d2, _e2;
         if (!partial.id) {
           partial = { id: createShapeId(), ...partial };
         }
@@ -54790,7 +54150,7 @@ var Editor = class extends import_eventemitter3.default {
                 parent,
                 // If no parent is provided, then we can treat the
                 // shape's provided x/y as being in the page's space.
-                { x: (_a3 = partial.x) != null ? _a3 : 0, y: (_b3 = partial.y) != null ? _b3 : 0 },
+                { x: (_a4 = partial.x) != null ? _a4 : 0, y: (_b3 = partial.y) != null ? _b3 : 0 },
                 {
                   margin: 0,
                   hitInside: true
@@ -54828,7 +54188,7 @@ var Editor = class extends import_eventemitter3.default {
         const util = this.getShapeUtil(partial);
         let index2 = partial.index;
         if (!index2) {
-          const parentId = (_a2 = partial.parentId) != null ? _a2 : focusedGroupId;
+          const parentId = (_a3 = partial.parentId) != null ? _a3 : focusedGroupId;
           if (!parentIndices.has(parentId)) {
             parentIndices.set(parentId, this.getHighestIndexForParent(parentId));
           }
@@ -54898,8 +54258,7 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   animateShapes(partials, opts = { animation: DEFAULT_ANIMATION_OPTIONS }) {
-    if (!opts.animation)
-      return this;
+    if (!opts.animation) return this;
     const { duration = 500, easing = EASINGS.linear } = opts.animation;
     const animationId = uniqueId();
     let remaining = duration;
@@ -54908,11 +54267,9 @@ var Editor = class extends import_eventemitter3.default {
     let partial, result;
     for (let i = 0, n2 = partials.length; i < n2; i++) {
       partial = partials[i];
-      if (!partial)
-        continue;
+      if (!partial) continue;
       const shape = this.getShape(partial.id);
-      if (!shape)
-        continue;
+      if (!shape) continue;
       result = {
         start: structuredClone(shape),
         end: applyPartialToRecordWithProps(structuredClone(shape), partial)
@@ -54921,7 +54278,7 @@ var Editor = class extends import_eventemitter3.default {
       this.animatingShapes.set(shape.id, animationId);
     }
     const handleTick = (elapsed) => {
-      var _a2, _b2, _c;
+      var _a3, _b2, _c;
       remaining -= elapsed;
       if (remaining < 0) {
         const { animatingShapes: animatingShapes2 } = this;
@@ -54941,15 +54298,14 @@ var Editor = class extends import_eventemitter3.default {
       for (let i = 0, n2 = animations.length; i < n2; i++) {
         const { start, end } = animations[i];
         animationIdForShape = animatingShapes.get(start.id);
-        if (animationIdForShape !== animationId)
-          continue;
+        if (animationIdForShape !== animationId) continue;
         updates.push({
           ...end,
           x: start.x + (end.x - start.x) * t3,
           y: start.y + (end.y - start.y) * t3,
           opacity: start.opacity + (end.opacity - start.opacity) * t3,
           rotation: start.rotation + (end.rotation - start.rotation) * t3,
-          props: (_c = (_b2 = (_a2 = this.getShapeUtil(end)).getInterpolatedProps) == null ? void 0 : _b2.call(_a2, start, end, t3)) != null ? _c : end.props
+          props: (_c = (_b2 = (_a3 = this.getShapeUtil(end)).getInterpolatedProps) == null ? void 0 : _b2.call(_a3, start, end, t3)) != null ? _c : end.props
         });
       }
       this._updateShapes(updates);
@@ -54958,16 +54314,14 @@ var Editor = class extends import_eventemitter3.default {
     return this;
   }
   groupShapes(shapes, options = {}) {
-    var _a2, _b2;
+    var _a3, _b2;
     const { groupId = createShapeId(), select = true } = options;
     if (!Array.isArray(shapes)) {
       throw Error("Editor.groupShapes: must provide an array of shapes or shape ids");
     }
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (ids.length <= 1)
-      return this;
+    if (ids.length <= 1) return this;
     const shapesToGroup = compact(
       (this._shouldIgnoreShapeLock ? ids : this._getUnlockedShapeIds(ids)).map(
         (id) => this.getShape(id)
@@ -54976,9 +54330,8 @@ var Editor = class extends import_eventemitter3.default {
     const sortedShapeIds = shapesToGroup.sort(sortByIndex).map((s) => s.id);
     const pageBounds = Box.Common(compact(shapesToGroup.map((id) => this.getShapePageBounds(id))));
     const { x, y } = pageBounds.point;
-    const parentId = (_a2 = this.findCommonAncestor(shapesToGroup)) != null ? _a2 : this.getCurrentPageId();
-    if (this.getCurrentToolId() !== "select")
-      return this;
+    const parentId = (_a3 = this.findCommonAncestor(shapesToGroup)) != null ? _a3 : this.getCurrentPageId();
+    if (this.getCurrentToolId() !== "select") return this;
     if (!this.isIn("select.idle")) {
       this.cancel();
     }
@@ -55005,8 +54358,7 @@ var Editor = class extends import_eventemitter3.default {
     return this;
   }
   ungroupShapes(shapes, options = {}) {
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     const { select = true } = options;
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
     const shapesToUngroup = compact(
@@ -55014,10 +54366,8 @@ var Editor = class extends import_eventemitter3.default {
         (id) => this.getShape(id)
       )
     );
-    if (shapesToUngroup.length === 0)
-      return this;
-    if (this.getCurrentToolId() !== "select")
-      return this;
+    if (shapesToUngroup.length === 0) return this;
+    if (this.getCurrentToolId() !== "select") return this;
     if (!this.isIn("select.idle")) {
       this.cancel();
     }
@@ -55030,8 +54380,7 @@ var Editor = class extends import_eventemitter3.default {
         idsToSelect.add(shape.id);
       }
     });
-    if (groups.length === 0)
-      return this;
+    if (groups.length === 0) return this;
     this.run(() => {
       let group;
       for (let i = 0, n2 = groups.length; i < n2; i++) {
@@ -55081,11 +54430,9 @@ var Editor = class extends import_eventemitter3.default {
     const compactedPartials = Array(partials.length);
     for (let i = 0, n2 = partials.length; i < n2; i++) {
       const partial = partials[i];
-      if (!partial)
-        continue;
+      if (!partial) continue;
       const shape = this.getShape(partial.id);
-      if (!shape)
-        continue;
+      if (!shape) continue;
       if (!this._shouldIgnoreShapeLock) {
         if (shape.isLocked) {
           if (!(Object.hasOwn(partial, "isLocked") && !partial.isLocked)) {
@@ -55104,20 +54451,18 @@ var Editor = class extends import_eventemitter3.default {
   /** @internal */
   _getUnlockedShapeIds(ids) {
     return ids.filter((id) => {
-      var _a2;
-      return !((_a2 = this.getShape(id)) == null ? void 0 : _a2.isLocked);
+      var _a3;
+      return !((_a3 = this.getShape(id)) == null ? void 0 : _a3.isLocked);
     });
   }
   deleteShapes(_ids) {
-    if (this.getInstanceState().isReadonly)
-      return this;
+    if (this.getInstanceState().isReadonly) return this;
     if (!Array.isArray(_ids)) {
       throw Error("Editor.deleteShapes: must provide an array of shapes or shapeIds");
     }
     const shapeIds = typeof _ids[0] === "string" ? _ids : _ids.map((s) => s.id);
     const shapeIdsToDelete = this._shouldIgnoreShapeLock ? shapeIds : this._getUnlockedShapeIds(shapeIds);
-    if (shapeIdsToDelete.length === 0)
-      return this;
+    if (shapeIdsToDelete.length === 0) return this;
     const allShapeIdsToDelete = new Set(shapeIdsToDelete);
     for (const id of shapeIdsToDelete) {
       this.visitDescendants(id, (childId) => {
@@ -55139,8 +54484,7 @@ var Editor = class extends import_eventemitter3.default {
   _extractSharedStyles(shape, sharedStyleMap) {
     if (this.isShapeOfType(shape, "group")) {
       const childIds = this._parentIdsToChildIds.get()[shape.id];
-      if (!childIds)
-        return;
+      if (!childIds) return;
       for (let i = 0, n2 = childIds.length; i < n2; i++) {
         this._extractSharedStyles(this.getShape(childIds[i]), sharedStyleMap);
       }
@@ -55175,8 +54519,7 @@ var Editor = class extends import_eventemitter3.default {
   }
   getShapeStyleIfExists(shape, style) {
     const styleKey = this.styleProps[shape.type].get(style);
-    if (styleKey === void 0)
-      return void 0;
+    if (styleKey === void 0) return void 0;
     return getOwnProperty(shape.props, styleKey);
   }
   getSharedStyles() {
@@ -55185,8 +54528,7 @@ var Editor = class extends import_eventemitter3.default {
     }
     const currentTool = this.root.getCurrent();
     const styles = new SharedStyleMap();
-    if (!currentTool)
-      return styles;
+    if (!currentTool) return styles;
     if (currentTool.shapeType) {
       for (const style of this.styleProps[currentTool.shapeType].keys()) {
         styles.applyValue(style, this.getStyleForNextShape(style));
@@ -55199,8 +54541,7 @@ var Editor = class extends import_eventemitter3.default {
       const shapesToCheck = [];
       const addShape = (shapeId) => {
         const shape = this.getShape(shapeId);
-        if (!shape)
-          return;
+        if (!shape) return;
         if (this.isShapeOfType(shape, "group")) {
           for (const childId of this.getSortedChildIdsForParent(shape.id)) {
             addShape(childId);
@@ -55220,8 +54561,7 @@ var Editor = class extends import_eventemitter3.default {
           return { type: "mixed" };
         }
       }
-      if (opacity !== null)
-        return { type: "shared", value: opacity };
+      if (opacity !== null) return { type: "shared", value: opacity };
     }
     return { type: "shared", value: this.getInstanceState().opacityForNextShape };
   }
@@ -55386,8 +54726,8 @@ var Editor = class extends import_eventemitter3.default {
    * @returns The asset.
    */
   async getAssetForExternalContent(info) {
-    var _a2, _b2;
-    return await ((_b2 = (_a2 = this.externalAssetContentHandlers)[info.type]) == null ? void 0 : _b2.call(_a2, info));
+    var _a3, _b2;
+    return await ((_b2 = (_a3 = this.externalAssetContentHandlers)[info.type]) == null ? void 0 : _b2.call(_a3, info));
   }
   hasExternalAssetHandler(type) {
     return !!this.externalAssetContentHandlers[type];
@@ -55417,8 +54757,8 @@ var Editor = class extends import_eventemitter3.default {
    * @param info - Info about the external content.
    */
   async putExternalContent(info) {
-    var _a2, _b2;
-    return (_b2 = (_a2 = this.externalContentHandlers)[info.type]) == null ? void 0 : _b2.call(_a2, info);
+    var _a3, _b2;
+    return (_b2 = (_a3 = this.externalContentHandlers)[info.type]) == null ? void 0 : _b2.call(_a3, info);
   }
   /**
    * Get content that can be exported for the given shape ids.
@@ -55431,25 +54771,21 @@ var Editor = class extends import_eventemitter3.default {
    */
   getContentFromCurrentPage(shapes) {
     const ids = typeof shapes[0] === "string" ? shapes : shapes.map((s) => s.id);
-    if (!ids)
-      return;
-    if (ids.length === 0)
-      return;
+    if (!ids) return;
+    if (ids.length === 0) return;
     const shapeIds = this.getShapeAndDescendantIds(ids);
     return withIsolatedShapes(this, shapeIds, (bindingIdsToKeep) => {
       const bindings = [];
       for (const id of bindingIdsToKeep) {
         const binding = this.getBinding(id);
-        if (!binding)
-          continue;
+        if (!binding) continue;
         bindings.push(binding);
       }
       const rootShapeIds = [];
       const shapes2 = [];
       for (const shapeId of shapeIds) {
         const shape = this.getShape(shapeId);
-        if (!shape)
-          continue;
+        if (!shape) continue;
         const isRootShape = !shapeIds.has(shape.parentId);
         if (isRootShape) {
           const pageTransform = this.getShapePageTransform(shape.id);
@@ -55469,15 +54805,12 @@ var Editor = class extends import_eventemitter3.default {
       const assets = [];
       const seenAssetIds = /* @__PURE__ */ new Set();
       for (const shape of shapes2) {
-        if (!("assetId" in shape.props))
-          continue;
+        if (!("assetId" in shape.props)) continue;
         const assetId = shape.props.assetId;
-        if (!assetId || seenAssetIds.has(assetId))
-          continue;
+        if (!assetId || seenAssetIds.has(assetId)) continue;
         seenAssetIds.add(assetId);
         const asset = this.getAsset(assetId);
-        if (!asset)
-          continue;
+        if (!asset) continue;
         assets.push(asset);
       }
       return {
@@ -55490,13 +54823,12 @@ var Editor = class extends import_eventemitter3.default {
     });
   }
   async resolveAssetsInContent(content) {
-    if (!content)
-      return void 0;
+    if (!content) return void 0;
     const assets = [];
     await Promise.allSettled(
       content.assets.map(async (asset) => {
-        var _a2, _b2;
-        if ((asset.type === "image" || asset.type === "video") && !((_a2 = asset.props.src) == null ? void 0 : _a2.startsWith("data:image")) && !((_b2 = asset.props.src) == null ? void 0 : _b2.startsWith("http"))) {
+        var _a3, _b2;
+        if ((asset.type === "image" || asset.type === "video") && !((_a3 = asset.props.src) == null ? void 0 : _a3.startsWith("data:image")) && !((_b2 = asset.props.src) == null ? void 0 : _b2.startsWith("http"))) {
           const assetWithDataUrl = structuredClone(asset);
           const objectUrl = await this.store.props.assets.resolve(asset, {
             screenScale: 1,
@@ -55526,9 +54858,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   putContentOntoCurrentPage(content, options = {}) {
-    var _a2, _b2, _c;
-    if (this.getInstanceState().isReadonly)
-      return this;
+    var _a3, _b2, _c;
+    if (this.getInstanceState().isReadonly) return this;
     if (!content.schema) {
       throw Error("Could not put content:\ncontent is missing a schema.");
     }
@@ -55544,7 +54875,7 @@ var Editor = class extends import_eventemitter3.default {
         ...Object.fromEntries(content.assets.map((asset) => [asset.id, asset])),
         ...Object.fromEntries(content.shapes.map((shape) => [shape.id, shape])),
         ...Object.fromEntries(
-          (_b2 = (_a2 = content.bindings) == null ? void 0 : _a2.map((bindings2) => [bindings2.id, bindings2])) != null ? _b2 : []
+          (_b2 = (_a3 = content.bindings) == null ? void 0 : _a3.map((bindings2) => [bindings2.id, bindings2])) != null ? _b2 : []
         )
       },
       schema: content.schema
@@ -55579,12 +54910,10 @@ var Editor = class extends import_eventemitter3.default {
     let lowestDepth = Infinity;
     let lowestAncestors = [];
     for (const shape of this.getSelectedShapes()) {
-      if (lowestDepth === 0)
-        break;
+      if (lowestDepth === 0) break;
       const isFrame = this.isShapeOfType(shape, "frame");
       const ancestors = this.getShapeAncestors(shape);
-      if (isFrame)
-        ancestors.push(shape);
+      if (isFrame) ancestors.push(shape);
       const depth = isFrame ? ancestors.length + 1 : ancestors.length;
       if (depth < lowestDepth) {
         lowestDepth = depth;
@@ -55600,8 +54929,7 @@ var Editor = class extends import_eventemitter3.default {
         } else {
           pasteParentId = currentPageId;
           for (let i = 0; i < lowestAncestors.length; i++) {
-            if (ancestors[i] !== lowestAncestors[i])
-              break;
+            if (ancestors[i] !== lowestAncestors[i]) break;
             pasteParentId = ancestors[i].id;
           }
         }
@@ -55675,11 +55003,11 @@ var Editor = class extends import_eventemitter3.default {
     }
     Promise.allSettled(
       assetsToUpdate.map(async (asset) => {
-        var _a3;
+        var _a4;
         const file = await dataUrlToFile(
           asset.props.src,
           asset.props.name,
-          (_a3 = asset.props.mimeType) != null ? _a3 : "image/png"
+          (_a4 = asset.props.mimeType) != null ? _a4 : "image/png"
         );
         const newAsset = await this.getAssetForExternalContent({ type: "file", file });
         if (!newAsset) {
@@ -55759,8 +55087,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   async getSvgElement(shapes, opts = {}) {
     const result = await getSvgJsx(this, shapes, opts);
-    if (!result)
-      return void 0;
+    if (!result) return void 0;
     const fragment = document.createDocumentFragment();
     const root = (0, import_client.createRoot)(fragment);
     (0, import_react_dom.flushSync)(() => {
@@ -55783,8 +55110,7 @@ var Editor = class extends import_eventemitter3.default {
    */
   async getSvgString(shapes, opts = {}) {
     const result = await this.getSvgElement(shapes, opts);
-    if (!result)
-      return void 0;
+    if (!result) return void 0;
     const serializer = new XMLSerializer();
     return {
       svg: serializer.serializeToString(result.svg),
@@ -55795,8 +55121,7 @@ var Editor = class extends import_eventemitter3.default {
   /** @deprecated Use {@link Editor.getSvgString} or {@link Editor.getSvgElement} instead. */
   async getSvg(shapes, opts = {}) {
     const result = await this.getSvgElement(shapes, opts);
-    if (!result)
-      return void 0;
+    if (!result) return void 0;
     return result.svg;
   }
   /**
@@ -55805,7 +55130,7 @@ var Editor = class extends import_eventemitter3.default {
    * @param info - The event info.
    */
   _updateInputsFromEvent(info) {
-    var _a2;
+    var _a3;
     const {
       pointerVelocity,
       previousScreenPoint,
@@ -55817,7 +55142,7 @@ var Editor = class extends import_eventemitter3.default {
     const { x: cx, y: cy, z: cz } = unsafe__withoutCapture(() => this.getCamera());
     const sx = info.point.x - screenBounds.x;
     const sy = info.point.y - screenBounds.y;
-    const sz = (_a2 = info.point.z) != null ? _a2 : 0.5;
+    const sz = (_a3 = info.point.z) != null ? _a3 : 0.5;
     previousScreenPoint.setTo(currentScreenPoint);
     previousPagePoint.setTo(currentPagePoint);
     currentScreenPoint.set(sx, sy);
@@ -55834,7 +55159,7 @@ var Editor = class extends import_eventemitter3.default {
     }
     this.run(
       () => {
-        var _a3, _b2;
+        var _a4, _b2;
         this.store.put([
           {
             id: TLPOINTER_ID,
@@ -55844,7 +55169,7 @@ var Editor = class extends import_eventemitter3.default {
             lastActivityTimestamp: (
               // If our pointer moved only because we're following some other user, then don't
               // update our last activity timestamp; otherwise, update it to the current timestamp.
-              info.type === "pointer" && info.pointerId === INTERNAL_POINTER_IDS.CAMERA_MOVE ? (_b2 = (_a3 = this.store.unsafeGetWithoutCapture(TLPOINTER_ID)) == null ? void 0 : _a3.lastActivityTimestamp) != null ? _b2 : this._tickManager.now : this._tickManager.now
+              info.type === "pointer" && info.pointerId === INTERNAL_POINTER_IDS.CAMERA_MOVE ? (_b2 = (_a4 = this.store.unsafeGetWithoutCapture(TLPOINTER_ID)) == null ? void 0 : _a4.lastActivityTimestamp) != null ? _b2 : this._tickManager.now : this._tickManager.now
             ),
             meta: {}
           }
@@ -55915,10 +55240,8 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   focus({ focusContainer = true } = {}) {
-    if (this.getIsFocused())
-      return this;
-    if (focusContainer)
-      this.focusManager.focus();
+    if (this.getIsFocused()) return this;
+    if (focusContainer) this.focusManager.focus();
     this.updateInstanceState({ isFocused: true });
     return this;
   }
@@ -55941,8 +55264,7 @@ var Editor = class extends import_eventemitter3.default {
    * @public
    */
   blur({ blurContainer = true } = {}) {
-    if (!this.getIsFocused())
-      return this;
+    if (!this.getIsFocused()) return this;
     if (blurContainer) {
       this.focusManager.blur();
     } else {
@@ -56007,202 +55329,202 @@ var Editor = class extends import_eventemitter3.default {
     }
   }
 };
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCanUndo", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCanRedo", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getPath", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentTool", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentToolId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getDocumentSettings", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getInstanceState", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getOpenMenus", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getIsMenuOpen", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getPageStates", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getPageStatesQuery", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageState", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getCurrentPageStateId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSelectedShapeIds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSelectedShapes", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getOnlySelectedShapeId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getOnlySelectedShape", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSelectionPageBounds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSelectionRotation", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSelectionRotatedPageBounds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSelectionRotatedScreenBounds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getFocusedGroupId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getFocusedGroup", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getEditingShapeId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getEditingShape", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getHoveredShapeId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getHoveredShape", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getHintingShapeIds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getHintingShape", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getErasingShapeIds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getErasingShapes", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_unsafe_getCameraId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCamera", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getViewportPageBoundsForFollowing", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCameraForFollowing", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getZoomLevel", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getViewportScreenBounds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getViewportScreenCenter", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getViewportPageBounds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getCollaboratorsQuery", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCollaborators", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCollaboratorsOnCurrentPage", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getRenderingShapes", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getAllPagesQuery", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getPages", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageId", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageShapeIdsSorted", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getAllAssetsQuery", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapeGeometryCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapeHandlesCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapePageTransformCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapePageBoundsCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapeClipPathCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapeMaskCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getShapeMaskedPageBoundsCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_notVisibleShapes", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCulledShapes", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageBounds", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageShapes", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageShapesSorted", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getCurrentPageRenderingShapesSorted", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getBindingsIndexCache", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "_getSelectionSharedStyles", 1);
-__decorateClass6([
+__decorateClass5([
   computed({ isEqual: (a, b) => a.equals(b) })
 ], Editor.prototype, "getSharedStyles", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getSharedOpacity", 1);
-__decorateClass6([
+__decorateClass5([
   computed
 ], Editor.prototype, "getIsFocused", 1);
 function alertMaxShapes(editor, pageId = editor.getCurrentPageId()) {
@@ -56210,20 +55532,15 @@ function alertMaxShapes(editor, pageId = editor.getCurrentPageId()) {
   editor.emit("max-shapes", { name, pageId, count: editor.options.maxShapesPerPage });
 }
 function applyPartialToRecordWithProps(prev, partial) {
-  if (!partial)
-    return prev;
+  if (!partial) return prev;
   let next = null;
   const entries = Object.entries(partial);
   for (let i = 0, n2 = entries.length; i < n2; i++) {
     const [k, v] = entries[i];
-    if (v === void 0)
-      continue;
-    if (k === "id" || k === "type" || k === "typeName")
-      continue;
-    if (v === prev[k])
-      continue;
-    if (!next)
-      next = { ...prev };
+    if (v === void 0) continue;
+    if (k === "id" || k === "type" || k === "typeName") continue;
+    if (v === prev[k]) continue;
+    if (!next) next = { ...prev };
     if (k === "props" || k === "meta") {
       next[k] = { ...prev[k] };
       for (const [nextKey, nextValue] of Object.entries(v)) {
@@ -56237,14 +55554,12 @@ function applyPartialToRecordWithProps(prev, partial) {
     ;
     next[k] = v;
   }
-  if (!next)
-    return prev;
+  if (!next) return prev;
   return next;
 }
 function pushShapeWithDescendants(editor, id, result) {
   const shape = editor.getShape(id);
-  if (!shape)
-    return;
+  if (!shape) return;
   result.push(shape);
   const childIds = editor.getSortedChildIdsForParent(id);
   for (let i = 0, n2 = childIds.length; i < n2; i++) {
@@ -56260,8 +55575,7 @@ function withIsolatedShapes(editor, shapeIds, callback) {
         const bindingsToRemove = /* @__PURE__ */ new Set();
         for (const shapeId of shapeIds) {
           const shape = editor.getShape(shapeId);
-          if (!shape)
-            continue;
+          if (!shape) continue;
           for (const binding of editor.getBindingsInvolvingShape(shapeId)) {
             const hasFrom = shapeIds.has(binding.fromId);
             const hasTo = shapeIds.has(binding.toId);
@@ -56292,8 +55606,7 @@ function withIsolatedShapes(editor, shapeIds, callback) {
   }
 }
 function getCameraFitXFitY(editor, cameraOptions) {
-  if (!cameraOptions.constraints)
-    throw Error("Should have constraints here");
+  if (!cameraOptions.constraints) throw Error("Should have constraints here");
   const {
     padding: { x: px, y: py }
   } = cameraOptions.constraints;
@@ -56309,8 +55622,8 @@ function useIsDarkMode() {
   const editor = useEditor();
   const exportContext = useSvgExportContext();
   return useValue("isDarkMode", () => {
-    var _a2;
-    return (_a2 = exportContext == null ? void 0 : exportContext.isDarkMode) != null ? _a2 : editor.user.getIsDarkMode();
+    var _a3;
+    return (_a3 = exportContext == null ? void 0 : exportContext.isDarkMode) != null ? _a3 : editor.user.getIsDarkMode();
   }, [
     exportContext,
     editor
@@ -56431,8 +55744,7 @@ var inlineBase64AssetStore = {
   upload: (_, file) => FileHelpers.blobToDataUrl(file)
 };
 function createTLSchemaFromUtils(opts) {
-  if ("schema" in opts && opts.schema)
-    return opts.schema;
+  if ("schema" in opts && opts.schema) return opts.schema;
   return createTLSchema({
     shapes: "shapeUtils" in opts && opts.shapeUtils ? utilsToMap(checkShapesAndAddCore(opts.shapeUtils)) : void 0,
     bindings: "bindingUtils" in opts && opts.bindingUtils ? utilsToMap(checkBindings(opts.bindingUtils)) : void 0,
@@ -56448,7 +55760,7 @@ function createTLStore({
   collaboration,
   ...rest
 } = {}) {
-  var _a2;
+  var _a3;
   const schema = createTLSchemaFromUtils(rest);
   const store = new Store({
     id,
@@ -56458,7 +55770,7 @@ function createTLStore({
       defaultName,
       assets: {
         upload: assets.upload,
-        resolve: (_a2 = assets.resolve) != null ? _a2 : defaultAssetResolve
+        resolve: (_a3 = assets.resolve) != null ? _a3 : defaultAssetResolve
       },
       onMount: (editor) => {
         assert(editor instanceof Editor);
@@ -56468,8 +55780,7 @@ function createTLStore({
     }
   });
   if (rest.snapshot) {
-    if (initialData)
-      throw new Error("Cannot provide both initialData and snapshot");
+    if (initialData) throw new Error("Cannot provide both initialData and snapshot");
     loadSnapshot(store, rest.snapshot);
   }
   return store;
@@ -56738,8 +56049,7 @@ async function migrateLegacyAssetDbIfNeeded(persistenceKey) {
   const databases = window.indexedDB.databases ? (await window.indexedDB.databases()).map((db) => db.name) : getAllIndexDbNames();
   const oldStoreId = LEGACY_ASSET_STORE_PREFIX + persistenceKey;
   const existing = databases.find((dbName) => dbName === oldStoreId);
-  if (!existing)
-    return;
+  if (!existing) return;
   const oldAssetDb = await openDB(oldStoreId, 1, {
     upgrade(database) {
       if (!database.objectStoreNames.contains("assets")) {
@@ -56765,7 +56075,7 @@ async function migrateLegacyAssetDbIfNeeded(persistenceKey) {
   newDb.close();
   await deleteDB(oldStoreId);
 }
-var _LocalIndexedDb = class {
+var _LocalIndexedDb = class _LocalIndexedDb {
   constructor(persistenceKey) {
     __publicField(this, "getDbPromise");
     __publicField(this, "isClosed", false);
@@ -56788,8 +56098,7 @@ var _LocalIndexedDb = class {
     return Promise.allSettled([this.getDbPromise, ...this.pendingTransactionSet]).then(noop);
   }
   async close() {
-    if (this.isClosed)
-      return;
+    if (this.isClosed) return;
     this.isClosed = true;
     await this.pending();
     (await this.getDb()).close();
@@ -56800,11 +56109,16 @@ var _LocalIndexedDb = class {
       assert(!this.isClosed, "db is closed");
       const db = await this.getDb();
       const tx = db.transaction(names, mode);
+      const done = tx.done.catch((e2) => {
+        if (!this.isClosed) {
+          throw e2;
+        }
+      });
       try {
         return await cb(tx);
       } finally {
         if (!this.isClosed) {
-          await tx.done;
+          await done;
         } else {
           tx.abort();
         }
@@ -56819,11 +56133,11 @@ var _LocalIndexedDb = class {
       "readonly",
       [Table.Records, Table.Schema, Table.SessionState],
       async (tx) => {
-        var _a2, _b2;
+        var _a3, _b2;
         const recordsStore = tx.objectStore(Table.Records);
         const schemaStore = tx.objectStore(Table.Schema);
         const sessionStateStore = tx.objectStore(Table.SessionState);
-        let sessionStateSnapshot = sessionId ? (_a2 = await sessionStateStore.get(sessionId)) == null ? void 0 : _a2.snapshot : null;
+        let sessionStateSnapshot = sessionId ? (_a3 = await sessionStateStore.get(sessionId)) == null ? void 0 : _a3.snapshot : null;
         if (!sessionStateSnapshot) {
           const all = await sessionStateStore.getAll();
           sessionStateSnapshot = (_b2 = all.sort((a, b) => a.updatedAt - b.updatedAt).pop()) == null ? void 0 : _b2.snapshot;
@@ -56927,12 +56241,12 @@ var _LocalIndexedDb = class {
     });
   }
 };
-var LocalIndexedDb = _LocalIndexedDb;
 /** @internal */
-__publicField(LocalIndexedDb, "connectedInstances", /* @__PURE__ */ new Set());
+__publicField(_LocalIndexedDb, "connectedInstances", /* @__PURE__ */ new Set());
+var LocalIndexedDb = _LocalIndexedDb;
 function getAllIndexDbNames() {
-  var _a2;
-  const result = (_a2 = JSON.parse(getFromLocalStorage(dbNameIndexKey) || "[]")) != null ? _a2 : [];
+  var _a3;
+  const result = (_a3 = JSON.parse(getFromLocalStorage(dbNameIndexKey) || "[]")) != null ? _a3 : [];
   if (!Array.isArray(result)) {
     return [];
   }
@@ -57056,7 +56370,7 @@ var TLLocalSyncClient = class {
     }
   }
   async connect(onLoad, onLoadError) {
-    var _a2, _b2;
+    var _a3, _b2;
     this.debug("connecting");
     let data;
     try {
@@ -57067,12 +56381,11 @@ var TLLocalSyncClient = class {
       return;
     }
     this.debug("loaded data from store", data, "didDispose", this.didDispose);
-    if (this.didDispose)
-      return;
+    if (this.didDispose) return;
     try {
       if (data) {
         const documentSnapshot = Object.fromEntries(data.records.map((r2) => [r2.id, r2]));
-        const sessionStateSnapshot = (_a2 = data.sessionStateSnapshot) != null ? _a2 : extractSessionStateFromLegacySnapshot(documentSnapshot);
+        const sessionStateSnapshot = (_a3 = data.sessionStateSnapshot) != null ? _a3 : extractSessionStateFromLegacySnapshot(documentSnapshot);
         const migrationResult = this.store.schema.migrateStoreSnapshot({
           store: documentSnapshot,
           // eslint-disable-next-line deprecation/deprecation
@@ -57094,7 +56407,7 @@ var TLLocalSyncClient = class {
         }
       }
       this.channel.onmessage = ({ data: data2 }) => {
-        var _a3, _b3;
+        var _a4, _b3;
         this.debug("got message", data2);
         const msg2 = data2;
         const res = this.store.schema.getMigrationsSince(msg2.schema);
@@ -57106,7 +56419,7 @@ var TLLocalSyncClient = class {
           }
           this.debug("reloading");
           this.isReloading = true;
-          (_b3 = (_a3 = window == null ? void 0 : window.location) == null ? void 0 : _a3.reload) == null ? void 0 : _b3.call(_a3);
+          (_b3 = (_a4 = window == null ? void 0 : window.location) == null ? void 0 : _a4.reload) == null ? void 0 : _b3.call(_a4);
           return;
         } else if (res.value.length > 0) {
           this.debug("telling them to reload");
@@ -57132,8 +56445,7 @@ var TLLocalSyncClient = class {
       onLoad(this);
     } catch (e2) {
       this.debug("error loading data from store", e2);
-      if (this.didDispose)
-        return;
+      if (this.didDispose) return;
       onLoadError(e2);
       return;
     }
@@ -57151,8 +56463,7 @@ var TLLocalSyncClient = class {
    */
   schedulePersist() {
     this.debug("schedulePersist", this.scheduledPersistTimeout);
-    if (this.scheduledPersistTimeout)
-      return;
+    if (this.scheduledPersistTimeout) return;
     this.scheduledPersistTimeout = setTimeout(
       () => {
         this.scheduledPersistTimeout = null;
@@ -57182,12 +56493,9 @@ var TLLocalSyncClient = class {
       clearTimeout(this.scheduledPersistTimeout);
       this.scheduledPersistTimeout = null;
     }
-    if (this.isPersisting)
-      return;
-    if (this.isReloading)
-      return;
-    if (this.store.isPossiblyCorrupted())
-      return;
+    if (this.isPersisting) return;
+    if (this.isReloading) return;
+    if (this.store.isPossiblyCorrupted()) return;
     if (this.shouldDoFullDBWrite || this.diffQueue.length > 0) {
       this.doPersist();
     }
@@ -57198,8 +56506,7 @@ var TLLocalSyncClient = class {
    */
   async doPersist() {
     assert(!this.isPersisting, "persist already in progress");
-    if (this.didDispose)
-      return;
+    if (this.didDispose) return;
     this.isPersisting = true;
     this.debug("doPersist start");
     const diffQueue = this.diffQueue;
@@ -57280,13 +56587,11 @@ function useLocalStore(options) {
         return asset.id;
       },
       resolve: async (asset) => {
-        if (!asset.props.src)
-          return null;
+        if (!asset.props.src) return null;
         if (asset.props.src.startsWith("asset:")) {
           return await objectURLCache.get(asset, async () => {
             const blob = await client.db.getAsset(asset.id);
-            if (!blob)
-              return null;
+            if (!blob) return null;
             return URL.createObjectURL(blob);
           });
         }
@@ -57300,13 +56605,11 @@ function useLocalStore(options) {
       sessionId,
       persistenceKey,
       onLoad() {
-        if (isClosed)
-          return;
+        if (isClosed) return;
         setState({ store, status: "synced-local" });
       },
       onLoadError(err) {
-        if (isClosed)
-          return;
+        if (isClosed) return;
         setState({ status: "error", error: err });
       }
     });
@@ -57410,10 +56713,8 @@ var LicenseManager = class {
     }
   }
   getIsDevelopment(testEnvironment) {
-    if (testEnvironment === "development")
-      return true;
-    if (testEnvironment === "production")
-      return false;
+    if (testEnvironment === "development") return true;
+    if (testEnvironment === "production") return false;
     return window.location.protocol !== "https:";
   }
   async extractLicenseKey(licenseKey) {
@@ -57580,8 +56881,7 @@ var LicenseManager = class {
     }
   }
   outputMessages(messages) {
-    if (this.isTest)
-      return;
+    if (this.isTest) return;
     this.outputDelimiter();
     for (const message of messages) {
       console.log(
@@ -57600,10 +56900,8 @@ var LicenseManager = class {
 };
 __publicField(LicenseManager, "className", "tl-watermark_SEE-LICENSE");
 function isEditorUnlicensed(result) {
-  if (!result.isLicenseParseable)
-    return true;
-  if (!result.isDomainValid && !result.isDevelopment)
-    return true;
+  if (!result.isLicenseParseable) return true;
+  if (!result.isDomainValid && !result.isDevelopment) return true;
   if (result.isPerpetualLicenseExpired || result.isAnnualLicenseExpired) {
     if (result.isInternalLicense) {
       throw new Error("License: Internal license expired.");
@@ -57645,8 +56943,7 @@ async function getWatermarkUrl(forceLocal) {
       (async () => {
         try {
           const response = await fetch(WATERMARK_REMOTE_SRC);
-          if (!response.ok)
-            return WATERMARK_LOCAL_SRC;
+          if (!response.ok) return WATERMARK_LOCAL_SRC;
           const blob = await response.blob();
           return URL.createObjectURL(blob);
         } catch (e2) {
@@ -57679,21 +56976,18 @@ var Watermark = import_react41.default.memo(function Watermark2({
   const [src, setSrc] = (0, import_react41.useState)(null);
   const shouldUseLocal = forceLocal || licenseManager.isDevelopment;
   (0, import_react41.useEffect)(() => {
-    if (!showWatermark)
-      return;
+    if (!showWatermark) return;
     let isCancelled = false;
     (async () => {
       const src2 = await getWatermarkUrl(shouldUseLocal);
-      if (isCancelled)
-        return;
+      if (isCancelled) return;
       setSrc(src2);
     })();
     return () => {
       isCancelled = true;
     };
   }, [shouldUseLocal, showWatermark]);
-  if (!showWatermark || !src)
-    return null;
+  if (!showWatermark || !src) return null;
   const className = LicenseManager.className;
   const maskCss = `url('${src}') center 100% / 100% no-repeat`;
   return /* @__PURE__ */ (0, import_jsx_runtime32.jsxs)(import_jsx_runtime32.Fragment, { children: [
@@ -57786,13 +57080,13 @@ var TldrawEditor = (0, import_react42.memo)(function TldrawEditor2({
   user: _user,
   ...rest
 }) {
-  var _a2, _b2, _c;
+  var _a3, _b2, _c;
   const [container, setContainer] = import_react42.default.useState(null);
   const user = (0, import_react42.useMemo)(() => _user != null ? _user : createTLUser(), [_user]);
   const ErrorFallback = (components2 == null ? void 0 : components2.ErrorFallback) === void 0 ? DefaultErrorFallback : components2 == null ? void 0 : components2.ErrorFallback;
   const withDefaults = {
     ...rest,
-    shapeUtils: (_a2 = rest.shapeUtils) != null ? _a2 : EMPTY_SHAPE_UTILS_ARRAY,
+    shapeUtils: (_a3 = rest.shapeUtils) != null ? _a3 : EMPTY_SHAPE_UTILS_ARRAY,
     bindingUtils: (_b2 = rest.bindingUtils) != null ? _b2 : EMPTY_BINDING_UTILS_ARRAY,
     tools: (_c = rest.tools) != null ? _c : EMPTY_TOOLS_ARRAY,
     components: components2
@@ -57961,30 +57255,27 @@ function TldrawEditorWithReadyStore({
       [editor]
     ),
     () => {
-      var _a2;
-      return (_a2 = editor == null ? void 0 : editor.getCrashingError()) != null ? _a2 : null;
+      var _a3;
+      return (_a3 = editor == null ? void 0 : editor.getCrashingError()) != null ? _a3 : null;
     }
   );
   (0, import_react42.useEffect)(
     function handleFocusOnPointerDownForPreserveFocusMode() {
-      if (!editor)
-        return;
+      if (!editor) return;
       function handleFocusOnPointerDown() {
-        if (!editor)
-          return;
+        if (!editor) return;
         editor.focus();
       }
       function handleBlurOnPointerDown() {
-        if (!editor)
-          return;
+        if (!editor) return;
         editor.blur();
       }
       if (autoFocus && noAutoFocus()) {
         editor.getContainer().addEventListener("pointerdown", handleFocusOnPointerDown);
         document.body.addEventListener("pointerdown", handleBlurOnPointerDown);
         return () => {
-          var _a2;
-          (_a2 = editor.getContainer()) == null ? void 0 : _a2.removeEventListener("pointerdown", handleFocusOnPointerDown);
+          var _a3;
+          (_a3 = editor.getContainer()) == null ? void 0 : _a3.removeEventListener("pointerdown", handleFocusOnPointerDown);
           document.body.removeEventListener("pointerdown", handleBlurOnPointerDown);
         };
       }
@@ -58051,8 +57342,7 @@ function useOnMount(onMount) {
     return teardown;
   });
   import_react42.default.useLayoutEffect(() => {
-    if (editor)
-      return onMountEvent == null ? void 0 : onMountEvent(editor);
+    if (editor) return onMountEvent == null ? void 0 : onMountEvent(editor);
   }, [editor, onMountEvent]);
 }
 
@@ -58296,8 +57586,7 @@ var Pointing = class extends StateNode {
     let { w, h } = shape.props;
     const delta = new Vec(w / 2, h / 2);
     const parentTransform = this.editor.getShapeParentTransform(shape);
-    if (parentTransform)
-      delta.rot(-parentTransform.rotation());
+    if (parentTransform) delta.rot(-parentTransform.rotation());
     let scale = 1;
     if (this.editor.user.getIsDynamicResizeMode()) {
       scale = 1 / this.editor.getZoomLevel();
@@ -58352,8 +57641,7 @@ function useSelectionEvents(handle) {
   const events = (0, import_react43.useMemo)(
     function selectionEvents() {
       const onPointerDown = (e2) => {
-        if (e2.isKilled)
-          return;
+        if (e2.isKilled) return;
         if (e2.button === RIGHT_MOUSE_BUTTON) {
           editor.dispatch({
             type: "pointer",
@@ -58364,8 +57652,7 @@ function useSelectionEvents(handle) {
           });
           return;
         }
-        if (e2.button !== 0)
-          return;
+        if (e2.button !== 0) return;
         const elm = loopToHtmlElement(e2.currentTarget);
         function releaseCapture() {
           elm.removeEventListener("pointerup", releaseCapture);
@@ -58384,12 +57671,9 @@ function useSelectionEvents(handle) {
       };
       let lastX, lastY;
       function onPointerMove(e2) {
-        if (e2.isKilled)
-          return;
-        if (e2.button !== 0)
-          return;
-        if (e2.clientX === lastX && e2.clientY === lastY)
-          return;
+        if (e2.isKilled) return;
+        if (e2.button !== 0) return;
+        if (e2.clientX === lastX && e2.clientY === lastY) return;
         lastX = e2.clientX;
         lastY = e2.clientY;
         editor.dispatch({
@@ -58401,10 +57685,8 @@ function useSelectionEvents(handle) {
         });
       }
       const onPointerUp = (e2) => {
-        if (e2.isKilled)
-          return;
-        if (e2.button !== 0)
-          return;
+        if (e2.isKilled) return;
+        if (e2.button !== 0) return;
         editor.dispatch({
           name: "pointer_up",
           type: "pointer",
@@ -58457,8 +57739,7 @@ var Arc2d = class extends Geometry2d {
     __publicField(this, "angleStart");
     __publicField(this, "angleEnd");
     const { center, sweepFlag, largeArcFlag, start, end } = config;
-    if (start.equals(end))
-      throw Error(`Arc must have different start and end points.`);
+    if (start.equals(end)) throw Error(`Arc must have different start and end points.`);
     this.angleStart = Vec.Angle(center, start);
     this.angleEnd = Vec.Angle(center, end);
     this.radius = Vec.Dist(center, start);
@@ -58472,10 +57753,8 @@ var Arc2d = class extends Geometry2d {
   nearestPoint(point) {
     const { _center, measure, radius, angleEnd, angleStart, start: A, end: B } = this;
     const t3 = getPointInArcT(measure, angleStart, angleEnd, _center.angle(point));
-    if (t3 <= 0)
-      return A;
-    if (t3 >= 1)
-      return B;
+    if (t3 <= 0) return A;
+    if (t3 >= 1) return B;
     const P = _center.clone().add(point.clone().sub(_center).uni().mul(radius));
     let nearest;
     let dist = Infinity;
@@ -58487,15 +57766,13 @@ var Arc2d = class extends Geometry2d {
         dist = d;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   hitTestLineSegment(A, B) {
     const { _center, radius, measure, angleStart, angleEnd } = this;
     const intersection = intersectLineSegmentCircle(A, B, _center, radius);
-    if (intersection === null)
-      return false;
+    if (intersection === null) return false;
     return intersection.some((p) => {
       const result = getPointInArcT(measure, angleStart, angleEnd, _center.angle(p));
       return result >= 0 && result <= 1;
@@ -58550,8 +57827,7 @@ var Circle2d = class extends Geometry2d {
   }
   nearestPoint(point) {
     const { _center, radius } = this;
-    if (_center.equals(point))
-      return Vec.AddXY(_center, radius, 0);
+    if (_center.equals(point)) return Vec.AddXY(_center, radius, 0);
     return _center.clone().add(point.clone().sub(_center).uni().mul(radius));
   }
   hitTestLineSegment(A, B, distance = 0) {
@@ -58565,7 +57841,7 @@ var Circle2d = class extends Geometry2d {
 };
 
 // node_modules/@tldraw/editor/dist-esm/lib/primitives/geometry/CubicBezier2d.mjs
-var CubicBezier2d = class extends Polyline2d {
+var CubicBezier2d = class _CubicBezier2d extends Polyline2d {
   constructor(config) {
     const { start: a, cp1: b, cp2: c2, end: d } = config;
     super({ ...config, points: [a, d] });
@@ -58593,7 +57869,7 @@ var CubicBezier2d = class extends Polyline2d {
     return vertices;
   }
   midPoint() {
-    return CubicBezier2d.GetAtT(this, 0.5);
+    return _CubicBezier2d.GetAtT(this, 0.5);
   }
   nearestPoint(A) {
     let nearest;
@@ -58608,8 +57884,7 @@ var CubicBezier2d = class extends Polyline2d {
         dist = d;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   getSvgPathData(first = true) {
@@ -58626,7 +57901,7 @@ var CubicBezier2d = class extends Polyline2d {
   getLength(precision = 32) {
     let n1, p1 = this.a, length = 0;
     for (let i = 1; i <= precision; i++) {
-      n1 = CubicBezier2d.GetAtT(this, i / precision);
+      n1 = _CubicBezier2d.GetAtT(this, i / precision);
       length += Vec.Dist(p1, n1);
       p1 = n1;
     }
@@ -58685,8 +57960,7 @@ var CubicSpline2d = class extends Geometry2d {
         dist = d;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   hitTestLineSegment(A, B) {
@@ -58766,8 +58040,7 @@ var Ellipse2d = class extends Geometry2d {
         dist = d;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   hitTestLineSegment(A, B) {
@@ -58860,8 +58133,7 @@ var Stadium2d = class extends Geometry2d {
         dist = _d;
       }
     }
-    if (!nearest)
-      throw Error("nearest point not found");
+    if (!nearest) throw Error("nearest point not found");
     return nearest;
   }
   hitTestLineSegment(A, B) {
@@ -58880,10 +58152,8 @@ var Stadium2d = class extends Geometry2d {
   }
   getLength() {
     const { h, w } = this;
-    if (h > w)
-      return (PI * (w / 2) + (h - w)) * 2;
-    else
-      return (PI * (h / 2) + (w - h)) * 2;
+    if (h > w) return (PI * (w / 2) + (h - w)) * 2;
+    else return (PI * (h / 2) + (w - h)) * 2;
   }
   getSvgPathData() {
     const { a, b, c: c2, d } = this;
@@ -58939,8 +58209,7 @@ function TldrawHandles({ children }) {
     },
     [editor]
   );
-  if (!shouldDisplayHandles)
-    return null;
+  if (!shouldDisplayHandles) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime35.jsx)("svg", { className: "tl-user-handles tl-overlays__item", children });
 }
 
@@ -59103,18 +58372,16 @@ function getStrokeOutlinePoints(strokePoints, options = {}) {
 var MIN_START_PRESSURE = 0.025;
 var MIN_END_PRESSURE = 0.01;
 function getStrokePoints(rawInputPoints, options = {}) {
-  var _a2;
+  var _a3;
   const { streamline = 0.5, size: size4 = 16, simulatePressure = false } = options;
-  if (rawInputPoints.length === 0)
-    return [];
+  if (rawInputPoints.length === 0) return [];
   const t3 = 0.15 + (1 - streamline) * 0.85;
   let pts = rawInputPoints.map(Vec.From);
   let pointsRemovedFromNearEnd = 0;
   if (!simulatePressure) {
     let pt2 = pts[0];
     while (pt2) {
-      if (pt2.z >= MIN_START_PRESSURE)
-        break;
+      if (pt2.z >= MIN_START_PRESSURE) break;
       pts.shift();
       pt2 = pts[0];
     }
@@ -59122,8 +58389,7 @@ function getStrokePoints(rawInputPoints, options = {}) {
   if (!simulatePressure) {
     let pt2 = pts[pts.length - 1];
     while (pt2) {
-      if (pt2.z >= MIN_END_PRESSURE)
-        break;
+      if (pt2.z >= MIN_END_PRESSURE) break;
       pts.pop();
       pt2 = pts[pts.length - 1];
     }
@@ -59142,8 +58408,7 @@ function getStrokePoints(rawInputPoints, options = {}) {
     ];
   let pt = pts[1];
   while (pt) {
-    if (Vec.Dist2(pt, pts[0]) > (size4 / 3) ** 2)
-      break;
+    if (Vec.Dist2(pt, pts[0]) > (size4 / 3) ** 2) break;
     pts[0].z = Math.max(pts[0].z, pt.z);
     pts.splice(1, 1);
     pt = pts[1];
@@ -59151,8 +58416,7 @@ function getStrokePoints(rawInputPoints, options = {}) {
   const last3 = pts.pop();
   pt = pts[pts.length - 1];
   while (pt) {
-    if (Vec.Dist2(pt, last3) > (size4 / 3) ** 2)
-      break;
+    if (Vec.Dist2(pt, last3) > (size4 / 3) ** 2) break;
     pts.pop();
     pt = pts[pts.length - 1];
     pointsRemovedFromNearEnd++;
@@ -59187,8 +58451,7 @@ function getStrokePoints(rawInputPoints, options = {}) {
   }
   for (let i = 1, n2 = pts.length; i < n2; i++) {
     point = !t3 || options.last && i === n2 - 1 ? pts[i].clone() : pts[i].clone().lrp(prev.point, 1 - t3);
-    if (prev.point.equals(point))
-      continue;
+    if (prev.point.equals(point)) continue;
     distance = Vec.Dist(point, prev.point);
     totalLength += distance;
     if (i < 4 && totalLength < size4) {
@@ -59211,7 +58474,7 @@ function getStrokePoints(rawInputPoints, options = {}) {
     };
     strokePoints.push(prev);
   }
-  if ((_a2 = strokePoints[1]) == null ? void 0 : _a2.vector) {
+  if ((_a3 = strokePoints[1]) == null ? void 0 : _a3.vector) {
     strokePoints[0].vector = strokePoints[1].vector.clone();
   }
   if (totalLength < 1) {
@@ -59250,8 +58513,7 @@ function setStrokePointRadii(strokePoints, options) {
     let p;
     for (let i = 0, n2 = strokePoints.length; i < n2; i++) {
       strokePoint = strokePoints[i];
-      if (strokePoint.runningLength > size4 * 5)
-        break;
+      if (strokePoint.runningLength > size4 * 5) break;
       const sp = min(1, strokePoint.distance / size4);
       if (simulatePressure) {
         const rp = min(1, 1 - sp);
@@ -59309,8 +58571,7 @@ function getStroke(points, options = {}) {
 
 // node_modules/tldraw/dist-esm/lib/canvas/TldrawScribble.mjs
 function TldrawScribble({ scribble, zoom, color, opacity, className }) {
-  if (!scribble.points.length)
-    return null;
+  if (!scribble.points.length) return null;
   const stroke = getStroke(scribble.points, {
     size: scribble.size / zoom,
     start: { taper: scribble.taper, easing: EASINGS.linear },
@@ -59353,8 +58614,7 @@ var TldrawSelectionBackground = ({ bounds, rotation }) => {
     ),
     [editor]
   );
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime37.jsx)(DefaultSelectionBackground, { bounds, rotation });
 };
 
@@ -59525,8 +58785,7 @@ var TldrawSelectionForeground = track(function TldrawSelectionForeground2({
     x: -expandOutlineBy,
     y: -expandOutlineBy
   });
-  if (!bounds)
-    return null;
+  if (!bounds) return null;
   bounds = bounds.clone().expandBy(expandOutlineBy).zeroFix();
   const zoom = editor.getZoomLevel();
   const isChangingStyle = editor.getInstanceState().isChangingStyle;
@@ -59981,8 +59240,7 @@ function TldrawShapeIndicators() {
     },
     [editor]
   );
-  if (!isInSelectState)
-    return null;
+  if (!isInSelectState) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime40.jsx)(DefaultShapeIndicators, {});
 }
 
@@ -60106,7 +59364,7 @@ function getStraightArrowInfo(editor, shape, bindings) {
   };
 }
 function updateArrowheadPointWithBoundShape(point, opposite, arrowPageTransform, targetShapeInfo) {
-  var _a2;
+  var _a3;
   if (targetShapeInfo === void 0) {
     return;
   }
@@ -60122,7 +59380,7 @@ function updateArrowheadPointWithBoundShape(point, opposite, arrowPageTransform,
   const intersection = fn(targetFrom, targetTo, targetShapeInfo.outline);
   let targetInt;
   if (intersection !== null) {
-    targetInt = (_a2 = intersection.sort((p1, p2) => Vec.Dist2(p1, targetFrom) - Vec.Dist2(p2, targetFrom))[0]) != null ? _a2 : isClosed ? void 0 : targetTo;
+    targetInt = (_a3 = intersection.sort((p1, p2) => Vec.Dist2(p1, targetFrom) - Vec.Dist2(p2, targetFrom))[0]) != null ? _a3 : isClosed ? void 0 : targetTo;
   }
   if (targetInt === void 0) {
     return;
@@ -60135,7 +59393,7 @@ function updateArrowheadPointWithBoundShape(point, opposite, arrowPageTransform,
 
 // node_modules/tldraw/dist-esm/lib/shapes/arrow/curved-arrow.mjs
 function getCurvedArrowInfo(editor, shape, bindings) {
-  var _a2;
+  var _a3;
   const { arrowheadEnd, arrowheadStart } = shape.props;
   const bend = shape.props.bend;
   if (Math.abs(bend) > Math.abs(shape.props.bend * (WAY_TOO_BIG_ARROW_BEND_FACTOR * shape.props.scale))) {
@@ -60209,7 +59467,7 @@ function getCurvedArrowInfo(editor, shape, bindings) {
       intersections.sort(
         isClosed ? (p0, p1) => Math.abs(distFn(angleToStart, centerInStartShapeLocalSpace.angle(p0)) - targetDist) < Math.abs(distFn(angleToStart, centerInStartShapeLocalSpace.angle(p1)) - targetDist) ? -1 : 1 : (p0, p1) => distFn(angleToStart, centerInStartShapeLocalSpace.angle(p0)) < distFn(angleToStart, centerInStartShapeLocalSpace.angle(p1)) ? -1 : 1
       );
-      point = (_a2 = intersections[0]) != null ? _a2 : isClosed ? void 0 : startInStartShapeLocalSpace;
+      point = (_a3 = intersections[0]) != null ? _a3 : isClosed ? void 0 : startInStartShapeLocalSpace;
     } else {
       point = isClosed ? void 0 : startInStartShapeLocalSpace;
     }
@@ -60392,8 +59650,7 @@ function placeCenterHandle(center, radius, tempA, tempB, tempC, originalArcLengt
   const aCA = Vec.Angle(center, tempA);
   const aCB = Vec.Angle(center, tempB);
   let dAB = clockwiseAngleDist(aCA, aCB);
-  if (!isClockwise)
-    dAB = PI2 - dAB;
+  if (!isClockwise) dAB = PI2 - dAB;
   tempC.setTo(center).add(Vec.FromAngle(aCA + dAB * (0.5 * (isClockwise ? 1 : -1))).mul(radius));
   if (dAB > originalArcLength) {
     tempC.rotWith(center, PI);
@@ -60410,11 +59667,9 @@ function getIsArrowStraight(shape) {
 }
 function getBoundShapeInfoForTerminal(editor, arrow4, terminalName) {
   const binding = editor.getBindingsFromShape(arrow4, "arrow").find((b) => b.props.terminal === terminalName);
-  if (!binding)
-    return;
+  if (!binding) return;
   const boundShape = editor.getShape(binding.toId);
-  if (!boundShape)
-    return;
+  if (!boundShape) return;
   const transform = editor.getShapePageTransform(boundShape);
   const geometry = editor.getShapeGeometry(boundShape);
   const outline = geometry instanceof Group2d ? geometry.children[0].vertices : geometry.vertices;
@@ -60462,11 +59717,11 @@ function getArrowInfo(editor, shape) {
   return arrowInfoCache.get(editor, id);
 }
 function getArrowTerminalsInArrowSpace(editor, shape, bindings) {
-  var _a2, _b2;
+  var _a3, _b2;
   const arrowPageTransform = editor.getShapePageTransform(shape);
   const boundShapeRelationships = getBoundShapeRelationships(
     editor,
-    (_a2 = bindings.start) == null ? void 0 : _a2.toId,
+    (_a3 = bindings.start) == null ? void 0 : _a3.toId,
     (_b2 = bindings.end) == null ? void 0 : _b2.toId
   );
   const start = bindings.start ? getArrowTerminalInArrowSpace(
@@ -60520,17 +59775,13 @@ var STROKE_SIZES = {
   xl: 10
 };
 function getBoundShapeRelationships(editor, startShapeId, endShapeId) {
-  if (!startShapeId || !endShapeId)
-    return "safe";
-  if (startShapeId === endShapeId)
-    return "double-bound";
+  if (!startShapeId || !endShapeId) return "safe";
+  if (startShapeId === endShapeId) return "double-bound";
   const startBounds = editor.getShapePageBounds(startShapeId);
   const endBounds = editor.getShapePageBounds(endShapeId);
   if (startBounds && endBounds) {
-    if (startBounds.contains(endBounds))
-      return "start-contains-end";
-    if (endBounds.contains(startBounds))
-      return "end-contains-start";
+    if (startBounds.contains(endBounds)) return "start-contains-end";
+    if (endBounds.contains(startBounds)) return "end-contains-start";
   }
   return "safe";
 }
@@ -60567,8 +59818,7 @@ var ArrowBindingUtil = class extends BindingUtil {
     binding
   }) {
     const arrow4 = this.editor.getShape(binding.fromId);
-    if (!arrow4)
-      return;
+    if (!arrow4) return;
     updateArrowTerminal({
       editor: this.editor,
       arrow: arrow4,
@@ -60580,20 +59830,18 @@ __publicField(ArrowBindingUtil, "type", "arrow");
 __publicField(ArrowBindingUtil, "props", arrowBindingProps);
 __publicField(ArrowBindingUtil, "migrations", arrowBindingMigrations);
 function reparentArrow(editor, arrowId) {
-  var _a2, _b2;
+  var _a3, _b2;
   const arrow4 = editor.getShape(arrowId);
-  if (!arrow4)
-    return;
+  if (!arrow4) return;
   const bindings = getArrowBindings(editor, arrow4);
   const { start, end } = bindings;
   const startShape = start ? editor.getShape(start.toId) : void 0;
   const endShape = end ? editor.getShape(end.toId) : void 0;
   const parentPageId = editor.getAncestorPageId(arrow4);
-  if (!parentPageId)
-    return;
+  if (!parentPageId) return;
   let nextParentId;
   if (startShape && endShape) {
-    nextParentId = (_a2 = editor.findCommonAncestor([startShape, endShape])) != null ? _a2 : parentPageId;
+    nextParentId = (_a3 = editor.findCommonAncestor([startShape, endShape])) != null ? _a3 : parentPageId;
   } else if (startShape || endShape) {
     const bindingParentId = (_b2 = startShape || endShape) == null ? void 0 : _b2.parentId;
     if (bindingParentId && bindingParentId === arrow4.parentId) {
@@ -60608,8 +59856,7 @@ function reparentArrow(editor, arrowId) {
     editor.reparentShapes([arrowId], nextParentId);
   }
   const reparentedArrow = editor.getShape(arrowId);
-  if (!reparentedArrow)
-    throw Error("no reparented arrow");
+  if (!reparentedArrow) throw Error("no reparented arrow");
   const startSibling = editor.getShapeNearestSibling(reparentedArrow, startShape);
   const endSibling = editor.getShapeNearestSibling(reparentedArrow, endShape);
   let highestSibling;
@@ -60645,8 +59892,7 @@ function arrowDidUpdate(editor, arrow4) {
   const bindings = getArrowBindings(editor, arrow4);
   for (const handle of ["start", "end"]) {
     const binding = bindings[handle];
-    if (!binding)
-      continue;
+    if (!binding) continue;
     const boundShape = editor.getShape(binding.toId);
     const isShapeInSamePageAsArrow = editor.getAncestorPageId(arrow4) === editor.getAncestorPageId(boundShape);
     if (!boundShape || !isShapeInSamePageAsArrow) {
@@ -60752,21 +59998,16 @@ function _iterableToArrayLimit(arr, i) {
     var _s, _e, _x, _r, _arr = [], _n = true, _d = false;
     try {
       if (_x = (_i = _i.call(arr)).next, 0 === i) {
-        if (Object(_i) !== _i)
-          return;
+        if (Object(_i) !== _i) return;
         _n = false;
-      } else
-        for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = true)
-          ;
+      } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = true) ;
     } catch (err) {
       _d = true, _e = err;
     } finally {
       try {
-        if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r))
-          return;
+        if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return;
       } finally {
-        if (_d)
-          throw _e;
+        if (_d) throw _e;
       }
     }
     return _arr;
@@ -60808,32 +60049,27 @@ function _defineProperty2(obj, key, value) {
   return obj;
 }
 function _objectWithoutPropertiesLoose2(source, excluded) {
-  if (source == null)
-    return {};
+  if (source == null) return {};
   var target = {};
   var sourceKeys = Object.keys(source);
   var key, i;
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0)
-      continue;
+    if (excluded.indexOf(key) >= 0) continue;
     target[key] = source[key];
   }
   return target;
 }
 function _objectWithoutProperties2(source, excluded) {
-  if (source == null)
-    return {};
+  if (source == null) return {};
   var target = _objectWithoutPropertiesLoose2(source, excluded);
   var key, i;
   if (Object.getOwnPropertySymbols) {
     var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
     for (i = 0; i < sourceSymbolKeys.length; i++) {
       key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0)
-        continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key))
-        continue;
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
       target[key] = source[key];
     }
   }
@@ -60846,35 +60082,25 @@ function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
 }
 function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr))
-    return _arrayLikeToArray(arr);
+  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
 function _arrayWithHoles(arr) {
-  if (Array.isArray(arr))
-    return arr;
+  if (Array.isArray(arr)) return arr;
 }
 function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null)
-    return Array.from(iter);
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
 }
 function _unsupportedIterableToArray(o, minLen) {
-  if (!o)
-    return;
-  if (typeof o === "string")
-    return _arrayLikeToArray(o, minLen);
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
   var n2 = Object.prototype.toString.call(o).slice(8, -1);
-  if (n2 === "Object" && o.constructor)
-    n2 = o.constructor.name;
-  if (n2 === "Map" || n2 === "Set")
-    return Array.from(o);
-  if (n2 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n2))
-    return _arrayLikeToArray(o, minLen);
+  if (n2 === "Object" && o.constructor) n2 = o.constructor.name;
+  if (n2 === "Map" || n2 === "Set") return Array.from(o);
+  if (n2 === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n2)) return _arrayLikeToArray(o, minLen);
 }
 function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length)
-    len = arr.length;
-  for (var i = 0, arr2 = new Array(len); i < len; i++)
-    arr2[i] = arr[i];
+  if (len == null || len > arr.length) len = arr.length;
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
   return arr2;
 }
 function _nonIterableSpread() {
@@ -60884,13 +60110,11 @@ function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
 }
 function _toPrimitive2(input, hint) {
-  if (typeof input !== "object" || input === null)
-    return input;
+  if (typeof input !== "object" || input === null) return input;
   var prim = input[Symbol.toPrimitive];
   if (prim !== void 0) {
     var res = prim.call(input, hint || "default");
-    if (typeof res !== "object")
-      return res;
+    if (typeof res !== "object") return res;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
   return (hint === "string" ? String : Number)(input);
@@ -61232,8 +60456,8 @@ function matchUrl(url) {
   }
 }
 function getEmbedInfoUnsafely(inputUrl) {
-  var _a2;
-  const result = (_a2 = matchUrl(inputUrl)) != null ? _a2 : matchEmbedUrl(inputUrl);
+  var _a3;
+  const result = (_a3 = matchUrl(inputUrl)) != null ? _a3 : matchEmbedUrl(inputUrl);
   return result;
 }
 function getEmbedInfo(inputUrl) {
@@ -61247,7 +60471,7 @@ function getEmbedInfo(inputUrl) {
 
 // node_modules/tldraw/dist-esm/lib/shapes/shared/TextHelpers.mjs
 var INDENT = "  ";
-var _TextHelpers = class {
+var _TextHelpers = class _TextHelpers {
   static insertTextFirefox(field, text) {
     field.setRangeText(
       text,
@@ -61334,10 +60558,10 @@ var _TextHelpers = class {
     return lastLineStart + 1;
   }
   static indent(element) {
-    var _a2;
+    var _a3;
     const { selectionStart, selectionEnd, value } = element;
     const selectedContrast = value.slice(selectionStart, selectionEnd);
-    const lineBreakCount = (_a2 = /\n/g.exec(selectedContrast)) == null ? void 0 : _a2.length;
+    const lineBreakCount = (_a3 = /\n/g.exec(selectedContrast)) == null ? void 0 : _a3.length;
     if (lineBreakCount && lineBreakCount > 0) {
       const firstLineStart = value.lastIndexOf("\n", selectionStart - 1) + 1;
       const newSelection = element.value.slice(firstLineStart, selectionEnd - 1);
@@ -61374,10 +60598,10 @@ var _TextHelpers = class {
     );
   }
   static indentCE(element) {
-    var _a2, _b2, _c;
+    var _a3, _b2, _c;
     const selection = window.getSelection();
     const value = element.innerText;
-    const selectionStart = (_a2 = getCaretIndex(element)) != null ? _a2 : 0;
+    const selectionStart = (_a3 = getCaretIndex(element)) != null ? _a3 : 0;
     const selectionEnd = (_b2 = getCaretIndex(element)) != null ? _b2 : 0;
     const selectedContrast = value.slice(selectionStart, selectionEnd);
     const lineBreakCount = (_c = /\n/g.exec(selectedContrast)) == null ? void 0 : _c.length;
@@ -61405,10 +60629,10 @@ var _TextHelpers = class {
     }
   }
   static unindentCE(element) {
-    var _a2, _b2;
+    var _a3, _b2;
     const selection = window.getSelection();
     const value = element.innerText;
-    const selectionStart = (_a2 = getCaretIndex(element)) != null ? _a2 : 0;
+    const selectionStart = (_a3 = getCaretIndex(element)) != null ? _a3 : 0;
     const selectionEnd = (_b2 = getCaretIndex(element)) != null ? _b2 : 0;
     const firstLineStart = value.lastIndexOf("\n", selectionStart - 1) + 1;
     const minimumSelectionEnd = _TextHelpers.findLineEnd(value, selectionEnd);
@@ -61435,14 +60659,12 @@ var _TextHelpers = class {
     return text.replace(_TextHelpers.fixNewLines, "\n").split("\n").map((x) => x || " ").join("\n");
   }
 };
+__publicField(_TextHelpers, "fixNewLines", /\r?\n|\r/g);
 var TextHelpers = _TextHelpers;
-__publicField(TextHelpers, "fixNewLines", /\r?\n|\r/g);
 function getCaretIndex(element) {
-  if (typeof window.getSelection === "undefined")
-    return;
+  if (typeof window.getSelection === "undefined") return;
   const selection = window.getSelection();
-  if (!selection)
-    return;
+  if (!selection) return;
   let position = 0;
   if (selection.rangeCount !== 0) {
     const range = selection.getRangeAt(0);
@@ -61543,7 +60765,7 @@ function registerDefaultExternalContentHandlers(editor, {
     return AssetRecordType.create(assetInfo);
   });
   editor.registerExternalAssetHandler("url", async ({ url }) => {
-    var _a2, _b2, _c, _d, _e, _f, _g, _h, _i, _j;
+    var _a3, _b2, _c, _d, _e, _f, _g, _h, _i, _j;
     let meta;
     try {
       const resp = await fetch(url, {
@@ -61553,7 +60775,7 @@ function registerDefaultExternalContentHandlers(editor, {
       const html = await resp.text();
       const doc = new DOMParser().parseFromString(html, "text/html");
       meta = {
-        image: (_b2 = (_a2 = doc.head.querySelector('meta[property="og:image"]')) == null ? void 0 : _a2.getAttribute("content")) != null ? _b2 : "",
+        image: (_b2 = (_a3 = doc.head.querySelector('meta[property="og:image"]')) == null ? void 0 : _a3.getAttribute("content")) != null ? _b2 : "",
         favicon: (_f = (_e = (_c = doc.head.querySelector('link[rel="apple-touch-icon"]')) == null ? void 0 : _c.getAttribute("href")) != null ? _e : (_d = doc.head.querySelector('link[rel="icon"]')) == null ? void 0 : _d.getAttribute("href")) != null ? _f : "",
         title: (_h = (_g = doc.head.querySelector('meta[property="og:title"]')) == null ? void 0 : _g.getAttribute("content")) != null ? _h : url,
         description: (_j = (_i = doc.head.querySelector('meta[property="og:description"]')) == null ? void 0 : _i.getAttribute("content")) != null ? _j : ""
@@ -61605,8 +60827,7 @@ function registerDefaultExternalContentHandlers(editor, {
       type: "file",
       file: new File([text], "asset.svg", { type: "image/svg+xml" })
     });
-    if (!asset)
-      throw Error("Could not create an asset");
+    if (!asset) throw Error("Could not create an asset");
     createShapesForAssets(editor, [asset], position);
   });
   editor.registerExternalContentHandler("embed", ({ point, url, embed }) => {
@@ -61761,8 +60982,7 @@ function registerDefaultExternalContentHandlers(editor, {
       shouldAlsoCreateAsset = true;
       try {
         const bookmarkAsset = await editor.getAssetForExternalContent({ type: "url", url });
-        if (!bookmarkAsset)
-          throw Error("Could not create an asset");
+        if (!bookmarkAsset) throw Error("Could not create an asset");
         asset = bookmarkAsset;
       } catch (e2) {
         toasts.addToast({
@@ -61789,8 +61009,7 @@ function registerDefaultExternalContentHandlers(editor, {
   });
 }
 async function createShapesForAssets(editor, assets, position) {
-  if (!assets.length)
-    return [];
+  if (!assets.length) return [];
   const currentPoint = Vec.From(position);
   const partials = [];
   for (let i = 0; i < assets.length; i++) {
@@ -61910,15 +61129,14 @@ var Idle2 = class extends StateNode {
       this.editor.setCurrentTool("select");
     });
     __publicField(this, "onKeyUp", (info) => {
-      var _a2;
+      var _a3;
       if (info.key === "Enter") {
-        if (this.editor.getInstanceState().isReadonly)
-          return null;
+        if (this.editor.getInstanceState().isReadonly) return null;
         const onlySelectedShape = this.editor.getOnlySelectedShape();
         if (onlySelectedShape && this.editor.getShapeUtil(onlySelectedShape).canEdit(onlySelectedShape)) {
           this.editor.setCurrentTool("select");
           this.editor.setEditingShape(onlySelectedShape.id);
-          (_a2 = this.editor.root.getCurrent()) == null ? void 0 : _a2.transition("editing_shape", {
+          (_a3 = this.editor.root.getCurrent()) == null ? void 0 : _a3.transition("editing_shape", {
             ...info,
             target: "shape",
             shape: onlySelectedShape
@@ -61963,8 +61181,7 @@ var Pointing2 = class extends StateNode {
         if (!this.shape) {
           this.createArrowShape();
         }
-        if (!this.shape)
-          throw Error(`expected shape`);
+        if (!this.shape) throw Error(`expected shape`);
         this.updateArrowShapeEndHandle();
         this.editor.setCurrentTool("select.dragging_handle", {
           shape: this.shape,
@@ -61997,7 +61214,7 @@ var Pointing2 = class extends StateNode {
     this.parent.transition("idle");
   }
   createArrowShape() {
-    var _a2;
+    var _a3;
     const { originPagePoint } = this.editor.inputs;
     const id = createShapeId();
     this.markId = `creating:${id}`;
@@ -62012,15 +61229,13 @@ var Pointing2 = class extends StateNode {
       }
     });
     const shape = this.editor.getShape(id);
-    if (!shape)
-      throw Error(`expected shape`);
+    if (!shape) throw Error(`expected shape`);
     const handles = this.editor.getShapeHandles(shape);
-    if (!handles)
-      throw Error(`expected handles for arrow`);
+    if (!handles) throw Error(`expected handles for arrow`);
     const util = this.editor.getShapeUtil("arrow");
     const initial = this.shape;
     const startHandle = handles.find((h) => h.id === "start");
-    const change = (_a2 = util.onHandleDrag) == null ? void 0 : _a2.call(util, shape, {
+    const change = (_a3 = util.onHandleDrag) == null ? void 0 : _a3.call(util, shape, {
       handle: { ...startHandle, x: 0, y: 0 },
       isPrecise: true,
       initial
@@ -62032,18 +61247,16 @@ var Pointing2 = class extends StateNode {
     this.editor.select(id);
   }
   updateArrowShapeEndHandle() {
-    var _a2, _b2;
+    var _a3, _b2;
     const shape = this.shape;
-    if (!shape)
-      throw Error(`expected shape`);
+    if (!shape) throw Error(`expected shape`);
     const handles = this.editor.getShapeHandles(shape);
-    if (!handles)
-      throw Error(`expected handles for arrow`);
+    if (!handles) throw Error(`expected handles for arrow`);
     {
       const util = this.editor.getShapeUtil("arrow");
       const initial = this.shape;
       const startHandle = handles.find((h) => h.id === "start");
-      const change = (_a2 = util.onHandleDrag) == null ? void 0 : _a2.call(util, shape, {
+      const change = (_a3 = util.onHandleDrag) == null ? void 0 : _a3.call(util, shape, {
         handle: { ...startHandle, x: 0, y: 0 },
         isPrecise: this.didTimeout,
         // sure about that?
@@ -62072,8 +61285,7 @@ var Pointing2 = class extends StateNode {
   }
   startPreciseTimeout() {
     this.preciseTimeout = this.editor.timers.setTimeout(() => {
-      if (!this.getIsActive())
-        return;
+      if (!this.getIsActive()) return;
       this.didTimeout = true;
     }, 320);
   }
@@ -62210,8 +61422,7 @@ var Drawing = class extends StateNode {
     return this.shapeType !== "highlight";
   }
   getIsClosed(segments, size4, scale) {
-    if (!this.canClose())
-      return false;
+    if (!this.canClose()) return false;
     const strokeWidth = STROKE_SIZES2[size4];
     const firstPoint = segments[0].points[0];
     const lastSegment = segments[segments.length - 1];
@@ -62236,11 +61447,9 @@ var Drawing = class extends StateNode {
       if (shape && this.segmentMode === "straight") {
         this.didJustShiftClickToExtendPreviousShapeLine = true;
         const prevSegment = last(shape.props.segments);
-        if (!prevSegment)
-          throw Error("Expected a previous segment!");
+        if (!prevSegment) throw Error("Expected a previous segment!");
         const prevPoint = last(prevSegment.points);
-        if (!prevPoint)
-          throw Error("Expected a previous point!");
+        if (!prevPoint) throw Error("Expected a previous point!");
         const { x, y } = this.editor.getPointInShapeSpace(shape, originPagePoint).toFixed();
         const newSegment = {
           type: this.segmentMode,
@@ -62318,15 +61527,13 @@ var Drawing = class extends StateNode {
   updateDrawingShape() {
     const { initialShape } = this;
     const { inputs } = this.editor;
-    if (!initialShape)
-      return;
+    if (!initialShape) return;
     const {
       id,
       props: { size: size4, scale }
     } = initialShape;
     const shape = this.editor.getShape(id);
-    if (!shape)
-      return;
+    if (!shape) return;
     const { segments } = shape.props;
     const { x, y, z } = this.editor.getPointInShapeSpace(shape, inputs.currentPagePoint).toFixed();
     const pressure = this.isPenOrStylus ? +(inputs.currentPagePoint.z * 1.25).toFixed(2) : 0.5;
@@ -62343,11 +61550,9 @@ var Drawing = class extends StateNode {
           this.pagePointWhereNextSegmentChanged = null;
           this.segmentMode = "straight";
           const prevSegment = last(segments);
-          if (!prevSegment)
-            throw Error("Expected a previous segment!");
+          if (!prevSegment) throw Error("Expected a previous segment!");
           const prevLastPoint = last(prevSegment.points);
-          if (!prevLastPoint)
-            throw Error("Expected a previous last point!");
+          if (!prevLastPoint) throw Error("Expected a previous last point!");
           let newSegment;
           const newLastPoint = this.editor.getPointInShapeSpace(shape, this.pagePointWhereCurrentSegmentChanged).toFixed().toJson();
           if (prevSegment.type === "straight") {
@@ -62460,14 +61665,11 @@ var Drawing = class extends StateNode {
             let minDistance = 8 / this.editor.getZoomLevel();
             for (let i = 0, n2 = segments.length - 2; i < n2; i++) {
               const segment = segments[i];
-              if (!segment)
-                break;
-              if (segment.type === "free")
-                continue;
+              if (!segment) break;
+              if (segment.type === "free") continue;
               const first = segment.points[0];
               const lastPoint = last(segment.points);
-              if (!(first && lastPoint))
-                continue;
+              if (!(first && lastPoint)) continue;
               const nearestPointOnSegment = Vec.NearestPointOnLineSegment(
                 first,
                 lastPoint,
@@ -62490,8 +61692,7 @@ var Drawing = class extends StateNode {
           const transform = this.editor.getShapePageTransform(shape);
           const first = snapSegment.points[0];
           const lastPoint = last(snapSegment.points);
-          if (!lastPoint)
-            throw Error("Expected a last point!");
+          if (!lastPoint) throw Error("Expected a last point!");
           const A = Mat.applyToPoint(transform, first);
           const B = Mat.applyToPoint(transform, lastPoint);
           const snappedPoint = Mat.applyToPoint(transform, newPoint2);
@@ -62628,8 +61829,7 @@ var Drawing = class extends StateNode {
       return;
     }
     const { initialShape } = this;
-    if (!initialShape)
-      return;
+    if (!initialShape) return;
     this.editor.updateShapes([
       { id: initialShape.id, type: initialShape.type, props: { isComplete: true } }
     ]);
@@ -62680,22 +61880,17 @@ var FrameShapeTool = class extends BaseBoxShapeTool {
     super(...arguments);
     __publicField(this, "shapeType", "frame");
     __publicField(this, "onCreate", (shape) => {
-      if (!shape)
-        return;
+      if (!shape) return;
       const bounds = this.editor.getShapePageBounds(shape);
       const shapesToAddToFrame = [];
       const ancestorIds = this.editor.getShapeAncestors(shape).map((shape2) => shape2.id);
       this.editor.getSortedChildIdsForParent(shape.parentId).map((siblingShapeId) => {
         const siblingShape = this.editor.getShape(siblingShapeId);
-        if (!siblingShape)
-          return;
-        if (siblingShape.id === shape.id)
-          return;
-        if (siblingShape.isLocked)
-          return;
+        if (!siblingShape) return;
+        if (siblingShape.id === shape.id) return;
+        if (siblingShape.isLocked) return;
         const pageShapeBounds = this.editor.getShapePageBounds(siblingShape);
-        if (!pageShapeBounds)
-          return;
+        if (!pageShapeBounds) return;
         if (bounds.contains(pageShapeBounds)) {
           if (canEnclose(siblingShape, ancestorIds, shape)) {
             shapesToAddToFrame.push(siblingShape.id);
@@ -62734,15 +61929,14 @@ var Idle4 = class extends StateNode {
       this.editor.setCursor({ type: "cross", rotation: 0 });
     });
     __publicField(this, "onKeyUp", (info) => {
-      var _a2;
+      var _a3;
       if (info.key === "Enter") {
-        if (this.editor.getInstanceState().isReadonly)
-          return null;
+        if (this.editor.getInstanceState().isReadonly) return null;
         const onlySelectedShape = this.editor.getOnlySelectedShape();
         if (onlySelectedShape && this.editor.getShapeUtil(onlySelectedShape).canEdit(onlySelectedShape)) {
           this.editor.setCurrentTool("select");
           this.editor.setEditingShape(onlySelectedShape.id);
-          (_a2 = this.editor.root.getCurrent()) == null ? void 0 : _a2.transition("editing_shape", {
+          (_a3 = this.editor.root.getCurrent()) == null ? void 0 : _a3.transition("editing_shape", {
             ...info,
             target: "shape",
             shape: onlySelectedShape
@@ -62826,13 +62020,11 @@ var Pointing3 = class extends StateNode {
       }
     ]);
     const shape = this.editor.getShape(id);
-    if (!shape)
-      return;
+    if (!shape) return;
     const { w, h } = shape.props;
     const delta = new Vec(w / 2, h / 2).mul(scale);
     const parentTransform = this.editor.getShapeParentTransform(shape);
-    if (parentTransform)
-      delta.rot(-parentTransform.rotation());
+    if (parentTransform) delta.rot(-parentTransform.rotation());
     this.editor.select(id);
     this.editor.updateShape({
       id: shape.id,
@@ -62920,8 +62112,7 @@ var Pointing4 = class extends StateNode {
         this.editor.mark(this.markId);
         this.shape = shape;
         const handles = this.editor.getShapeHandles(this.shape);
-        if (!handles)
-          return;
+        if (!handles) return;
         const vertexHandles = handles.filter((h) => h.type === "vertex").sort(sortByIndex);
         const endHandle = vertexHandles[vertexHandles.length - 1];
         const prevEndHandle = vertexHandles[vertexHandles.length - 2];
@@ -62976,13 +62167,11 @@ var Pointing4 = class extends StateNode {
       }
     });
     __publicField(this, "onPointerMove", () => {
-      if (!this.shape)
-        return;
+      if (!this.shape) return;
       if (this.editor.inputs.isDragging) {
         const handles = this.editor.getShapeHandles(this.shape);
         if (!handles) {
-          if (this.markId)
-            this.editor.bailToMark(this.markId);
+          if (this.markId) this.editor.bailToMark(this.markId);
           throw Error("No handles found");
         }
         const lastHandle = last(handles);
@@ -63006,8 +62195,7 @@ var Pointing4 = class extends StateNode {
     });
     __publicField(this, "onInterrupt", () => {
       this.parent.transition("idle");
-      if (this.markId)
-        this.editor.bailToMark(this.markId);
+      if (this.markId) this.editor.bailToMark(this.markId);
       this.editor.snaps.clearIndicators();
     });
   }
@@ -63016,8 +62204,7 @@ var Pointing4 = class extends StateNode {
     this.editor.snaps.clearIndicators();
   }
   cancel() {
-    if (this.markId)
-      this.editor.bailToMark(this.markId);
+    if (this.markId) this.editor.bailToMark(this.markId);
     this.parent.transition("idle", { shapeId: this.shape.id });
     this.editor.snaps.clearIndicators();
   }
@@ -63054,18 +62241,16 @@ __publicField(Idle6, "id", "idle");
 
 // node_modules/tldraw/dist-esm/lib/tools/SelectTool/selectHelpers.mjs
 function kickoutOccludedShapes(editor, shapeIds) {
-  var _a2;
+  var _a3;
   const parentsToCheck = /* @__PURE__ */ new Set();
   for (const id of shapeIds) {
     const shape = editor.getShape(id);
-    if (!shape)
-      continue;
+    if (!shape) continue;
     if (editor.getShapeUtil(shape).onDragShapesOut) {
       parentsToCheck.add(shape);
     }
     const parent = editor.getShape(shape.parentId);
-    if (!parent)
-      continue;
+    if (!parent) continue;
     if (editor.getShapeUtil(parent).onDragShapesOut) {
       parentsToCheck.add(parent);
     }
@@ -63080,16 +62265,14 @@ function kickoutOccludedShapes(editor, shapeIds) {
   for (const [parent, kickedOutChildrenIds] of parentsWithKickedOutChildren) {
     const shapeUtil = editor.getShapeUtil(parent);
     const kickedOutChildren = compact(kickedOutChildrenIds.map((id) => editor.getShape(id)));
-    (_a2 = shapeUtil.onDragShapesOut) == null ? void 0 : _a2.call(shapeUtil, parent, kickedOutChildren);
+    (_a3 = shapeUtil.onDragShapesOut) == null ? void 0 : _a3.call(shapeUtil, parent, kickedOutChildren);
   }
 }
 function getOccludedChildren(editor, parent) {
   const childIds = editor.getSortedChildIdsForParent(parent.id);
-  if (childIds.length === 0)
-    return [];
+  if (childIds.length === 0) return [];
   const parentPageBounds = editor.getShapePageBounds(parent);
-  if (!parentPageBounds)
-    return [];
+  if (!parentPageBounds) return [];
   let parentGeometry;
   let parentPageTransform;
   let parentPageCorners;
@@ -63181,8 +62364,7 @@ var BASE_NOTE_POSITIONS = (editor) => [
   // l
 ];
 function getBaseAdjacentNotePositions(editor, scale) {
-  if (scale === 1)
-    return BASE_NOTE_POSITIONS(editor);
+  if (scale === 1) return BASE_NOTE_POSITIONS(editor);
   const s = NOTE_SIZE * scale;
   const m = editor.options.adjacentShapeMargin * scale;
   return [
@@ -63219,8 +62401,7 @@ function getAvailableNoteAdjacentPositions(editor, rotation, scale, extraHeight)
       continue;
     }
     const transform = editor.getShapePageTransform(shape.id);
-    if (rotation !== transform.rotation())
-      continue;
+    if (rotation !== transform.rotation()) continue;
     allCenters.set(shape, editor.getShapePageBounds(shape).center);
     positions.push(
       ...Object.values(
@@ -63240,10 +62421,8 @@ function getAvailableNoteAdjacentPositions(editor, rotation, scale, extraHeight)
   for (const [shape, center] of allCenters) {
     for (let i = 0; i < len; i++) {
       position = positions[i];
-      if (!position)
-        continue;
-      if (Vec.Dist2(center, position) > minSize)
-        continue;
+      if (!position) continue;
+      if (Vec.Dist2(center, position) > minSize) continue;
       if (editor.isPointInShape(shape, position)) {
         positions[i] = void 0;
       }
@@ -63287,8 +62466,7 @@ function getNoteShapeForAdjacentPosition(editor, shape, center, pageRotation, fo
       }
     });
     const createdShape = editor.getShape(id);
-    if (!createdShape)
-      return;
+    if (!createdShape) return;
     const topLeft = editor.getPointInParentSpace(
       createdShape,
       Vec.Sub(
@@ -63452,8 +62630,7 @@ function _updateHoveredShapeId(editor) {
     margin: editor.options.hitTestMargin / editor.getZoomLevel(),
     renderingOnly: true
   });
-  if (!hitShape)
-    return editor.setHoveredShape(null);
+  if (!hitShape) return editor.setHoveredShape(null);
   let shapeToHover = void 0;
   const outermostShape = editor.getOutermostSelectableShape(hitShape);
   if (outermostShape === hitShape) {
@@ -63494,15 +62671,14 @@ var Idle7 = class extends StateNode {
       updateHoveredShapeId.cancel();
     });
     __publicField(this, "onKeyDown", (info) => {
-      var _a2;
+      var _a3;
       if (info.key === "Enter") {
-        if (this.editor.getInstanceState().isReadonly)
-          return null;
+        if (this.editor.getInstanceState().isReadonly) return null;
         const onlySelectedShape = this.editor.getOnlySelectedShape();
         if (onlySelectedShape && this.editor.getShapeUtil(onlySelectedShape).canEdit(onlySelectedShape)) {
           this.editor.setCurrentTool("select");
           this.editor.setEditingShape(onlySelectedShape.id);
-          (_a2 = this.editor.root.getCurrent()) == null ? void 0 : _a2.transition("editing_shape", {
+          (_a3 = this.editor.root.getCurrent()) == null ? void 0 : _a3.transition("editing_shape", {
             ...info,
             target: "shape",
             shape: onlySelectedShape
@@ -63569,17 +62745,16 @@ var Pointing6 = class extends StateNode {
     });
   }
   complete() {
-    var _a2;
+    var _a3;
     this.editor.mark("creating text shape");
     const id = createShapeId();
     const { currentPagePoint } = this.editor.inputs;
     const shape = this.createTextShape(id, currentPagePoint, true);
-    if (!shape)
-      return;
+    if (!shape) return;
     this.editor.select(id);
     this.editor.setEditingShape(id);
     this.editor.setCurrentTool("select");
-    (_a2 = this.editor.root.getCurrent()) == null ? void 0 : _a2.transition("editing_shape");
+    (_a3 = this.editor.root.getCurrent()) == null ? void 0 : _a3.transition("editing_shape");
   }
   cancel() {
     this.parent.transition("idle");
@@ -63685,12 +62860,10 @@ function getFontDefForExport(fontStyle) {
     key: `${DefaultFontStyle.id}:${fontStyle}`,
     getElement: async () => {
       const font = findFont(fontStyle);
-      if (!font)
-        return null;
+      if (!font) return null;
       const url = font.$$_url;
       const fontFaceRule = font.$$_fontface;
-      if (!url || !fontFaceRule)
-        return null;
+      if (!url || !fontFaceRule) return null;
       const fontFile = await (await fetch(url)).blob();
       const base64FontFile = await FileHelpers.blobToDataUrl(fontFile);
       const newFontFaceRule = fontFaceRule.replace(url, base64FontFile);
@@ -63711,8 +62884,7 @@ function getFillDefForExport(fill) {
   return {
     key: `${DefaultFontStyle.id}:${fill}`,
     getElement: async () => {
-      if (fill !== "pattern")
-        return null;
+      if (fill !== "pattern") return null;
       return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)(HashPatternForExport, {});
     }
   };
@@ -63755,8 +62927,7 @@ var generateImage = (dpr, currentZoom, darkMode) => {
     canvasEl.width = size4;
     canvasEl.height = size4;
     const ctx = canvasEl.getContext("2d");
-    if (!ctx)
-      return;
+    if (!ctx) return;
     ctx.fillStyle = darkMode ? DefaultColorThemePalette.darkMode.solid : DefaultColorThemePalette.lightMode.solid;
     ctx.fillRect(0, 0, size4, size4);
     ctx.globalCompositeOperation = "destination-out";
@@ -63786,8 +62957,7 @@ var canvasBlob = (size4, fn) => {
   canvas.width = size4[0];
   canvas.height = size4[1];
   const ctx = canvas.getContext("2d");
-  if (!ctx)
-    return "";
+  if (!ctx) return "";
   fn(ctx);
   return canvas.toDataURL();
 };
@@ -63863,8 +63033,7 @@ function usePattern() {
     );
     let isCancelled = false;
     promise.then((urls) => {
-      if (isCancelled)
-        return;
+      if (isCancelled) return;
       setBackgroundUrls(urls);
       setIsReady(true);
     });
@@ -63914,10 +63083,8 @@ function PatternFillDefForCanvas() {
   return /* @__PURE__ */ (0, import_jsx_runtime41.jsx)("g", { ref: containerRef, "data-testid": isReady ? "ready-pattern-fill-defs" : void 0, children: defs });
 }
 function findHtmlLayerParent(element) {
-  if (element.classList.contains("tl-html-layer"))
-    return element;
-  if (element.parentElement)
-    return findHtmlLayerParent(element.parentElement);
+  if (element.classList.contains("tl-html-layer")) return element;
+  if (element.parentElement) return findHtmlLayerParent(element.parentElement);
   return null;
 }
 
@@ -63973,15 +63140,14 @@ function correctSpacesToNbsp(input) {
   return input.replace(/\s/g, "\xA0");
 }
 function createTextJsxFromSpans(editor, spans, opts) {
-  var _a2, _b2;
+  var _a3, _b2;
   const { padding = 0 } = opts;
-  if (spans.length === 0)
-    return null;
+  if (spans.length === 0) return null;
   const bounds = Box.From(spans[0].box);
   for (const { box } of spans) {
     bounds.union(box);
   }
-  const offsetX = padding + ((_a2 = opts.offsetX) != null ? _a2 : 0);
+  const offsetX = padding + ((_a3 = opts.offsetX) != null ? _a3 : 0);
   const offsetY = ((_b2 = opts.offsetY) != null ? _b2 : 0) + opts.fontSize / 2 + (opts.verticalTextAlign === "start" ? padding : opts.verticalTextAlign === "end" ? opts.height - padding - bounds.height : (Math.ceil(opts.height) - bounds.height) / 2);
   let currentLineTop = null;
   const children = [];
@@ -64162,9 +63328,9 @@ function useEditableText(id, type, text) {
   ]);
   (0, import_react49.useEffect)(() => {
     function selectAllIfEditing({ shapeId }) {
-      var _a2;
+      var _a3;
       if (shapeId === id) {
-        (_a2 = rInput.current) == null ? void 0 : _a2.select();
+        (_a3 = rInput.current) == null ? void 0 : _a3.select();
       }
     }
     editor.on("select-all-text", selectAllIfEditing);
@@ -64173,11 +63339,10 @@ function useEditableText(id, type, text) {
     };
   }, [editor, id, isEditing]);
   (0, import_react49.useEffect)(() => {
-    var _a2, _b2, _c, _d;
-    if (!isEditing)
-      return;
+    var _a3, _b2, _c, _d;
+    if (!isEditing) return;
     if (document.activeElement !== rInput.current) {
-      (_a2 = rInput.current) == null ? void 0 : _a2.focus();
+      (_a3 = rInput.current) == null ? void 0 : _a3.focus();
     }
     if (editor.getInstanceState().isCoarsePointer) {
       (_b2 = rInput.current) == null ? void 0 : _b2.select();
@@ -64189,8 +63354,7 @@ function useEditableText(id, type, text) {
   }, [editor, isEditing]);
   const handleKeyDown = (0, import_react49.useCallback)(
     (e2) => {
-      if (editor.getEditingShapeId() !== id)
-        return;
+      if (editor.getEditingShapeId() !== id) return;
       switch (e2.key) {
         case "Enter": {
           if (e2.ctrlKey || e2.metaKey) {
@@ -64204,8 +63368,7 @@ function useEditableText(id, type, text) {
   );
   const handleChange = (0, import_react49.useCallback)(
     (e2) => {
-      if (editor.getEditingShapeId() !== id)
-        return;
+      if (editor.getEditingShapeId() !== id) return;
       let text2 = TextHelpers.normalizeText(e2.currentTarget.value);
       const untabbedText = text2.replace(/\t/g, INDENT);
       if (untabbedText !== text2) {
@@ -64277,8 +63440,7 @@ var TextLabel = import_react50.default.memo(function TextLabel2({
   );
   const [initialText, setInitialText] = (0, import_react50.useState)(text);
   (0, import_react50.useEffect)(() => {
-    if (!isEditing)
-      setInitialText(text);
+    if (!isEditing) setInitialText(text);
   }, [isEditing, text]);
   const finalText = TextHelpers.normalizeTextForDom(text);
   const hasText = finalText.length > 0;
@@ -64414,8 +63576,7 @@ function getPerfectDashProps2(totalLength, strokeWidth, opts = {}) {
 var labelSizeCache = /* @__PURE__ */ new WeakMap();
 function getArrowLabelSize(editor, shape) {
   const cachedSize = labelSizeCache.get(shape);
-  if (cachedSize)
-    return cachedSize;
+  if (cachedSize) return cachedSize;
   const info = getArrowInfo(editor, shape);
   let width = 0;
   let height = 0;
@@ -64503,7 +63664,7 @@ function getStraightArrowLabelRange(editor, shape, info) {
   return { start, end };
 }
 function getCurvedArrowLabelRange(editor, shape, info) {
-  var _a2, _b2;
+  var _a3, _b2;
   const labelSize = getArrowLabelSize(editor, shape);
   const labelToArrowPadding = getLabelToArrowPadding(shape);
   const direction = Math.sign(shape.props.bend);
@@ -64562,7 +63723,7 @@ function getCurvedArrowLabelRange(editor, shape, info) {
       })
     );
   }
-  const startConstrained = (_a2 = startIntersections && furthest(info.start.point, startIntersections)) != null ? _a2 : info.middle;
+  const startConstrained = (_a3 = startIntersections && furthest(info.start.point, startIntersections)) != null ? _a3 : info.middle;
   const endConstrained = (_b2 = endIntersections && furthest(info.end.point, endIntersections)) != null ? _b2 : info.middle;
   const startAngle = Vec.Angle(info.bodyArc.center, info.start.point);
   const endAngle = Vec.Angle(info.bodyArc.center, info.end.point);
@@ -64595,8 +63756,7 @@ function getArrowLabelPosition(editor, shape) {
     labelCenter = Vec.Lrp(info.start.point, info.end.point, clampedPosition);
   } else {
     const range = getCurvedArrowLabelRange(editor, shape, info);
-    if (range.dbg)
-      debugGeom.push(...range.dbg);
+    if (range.dbg) debugGeom.push(...range.dbg);
     let clampedPosition = clamp2(
       shape.props.labelPosition,
       hasStartArrowhead || hasStartBinding ? range.start : 0,
@@ -64711,11 +63871,9 @@ function getBarHead({ int, point }) {
 }
 function getArrowheadPathForType(info, side, strokeWidth) {
   const type = side === "end" ? info.end.arrowhead : info.start.arrowhead;
-  if (type === "none")
-    return;
+  if (type === "none") return;
   const points = getArrowPoints(info, side, strokeWidth);
-  if (!points)
-    return;
+  if (!points) return;
   switch (type) {
     case "bar":
       return getBarHead(points);
@@ -64789,8 +63947,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
         const B = Vec.Add(med, v);
         const point2 = Vec.NearestPointOnLineSegment(A, B, handle, false);
         let bend = Vec.Dist(point2, med);
-        if (Vec.Clockwise(point2, end, med))
-          bend *= -1;
+        if (Vec.Clockwise(point2, end, med)) bend *= -1;
         return { id: shape.id, type: shape.type, props: { bend } };
       }
       const update = { id: shape.id, type: "arrow", props: {} };
@@ -64885,8 +64042,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
         pagePosition: shapePageTransform.applyToPoint(shape),
         terminalBindings: mapObjectMapValues(terminalsInArrowSpace, (terminalName, point) => {
           const binding = bindings[terminalName];
-          if (!binding)
-            return null;
+          if (!binding) return null;
           return {
             binding,
             shapePosition: point,
@@ -64917,8 +64073,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
         /* END */
       ]) {
         const binding = bindings[handleName];
-        if (!binding)
-          continue;
+        if (!binding) continue;
         this.editor.updateBinding({
           ...binding,
           props: { ...binding.props, isPrecise: true }
@@ -64928,16 +64083,14 @@ var ArrowShapeUtil = class extends ShapeUtil {
     });
     __publicField(this, "onTranslate", (initialShape, shape) => {
       const atTranslationStart = shapeAtTranslationStart.get(initialShape);
-      if (!atTranslationStart)
-        return;
+      if (!atTranslationStart) return;
       const shapePageTransform = this.editor.getShapePageTransform(shape.id);
       const pageDelta = Vec.Sub(
         shapePageTransform.applyToPoint(shape),
         atTranslationStart.pagePosition
       );
       for (const terminalBinding of Object.values(atTranslationStart.terminalBindings)) {
-        if (!terminalBinding)
-          continue;
+        if (!terminalBinding) continue;
         const newPagePoint = Vec.Add(terminalBinding.pagePosition, Vec.Mul(pageDelta, 0.5));
         const newTarget = this.editor.getShapeAtPoint(newPagePoint, {
           hitInside: true,
@@ -65177,8 +64330,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
       "arrow.dragging"
     ) && !this.editor.getInstanceState().isReadonly;
     const info = getArrowInfo(this.editor, shape);
-    if (!(info == null ? void 0 : info.isValid))
-      return null;
+    if (!(info == null ? void 0 : info.isValid)) return null;
     const labelPosition = getArrowLabelPosition(this.editor, shape);
     const isSelected = shape.id === this.editor.getOnlySelectedShapeId();
     const isEditing = this.editor.getEditingShapeId() === shape.id;
@@ -65217,14 +64369,12 @@ var ArrowShapeUtil = class extends ShapeUtil {
   indicator(shape) {
     const isEditing = useIsEditing(shape.id);
     const info = getArrowInfo(this.editor, shape);
-    if (!info)
-      return null;
+    if (!info) return null;
     const { start, end } = getArrowTerminalsInArrowSpace(this.editor, shape, info == null ? void 0 : info.bindings);
     const geometry = this.editor.getShapeGeometry(shape);
     const bounds = geometry.bounds;
     const labelGeometry = shape.props.text.trim() ? geometry.children[1] : null;
-    if (Vec.Equals(start, end))
-      return null;
+    if (Vec.Equals(start, end)) return null;
     const strokeWidth = STROKE_SIZES2[shape.props.size] * shape.props.scale;
     const as = info.start.arrowhead && getArrowheadPathForType(info, "start", strokeWidth);
     const ae = info.end.arrowhead && getArrowheadPathForType(info, "end", strokeWidth);
@@ -65315,8 +64465,7 @@ var ArrowShapeUtil = class extends ShapeUtil {
   }
   toSvg(shape, ctx) {
     ctx.addExportDef(getFillDefForExport(shape.props.fill));
-    if (shape.props.text)
-      ctx.addExportDef(getFontDefForExport(shape.props.font));
+    if (shape.props.text) ctx.addExportDef(getFontDefForExport(shape.props.font));
     const theme = getDefaultColorTheme(ctx);
     const scaleFactor = 1 / shape.props.scale;
     return /* @__PURE__ */ (0, import_jsx_runtime47.jsxs)("g", { transform: `scale(${scaleFactor})`, children: [
@@ -65384,8 +64533,7 @@ var ArrowSvg = track(function ArrowSvg2({
   const changeIndex = import_react51.default.useMemo(() => {
     return editor.environment.isSafari ? globalRenderIndex += 1 : 0;
   }, [shape]);
-  if (!(info == null ? void 0 : info.isValid))
-    return null;
+  if (!(info == null ? void 0 : info.isValid)) return null;
   const strokeWidth = STROKE_SIZES2[shape.props.size] * shape.props.scale;
   const as = info.start.arrowhead && getArrowheadPathForType(info, "start", strokeWidth);
   const ae = info.end.arrowhead && getArrowheadPathForType(info, "end", strokeWidth);
@@ -65750,8 +64898,7 @@ function updateBookmarkAssetOnUrlChange(editor, shape) {
   }
 }
 var createBookmarkAssetOnUrlChange = debounce(async (editor, shape) => {
-  if (editor.isDisposed)
-    return;
+  if (editor.isDisposed) return;
   const { url } = shape.props;
   const asset = await editor.getAssetForExternalContent({ type: "url", url });
   if (!asset) {
@@ -65823,8 +64970,7 @@ function svgInk(rawInputPoints, options = {}) {
   return svg;
 }
 function partitionAtElbows(points) {
-  if (points.length <= 2)
-    return [points];
+  if (points.length <= 2) return [points];
   const result = [];
   let currentPartition = [points[0]];
   let prevV = Vec.Sub(points[1].point, points[0].point).uni();
@@ -65903,8 +65049,7 @@ function circlePath(cx, cy, r2) {
   return "M " + cx + " " + cy + " m -" + r2 + ", 0 a " + r2 + "," + r2 + " 0 1,1 " + r2 * 2 + ",0 a " + r2 + "," + r2 + " 0 1,1 -" + r2 * 2 + ",0";
 }
 function renderPartition(strokePoints, options = {}) {
-  if (strokePoints.length === 0)
-    return "";
+  if (strokePoints.length === 0) return "";
   if (strokePoints.length === 1) {
     return circlePath(strokePoints[0].point.x, strokePoints[0].point.y, strokePoints[0].radius);
   }
@@ -66114,7 +65259,7 @@ var DrawShapeUtil = class extends ShapeUtil {
     return /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(SVGContainer, { id: shape.id, children: /* @__PURE__ */ (0, import_jsx_runtime50.jsx)(DrawShapeSvg, { shape, zoomLevel: this.editor.getZoomLevel() }) });
   }
   indicator(shape) {
-    var _a2;
+    var _a3;
     const allPointsFromSegments = getPointsFromSegments(shape.props.segments);
     let sw = (STROKE_SIZES2[shape.props.size] + 1) * shape.props.scale;
     const zoomLevel = this.editor.getZoomLevel();
@@ -66122,7 +65267,7 @@ var DrawShapeUtil = class extends ShapeUtil {
     if (!forceSolid && !shape.props.isPen && shape.props.dash === "draw" && allPointsFromSegments.length === 1) {
       sw += rng(shape.id)() * (sw / 6);
     }
-    const showAsComplete = shape.props.isComplete || ((_a2 = last(shape.props.segments)) == null ? void 0 : _a2.type) === "straight";
+    const showAsComplete = shape.props.isComplete || ((_a3 = last(shape.props.segments)) == null ? void 0 : _a3.type) === "straight";
     const options = getFreehandOptions(shape.props, sw, showAsComplete, true);
     const strokePoints = getStrokePoints(allPointsFromSegments, options);
     const solidStrokePath = strokePoints.length > 1 ? getSvgPathFromStrokePoints(strokePoints, shape.props.isClosed) : getDot(allPointsFromSegments[0], sw);
@@ -66152,10 +65297,10 @@ function getIsDot(shape) {
   return shape.props.segments.length === 1 && shape.props.segments[0].points.length < 2;
 }
 function DrawShapeSvg({ shape, zoomLevel }) {
-  var _a2;
+  var _a3;
   const theme = useDefaultColorTheme();
   const allPointsFromSegments = getPointsFromSegments(shape.props.segments);
-  const showAsComplete = shape.props.isComplete || ((_a2 = last(shape.props.segments)) == null ? void 0 : _a2.type) === "straight";
+  const showAsComplete = shape.props.isComplete || ((_a3 = last(shape.props.segments)) == null ? void 0 : _a3.type) === "straight";
   let sw = (STROKE_SIZES2[shape.props.size] + 1) * shape.props.scale;
   const forceSolid = zoomLevel < 0.5 && zoomLevel < 1.5 / sw;
   if (!forceSolid && !shape.props.isPen && shape.props.dash === "draw" && allPointsFromSegments.length === 1) {
@@ -66324,20 +65469,20 @@ var EmbedShapeUtil = class extends BaseBoxShapeUtil {
     __publicField(this, "hideSelectionBoundsFg", (shape) => !this.canResize(shape));
     __publicField(this, "canEdit", () => true);
     __publicField(this, "canResize", (shape) => {
-      var _a2, _b2;
-      return !!((_b2 = (_a2 = getEmbedInfo(shape.props.url)) == null ? void 0 : _a2.definition) == null ? void 0 : _b2.doesResize);
+      var _a3, _b2;
+      return !!((_b2 = (_a3 = getEmbedInfo(shape.props.url)) == null ? void 0 : _a3.definition) == null ? void 0 : _b2.doesResize);
     });
     __publicField(this, "canEditInReadOnly", () => true);
     __publicField(this, "isAspectRatioLocked", (shape) => {
-      var _a2;
+      var _a3;
       const embedInfo = getEmbedInfo(shape.props.url);
-      return (_a2 = embedInfo == null ? void 0 : embedInfo.definition.isAspectRatioLocked) != null ? _a2 : false;
+      return (_a3 = embedInfo == null ? void 0 : embedInfo.definition.isAspectRatioLocked) != null ? _a3 : false;
     });
     __publicField(this, "onResize", (shape, info) => {
-      var _a2, _b2;
+      var _a3, _b2;
       const isAspectRatioLocked = this.isAspectRatioLocked(shape);
       const embedInfo = getEmbedInfo(shape.props.url);
-      let minWidth = (_a2 = embedInfo == null ? void 0 : embedInfo.definition.minWidth) != null ? _a2 : 200;
+      let minWidth = (_a3 = embedInfo == null ? void 0 : embedInfo.definition.minWidth) != null ? _a3 : 200;
       let minHeight = (_b2 = embedInfo == null ? void 0 : embedInfo.definition.minHeight) != null ? _b2 : 200;
       if (isAspectRatioLocked) {
         const aspectRatio = shape.props.w / shape.props.h;
@@ -66358,7 +65503,7 @@ var EmbedShapeUtil = class extends BaseBoxShapeUtil {
     };
   }
   component(shape) {
-    var _a2, _b2;
+    var _a3, _b2;
     const { w, h, url } = shape.props;
     const isEditing = useIsEditing(shape.id);
     const embedInfo = (0, import_react52.useMemo)(() => getEmbedInfoUnsafely(url), [url]);
@@ -66379,12 +65524,10 @@ var EmbedShapeUtil = class extends BaseBoxShapeUtil {
     const pageRotation = this.editor.getShapePageTransform(shape).rotation();
     const isInteractive = isEditing || isHoveringWhileEditingSameShape;
     const isIframe = typeof window !== "undefined" && (window !== window.top || window.self !== window.parent);
-    if (isIframe && (embedInfo == null ? void 0 : embedInfo.definition.type) === "tldraw")
-      return null;
+    if (isIframe && (embedInfo == null ? void 0 : embedInfo.definition.type) === "tldraw") return null;
     if ((embedInfo == null ? void 0 : embedInfo.definition.type) === "github_gist") {
       const idFromGistUrl = embedInfo.url.split("/").pop();
-      if (!idFromGistUrl)
-        throw Error("No gist id!");
+      if (!idFromGistUrl) throw Error("No gist id!");
       return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(HTMLContainer, { className: "tl-embed-container", id: shape.id, children: /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
         Gist,
         {
@@ -66398,7 +65541,7 @@ var EmbedShapeUtil = class extends BaseBoxShapeUtil {
     }
     const sandbox = getSandboxPermissions({
       ...embedShapePermissionDefaults,
-      ...(_a2 = embedInfo == null ? void 0 : embedInfo.definition.overridePermissions) != null ? _a2 : {}
+      ...(_a3 = embedInfo == null ? void 0 : embedInfo.definition.overridePermissions) != null ? _a3 : {}
     });
     return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(HTMLContainer, { className: "tl-embed-container", id: shape.id, children: (embedInfo == null ? void 0 : embedInfo.definition) ? /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       "iframe",
@@ -66424,14 +65567,14 @@ var EmbedShapeUtil = class extends BaseBoxShapeUtil {
     ) : null });
   }
   indicator(shape) {
-    var _a2, _b2;
+    var _a3, _b2;
     const embedInfo = (0, import_react52.useMemo)(() => getEmbedInfo(shape.props.url), [shape.props.url]);
     return /* @__PURE__ */ (0, import_jsx_runtime51.jsx)(
       "rect",
       {
         width: toDomPrecision(shape.props.w),
         height: toDomPrecision(shape.props.h),
-        rx: (_a2 = embedInfo == null ? void 0 : embedInfo.definition.overrideOutlineRadius) != null ? _a2 : 8,
+        rx: (_a3 = embedInfo == null ? void 0 : embedInfo.definition.overrideOutlineRadius) != null ? _a3 : 8,
         ry: (_b2 = embedInfo == null ? void 0 : embedInfo.definition.overrideOutlineRadius) != null ? _b2 : 8
       }
     );
@@ -66512,12 +65655,10 @@ var FrameLabelInput = (0, import_react53.forwardRef)(({ id, name, isEditing }, r
   const handleBlur = (0, import_react53.useCallback)(
     (e2) => {
       const shape = editor.getShape(id);
-      if (!shape)
-        return;
+      if (!shape) return;
       const name2 = shape.props.name;
       const value = e2.currentTarget.value.trim();
-      if (name2 === value)
-        return;
+      if (name2 === value) return;
       editor.updateShapes([
         {
           id,
@@ -66531,12 +65672,10 @@ var FrameLabelInput = (0, import_react53.forwardRef)(({ id, name, isEditing }, r
   const handleChange = (0, import_react53.useCallback)(
     (e2) => {
       const shape = editor.getShape(id);
-      if (!shape)
-        return;
+      if (!shape) return;
       const name2 = shape.props.name;
       const value = e2.currentTarget.value;
-      if (name2 === value)
-        return;
+      if (name2 === value) return;
       editor.updateShapes([
         {
           id,
@@ -66584,8 +65723,7 @@ var FrameHeading = function FrameHeading2({
     (e2) => {
       const event = getPointerInfo(e2);
       e2.preventDefault();
-      if (editor.getEditingShapeId() === id)
-        return;
+      if (editor.getEditingShapeId() === id) return;
       editor.dispatch({
         type: "pointer",
         name: "pointer_down",
@@ -66691,13 +65829,10 @@ var FrameShapeUtil = class extends BaseBoxShapeUtil {
       "is creating this shape",
       () => {
         const resizingState = this.editor.getStateDescendant("select.resizing");
-        if (!resizingState)
-          return false;
-        if (!resizingState.getIsActive())
-          return false;
+        if (!resizingState) return false;
+        if (!resizingState.getIsActive()) return false;
         const info = resizingState == null ? void 0 : resizingState.info;
-        if (!info)
-          return false;
+        if (!info) return false;
         return info.isCreating && this.editor.getOnlySelectedShapeId() === shape.id;
       },
       [shape.id]
@@ -66832,10 +65967,8 @@ var import_jsx_runtime55 = __toESM(require_jsx_runtime(), 1);
 
 // node_modules/tldraw/dist-esm/lib/shapes/geo/geo-shape-helpers.mjs
 function getOvalPerimeter(h, w) {
-  if (h > w)
-    return (PI * (w / 2) + (h - w)) * 2;
-  else
-    return (PI * (h / 2) + (w - h)) * 2;
+  if (h > w) return (PI * (w / 2) + (h - w)) * 2;
+  else return (PI * (h / 2) + (w - h)) * 2;
 }
 function getHeartPath(w, h) {
   return getHeartParts(w, h).map((c2, i) => c2.getSvgPathData(i === 0)).join(" ") + " Z";
@@ -67627,10 +66760,8 @@ var GeoShapeUtil = class extends BaseBoxShapeUtil {
       if (shape.props.text.trim()) {
         let newW = Math.max(Math.abs(unscaledW), min3);
         let newH = Math.max(Math.abs(unscaledH), min3);
-        if (newW < min3 && newH === min3)
-          newW = min3;
-        if (newW === min3 && newH < min3)
-          newH = min3;
+        if (newW < min3 && newH === min3) newW = min3;
+        if (newW === min3 && newH < min3) newH = min3;
         const unscaledLabelSize = getUnscaledLabelSize(this.editor, {
           ...shape,
           props: {
@@ -68105,9 +67236,13 @@ var GeoShapeUtil = class extends BaseBoxShapeUtil {
   component(shape) {
     const { id, type, props } = shape;
     const { fill, font, align, verticalAlign, size: size4, text } = props;
-    const isSelected = shape.id === this.editor.getOnlySelectedShapeId();
     const theme = useDefaultColorTheme();
     const isEditingAnything = this.editor.getEditingShapeId() !== null;
+    const isOnlySelected = useValue(
+      "isGeoOnlySelected",
+      () => shape.id === this.editor.getOnlySelectedShapeId(),
+      []
+    );
     const showHtmlContainer = isEditingAnything || shape.props.text;
     return /* @__PURE__ */ (0, import_jsx_runtime56.jsxs)(import_jsx_runtime56.Fragment, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(SVGContainer, { id, children: /* @__PURE__ */ (0, import_jsx_runtime56.jsx)(GeoShapeBody, { shape, shouldScale: true }) }),
@@ -68132,7 +67267,7 @@ var GeoShapeUtil = class extends BaseBoxShapeUtil {
               align,
               verticalAlign,
               text,
-              isSelected,
+              isSelected: isOnlySelected,
               labelColor: theme[props.labelColor].solid,
               wrap: true
             }
@@ -68428,9 +67563,9 @@ function getIndicatorDot(point, sw) {
   return `M ${point.x} ${point.y} m -${r2}, 0 a ${r2},${r2} 0 1,0 ${r2 * 2},0 a ${r2},${r2} 0 1,0 -${r2 * 2},0`;
 }
 function getHighlightStrokePoints(shape, strokeWidth, forceSolid) {
-  var _a2;
+  var _a3;
   const allPointsFromSegments = getPointsFromSegments(shape.props.segments);
-  const showAsComplete = shape.props.isComplete || ((_a2 = last(shape.props.segments)) == null ? void 0 : _a2.type) === "straight";
+  const showAsComplete = shape.props.isComplete || ((_a3 = last(shape.props.segments)) == null ? void 0 : _a3.type) === "straight";
   let sw = strokeWidth;
   if (!forceSolid && !shape.props.isPen && allPointsFromSegments.length === 1) {
     sw += rng(shape.id)() * (strokeWidth / 6);
@@ -68454,7 +67589,7 @@ function HighlightRenderer({
   shape,
   opacity
 }) {
-  var _a2;
+  var _a3;
   const theme = useDefaultColorTheme();
   const allPointsFromSegments = getPointsFromSegments(shape.props.segments);
   let sw = strokeWidth;
@@ -68463,7 +67598,7 @@ function HighlightRenderer({
   }
   const options = getHighlightFreehandSettings({
     strokeWidth: sw,
-    showAsComplete: shape.props.isComplete || ((_a2 = last(shape.props.segments)) == null ? void 0 : _a2.type) === "straight"
+    showAsComplete: shape.props.isComplete || ((_a3 = last(shape.props.segments)) == null ? void 0 : _a3.type) === "straight"
   });
   const strokePoints = getStrokePoints(allPointsFromSegments, options);
   const solidStrokePath = strokePoints.length > 1 ? getSvgPathFromStrokePoints(strokePoints, false) : getShapeDot(shape.props.segments[0].points[0]);
@@ -68535,8 +67670,7 @@ function useAsset(shapeId, assetId, width) {
   const isCulled = culledShapes.has(shapeId);
   const didAlreadyResolve = (0, import_react56.useRef)(false);
   (0, import_react56.useEffect)(() => {
-    if (url)
-      didAlreadyResolve.current = true;
+    if (url) didAlreadyResolve.current = true;
   }, [url]);
   const shapeScale = asset && "w" in asset.props ? width / asset.props.w : 1;
   const screenScale = useValue("zoom level", () => editor.getZoomLevel() * shapeScale, [
@@ -68544,16 +67678,14 @@ function useAsset(shapeId, assetId, width) {
     shapeScale
   ]);
   (0, import_react56.useEffect)(() => {
-    if (isCulled)
-      return;
+    if (isCulled) return;
     let isCancelled = false;
     const timer = editor.timers.setTimeout(
       async () => {
         const resolvedUrl = await editor.resolveAssetUrl(assetId, {
           screenScale
         });
-        if (!isCancelled)
-          setUrl(resolvedUrl);
+        if (!isCancelled) setUrl(resolvedUrl);
       },
       didAlreadyResolve.current ? 500 : 0
     );
@@ -68570,8 +67702,7 @@ var import_react57 = __toESM(require_react(), 1);
 function usePrefersReducedMotion() {
   const [prefersReducedMotion, setPrefersReducedMotion] = (0, import_react57.useState)(false);
   (0, import_react57.useEffect)(() => {
-    if (typeof window === "undefined" || !("matchMedia" in window))
-      return;
+    if (typeof window === "undefined" || !("matchMedia" in window)) return;
     const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
     const handler = () => {
       setPrefersReducedMotion(mql.matches);
@@ -68609,11 +67740,9 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
     });
     __publicField(this, "onDoubleClick", (shape) => {
       const asset = shape.props.assetId ? this.editor.getAsset(shape.props.assetId) : void 0;
-      if (!asset)
-        return;
+      if (!asset) return;
       const canPlay = asset.props.src && this.isAnimated(shape);
-      if (!canPlay)
-        return;
+      if (!canPlay) return;
       this.editor.updateShapes([
         {
           type: "image",
@@ -68626,8 +67755,7 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
     });
     __publicField(this, "onDoubleClickEdge", (shape) => {
       const props = shape.props;
-      if (!props)
-        return;
+      if (!props) return;
       if (this.editor.getCroppingShapeId() !== shape.id) {
         return;
       }
@@ -68669,12 +67797,11 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
   }
   isAnimated(shape) {
     const asset = shape.props.assetId ? this.editor.getAsset(shape.props.assetId) : void 0;
-    if (!asset)
-      return false;
+    if (!asset) return false;
     return "mimeType" in asset.props && MediaHelpers.isAnimatedImageType(asset == null ? void 0 : asset.props.mimeType) || "isAnimated" in asset.props && asset.props.isAnimated;
   }
   component(shape) {
-    var _a2;
+    var _a3;
     const isCropping = this.editor.getCroppingShapeId() === shape.id;
     const prefersReducedMotion = usePrefersReducedMotion();
     const [staticFrameSrc, setStaticFrameSrc] = (0, import_react58.useState)("");
@@ -68686,8 +67813,7 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
         let cancelled = false;
         const image = Image();
         image.onload = () => {
-          if (cancelled)
-            return;
+          if (cancelled) return;
           setLoadedSrc(url);
         };
         image.src = url;
@@ -68701,14 +67827,12 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
         let cancelled = false;
         const image = Image();
         image.onload = () => {
-          if (cancelled)
-            return;
+          if (cancelled) return;
           const canvas = document.createElement("canvas");
           canvas.width = image.width;
           canvas.height = image.height;
           const ctx = canvas.getContext("2d");
-          if (!ctx)
-            return;
+          if (!ctx) return;
           ctx.drawImage(image, 0, 0);
           setStaticFrameSrc(canvas.toDataURL());
           setLoadedSrc(url);
@@ -68724,7 +67848,7 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
       throw Error("Bookmark assets can't be rendered as images");
     }
     const showCropPreview = isSelected && isCropping && this.editor.isIn("select.crop");
-    const reduceMotion = prefersReducedMotion && (((_a2 = asset == null ? void 0 : asset.props.mimeType) == null ? void 0 : _a2.includes("video")) || this.isAnimated(shape));
+    const reduceMotion = prefersReducedMotion && (((_a3 = asset == null ? void 0 : asset.props.mimeType) == null ? void 0 : _a3.includes("video")) || this.isAnimated(shape));
     const containerStyle = getCroppedContainerStyle(shape);
     if (!(asset == null ? void 0 : asset.props.src)) {
       return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(
@@ -68746,8 +67870,7 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
         }
       );
     }
-    if (!loadedSrc)
-      return null;
+    if (!loadedSrc) return null;
     return /* @__PURE__ */ (0, import_jsx_runtime59.jsxs)(import_jsx_runtime59.Fragment, { children: [
       showCropPreview && /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("div", { style: containerStyle, children: /* @__PURE__ */ (0, import_jsx_runtime59.jsx)(
         "img",
@@ -68793,21 +67916,17 @@ var ImageShapeUtil = class extends BaseBoxShapeUtil {
   }
   indicator(shape) {
     const isCropping = this.editor.getCroppingShapeId() === shape.id;
-    if (isCropping)
-      return null;
+    if (isCropping) return null;
     return /* @__PURE__ */ (0, import_jsx_runtime59.jsx)("rect", { width: toDomPrecision(shape.props.w), height: toDomPrecision(shape.props.h) });
   }
   async toSvg(shape) {
-    if (!shape.props.assetId)
-      return null;
+    if (!shape.props.assetId) return null;
     const asset = this.editor.getAsset(shape.props.assetId);
-    if (!asset)
-      return null;
+    if (!asset) return null;
     let src = await this.editor.resolveAssetUrl(shape.props.assetId, {
       shouldResolveToOriginal: true
     });
-    if (!src)
-      return null;
+    if (!src) return null;
     if (src.startsWith("blob:") || src.startsWith("http") || src.startsWith("/") || src.startsWith("./")) {
       src = await getDataURIFromURL(src) || "";
     }
@@ -68956,8 +68075,7 @@ var LineShapeUtil = class extends ShapeUtil {
       };
     });
     __publicField(this, "onHandleDrag", (shape, { handle }) => {
-      if (handle.type !== "vertex")
-        return;
+      if (handle.type !== "vertex") return;
       return {
         ...shape,
         props: {
@@ -69050,8 +68168,7 @@ var LineShapeUtil = class extends ShapeUtil {
         const segments = getGeometryForLineShape(shape).segments.filter(
           (_, i) => i !== index2 - 1 && i !== index2
         );
-        if (!segments.length)
-          return null;
+        if (!segments.length) return null;
         return new Group2d({ children: segments });
       }
     };
@@ -69777,8 +68894,8 @@ function useTranslation() {
   const translation = useCurrentTranslation();
   return React16.useCallback(
     function msg2(id) {
-      var _a2;
-      return (_a2 = translation.messages[id]) != null ? _a2 : id;
+      var _a3;
+      return (_a3 = translation.messages[id]) != null ? _a3 : id;
     },
     [translation]
   );
@@ -69860,11 +68977,9 @@ var NoteShapeUtil = class extends ShapeUtil {
   getHandles(shape) {
     const { scale } = shape.props;
     const isCoarsePointer = this.editor.getInstanceState().isCoarsePointer;
-    if (isCoarsePointer)
-      return [];
+    if (isCoarsePointer) return [];
     const zoom = this.editor.getZoomLevel();
-    if (zoom * scale < 0.25)
-      return [];
+    if (zoom * scale < 0.25) return [];
     const nh = getNoteHeight(shape);
     const nw = NOTE_SIZE * scale;
     const offset4 = CLONE_HANDLE_MARGIN / zoom * scale;
@@ -69923,8 +69038,8 @@ var NoteShapeUtil = class extends ShapeUtil {
     const rotation = useValue(
       "shape rotation",
       () => {
-        var _a2, _b2;
-        return (_b2 = (_a2 = this.editor.getShapePageTransform(id)) == null ? void 0 : _a2.rotation()) != null ? _b2 : 0;
+        var _a3, _b2;
+        return (_b2 = (_a3 = this.editor.getShapePageTransform(id)) == null ? void 0 : _a3.rotation()) != null ? _b2 : 0;
       },
       [this.editor]
     );
@@ -69982,8 +69097,7 @@ var NoteShapeUtil = class extends ShapeUtil {
     );
   }
   toSvg(shape, ctx) {
-    if (shape.props.text)
-      ctx.addExportDef(getFontDefForExport(shape.props.font));
+    if (shape.props.text) ctx.addExportDef(getFontDefForExport(shape.props.font));
     const theme = getDefaultColorTheme({ isDarkMode: ctx.isDarkMode });
     const bounds = getBoundsForSVG(shape);
     return /* @__PURE__ */ (0, import_jsx_runtime63.jsxs)(import_jsx_runtime63.Fragment, { children: [
@@ -70084,8 +69198,7 @@ function useNoteKeydownHandler(id) {
   return (0, import_react60.useCallback)(
     (e2) => {
       const shape = editor.getShape(id);
-      if (!shape)
-        return;
+      if (!shape) return;
       const isTab = e2.key === "Tab";
       const isCmdEnter = (e2.metaKey || e2.ctrlKey) && e2.key === "Enter";
       if (isTab || isCmdEnter) {
@@ -70216,12 +69329,10 @@ var TextShapeUtil = class extends ShapeUtil {
       }
     });
     __publicField(this, "onBeforeUpdate", (prev, next) => {
-      if (!next.props.autoSize)
-        return;
+      if (!next.props.autoSize) return;
       const styleDidChange = prev.props.size !== next.props.size || prev.props.textAlign !== next.props.textAlign || prev.props.font !== next.props.font || prev.props.scale !== 1 && next.props.scale === 1;
       const textDidChange = prev.props.text !== next.props.text;
-      if (!styleDidChange && !textDidChange)
-        return;
+      if (!styleDidChange && !textDidChange) return;
       const boundsA = this.getMinDimensions(prev);
       const boundsB = getTextSize(this.editor, next.props);
       const wA = boundsA.width * prev.props.scale;
@@ -70239,8 +69350,7 @@ var TextShapeUtil = class extends ShapeUtil {
           break;
         }
         default: {
-          if (textDidChange)
-            break;
+          if (textDidChange) break;
           delta = new Vec(0, (hB - hA) / 2);
           break;
         }
@@ -70325,16 +69435,14 @@ var TextShapeUtil = class extends ShapeUtil {
   indicator(shape) {
     const bounds = this.editor.getShapeGeometry(shape).bounds;
     const editor = useEditor();
-    if (shape.props.autoSize && editor.getEditingShapeId() === shape.id)
-      return null;
+    if (shape.props.autoSize && editor.getEditingShapeId() === shape.id) return null;
     return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)("rect", { width: toDomPrecision(bounds.width), height: toDomPrecision(bounds.height) });
   }
   toSvg(shape, ctx) {
-    var _a2, _b2;
-    if (shape.props.text)
-      ctx.addExportDef(getFontDefForExport(shape.props.font));
+    var _a3, _b2;
+    if (shape.props.text) ctx.addExportDef(getFontDefForExport(shape.props.font));
     const bounds = this.editor.getShapeGeometry(shape).bounds;
-    const width = bounds.width / ((_a2 = shape.props.scale) != null ? _a2 : 1);
+    const width = bounds.width / ((_a3 = shape.props.scale) != null ? _a3 : 1);
     const height = bounds.height / ((_b2 = shape.props.scale) != null ? _b2 : 1);
     const theme = getDefaultColorTheme(ctx);
     return /* @__PURE__ */ (0, import_jsx_runtime64.jsx)(
@@ -70405,8 +69513,7 @@ function useTextShapeKeydownHandler(id) {
   const editor = useEditor();
   return (0, import_react61.useCallback)(
     (e2) => {
-      if (editor.getEditingShapeId() !== id)
-        return;
+      if (editor.getEditingShapeId() !== id) return;
       switch (e2.key) {
         case "Enter": {
           if (e2.ctrlKey || e2.metaKey) {
@@ -70459,8 +69566,7 @@ var VideoShapeUtil = class extends BaseBoxShapeUtil {
     const handlePlay = (0, import_react62.useCallback)(
       (e2) => {
         const video = e2.currentTarget;
-        if (!video)
-          return;
+        if (!video) return;
         editor.updateShapes([
           {
             type: "video",
@@ -70477,8 +69583,7 @@ var VideoShapeUtil = class extends BaseBoxShapeUtil {
     const handlePause = (0, import_react62.useCallback)(
       (e2) => {
         const video = e2.currentTarget;
-        if (!video)
-          return;
+        if (!video) return;
         editor.updateShapes([
           {
             type: "video",
@@ -70495,8 +69600,7 @@ var VideoShapeUtil = class extends BaseBoxShapeUtil {
     const handleSetCurrentTime = (0, import_react62.useCallback)(
       (e2) => {
         const video = e2.currentTarget;
-        if (!video)
-          return;
+        if (!video) return;
         if (isEditing) {
           editor.updateShapes([
             {
@@ -70515,8 +69619,7 @@ var VideoShapeUtil = class extends BaseBoxShapeUtil {
     const handleLoadedData = (0, import_react62.useCallback)(
       (e2) => {
         const video = e2.currentTarget;
-        if (!video)
-          return;
+        if (!video) return;
         if (time2 !== video.currentTime) {
           video.currentTime = time2;
         }
@@ -70529,8 +69632,7 @@ var VideoShapeUtil = class extends BaseBoxShapeUtil {
     );
     (0, import_react62.useEffect)(() => {
       const video = rVideo.current;
-      if (!video)
-        return;
+      if (!video) return;
       if (isLoaded && !isEditing && time2 !== video.currentTime) {
         video.currentTime = time2;
       }
@@ -70543,8 +69645,7 @@ var VideoShapeUtil = class extends BaseBoxShapeUtil {
     (0, import_react62.useEffect)(() => {
       if (prefersReducedMotion) {
         const video = rVideo.current;
-        if (!video)
-          return;
+        if (!video) return;
         video.pause();
         video.currentTime = 0;
       }
@@ -70607,8 +69708,7 @@ function serializeVideo(id) {
     canvas.height = video.videoHeight;
     canvas.getContext("2d").drawImage(video, 0, 0);
     return canvas.toDataURL("image/png");
-  } else
-    throw new Error("Video with not found when attempting serialization.");
+  } else throw new Error("Video with not found when attempting serialization.");
 }
 
 // node_modules/tldraw/dist-esm/lib/defaultShapeUtils.mjs
@@ -70675,8 +69775,7 @@ var Erasing = class extends StateNode {
       const { originPagePoint } = this.editor.inputs;
       this.excludedShapeIds = new Set(
         this.editor.getCurrentPageShapes().filter((shape) => {
-          if (this.editor.isShapeOrAncestorLocked(shape))
-            return true;
+          if (this.editor.isShapeOrAncestorLocked(shape)) return true;
           if (this.editor.isShapeOfType(shape, "group") || this.editor.isShapeOfType(shape, "frame")) {
             const pointInShapeShape = this.editor.getPointInShapeSpace(shape, originPagePoint);
             const geometry = this.editor.getShapeGeometry(shape);
@@ -70724,16 +69823,14 @@ var Erasing = class extends StateNode {
     const erasing = new Set(erasingShapeIds);
     const minDist = this.editor.options.hitTestMargin / zoomLevel;
     for (const shape of currentPageShapes) {
-      if (editor.isShapeOfType(shape, "group"))
-        continue;
+      if (editor.isShapeOfType(shape, "group")) continue;
       const pageMask = editor.getShapeMask(shape.id);
       if (pageMask && !pointInPolygon(currentPagePoint, pageMask)) {
         continue;
       }
       const geometry = editor.getShapeGeometry(shape);
       const pageTransform = editor.getShapePageTransform(shape);
-      if (!geometry || !pageTransform)
-        continue;
+      if (!geometry || !pageTransform) continue;
       const pt = pageTransform.clone().invert();
       const A = pt.applyToPoint(previousPagePoint);
       const B = pt.applyToPoint(currentPagePoint);
@@ -70886,8 +69983,7 @@ var Dragging = class extends StateNode {
     const { initialCamera, editor } = this;
     const { currentScreenPoint, originScreenPoint } = editor.inputs;
     const delta = Vec.Sub(currentScreenPoint, originScreenPoint).div(editor.getZoomLevel());
-    if (delta.len2() === 0)
-      return;
+    if (delta.len2() === 0) return;
     editor.setCamera(initialCamera.clone().add(delta));
   }
   complete() {
@@ -71148,38 +70244,33 @@ var Brushing = class extends StateNode {
     let A, B, shape, pageBounds, pageTransform, localCorners;
     const currentPageShapes = editor.getCurrentPageShapes();
     const currentPageId = editor.getCurrentPageId();
-    testAllShapes:
-      for (let i = 0, n2 = currentPageShapes.length; i < n2; i++) {
-        shape = currentPageShapes[i];
-        if (excludedShapeIds.has(shape.id) || results.has(shape.id))
-          continue testAllShapes;
-        pageBounds = editor.getShapePageBounds(shape);
-        if (!pageBounds)
-          continue testAllShapes;
-        if (brush.contains(pageBounds)) {
-          this.handleHit(shape, currentPagePoint, currentPageId, results, corners);
-          continue testAllShapes;
-        }
-        if (isWrapping || editor.isShapeOfType(shape, "frame")) {
-          continue testAllShapes;
-        }
-        if (brush.collides(pageBounds)) {
-          pageTransform = editor.getShapePageTransform(shape);
-          if (!pageTransform)
-            continue testAllShapes;
-          localCorners = pageTransform.clone().invert().applyToPoints(corners);
-          const geometry = editor.getShapeGeometry(shape);
-          hitTestBrushEdges:
-            for (let i2 = 0; i2 < 4; i2++) {
-              A = localCorners[i2];
-              B = localCorners[(i2 + 1) % 4];
-              if (geometry.hitTestLineSegment(A, B, 0)) {
-                this.handleHit(shape, currentPagePoint, currentPageId, results, corners);
-                break hitTestBrushEdges;
-              }
-            }
+    testAllShapes: for (let i = 0, n2 = currentPageShapes.length; i < n2; i++) {
+      shape = currentPageShapes[i];
+      if (excludedShapeIds.has(shape.id) || results.has(shape.id)) continue testAllShapes;
+      pageBounds = editor.getShapePageBounds(shape);
+      if (!pageBounds) continue testAllShapes;
+      if (brush.contains(pageBounds)) {
+        this.handleHit(shape, currentPagePoint, currentPageId, results, corners);
+        continue testAllShapes;
+      }
+      if (isWrapping || editor.isShapeOfType(shape, "frame")) {
+        continue testAllShapes;
+      }
+      if (brush.collides(pageBounds)) {
+        pageTransform = editor.getShapePageTransform(shape);
+        if (!pageTransform) continue testAllShapes;
+        localCorners = pageTransform.clone().invert().applyToPoints(corners);
+        const geometry = editor.getShapeGeometry(shape);
+        hitTestBrushEdges: for (let i2 = 0; i2 < 4; i2++) {
+          A = localCorners[i2];
+          B = localCorners[(i2 + 1) % 4];
+          if (geometry.hitTestLineSegment(A, B, 0)) {
+            this.handleHit(shape, currentPagePoint, currentPageId, results, corners);
+            break hitTestBrushEdges;
+          }
         }
       }
+    }
     editor.getInstanceState().isCoarsePointer;
     const currentBrush = editor.getInstanceState().brush;
     if (!currentBrush || !brush.equals(currentBrush)) {
@@ -71262,8 +70353,7 @@ var PointingResizeHandle = class extends StateNode {
     });
   }
   startResizing() {
-    if (this.editor.getInstanceState().isReadonly)
-      return;
+    if (this.editor.getInstanceState().isReadonly) return;
     this.parent.transition("resizing", this.info);
   }
   complete() {
@@ -71319,24 +70409,21 @@ var Cropping = class extends StateNode {
   }
   updateCursor() {
     const selectedShape = this.editor.getSelectedShapes()[0];
-    if (!selectedShape)
-      return;
+    if (!selectedShape) return;
     const cursorType = CursorTypeMap[this.info.handle];
     this.editor.setCursor({ type: cursorType, rotation: this.editor.getSelectionRotation() });
   }
   updateShapes() {
-    var _a2;
+    var _a3;
     const { shape, cursorHandleOffset } = this.snapshot;
-    if (!shape)
-      return;
+    if (!shape) return;
     const util = this.editor.getShapeUtil("image");
-    if (!util)
-      return;
+    if (!util) return;
     const props = shape.props;
     const currentPagePoint = this.editor.inputs.currentPagePoint.clone().sub(cursorHandleOffset);
     const originPagePoint = this.editor.inputs.originPagePoint.clone().sub(cursorHandleOffset);
     const change = currentPagePoint.clone().sub(originPagePoint).rot(-shape.rotation);
-    const crop = (_a2 = props.crop) != null ? _a2 : this.getDefaultCrop();
+    const crop = (_a3 = props.crop) != null ? _a3 : this.getDefaultCrop();
     const newCrop = structuredClone(crop);
     const newPoint = new Vec(shape.x, shape.y);
     const pointDelta = new Vec(0, 0);
@@ -71347,8 +70434,7 @@ var Cropping = class extends StateNode {
       case "top":
       case "top_left":
       case "top_right": {
-        if (h < MIN_CROP_SIZE)
-          break;
+        if (h < MIN_CROP_SIZE) break;
         hasCropChanged = true;
         newCrop.topLeft.y = newCrop.topLeft.y + change.y / h;
         const heightAfterCrop = h * (newCrop.bottomRight.y - newCrop.topLeft.y);
@@ -71368,8 +70454,7 @@ var Cropping = class extends StateNode {
       case "bottom":
       case "bottom_left":
       case "bottom_right": {
-        if (h < MIN_CROP_SIZE)
-          break;
+        if (h < MIN_CROP_SIZE) break;
         hasCropChanged = true;
         newCrop.bottomRight.y = Math.min(1, newCrop.bottomRight.y + change.y / h);
         const heightAfterCrop = h * (newCrop.bottomRight.y - newCrop.topLeft.y);
@@ -71383,8 +70468,7 @@ var Cropping = class extends StateNode {
       case "left":
       case "top_left":
       case "bottom_left": {
-        if (w < MIN_CROP_SIZE)
-          break;
+        if (w < MIN_CROP_SIZE) break;
         hasCropChanged = true;
         newCrop.topLeft.x = newCrop.topLeft.x + change.x / w;
         const widthAfterCrop = w * (newCrop.bottomRight.x - newCrop.topLeft.x);
@@ -71404,8 +70488,7 @@ var Cropping = class extends StateNode {
       case "right":
       case "top_right":
       case "bottom_right": {
-        if (w < MIN_CROP_SIZE)
-          break;
+        if (w < MIN_CROP_SIZE) break;
         hasCropChanged = true;
         newCrop.bottomRight.x = Math.min(1, newCrop.bottomRight.x + change.x / w);
         const widthAfterCrop = w * (newCrop.bottomRight.x - newCrop.topLeft.x);
@@ -71415,8 +70498,7 @@ var Cropping = class extends StateNode {
         break;
       }
     }
-    if (!hasCropChanged)
-      return;
+    if (!hasCropChanged) return;
     newPoint.add(pointDelta.rot(shape.rotation));
     const partial = {
       id: shape.id,
@@ -71474,7 +70556,7 @@ __publicField(Cropping, "id", "cropping");
 
 // node_modules/tldraw/dist-esm/lib/tools/selection-logic/getHitShapeOnCanvasPointerDown.mjs
 function getHitShapeOnCanvasPointerDown(editor, hitLabels = false) {
-  var _a2;
+  var _a3;
   const zoomLevel = editor.getZoomLevel();
   const {
     inputs: { currentPagePoint }
@@ -71482,12 +70564,12 @@ function getHitShapeOnCanvasPointerDown(editor, hitLabels = false) {
   return (
     // hovered shape at point
     // selected shape at point
-    (_a2 = editor.getShapeAtPoint(currentPagePoint, {
+    (_a3 = editor.getShapeAtPoint(currentPagePoint, {
       hitInside: false,
       hitLabels,
       margin: editor.options.hitTestMargin / zoomLevel,
       renderingOnly: true
-    })) != null ? _a2 : editor.getSelectedShapeAtPoint(currentPagePoint)
+    })) != null ? _a3 : editor.getSelectedShapeAtPoint(currentPagePoint)
   );
 }
 
@@ -71545,9 +70627,8 @@ var Idle11 = class extends StateNode {
       this.editor.setCurrentTool("select.idle", {});
     });
     __publicField(this, "onPointerDown", (info) => {
-      var _a2;
-      if (this.editor.getIsMenuOpen())
-        return;
+      var _a3;
+      if (this.editor.getIsMenuOpen()) return;
       if (info.ctrlKey) {
         this.cancel();
         this.editor.root.handleEvent(info);
@@ -71573,7 +70654,7 @@ var Idle11 = class extends StateNode {
             this.editor.setCurrentTool("select.crop.pointing_crop", info);
             return;
           } else {
-            if ((_a2 = this.editor.getShapeUtil(info.shape)) == null ? void 0 : _a2.canCrop(info.shape)) {
+            if ((_a3 = this.editor.getShapeUtil(info.shape)) == null ? void 0 : _a3.canCrop(info.shape)) {
               this.editor.setCroppingShape(info.shape.id);
               this.editor.setSelectedShapes([info.shape.id]);
               this.editor.setCurrentTool("select.crop.pointing_crop", info);
@@ -71620,20 +70701,16 @@ var Idle11 = class extends StateNode {
       }
     });
     __publicField(this, "onDoubleClick", (info) => {
-      var _a2;
-      if (this.editor.inputs.shiftKey || info.phase !== "up")
-        return;
+      var _a3;
+      if (this.editor.inputs.shiftKey || info.phase !== "up") return;
       const croppingShapeId = this.editor.getCroppingShapeId();
-      if (!croppingShapeId)
-        return;
+      if (!croppingShapeId) return;
       const shape = this.editor.getShape(croppingShapeId);
-      if (!shape)
-        return;
+      if (!shape) return;
       const util = this.editor.getShapeUtil(shape);
-      if (!util)
-        return;
+      if (!util) return;
       if (info.target === "selection") {
-        (_a2 = util.onDoubleClickEdge) == null ? void 0 : _a2.call(util, shape);
+        (_a3 = util.onDoubleClickEdge) == null ? void 0 : _a3.call(util, shape);
         return;
       }
       this.cancel();
@@ -71667,21 +70744,14 @@ var Idle11 = class extends StateNode {
     } = this;
     const shiftKey = keys.has("ShiftLeft");
     const delta = new Vec(0, 0);
-    if (keys.has("ArrowLeft"))
-      delta.x += 1;
-    if (keys.has("ArrowRight"))
-      delta.x -= 1;
-    if (keys.has("ArrowUp"))
-      delta.y += 1;
-    if (keys.has("ArrowDown"))
-      delta.y -= 1;
-    if (delta.equals(new Vec(0, 0)))
-      return;
-    if (shiftKey)
-      delta.mul(10);
+    if (keys.has("ArrowLeft")) delta.x += 1;
+    if (keys.has("ArrowRight")) delta.x -= 1;
+    if (keys.has("ArrowUp")) delta.y += 1;
+    if (keys.has("ArrowDown")) delta.y -= 1;
+    if (delta.equals(new Vec(0, 0))) return;
+    if (shiftKey) delta.mul(10);
     const shape = this.editor.getShape(this.editor.getCroppingShapeId());
-    if (!shape)
-      return;
+    if (!shape) return;
     const partial = getTranslateCroppedImageChange(this.editor, shape, delta);
     if (partial) {
       if (!ephemeral) {
@@ -71721,8 +70791,7 @@ var PointingCropHandle = class extends StateNode {
       this.info = info;
       this.parent.setCurrentToolIdMask(info.onInteractionEnd);
       const selectedShape = this.editor.getSelectedShapes()[0];
-      if (!selectedShape)
-        return;
+      if (!selectedShape) return;
       const cursorType = CursorTypeMap[this.info.handle];
       this.editor.setCursor({ type: cursorType, rotation: this.editor.getSelectionRotation() });
       this.editor.setCroppingShape(selectedShape.id);
@@ -71758,8 +70827,7 @@ var PointingCropHandle = class extends StateNode {
     });
   }
   startCropping() {
-    if (this.editor.getInstanceState().isReadonly)
-      return;
+    if (this.editor.getInstanceState().isReadonly) return;
     this.parent.transition("cropping", {
       ...this.info,
       onInteractionEnd: this.info.onInteractionEnd
@@ -71841,8 +70909,7 @@ var TranslatingCrop = class extends StateNode {
   }
   updateShapes() {
     const shape = this.snapshot.shape;
-    if (!shape)
-      return;
+    if (!shape) return;
     const { originPagePoint, currentPagePoint } = this.editor.inputs;
     const delta = currentPagePoint.clone().sub(originPagePoint);
     const partial = getTranslateCroppedImageChange(this.editor, shape, delta);
@@ -71907,8 +70974,7 @@ var DraggingHandle = class extends StateNode {
       this.parent.setCurrentToolIdMask(info.onInteractionEnd);
       this.shapeId = shape.id;
       this.markId = isCreating ? `creating:${shape.id}` : "dragging handle";
-      if (!isCreating)
-        this.editor.mark(this.markId);
+      if (!isCreating) this.editor.mark(this.markId);
       this.initialHandle = structuredClone(handle);
       if (this.editor.isShapeOfType(shape, "line")) {
         if (this.initialHandle.type === "create") {
@@ -72037,7 +71103,7 @@ var DraggingHandle = class extends StateNode {
     this.parent.transition("idle");
   }
   update() {
-    var _a2;
+    var _a3;
     const { editor, shapeId, initialPagePoint } = this;
     const { initialHandle, initialPageRotation, initialAdjacentHandle } = this;
     const hintingShapeIds = this.editor.getHintingShapeIds();
@@ -72048,8 +71114,7 @@ var DraggingHandle = class extends StateNode {
     } = editor;
     const initial = this.info.shape;
     const shape = editor.getShape(shapeId);
-    if (!shape)
-      return;
+    if (!shape) return;
     const util = editor.getShapeUtil(shape);
     let point = currentPagePoint.clone().sub(initialPagePoint).rot(-initialPageRotation).add(initialHandle);
     if (shiftKey && initialAdjacentHandle && initialHandle.id !== "middle") {
@@ -72062,8 +71127,7 @@ var DraggingHandle = class extends StateNode {
     let nextHandle = { ...initialHandle, x: point.x, y: point.y };
     if (initialHandle.canSnap && (isSnapMode ? !ctrlKey : ctrlKey)) {
       const pageTransform = editor.getShapePageTransform(shape.id);
-      if (!pageTransform)
-        throw Error("Expected a page transform");
+      if (!pageTransform) throw Error("Expected a page transform");
       const snap = snaps.handles.snapHandle({ currentShapeId: shapeId, handle: nextHandle });
       if (snap) {
         snap.nudge.rot(-editor.getShapeParentTransform(shape).rotation());
@@ -72071,7 +71135,7 @@ var DraggingHandle = class extends StateNode {
         nextHandle = { ...initialHandle, x: point.x, y: point.y };
       }
     }
-    const changes = (_a2 = util.onHandleDrag) == null ? void 0 : _a2.call(util, shape, {
+    const changes = (_a3 = util.onHandleDrag) == null ? void 0 : _a3.call(util, shape, {
       handle: nextHandle,
       isPrecise: this.isPrecise || altKey2,
       initial
@@ -72122,29 +71186,25 @@ var EditingShape = class extends StateNode {
     __publicField(this, "hitShapeForPointerUp", null);
     __publicField(this, "onEnter", () => {
       const editingShape = this.editor.getEditingShape();
-      if (!editingShape)
-        throw Error("Entered editing state without an editing shape");
+      if (!editingShape) throw Error("Entered editing state without an editing shape");
       this.hitShapeForPointerUp = null;
       updateHoveredShapeId(this.editor);
       this.editor.select(editingShape);
     });
     __publicField(this, "onExit", () => {
-      var _a2;
+      var _a3;
       const { editingShapeId } = this.editor.getCurrentPageState();
-      if (!editingShapeId)
-        return;
+      if (!editingShapeId) return;
       this.editor.setEditingShape(null);
       updateHoveredShapeId.cancel();
       const shape = this.editor.getShape(editingShapeId);
       const util = this.editor.getShapeUtil(shape);
-      (_a2 = util.onEditEnd) == null ? void 0 : _a2.call(util, shape);
+      (_a3 = util.onEditEnd) == null ? void 0 : _a3.call(util, shape);
     });
     __publicField(this, "onPointerMove", (info) => {
       if (this.hitShapeForPointerUp && this.editor.inputs.isDragging) {
-        if (this.editor.getInstanceState().isReadonly)
-          return;
-        if (this.hitShapeForPointerUp.isLocked)
-          return;
+        if (this.editor.getInstanceState().isReadonly) return;
+        if (this.hitShapeForPointerUp.isLocked) return;
         this.editor.select(this.hitShapeForPointerUp);
         this.parent.transition("translating", info);
         this.hitShapeForPointerUp = null;
@@ -72206,12 +71266,10 @@ var EditingShape = class extends StateNode {
     });
     __publicField(this, "onPointerUp", (info) => {
       const hitShape = this.hitShapeForPointerUp;
-      if (!hitShape)
-        return;
+      if (!hitShape) return;
       this.hitShapeForPointerUp = null;
       const util = this.editor.getShapeUtil(hitShape);
-      if (hitShape.isLocked)
-        return;
+      if (hitShape.isLocked) return;
       if (this.editor.getInstanceState().isReadonly) {
         if (!util.canEditInReadOnly(hitShape)) {
           this.parent.transition("pointing_shape", info);
@@ -72321,8 +71379,7 @@ var Idle12 = class extends StateNode {
       updateHoveredShapeId(this.editor);
     });
     __publicField(this, "onPointerDown", (info) => {
-      if (this.editor.getIsMenuOpen())
-        return;
+      if (this.editor.getIsMenuOpen()) return;
       const shouldEnterCropMode = info.ctrlKey && getShouldEnterCropMode(this.editor);
       if (info.ctrlKey && !shouldEnterCropMode) {
         if (info.target === "shape" && this.isDarwin && this.editor.inputs.keys.has("ControlLeft")) {
@@ -72376,8 +71433,7 @@ var Idle12 = class extends StateNode {
           break;
         }
         case "handle": {
-          if (this.editor.getInstanceState().isReadonly)
-            break;
+          if (this.editor.getInstanceState().isReadonly) break;
           if (this.editor.inputs.altKey) {
             this.parent.transition("pointing_shape", info);
           } else {
@@ -72428,13 +71484,12 @@ var Idle12 = class extends StateNode {
       }
     });
     __publicField(this, "onDoubleClick", (info) => {
-      var _a2, _b2, _c, _d, _e;
-      if (this.editor.inputs.shiftKey || info.phase !== "up")
-        return;
+      var _a3, _b2, _c, _d, _e;
+      if (this.editor.inputs.shiftKey || info.phase !== "up") return;
       switch (info.target) {
         case "canvas": {
           const hoveredShape = this.editor.getHoveredShape();
-          const hitShape = hoveredShape && !this.editor.isShapeOfType(hoveredShape, "group") ? hoveredShape : (_a2 = this.editor.getSelectedShapeAtPoint(this.editor.inputs.currentPagePoint)) != null ? _a2 : this.editor.getShapeAtPoint(this.editor.inputs.currentPagePoint, {
+          const hitShape = hoveredShape && !this.editor.isShapeOfType(hoveredShape, "group") ? hoveredShape : (_a3 = this.editor.getSelectedShapeAtPoint(this.editor.inputs.currentPagePoint)) != null ? _a3 : this.editor.getShapeAtPoint(this.editor.inputs.currentPagePoint, {
             margin: this.editor.options.hitTestMargin / this.editor.getZoomLevel(),
             hitInside: false
           });
@@ -72466,8 +71521,7 @@ var Idle12 = class extends StateNode {
           break;
         }
         case "selection": {
-          if (this.editor.getInstanceState().isReadonly)
-            break;
+          if (this.editor.getInstanceState().isReadonly) break;
           const onlySelectedShape = this.editor.getOnlySelectedShape();
           if (onlySelectedShape) {
             const util = this.editor.getShapeUtil(onlySelectedShape);
@@ -72528,8 +71582,7 @@ var Idle12 = class extends StateNode {
           break;
         }
         case "handle": {
-          if (this.editor.getInstanceState().isReadonly)
-            break;
+          if (this.editor.getInstanceState().isReadonly) break;
           const { shape, handle } = info;
           const util = this.editor.getShapeUtil(shape);
           const changes = (_e = util.onDoubleClickHandle) == null ? void 0 : _e.call(util, shape, handle);
@@ -72687,24 +71740,19 @@ var Idle12 = class extends StateNode {
     __publicField(this, "isDarwin", window.navigator.userAgent.toLowerCase().indexOf("mac") > -1);
   }
   shouldStartEditingShape(shape = this.editor.getOnlySelectedShape()) {
-    if (!shape)
-      return false;
-    if (this.editor.isShapeOrAncestorLocked(shape) && shape.type !== "embed")
-      return false;
-    if (!this.canInteractWithShapeInReadOnly(shape))
-      return false;
+    if (!shape) return false;
+    if (this.editor.isShapeOrAncestorLocked(shape) && shape.type !== "embed") return false;
+    if (!this.canInteractWithShapeInReadOnly(shape)) return false;
     return this.editor.getShapeUtil(shape).canEdit(shape);
   }
   startEditingShape(shape, info, shouldSelectAll) {
-    if (this.editor.isShapeOrAncestorLocked(shape) && shape.type !== "embed")
-      return;
+    if (this.editor.isShapeOrAncestorLocked(shape) && shape.type !== "embed") return;
     this.editor.mark("editing shape");
     startEditingShapeWithLabel(this.editor, shape, shouldSelectAll);
     this.parent.transition("editing_shape", info);
   }
   isOverArrowLabelTest(shape) {
-    if (!shape)
-      return false;
+    if (!shape) return false;
     const pointInShapeSpace = this.editor.getPointInShapeSpace(
       shape,
       this.editor.inputs.currentPagePoint
@@ -72718,8 +71766,7 @@ var Idle12 = class extends StateNode {
     return false;
   }
   handleDoubleClickOnCanvas(info) {
-    if (this.editor.getInstanceState().isReadonly)
-      return;
+    if (this.editor.getInstanceState().isReadonly) return;
     this.editor.mark("creating text shape");
     const id = createShapeId();
     const { x, y } = this.editor.inputs.currentPagePoint;
@@ -72736,8 +71783,7 @@ var Idle12 = class extends StateNode {
       }
     ]);
     const shape = this.editor.getShape(id);
-    if (!shape)
-      return;
+    if (!shape) return;
     const util = this.editor.getShapeUtil(shape);
     if (this.editor.getInstanceState().isReadonly) {
       if (!util.canEditInReadOnly(shape)) {
@@ -72756,18 +71802,12 @@ var Idle12 = class extends StateNode {
     } = this;
     const shiftKey = keys.has("ShiftLeft");
     const delta = new Vec(0, 0);
-    if (keys.has("ArrowLeft"))
-      delta.x -= 1;
-    if (keys.has("ArrowRight"))
-      delta.x += 1;
-    if (keys.has("ArrowUp"))
-      delta.y -= 1;
-    if (keys.has("ArrowDown"))
-      delta.y += 1;
-    if (delta.equals(new Vec(0, 0)))
-      return;
-    if (!ephemeral)
-      this.editor.mark("nudge shapes");
+    if (keys.has("ArrowLeft")) delta.x -= 1;
+    if (keys.has("ArrowRight")) delta.x += 1;
+    if (keys.has("ArrowUp")) delta.y -= 1;
+    if (keys.has("ArrowDown")) delta.y += 1;
+    if (delta.equals(new Vec(0, 0))) return;
+    if (!ephemeral) this.editor.mark("nudge shapes");
     const { gridSize } = this.editor.getDocumentSettings();
     const step = this.editor.getInstanceState().isGridMode ? shiftKey ? gridSize * GRID_INCREMENT : gridSize : shiftKey ? MAJOR_NUDGE_FACTOR : MINOR_NUDGE_FACTOR;
     const selectedShapeIds = this.editor.getSelectedShapeIds();
@@ -72775,11 +71815,9 @@ var Idle12 = class extends StateNode {
     kickoutOccludedShapes(this.editor, selectedShapeIds);
   }
   canInteractWithShapeInReadOnly(shape) {
-    if (!this.editor.getInstanceState().isReadonly)
-      return true;
+    if (!this.editor.getInstanceState().isReadonly) return true;
     const util = this.editor.getShapeUtil(shape);
-    if (util.canEditInReadOnly(shape))
-      return true;
+    if (util.canEditInReadOnly(shape)) return true;
     return false;
   }
 };
@@ -72789,11 +71827,9 @@ var MINOR_NUDGE_FACTOR = 1;
 var GRID_INCREMENT = 5;
 function isPointInRotatedSelectionBounds(editor, point) {
   const selectionBounds = editor.getSelectionRotatedPageBounds();
-  if (!selectionBounds)
-    return false;
+  if (!selectionBounds) return false;
   const selectionRotation = editor.getSelectionRotation();
-  if (!selectionRotation)
-    return selectionBounds.containsPoint(point);
+  if (!selectionRotation) return selectionBounds.containsPoint(point);
   return pointInPolygon(
     point,
     selectionBounds.corners.map((c2) => Vec.RotWith(c2, selectionBounds.point, selectionRotation))
@@ -72836,11 +71872,9 @@ var PointingArrowLabel = class extends StateNode {
     __publicField(this, "_labelDragOffset", new Vec(0, 0));
     __publicField(this, "onPointerMove", () => {
       const { isDragging } = this.editor.inputs;
-      if (!isDragging)
-        return;
+      if (!isDragging) return;
       const shape = this.editor.getShape(this.shapeId);
-      if (!shape)
-        return;
+      if (!shape) return;
       const info = getArrowInfo(this.editor, shape);
       const groupGeometry = this.editor.getShapeGeometry(shape);
       const bodyGeometry = groupGeometry.children[0];
@@ -72872,8 +71906,7 @@ var PointingArrowLabel = class extends StateNode {
     });
     __publicField(this, "onPointerUp", () => {
       const shape = this.editor.getShape(this.shapeId);
-      if (!shape)
-        return;
+      if (!shape) return;
       if (this.didDrag || !this.wasAlreadySelected) {
         this.complete();
       } else {
@@ -73005,8 +72038,7 @@ var PointingHandle = class extends StateNode {
   }
   startDraggingHandle() {
     const { editor } = this;
-    if (editor.getInstanceState().isReadonly)
-      return;
+    if (editor.getInstanceState().isReadonly) return;
     const { shape, handle } = this.info;
     if (editor.isShapeOfType(shape, "note")) {
       const nextNote = getNoteForPit(editor, shape, handle, true);
@@ -73098,8 +72130,7 @@ var PointingRotateHandle = class extends StateNode {
     });
   }
   startRotating() {
-    if (this.editor.getInstanceState().isReadonly)
-      return;
+    if (this.editor.getInstanceState().isReadonly) return;
     this.parent.transition("rotating", this.info);
   }
   complete() {
@@ -73140,7 +72171,7 @@ var PointingSelection = class extends StateNode {
       this.startTranslating(info);
     });
     __publicField(this, "onDoubleClick", (info) => {
-      var _a2, _b2;
+      var _a3, _b2;
       const hoveredShape = this.editor.getHoveredShape();
       const hitShape = hoveredShape && !this.editor.isShapeOfType(hoveredShape, "group") ? hoveredShape : this.editor.getShapeAtPoint(this.editor.inputs.currentPagePoint, {
         hitInside: true,
@@ -73149,7 +72180,7 @@ var PointingSelection = class extends StateNode {
       });
       if (hitShape) {
         this.parent.transition("idle");
-        (_b2 = (_a2 = this.parent).onDoubleClick) == null ? void 0 : _b2.call(_a2, {
+        (_b2 = (_a3 = this.parent).onDoubleClick) == null ? void 0 : _b2.call(_a3, {
           ...info,
           target: "shape",
           shape: this.editor.getShape(hitShape)
@@ -73168,8 +72199,7 @@ var PointingSelection = class extends StateNode {
     });
   }
   startTranslating(info) {
-    if (this.editor.getInstanceState().isReadonly)
-      return;
+    if (this.editor.getInstanceState().isReadonly) return;
     this.parent.transition("translating", info);
   }
   cancel() {
@@ -73225,18 +72255,18 @@ var PointingShape = class extends StateNode {
       }
     });
     __publicField(this, "onPointerUp", (info) => {
-      var _a2, _b2;
+      var _a3, _b2;
       const selectedShapeIds = this.editor.getSelectedShapeIds();
       const focusedGroupId = this.editor.getFocusedGroupId();
       const zoomLevel = this.editor.getZoomLevel();
       const {
         inputs: { currentPagePoint, shiftKey }
       } = this.editor;
-      const hitShape = (_a2 = this.editor.getShapeAtPoint(currentPagePoint, {
+      const hitShape = (_a3 = this.editor.getShapeAtPoint(currentPagePoint, {
         margin: this.editor.options.hitTestMargin / zoomLevel,
         hitInside: true,
         renderingOnly: true
-      })) != null ? _a2 : this.hitShape;
+      })) != null ? _a3 : this.hitShape;
       const selectingShape = hitShape ? this.editor.getOutermostSelectableShape(hitShape) : this.hitShapeForPointerUp;
       if (selectingShape) {
         const util = this.editor.getShapeUtil(selectingShape);
@@ -73345,8 +72375,7 @@ var PointingShape = class extends StateNode {
     });
   }
   startTranslating(info) {
-    if (this.editor.getInstanceState().isReadonly)
-      return;
+    if (this.editor.getInstanceState().isReadonly) return;
     this.editor.focus();
     this.parent.transition("translating", info);
   }
@@ -73488,11 +72517,11 @@ var Resizing = class extends StateNode {
     }
   }
   complete() {
-    var _a2, _b2;
+    var _a3, _b2;
     kickoutOccludedShapes(this.editor, this.snapshot.selectedShapeIds);
     this.handleResizeEnd();
     if (this.info.isCreating && this.info.onCreate) {
-      (_b2 = (_a2 = this.info).onCreate) == null ? void 0 : _b2.call(_a2, this.editor.getOnlySelectedShape());
+      (_b2 = (_a3 = this.info).onCreate) == null ? void 0 : _b2.call(_a3, this.editor.getOnlySelectedShape());
       return;
     }
     if (this.editor.getInstanceState().isToolLocked && this.info.onInteractionEnd) {
@@ -73505,9 +72534,9 @@ var Resizing = class extends StateNode {
     const { shapeSnapshots } = this.snapshot;
     const changes = [];
     shapeSnapshots.forEach(({ shape }) => {
-      var _a2;
+      var _a3;
       const util = this.editor.getShapeUtil(shape);
-      const change = (_a2 = util.onResizeStart) == null ? void 0 : _a2.call(util, shape);
+      const change = (_a3 = util.onResizeStart) == null ? void 0 : _a3.call(util, shape);
       if (change) {
         changes.push(change);
       }
@@ -73520,10 +72549,10 @@ var Resizing = class extends StateNode {
     const { shapeSnapshots } = this.snapshot;
     const changes = [];
     shapeSnapshots.forEach(({ shape }) => {
-      var _a2;
+      var _a3;
       const current = this.editor.getShape(shape.id);
       const util = this.editor.getShapeUtil(shape);
-      const change = (_a2 = util.onResizeEnd) == null ? void 0 : _a2.call(util, shape, current);
+      const change = (_a3 = util.onResizeEnd) == null ? void 0 : _a3.call(util, shape, current);
       if (change) {
         changes.push(change);
       }
@@ -73583,10 +72612,8 @@ var Resizing = class extends StateNode {
       -selectionRotation
     );
     const scale = Vec.DivV(distanceFromScaleOriginNow, distanceFromScaleOriginAtStart);
-    if (!Number.isFinite(scale.x))
-      scale.x = 1;
-    if (!Number.isFinite(scale.y))
-      scale.y = 1;
+    if (!Number.isFinite(scale.x)) scale.x = 1;
+    if (!Number.isFinite(scale.y)) scale.y = 1;
     const isXLocked = dragHandle === "top" || dragHandle === "bottom";
     const isYLocked = dragHandle === "left" || dragHandle === "right";
     if (isAspectRatioLocked) {
@@ -73632,12 +72659,10 @@ var Resizing = class extends StateNode {
     if (this.editor.inputs.ctrlKey) {
       this.didHoldCommand = true;
       for (const { id, children } of frames) {
-        if (!children.length)
-          continue;
+        if (!children.length) continue;
         const initial = shapeSnapshots.get(id).shape;
         const current = this.editor.getShape(id);
-        if (!(initial && current))
-          continue;
+        if (!(initial && current)) continue;
         const dx = current.x - initial.x;
         const dy = current.y - initial.y;
         const delta = new Vec(dx, dy).rot(-initial.rotation);
@@ -73655,8 +72680,7 @@ var Resizing = class extends StateNode {
     } else if (this.didHoldCommand) {
       this.didHoldCommand = false;
       for (const { children } of frames) {
-        if (!children.length)
-          continue;
+        if (!children.length) continue;
         for (const child of children) {
           this.editor.updateShape({
             id: child.id,
@@ -73730,8 +72754,7 @@ var Rotating = class extends StateNode {
       this.markId = "rotate start";
       this.editor.mark(this.markId);
       const snapshot = getRotationSnapshot({ editor: this.editor });
-      if (!snapshot)
-        return this.parent.transition("idle", this.info);
+      if (!snapshot) return this.parent.transition("idle", this.info);
       this.snapshot = snapshot;
       const newSelectionRotation = this._getRotationFromPointerPosition({
         snapToNearestDegree: false
@@ -73819,8 +72842,7 @@ var Rotating = class extends StateNode {
       inputs: { shiftKey, currentPagePoint }
     } = this.editor;
     const { initialCursorAngle, initialSelectionRotation } = this.snapshot;
-    if (!selectionBounds)
-      return initialSelectionRotation;
+    if (!selectionBounds) return initialSelectionRotation;
     const selectionPageCenter = selectionBounds.center.clone().rotWith(selectionBounds.point, selectionRotation);
     const preSnapRotationDelta = selectionPageCenter.angle(currentPagePoint) - initialCursorAngle;
     let newSelectionRotation = initialSelectionRotation + preSnapRotationDelta;
@@ -73919,8 +72941,7 @@ var ScribbleBrushing = class extends StateNode {
         continue;
       }
       const pageTransform = editor.getShapePageTransform(shape);
-      if (!geometry || !pageTransform)
-        continue;
+      if (!geometry || !pageTransform) continue;
       const pt = pageTransform.clone().invert();
       A = pt.applyToPoint(previousPagePoint);
       B = pt.applyToPoint(currentPagePoint);
@@ -73939,8 +72960,7 @@ var ScribbleBrushing = class extends StateNode {
           );
           if (intersection !== null) {
             const isInMask = pointInPolygon(currentPagePoint, pageMask);
-            if (!isInMask)
-              continue;
+            if (!isInMask) continue;
           }
         }
         newlySelectedShapeIds.add(outermostShape.id);
@@ -73980,12 +73000,12 @@ var DragAndDropManager = class {
     editor.disposables.add(this.dispose);
   }
   updateDroppingNode(movingShapes, cb) {
-    var _a2, _b2;
+    var _a3, _b2;
     if (this.first) {
       this.editor.setHintingShapes(
         movingShapes.map((s) => this.editor.findShapeAncestor(s, (v) => v.type !== "group")).filter((s) => s)
       );
-      this.prevDroppingShapeId = (_b2 = (_a2 = this.editor.getDroppingOverShape(this.editor.inputs.originPagePoint, movingShapes)) == null ? void 0 : _a2.id) != null ? _b2 : null;
+      this.prevDroppingShapeId = (_b2 = (_a3 = this.editor.getDroppingOverShape(this.editor.inputs.originPagePoint, movingShapes)) == null ? void 0 : _a3.id) != null ? _b2 : null;
       this.first = false;
     }
     if (this.droppingNodeTimer === null) {
@@ -74004,9 +73024,9 @@ var DragAndDropManager = class {
     }, duration);
   }
   handleDrag(point, movingShapes, cb) {
-    var _a2, _b2, _c, _d, _e, _f;
+    var _a3, _b2, _c, _d, _e, _f;
     movingShapes = compact(movingShapes.map((shape) => this.editor.getShape(shape.id)));
-    const nextDroppingShapeId = (_b2 = (_a2 = this.editor.getDroppingOverShape(point, movingShapes)) == null ? void 0 : _a2.id) != null ? _b2 : null;
+    const nextDroppingShapeId = (_b2 = (_a3 = this.editor.getDroppingOverShape(point, movingShapes)) == null ? void 0 : _a3.id) != null ? _b2 : null;
     if (nextDroppingShapeId === this.prevDroppingShapeId) {
       this.hintParents(movingShapes);
       return;
@@ -74028,8 +73048,7 @@ var DragAndDropManager = class {
     const shapesGroupedByAncestor = /* @__PURE__ */ new Map();
     for (const shape of movingShapes) {
       const ancestor = this.editor.findShapeAncestor(shape, (v) => v.type !== "group");
-      if (!ancestor)
-        continue;
+      if (!ancestor) continue;
       if (!shapesGroupedByAncestor.has(ancestor.id)) {
         shapesGroupedByAncestor.set(ancestor.id, []);
       }
@@ -74038,8 +73057,7 @@ var DragAndDropManager = class {
     const hintingShapes = [];
     for (const [ancestorId, shapeIds] of shapesGroupedByAncestor) {
       const ancestor = this.editor.getShape(ancestorId);
-      if (!ancestor)
-        continue;
+      if (!ancestor) continue;
       if (getOccludedChildren(this.editor, ancestor).length < shapeIds.length) {
         hintingShapes.push(ancestor.id);
       }
@@ -74047,14 +73065,13 @@ var DragAndDropManager = class {
     this.editor.setHintingShapes(hintingShapes);
   }
   dropShapes(shapes) {
-    var _a2, _b2;
+    var _a3, _b2;
     const { prevDroppingShapeId } = this;
     this.handleDrag(this.editor.inputs.currentPagePoint, shapes);
     if (prevDroppingShapeId) {
       const shape = this.editor.getShape(prevDroppingShapeId);
-      if (!shape)
-        return;
-      (_b2 = (_a2 = this.editor.getShapeUtil(shape)).onDropShapesOver) == null ? void 0 : _b2.call(_a2, shape, shapes);
+      if (!shape) return;
+      (_b2 = (_a3 = this.editor.getShapeUtil(shape)).onDropShapesOver) == null ? void 0 : _b2.call(_a3, shape, shapes);
     }
   }
   clear() {
@@ -74081,9 +73098,9 @@ var Translating = class extends StateNode {
     __publicField(this, "onCreate", () => void 0);
     __publicField(this, "dragAndDropManager", new DragAndDropManager(this.editor));
     __publicField(this, "onEnter", (info) => {
-      var _a2;
+      var _a3;
       const { isCreating = false, onCreate = () => void 0 } = info;
-      if (!((_a2 = this.editor.getSelectedShapeIds()) == null ? void 0 : _a2.length)) {
+      if (!((_a3 = this.editor.getSelectedShapeIds()) == null ? void 0 : _a3.length)) {
         this.parent.transition("idle");
         return;
       }
@@ -74161,8 +73178,7 @@ var Translating = class extends StateNode {
       const movingShapes = [];
       shapeSnapshots.forEach((shapeSnapshot) => {
         const shape = editor.getShape(shapeSnapshot.shape.id);
-        if (!shape)
-          return null;
+        if (!shape) return null;
         movingShapes.push(shape);
         const parentTransform = isPageId(shape.parentId) ? null : Mat.Inverse(editor.getShapePageTransform(shape.parentId));
         shapeSnapshot.parentTransform = parentTransform;
@@ -74170,8 +73186,7 @@ var Translating = class extends StateNode {
     });
   }
   startCloning() {
-    if (this.isCreating)
-      return;
+    if (this.isCreating) return;
     this.isCloning = true;
     this.reset();
     this.markId = "translating";
@@ -74193,7 +73208,7 @@ var Translating = class extends StateNode {
     this.editor.bailToMark(this.markId);
   }
   complete() {
-    var _a2;
+    var _a3;
     this.updateShapes();
     this.dragAndDropManager.dropShapes(this.snapshot.movingShapes);
     kickoutOccludedShapes(
@@ -74205,7 +73220,7 @@ var Translating = class extends StateNode {
       this.editor.setCurrentTool(this.info.onInteractionEnd);
     } else {
       if (this.isCreating) {
-        (_a2 = this.onCreate) == null ? void 0 : _a2.call(this, this.editor.getOnlySelectedShape());
+        (_a3 = this.onCreate) == null ? void 0 : _a3.call(this, this.editor.getOnlySelectedShape());
       } else {
         this.parent.transition("idle");
       }
@@ -74223,9 +73238,9 @@ var Translating = class extends StateNode {
     const { movingShapes } = this.snapshot;
     const changes = [];
     movingShapes.forEach((shape) => {
-      var _a2;
+      var _a3;
       const util = this.editor.getShapeUtil(shape);
-      const change = (_a2 = util.onTranslateStart) == null ? void 0 : _a2.call(util, shape);
+      const change = (_a3 = util.onTranslateStart) == null ? void 0 : _a3.call(util, shape);
       if (change) {
         changes.push(change);
       }
@@ -74253,10 +73268,10 @@ var Translating = class extends StateNode {
     }
     const changes = [];
     movingShapes.forEach((shape) => {
-      var _a2;
+      var _a3;
       const current = this.editor.getShape(shape.id);
       const util = this.editor.getShapeUtil(shape);
-      const change = (_a2 = util.onTranslateEnd) == null ? void 0 : _a2.call(util, shape, current);
+      const change = (_a3 = util.onTranslateEnd) == null ? void 0 : _a3.call(util, shape, current);
       if (change) {
         changes.push(change);
       }
@@ -74275,10 +73290,10 @@ var Translating = class extends StateNode {
     const { movingShapes } = snapshot;
     const changes = [];
     movingShapes.forEach((shape) => {
-      var _a2;
+      var _a3;
       const current = this.editor.getShape(shape.id);
       const util = this.editor.getShapeUtil(shape);
-      const change = (_a2 = util.onTranslate) == null ? void 0 : _a2.call(util, shape, current);
+      const change = (_a3 = util.onTranslate) == null ? void 0 : _a3.call(util, shape, current);
       if (change) {
         changes.push(change);
       }
@@ -74290,15 +73305,14 @@ var Translating = class extends StateNode {
 };
 __publicField(Translating, "id", "translating");
 function getTranslatingSnapshot(editor) {
-  var _a2, _b2;
+  var _a3, _b2;
   const movingShapes = [];
   const pagePoints = [];
   const selectedShapeIds = editor.getSelectedShapeIds();
   const shapeSnapshots = compact(
     selectedShapeIds.map((id) => {
       const shape = editor.getShape(id);
-      if (!shape)
-        return null;
+      if (!shape) return null;
       movingShapes.push(shape);
       const pageTransform = editor.getShapePageTransform(id);
       const pagePoint = pageTransform.point();
@@ -74338,10 +73352,10 @@ function getTranslatingSnapshot(editor) {
     noteSnapshot = allHoveredNotes[0];
   } else {
     const allShapesSorted = editor.getCurrentPageShapesSorted();
-    noteSnapshot = (_a2 = allHoveredNotes.map((s) => ({
+    noteSnapshot = (_a3 = allHoveredNotes.map((s) => ({
       snapshot: s,
       index: allShapesSorted.findIndex((shape) => shape.id === s.shape.id)
-    })).sort((a, b) => b.index - a.index)[0]) == null ? void 0 : _a2.snapshot;
+    })).sort((a, b) => b.index - a.index)[0]) == null ? void 0 : _a3.snapshot;
   }
   if (noteSnapshot) {
     noteAdjacentPositions = getAvailableNoteAdjacentPositions(
@@ -74440,8 +73454,7 @@ var SelectTool = class extends StateNode {
     __publicField(this, "cleanUpDuplicateProps", () => {
       const selectedShapeIds = this.editor.getSelectedShapeIds();
       const instance = this.editor.getInstanceState();
-      if (!instance.duplicateProps)
-        return;
+      if (!instance.duplicateProps) return;
       const duplicatedShapes = new Set(instance.duplicateProps.shapeIds);
       if (selectedShapeIds.length === duplicatedShapes.size && selectedShapeIds.every((shapeId) => duplicatedShapes.has(shapeId))) {
         return;
@@ -74463,8 +73476,8 @@ var SelectTool = class extends StateNode {
       });
     });
     __publicField(this, "onExit", () => {
-      var _a2;
-      (_a2 = this.reactor) == null ? void 0 : _a2.call(this);
+      var _a3;
+      (_a3 = this.reactor) == null ? void 0 : _a3.call(this);
       if (this.editor.getCurrentPageState().editingShapeId) {
         this.editor.setEditingShape(null);
       }
@@ -74697,10 +73710,8 @@ function createContext22(rootComponentName, defaultContext) {
   }
   function useContext22(consumerName) {
     const context = React18.useContext(Context2);
-    if (context)
-      return context;
-    if (defaultContext !== void 0)
-      return defaultContext;
+    if (context) return context;
+    if (defaultContext !== void 0) return defaultContext;
     throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
   }
   Provider.displayName = rootComponentName + "Provider";
@@ -74721,10 +73732,8 @@ function createContextScope(scopeName, createContextScopeDeps = []) {
     function useContext22(consumerName, scope) {
       const Context2 = (scope == null ? void 0 : scope[scopeName][index2]) || BaseContext;
       const context = React18.useContext(Context2);
-      if (context)
-        return context;
-      if (defaultContext !== void 0)
-        return defaultContext;
+      if (context) return context;
+      if (defaultContext !== void 0) return defaultContext;
       throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
     }
     Provider.displayName = rootComponentName + "Provider";
@@ -74747,8 +73756,7 @@ function createContextScope(scopeName, createContextScopeDeps = []) {
 }
 function composeContextScopes(...scopes) {
   const baseScope = scopes[0];
-  if (scopes.length === 1)
-    return baseScope;
+  if (scopes.length === 1) return baseScope;
   const createScope = () => {
     const scopeHooks = scopes.map((createScope2) => ({
       useScope: createScope2(),
@@ -74781,8 +73789,7 @@ var count = 0;
 function useId2(deterministicId) {
   const [id, setId] = React20.useState(useReactId());
   useLayoutEffect22(() => {
-    if (!deterministicId)
-      setId((reactId) => reactId != null ? reactId : String(count++));
+    if (!deterministicId) setId((reactId) => reactId != null ? reactId : String(count++));
   }, [deterministicId]);
   return deterministicId || (id ? `radix-${id}` : "");
 }
@@ -74798,8 +73805,8 @@ function useCallbackRef(callback) {
     callbackRef.current = callback;
   });
   return React21.useMemo(() => (...args) => {
-    var _a2;
-    return (_a2 = callbackRef.current) == null ? void 0 : _a2.call(callbackRef, ...args);
+    var _a3;
+    return (_a3 = callbackRef.current) == null ? void 0 : _a3.call(callbackRef, ...args);
   }, []);
 }
 
@@ -74819,8 +73826,7 @@ function useControllableState({
       if (isControlled) {
         const setter = nextValue;
         const value2 = typeof nextValue === "function" ? setter(prop) : nextValue;
-        if (value2 !== prop)
-          handleChange(value2);
+        if (value2 !== prop) handleChange(value2);
       } else {
         setUncontrolledProp(nextValue);
       }
@@ -74864,8 +73870,7 @@ var Slot = React23.forwardRef((props, forwardedRef) => {
     const newElement = slottable.props.children;
     const newChildren = childrenArray.map((child) => {
       if (child === slottable) {
-        if (React23.Children.count(newElement) > 1)
-          return React23.Children.only(null);
+        if (React23.Children.count(newElement) > 1) return React23.Children.only(null);
         return React23.isValidElement(newElement) ? newElement.props.children : null;
       } else {
         return child;
@@ -74919,8 +73924,8 @@ function mergeProps(slotProps, childProps) {
   return { ...slotProps, ...overrideProps };
 }
 function getElementRef(element) {
-  var _a2, _b2;
-  let getter = (_a2 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a2.get;
+  var _a3, _b2;
+  let getter = (_a3 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a3.get;
   let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
   if (mayWarn) {
     return element.ref;
@@ -74966,8 +73971,7 @@ var Primitive = NODES.reduce((primitive, node) => {
   return { ...primitive, [node]: Node2 };
 }, {});
 function dispatchDiscreteCustomEvent(target, event) {
-  if (target)
-    ReactDOM.flushSync(() => target.dispatchEvent(event));
+  if (target) ReactDOM.flushSync(() => target.dispatchEvent(event));
 }
 
 // node_modules/@radix-ui/react-use-escape-keydown/dist/index.mjs
@@ -74987,7 +73991,6 @@ function useEscapeKeydown(onEscapeKeyDownProp, ownerDocument = globalThis == nul
 
 // node_modules/@radix-ui/react-dismissable-layer/dist/index.mjs
 var import_jsx_runtime69 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var DISMISSABLE_LAYER_NAME = "DismissableLayer";
 var CONTEXT_UPDATE = "dismissableLayer.update";
 var POINTER_DOWN_OUTSIDE = "dismissableLayer.pointerDownOutside";
@@ -75000,7 +74003,7 @@ var DismissableLayerContext = React26.createContext({
 });
 var DismissableLayer = React26.forwardRef(
   (props, forwardedRef) => {
-    var _a2;
+    var _a3;
     const {
       disableOutsidePointerEvents = false,
       onEscapeKeyDown,
@@ -75012,7 +74015,7 @@ var DismissableLayer = React26.forwardRef(
     } = props;
     const context = React26.useContext(DismissableLayerContext);
     const [node, setNode] = React26.useState(null);
-    const ownerDocument = (_a2 = node == null ? void 0 : node.ownerDocument) != null ? _a2 : globalThis == null ? void 0 : globalThis.document;
+    const ownerDocument = (_a3 = node == null ? void 0 : node.ownerDocument) != null ? _a3 : globalThis == null ? void 0 : globalThis.document;
     const [, force] = React26.useState({});
     const composedRefs = useComposedRefs(forwardedRef, (node2) => setNode(node2));
     const layers = Array.from(context.layers);
@@ -75024,27 +74027,22 @@ var DismissableLayer = React26.forwardRef(
     const pointerDownOutside = usePointerDownOutside((event) => {
       const target = event.target;
       const isPointerDownOnBranch = [...context.branches].some((branch) => branch.contains(target));
-      if (!isPointerEventsEnabled || isPointerDownOnBranch)
-        return;
+      if (!isPointerEventsEnabled || isPointerDownOnBranch) return;
       onPointerDownOutside == null ? void 0 : onPointerDownOutside(event);
       onInteractOutside == null ? void 0 : onInteractOutside(event);
-      if (!event.defaultPrevented)
-        onDismiss == null ? void 0 : onDismiss();
+      if (!event.defaultPrevented) onDismiss == null ? void 0 : onDismiss();
     }, ownerDocument);
     const focusOutside = useFocusOutside((event) => {
       const target = event.target;
       const isFocusInBranch = [...context.branches].some((branch) => branch.contains(target));
-      if (isFocusInBranch)
-        return;
+      if (isFocusInBranch) return;
       onFocusOutside == null ? void 0 : onFocusOutside(event);
       onInteractOutside == null ? void 0 : onInteractOutside(event);
-      if (!event.defaultPrevented)
-        onDismiss == null ? void 0 : onDismiss();
+      if (!event.defaultPrevented) onDismiss == null ? void 0 : onDismiss();
     }, ownerDocument);
     useEscapeKeydown((event) => {
       const isHighestLayer = index2 === context.layers.size - 1;
-      if (!isHighestLayer)
-        return;
+      if (!isHighestLayer) return;
       onEscapeKeyDown == null ? void 0 : onEscapeKeyDown(event);
       if (!event.defaultPrevented && onDismiss) {
         event.preventDefault();
@@ -75052,8 +74050,7 @@ var DismissableLayer = React26.forwardRef(
       }
     }, ownerDocument);
     React26.useEffect(() => {
-      if (!node)
-        return;
+      if (!node) return;
       if (disableOutsidePointerEvents) {
         if (context.layersWithOutsidePointerEventsDisabled.size === 0) {
           originalBodyPointerEvents = ownerDocument.body.style.pointerEvents;
@@ -75071,8 +74068,7 @@ var DismissableLayer = React26.forwardRef(
     }, [node, ownerDocument, disableOutsidePointerEvents, context]);
     React26.useEffect(() => {
       return () => {
-        if (!node)
-          return;
+        if (!node) return;
         context.layers.delete(node);
         context.layersWithOutsidePointerEventsDisabled.delete(node);
         dispatchUpdate();
@@ -75191,8 +74187,7 @@ function dispatchUpdate() {
 function handleAndDispatchCustomEvent(name, handler, detail, { discrete }) {
   const target = detail.originalEvent.target;
   const event = new CustomEvent(name, { bubbles: false, cancelable: true, detail });
-  if (handler)
-    target.addEventListener(name, handler, { once: true });
+  if (handler) target.addEventListener(name, handler, { once: true });
   if (discrete) {
     dispatchDiscreteCustomEvent(target, event);
   } else {
@@ -75205,7 +74200,6 @@ var Branch = DismissableLayerBranch;
 // node_modules/@radix-ui/react-focus-scope/dist/index.mjs
 var React27 = __toESM(require_react(), 1);
 var import_jsx_runtime70 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var AUTOFOCUS_ON_MOUNT = "focusScope.autoFocusOnMount";
 var AUTOFOCUS_ON_UNMOUNT = "focusScope.autoFocusOnUnmount";
 var EVENT_OPTIONS = { bubbles: false, cancelable: true };
@@ -75235,8 +74229,7 @@ var FocusScope = React27.forwardRef((props, forwardedRef) => {
   React27.useEffect(() => {
     if (trapped) {
       let handleFocusIn2 = function(event) {
-        if (focusScope.paused || !container)
-          return;
+        if (focusScope.paused || !container) return;
         const target = event.target;
         if (container.contains(target)) {
           lastFocusedElementRef.current = target;
@@ -75244,29 +74237,24 @@ var FocusScope = React27.forwardRef((props, forwardedRef) => {
           focus(lastFocusedElementRef.current, { select: true });
         }
       }, handleFocusOut2 = function(event) {
-        if (focusScope.paused || !container)
-          return;
+        if (focusScope.paused || !container) return;
         const relatedTarget = event.relatedTarget;
-        if (relatedTarget === null)
-          return;
+        if (relatedTarget === null) return;
         if (!container.contains(relatedTarget)) {
           focus(lastFocusedElementRef.current, { select: true });
         }
       }, handleMutations2 = function(mutations) {
         const focusedElement = document.activeElement;
-        if (focusedElement !== document.body)
-          return;
+        if (focusedElement !== document.body) return;
         for (const mutation of mutations) {
-          if (mutation.removedNodes.length > 0)
-            focus(container);
+          if (mutation.removedNodes.length > 0) focus(container);
         }
       };
       var handleFocusIn = handleFocusIn2, handleFocusOut = handleFocusOut2, handleMutations = handleMutations2;
       document.addEventListener("focusin", handleFocusIn2);
       document.addEventListener("focusout", handleFocusOut2);
       const mutationObserver = new MutationObserver(handleMutations2);
-      if (container)
-        mutationObserver.observe(container, { childList: true, subtree: true });
+      if (container) mutationObserver.observe(container, { childList: true, subtree: true });
       return () => {
         document.removeEventListener("focusin", handleFocusIn2);
         document.removeEventListener("focusout", handleFocusOut2);
@@ -75307,10 +74295,8 @@ var FocusScope = React27.forwardRef((props, forwardedRef) => {
   }, [container, onMountAutoFocus, onUnmountAutoFocus, focusScope]);
   const handleKeyDown = React27.useCallback(
     (event) => {
-      if (!loop && !trapped)
-        return;
-      if (focusScope.paused)
-        return;
+      if (!loop && !trapped) return;
+      if (focusScope.paused) return;
       const isTabKey = event.key === "Tab" && !event.altKey && !event.ctrlKey && !event.metaKey;
       const focusedElement = document.activeElement;
       if (isTabKey && focusedElement) {
@@ -75318,17 +74304,14 @@ var FocusScope = React27.forwardRef((props, forwardedRef) => {
         const [first, last3] = getTabbableEdges(container2);
         const hasTabbableElementsInside = first && last3;
         if (!hasTabbableElementsInside) {
-          if (focusedElement === container2)
-            event.preventDefault();
+          if (focusedElement === container2) event.preventDefault();
         } else {
           if (!event.shiftKey && focusedElement === last3) {
             event.preventDefault();
-            if (loop)
-              focus(first, { select: true });
+            if (loop) focus(first, { select: true });
           } else if (event.shiftKey && focusedElement === first) {
             event.preventDefault();
-            if (loop)
-              focus(last3, { select: true });
+            if (loop) focus(last3, { select: true });
           }
         }
       }
@@ -75342,8 +74325,7 @@ function focusFirst(candidates, { select = false } = {}) {
   const previouslyFocusedElement = document.activeElement;
   for (const candidate of candidates) {
     focus(candidate, { select });
-    if (document.activeElement !== previouslyFocusedElement)
-      return;
+    if (document.activeElement !== previouslyFocusedElement) return;
   }
 }
 function getTabbableEdges(container) {
@@ -75357,29 +74339,23 @@ function getTabbableCandidates(container) {
   const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, {
     acceptNode: (node) => {
       const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
-      if (node.disabled || node.hidden || isHiddenInput)
-        return NodeFilter.FILTER_SKIP;
+      if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
       return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
     }
   });
-  while (walker.nextNode())
-    nodes.push(walker.currentNode);
+  while (walker.nextNode()) nodes.push(walker.currentNode);
   return nodes;
 }
 function findVisible(elements, container) {
   for (const element of elements) {
-    if (!isHidden(element, { upTo: container }))
-      return element;
+    if (!isHidden(element, { upTo: container })) return element;
   }
 }
 function isHidden(node, { upTo }) {
-  if (getComputedStyle(node).visibility === "hidden")
-    return true;
+  if (getComputedStyle(node).visibility === "hidden") return true;
   while (node) {
-    if (upTo !== void 0 && node === upTo)
-      return false;
-    if (getComputedStyle(node).display === "none")
-      return true;
+    if (upTo !== void 0 && node === upTo) return false;
+    if (getComputedStyle(node).display === "none") return true;
     node = node.parentElement;
   }
   return false;
@@ -75408,9 +74384,9 @@ function createFocusScopesStack() {
       stack2.unshift(focusScope);
     },
     remove(focusScope) {
-      var _a2;
+      var _a3;
       stack2 = arrayRemove(stack2, focusScope);
-      (_a2 = stack2[0]) == null ? void 0 : _a2.resume();
+      (_a3 = stack2[0]) == null ? void 0 : _a3.resume();
     }
   };
 }
@@ -75430,14 +74406,13 @@ function removeLinks(items) {
 var React28 = __toESM(require_react(), 1);
 var import_react_dom2 = __toESM(require_react_dom(), 1);
 var import_jsx_runtime71 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var PORTAL_NAME = "Portal";
 var Portal = React28.forwardRef((props, forwardedRef) => {
-  var _a2;
+  var _a3;
   const { container: containerProp, ...portalProps } = props;
   const [mounted, setMounted] = React28.useState(false);
   useLayoutEffect22(() => setMounted(true), []);
-  const container = containerProp || mounted && ((_a2 = globalThis == null ? void 0 : globalThis.document) == null ? void 0 : _a2.body);
+  const container = containerProp || mounted && ((_a3 = globalThis == null ? void 0 : globalThis.document) == null ? void 0 : _a3.body);
   return container ? import_react_dom2.default.createPortal(/* @__PURE__ */ (0, import_jsx_runtime71.jsx)(Primitive.div, { ...portalProps, ref: forwardedRef }), container) : null;
 });
 Portal.displayName = PORTAL_NAME;
@@ -75446,7 +74421,6 @@ Portal.displayName = PORTAL_NAME;
 var React29 = __toESM(require_react(), 1);
 var ReactDOM3 = __toESM(require_react_dom(), 1);
 var React30 = __toESM(require_react(), 1);
-"use client";
 function useStateMachine(initialState2, machine) {
   return React30.useReducer((state, event) => {
     const nextState = machine[state][event];
@@ -75536,8 +74510,7 @@ function usePresence2(present) {
   return {
     isPresent: ["mounted", "unmountSuspended"].includes(state),
     ref: React29.useCallback((node2) => {
-      if (node2)
-        stylesRef.current = getComputedStyle(node2);
+      if (node2) stylesRef.current = getComputedStyle(node2);
       setNode(node2);
     }, [])
   };
@@ -75546,8 +74519,8 @@ function getAnimationName(styles) {
   return (styles == null ? void 0 : styles.animationName) || "none";
 }
 function getElementRef2(element) {
-  var _a2, _b2;
-  let getter = (_a2 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a2.get;
+  var _a3, _b2;
+  let getter = (_a3 = Object.getOwnPropertyDescriptor(element.props, "ref")) == null ? void 0 : _a3.get;
   let mayWarn = getter && "isReactWarning" in getter && getter.isReactWarning;
   if (mayWarn) {
     return element.ref;
@@ -75562,13 +74535,12 @@ function getElementRef2(element) {
 
 // node_modules/@radix-ui/react-focus-guards/dist/index.mjs
 var React31 = __toESM(require_react(), 1);
-"use client";
 var count2 = 0;
 function useFocusGuards() {
   React31.useEffect(() => {
-    var _a2, _b2;
+    var _a3, _b2;
     const edgeGuards = document.querySelectorAll("[data-radix-focus-guard]");
-    document.body.insertAdjacentElement("afterbegin", (_a2 = edgeGuards[0]) != null ? _a2 : createFocusGuard());
+    document.body.insertAdjacentElement("afterbegin", (_a3 = edgeGuards[0]) != null ? _a3 : createFocusGuard());
     document.body.insertAdjacentElement("beforeend", (_b2 = edgeGuards[1]) != null ? _b2 : createFocusGuard());
     count2++;
     return () => {
@@ -75592,9 +74564,7 @@ var __assign = function() {
   __assign = Object.assign || function __assign2(t3) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
-      for (var p in s)
-        if (Object.prototype.hasOwnProperty.call(s, p))
-          t3[p] = s[p];
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t3[p] = s[p];
     }
     return t3;
   };
@@ -75602,9 +74572,8 @@ var __assign = function() {
 };
 function __rest(s, e2) {
   var t3 = {};
-  for (var p in s)
-    if (Object.prototype.hasOwnProperty.call(s, p) && e2.indexOf(p) < 0)
-      t3[p] = s[p];
+  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e2.indexOf(p) < 0)
+    t3[p] = s[p];
   if (s != null && typeof Object.getOwnPropertySymbols === "function")
     for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
       if (e2.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
@@ -75613,14 +74582,12 @@ function __rest(s, e2) {
   return t3;
 }
 function __spreadArray(to, from, pack) {
-  if (pack || arguments.length === 2)
-    for (var i = 0, l = from.length, ar; i < l; i++) {
-      if (ar || !(i in from)) {
-        if (!ar)
-          ar = Array.prototype.slice.call(from, 0, i);
-        ar[i] = from[i];
-      }
+  if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+    if (ar || !(i in from)) {
+      if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+      ar[i] = from[i];
     }
+  }
   return to.concat(ar || Array.prototype.slice.call(from));
 }
 
@@ -75794,8 +74761,8 @@ function createSidecarMedium(options) {
 
 // node_modules/use-sidecar/dist/es2015/exports.js
 var React33 = __toESM(require_react());
-var SideCar = function(_a2) {
-  var sideCar = _a2.sideCar, rest = __rest(_a2, ["sideCar"]);
+var SideCar = function(_a3) {
+  var sideCar = _a3.sideCar, rest = __rest(_a3, ["sideCar"]);
   if (!sideCar) {
     throw new Error("Sidecar: please provide `sideCar` property to import the right car");
   }
@@ -75820,11 +74787,11 @@ var nothing = function() {
 };
 var RemoveScroll = React34.forwardRef(function(props, parentRef) {
   var ref = React34.useRef(null);
-  var _a2 = React34.useState({
+  var _a3 = React34.useState({
     onScrollCapture: nothing,
     onWheelCapture: nothing,
     onTouchMoveCapture: nothing
-  }), callbacks = _a2[0], setCallbacks = _a2[1];
+  }), callbacks = _a3[0], setCallbacks = _a3[1];
   var forwardProps = props.forwardProps, children = props.children, className = props.className, removeScrollBar = props.removeScrollBar, enabled = props.enabled, shards = props.shards, sideCar = props.sideCar, noIsolation = props.noIsolation, inert = props.inert, allowPinchZoom = props.allowPinchZoom, _b2 = props.as, Container = _b2 === void 0 ? "div" : _b2, gapMode = props.gapMode, rest = __rest(props, ["forwardProps", "children", "className", "removeScrollBar", "enabled", "shards", "sideCar", "noIsolation", "inert", "allowPinchZoom", "as", "gapMode"]);
   var SideCar2 = sideCar;
   var containerRef = useMergeRefs([ref, parentRef]);
@@ -75929,8 +74896,8 @@ var styleHookSingleton = function() {
 // node_modules/react-style-singleton/dist/es2015/component.js
 var styleSingleton = function() {
   var useStyle = styleHookSingleton();
-  var Sheet = function(_a2) {
-    var styles = _a2.styles, dynamic = _a2.dynamic;
+  var Sheet = function(_a3) {
+    var styles = _a3.styles, dynamic = _a3.dynamic;
     useStyle(styles, dynamic);
     return null;
   };
@@ -75975,8 +74942,8 @@ var getGapWidth = function(gapMode) {
 // node_modules/react-remove-scroll-bar/dist/es2015/component.js
 var Style = styleSingleton();
 var lockAttribute = "data-scroll-locked";
-var getStyles = function(_a2, allowRelative, gapMode, important) {
-  var left = _a2.left, top = _a2.top, right = _a2.right, gap = _a2.gap;
+var getStyles = function(_a3, allowRelative, gapMode, important) {
+  var left = _a3.left, top = _a3.top, right = _a3.right, gap = _a3.gap;
   if (gapMode === void 0) {
     gapMode = "margin";
   }
@@ -76003,8 +74970,8 @@ var useLockAttribute = function() {
     };
   }, []);
 };
-var RemoveScrollBar = function(_a2) {
-  var noRelative = _a2.noRelative, noImportant = _a2.noImportant, _b2 = _a2.gapMode, gapMode = _b2 === void 0 ? "margin" : _b2;
+var RemoveScrollBar = function(_a3) {
+  var noRelative = _a3.noRelative, noImportant = _a3.noImportant, _b2 = _a3.gapMode, gapMode = _b2 === void 0 ? "margin" : _b2;
   useLockAttribute();
   var gap = React36.useMemo(function() {
     return getGapWidth(gapMode);
@@ -76058,7 +75025,7 @@ var locationCouldBeScrolled = function(axis, node) {
     }
     var isScrollable = elementCouldBeScrolled(axis, current);
     if (isScrollable) {
-      var _a2 = getScrollVariables(axis, current), s = _a2[1], d = _a2[2];
+      var _a3 = getScrollVariables(axis, current), s = _a3[1], d = _a3[2];
       if (s > d) {
         return true;
       }
@@ -76067,16 +75034,16 @@ var locationCouldBeScrolled = function(axis, node) {
   } while (current && current !== ownerDocument.body);
   return false;
 };
-var getVScrollVariables = function(_a2) {
-  var scrollTop = _a2.scrollTop, scrollHeight = _a2.scrollHeight, clientHeight = _a2.clientHeight;
+var getVScrollVariables = function(_a3) {
+  var scrollTop = _a3.scrollTop, scrollHeight = _a3.scrollHeight, clientHeight = _a3.clientHeight;
   return [
     scrollTop,
     scrollHeight,
     clientHeight
   ];
 };
-var getHScrollVariables = function(_a2) {
-  var scrollLeft = _a2.scrollLeft, scrollWidth = _a2.scrollWidth, clientWidth = _a2.clientWidth;
+var getHScrollVariables = function(_a3) {
+  var scrollLeft = _a3.scrollLeft, scrollWidth = _a3.scrollWidth, clientWidth = _a3.clientWidth;
   return [
     scrollLeft,
     scrollWidth,
@@ -76102,7 +75069,7 @@ var handleScroll = function(axis, endTarget, event, sourceDelta, noOverscroll) {
   var availableScroll = 0;
   var availableScrollTop = 0;
   do {
-    var _a2 = getScrollVariables(axis, target), position = _a2[0], scroll_1 = _a2[1], capacity = _a2[2];
+    var _a3 = getScrollVariables(axis, target), position = _a3[0], scroll_1 = _a3[1], capacity = _a3[2];
     var elementScroll = scroll_1 - capacity - directionFactor * position;
     if (position || elementScroll) {
       if (elementCouldBeScrolled(axis, target)) {
@@ -76426,7 +75393,6 @@ var hideOthers = function(originalTarget, parentNode, markerName) {
 
 // node_modules/@radix-ui/react-dialog/dist/index.mjs
 var import_jsx_runtime72 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var DIALOG_NAME = "Dialog";
 var [createDialogContext, createDialogScope] = createContextScope(DIALOG_NAME);
 var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
@@ -76542,8 +75508,7 @@ var DialogContentModal = React39.forwardRef(
     const composedRefs = useComposedRefs(forwardedRef, context.contentRef, contentRef);
     React39.useEffect(() => {
       const content = contentRef.current;
-      if (content)
-        return hideOthers(content);
+      if (content) return hideOthers(content);
     }, []);
     return /* @__PURE__ */ (0, import_jsx_runtime72.jsx)(
       DialogContentImpl,
@@ -76553,16 +75518,15 @@ var DialogContentModal = React39.forwardRef(
         trapFocus: context.open,
         disableOutsidePointerEvents: true,
         onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
-          var _a2;
+          var _a3;
           event.preventDefault();
-          (_a2 = context.triggerRef.current) == null ? void 0 : _a2.focus();
+          (_a3 = context.triggerRef.current) == null ? void 0 : _a3.focus();
         }),
         onPointerDownOutside: composeEventHandlers(props.onPointerDownOutside, (event) => {
           const originalEvent = event.detail.originalEvent;
           const ctrlLeftClick = originalEvent.button === 0 && originalEvent.ctrlKey === true;
           const isRightClick = originalEvent.button === 2 || ctrlLeftClick;
-          if (isRightClick)
-            event.preventDefault();
+          if (isRightClick) event.preventDefault();
         }),
         onFocusOutside: composeEventHandlers(
           props.onFocusOutside,
@@ -76585,19 +75549,18 @@ var DialogContentNonModal = React39.forwardRef(
         trapFocus: false,
         disableOutsidePointerEvents: false,
         onCloseAutoFocus: (event) => {
-          var _a2, _b2;
-          (_a2 = props.onCloseAutoFocus) == null ? void 0 : _a2.call(props, event);
+          var _a3, _b2;
+          (_a3 = props.onCloseAutoFocus) == null ? void 0 : _a3.call(props, event);
           if (!event.defaultPrevented) {
-            if (!hasInteractedOutsideRef.current)
-              (_b2 = context.triggerRef.current) == null ? void 0 : _b2.focus();
+            if (!hasInteractedOutsideRef.current) (_b2 = context.triggerRef.current) == null ? void 0 : _b2.focus();
             event.preventDefault();
           }
           hasInteractedOutsideRef.current = false;
           hasPointerDownOutsideRef.current = false;
         },
         onInteractOutside: (event) => {
-          var _a2, _b2;
-          (_a2 = props.onInteractOutside) == null ? void 0 : _a2.call(props, event);
+          var _a3, _b2;
+          (_a3 = props.onInteractOutside) == null ? void 0 : _a3.call(props, event);
           if (!event.defaultPrevented) {
             hasInteractedOutsideRef.current = true;
             if (event.detail.originalEvent.type === "pointerdown") {
@@ -76606,8 +75569,7 @@ var DialogContentNonModal = React39.forwardRef(
           }
           const target = event.target;
           const targetIsTrigger = (_b2 = context.triggerRef.current) == null ? void 0 : _b2.contains(target);
-          if (targetIsTrigger)
-            event.preventDefault();
+          if (targetIsTrigger) event.preventDefault();
           if (event.detail.originalEvent.type === "focusin" && hasPointerDownOutsideRef.current) {
             event.preventDefault();
           }
@@ -76708,8 +75670,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${titl
   React39.useEffect(() => {
     if (titleId) {
       const hasTitle = document.getElementById(titleId);
-      if (!hasTitle)
-        console.error(MESSAGE);
+      if (!hasTitle) console.error(MESSAGE);
     }
   }, [MESSAGE, titleId]);
   return null;
@@ -76719,12 +75680,11 @@ var DescriptionWarning = ({ contentRef, descriptionId }) => {
   const descriptionWarningContext = useWarningContext(DESCRIPTION_WARNING_NAME);
   const MESSAGE = `Warning: Missing \`Description\` or \`aria-describedby={undefined}\` for {${descriptionWarningContext.contentName}}.`;
   React39.useEffect(() => {
-    var _a2;
-    const describedById = (_a2 = contentRef.current) == null ? void 0 : _a2.getAttribute("aria-describedby");
+    var _a3;
+    const describedById = (_a3 = contentRef.current) == null ? void 0 : _a3.getAttribute("aria-describedby");
     if (descriptionId && describedById) {
       const hasDescription = document.getElementById(descriptionId);
-      if (!hasDescription)
-        console.warn(MESSAGE);
+      if (!hasDescription) console.warn(MESSAGE);
     }
   }, [MESSAGE, contentRef, descriptionId]);
   return null;
@@ -76762,8 +75722,8 @@ function DialogsProvider({ children }) {
   const [dialogs, setDialogs] = (0, import_react64.useState)([]);
   const addDialog = (0, import_react64.useCallback)(
     (dialog) => {
-      var _a2;
-      const id = (_a2 = dialog.id) != null ? _a2 : uniqueId();
+      var _a3;
+      const id = (_a3 = dialog.id) != null ? _a3 : uniqueId();
       setDialogs((d) => {
         return [...d.filter((m) => m.id !== dialog.id), { ...dialog, id }];
       });
@@ -76796,9 +75756,9 @@ function DialogsProvider({ children }) {
     (id) => {
       setDialogs(
         (d) => d.filter((m) => {
-          var _a2;
+          var _a3;
           if (m.id === id) {
-            (_a2 = m.onClose) == null ? void 0 : _a2.call(m);
+            (_a3 = m.onClose) == null ? void 0 : _a3.call(m);
             return false;
           }
           return true;
@@ -76813,8 +75773,8 @@ function DialogsProvider({ children }) {
   const clearDialogs = (0, import_react64.useCallback)(() => {
     setDialogs((d) => {
       d.forEach((m) => {
-        var _a2;
-        (_a2 = m.onClose) == null ? void 0 : _a2.call(m);
+        var _a3;
+        (_a3 = m.onClose) == null ? void 0 : _a3.call(m);
         trackEvent("close-menu", { source: "dialog", id: m.id });
         editor.deleteOpenMenu(m.id);
       });
@@ -76862,8 +75822,7 @@ var Dialog2 = ({ id, component: ModalContent, onClose }) => {
       dir: "ltr",
       className: "tlui-dialog__overlay",
       onClick: (e2) => {
-        if (e2.target === e2.currentTarget)
-          handleOpenChange(false);
+        if (e2.target === e2.currentTarget) handleOpenChange(false);
       },
       children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(Content, { dir: "ltr", className: "tlui-dialog__content", children: /* @__PURE__ */ (0, import_jsx_runtime75.jsx)(ModalContent, { onClose: () => handleOpenChange(false) }) })
     }
@@ -76882,14 +75841,12 @@ function FollowingIndicator() {
   const followingUserId = useValue("follow", () => editor.getInstanceState().followingUserId, [
     editor
   ]);
-  if (!followingUserId)
-    return null;
+  if (!followingUserId) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)(FollowingIndicatorInner, { userId: followingUserId });
 }
 function FollowingIndicatorInner({ userId }) {
   const presence = usePresence(userId);
-  if (!presence)
-    return null;
+  if (!presence) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime76.jsx)("div", { className: "tlui-following-indicator", style: { borderColor: presence.color } });
 }
 
@@ -76903,7 +75860,6 @@ var ReactDOM4 = __toESM(require_react_dom(), 1);
 // node_modules/@radix-ui/react-collection/dist/index.mjs
 var import_react66 = __toESM(require_react(), 1);
 var import_jsx_runtime77 = __toESM(require_jsx_runtime(), 1);
-"use client";
 function createCollection(name) {
   const PROVIDER_NAME2 = name + "CollectionProvider";
   const [createCollectionContext, createCollectionScope5] = createContextScope(PROVIDER_NAME2);
@@ -76948,8 +75904,7 @@ function createCollection(name) {
     const context = useCollectionContext(name + "CollectionConsumer", scope);
     const getItems = import_react66.default.useCallback(() => {
       const collectionNode = context.collectionRef.current;
-      if (!collectionNode)
-        return [];
+      if (!collectionNode) return [];
       const orderedNodes = Array.from(collectionNode.querySelectorAll(`[${ITEM_DATA_ATTR}]`));
       const items = Array.from(context.itemMap.values());
       const orderedItems = items.sort(
@@ -76999,7 +75954,6 @@ VisuallyHidden.displayName = NAME;
 
 // node_modules/@radix-ui/react-toast/dist/index.mjs
 var import_jsx_runtime79 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var PROVIDER_NAME = "ToastProvider";
 var [Collection, useCollection, createCollectionScope] = createCollection("Toast");
 var [createToastContext, createToastScope] = createContextScope("Toast", [createCollectionScope]);
@@ -77065,10 +76019,9 @@ var ToastViewport = React44.forwardRef(
     const hasToasts = context.toastCount > 0;
     React44.useEffect(() => {
       const handleKeyDown = (event) => {
-        var _a2;
+        var _a3;
         const isHotkeyPressed = hotkey.every((key) => event[key] || event.code === key);
-        if (isHotkeyPressed)
-          (_a2 = ref.current) == null ? void 0 : _a2.focus();
+        if (isHotkeyPressed) (_a3 = ref.current) == null ? void 0 : _a3.focus();
       };
       document.addEventListener("keydown", handleKeyDown);
       return () => document.removeEventListener("keydown", handleKeyDown);
@@ -77093,13 +76046,11 @@ var ToastViewport = React44.forwardRef(
         };
         const handleFocusOutResume = (event) => {
           const isFocusMovingOutside = !wrapper.contains(event.relatedTarget);
-          if (isFocusMovingOutside)
-            handleResume();
+          if (isFocusMovingOutside) handleResume();
         };
         const handlePointerLeaveResume = () => {
           const isFocusInside = wrapper.contains(document.activeElement);
-          if (!isFocusInside)
-            handleResume();
+          if (!isFocusInside) handleResume();
         };
         wrapper.addEventListener("focusin", handlePause);
         wrapper.addEventListener("focusout", handleFocusOutResume);
@@ -77133,7 +76084,7 @@ var ToastViewport = React44.forwardRef(
       const viewport = ref.current;
       if (viewport) {
         const handleKeyDown = (event) => {
-          var _a2, _b2, _c;
+          var _a3, _b2, _c;
           const isMetaKey = event.altKey || event.ctrlKey || event.metaKey;
           const isTabKey = event.key === "Tab" && !isMetaKey;
           if (isTabKey) {
@@ -77141,7 +76092,7 @@ var ToastViewport = React44.forwardRef(
             const isTabbingBackwards = event.shiftKey;
             const targetIsViewport = event.target === viewport;
             if (targetIsViewport && isTabbingBackwards) {
-              (_a2 = headFocusProxyRef.current) == null ? void 0 : _a2.focus();
+              (_a3 = headFocusProxyRef.current) == null ? void 0 : _a3.focus();
               return;
             }
             const tabbingDirection = isTabbingBackwards ? "backwards" : "forwards";
@@ -77212,11 +76163,10 @@ var FocusProxy = React44.forwardRef(
         ref: forwardedRef,
         style: { position: "fixed" },
         onFocus: (event) => {
-          var _a2;
+          var _a3;
           const prevFocusedElement = event.relatedTarget;
-          const isFocusFromOutsideViewport = !((_a2 = context.viewport) == null ? void 0 : _a2.contains(prevFocusedElement));
-          if (isFocusFromOutsideViewport)
-            onFocusFromOutsideViewport();
+          const isFocusFromOutsideViewport = !((_a3 = context.viewport) == null ? void 0 : _a3.contains(prevFocusedElement));
+          if (isFocusFromOutsideViewport) onFocusFromOutsideViewport();
         }
       }
     );
@@ -77307,16 +76257,14 @@ var ToastImpl = React44.forwardRef(
     const closeTimerRef = React44.useRef(0);
     const { onToastAdd, onToastRemove } = context;
     const handleClose = useCallbackRef(() => {
-      var _a2;
+      var _a3;
       const isFocusInToast = node == null ? void 0 : node.contains(document.activeElement);
-      if (isFocusInToast)
-        (_a2 = context.viewport) == null ? void 0 : _a2.focus();
+      if (isFocusInToast) (_a3 = context.viewport) == null ? void 0 : _a3.focus();
       onClose();
     });
     const startTimer = React44.useCallback(
       (duration2) => {
-        if (!duration2 || duration2 === Infinity)
-          return;
+        if (!duration2 || duration2 === Infinity) return;
         window.clearTimeout(closeTimerRef.current);
         closeTimerStartTimeRef.current = (/* @__PURE__ */ new Date()).getTime();
         closeTimerRef.current = window.setTimeout(handleClose, duration2);
@@ -77345,8 +76293,7 @@ var ToastImpl = React44.forwardRef(
       }
     }, [context.viewport, duration, onPause, onResume, startTimer]);
     React44.useEffect(() => {
-      if (open && !context.isClosePausedRef.current)
-        startTimer(duration);
+      if (open && !context.isClosePausedRef.current) startTimer(duration);
     }, [open, duration, context.isClosePausedRef, startTimer]);
     React44.useEffect(() => {
       onToastAdd();
@@ -77355,8 +76302,7 @@ var ToastImpl = React44.forwardRef(
     const announceTextContent = React44.useMemo(() => {
       return node ? getAnnounceTextContent(node) : null;
     }, [node]);
-    if (!context.viewport)
-      return null;
+    if (!context.viewport) return null;
     return /* @__PURE__ */ (0, import_jsx_runtime79.jsxs)(import_jsx_runtime79.Fragment, { children: [
       announceTextContent && /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
         ToastAnnounce,
@@ -77374,8 +76320,7 @@ var ToastImpl = React44.forwardRef(
           {
             asChild: true,
             onEscapeKeyDown: composeEventHandlers(onEscapeKeyDown, () => {
-              if (!context.isFocusedToastEscapeKeyDownRef.current)
-                handleClose();
+              if (!context.isFocusedToastEscapeKeyDownRef.current) handleClose();
               context.isFocusedToastEscapeKeyDownRef.current = false;
             }),
             children: /* @__PURE__ */ (0, import_jsx_runtime79.jsx)(
@@ -77391,8 +76336,7 @@ var ToastImpl = React44.forwardRef(
                 ref: composedRefs,
                 style: { userSelect: "none", touchAction: "none", ...props.style },
                 onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-                  if (event.key !== "Escape")
-                    return;
+                  if (event.key !== "Escape") return;
                   onEscapeKeyDown == null ? void 0 : onEscapeKeyDown(event.nativeEvent);
                   if (!event.nativeEvent.defaultPrevented) {
                     context.isFocusedToastEscapeKeyDownRef.current = true;
@@ -77400,13 +76344,11 @@ var ToastImpl = React44.forwardRef(
                   }
                 }),
                 onPointerDown: composeEventHandlers(props.onPointerDown, (event) => {
-                  if (event.button !== 0)
-                    return;
+                  if (event.button !== 0) return;
                   pointerStartRef.current = { x: event.clientX, y: event.clientY };
                 }),
                 onPointerMove: composeEventHandlers(props.onPointerMove, (event) => {
-                  if (!pointerStartRef.current)
-                    return;
+                  if (!pointerStartRef.current) return;
                   const x = event.clientX - pointerStartRef.current.x;
                   const y = event.clientY - pointerStartRef.current.y;
                   const hasSwipeMoveStarted = Boolean(swipeDeltaRef.current);
@@ -77550,16 +76492,14 @@ function getAnnounceTextContent(container) {
   const textContent = [];
   const childNodes = Array.from(container.childNodes);
   childNodes.forEach((node) => {
-    if (node.nodeType === node.TEXT_NODE && node.textContent)
-      textContent.push(node.textContent);
+    if (node.nodeType === node.TEXT_NODE && node.textContent) textContent.push(node.textContent);
     if (isHTMLElement(node)) {
       const isHidden2 = node.ariaHidden || node.hidden || node.style.display === "none";
       const isExcluded = node.dataset.radixToastAnnounceExclude === "";
       if (!isHidden2) {
         if (isExcluded) {
           const altText = node.dataset.radixToastAnnounceAlt;
-          if (altText)
-            textContent.push(altText);
+          if (altText) textContent.push(altText);
         } else {
           textContent.push(...getAnnounceTextContent(node));
         }
@@ -77571,8 +76511,7 @@ function getAnnounceTextContent(container) {
 function handleAndDispatchCustomEvent2(name, handler, detail, { discrete }) {
   const currentTarget = detail.originalEvent.currentTarget;
   const event = new CustomEvent(name, { bubbles: true, cancelable: true, detail });
-  if (handler)
-    currentTarget.addEventListener(name, handler, { once: true });
+  if (handler) currentTarget.addEventListener(name, handler, { once: true });
   if (discrete) {
     dispatchDiscreteCustomEvent(currentTarget, event);
   } else {
@@ -77610,20 +76549,17 @@ function getTabbableCandidates2(container) {
   const walker = document.createTreeWalker(container, NodeFilter.SHOW_ELEMENT, {
     acceptNode: (node) => {
       const isHiddenInput = node.tagName === "INPUT" && node.type === "hidden";
-      if (node.disabled || node.hidden || isHiddenInput)
-        return NodeFilter.FILTER_SKIP;
+      if (node.disabled || node.hidden || isHiddenInput) return NodeFilter.FILTER_SKIP;
       return node.tabIndex >= 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
     }
   });
-  while (walker.nextNode())
-    nodes.push(walker.currentNode);
+  while (walker.nextNode()) nodes.push(walker.currentNode);
   return nodes;
 }
 function focusFirst2(candidates) {
   const previouslyFocusedElement = document.activeElement;
   return candidates.some((candidate) => {
-    if (candidate === previouslyFocusedElement)
-      return true;
+    if (candidate === previouslyFocusedElement) return true;
     candidate.focus();
     return document.activeElement !== previouslyFocusedElement;
   });
@@ -77644,8 +76580,8 @@ var ToastsContext = (0, import_react67.createContext)(null);
 function ToastsProvider({ children }) {
   const [toasts, setToasts] = (0, import_react67.useState)([]);
   const addToast = (0, import_react67.useCallback)((toast) => {
-    var _a2;
-    const id = (_a2 = toast.id) != null ? _a2 : uniqueId();
+    var _a3;
+    const id = (_a3 = toast.id) != null ? _a3 : uniqueId();
     setToasts((d) => [...d.filter((m) => m.id !== toast.id), { ...toast, id }]);
     return id;
   }, []);
@@ -77705,9 +76641,9 @@ var TldrawUiIcon = (0, import_react68.memo)(function TldrawUiIcon2({
   className,
   ...props
 }) {
-  var _a2;
+  var _a3;
   const assetUrls = useAssetUrls();
-  const asset = (_a2 = assetUrls.icons[icon]) != null ? _a2 : assetUrls.icons["question-mark-circle"];
+  const asset = (_a3 = assetUrls.icons[icon]) != null ? _a3 : assetUrls.icons["question-mark-circle"];
   const ref = (0, import_react68.useRef)(null);
   (0, import_react68.useLayoutEffect)(() => {
     if (!asset) {
@@ -77752,7 +76688,7 @@ var SEVERITY_TO_ICON = {
   info: "info-circle"
 };
 function Toast2({ toast }) {
-  var _a2, _b2;
+  var _a3, _b2;
   const { removeToast } = useToasts();
   const msg2 = useTranslation();
   const onOpenChange = (isOpen) => {
@@ -77784,7 +76720,7 @@ function Toast2({ toast }) {
                 type: "normal",
                 className: "tlui-toast__close",
                 style: { marginLeft: "auto" },
-                children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(TldrawUiButtonLabel, { children: (_a2 = toast.closeLabel) != null ? _a2 : msg2("toast.close") })
+                children: /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(TldrawUiButtonLabel, { children: (_a3 = toast.closeLabel) != null ? _a3 : msg2("toast.close") })
               }
             ) })
           ] })
@@ -77816,8 +76752,7 @@ function ToastViewport2() {
       clearTimeout(timeoutId);
     };
   }, [toasts.length, setHasToasts, editor]);
-  if (!hasToasts)
-    return null;
+  if (!hasToasts) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime84.jsx)(ToastViewport, { className: "tlui-toast__viewport" });
 }
 
@@ -77856,8 +76791,7 @@ var defaultEditorAssetUrls = {
 };
 function useDefaultEditorAssetsWithOverrides(overrides) {
   return (0, import_react69.useMemo)(() => {
-    if (!overrides)
-      return defaultEditorAssetUrls;
+    if (!overrides) return defaultEditorAssetUrls;
     return {
       fonts: { ...defaultEditorAssetUrls.fonts, ...overrides == null ? void 0 : overrides.fonts }
     };
@@ -78029,8 +76963,7 @@ var defaultUiAssetUrls = {
   )
 };
 function useDefaultUiAssetUrlsWithOverrides(overrides) {
-  if (!overrides)
-    return defaultUiAssetUrls;
+  if (!overrides) return defaultUiAssetUrls;
   return {
     fonts: Object.assign({ ...defaultUiAssetUrls.fonts }, { ...overrides == null ? void 0 : overrides.fonts }),
     icons: Object.assign({ ...defaultUiAssetUrls.icons }, { ...overrides == null ? void 0 : overrides.icons }),
@@ -78158,19 +77091,18 @@ var TldrawUiInput = React47.forwardRef(
       [onBlur]
     );
     React47.useEffect(() => {
-      if (!editor.environment.isIos)
-        return;
+      if (!editor.environment.isIos) return;
       const visualViewport = window.visualViewport;
       if (isFocused && shouldManuallyMaintainScrollPositionWhenFocused && visualViewport) {
         const onViewportChange = () => {
-          var _a2;
-          (_a2 = rInputRef.current) == null ? void 0 : _a2.scrollIntoView({ block: "center" });
+          var _a3;
+          (_a3 = rInputRef.current) == null ? void 0 : _a3.scrollIntoView({ block: "center" });
         };
         visualViewport.addEventListener("resize", onViewportChange);
         visualViewport.addEventListener("scroll", onViewportChange);
         editor.timers.requestAnimationFrame(() => {
-          var _a2;
-          (_a2 = rInputRef.current) == null ? void 0 : _a2.scrollIntoView({ block: "center" });
+          var _a3;
+          (_a3 = rInputRef.current) == null ? void 0 : _a3.scrollIntoView({ block: "center" });
         });
         return () => {
           visualViewport.removeEventListener("resize", onViewportChange);
@@ -78281,8 +77213,7 @@ var EmbedDialog = track(function EmbedDialog2({ onClose }) {
             type: "primary",
             disabled: !embedInfoForUrl,
             onClick: () => {
-              if (!embedInfoForUrl)
-                return;
+              if (!embedInfoForUrl) return;
               editor.putExternalContent({
                 type: "embed",
                 url,
@@ -78323,8 +77254,7 @@ function useInsertMedia() {
     inputRef.current = input;
     async function onchange(e2) {
       const fileList = e2.target.files;
-      if (!fileList || fileList.length === 0)
-        return;
+      if (!fileList || fileList.length === 0) return;
       editor.mark("insert media");
       await editor.putExternalContent({
         type: "files",
@@ -78341,8 +77271,8 @@ function useInsertMedia() {
     };
   }, [editor]);
   return (0, import_react71.useCallback)(() => {
-    var _a2;
-    (_a2 = inputRef.current) == null ? void 0 : _a2.click();
+    var _a3;
+    (_a3 = inputRef.current) == null ? void 0 : _a3.click();
   }, [inputRef]);
 }
 
@@ -78663,8 +77593,7 @@ function removeFrame(editor, ids) {
   const frames = compact(
     ids.map((id) => editor.getShape(id)).filter((f) => f && editor.isShapeOfType(f, "frame"))
   );
-  if (!frames.length)
-    return;
+  if (!frames.length) return;
   const allChildren = [];
   editor.run(() => {
     frames.map((frame2) => {
@@ -78681,12 +77610,10 @@ function removeFrame(editor, ids) {
 var DEFAULT_FRAME_PADDING = 50;
 function fitFrameToContent(editor, id, opts = {}) {
   const frame2 = editor.getShape(id);
-  if (!frame2)
-    return;
+  if (!frame2) return;
   const childIds = editor.getSortedChildIdsForParent(frame2.id);
   const children = compact(childIds.map((id2) => editor.getShape(id2)));
-  if (!children.length)
-    return;
+  if (!children.length) return;
   const bounds = Box.FromPoints(
     children.flatMap((shape) => {
       const geometry = editor.getShapeGeometry(shape.id);
@@ -78698,8 +77625,7 @@ function fitFrameToContent(editor, id, opts = {}) {
   const h = bounds.h + 2 * padding;
   const dx = padding - bounds.minX;
   const dy = padding - bounds.minY;
-  if (dx === 0 && dy === 0 && frame2.props.w === w && frame2.props.h === h)
-    return;
+  if (dx === 0 && dy === 0 && frame2.props.w === w && frame2.props.h === h) return;
   const diff = new Vec(dx, dy).rot(frame2.rotation);
   editor.run(() => {
     const changes = childIds.map((child) => {
@@ -78754,8 +77680,8 @@ var EditLinkDialogInner = track(function EditLinkDialogInner2({
   const rInput = (0, import_react74.useRef)(null);
   (0, import_react74.useEffect)(() => {
     editor.timers.requestAnimationFrame(() => {
-      var _a2;
-      return (_a2 = rInput.current) == null ? void 0 : _a2.focus();
+      var _a3;
+      return (_a3 = rInput.current) == null ? void 0 : _a3.focus();
     });
   }, [editor]);
   const rInitialValue = (0, import_react74.useRef)(selectedShape.props.url);
@@ -78782,8 +77708,7 @@ var EditLinkDialogInner = track(function EditLinkDialogInner2({
   }, []);
   const handleClear = (0, import_react74.useCallback)(() => {
     const onlySelectedShape = editor.getOnlySelectedShape();
-    if (!onlySelectedShape)
-      return;
+    if (!onlySelectedShape) return;
     editor.updateShapes([
       { id: onlySelectedShape.id, type: onlySelectedShape.type, props: { url: "" } }
     ]);
@@ -78791,8 +77716,7 @@ var EditLinkDialogInner = track(function EditLinkDialogInner2({
   }, [editor, onClose]);
   const handleComplete = (0, import_react74.useCallback)(() => {
     const onlySelectedShape = editor.getOnlySelectedShape();
-    if (!onlySelectedShape)
-      return;
+    if (!onlySelectedShape) return;
     if (onlySelectedShape && "url" in onlySelectedShape.props) {
       if (onlySelectedShape.props.url !== urlInputState.safe) {
         editor.updateShapes([
@@ -78857,7 +77781,7 @@ var import_react75 = __toESM(require_react(), 1);
 
 // node_modules/tldraw/dist-esm/lib/ui/hooks/clipboard/pasteExcalidrawContent.mjs
 async function pasteExcalidrawContent(editor, clipboard, point) {
-  var _a2, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o;
+  var _a3, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n, _o;
   const { elements, files } = clipboard;
   const tldrawContent = {
     shapes: [],
@@ -78905,7 +77829,7 @@ async function pasteExcalidrawContent(editor, clipboard, point) {
     }
     if (element.groupIds && element.groupIds.length > 0) {
       if (groupShapeIdToChildren.has(element.groupIds[0])) {
-        (_a2 = groupShapeIdToChildren.get(element.groupIds[0])) == null ? void 0 : _a2.push(id);
+        (_a3 = groupShapeIdToChildren.get(element.groupIds[0])) == null ? void 0 : _a3.push(id);
       } else {
         groupShapeIdToChildren.set(element.groupIds[0], [id]);
       }
@@ -79079,8 +78003,7 @@ async function pasteExcalidrawContent(editor, clipboard, point) {
       }
       case "image": {
         const file = files[element.fileId];
-        if (!file)
-          break;
+        if (!file) break;
         const assetId = AssetRecordType.createId();
         tldrawContent.assets.push({
           id: assetId,
@@ -79135,9 +78058,9 @@ async function pasteExcalidrawContent(editor, clipboard, point) {
   const viewPortCenter = editor.getViewportPageBounds().center;
   editor.updateShapes(
     rootShapes.map((s) => {
-      var _a3, _b3;
+      var _a4, _b3;
       const delta = {
-        x: ((_a3 = s.x) != null ? _a3 : 0) - (bounds.x + bounds.w / 2),
+        x: ((_a4 = s.x) != null ? _a4 : 0) - (bounds.x + bounds.w / 2),
         y: ((_b3 = s.y) != null ? _b3 : 0) - (bounds.y + bounds.h / 2)
       };
       return {
@@ -79267,25 +78190,24 @@ function getBend(element, startPoint, endPoint) {
     const B = Vec.Add(med, v);
     const point = Vec.NearestPointOnLineSegment(A, B, handle, false);
     bend = Vec.Dist(point, med);
-    if (Vec.Clockwise(point, end, med))
-      bend *= -1;
+    if (Vec.Clockwise(point, end, med)) bend *= -1;
   }
   return bend;
 }
 var getDash = (element) => {
-  var _a2;
-  let dash = (_a2 = strokeStylesToStrokeTypes[element.strokeStyle]) != null ? _a2 : "draw";
+  var _a3;
+  let dash = (_a3 = strokeStylesToStrokeTypes[element.strokeStyle]) != null ? _a3 : "draw";
   if (dash === "draw" && element.roughness === 0) {
     dash = "solid";
   }
   return dash;
 };
 var getFill = (element) => {
-  var _a2;
+  var _a3;
   if (element.backgroundColor === "transparent") {
     return "none";
   }
-  return (_a2 = fillStylesToFillType[element.fillStyle]) != null ? _a2 : "solid";
+  return (_a3 = fillStylesToFillType[element.fillStyle]) != null ? _a3 : "solid";
 };
 
 // node_modules/tldraw/dist-esm/lib/ui/hooks/clipboard/pasteFiles.mjs
@@ -79397,8 +78319,7 @@ var handleText = (editor, data, point, sources) => {
   }
 };
 var handlePasteFromEventClipboardData = async (editor, clipboardData, point) => {
-  if (editor.getEditingShapeId() !== null)
-    return;
+  if (editor.getEditingShapeId() !== null) return;
   if (!clipboardData) {
     throw Error("No clipboard data");
   }
@@ -79492,8 +78413,8 @@ async function handleClipboardThings(editor, things, point) {
           return;
         }
         thing.source.then((text) => {
-          var _a2;
-          const tldrawHtmlComment = (_a2 = text.match(/<div data-tldraw[^>]*>(.*)<\/div>/)) == null ? void 0 : _a2[1];
+          var _a3;
+          const tldrawHtmlComment = (_a3 = text.match(/<div data-tldraw[^>]*>(.*)<\/div>/)) == null ? void 0 : _a3[1];
           if (tldrawHtmlComment) {
             try {
               const jsonComment = import_lz_string.default.decompressFromBase64(tldrawHtmlComment);
@@ -79602,7 +78523,7 @@ async function handleClipboardThings(editor, things, point) {
   }
 }
 var handleNativeOrMenuCopy = async (editor) => {
-  var _a2;
+  var _a3;
   const content = await editor.resolveAssetsInContent(
     editor.getContentFromCurrentPage(editor.getSelectedShapeIds())
   );
@@ -79631,7 +78552,7 @@ var handleNativeOrMenuCopy = async (editor) => {
       }
       return null;
     }).filter(isNonNull);
-    if ((_a2 = navigator.clipboard) == null ? void 0 : _a2.write) {
+    if ((_a3 = navigator.clipboard) == null ? void 0 : _a3.write) {
       const htmlBlob = new Blob([`<div data-tldraw>${stringifiedClipboard}</div>`], {
         type: "text/html"
       });
@@ -79656,8 +78577,7 @@ function useMenuClipboardEvents() {
   const trackEvent = useUiEvents();
   const copy = (0, import_react75.useCallback)(
     async function onCopy(source) {
-      if (editor.getSelectedShapeIds().length === 0)
-        return;
+      if (editor.getSelectedShapeIds().length === 0) return;
       await handleNativeOrMenuCopy(editor);
       trackEvent("copy", { source });
     },
@@ -79665,8 +78585,7 @@ function useMenuClipboardEvents() {
   );
   const cut = (0, import_react75.useCallback)(
     async function onCut(source) {
-      if (editor.getSelectedShapeIds().length === 0)
-        return;
+      if (editor.getSelectedShapeIds().length === 0) return;
       await handleNativeOrMenuCopy(editor);
       editor.deleteShapes(editor.getSelectedShapeIds());
       trackEvent("cut", { source });
@@ -79675,8 +78594,7 @@ function useMenuClipboardEvents() {
   );
   const paste = (0, import_react75.useCallback)(
     async function onPaste(data, source, point) {
-      if (editor.getEditingShapeId() !== null)
-        return;
+      if (editor.getEditingShapeId() !== null) return;
       if (Array.isArray(data) && data[0] instanceof ClipboardItem) {
         handlePasteFromClipboardApi(editor, data, point);
         trackEvent("paste", { source: "menu" });
@@ -79701,8 +78619,7 @@ function useNativeClipboardEvents() {
     editor
   ]);
   (0, import_react75.useEffect)(() => {
-    if (!appIsFocused)
-      return;
+    if (!appIsFocused) return;
     const copy = async (e2) => {
       if (editor.getSelectedShapeIds().length === 0 || editor.getEditingShapeId() !== null || disallowClipboardEvents(editor)) {
         return;
@@ -79734,16 +78651,12 @@ function useNativeClipboardEvents() {
         stopEventPropagation(e2);
         return;
       }
-      if (editor.getEditingShapeId() !== null || disallowClipboardEvents(editor))
-        return;
+      if (editor.getEditingShapeId() !== null || disallowClipboardEvents(editor)) return;
       let point = void 0;
       let pasteAtCursor = false;
-      if (editor.inputs.shiftKey)
-        pasteAtCursor = true;
-      if (editor.user.getIsPasteAtCursorMode())
-        pasteAtCursor = !pasteAtCursor;
-      if (pasteAtCursor)
-        point = editor.inputs.currentPagePoint;
+      if (editor.inputs.shiftKey) pasteAtCursor = true;
+      if (editor.user.getIsPasteAtCursorMode()) pasteAtCursor = !pasteAtCursor;
+      if (pasteAtCursor) point = editor.inputs.currentPagePoint;
       if (e2.clipboardData && !editor.inputs.shiftKey) {
         handlePasteFromEventClipboardData(editor, e2.clipboardData, point);
       } else {
@@ -79805,8 +78718,7 @@ async function getSvgAsImage(editor, svgString, options) {
     };
     image.src = svgUrl;
   });
-  if (!canvas)
-    return null;
+  if (!canvas) return null;
   const blob = await new Promise(
     (resolve) => canvas.toBlob(
       (blob2) => {
@@ -79819,8 +78731,7 @@ async function getSvgAsImage(editor, svgString, options) {
       quality
     )
   );
-  if (!blob)
-    return null;
+  if (!blob) return null;
   if (type === "png") {
     const view = new DataView(await blob.arrayBuffer());
     return PngHelpers.setPhysChunk(view, effectiveScale, {
@@ -79842,10 +78753,10 @@ async function getSvgString(editor, ids, opts) {
   return svg;
 }
 async function exportToString(editor, ids, format, opts = {}) {
-  var _a2;
+  var _a3;
   switch (format) {
     case "svg": {
-      return (_a2 = await getSvgString(editor, ids, opts)) == null ? void 0 : _a2.svg;
+      return (_a3 = await getSvgString(editor, ids, opts)) == null ? void 0 : _a3.svg;
     }
     case "json": {
       const data = await editor.resolveAssetsInContent(editor.getContentFromCurrentPage(ids));
@@ -79871,8 +78782,7 @@ async function exportToBlob({
     case "png":
     case "webp": {
       const svgResult = await getSvgString(editor, ids, opts);
-      if (!svgResult)
-        throw new Error("Could not construct image.");
+      if (!svgResult) throw new Error("Could not construct image.");
       const image = await getSvgAsImage(editor, svgResult.svg, {
         type: format,
         quality: 1,
@@ -79906,8 +78816,7 @@ function exportToBlobPromise(editor, ids, format, opts = {}) {
 
 // node_modules/tldraw/dist-esm/lib/utils/export/copyAs.mjs
 function copyAs(editor, ids, format = "svg", opts = {}) {
-  if (!window.navigator.clipboard)
-    return Promise.reject(new Error("Copy not supported"));
+  if (!window.navigator.clipboard) return Promise.reject(new Error("Copy not supported"));
   if (window.navigator.clipboard.write) {
     const { blobPromise, mimeType } = exportToBlobPromise(editor, ids, format, opts);
     return window.navigator.clipboard.write([new ClipboardItem({ [mimeType]: blobPromise })]).catch((err) => {
@@ -79929,8 +78838,8 @@ function copyAs(editor, ids, format = "svg", opts = {}) {
   }
 }
 async function fallbackWriteTextAsync(getText) {
-  var _a2, _b2;
-  await ((_b2 = (_a2 = navigator.clipboard) == null ? void 0 : _a2.writeText) == null ? void 0 : _b2.call(_a2, await getText()));
+  var _a3, _b2;
+  await ((_b2 = (_a3 = navigator.clipboard) == null ? void 0 : _a3.writeText) == null ? void 0 : _b2.call(_a3, await getText()));
 }
 
 // node_modules/tldraw/dist-esm/lib/ui/hooks/useCopyAs.mjs
@@ -79958,13 +78867,13 @@ var import_react77 = __toESM(require_react(), 1);
 
 // node_modules/tldraw/dist-esm/lib/utils/export/exportAs.mjs
 async function exportAs(editor, ids, format = "png", name, opts = {}) {
-  var _a2;
+  var _a3;
   if (!name) {
     name = `shapes at ${getTimestamp()}`;
     if (ids.length === 1) {
       const first = editor.getShape(ids[0]);
       if (editor.isShapeOfType(first, "frame")) {
-        name = (_a2 = first.props.name) != null ? _a2 : "frame";
+        name = (_a3 = first.props.name) != null ? _a3 : "frame";
       } else {
         name = `${first.id.replace(/:/, "_")} at ${getTimestamp()}`;
       }
@@ -80024,22 +78933,17 @@ async function flattenShapesToImages(editor, shapeIds, flattenImageBoundsExpand)
   const shapes = compact(
     shapeIds.map((id) => {
       const shape = editor.getShape(id);
-      if (!shape)
-        return;
+      if (!shape) return;
       const util = editor.getShapeUtil(shape.type);
-      if (util.toSvg === void 0)
-        return;
+      if (util.toSvg === void 0) return;
       return shape;
     })
   );
-  if (shapes.length === 0)
-    return;
+  if (shapes.length === 0) return;
   if (shapes.length === 1) {
     const shape = shapes[0];
-    if (!shape)
-      return;
-    if (editor.isShapeOfType(shape, "image"))
-      return;
+    if (!shape) return;
+    if (editor.isShapeOfType(shape, "image")) return;
   }
   const groups = [];
   if (flattenImageBoundsExpand !== void 0) {
@@ -80089,27 +78993,23 @@ async function flattenShapesToImages(editor, shapeIds, flattenImageBoundsExpand)
     const svgResult = await editor.getSvgString(group.shapes, {
       padding
     });
-    if (!(svgResult == null ? void 0 : svgResult.svg))
-      continue;
+    if (!(svgResult == null ? void 0 : svgResult.svg)) continue;
     const blob = new Blob([svgResult.svg], { type: "image/svg+xml" });
     const asset = await editor.getAssetForExternalContent({
       type: "file",
       file: new File([blob], "asset.svg", { type: "image/svg+xml" })
     });
-    if (!asset)
-      continue;
+    if (!asset) continue;
     group.asset = asset;
   }
   const createdShapeIds = [];
   transact(() => {
-    var _a2;
+    var _a3;
     for (const group of groups) {
       const { asset, bounds, shapes: shapes2 } = group;
-      if (!asset)
-        continue;
-      const commonAncestorId = (_a2 = editor.findCommonAncestor(shapes2)) != null ? _a2 : editor.getCurrentPageId();
-      if (!commonAncestorId)
-        continue;
+      if (!asset) continue;
+      const commonAncestorId = (_a3 = editor.findCommonAncestor(shapes2)) != null ? _a3 : editor.getCurrentPageId();
+      if (!commonAncestorId) continue;
       let index2 = "a1";
       for (const shape of shapes2) {
         if (shape.parentId === commonAncestorId) {
@@ -80124,8 +79024,7 @@ async function flattenShapesToImages(editor, shapeIds, flattenImageBoundsExpand)
       let rotation;
       if (isShapeId(commonAncestorId)) {
         const commonAncestor = editor.getShape(commonAncestorId);
-        if (!commonAncestor)
-          continue;
+        if (!commonAncestor) continue;
         const point = editor.getPointInShapeSpace(commonAncestor, {
           x: bounds.x,
           y: bounds.y
@@ -80172,8 +79071,8 @@ function useCollaborationStatus() {
   return useValue(
     "sync status",
     () => {
-      var _a2;
-      if (!((_a2 = editor.store.props.collaboration) == null ? void 0 : _a2.status)) {
+      var _a3;
+      if (!((_a3 = editor.store.props.collaboration) == null ? void 0 : _a3.status)) {
         return null;
       }
       return editor.store.props.collaboration.status.get();
@@ -80193,10 +79092,8 @@ function usePrint() {
       const el = document.createElement("div");
       const style = document.createElement("style");
       const clearElements = (printEl, styleEl) => {
-        if (printEl)
-          printEl.innerHTML = "";
-        if (styleEl && document.head.contains(styleEl))
-          document.head.removeChild(styleEl);
+        if (printEl) printEl.innerHTML = "";
+        if (styleEl && document.head.contains(styleEl)) document.head.removeChild(styleEl);
         if (printEl && document.body.contains(printEl)) {
           document.body.removeChild(printEl);
         }
@@ -80428,10 +79325,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.edit-link",
         icon: "link",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("edit-link", { source });
           editor.mark("edit-link");
           addDialog({ component: EditLinkDialog });
@@ -80485,10 +79380,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("export-as", { format: "svg", source });
           exportAs2(ids, "svg", getExportName(editor, defaultDocumentName));
         }
@@ -80503,10 +79396,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("export-as", { format: "png", source });
           exportAs2(ids, "png", getExportName(editor, defaultDocumentName));
         }
@@ -80521,10 +79412,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("export-as", { format: "json", source });
           exportAs2(ids, "json", getExportName(editor, defaultDocumentName));
         }
@@ -80539,10 +79428,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("export-all-as", { format: "svg", source });
           exportAs2(
             Array.from(editor.getCurrentPageShapeIds()),
@@ -80561,8 +79448,7 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           const ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) return;
           trackEvent("export-all-as", { format: "png", source });
           exportAs2(ids, "png", getExportName(editor, defaultDocumentName));
         }
@@ -80577,8 +79463,7 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           const ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) return;
           trackEvent("export-all-as", { format: "json", source });
           exportAs2(ids, "json", getExportName(editor, defaultDocumentName));
         }
@@ -80594,10 +79479,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("copy-as", { format: "svg", source });
           copyAs2(ids, "svg");
         }
@@ -80612,10 +79495,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("copy-as", { format: "png", source });
           copyAs2(ids, "png");
         }
@@ -80630,10 +79511,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           let ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            ids = Array.from(editor.getCurrentPageShapeIds().values());
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) ids = Array.from(editor.getCurrentPageShapeIds().values());
+          if (ids.length === 0) return;
           trackEvent("copy-as", { format: "json", source });
           copyAs2(ids, "json");
         }
@@ -80642,10 +79521,8 @@ function ActionsProvider({ overrides, children }) {
         id: "toggle-auto-size",
         label: "action.toggle-auto-size",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("toggle-auto-size", { source });
           editor.mark("toggling auto size");
           const shapes = editor.getSelectedShapes().filter(
@@ -80695,9 +79572,8 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         kbd: "z",
         onSelect(source) {
-          var _a2, _b2;
-          if (((_a2 = editor.root.getCurrent()) == null ? void 0 : _a2.id) === "zoom")
-            return;
+          var _a3, _b2;
+          if (((_a3 = editor.root.getCurrent()) == null ? void 0 : _a3.id) === "zoom") return;
           trackEvent("zoom-tool", { source });
           if (!(editor.inputs.shiftKey || editor.inputs.ctrlKey)) {
             const currentTool = editor.root.getCurrent();
@@ -80711,10 +79587,8 @@ function ActionsProvider({ overrides, children }) {
         id: "convert-to-bookmark",
         label: "action.convert-to-bookmark",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           editor.run(() => {
             trackEvent("convert-to-bookmark", { source });
             const shapes = editor.getSelectedShapes();
@@ -80751,10 +79625,8 @@ function ActionsProvider({ overrides, children }) {
         id: "convert-to-embed",
         label: "action.convert-to-embed",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("convert-to-embed", { source });
           editor.run(() => {
             const ids = editor.getSelectedShapeIds();
@@ -80762,14 +79634,11 @@ function ActionsProvider({ overrides, children }) {
             const createList = [];
             const deleteList = [];
             for (const shape of shapes) {
-              if (!editor.isShapeOfType(shape, "bookmark"))
-                continue;
+              if (!editor.isShapeOfType(shape, "bookmark")) continue;
               const { url } = shape.props;
               const embedInfo = getEmbedInfo(shape.props.url);
-              if (!embedInfo)
-                continue;
-              if (!embedInfo.definition)
-                continue;
+              if (!embedInfo) continue;
+              if (!embedInfo.definition) continue;
               const { width, height } = embedInfo.definition;
               const newPos = new Vec(shape.x, shape.y);
               newPos.rot(-shape.rotation);
@@ -80802,10 +79671,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.duplicate",
         icon: "duplicate",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("duplicate-shapes", { source });
           const instanceState = editor.getInstanceState();
           let ids;
@@ -80843,10 +79710,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "$!g",
         icon: "ungroup",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("ungroup-shapes", { source });
           editor.mark("ungroup");
           editor.ungroupShapes(editor.getSelectedShapeIds());
@@ -80858,10 +79723,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "$g",
         icon: "group",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("group-shapes", { source });
           const onlySelectedShape = editor.getOnlySelectedShape();
           if (onlySelectedShape && editor.isShapeOfType(onlySelectedShape, "group")) {
@@ -80878,8 +79741,7 @@ function ActionsProvider({ overrides, children }) {
         label: "action.remove-frame",
         kbd: "$!f",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
+          if (!canApplySelectionAction()) return;
           trackEvent("remove-frame", { source });
           const selectedShapes = editor.getSelectedShapes();
           if (selectedShapes.length > 0 && selectedShapes.every((shape) => editor.isShapeOfType(shape, "frame"))) {
@@ -80895,8 +79757,7 @@ function ActionsProvider({ overrides, children }) {
         id: "fit-frame-to-content",
         label: "action.fit-frame-to-content",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
+          if (!canApplySelectionAction()) return;
           trackEvent("fit-frame-to-content", { source });
           const onlySelectedShape = editor.getOnlySelectedShape();
           if (onlySelectedShape && editor.isShapeOfType(onlySelectedShape, "frame")) {
@@ -80911,10 +79772,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "?A",
         icon: "align-left",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("align-shapes", { operation: "left", source });
           editor.mark("align left");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -80931,10 +79790,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "?H",
         icon: "align-center-horizontal",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("align-shapes", { operation: "center-horizontal", source });
           editor.mark("align center horizontal");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -80948,10 +79805,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "?D",
         icon: "align-right",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("align-shapes", { operation: "right", source });
           editor.mark("align right");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -80968,10 +79823,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "?V",
         icon: "align-center-vertical",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("align-shapes", { operation: "center-vertical", source });
           editor.mark("align center vertical");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -80985,10 +79838,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "align-top",
         kbd: "?W",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("align-shapes", { operation: "top", source });
           editor.mark("align top");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81002,10 +79853,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "align-bottom",
         kbd: "?S",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("align-shapes", { operation: "bottom", source });
           editor.mark("align bottom");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81022,10 +79871,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "distribute-horizontal",
         kbd: "?!h",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("distribute-shapes", { operation: "horizontal", source });
           editor.mark("distribute horizontal");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81042,10 +79889,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "distribute-vertical",
         kbd: "?!V",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("distribute-shapes", { operation: "vertical", source });
           editor.mark("distribute vertical");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81061,10 +79906,8 @@ function ActionsProvider({ overrides, children }) {
         },
         icon: "stretch-horizontal",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("stretch-shapes", { operation: "horizontal", source });
           editor.mark("stretch horizontal");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81080,10 +79923,8 @@ function ActionsProvider({ overrides, children }) {
         },
         icon: "stretch-vertical",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("stretch-shapes", { operation: "vertical", source });
           editor.mark("stretch vertical");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81099,10 +79940,8 @@ function ActionsProvider({ overrides, children }) {
         },
         kbd: "!h",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("flip-shapes", { operation: "horizontal", source });
           editor.mark("flip horizontal");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81115,10 +79954,8 @@ function ActionsProvider({ overrides, children }) {
         label: { default: "action.flip-vertical", ["context-menu"]: "action.flip-vertical.short" },
         kbd: "!v",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("flip-shapes", { operation: "vertical", source });
           editor.mark("flip vertical");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81131,10 +79968,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.pack",
         icon: "pack",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("pack-shapes", { source });
           editor.mark("pack");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81150,10 +79985,8 @@ function ActionsProvider({ overrides, children }) {
         },
         icon: "stack-vertical",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("stack-shapes", { operation: "vertical", source });
           editor.mark("stack-vertical");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81169,10 +80002,8 @@ function ActionsProvider({ overrides, children }) {
         },
         icon: "stack-horizontal",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("stack-shapes", { operation: "horizontal", source });
           editor.mark("stack-horizontal");
           const selectedShapeIds = editor.getSelectedShapeIds();
@@ -81186,10 +80017,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "]",
         icon: "bring-to-front",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("reorder-shapes", { operation: "toFront", source });
           editor.mark("bring to front");
           editor.bringToFront(editor.getSelectedShapeIds());
@@ -81201,10 +80030,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "bring-forward",
         kbd: "?]",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("reorder-shapes", { operation: "forward", source });
           editor.mark("bring forward");
           editor.bringForward(editor.getSelectedShapeIds());
@@ -81216,10 +80043,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "send-backward",
         kbd: "?[",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("reorder-shapes", { operation: "backward", source });
           editor.mark("send backward");
           editor.sendBackward(editor.getSelectedShapeIds());
@@ -81231,10 +80056,8 @@ function ActionsProvider({ overrides, children }) {
         icon: "send-to-back",
         kbd: "[",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("reorder-shapes", { operation: "toBack", source });
           editor.mark("send to back");
           editor.sendToBack(editor.getSelectedShapeIds());
@@ -81245,10 +80068,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.cut",
         kbd: "$x",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           editor.mark("cut");
           cut(source);
         }
@@ -81259,10 +80080,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "$c",
         readonlyOk: true,
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           copy(source);
         }
       },
@@ -81271,8 +80090,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.paste",
         kbd: "$v",
         onSelect(source) {
-          var _a2;
-          (_a2 = navigator.clipboard) == null ? void 0 : _a2.read().then((clipboardItems) => {
+          var _a3;
+          (_a3 = navigator.clipboard) == null ? void 0 : _a3.read().then((clipboardItems) => {
             paste(
               clipboardItems,
               source,
@@ -81294,8 +80113,7 @@ function ActionsProvider({ overrides, children }) {
         readonlyOk: true,
         onSelect(source) {
           editor.run(() => {
-            if (mustGoBackToSelectToolFirst())
-              return;
+            if (mustGoBackToSelectToolFirst()) return;
             trackEvent("select-all-shapes", { source });
             editor.mark("select all kbd");
             editor.selectAll();
@@ -81307,10 +80125,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.select-none",
         readonlyOk: true,
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("select-none-shapes", { source });
           editor.mark("select none");
           editor.selectNone();
@@ -81322,10 +80138,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "\u232B,del,backspace",
         icon: "trash",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("delete-shapes", { source });
           editor.mark("delete");
           editor.deleteShapes(editor.getSelectedShapeIds());
@@ -81336,10 +80150,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.rotate-cw",
         icon: "rotate-cw",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("rotate-cw", { source });
           editor.mark("rotate-cw");
           const offset4 = editor.getSelectionRotation() % (HALF_PI / 2);
@@ -81354,10 +80166,8 @@ function ActionsProvider({ overrides, children }) {
         label: "action.rotate-ccw",
         icon: "rotate-ccw",
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("rotate-ccw", { source });
           editor.mark("rotate-ccw");
           const offset4 = editor.getSelectionRotation() % (HALF_PI / 2);
@@ -81420,10 +80230,8 @@ function ActionsProvider({ overrides, children }) {
         kbd: "!2",
         readonlyOk: true,
         onSelect(source) {
-          if (!canApplySelectionAction())
-            return;
-          if (mustGoBackToSelectToolFirst())
-            return;
+          if (!canApplySelectionAction()) return;
+          if (mustGoBackToSelectToolFirst()) return;
           trackEvent("zoom-to-selection", { source });
           editor.zoomToSelection({ animation: { duration: editor.options.animationMediumMs } });
         }
@@ -81662,11 +80470,10 @@ function ActionsProvider({ overrides, children }) {
         icon: "arrow-left",
         readonlyOk: true,
         onSelect(source) {
-          var _a2;
+          var _a3;
           trackEvent("zoom-to-content", { source });
-          const bounds = (_a2 = editor.getSelectionPageBounds()) != null ? _a2 : editor.getCurrentPageBounds();
-          if (!bounds)
-            return;
+          const bounds = (_a3 = editor.getSelectionPageBounds()) != null ? _a3 : editor.getCurrentPageBounds();
+          if (!bounds) return;
           editor.zoomToBounds(bounds, {
             targetZoom: Math.min(1, editor.getZoomLevel()),
             animation: { duration: 220 }
@@ -81735,8 +80542,7 @@ function ActionsProvider({ overrides, children }) {
         kbd: "!f",
         onSelect: async (source) => {
           const ids = editor.getSelectedShapeIds();
-          if (ids.length === 0)
-            return;
+          if (ids.length === 0) return;
           editor.mark("flattening to image");
           trackEvent("flatten-to-image", { source });
           const newShapeIds = await flattenShapesToImages(
@@ -81804,8 +80610,8 @@ function asActions(actions) {
   return actions;
 }
 function unwrapLabel(label, menuType) {
-  var _a2;
-  return label ? typeof label === "string" ? label : menuType ? (_a2 = label[menuType]) != null ? _a2 : label["default"] : void 0 : void 0;
+  var _a3;
+  return label ? typeof label === "string" ? label : menuType ? (_a3 = label[menuType]) != null ? _a3 : label["default"] : void 0 : void 0;
 }
 
 // node_modules/tldraw/dist-esm/lib/ui/context/components.mjs
@@ -81897,8 +80703,7 @@ function getSideList(side, isStart, rtl) {
   switch (side) {
     case "top":
     case "bottom":
-      if (rtl)
-        return isStart ? rl : lr;
+      if (rtl) return isStart ? rl : lr;
       return isStart ? lr : rl;
     case "left":
     case "right":
@@ -82725,8 +81530,7 @@ function getContainingBlock(element) {
   return null;
 }
 function isWebKit() {
-  if (typeof CSS === "undefined" || !CSS.supports)
-    return false;
+  if (typeof CSS === "undefined" || !CSS.supports) return false;
   return CSS.supports("-webkit-backdrop-filter", "none");
 }
 function isLastTraversableNode(node) {
@@ -82788,7 +81592,7 @@ function getOverflowAncestors(node, list, traverseIframes) {
   return list.concat(scrollableAncestor, getOverflowAncestors(scrollableAncestor, [], traverseIframes));
 }
 function getFrameElement(win) {
-  return Object.getPrototypeOf(win.parent) ? win.frameElement : null;
+  return win.parent && Object.getPrototypeOf(win.parent) ? win.frameElement : null;
 }
 
 // node_modules/@floating-ui/dom/dist/floating-ui.dom.mjs
@@ -83375,8 +82179,7 @@ function deepEqual(a, b) {
   if (a && b && typeof a === "object") {
     if (Array.isArray(a)) {
       length = a.length;
-      if (length !== b.length)
-        return false;
+      if (length !== b.length) return false;
       for (i = length; i-- !== 0; ) {
         if (!deepEqual(a[i], b[i])) {
           return false;
@@ -83518,10 +82321,8 @@ function useFloating(options) {
     };
   }, []);
   index(() => {
-    if (referenceEl)
-      referenceRef.current = referenceEl;
-    if (floatingEl)
-      floatingRef.current = floatingEl;
+    if (referenceEl) referenceRef.current = referenceEl;
+    if (floatingEl) floatingRef.current = floatingEl;
     if (referenceEl && floatingEl) {
       if (whileElementsMountedRef.current) {
         return whileElementsMountedRef.current(referenceEl, floatingEl, update);
@@ -83694,7 +82495,6 @@ function useSize(element) {
 
 // node_modules/@radix-ui/react-popper/dist/index.mjs
 var import_jsx_runtime94 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var POPPER_NAME = "Popper";
 var [createPopperContext, createPopperScope] = createContextScope(POPPER_NAME);
 var [PopperProvider, usePopperContext] = createPopperContext(POPPER_NAME);
@@ -83722,7 +82522,7 @@ var CONTENT_NAME2 = "PopperContent";
 var [PopperContentProvider, useContentContext] = createPopperContext(CONTENT_NAME2);
 var PopperContent = React54.forwardRef(
   (props, forwardedRef) => {
-    var _a2, _b2, _c, _d, _e, _f, _g, _h;
+    var _a3, _b2, _c, _d, _e, _f, _g, _h;
     const {
       __scopePopper,
       side = "bottom",
@@ -83744,7 +82544,7 @@ var PopperContent = React54.forwardRef(
     const composedRefs = useComposedRefs(forwardedRef, (node) => setContent(node));
     const [arrow4, setArrow] = React54.useState(null);
     const arrowSize = useSize(arrow4);
-    const arrowWidth = (_a2 = arrowSize == null ? void 0 : arrowSize.width) != null ? _a2 : 0;
+    const arrowWidth = (_a3 = arrowSize == null ? void 0 : arrowSize.width) != null ? _a3 : 0;
     const arrowHeight = (_b2 = arrowSize == null ? void 0 : arrowSize.height) != null ? _b2 : 0;
     const desiredPlacement = side + (align !== "center" ? "-" + align : "");
     const collisionPadding = typeof collisionPaddingProp === "number" ? collisionPaddingProp : { top: 0, right: 0, bottom: 0, left: 0, ...collisionPaddingProp };
@@ -83806,8 +82606,7 @@ var PopperContent = React54.forwardRef(
     const cannotCenterArrow = ((_e = middlewareData.arrow) == null ? void 0 : _e.centerOffset) !== 0;
     const [contentZIndex, setContentZIndex] = React54.useState();
     useLayoutEffect22(() => {
-      if (content)
-        setContentZIndex(window.getComputedStyle(content).zIndex);
+      if (content) setContentZIndex(window.getComputedStyle(content).zIndex);
     }, [content]);
     return /* @__PURE__ */ (0, import_jsx_runtime94.jsx)(
       "div",
@@ -83926,9 +82725,9 @@ var transformOrigin = (options) => ({
   name: "transformOrigin",
   options,
   fn(data) {
-    var _a2, _b2, _c, _d, _e;
+    var _a3, _b2, _c, _d, _e;
     const { placement, rects, middlewareData } = data;
-    const cannotCenterArrow = ((_a2 = middlewareData.arrow) == null ? void 0 : _a2.centerOffset) !== 0;
+    const cannotCenterArrow = ((_a3 = middlewareData.arrow) == null ? void 0 : _a3.centerOffset) !== 0;
     const isArrowHidden = cannotCenterArrow;
     const arrowWidth = isArrowHidden ? 0 : options.arrowWidth;
     const arrowHeight = isArrowHidden ? 0 : options.arrowHeight;
@@ -83965,7 +82764,6 @@ var Arrow2 = PopperArrow;
 
 // node_modules/@radix-ui/react-popover/dist/index.mjs
 var import_jsx_runtime95 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var POPOVER_NAME = "Popover";
 var [createPopoverContext, createPopoverScope] = createContextScope(POPOVER_NAME, [
   createPopperScope
@@ -84074,8 +82872,7 @@ var PopoverContentModal = React55.forwardRef(
     const isRightClickOutsideRef = React55.useRef(false);
     React55.useEffect(() => {
       const content = contentRef.current;
-      if (content)
-        return hideOthers(content);
+      if (content) return hideOthers(content);
     }, []);
     return /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(Combination_default, { as: Slot, allowPinchZoom: true, children: /* @__PURE__ */ (0, import_jsx_runtime95.jsx)(
       PopoverContentImpl,
@@ -84085,10 +82882,9 @@ var PopoverContentModal = React55.forwardRef(
         trapFocus: context.open,
         disableOutsidePointerEvents: true,
         onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
-          var _a2;
+          var _a3;
           event.preventDefault();
-          if (!isRightClickOutsideRef.current)
-            (_a2 = context.triggerRef.current) == null ? void 0 : _a2.focus();
+          if (!isRightClickOutsideRef.current) (_a3 = context.triggerRef.current) == null ? void 0 : _a3.focus();
         }),
         onPointerDownOutside: composeEventHandlers(
           props.onPointerDownOutside,
@@ -84122,19 +82918,18 @@ var PopoverContentNonModal = React55.forwardRef(
         trapFocus: false,
         disableOutsidePointerEvents: false,
         onCloseAutoFocus: (event) => {
-          var _a2, _b2;
-          (_a2 = props.onCloseAutoFocus) == null ? void 0 : _a2.call(props, event);
+          var _a3, _b2;
+          (_a3 = props.onCloseAutoFocus) == null ? void 0 : _a3.call(props, event);
           if (!event.defaultPrevented) {
-            if (!hasInteractedOutsideRef.current)
-              (_b2 = context.triggerRef.current) == null ? void 0 : _b2.focus();
+            if (!hasInteractedOutsideRef.current) (_b2 = context.triggerRef.current) == null ? void 0 : _b2.focus();
             event.preventDefault();
           }
           hasInteractedOutsideRef.current = false;
           hasPointerDownOutsideRef.current = false;
         },
         onInteractOutside: (event) => {
-          var _a2, _b2;
-          (_a2 = props.onInteractOutside) == null ? void 0 : _a2.call(props, event);
+          var _a3, _b2;
+          (_a3 = props.onInteractOutside) == null ? void 0 : _a3.call(props, event);
           if (!event.defaultPrevented) {
             hasInteractedOutsideRef.current = true;
             if (event.detail.originalEvent.type === "pointerdown") {
@@ -84143,8 +82938,7 @@ var PopoverContentNonModal = React55.forwardRef(
           }
           const target = event.target;
           const targetIsTrigger = (_b2 = context.triggerRef.current) == null ? void 0 : _b2.contains(target);
-          if (targetIsTrigger)
-            event.preventDefault();
+          if (targetIsTrigger) event.preventDefault();
           if (event.detail.originalEvent.type === "focusin" && hasPointerDownOutsideRef.current) {
             event.preventDefault();
           }
@@ -84361,12 +83155,10 @@ function shapesWithUnboundArrows(editor) {
     return editor.getShape(id);
   });
   return selectedShapes.filter((shape) => {
-    if (!shape)
-      return false;
+    if (!shape) return false;
     if (editor.isShapeOfType(shape, "arrow")) {
       const bindings = getArrowBindings(editor, shape);
-      if (bindings.start || bindings.end)
-        return false;
+      if (bindings.start || bindings.end) return false;
     }
     return true;
   });
@@ -84385,8 +83177,7 @@ var useAllowGroup = () => {
     "allow group",
     () => {
       const selectedShapes = editor.getSelectedShapes();
-      if (selectedShapes.length < 2)
-        return false;
+      if (selectedShapes.length < 2) return false;
       for (const shape of selectedShapes) {
         if (editor.isShapeOfType(shape, "arrow")) {
           const bindings = getArrowBindings(editor, shape);
@@ -84412,8 +83203,8 @@ var useAllowUngroup = () => {
   return useValue(
     "allowUngroup",
     () => editor.getSelectedShapeIds().some((id) => {
-      var _a2;
-      return ((_a2 = editor.getShape(id)) == null ? void 0 : _a2.type) === "group";
+      var _a3;
+      return ((_a3 = editor.getShape(id)) == null ? void 0 : _a3.type) === "group";
     }),
     [editor]
   );
@@ -84528,7 +83319,6 @@ function useDirection(localDir) {
 // node_modules/@radix-ui/react-roving-focus/dist/index.mjs
 var React57 = __toESM(require_react(), 1);
 var import_jsx_runtime99 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var ENTRY_FOCUS = "rovingFocusGroup.onEntryFocus";
 var EVENT_OPTIONS2 = { bubbles: false, cancelable: true };
 var GROUP_NAME = "RovingFocusGroup";
@@ -84670,10 +83460,8 @@ var RovingFocusGroupItem = React57.forwardRef(
             ...itemProps,
             ref: forwardedRef,
             onMouseDown: composeEventHandlers(props.onMouseDown, (event) => {
-              if (!focusable)
-                event.preventDefault();
-              else
-                context.onItemFocus(id);
+              if (!focusable) event.preventDefault();
+              else context.onItemFocus(id);
             }),
             onFocus: composeEventHandlers(props.onFocus, () => context.onItemFocus(id)),
             onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
@@ -84681,20 +83469,16 @@ var RovingFocusGroupItem = React57.forwardRef(
                 context.onItemShiftTab();
                 return;
               }
-              if (event.target !== event.currentTarget)
-                return;
+              if (event.target !== event.currentTarget) return;
               const focusIntent = getFocusIntent(event, context.orientation, context.dir);
               if (focusIntent !== void 0) {
-                if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey)
-                  return;
+                if (event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
                 event.preventDefault();
                 const items = getItems().filter((item) => item.focusable);
                 let candidateNodes = items.map((item) => item.ref.current);
-                if (focusIntent === "last")
-                  candidateNodes.reverse();
+                if (focusIntent === "last") candidateNodes.reverse();
                 else if (focusIntent === "prev" || focusIntent === "next") {
-                  if (focusIntent === "prev")
-                    candidateNodes.reverse();
+                  if (focusIntent === "prev") candidateNodes.reverse();
                   const currentIndex = candidateNodes.indexOf(event.currentTarget);
                   candidateNodes = context.loop ? wrapArray(candidateNodes, currentIndex + 1) : candidateNodes.slice(currentIndex + 1);
                 }
@@ -84719,26 +83503,21 @@ var MAP_KEY_TO_FOCUS_INTENT = {
   End: "last"
 };
 function getDirectionAwareKey(key, dir) {
-  if (dir !== "rtl")
-    return key;
+  if (dir !== "rtl") return key;
   return key === "ArrowLeft" ? "ArrowRight" : key === "ArrowRight" ? "ArrowLeft" : key;
 }
 function getFocusIntent(event, orientation, dir) {
   const key = getDirectionAwareKey(event.key, dir);
-  if (orientation === "vertical" && ["ArrowLeft", "ArrowRight"].includes(key))
-    return void 0;
-  if (orientation === "horizontal" && ["ArrowUp", "ArrowDown"].includes(key))
-    return void 0;
+  if (orientation === "vertical" && ["ArrowLeft", "ArrowRight"].includes(key)) return void 0;
+  if (orientation === "horizontal" && ["ArrowUp", "ArrowDown"].includes(key)) return void 0;
   return MAP_KEY_TO_FOCUS_INTENT[key];
 }
 function focusFirst3(candidates, preventScroll = false) {
   const PREVIOUSLY_FOCUSED_ELEMENT = document.activeElement;
   for (const candidate of candidates) {
-    if (candidate === PREVIOUSLY_FOCUSED_ELEMENT)
-      return;
+    if (candidate === PREVIOUSLY_FOCUSED_ELEMENT) return;
     candidate.focus({ preventScroll });
-    if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT)
-      return;
+    if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT) return;
   }
 }
 function wrapArray(array2, startIndex) {
@@ -84749,7 +83528,6 @@ var Item = RovingFocusGroupItem;
 
 // node_modules/@radix-ui/react-menu/dist/index.mjs
 var import_jsx_runtime100 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var SELECTION_KEYS = ["Enter", " "];
 var FIRST_KEYS = ["ArrowDown", "PageUp", "Home"];
 var LAST_KEYS = ["ArrowUp", "PageDown", "End"];
@@ -84854,8 +83632,7 @@ var MenuRootContentModal = React58.forwardRef(
     const composedRefs = useComposedRefs(forwardedRef, ref);
     React58.useEffect(() => {
       const content = ref.current;
-      if (content)
-        return hideOthers(content);
+      if (content) return hideOthers(content);
     }, []);
     return /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(
       MenuContentImpl,
@@ -84924,19 +83701,18 @@ var MenuContentImpl = React58.forwardRef(
     const ScrollLockWrapper = disableOutsideScroll ? Combination_default : React58.Fragment;
     const scrollLockWrapperProps = disableOutsideScroll ? { as: Slot, allowPinchZoom: true } : void 0;
     const handleTypeaheadSearch = (key) => {
-      var _a2, _b2;
+      var _a3, _b2;
       const search = searchRef.current + key;
       const items = getItems().filter((item) => !item.disabled);
       const currentItem = document.activeElement;
-      const currentMatch = (_a2 = items.find((item) => item.ref.current === currentItem)) == null ? void 0 : _a2.textValue;
+      const currentMatch = (_a3 = items.find((item) => item.ref.current === currentItem)) == null ? void 0 : _a3.textValue;
       const values = items.map((item) => item.textValue);
       const nextMatch = getNextMatch(values, search, currentMatch);
       const newItem = (_b2 = items.find((item) => item.textValue === nextMatch)) == null ? void 0 : _b2.ref.current;
       (function updateSearch(value) {
         searchRef.current = value;
         window.clearTimeout(timerRef.current);
-        if (value !== "")
-          timerRef.current = window.setTimeout(() => updateSearch(""), 1e3);
+        if (value !== "") timerRef.current = window.setTimeout(() => updateSearch(""), 1e3);
       })(search);
       if (newItem) {
         setTimeout(() => newItem.focus());
@@ -84947,8 +83723,8 @@ var MenuContentImpl = React58.forwardRef(
     }, []);
     useFocusGuards();
     const isPointerMovingToSubmenu = React58.useCallback((event) => {
-      var _a2, _b2;
-      const isMovingTowards = pointerDirRef.current === ((_a2 = pointerGraceIntentRef.current) == null ? void 0 : _a2.side);
+      var _a3, _b2;
+      const isMovingTowards = pointerDirRef.current === ((_a3 = pointerGraceIntentRef.current) == null ? void 0 : _a3.side);
       return isMovingTowards && isPointerInGraceArea(event, (_b2 = pointerGraceIntentRef.current) == null ? void 0 : _b2.area);
     }, []);
     return /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(
@@ -84958,25 +83734,22 @@ var MenuContentImpl = React58.forwardRef(
         searchRef,
         onItemEnter: React58.useCallback(
           (event) => {
-            if (isPointerMovingToSubmenu(event))
-              event.preventDefault();
+            if (isPointerMovingToSubmenu(event)) event.preventDefault();
           },
           [isPointerMovingToSubmenu]
         ),
         onItemLeave: React58.useCallback(
           (event) => {
-            var _a2;
-            if (isPointerMovingToSubmenu(event))
-              return;
-            (_a2 = contentRef.current) == null ? void 0 : _a2.focus();
+            var _a3;
+            if (isPointerMovingToSubmenu(event)) return;
+            (_a3 = contentRef.current) == null ? void 0 : _a3.focus();
             setCurrentItemId(null);
           },
           [isPointerMovingToSubmenu]
         ),
         onTriggerLeave: React58.useCallback(
           (event) => {
-            if (isPointerMovingToSubmenu(event))
-              event.preventDefault();
+            if (isPointerMovingToSubmenu(event)) event.preventDefault();
           },
           [isPointerMovingToSubmenu]
         ),
@@ -84990,9 +83763,9 @@ var MenuContentImpl = React58.forwardRef(
             asChild: true,
             trapped: trapFocus,
             onMountAutoFocus: composeEventHandlers(onOpenAutoFocus, (event) => {
-              var _a2;
+              var _a3;
               event.preventDefault();
-              (_a2 = contentRef.current) == null ? void 0 : _a2.focus({ preventScroll: true });
+              (_a3 = contentRef.current) == null ? void 0 : _a3.focus({ preventScroll: true });
             }),
             onUnmountAutoFocus: onCloseAutoFocus,
             children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(
@@ -85016,8 +83789,7 @@ var MenuContentImpl = React58.forwardRef(
                     currentTabStopId: currentItemId,
                     onCurrentTabStopIdChange: setCurrentItemId,
                     onEntryFocus: composeEventHandlers(onEntryFocus, (event) => {
-                      if (!rootContext.isUsingKeyboardRef.current)
-                        event.preventDefault();
+                      if (!rootContext.isUsingKeyboardRef.current) event.preventDefault();
                     }),
                     preventScrollOnEntryFocus: true,
                     children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(
@@ -85038,21 +83810,16 @@ var MenuContentImpl = React58.forwardRef(
                           const isModifierKey = event.ctrlKey || event.altKey || event.metaKey;
                           const isCharacterKey = event.key.length === 1;
                           if (isKeyDownInside) {
-                            if (event.key === "Tab")
-                              event.preventDefault();
-                            if (!isModifierKey && isCharacterKey)
-                              handleTypeaheadSearch(event.key);
+                            if (event.key === "Tab") event.preventDefault();
+                            if (!isModifierKey && isCharacterKey) handleTypeaheadSearch(event.key);
                           }
                           const content = contentRef.current;
-                          if (event.target !== content)
-                            return;
-                          if (!FIRST_LAST_KEYS.includes(event.key))
-                            return;
+                          if (event.target !== content) return;
+                          if (!FIRST_LAST_KEYS.includes(event.key)) return;
                           event.preventDefault();
                           const items = getItems().filter((item) => !item.disabled);
                           const candidateNodes = items.map((item) => item.ref.current);
-                          if (LAST_KEYS.includes(event.key))
-                            candidateNodes.reverse();
+                          if (LAST_KEYS.includes(event.key)) candidateNodes.reverse();
                           focusFirst4(candidateNodes);
                         }),
                         onBlur: composeEventHandlers(props.onBlur, (event) => {
@@ -85133,19 +83900,17 @@ var MenuItem = React58.forwardRef(
         disabled,
         onClick: composeEventHandlers(props.onClick, handleSelect),
         onPointerDown: (event) => {
-          var _a2;
-          (_a2 = props.onPointerDown) == null ? void 0 : _a2.call(props, event);
+          var _a3;
+          (_a3 = props.onPointerDown) == null ? void 0 : _a3.call(props, event);
           isPointerDownRef.current = true;
         },
         onPointerUp: composeEventHandlers(props.onPointerUp, (event) => {
-          var _a2;
-          if (!isPointerDownRef.current)
-            (_a2 = event.currentTarget) == null ? void 0 : _a2.click();
+          var _a3;
+          if (!isPointerDownRef.current) (_a3 = event.currentTarget) == null ? void 0 : _a3.click();
         }),
         onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
           const isTypingAhead = contentContext.searchRef.current !== "";
-          if (disabled || isTypingAhead && event.key === " ")
-            return;
+          if (disabled || isTypingAhead && event.key === " ") return;
           if (SELECTION_KEYS.includes(event.key)) {
             event.currentTarget.click();
             event.preventDefault();
@@ -85166,10 +83931,10 @@ var MenuItemImpl = React58.forwardRef(
     const [isFocused, setIsFocused] = React58.useState(false);
     const [textContent, setTextContent] = React58.useState("");
     React58.useEffect(() => {
-      var _a2;
+      var _a3;
       const menuItem = ref.current;
       if (menuItem) {
-        setTextContent(((_a2 = menuItem.textContent) != null ? _a2 : "").trim());
+        setTextContent(((_a3 = menuItem.textContent) != null ? _a3 : "").trim());
       }
     }, [itemProps.children]);
     return /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(
@@ -85266,8 +84031,8 @@ var MenuRadioItem = React58.forwardRef(
         onSelect: composeEventHandlers(
           radioItemProps.onSelect,
           () => {
-            var _a2;
-            return (_a2 = context.onValueChange) == null ? void 0 : _a2.call(context, value);
+            var _a3;
+            return (_a3 = context.onValueChange) == null ? void 0 : _a3.call(context, value);
           },
           { checkForDefaultPrevented: false }
         )
@@ -85337,8 +84102,7 @@ var MenuSub = (props) => {
   const [content, setContent] = React58.useState(null);
   const handleOpenChange = useCallbackRef(onOpenChange);
   React58.useEffect(() => {
-    if (parentMenuContext.open === false)
-      handleOpenChange(false);
+    if (parentMenuContext.open === false) handleOpenChange(false);
     return () => handleOpenChange(false);
   }, [parentMenuContext.open, handleOpenChange]);
   return /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(Root23, { ...popperScope, children: /* @__PURE__ */ (0, import_jsx_runtime100.jsx)(
@@ -85375,8 +84139,7 @@ var MenuSubTrigger = React58.forwardRef(
     const { pointerGraceTimerRef, onPointerGraceIntentChange } = contentContext;
     const scope = { __scopeMenu: props.__scopeMenu };
     const clearOpenTimer = React58.useCallback(() => {
-      if (openTimerRef.current)
-        window.clearTimeout(openTimerRef.current);
+      if (openTimerRef.current) window.clearTimeout(openTimerRef.current);
       openTimerRef.current = null;
     }, []);
     React58.useEffect(() => clearOpenTimer, [clearOpenTimer]);
@@ -85398,20 +84161,17 @@ var MenuSubTrigger = React58.forwardRef(
         ...props,
         ref: composeRefs(forwardedRef, subContext.onTriggerChange),
         onClick: (event) => {
-          var _a2;
-          (_a2 = props.onClick) == null ? void 0 : _a2.call(props, event);
-          if (props.disabled || event.defaultPrevented)
-            return;
+          var _a3;
+          (_a3 = props.onClick) == null ? void 0 : _a3.call(props, event);
+          if (props.disabled || event.defaultPrevented) return;
           event.currentTarget.focus();
-          if (!context.open)
-            context.onOpenChange(true);
+          if (!context.open) context.onOpenChange(true);
         },
         onPointerMove: composeEventHandlers(
           props.onPointerMove,
           whenMouse((event) => {
             contentContext.onItemEnter(event);
-            if (event.defaultPrevented)
-              return;
+            if (event.defaultPrevented) return;
             if (!props.disabled && !context.open && !openTimerRef.current) {
               contentContext.onPointerGraceIntentChange(null);
               openTimerRef.current = window.setTimeout(() => {
@@ -85424,9 +84184,9 @@ var MenuSubTrigger = React58.forwardRef(
         onPointerLeave: composeEventHandlers(
           props.onPointerLeave,
           whenMouse((event) => {
-            var _a2, _b2;
+            var _a3, _b2;
             clearOpenTimer();
-            const contentRect = (_a2 = context.content) == null ? void 0 : _a2.getBoundingClientRect();
+            const contentRect = (_a3 = context.content) == null ? void 0 : _a3.getBoundingClientRect();
             if (contentRect) {
               const side = (_b2 = context.content) == null ? void 0 : _b2.dataset.side;
               const rightSide = side === "right";
@@ -85452,20 +84212,18 @@ var MenuSubTrigger = React58.forwardRef(
               );
             } else {
               contentContext.onTriggerLeave(event);
-              if (event.defaultPrevented)
-                return;
+              if (event.defaultPrevented) return;
               contentContext.onPointerGraceIntentChange(null);
             }
           })
         ),
         onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-          var _a2;
+          var _a3;
           const isTypingAhead = contentContext.searchRef.current !== "";
-          if (props.disabled || isTypingAhead && event.key === " ")
-            return;
+          if (props.disabled || isTypingAhead && event.key === " ") return;
           if (SUB_OPEN_KEYS[rootContext.dir].includes(event.key)) {
             context.onOpenChange(true);
-            (_a2 = context.content) == null ? void 0 : _a2.focus();
+            (_a3 = context.content) == null ? void 0 : _a3.focus();
             event.preventDefault();
           }
         })
@@ -85497,27 +84255,25 @@ var MenuSubContent = React58.forwardRef(
         disableOutsideScroll: false,
         trapFocus: false,
         onOpenAutoFocus: (event) => {
-          var _a2;
-          if (rootContext.isUsingKeyboardRef.current)
-            (_a2 = ref.current) == null ? void 0 : _a2.focus();
+          var _a3;
+          if (rootContext.isUsingKeyboardRef.current) (_a3 = ref.current) == null ? void 0 : _a3.focus();
           event.preventDefault();
         },
         onCloseAutoFocus: (event) => event.preventDefault(),
         onFocusOutside: composeEventHandlers(props.onFocusOutside, (event) => {
-          if (event.target !== subContext.trigger)
-            context.onOpenChange(false);
+          if (event.target !== subContext.trigger) context.onOpenChange(false);
         }),
         onEscapeKeyDown: composeEventHandlers(props.onEscapeKeyDown, (event) => {
           rootContext.onClose();
           event.preventDefault();
         }),
         onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-          var _a2;
+          var _a3;
           const isKeyDownInside = event.currentTarget.contains(event.target);
           const isCloseKey = SUB_CLOSE_KEYS[rootContext.dir].includes(event.key);
           if (isKeyDownInside && isCloseKey) {
             context.onOpenChange(false);
-            (_a2 = subContext.trigger) == null ? void 0 : _a2.focus();
+            (_a3 = subContext.trigger) == null ? void 0 : _a3.focus();
             event.preventDefault();
           }
         })
@@ -85538,11 +84294,9 @@ function getCheckedState(checked) {
 function focusFirst4(candidates) {
   const PREVIOUSLY_FOCUSED_ELEMENT = document.activeElement;
   for (const candidate of candidates) {
-    if (candidate === PREVIOUSLY_FOCUSED_ELEMENT)
-      return;
+    if (candidate === PREVIOUSLY_FOCUSED_ELEMENT) return;
     candidate.focus();
-    if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT)
-      return;
+    if (document.activeElement !== PREVIOUSLY_FOCUSED_ELEMENT) return;
   }
 }
 function wrapArray2(array2, startIndex) {
@@ -85554,8 +84308,7 @@ function getNextMatch(values, search, currentMatch) {
   const currentMatchIndex = currentMatch ? values.indexOf(currentMatch) : -1;
   let wrappedValues = wrapArray2(values, Math.max(currentMatchIndex, 0));
   const excludeCurrentMatch = normalizedSearch.length === 1;
-  if (excludeCurrentMatch)
-    wrappedValues = wrappedValues.filter((v) => v !== currentMatch);
+  if (excludeCurrentMatch) wrappedValues = wrappedValues.filter((v) => v !== currentMatch);
   const nextMatch = wrappedValues.find(
     (value) => value.toLowerCase().startsWith(normalizedSearch.toLowerCase())
   );
@@ -85570,14 +84323,12 @@ function isPointInPolygon(point, polygon) {
     const xj = polygon[j].x;
     const yj = polygon[j].y;
     const intersect = yi > y !== yj > y && x < (xj - xi) * (y - yi) / (yj - yi) + xi;
-    if (intersect)
-      inside = !inside;
+    if (intersect) inside = !inside;
   }
   return inside;
 }
 function isPointerInGraceArea(event, area) {
-  if (!area)
-    return false;
+  if (!area) return false;
   const cursorPos = { x: event.clientX, y: event.clientY };
   return isPointInPolygon(cursorPos, area);
 }
@@ -85603,7 +84354,6 @@ var SubContent = MenuSubContent;
 
 // node_modules/@radix-ui/react-context-menu/dist/index.mjs
 var import_jsx_runtime101 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var CONTEXT_MENU_NAME = "ContextMenu";
 var [createContextMenuContext, createContextMenuScope] = createContextScope(CONTEXT_MENU_NAME, [
   createMenuScope
@@ -85720,18 +84470,17 @@ var ContextMenuContent = React59.forwardRef(
         sideOffset: 2,
         align: "start",
         onCloseAutoFocus: (event) => {
-          var _a2;
-          (_a2 = props.onCloseAutoFocus) == null ? void 0 : _a2.call(props, event);
+          var _a3;
+          (_a3 = props.onCloseAutoFocus) == null ? void 0 : _a3.call(props, event);
           if (!event.defaultPrevented && hasInteractedOutsideRef.current) {
             event.preventDefault();
           }
           hasInteractedOutsideRef.current = false;
         },
         onInteractOutside: (event) => {
-          var _a2;
-          (_a2 = props.onInteractOutside) == null ? void 0 : _a2.call(props, event);
-          if (!event.defaultPrevented && !context.modal)
-            hasInteractedOutsideRef.current = true;
+          var _a3;
+          (_a3 = props.onInteractOutside) == null ? void 0 : _a3.call(props, event);
+          if (!event.defaultPrevented && !context.modal) hasInteractedOutsideRef.current = true;
         },
         style: {
           ...props.style,
@@ -85915,7 +84664,6 @@ var import_jsx_runtime104 = __toESM(require_jsx_runtime(), 1);
 // node_modules/@radix-ui/react-dropdown-menu/dist/index.mjs
 var React60 = __toESM(require_react(), 1);
 var import_jsx_runtime103 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var DROPDOWN_MENU_NAME = "DropdownMenu";
 var [createDropdownMenuContext, createDropdownMenuScope] = createContextScope(
   DROPDOWN_MENU_NAME,
@@ -85978,19 +84726,14 @@ var DropdownMenuTrigger = React60.forwardRef(
         onPointerDown: composeEventHandlers(props.onPointerDown, (event) => {
           if (!disabled && event.button === 0 && event.ctrlKey === false) {
             context.onOpenToggle();
-            if (!context.open)
-              event.preventDefault();
+            if (!context.open) event.preventDefault();
           }
         }),
         onKeyDown: composeEventHandlers(props.onKeyDown, (event) => {
-          if (disabled)
-            return;
-          if (["Enter", " "].includes(event.key))
-            context.onOpenToggle();
-          if (event.key === "ArrowDown")
-            context.onOpenChange(true);
-          if (["Enter", " ", "ArrowDown"].includes(event.key))
-            event.preventDefault();
+          if (disabled) return;
+          if (["Enter", " "].includes(event.key)) context.onOpenToggle();
+          if (event.key === "ArrowDown") context.onOpenChange(true);
+          if (["Enter", " ", "ArrowDown"].includes(event.key)) event.preventDefault();
         })
       }
     ) });
@@ -86020,9 +84763,8 @@ var DropdownMenuContent = React60.forwardRef(
         ...contentProps,
         ref: forwardedRef,
         onCloseAutoFocus: composeEventHandlers(props.onCloseAutoFocus, (event) => {
-          var _a2;
-          if (!hasInteractedOutsideRef.current)
-            (_a2 = context.triggerRef.current) == null ? void 0 : _a2.focus();
+          var _a3;
+          if (!hasInteractedOutsideRef.current) (_a3 = context.triggerRef.current) == null ? void 0 : _a3.focus();
           hasInteractedOutsideRef.current = false;
           event.preventDefault();
         }),
@@ -86030,8 +84772,7 @@ var DropdownMenuContent = React60.forwardRef(
           const originalEvent = event.detail.originalEvent;
           const ctrlLeftClick = originalEvent.button === 0 && originalEvent.ctrlKey === true;
           const isRightClick = originalEvent.button === 2 || ctrlLeftClick;
-          if (!context.modal || isRightClick)
-            hasInteractedOutsideRef.current = true;
+          if (!context.modal || isRightClick) hasInteractedOutsideRef.current = true;
         }),
         style: {
           ...props.style,
@@ -86282,8 +85023,7 @@ function TldrawUiDropdownMenuItem({ noClose, children }) {
 var import_jsx_runtime105 = __toESM(require_jsx_runtime(), 1);
 function TldrawUiKbd({ children, visibleOnMobileLayout = false }) {
   const breakpoint = useBreakpoint();
-  if (!visibleOnMobileLayout && breakpoint < PORTRAIT_BREAKPOINT.MOBILE)
-    return null;
+  if (!visibleOnMobileLayout && breakpoint < PORTRAIT_BREAKPOINT.MOBILE) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime105.jsx)("kbd", { className: "tlui-kbd", children: kbd(children).map((k, i) => /* @__PURE__ */ (0, import_jsx_runtime105.jsx)("span", { children: k }, i)) });
 }
 
@@ -86304,8 +85044,7 @@ function TldrawUiMenuItem({
   const msg2 = useTranslation();
   const [disableClicks, setDisableClicks] = (0, import_react83.useState)(false);
   const isReadonlyMode = useReadonly();
-  if (isReadonlyMode && !readonlyOk)
-    return null;
+  if (isReadonlyMode && !readonlyOk) return null;
   const labelToUse = unwrapLabel(label, menuType);
   const kbdTouse = kbd2 ? kbdStr(kbd2) : void 0;
   const labelStr = labelToUse ? msg2(labelToUse) : void 0;
@@ -86337,8 +85076,7 @@ function TldrawUiMenuItem({
       ) });
     }
     case "context-menu": {
-      if (disabled)
-        return null;
+      if (disabled) return null;
       return /* @__PURE__ */ (0, import_jsx_runtime106.jsxs)(
         ContextMenuItem,
         {
@@ -86348,8 +85086,7 @@ function TldrawUiMenuItem({
           className: "tlui-button tlui-button__menu",
           "data-testid": `${sourceId}.${id}`,
           onSelect: (e2) => {
-            if (noClose)
-              preventDefault(e2);
+            if (noClose) preventDefault(e2);
             if (disableClicks) {
               setDisableClicks(false);
             } else {
@@ -86579,8 +85316,7 @@ var DefaultActionsMenu = (0, import_react84.memo)(function DefaultActionsMenu2({
     [editor]
   );
   const content = children != null ? children : /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(DefaultActionsMenuContent, {});
-  if (isReadonlyMode && !isInAcceptableReadonlyState)
-    return;
+  if (isReadonlyMode && !isInAcceptableReadonlyState) return;
   return /* @__PURE__ */ (0, import_jsx_runtime108.jsxs)(TldrawUiPopover, { id: "actions-menu", children: [
     /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(TldrawUiPopoverTrigger, { children: /* @__PURE__ */ (0, import_jsx_runtime108.jsx)(
       TldrawUiButton,
@@ -86627,8 +85363,7 @@ function TldrawUiMenuCheckboxItem({
   const { type: menuType, sourceId } = useTldrawUiMenuContext();
   const isReadonlyMode = useReadonly();
   const msg2 = useTranslation();
-  if (isReadonlyMode && !readonlyOk)
-    return null;
+  if (isReadonlyMode && !readonlyOk) return null;
   const labelToUse = unwrapLabel(label, menuType);
   const labelStr = labelToUse ? msg2(labelToUse) : void 0;
   switch (menuType) {
@@ -86739,11 +85474,11 @@ function TldrawUiMenuSubmenu({
   size: size4 = "small",
   children
 }) {
-  var _a2;
+  var _a3;
   const { type: menuType, sourceId } = useTldrawUiMenuContext();
   const container = useContainer();
   const msg2 = useTranslation();
-  const labelToUse = label ? typeof label === "string" ? label : (_a2 = label[menuType]) != null ? _a2 : label["default"] : void 0;
+  const labelToUse = label ? typeof label === "string" ? label : (_a3 = label[menuType]) != null ? _a3 : label["default"] : void 0;
   const labelStr = labelToUse ? msg2(labelToUse) : void 0;
   switch (menuType) {
     case "menu": {
@@ -86768,8 +85503,7 @@ function TldrawUiMenuSubmenu({
       ] });
     }
     case "context-menu": {
-      if (disabled)
-        return null;
+      if (disabled) return null;
       return /* @__PURE__ */ (0, import_jsx_runtime111.jsxs)(ContextMenuSubWithMenu, { id: `${sourceId}-sub.${id}`, children: [
         /* @__PURE__ */ (0, import_jsx_runtime111.jsx)(ContextMenuSubTrigger, { dir: "ltr", disabled, asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime111.jsxs)(
           TldrawUiButton,
@@ -86811,22 +85545,19 @@ function ContextMenuSubWithMenu({ id, children }) {
 function ToggleAutoSizeMenuItem() {
   const actions = useActions();
   const shouldDisplay = useShowAutoSizeToggle();
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["toggle-auto-size"] });
 }
 function EditLinkMenuItem2() {
   const actions = useActions();
   const shouldDisplay = useHasLinkShapeSelected();
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["edit-link"] });
 }
 function DuplicateMenuItem() {
   const actions = useActions();
   const shouldDisplay = useUnlockedSelectedShapesCount(1);
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["duplicate"] });
 }
 function FlattenMenuItem() {
@@ -86836,8 +85567,7 @@ function FlattenMenuItem() {
     "should display flatten option",
     () => {
       const selectedShapeIds = editor.getSelectedShapeIds();
-      if (selectedShapeIds.length === 0)
-        return false;
+      if (selectedShapeIds.length === 0) return false;
       const onlySelectedShape = editor.getOnlySelectedShape();
       if (onlySelectedShape && editor.isShapeOfType(onlySelectedShape, "image")) {
         return false;
@@ -86846,22 +85576,19 @@ function FlattenMenuItem() {
     },
     [editor]
   );
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["flatten-to-image"] });
 }
 function GroupMenuItem2() {
   const actions = useActions();
   const shouldDisplay = useAllowGroup();
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["group"] });
 }
 function UngroupMenuItem2() {
   const actions = useActions();
   const shouldDisplay = useAllowUngroup();
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["ungroup"] });
 }
 function RemoveFrameMenuItem() {
@@ -86871,14 +85598,12 @@ function RemoveFrameMenuItem() {
     "allow unframe",
     () => {
       const selectedShapes = editor.getSelectedShapes();
-      if (selectedShapes.length === 0)
-        return false;
+      if (selectedShapes.length === 0) return false;
       return selectedShapes.every((shape) => editor.isShapeOfType(shape, "frame"));
     },
     [editor]
   );
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["remove-frame"] });
 }
 function FitFrameToContentMenuItem() {
@@ -86888,14 +85613,12 @@ function FitFrameToContentMenuItem() {
     "allow fit frame to content",
     () => {
       const onlySelectedShape = editor.getOnlySelectedShape();
-      if (!onlySelectedShape)
-        return false;
+      if (!onlySelectedShape) return false;
       return editor.isShapeOfType(onlySelectedShape, "frame") && editor.getSortedChildIdsForParent(onlySelectedShape).length > 0;
     },
     [editor]
   );
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["fit-frame-to-content"] });
 }
 function ToggleLockMenuItem() {
@@ -86904,8 +85627,7 @@ function ToggleLockMenuItem() {
   const shouldDisplay = useValue("selected shapes", () => editor.getSelectedShapes().length > 0, [
     editor
   ]);
-  if (!shouldDisplay)
-    return null;
+  if (!shouldDisplay) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["toggle-lock"] });
 }
 function ToggleTransparentBgMenuItem() {
@@ -86972,7 +85694,7 @@ function ClipboardMenuGroup() {
   ] });
 }
 function CopyAsMenuGroup() {
-  var _a2;
+  var _a3;
   const editor = useEditor();
   const actions = useActions();
   const atLeastOneShapeOnPage = useValue(
@@ -86990,7 +85712,7 @@ function CopyAsMenuGroup() {
       children: [
         /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuGroup, { id: "copy-as-group", children: [
           /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["copy-as-svg"] }),
-          Boolean((_a2 = window.navigator.clipboard) == null ? void 0 : _a2.write) && /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["copy-as-png"] }),
+          Boolean((_a3 = window.navigator.clipboard) == null ? void 0 : _a3.write) && /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["copy-as-png"] }),
           /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["copy-as-json"] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuGroup, { id: "copy-as-bg", children: /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(ToggleTransparentBgMenuItem, {}) })
@@ -87021,8 +85743,7 @@ function ConversionsMenuGroup() {
     () => editor.getCurrentPageShapeIds().size > 0,
     [editor]
   );
-  if (!atLeastOneShapeOnPage)
-    return null;
+  if (!atLeastOneShapeOnPage) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuGroup, { id: "conversions", children: [
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(CopyAsMenuGroup, {}),
     /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuSubmenu, { id: "export-as", label: "context-menu.export-as", size: "small", children: [
@@ -87051,8 +85772,7 @@ function DeleteMenuItem() {
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["delete"], disabled: !oneSelected });
 }
 function EditMenuSubmenu() {
-  if (!useAnySelectedShapesCount(1))
-    return null;
+  if (!useAnySelectedShapesCount(1)) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuSubmenu, { id: "edit", label: "context-menu.edit", size: "small", children: [
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(GroupMenuItem2, {}),
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(UngroupMenuItem2, {}),
@@ -87070,8 +85790,7 @@ function ArrangeMenuSubmenu() {
   const twoSelected = useUnlockedSelectedShapesCount(2);
   const onlyFlippableShapeSelected = useOnlyFlippableShape();
   const actions = useActions();
-  if (!(twoSelected || onlyFlippableShapeSelected))
-    return null;
+  if (!(twoSelected || onlyFlippableShapeSelected)) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuSubmenu, { id: "arrange", label: "context-menu.arrange", size: "small", children: [
     twoSelected && /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuGroup, { id: "align", children: [
       /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["align-left"] }),
@@ -87096,8 +85815,7 @@ function ArrangeMenuSubmenu() {
 function DistributeMenuGroup() {
   const actions = useActions();
   const threeSelected = useUnlockedSelectedShapesCount(3);
-  if (!threeSelected)
-    return null;
+  if (!threeSelected) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuGroup, { id: "distribute", children: [
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["distribute-horizontal"] }),
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["distribute-vertical"] })
@@ -87107,8 +85825,7 @@ function OrderMenuGroup() {
   const actions = useActions();
   const twoSelected = useUnlockedSelectedShapesCount(2);
   const threeStackableItems = useThreeStackableItems();
-  if (!twoSelected)
-    return null;
+  if (!twoSelected) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuGroup, { id: "order", children: [
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["pack"] }),
     threeStackableItems && /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["stack-horizontal"] }),
@@ -87118,8 +85835,7 @@ function OrderMenuGroup() {
 function ReorderMenuSubmenu() {
   const actions = useActions();
   const oneSelected = useUnlockedSelectedShapesCount(1);
-  if (!oneSelected)
-    return null;
+  if (!oneSelected) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuSubmenu, { id: "reorder", label: "context-menu.reorder", size: "small", children: /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuGroup, { id: "reorder", children: [
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["bring-to-front"] }),
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["bring-forward"] }),
@@ -87135,8 +85851,7 @@ function MoveToPageMenu() {
   const actions = useActions();
   const trackEvent = useUiEvents();
   const oneSelected = useUnlockedSelectedShapesCount(1);
-  if (!oneSelected)
-    return null;
+  if (!oneSelected) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsxs)(TldrawUiMenuSubmenu, { id: "move-to-page", label: "context-menu.move-to-page", size: "small", children: [
     /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuGroup, { id: "pages", children: pages.map((page) => /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(
       TldrawUiMenuItem,
@@ -87179,14 +85894,12 @@ function ConvertToBookmarkMenuItem() {
     "oneEmbedSelected",
     () => {
       const onlySelectedShape = editor.getOnlySelectedShape();
-      if (!onlySelectedShape)
-        return false;
+      if (!onlySelectedShape) return false;
       return !!(editor.isShapeOfType(onlySelectedShape, "embed") && onlySelectedShape.props.url && !editor.isShapeOrAncestorLocked(onlySelectedShape));
     },
     [editor]
   );
-  if (!oneEmbedSelected)
-    return null;
+  if (!oneEmbedSelected) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["convert-to-bookmark"] });
 }
 function ConvertToEmbedMenuItem() {
@@ -87196,14 +85909,12 @@ function ConvertToEmbedMenuItem() {
     "oneEmbeddableBookmarkSelected",
     () => {
       const onlySelectedShape = editor.getOnlySelectedShape();
-      if (!onlySelectedShape)
-        return false;
+      if (!onlySelectedShape) return false;
       return !!(editor.isShapeOfType(onlySelectedShape, "bookmark") && onlySelectedShape.props.url && getEmbedInfo(onlySelectedShape.props.url) && !editor.isShapeOrAncestorLocked(onlySelectedShape));
     },
     [editor]
   );
-  if (!oneEmbeddableBookmarkSelected)
-    return null;
+  if (!oneEmbeddableBookmarkSelected) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["convert-to-embed"] });
 }
 function ToggleSnapModeItem() {
@@ -87294,8 +86005,7 @@ function CursorChatItem() {
     () => editor.getCurrentToolId() === "select" && !editor.getInstanceState().isCoarsePointer,
     [editor]
   );
-  if (!shouldShow)
-    return null;
+  if (!shouldShow) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime112.jsx)(TldrawUiMenuItem, { ...actions["open-cursor-chat"] });
 }
 
@@ -87308,8 +86018,7 @@ function DefaultContextMenuContent() {
     () => editor.getCurrentToolId() === "select",
     [editor]
   );
-  if (!selectToolActive)
-    return null;
+  if (!selectToolActive) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime113.jsxs)(import_jsx_runtime113.Fragment, { children: [
     showCollaborationUi && /* @__PURE__ */ (0, import_jsx_runtime113.jsx)(CursorChatItem, {}),
     /* @__PURE__ */ (0, import_jsx_runtime113.jsxs)(TldrawUiMenuGroup, { id: "modify", children: [
@@ -87409,16 +86118,15 @@ var CursorChatBubble = track(function CursorChatBubble2() {
 function usePositionBubble(ref) {
   const editor = useEditor();
   (0, import_react86.useLayoutEffect)(() => {
-    var _a2;
+    var _a3;
     const elm = ref.current;
-    if (!elm)
-      return;
+    if (!elm) return;
     const { x, y } = editor.inputs.currentScreenPoint;
-    (_a2 = ref.current) == null ? void 0 : _a2.style.setProperty("transform", `translate(${x}px, ${y}px)`);
+    (_a3 = ref.current) == null ? void 0 : _a3.style.setProperty("transform", `translate(${x}px, ${y}px)`);
     function positionChatBubble(e2) {
-      var _a3;
+      var _a4;
       const { minX, minY } = editor.getViewportScreenBounds();
-      (_a3 = ref.current) == null ? void 0 : _a3.style.setProperty(
+      (_a4 = ref.current) == null ? void 0 : _a4.style.setProperty(
         "transform",
         `translate(${e2.clientX - minX}px, ${e2.clientY - minY}px)`
       );
@@ -87455,8 +86163,7 @@ var CursorChatInput = track(function CursorChatInput2({
   usePositionBubble(ref);
   (0, import_react86.useLayoutEffect)(() => {
     const elm = ref.current;
-    if (!elm)
-      return;
+    if (!elm) return;
     const textMeasurement = editor.textMeasure.measureText(value || placeholder, {
       fontFamily: "var(--font-body)",
       fontSize: 12,
@@ -87470,8 +86177,8 @@ var CursorChatInput = track(function CursorChatInput2({
   }, [editor, value, placeholder]);
   (0, import_react86.useLayoutEffect)(() => {
     const raf = editor.timers.requestAnimationFrame(() => {
-      var _a2;
-      (_a2 = ref.current) == null ? void 0 : _a2.focus();
+      var _a3;
+      (_a3 = ref.current) == null ? void 0 : _a3.focus();
     });
     return () => {
       cancelAnimationFrame(raf);
@@ -87492,8 +86199,7 @@ var CursorChatInput = track(function CursorChatInput2({
   const handleKeyDown = (0, import_react86.useCallback)(
     (e2) => {
       const elm = ref.current;
-      if (!elm)
-        return;
+      if (!elm) return;
       const { value: currentValue } = elm;
       switch (e2.key) {
         case "Enter": {
@@ -87676,18 +86382,17 @@ function DefaultDebugMenuContent() {
           id: "count-nodes",
           label: "Count shapes / nodes",
           onSelect: () => {
-            var _a2;
+            var _a3;
             const selectedShapes = editor.getSelectedShapes();
             const shapes = selectedShapes.length === 0 ? editor.getRenderingShapes() : selectedShapes;
             window.alert(
-              `Shapes ${shapes.length}, DOM nodes:${(_a2 = document.querySelector(".tl-shapes").querySelectorAll("*")) == null ? void 0 : _a2.length}`
+              `Shapes ${shapes.length}, DOM nodes:${(_a3 = document.querySelector(".tl-shapes").querySelectorAll("*")) == null ? void 0 : _a3.length}`
             );
           }
         }
       ),
       (() => {
-        if (error)
-          throw Error("oh no!");
+        if (error) throw Error("oh no!");
         return null;
       })(),
       /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(TldrawUiMenuItem, { id: "throw-error", onSelect: () => setError(true), label: "Throw error" }),
@@ -87701,14 +86406,12 @@ function DefaultDebugMenuContent() {
 }
 function DebugFlags() {
   const items = Object.values(debugFlags);
-  if (!items.length)
-    return null;
+  if (!items.length) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(TldrawUiMenuSubmenu, { id: "debug flags", label: "Debug Flags", children: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(TldrawUiMenuGroup, { id: "debug flags", children: items.map((flag) => /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(DebugFlagToggle, { flag }, flag.name)) }) });
 }
 function FeatureFlags() {
   const items = Object.values(featureFlags);
-  if (!items.length)
-    return null;
+  if (!items.length) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(TldrawUiMenuSubmenu, { id: "feature flags", label: "Feature Flags", children: /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(TldrawUiMenuGroup, { id: "feature flags", children: items.map((flag) => /* @__PURE__ */ (0, import_jsx_runtime117.jsx)(DebugFlagToggle, { flag }, flag.name)) }) });
 }
 function ExampleDialog({
@@ -87806,8 +86509,7 @@ function useTick2(isEnabled = true) {
   const [_, setTick] = (0, import_react88.useState)(0);
   const editor = useEditor();
   (0, import_react88.useEffect)(() => {
-    if (!isEnabled)
-      return;
+    if (!isEnabled) return;
     const update = () => setTick((tick2) => tick2 + 1);
     editor.on("tick", update);
     return () => {
@@ -87833,8 +86535,7 @@ function FPS() {
   const showFps = useValue("show_fps", () => debugFlags.showFps.get(), [debugFlags]);
   const fpsRef = (0, import_react88.useRef)(null);
   (0, import_react88.useEffect)(() => {
-    if (!showFps)
-      return;
+    if (!showFps) return;
     const TICK_LENGTH = 250;
     let maxKnownFps = 0;
     let raf = -1;
@@ -87869,8 +86570,7 @@ function FPS() {
       cancelAnimationFrame(raf);
     };
   }, [showFps, editor]);
-  if (!showFps)
-    return null;
+  if (!showFps) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime119.jsx)("div", { ref: fpsRef });
 }
 
@@ -87880,8 +86580,7 @@ var import_react89 = __toESM(require_react(), 1);
 var DefaultMenuPanel = (0, import_react89.memo)(function MenuPanel() {
   const breakpoint = useBreakpoint();
   const { MainMenu, QuickActions, ActionsMenu, PageMenu } = useTldrawUiComponents();
-  if (!MainMenu && !PageMenu && breakpoint < 6)
-    return null;
+  if (!MainMenu && !PageMenu && breakpoint < 6) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime120.jsx)("div", { className: "tlui-menu-zone", children: /* @__PURE__ */ (0, import_jsx_runtime120.jsxs)("div", { className: "tlui-buttons__horizontal", children: [
     MainMenu && /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(MainMenu, {}),
     PageMenu && /* @__PURE__ */ (0, import_jsx_runtime120.jsx)(PageMenu, {}),
@@ -87922,8 +86621,7 @@ function BackToContent() {
     },
     [editor]
   );
-  if (!showBackToContent)
-    return null;
+  if (!showBackToContent) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime121.jsx)(
     TldrawUiMenuItem,
     {
@@ -87942,8 +86640,7 @@ function ExitPenMode() {
   const editor = useEditor();
   const actions = useActions();
   const isPenMode = useValue("is pen mode", () => editor.getInstanceState().isPenMode, [editor]);
-  if (!isPenMode)
-    return null;
+  if (!isPenMode) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime122.jsx)(TldrawUiMenuItem, { ...actions["exit-pen-mode"] });
 }
 
@@ -87957,8 +86654,7 @@ function StopFollowing() {
     () => !!editor.getInstanceState().followingUserId,
     [editor]
   );
-  if (!followingUser)
-    return null;
+  if (!followingUser) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime123.jsx)(TldrawUiMenuItem, { ...actions["stop-following"] });
 }
 
@@ -88093,8 +86789,8 @@ function ColorSchemeMenu() {
   const currentColorScheme = useValue(
     "colorScheme",
     () => {
-      var _a2;
-      return ((_a2 = editor.user.getUserPreferences().colorScheme) != null ? _a2 : editor.user.getIsDarkMode()) ? "dark" : "light";
+      var _a3;
+      return ((_a3 = editor.user.getUserPreferences().colorScheme) != null ? _a3 : editor.user.getIsDarkMode()) ? "dark" : "light";
     },
     [editor]
   );
@@ -88148,8 +86844,7 @@ function DefaultHelpMenuContent() {
 function KeyboardShortcutsMenuItem() {
   const { KeyboardShortcutsDialog } = useTldrawUiComponents();
   const { addDialog } = useDialogs();
-  if (!KeyboardShortcutsDialog)
-    return null;
+  if (!KeyboardShortcutsDialog) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime130.jsx)(
     TldrawUiMenuItem,
     {
@@ -88429,13 +87124,11 @@ function roundedRectangle(data, box, radius) {
 
 // node_modules/tldraw/dist-esm/lib/ui/components/Minimap/minimap-webgl-setup.mjs
 function setupWebGl(canvas) {
-  if (!canvas)
-    throw new Error("Canvas element not found");
+  if (!canvas) throw new Error("Canvas element not found");
   const context = canvas.getContext("webgl2", {
     premultipliedAlpha: false
   });
-  if (!context)
-    throw new Error("Failed to get webgl2 context");
+  if (!context) throw new Error("Failed to get webgl2 context");
   const vertexShaderSourceCode = `#version 300 es
   precision mediump float;
   
@@ -88506,11 +87199,9 @@ function setupWebGl(canvas) {
   const canvasPageBoundsLocation = context.getUniformLocation(program, "canvasPageBounds");
   const fillColorLocation = context.getUniformLocation(program, "fillColor");
   const selectedShapesBuffer = context.createBuffer();
-  if (!selectedShapesBuffer)
-    throw new Error("Failed to create buffer");
+  if (!selectedShapesBuffer) throw new Error("Failed to create buffer");
   const unselectedShapesBuffer = context.createBuffer();
-  if (!unselectedShapesBuffer)
-    throw new Error("Failed to create buffer");
+  if (!unselectedShapesBuffer) throw new Error("Failed to create buffer");
   return {
     context,
     selectedShapes: allocateBuffer(context, 1024),
@@ -88549,8 +87240,7 @@ function setupWebGl(canvas) {
 }
 function allocateBuffer(context, size4) {
   const buffer = context.createBuffer();
-  if (!buffer)
-    throw new Error("Failed to create buffer");
+  if (!buffer) throw new Error("Failed to create buffer");
   return { buffer, vertices: new Float32Array(size4) };
 }
 function appendVertices(bufferStuff, offset4, data) {
@@ -88569,13 +87259,12 @@ function appendVertices(bufferStuff, offset4, data) {
 // node_modules/tldraw/dist-esm/lib/ui/components/Minimap/MinimapManager.mjs
 var __defProp7 = Object.defineProperty;
 var __getOwnPropDesc7 = Object.getOwnPropertyDescriptor;
-var __decorateClass7 = (decorators, target, key, kind) => {
+var __decorateClass6 = (decorators, target, key, kind) => {
   var result = kind > 1 ? void 0 : kind ? __getOwnPropDesc7(target, key) : target;
   for (var i = decorators.length - 1, decorator; i >= 0; i--)
     if (decorator = decorators[i])
       result = (kind ? decorator(target, key, result) : decorator(result)) || result;
-  if (kind && result)
-    __defProp7(target, key, result);
+  if (kind && result) __defProp7(target, key, result);
   return result;
 };
 var MinimapManager = class {
@@ -88602,12 +87291,12 @@ var MinimapManager = class {
       return new Vec(x, y, 1);
     });
     __publicField(this, "minimapScreenPointToPagePoint", (x, y, shiftKey = false, clampToBounds = false) => {
-      var _a2;
+      var _a3;
       const { editor } = this;
       const vpPageBounds = editor.getViewportPageBounds();
       let { x: px, y: py } = this.getMinimapPagePoint(x, y);
       if (clampToBounds) {
-        const shapesPageBounds = (_a2 = this.editor.getCurrentPageBounds()) != null ? _a2 : new Box();
+        const shapesPageBounds = (_a3 = this.editor.getCurrentPageBounds()) != null ? _a3 : new Box();
         const minX = shapesPageBounds.minX - vpPageBounds.width / 2;
         const maxX = shapesPageBounds.maxX + vpPageBounds.width / 2;
         const minY = shapesPageBounds.minY - vpPageBounds.height / 2;
@@ -88655,8 +87344,7 @@ var MinimapManager = class {
       for (let i = 0, len = ids.length; i < len; i++) {
         const shapeId = ids[i];
         const geometry = this.shapeGeometryCache.get(shapeId);
-        if (!geometry)
-          continue;
+        if (!geometry) continue;
         const len2 = geometry.length;
         if (selectedShapes.has(shapeId)) {
           appendVertices(this.gl.selectedShapes, selectedShapeOffset, geometry);
@@ -88677,8 +87365,7 @@ var MinimapManager = class {
     this.gl = setupWebGl(elem);
     this.shapeGeometryCache = editor.store.createComputedCache("webgl-geometry", (r2) => {
       const bounds = editor.getShapeMaskedPageBounds(r2.id);
-      if (!bounds)
-        return null;
+      if (!bounds) return null;
       const arr = new Float32Array(12);
       rectangle(arr, 0, bounds.x, bounds.y, bounds.w, bounds.h);
       return arr;
@@ -88779,8 +87466,7 @@ var MinimapManager = class {
   }
   drawCollaborators() {
     const collaborators = this.editor.getCollaboratorsOnCurrentPage();
-    if (!collaborators.length)
-      return;
+    if (!collaborators.length) return;
     const numSegmentsPerCircle = 20;
     const dataSizePerCircle = numSegmentsPerCircle * 6;
     const totalSize = dataSizePerCircle * collaborators.length;
@@ -88808,28 +87494,28 @@ var MinimapManager = class {
     }
   }
 };
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getDpr", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getContentPageBounds", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getContentScreenBounds", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getCanvasSize", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getCanvasClientPosition", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getCanvasPageBounds", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getZoom", 1);
-__decorateClass7([
+__decorateClass6([
   computed
 ], MinimapManager.prototype, "getCanvasPageBoundsArray", 1);
 
@@ -88857,10 +87543,8 @@ function DefaultMinimap() {
   }, [editor, container]);
   const onDoubleClick = React62.useCallback(
     (e2) => {
-      if (!editor.getCurrentPageShapeIds().size)
-        return;
-      if (!minimapRef.current)
-        return;
+      if (!editor.getCurrentPageShapeIds().size) return;
+      if (!minimapRef.current) return;
       const point = minimapRef.current.minimapScreenPointToPagePoint(
         e2.clientX,
         e2.clientY,
@@ -88881,12 +87565,10 @@ function DefaultMinimap() {
   );
   const onPointerDown = React62.useCallback(
     (e2) => {
-      if (!minimapRef.current)
-        return;
+      if (!minimapRef.current) return;
       const elm = e2.currentTarget;
       setPointerCapture(elm, e2);
-      if (!editor.getCurrentPageShapeIds().size)
-        return;
+      if (!editor.getCurrentPageShapeIds().size) return;
       rPointing.current = true;
       minimapRef.current.isInViewport = false;
       const point = minimapRef.current.minimapScreenPointToPagePoint(
@@ -88934,8 +87616,7 @@ function DefaultMinimap() {
   );
   const onPointerMove = React62.useCallback(
     (e2) => {
-      if (!minimapRef.current)
-        return;
+      if (!minimapRef.current) return;
       const point = minimapRef.current.minimapScreenPointToPagePoint(
         e2.clientX,
         e2.clientY,
@@ -88982,8 +87663,8 @@ function DefaultMinimap() {
   const isDarkMode = useIsDarkMode();
   React62.useEffect(() => {
     editor.timers.setTimeout(() => {
-      var _a2, _b2;
-      (_a2 = minimapRef.current) == null ? void 0 : _a2.updateColors();
+      var _a3, _b2;
+      (_a3 = minimapRef.current) == null ? void 0 : _a3.updateColors();
       (_b2 = minimapRef.current) == null ? void 0 : _b2.render();
     });
   }, [isDarkMode, editor]);
@@ -89255,8 +87936,7 @@ var DefaultPageMenu = (0, import_react97.memo)(function DefaultPageMenu2() {
   );
   const [isEditing, setIsEditing] = (0, import_react97.useState)(false);
   const toggleEditing = (0, import_react97.useCallback)(() => {
-    if (isReadonlyMode)
-      return;
+    if (isReadonlyMode) return;
     setIsEditing((s) => !s);
   }, [isReadonlyMode]);
   const rMutables = (0, import_react97.useRef)({
@@ -89280,16 +87960,14 @@ var DefaultPageMenu = (0, import_react97.memo)(function DefaultPageMenu2() {
     );
   }, [ITEM_HEIGHT, pages]);
   (0, import_react97.useEffect)(() => {
-    if (!isOpen)
-      return;
+    if (!isOpen) return;
     editor.timers.requestAnimationFrame(() => {
       const elm = document.querySelector(
         `[data-testid="page-menu-item-${currentPageId}"]`
       );
       if (elm) {
         const container = rSortableContainer.current;
-        if (!container)
-          return;
+        if (!container) return;
         const elmTopPosition = elm.offsetTop;
         const containerScrollTopPosition = container.scrollTop;
         if (elmTopPosition < containerScrollTopPosition) {
@@ -89309,8 +87987,7 @@ var DefaultPageMenu = (0, import_react97.memo)(function DefaultPageMenu2() {
       const {
         dataset: { id, index: index2 }
       } = currentTarget;
-      if (!id || !index2)
-        return;
+      if (!id || !index2) return;
       const mut = rMutables.current;
       setPointerCapture(e2.currentTarget, e2);
       mut.status = "pointing";
@@ -89410,8 +88087,7 @@ var DefaultPageMenu = (0, import_react97.memo)(function DefaultPageMenu2() {
     [ITEM_HEIGHT, pages]
   );
   const handleCreatePageClick = (0, import_react97.useCallback)(() => {
-    if (isReadonlyMode)
-      return;
+    if (isReadonlyMode) return;
     editor.run(() => {
       editor.mark("creating page");
       const newPageId = PageRecordType.createId();
@@ -89486,8 +88162,8 @@ var DefaultPageMenu = (0, import_react97.memo)(function DefaultPageMenu2() {
           style: { height: ITEM_HEIGHT * pages.length + 4 },
           ref: rSortableContainer,
           children: pages.map((page, index2) => {
-            var _a2;
-            const position = (_a2 = sortablePositionItems[page.id]) != null ? _a2 : {
+            var _a3;
+            const position = (_a3 = sortablePositionItems[page.id]) != null ? _a3 : {
               position: index2 * 40,
               offsetY: 0
             };
@@ -89619,8 +88295,7 @@ function DefaultQuickActionsContent() {
   );
   const isInSelectState = useIsInSelectState();
   const selectDependentActionsEnabled = oneSelected && isInSelectState;
-  if (isReadonlyMode && !isInAcceptableReadonlyState)
-    return;
+  if (isReadonlyMode && !isInAcceptableReadonlyState) return;
   return /* @__PURE__ */ (0, import_jsx_runtime138.jsxs)(import_jsx_runtime138.Fragment, { children: [
     /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(TldrawUiMenuItem, { ...actions["undo"], disabled: !canUndo }),
     /* @__PURE__ */ (0, import_jsx_runtime138.jsx)(TldrawUiMenuItem, { ...actions["redo"], disabled: !canRedo }),
@@ -89646,10 +88321,9 @@ var import_jsx_runtime145 = __toESM(require_jsx_runtime(), 1);
 // node_modules/tldraw/dist-esm/lib/ui/components/SharePanel/PeopleMenuAvatar.mjs
 var import_jsx_runtime140 = __toESM(require_jsx_runtime(), 1);
 function PeopleMenuAvatar({ userId }) {
-  var _a2;
+  var _a3;
   const presence = usePresence(userId);
-  if (!presence)
-    return null;
+  if (!presence) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime140.jsx)(
     "div",
     {
@@ -89657,7 +88331,7 @@ function PeopleMenuAvatar({ userId }) {
       style: {
         backgroundColor: presence.color
       },
-      children: presence.userName === "New User" ? "" : (_a2 = presence.userName[0]) != null ? _a2 : ""
+      children: presence.userName === "New User" ? "" : (_a3 = presence.userName[0]) != null ? _a3 : ""
     },
     userId
   );
@@ -89667,7 +88341,7 @@ function PeopleMenuAvatar({ userId }) {
 var import_jsx_runtime141 = __toESM(require_jsx_runtime(), 1);
 var import_react99 = __toESM(require_react(), 1);
 var PeopleMenuItem = track(function PeopleMenuItem2({ userId }) {
-  var _a2;
+  var _a3;
   const editor = useEditor();
   const msg2 = useTranslation();
   const trackEvent = useUiEvents();
@@ -89683,8 +88357,7 @@ var PeopleMenuItem = track(function PeopleMenuItem2({ userId }) {
   }, [editor, userId, trackEvent]);
   const theyAreFollowingYou = (presence == null ? void 0 : presence.followingUserId) === editor.user.getId();
   const youAreFollowingThem = editor.getInstanceState().followingUserId === userId;
-  if (!presence)
-    return null;
+  if (!presence) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime141.jsxs)("div", { className: "tlui-people-menu__item tlui-buttons__horizontal", children: [
     /* @__PURE__ */ (0, import_jsx_runtime141.jsxs)(
       TldrawUiButton,
@@ -89695,7 +88368,7 @@ var PeopleMenuItem = track(function PeopleMenuItem2({ userId }) {
         onDoubleClick: handleFollowClick,
         children: [
           /* @__PURE__ */ (0, import_jsx_runtime141.jsx)(TldrawUiIcon, { icon: "color", color: presence.color }),
-          /* @__PURE__ */ (0, import_jsx_runtime141.jsx)("div", { className: "tlui-people-menu__name", children: (_a2 = presence.userName) != null ? _a2 : "New User" })
+          /* @__PURE__ */ (0, import_jsx_runtime141.jsx)("div", { className: "tlui-people-menu__name", children: (_a3 = presence.userName) != null ? _a3 : "New User" })
         ]
       }
     ),
@@ -89762,32 +88435,26 @@ var UserPresenceColorPicker = track(function UserPresenceColorPicker2() {
     };
     const handleButtonClick2 = (e2) => {
       const { id } = e2.currentTarget.dataset;
-      if (!id)
-        return;
-      if (value === id)
-        return;
+      if (!id) return;
+      if (value === id) return;
       onValueChange(id);
     };
     const handleButtonPointerDown2 = (e2) => {
       const { id } = e2.currentTarget.dataset;
-      if (!id)
-        return;
+      if (!id) return;
       onValueChange(id);
       rPointing.current = true;
       window.addEventListener("pointerup", handlePointerUp);
     };
     const handleButtonPointerEnter2 = (e2) => {
-      if (!rPointing.current)
-        return;
+      if (!rPointing.current) return;
       const { id } = e2.currentTarget.dataset;
-      if (!id)
-        return;
+      if (!id) return;
       onValueChange(id);
     };
     const handleButtonPointerUp2 = (e2) => {
       const { id } = e2.currentTarget.dataset;
-      if (!id)
-        return;
+      if (!id) return;
       onValueChange(id);
     };
     return {
@@ -89860,8 +88527,7 @@ function UserPresenceEditor() {
     [editor]
   );
   const handleBlur = (0, import_react101.useCallback)(() => {
-    if (rOriginalName.current === rCurrentName.current)
-      return;
+    if (rOriginalName.current === rCurrentName.current) return;
     trackEvent("change-user-name", { source: "people-menu" });
     rOriginalName.current = rCurrentName.current;
   }, [trackEvent]);
@@ -89886,8 +88552,7 @@ function UserPresenceEditor() {
         {
           className: "tlui-people-menu__user__name",
           onDoubleClick: () => {
-            if (!isEditingName)
-              setIsEditingName(true);
+            if (!isEditingName) setIsEditingName(true);
           },
           children: userName
         }
@@ -89910,7 +88575,7 @@ function UserPresenceEditor() {
 
 // node_modules/tldraw/dist-esm/lib/ui/components/SharePanel/PeopleMenu.mjs
 var PeopleMenu = track(function PeopleMenu2({ children }) {
-  var _a2;
+  var _a3;
   const msg2 = useTranslation();
   const container = useContainer();
   const editor = useEditor();
@@ -89930,7 +88595,7 @@ var PeopleMenu = track(function PeopleMenu2({ children }) {
             style: {
               backgroundColor: userColor
             },
-            children: userName === "New User" ? "" : (_a2 = userName[0]) != null ? _a2 : ""
+            children: userName === "New User" ? "" : (_a3 = userName[0]) != null ? _a3 : ""
           }
         )
       ] })
@@ -89978,9 +88643,9 @@ function useRelevantStyles(stylesToCheck = selectToolStyles) {
   return useValue(
     "getRelevantStyles",
     () => {
-      var _a2;
+      var _a3;
       const styles = new SharedStyleMap(editor.getSharedStyles());
-      const isInShapeSpecificTool = !!((_a2 = editor.root.getCurrent()) == null ? void 0 : _a2.shapeType);
+      const isInShapeSpecificTool = !!((_a3 = editor.root.getCurrent()) == null ? void 0 : _a3.shapeType);
       const hasShapesSelected = editor.isIn("select") && editor.getSelectedShapeIds().length > 0;
       if (styles.size === 0 && editor.isIn("select") && editor.getSelectedShapeIds().length === 0) {
         for (const style of stylesToCheck) {
@@ -90140,8 +88805,7 @@ var TldrawUiButtonPicker = (0, import_react102.memo)(function TldrawUiButtonPick
     };
     const handleButtonClick2 = (e2) => {
       const { id } = e2.currentTarget.dataset;
-      if (value.type === "shared" && value.value === id)
-        return;
+      if (value.type === "shared" && value.value === id) return;
       editor.mark("point picker item");
       onValueChange(style, id);
     };
@@ -90154,15 +88818,13 @@ var TldrawUiButtonPicker = (0, import_react102.memo)(function TldrawUiButtonPick
       window.addEventListener("pointerup", handlePointerUp);
     };
     const handleButtonPointerEnter2 = (e2) => {
-      if (!rPointing.current)
-        return;
+      if (!rPointing.current) return;
       const { id } = e2.currentTarget.dataset;
       onValueChange(style, id);
     };
     const handleButtonPointerUp2 = (e2) => {
       const { id } = e2.currentTarget.dataset;
-      if (value.type === "shared" && value.value === id)
-        return;
+      if (value.type === "shared" && value.value === id) return;
       onValueChange(style, id);
     };
     return {
@@ -90219,7 +88881,6 @@ function usePrevious(value) {
 
 // node_modules/@radix-ui/react-slider/dist/index.mjs
 var import_jsx_runtime148 = __toESM(require_jsx_runtime(), 1);
-"use client";
 var PAGE_KEYS = ["PageUp", "PageDown"];
 var ARROW_KEYS = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
 var BACK_KEYS = {
@@ -90261,9 +88922,9 @@ var Slider = React66.forwardRef(
       prop: value,
       defaultProp: defaultValue,
       onChange: (value2) => {
-        var _a2;
+        var _a3;
         const thumbs = [...thumbRefs.current];
-        (_a2 = thumbs[valueIndexToChangeRef.current]) == null ? void 0 : _a2.focus();
+        (_a3 = thumbs[valueIndexToChangeRef.current]) == null ? void 0 : _a3.focus();
         onValueChange(value2);
       }
     });
@@ -90279,8 +88940,7 @@ var Slider = React66.forwardRef(
       const prevValue = valuesBeforeSlideStartRef.current[valueIndexToChangeRef.current];
       const nextValue = values[valueIndexToChangeRef.current];
       const hasChanged = nextValue !== prevValue;
-      if (hasChanged)
-        onValueCommit(values);
+      if (hasChanged) onValueCommit(values);
     }
     function updateValues(value2, atIndex, { commit } = { commit: false }) {
       const decimalCount = getDecimalCount(step);
@@ -90291,8 +88951,7 @@ var Slider = React66.forwardRef(
         if (hasMinStepsBetweenValues(nextValues, minStepsBetweenThumbs * step)) {
           valueIndexToChangeRef.current = nextValues.indexOf(nextValue);
           const hasChanged = String(nextValues) !== String(prevValues);
-          if (hasChanged && commit)
-            onValueCommit(nextValues);
+          if (hasChanged && commit) onValueCommit(nextValues);
           return hasChanged ? nextValues : prevValues;
         } else {
           return prevValues;
@@ -90319,8 +88978,7 @@ var Slider = React66.forwardRef(
             ...sliderProps,
             ref: forwardedRef,
             onPointerDown: composeEventHandlers(sliderProps.onPointerDown, () => {
-              if (!disabled)
-                valuesBeforeSlideStartRef.current = values;
+              if (!disabled) valuesBeforeSlideStartRef.current = values;
             }),
             min: min3,
             max: max2,
@@ -90530,8 +89188,7 @@ var SliderImpl = React66.forwardRef(
         }),
         onPointerMove: composeEventHandlers(props.onPointerMove, (event) => {
           const target = event.target;
-          if (target.hasPointerCapture(event.pointerId))
-            onSlideMove(event);
+          if (target.hasPointerCapture(event.pointerId)) onSlideMove(event);
         }),
         onPointerUp: composeEventHandlers(props.onPointerUp, (event) => {
           const target = event.target;
@@ -90708,8 +89365,7 @@ function getLabel(index2, totalValues) {
   }
 }
 function getClosestValueIndex(values, nextValue) {
-  if (values.length === 1)
-    return 0;
+  if (values.length === 1) return 0;
   const distances = values.map((value) => Math.abs(value - nextValue));
   const closestDistance = Math.min(...distances);
   return distances.indexOf(closestDistance);
@@ -90733,8 +89389,7 @@ function hasMinStepsBetweenValues(values, minStepsBetweenValues) {
 }
 function linearScale(input, output) {
   return (value) => {
-    if (input[0] === input[1] || output[0] === output[1])
-      return output[0];
+    if (input[0] === input[1] || output[0] === output[1]) return output[0];
     const ratio = (output[1] - output[0]) / (input[1] - input[0]);
     return output[0] + ratio * (value - input[0]);
   };
@@ -90767,8 +89422,7 @@ var TldrawUiSlider = (0, import_react103.memo)(function Slider2(props) {
     editor.mark("click slider");
   }, [editor]);
   const handlePointerUp = (0, import_react103.useCallback)(() => {
-    if (!value)
-      return;
+    if (!value) return;
     onValueChange(value);
   }, [value, onValueChange]);
   return /* @__PURE__ */ (0, import_jsx_runtime149.jsx)("div", { className: "tlui-slider__container", children: /* @__PURE__ */ (0, import_jsx_runtime149.jsxs)(
@@ -90814,20 +89468,19 @@ function _DoubleDropdownPicker({
   const msg2 = useTranslation();
   const iconA = React67.useMemo(
     () => {
-      var _a2, _b2;
-      return (_b2 = (_a2 = itemsA.find((item) => valueA.type === "shared" && valueA.value === item.value)) == null ? void 0 : _a2.icon) != null ? _b2 : "mixed";
+      var _a3, _b2;
+      return (_b2 = (_a3 = itemsA.find((item) => valueA.type === "shared" && valueA.value === item.value)) == null ? void 0 : _a3.icon) != null ? _b2 : "mixed";
     },
     [itemsA, valueA]
   );
   const iconB = React67.useMemo(
     () => {
-      var _a2, _b2;
-      return (_b2 = (_a2 = itemsB.find((item) => valueB.type === "shared" && valueB.value === item.value)) == null ? void 0 : _a2.icon) != null ? _b2 : "mixed";
+      var _a3, _b2;
+      return (_b2 = (_a3 = itemsB.find((item) => valueB.type === "shared" && valueB.value === item.value)) == null ? void 0 : _a3.icon) != null ? _b2 : "mixed";
     },
     [itemsB, valueB]
   );
-  if (valueA === void 0 && valueB === void 0)
-    return null;
+  if (valueA === void 0 && valueB === void 0) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: "tlui-style-panel__double-select-picker", children: [
     /* @__PURE__ */ (0, import_jsx_runtime150.jsx)("div", { title: msg2(label), className: "tlui-style-panel__double-select-picker-label", children: msg2(label) }),
     /* @__PURE__ */ (0, import_jsx_runtime150.jsxs)("div", { className: "tlui-buttons__horizontal", children: [
@@ -90901,8 +89554,8 @@ function _DropdownPicker({
   const editor = useEditor();
   const icon = React68.useMemo(
     () => {
-      var _a2;
-      return (_a2 = items.find((item) => value.type === "shared" && item.value === value.value)) == null ? void 0 : _a2.icon;
+      var _a3;
+      return (_a3 = items.find((item) => value.type === "shared" && item.value === value.value)) == null ? void 0 : _a3.icon;
     },
     [items, value]
   );
@@ -90935,8 +89588,7 @@ var DropdownPicker = React68.memo(_DropdownPicker);
 // node_modules/tldraw/dist-esm/lib/ui/components/StylePanel/DefaultStylePanelContent.mjs
 function DefaultStylePanelContent({ styles }) {
   const isDarkMode = useIsDarkMode();
-  if (!styles)
-    return null;
+  if (!styles) return null;
   const geo = styles.get(GeoShapeGeoStyle);
   const arrowheadEnd = styles.get(ArrowShapeArrowheadEndStyle);
   const arrowheadStart = styles.get(ArrowShapeArrowheadStartStyle);
@@ -91223,8 +89875,7 @@ function OpacitySlider() {
     },
     [editor, trackEvent]
   );
-  if (opacity === void 0)
-    return null;
+  if (opacity === void 0) return null;
   const opacityIndex = opacity.type === "mixed" ? -1 : tldrawSupportedOpacities.indexOf(
     minBy(
       tldrawSupportedOpacities,
@@ -91296,8 +89947,7 @@ function MobileStylePanel() {
     [editor]
   );
   const { StylePanel } = useTldrawUiComponents();
-  if (!StylePanel)
-    return null;
+  if (!StylePanel) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime154.jsxs)(TldrawUiPopover, { id: "mobile style menu", onOpenChange: handleStylesOpenChange, children: [
     /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(TldrawUiPopoverTrigger, { children: /* @__PURE__ */ (0, import_jsx_runtime154.jsx)(
       TldrawUiButton,
@@ -91356,9 +90006,9 @@ function DefaultToolbarContent() {
   ] });
 }
 function useIsToolSelected(tool) {
-  var _a2;
+  var _a3;
   const editor = useEditor();
-  const geo = (_a2 = tool.meta) == null ? void 0 : _a2.geo;
+  const geo = (_a3 = tool.meta) == null ? void 0 : _a3.geo;
   return useValue(
     "is tool selected",
     () => {
@@ -91482,13 +90132,11 @@ function removeEvent(object2, event, method, useCapture) {
 }
 function getMods(modifier, key) {
   const mods = key.slice(0, key.length - 1);
-  for (let i = 0; i < mods.length; i++)
-    mods[i] = modifier[mods[i].toLowerCase()];
+  for (let i = 0; i < mods.length; i++) mods[i] = modifier[mods[i].toLowerCase()];
   return mods;
 }
 function getKeys(key) {
-  if (typeof key !== "string")
-    key = "";
+  if (typeof key !== "string") key = "";
   key = key.replace(/\s/g, "");
   const keys = key.split(",");
   let index2 = keys.lastIndexOf("");
@@ -91504,8 +90152,7 @@ function compareArray(a1, a2) {
   const arr2 = a1.length >= a2.length ? a2 : a1;
   let isIndex = true;
   for (let i = 0; i < arr1.length; i++) {
-    if (arr2.indexOf(arr1[i]) === -1)
-      isIndex = false;
+    if (arr2.indexOf(arr1[i]) === -1) isIndex = false;
   }
   return isIndex;
 }
@@ -91659,8 +90306,7 @@ function isPressed(keyCode) {
 function deleteScope(scope, newScope) {
   let handlers;
   let i;
-  if (!scope)
-    scope = getScope();
+  if (!scope) scope = getScope();
   for (const key in _handlers) {
     if (Object.prototype.hasOwnProperty.call(_handlers, key)) {
       handlers = _handlers[key];
@@ -91679,8 +90325,7 @@ function deleteScope(scope, newScope) {
       }
     }
   }
-  if (getScope() === scope)
-    setScope(newScope || "all");
+  if (getScope() === scope) setScope(newScope || "all");
 }
 function clearModifier(event) {
   let key = event.keyCode || event.which || event.charCode;
@@ -91691,13 +90336,10 @@ function clearModifier(event) {
   if (event.key && event.key.toLowerCase() === "meta") {
     _downKeys.splice(0, _downKeys.length);
   }
-  if (key === 93 || key === 224)
-    key = 91;
+  if (key === 93 || key === 224) key = 91;
   if (key in _mods) {
     _mods[key] = false;
-    for (const k in _modifier)
-      if (_modifier[k] === key)
-        hotkeys[k] = false;
+    for (const k in _modifier) if (_modifier[k] === key) hotkeys[k] = false;
   }
 }
 function unbind(keysInfo) {
@@ -91709,12 +90351,10 @@ function unbind(keysInfo) {
     removeKeyEvent(null);
   } else if (Array.isArray(keysInfo)) {
     keysInfo.forEach((info) => {
-      if (info.key)
-        eachUnbind(info);
+      if (info.key) eachUnbind(info);
     });
   } else if (typeof keysInfo === "object") {
-    if (keysInfo.key)
-      eachUnbind(keysInfo);
+    if (keysInfo.key) eachUnbind(keysInfo);
   } else if (typeof keysInfo === "string") {
     for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
@@ -91745,17 +90385,14 @@ var eachUnbind = (_ref3) => {
     const len = unbindKeys.length;
     const lastKey = unbindKeys[len - 1];
     const keyCode = lastKey === "*" ? "*" : code(lastKey);
-    if (!_handlers[keyCode])
-      return;
-    if (!scope)
-      scope = getScope();
+    if (!_handlers[keyCode]) return;
+    if (!scope) scope = getScope();
     const mods = len > 1 ? getMods(_modifier, unbindKeys) : [];
     const unbindElements = [];
     _handlers[keyCode] = _handlers[keyCode].filter((record) => {
       const isMatchingMethod = method ? record.method === method : true;
       const isUnbind = isMatchingMethod && record.scope === scope && compareArray(record.mods, mods);
-      if (isUnbind)
-        unbindElements.push(record.element);
+      if (isUnbind) unbindElements.push(record.element);
       return !isUnbind;
     });
     unbindElements.forEach((element) => removeKeyEvent(element));
@@ -91779,14 +90416,10 @@ function eventHandler(event, handler, scope, element) {
       handler.keys = [];
       handler.keys = handler.keys.concat(_downKeys);
       if (handler.method(event, handler) === false) {
-        if (event.preventDefault)
-          event.preventDefault();
-        else
-          event.returnValue = false;
-        if (event.stopPropagation)
-          event.stopPropagation();
-        if (event.cancelBubble)
-          event.cancelBubble = true;
+        if (event.preventDefault) event.preventDefault();
+        else event.returnValue = false;
+        if (event.stopPropagation) event.stopPropagation();
+        if (event.cancelBubble) event.cancelBubble = true;
       }
     }
   }
@@ -91794,12 +90427,9 @@ function eventHandler(event, handler, scope, element) {
 function dispatch(event, element) {
   const asterisk = _handlers["*"];
   let key = event.keyCode || event.which || event.charCode;
-  if (!hotkeys.filter.call(this, event))
-    return;
-  if (key === 93 || key === 224)
-    key = 91;
-  if (_downKeys.indexOf(key) === -1 && key !== 229)
-    _downKeys.push(key);
+  if (!hotkeys.filter.call(this, event)) return;
+  if (key === 93 || key === 224) key = 91;
+  if (_downKeys.indexOf(key) === -1 && key !== 229) _downKeys.push(key);
   ["ctrlKey", "altKey", "shiftKey", "metaKey"].forEach((keyName) => {
     const keyNum = modifierMap[keyName];
     if (event[keyName] && _downKeys.indexOf(keyNum) === -1) {
@@ -91815,11 +90445,9 @@ function dispatch(event, element) {
   if (key in _mods) {
     _mods[key] = true;
     for (const k in _modifier) {
-      if (_modifier[k] === key)
-        hotkeys[k] = true;
+      if (_modifier[k] === key) hotkeys[k] = true;
     }
-    if (!asterisk)
-      return;
+    if (!asterisk) return;
   }
   for (const e2 in _mods) {
     if (Object.prototype.hasOwnProperty.call(_mods, e2)) {
@@ -91844,8 +90472,7 @@ function dispatch(event, element) {
       }
     }
   }
-  if (!(key in _handlers))
-    return;
+  if (!(key in _handlers)) return;
   const handlerKey = _handlers[key];
   const keyLen = handlerKey.length;
   for (let i = 0; i < keyLen; i++) {
@@ -91883,34 +90510,23 @@ function hotkeys(key, option, method) {
     method = option;
   }
   if (Object.prototype.toString.call(option) === "[object Object]") {
-    if (option.scope)
-      scope = option.scope;
-    if (option.element)
-      element = option.element;
-    if (option.keyup)
-      keyup = option.keyup;
-    if (option.keydown !== void 0)
-      keydown = option.keydown;
-    if (option.capture !== void 0)
-      capture = option.capture;
-    if (typeof option.splitKey === "string")
-      splitKey = option.splitKey;
-    if (option.single === true)
-      single = true;
+    if (option.scope) scope = option.scope;
+    if (option.element) element = option.element;
+    if (option.keyup) keyup = option.keyup;
+    if (option.keydown !== void 0) keydown = option.keydown;
+    if (option.capture !== void 0) capture = option.capture;
+    if (typeof option.splitKey === "string") splitKey = option.splitKey;
+    if (option.single === true) single = true;
   }
-  if (typeof option === "string")
-    scope = option;
-  if (single)
-    unbind(key, scope);
+  if (typeof option === "string") scope = option;
+  if (single) unbind(key, scope);
   for (; i < keys.length; i++) {
     key = keys[i].split(splitKey);
     mods = [];
-    if (key.length > 1)
-      mods = getMods(_modifier, key);
+    if (key.length > 1) mods = getMods(_modifier, key);
     key = key[key.length - 1];
     key = key === "*" ? "*" : code(key);
-    if (!(key in _handlers))
-      _handlers[key] = [];
+    if (!(key in _handlers)) _handlers[key] = [];
     _handlers[key].push({
       keyup,
       keydown,
@@ -92062,8 +90678,7 @@ function useKeyboardShortcuts() {
   const tools = useTools();
   const isFocused = useValue("is focused", () => editor.getInstanceState().isFocused, [editor]);
   (0, import_react107.useEffect)(() => {
-    if (!isFocused)
-      return;
+    if (!isFocused) return;
     const disposables = new Array();
     const hot = (keys, callback) => {
       hotkeys(keys, { element: document.body }, callback);
@@ -92078,15 +90693,11 @@ function useKeyboardShortcuts() {
       });
     };
     for (const action of Object.values(actions)) {
-      if (!action.kbd)
-        continue;
-      if (isReadonlyMode && !action.readonlyOk)
-        continue;
-      if (SKIP_KBDS.includes(action.id))
-        continue;
+      if (!action.kbd) continue;
+      if (isReadonlyMode && !action.readonlyOk) continue;
+      if (SKIP_KBDS.includes(action.id)) continue;
       hot(getHotkeysStringFromKbd(action.kbd), (event) => {
-        if (areShortcutsDisabled(editor))
-          return;
+        if (areShortcutsDisabled(editor)) return;
         preventDefault(event);
         action.onSelect("kbd");
       });
@@ -92095,20 +90706,16 @@ function useKeyboardShortcuts() {
       if (!tool.kbd || !tool.readonlyOk && editor.getInstanceState().isReadonly) {
         continue;
       }
-      if (SKIP_KBDS.includes(tool.id))
-        continue;
+      if (SKIP_KBDS.includes(tool.id)) continue;
       hot(getHotkeysStringFromKbd(tool.kbd), (event) => {
-        if (areShortcutsDisabled(editor))
-          return;
+        if (areShortcutsDisabled(editor)) return;
         preventDefault(event);
         tool.onSelect("kbd");
       });
     }
     hot(",", (e2) => {
-      if (areShortcutsDisabled(editor))
-        return;
-      if (editor.inputs.keys.has("Comma"))
-        return;
+      if (areShortcutsDisabled(editor)) return;
+      if (editor.inputs.keys.has("Comma")) return;
       preventDefault(e2);
       editor.focus();
       editor.inputs.keys.add("Comma");
@@ -92128,10 +90735,8 @@ function useKeyboardShortcuts() {
       editor.dispatch(info);
     });
     hotUp(",", (e2) => {
-      if (areShortcutsDisabled(editor))
-        return;
-      if (!editor.inputs.keys.has("Comma"))
-        return;
+      if (areShortcutsDisabled(editor)) return;
+      if (!editor.inputs.keys.has("Comma")) return;
       editor.inputs.keys.delete("Comma");
       const { x, y, z } = editor.inputs.currentScreenPoint;
       const info = {
@@ -92184,8 +90789,7 @@ function getHotkeysStringFromKbd(kbd2) {
   }).join(",");
 }
 function getKeys2(key) {
-  if (typeof key !== "string")
-    key = "";
+  if (typeof key !== "string") key = "";
   key = key.replace(/\s/g, "");
   const keys = key.split(",");
   let index2 = keys.lastIndexOf("");
@@ -92223,8 +90827,7 @@ function OverflowingToolbar({ children }) {
         `;
   }, [lastActiveOverflowItem, id, overflowIndex]);
   const onDomUpdate = useEvent(() => {
-    if (!mainToolsRef.current)
-      return;
+    if (!mainToolsRef.current) return;
     const children2 = Array.from(mainToolsRef.current.children);
     setTotalItems(children2.length);
     const lastActiveElementIdx = children2.findIndex(
@@ -92236,8 +90839,7 @@ function OverflowingToolbar({ children }) {
     const activeElementIdx = Array.from(mainToolsRef.current.children).findIndex(
       (el) => el.getAttribute("aria-checked") === "true"
     );
-    if (activeElementIdx === -1)
-      return;
+    if (activeElementIdx === -1) return;
     if (activeElementIdx >= overflowIndex) {
       setLastActiveOverflowItem(children2[activeElementIdx].getAttribute("data-value"));
     }
@@ -92246,8 +90848,7 @@ function OverflowingToolbar({ children }) {
     onDomUpdate();
   });
   (0, import_react108.useLayoutEffect)(() => {
-    if (!mainToolsRef.current)
-      return;
+    if (!mainToolsRef.current) return;
     const mutationObserver = new MutationObserver(onDomUpdate);
     mutationObserver.observe(mainToolsRef.current, {
       childList: true,
@@ -92273,22 +90874,18 @@ function OverflowingToolbar({ children }) {
     ];
     for (const [key, index2] of keys) {
       hotkeys(key, (event) => {
-        var _a2, _b2;
-        if (areShortcutsDisabled(editor))
-          return;
+        var _a3, _b2;
+        if (areShortcutsDisabled(editor)) return;
         preventDefault(event);
-        const relevantEls = Array.from((_b2 = (_a2 = mainToolsRef.current) == null ? void 0 : _a2.children) != null ? _b2 : []).filter(
+        const relevantEls = Array.from((_b2 = (_a3 = mainToolsRef.current) == null ? void 0 : _a3.children) != null ? _b2 : []).filter(
           (el2) => {
-            if (!(el2 instanceof HTMLElement))
-              return false;
-            if (el2.tagName.toLowerCase() !== "button")
-              return false;
+            if (!(el2 instanceof HTMLElement)) return false;
+            if (el2.tagName.toLowerCase() !== "button") return false;
             return !!(el2.offsetWidth || el2.offsetHeight);
           }
         );
         const el = relevantEls[index2];
-        if (el)
-          el.click();
+        if (el) el.click();
       });
     }
     return () => {
@@ -92344,8 +90941,7 @@ function ToggleToolLockedButton({ activeToolId }) {
     editor
   ]);
   const tool = useValue("current tool", () => editor.getCurrentTool(), [editor]);
-  if (!activeToolId || !tool.isLockable)
-    return null;
+  if (!activeToolId || !tool.isLockable) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime157.jsx)(
     TldrawUiButton,
     {
@@ -92412,8 +91008,7 @@ function CenteredTopPanelContainer({
   const breakpoint = useBreakpoint();
   const updateLayout = (0, import_react110.useCallback)(() => {
     const element = ref.current;
-    if (!element)
-      return;
+    if (!element) return;
     const layoutTop = element.parentElement.parentElement;
     const leftPanel = layoutTop.querySelector(".tlui-layout__top__left");
     const rightPanel = layoutTop.querySelector(".tlui-layout__top__right");
@@ -92441,8 +91036,7 @@ function CenteredTopPanelContainer({
   }, [breakpoint, ignoreRightWidth, marginBetweenZones, maxWidth2, squeezeAmount, stylePanelWidth]);
   (0, import_react110.useLayoutEffect)(() => {
     const element = ref.current;
-    if (!element)
-      return;
+    if (!element) return;
     const layoutTop = element.parentElement.parentElement;
     const leftPanel = layoutTop.querySelector(".tlui-layout__top__left");
     const rightPanel = layoutTop.querySelector(".tlui-layout__top__right");
@@ -92769,15 +91363,13 @@ var usePreloadFont = (id, font) => {
       /* WAITING */
     );
     preloadFont(id, font).then(() => {
-      if (cancelled)
-        return;
+      if (cancelled) return;
       setState(
         0
         /* SUCCESS */
       );
     }).catch((err) => {
-      if (cancelled)
-        return;
+      if (cancelled) return;
       console.error(err);
       setState(
         1
@@ -92956,10 +91548,10 @@ function InsideOfEditorAndUiContext({
 var import_jsx_runtime168 = __toESM(require_jsx_runtime(), 1);
 var import_react117 = __toESM(require_react(), 1);
 var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
-  var _a2, _b2;
+  var _a3, _b2;
   const [url, setUrl] = (0, import_react117.useState)(null);
   const [container, setContainer] = (0, import_react117.useState)(null);
-  const shapeUtils = useShallowArrayIdentity((_a2 = props.shapeUtils) != null ? _a2 : []);
+  const shapeUtils = useShallowArrayIdentity((_a3 = props.shapeUtils) != null ? _a3 : []);
   const shapeUtilsWithDefaults = (0, import_react117.useMemo)(() => [...defaultShapeUtils, ...shapeUtils], [shapeUtils]);
   const bindingUtils = useShallowArrayIdentity((_b2 = props.bindingUtils) != null ? _b2 : []);
   const bindingUtilsWithDefaults = (0, import_react117.useMemo)(
@@ -92967,7 +91559,7 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
     [bindingUtils]
   );
   const store = useTLStore({ snapshot: props.snapshot, shapeUtils: shapeUtilsWithDefaults });
-  const assets = useDefaultEditorAssetsWithOverrides();
+  const assets = useDefaultEditorAssetsWithOverrides(props.assetUrls);
   const { done: preloadingComplete, error: preloadingError } = usePreloadAssets(assets);
   const {
     pageId,
@@ -92981,12 +91573,9 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
     licenseKey
   } = props;
   (0, import_react117.useLayoutEffect)(() => {
-    if (!container)
-      return;
-    if (!store)
-      return;
-    if (!preloadingComplete)
-      return;
+    if (!container) return;
+    if (!store) return;
+    if (!preloadingComplete) return;
     let isCancelled = false;
     const tempElm = document.createElement("div");
     container.appendChild(tempElm);
@@ -92999,8 +91588,7 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
       getContainer: () => tempElm,
       licenseKey
     });
-    if (pageId)
-      editor.setCurrentPage(pageId);
+    if (pageId) editor.setCurrentPage(pageId);
     const shapeIds = editor.getCurrentPageShapeIds();
     async function setSvg() {
       const svgResult = await editor.getSvgString([...shapeIds], {
@@ -93078,8 +91666,7 @@ var DefaultHelpMenu = (0, import_react118.memo)(function DefaultHelpMenu2({ chil
   const msg2 = useTranslation();
   const breakpoint = useBreakpoint();
   const content = children != null ? children : /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(DefaultHelpMenuContent, {});
-  if (breakpoint < PORTRAIT_BREAKPOINT.MOBILE)
-    return null;
+  if (breakpoint < PORTRAIT_BREAKPOINT.MOBILE) return null;
   return /* @__PURE__ */ (0, import_jsx_runtime169.jsx)("div", { className: "tlui-help-menu", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsxs)(TldrawUiDropdownMenuRoot, { id: "help menu", children: [
     /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(TldrawUiDropdownMenuTrigger, { children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(TldrawUiButton, { type: "help", title: msg2("help-menu.title"), "data-testid": "help-menu.button", children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(TldrawUiButtonIcon, { icon: "question-mark", small: true }) }) }),
     /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(TldrawUiDropdownMenuContent, { side: "top", align: "end", alignOffset: 0, sideOffset: 8, children: /* @__PURE__ */ (0, import_jsx_runtime169.jsx)(TldrawUiMenuContextProvider, { type: "menu", sourceId: "help-menu", children: content }) })
@@ -93120,9 +91707,9 @@ var tldrawFileValidator = validation_exports.object({
   )
 });
 function isV1File(data) {
-  var _a2;
+  var _a3;
   try {
-    if ((_a2 = data.document) == null ? void 0 : _a2.version) {
+    if ((_a3 = data.document) == null ? void 0 : _a3.version) {
       return true;
     }
     return false;
@@ -93241,12 +91828,11 @@ function migrateTldrawFileDataIfNecessary(tldrawFileData) {
 }
 function isJsonUnknownRecord(json) {
   const { id, typeName } = json;
-  if (id === void 0 || typeName === void 0)
-    return false;
+  if (id === void 0 || typeName === void 0) return false;
   return true;
 }
 function tLDataToTLStore(tldata) {
-  var _a2;
+  var _a3;
   const { tldrawFileFormatVersion, schema, records } = tldata.raw;
   if (tldrawFileFormatVersion && schema && records) {
     return migrateTldrawFileDataIfNecessary({
@@ -93258,7 +91844,7 @@ function tLDataToTLStore(tldata) {
   if (tldata.meta["tldraw-version"] !== "2.1.4") {
     throw new Error("The plugin expected the tldraw version of this tldata to be 2.1.4.");
   }
-  const oldRecords = Object.values((_a2 = tldata.raw) != null ? _a2 : {}).filter((e2) => e2 !== void 0 && e2 !== null).filter((e2) => typeof e2 === "object").filter((e2) => !Array.isArray(e2)).map((e2) => {
+  const oldRecords = Object.values((_a3 = tldata.raw) != null ? _a3 : {}).filter((e2) => e2 !== void 0 && e2 !== null).filter((e2) => typeof e2 === "object").filter((e2) => !Array.isArray(e2)).map((e2) => {
     if (!isJsonUnknownRecord(e2)) {
       throw new Error(`Invalid json object found while parsing: ${e2}`);
     }
@@ -93403,7 +91989,7 @@ function isProperTLMeta(data) {
   return true;
 }
 function parseTLJsonData(data) {
-  var _a2;
+  var _a3;
   const { meta, raw } = data;
   if (raw === null || typeof raw !== "object" || Array.isArray(raw)) {
     throw new Error("Invalid TLData: Expected a JsonObject");
@@ -93414,7 +92000,7 @@ function parseTLJsonData(data) {
   return {
     meta: {
       ...meta,
-      uuid: (_a2 = meta.uuid) != null ? _a2 : window.crypto.randomUUID()
+      uuid: (_a3 = meta.uuid) != null ? _a3 : window.crypto.randomUUID()
     },
     raw: raw != null ? raw : {}
   };
@@ -93477,65 +92063,6 @@ function wrapReactRoot(tldrawContainer, createReactRoot) {
 var React72 = __toESM(require_react());
 var import_client2 = __toESM(require_client());
 
-// node_modules/use-debounce/dist/index.module.js
-var import_react119 = __toESM(require_react());
-function c(u2, e2, c2) {
-  var i = this, a = (0, import_react119.useRef)(null), o = (0, import_react119.useRef)(0), f = (0, import_react119.useRef)(null), l = (0, import_react119.useRef)([]), m = (0, import_react119.useRef)(), v = (0, import_react119.useRef)(), d = (0, import_react119.useRef)(u2), p = (0, import_react119.useRef)(true);
-  (0, import_react119.useEffect)(function() {
-    d.current = u2;
-  }, [u2]);
-  var g = !e2 && 0 !== e2 && "undefined" != typeof window;
-  if ("function" != typeof u2)
-    throw new TypeError("Expected a function");
-  e2 = +e2 || 0;
-  var w = !!(c2 = c2 || {}).leading, s = !("trailing" in c2) || !!c2.trailing, x = "maxWait" in c2, y = x ? Math.max(+c2.maxWait || 0, e2) : null;
-  (0, import_react119.useEffect)(function() {
-    return p.current = true, function() {
-      p.current = false;
-    };
-  }, []);
-  var h = (0, import_react119.useMemo)(function() {
-    var r2 = function(r3) {
-      var n3 = l.current, t4 = m.current;
-      return l.current = m.current = null, o.current = r3, v.current = d.current.apply(t4, n3);
-    }, n2 = function(r3, n3) {
-      g && cancelAnimationFrame(f.current), f.current = g ? requestAnimationFrame(r3) : setTimeout(r3, n3);
-    }, t3 = function(r3) {
-      if (!p.current)
-        return false;
-      var n3 = r3 - a.current;
-      return !a.current || n3 >= e2 || n3 < 0 || x && r3 - o.current >= y;
-    }, u3 = function(n3) {
-      return f.current = null, s && l.current ? r2(n3) : (l.current = m.current = null, v.current);
-    }, c3 = function r3() {
-      var c4 = Date.now();
-      if (t3(c4))
-        return u3(c4);
-      if (p.current) {
-        var i2 = e2 - (c4 - a.current), f2 = x ? Math.min(i2, y - (c4 - o.current)) : i2;
-        n2(r3, f2);
-      }
-    }, h2 = function() {
-      var u4 = Date.now(), d2 = t3(u4);
-      if (l.current = [].slice.call(arguments), m.current = i, a.current = u4, d2) {
-        if (!f.current && p.current)
-          return o.current = a.current, n2(c3, e2), w ? r2(a.current) : v.current;
-        if (x)
-          return n2(c3, e2), r2(a.current);
-      }
-      return f.current || n2(c3, e2), v.current;
-    };
-    return h2.cancel = function() {
-      f.current && (g ? cancelAnimationFrame(f.current) : clearTimeout(f.current)), o.current = 0, l.current = a.current = m.current = f.current = null;
-    }, h2.isPending = function() {
-      return !!f.current;
-    }, h2.flush = function() {
-      return f.current ? u3(Date.now()) : v.current;
-    }, h2;
-  }, [w, x, e2, y, s, g]);
-  return h;
-}
-
 // src/utils/file.ts
 var import_obsidian4 = require("obsidian");
 
@@ -93549,9 +92076,9 @@ var SaveFileModal = class extends import_obsidian3.Modal {
     this.options = options;
   }
   onOpen() {
-    var _a2, _b2;
+    var _a3, _b2;
     const { contentEl, file } = this;
-    const activeFilePath = (_b2 = (_a2 = this.app.workspace.getActiveFile()) == null ? void 0 : _a2.path) != null ? _b2 : "";
+    const activeFilePath = (_b2 = (_a3 = this.app.workspace.getActiveFile()) == null ? void 0 : _a3.path) != null ? _b2 : "";
     const defaultDir = getDir(activeFilePath);
     const defaultName = file.name;
     const defaultExt = defaultName.slice(defaultName.lastIndexOf("."));
@@ -93821,8 +92348,7 @@ function exportAllAsOverride(editor, actions, plugin, options) {
     ...actions[key],
     async onSelect(source) {
       const ids = Array.from(editor.getCurrentPageShapeIds().values());
-      if (ids.length === 0)
-        return;
+      if (ids.length === 0) return;
       options.trackEvent("export-all-as", { format: options.type, source });
       const blob = await exportToBlob({
         editor,
@@ -93839,6 +92365,66 @@ function exportAllAsOverride(editor, actions, plugin, options) {
   };
 }
 
+// src/components/TldrawApp.tsx
+var import_obsidian6 = require("obsidian");
+
+// src/hooks/useTldrawAppHook.ts
+var React71 = __toESM(require_react());
+
+// node_modules/use-debounce/dist/index.module.js
+var import_react119 = __toESM(require_react());
+function c(u2, e2, c2) {
+  var i = this, a = (0, import_react119.useRef)(null), o = (0, import_react119.useRef)(0), f = (0, import_react119.useRef)(null), l = (0, import_react119.useRef)([]), m = (0, import_react119.useRef)(), v = (0, import_react119.useRef)(), d = (0, import_react119.useRef)(u2), p = (0, import_react119.useRef)(true);
+  (0, import_react119.useEffect)(function() {
+    d.current = u2;
+  }, [u2]);
+  var g = !e2 && 0 !== e2 && "undefined" != typeof window;
+  if ("function" != typeof u2) throw new TypeError("Expected a function");
+  e2 = +e2 || 0;
+  var w = !!(c2 = c2 || {}).leading, s = !("trailing" in c2) || !!c2.trailing, x = "maxWait" in c2, y = x ? Math.max(+c2.maxWait || 0, e2) : null;
+  (0, import_react119.useEffect)(function() {
+    return p.current = true, function() {
+      p.current = false;
+    };
+  }, []);
+  var h = (0, import_react119.useMemo)(function() {
+    var r2 = function(r3) {
+      var n3 = l.current, t4 = m.current;
+      return l.current = m.current = null, o.current = r3, v.current = d.current.apply(t4, n3);
+    }, n2 = function(r3, n3) {
+      g && cancelAnimationFrame(f.current), f.current = g ? requestAnimationFrame(r3) : setTimeout(r3, n3);
+    }, t3 = function(r3) {
+      if (!p.current) return false;
+      var n3 = r3 - a.current;
+      return !a.current || n3 >= e2 || n3 < 0 || x && r3 - o.current >= y;
+    }, u3 = function(n3) {
+      return f.current = null, s && l.current ? r2(n3) : (l.current = m.current = null, v.current);
+    }, c3 = function r3() {
+      var c4 = Date.now();
+      if (t3(c4)) return u3(c4);
+      if (p.current) {
+        var i2 = e2 - (c4 - a.current), f2 = x ? Math.min(i2, y - (c4 - o.current)) : i2;
+        n2(r3, f2);
+      }
+    }, h2 = function() {
+      var u4 = Date.now(), d2 = t3(u4);
+      if (l.current = [].slice.call(arguments), m.current = i, a.current = u4, d2) {
+        if (!f.current && p.current) return o.current = a.current, n2(c3, e2), w ? r2(a.current) : v.current;
+        if (x) return n2(c3, e2), r2(a.current);
+      }
+      return f.current || n2(c3, e2), v.current;
+    };
+    return h2.cancel = function() {
+      f.current && (g ? cancelAnimationFrame(f.current) : clearTimeout(f.current)), o.current = 0, l.current = a.current = m.current = f.current = null;
+    }, h2.isPending = function() {
+      return !!f.current;
+    }, h2.flush = function() {
+      return f.current ? u3(Date.now()) : v.current;
+    }, h2;
+  }, [w, x, e2, y, s, g]);
+  return h;
+}
+
 // src/utils/tldraw-file/index.ts
 function createRawTldrawFile(store) {
   store != null ? store : store = createTLStore();
@@ -93849,84 +92435,52 @@ function createRawTldrawFile(store) {
   };
 }
 
-// src/components/TldrawApp.tsx
-var import_obsidian6 = require("obsidian");
-
 // src/hooks/useTldrawAppHook.ts
-var React71 = __toESM(require_react());
-
-// src/hooks/useViewModeController.ts
-var import_react120 = __toESM(require_react());
-function maybeBox(boxLike) {
-  return boxLike === void 0 ? void 0 : Box.From(boxLike);
-}
-function useViewModeState(editorRef, {
-  controller,
-  initialBounds,
-  initialImageSize
-}) {
-  var _a2;
-  const [bounds, setImageBounds] = (0, import_react120.useState)(maybeBox(initialBounds));
-  const [imageSize, setImageSize] = (0, import_react120.useState)(initialImageSize);
-  const [displayImage, setDisplayImage] = (0, import_react120.useState)((controller == null ? void 0 : controller.getViewMode()) === "image");
-  const [viewOptions, setImageViewOptions] = (0, import_react120.useState)((_a2 = controller == null ? void 0 : controller.getViewOptions()) != null ? _a2 : {});
-  (0, import_react120.useEffect)(() => {
-    const removeViewModeImageListener = controller == null ? void 0 : controller.setOnChangeHandlers({
-      onViewMode: (mode) => {
-        var _a3;
-        setDisplayImage(mode === "image");
-        const bounds2 = (_a3 = editorRef == null ? void 0 : editorRef.current) == null ? void 0 : _a3.getViewportPageBounds();
-        if (bounds2) {
-          controller.setImageBounds(bounds2);
-        }
-      },
-      onImageBounds: setImageBounds,
-      onImageSize: setImageSize,
-      onViewOptions: (o) => {
-        setImageViewOptions({
-          ...o
-        });
-      }
-    });
-    return () => {
-      removeViewModeImageListener == null ? void 0 : removeViewModeImageListener();
-    };
-  }, []);
-  return {
-    displayImage,
-    imageSize,
-    viewOptions: {
-      ...viewOptions,
-      bounds: maybeBox(bounds)
-    }
-  };
-}
-
-// src/hooks/useTldrawAppHook.ts
-function useTldrawAppHook({
-  debouncedSaveDataToFile,
-  editorRef,
+function useTldrawAppEffects({
+  editor,
+  bounds,
   initialTool,
   isReadonly,
-  plugin,
+  settingsProvider,
   selectNone,
-  storeMetaRef,
-  viewMode,
+  setFileData,
   zoomToBounds
 }) {
-  const viewModeState = useViewModeState(editorRef, viewMode);
-  const storeListenerDisposer = React71.useRef(void 0);
-  const onMount = React71.useCallback((editor) => {
-    var _a2, _b2;
-    const { store } = editor;
-    if (storeMetaRef.current) {
-      storeMetaRef.current.store = store;
-    }
-    (_a2 = storeListenerDisposer.current) == null ? void 0 : _a2.call(storeListenerDisposer);
-    storeListenerDisposer.current = store.listen(debouncedSaveDataToFile, {
+  const [settings, setSettings] = React71.useState(() => settingsProvider.getCurrent());
+  React71.useEffect(() => {
+    const removeListener = settingsProvider.listen(() => {
+      const newSettings = settingsProvider.getCurrent();
+      setSettings({
+        ...newSettings
+      });
+    });
+    return () => {
+      removeListener();
+    };
+  }, [
+    /**
+     * If the settings provider changes, then we need to recalculate the effect.
+     */
+    settingsProvider
+  ]);
+  const safeSeconds = safeSecondsToMs(settings.saveFileDelay);
+  const debouncedSaveDataToFile = c((e2) => {
+    const { store } = editor != null ? editor : {};
+    if (!setFileData || !store) return;
+    setFileData(createRawTldrawFile(store));
+  }, safeSeconds);
+  React71.useEffect(() => {
+    const { store } = editor != null ? editor : {};
+    if (!store) return;
+    const removeListener = store.listen(debouncedSaveDataToFile, {
       scope: "document"
     });
-    editorRef.current = editor;
+    return () => {
+      removeListener();
+    };
+  }, [debouncedSaveDataToFile, editor]);
+  React71.useEffect(() => {
+    if (!editor) return;
     if (selectNone) {
       editor.selectNone();
     }
@@ -93937,15 +92491,12 @@ function useTldrawAppHook({
       snapMode,
       focusMode,
       toolSelected
-    } = plugin.settings;
+    } = settings;
     editor.setCurrentTool(initialTool != null ? initialTool : toolSelected);
     let darkMode = true;
-    if (themeMode === "dark")
-      darkMode = true;
-    else if (themeMode === "light")
-      darkMode = false;
-    else
-      darkMode = isObsidianThemeDark();
+    if (themeMode === "dark") darkMode = true;
+    else if (themeMode === "light") darkMode = false;
+    else darkMode = isObsidianThemeDark();
     editor.user.updateUserPreferences({
       colorScheme: darkMode ? "dark" : "light",
       isSnapMode: snapMode
@@ -93956,7 +92507,7 @@ function useTldrawAppHook({
       isDebugMode: debugMode,
       isFocusMode: focusMode
     });
-    const zoomBounds = (_b2 = viewModeState.bounds) != null ? _b2 : editor.getCurrentPageBounds();
+    const zoomBounds = bounds != null ? bounds : editor.getCurrentPageBounds();
     if (zoomToBounds && zoomBounds) {
       editor.zoomToBounds(zoomBounds, {
         // Define an inset to 0 so that it is consistent with TldrawImage component
@@ -93964,10 +92515,51 @@ function useTldrawAppHook({
         animation: { duration: 0 }
       });
     }
-  }, [viewModeState]);
+  }, [editor]);
+}
+
+// src/hooks/useViewModeController.ts
+var import_react120 = __toESM(require_react());
+function useViewModeState(editor, {
+  controller,
+  initialImageSize,
+  onFileModified,
+  onViewModeChanged
+}) {
+  var _a3;
+  const [imageSize, setImageSize] = (0, import_react120.useState)(initialImageSize);
+  const [displayImage, setDisplayImage] = (0, import_react120.useState)((controller == null ? void 0 : controller.getViewMode()) === "image");
+  const [viewOptions, setImageViewOptions] = (0, import_react120.useState)((_a3 = controller == null ? void 0 : controller.getViewOptions()) != null ? _a3 : {});
+  (0, import_react120.useEffect)(() => {
+    const removeViewModeImageListener = controller == null ? void 0 : controller.setOnChangeHandlers({
+      onViewMode: (mode) => {
+        onViewModeChanged(mode);
+        setDisplayImage(mode === "image");
+        const bounds = editor == null ? void 0 : editor.getViewportPageBounds();
+        if (bounds) {
+          controller == null ? void 0 : controller.setImageBounds(bounds);
+        }
+      },
+      onImageBounds: (bounds) => setImageViewOptions({
+        ...viewOptions,
+        bounds
+      }),
+      onImageSize: setImageSize,
+      onViewOptions: (o) => {
+        setImageViewOptions({
+          ...o
+        });
+      },
+      onFileModified
+    });
+    return () => {
+      removeViewModeImageListener == null ? void 0 : removeViewModeImageListener();
+    };
+  }, [editor]);
   return {
-    onMount,
-    viewModeState
+    displayImage,
+    imageSize,
+    viewOptions
   };
 }
 
@@ -93983,7 +92575,6 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
   autoFocus = true,
   controller,
   hideUi = false,
-  initialBounds,
   initialImageSize,
   initialTool,
   inputFocus = false,
@@ -93992,57 +92583,64 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
   selectNone = false,
   zoomToBounds = false
 } }) => {
-  const saveDelayInMs = safeSecondsToMs(plugin.settings.saveFileDelay);
-  const storeMetaRef = React72.useRef((() => {
-    if (initialData.store) {
-      return initialData;
+  const assetUrls = React72.useRef({
+    fonts: plugin.getFontOverrides(),
+    icons: plugin.getIconOverrides()
+  });
+  const overridesUi = React72.useRef(uiOverrides(plugin));
+  const overridesUiComponents = React72.useRef(components(plugin));
+  const [editor, setEditor] = React72.useState();
+  const [storeSnapshot, setSnapshot] = React72.useState(initialData.initialSnapshot);
+  const setAppState = React72.useCallback((editor2) => {
+    setEditor(editor2);
+  }, []);
+  const { displayImage, imageSize, viewOptions: {
+    bounds,
+    ...viewOptionsOther
+  } } = useViewModeState(editor, {
+    controller,
+    initialImageSize,
+    onViewModeChanged(mode) {
+      if (mode !== "image") return;
+      const { store } = editor != null ? editor : {};
+      if (store) {
+        setSnapshot(store.getStoreSnapshot());
+      }
+      setEditor(void 0);
+    },
+    onFileModified(newInitialData) {
+      if (!displayImage) {
+        console.log("New document data ignored when in interactive mode");
+        return;
+      }
+      const newUUID = newInitialData.meta.uuid;
+      const originalUUID = initialData.meta.uuid;
+      if (newUUID !== originalUUID) {
+        throw new Error(`Tldraw document UUID does not match the original: new - ${newUUID}, original - ${originalUUID}`);
+      }
+      setSnapshot(processInitialData(newInitialData).snapshot);
     }
-    return {
-      meta: initialData.meta,
-      store: createTLStore({
-        shapeUtils: defaultShapeUtils,
-        initialData: initialData.raw
-      })
-    };
-  })());
-  const debouncedSaveDataToFile = c((e2) => {
-    const { meta, store } = storeMetaRef.current;
-    setFileData({
-      meta,
-      tldrawFile: createRawTldrawFile(store)
-    });
-  }, saveDelayInMs);
-  const editorRef = React72.useRef(null);
-  const {
-    onMount,
-    viewModeState: { displayImage, imageSize, viewOptions }
-  } = useTldrawAppHook({
-    debouncedSaveDataToFile,
-    editorRef,
+  });
+  useTldrawAppEffects({
+    bounds,
+    editor,
     initialTool,
     isReadonly,
-    plugin,
-    storeMetaRef,
+    setFileData,
     selectNone,
     zoomToBounds,
-    viewMode: {
-      controller,
-      initialBounds,
-      initialImageSize
-    }
+    settingsProvider: plugin.settingsProvider
   });
   return /* @__PURE__ */ React72.createElement(
     "div",
     {
       className: "tldraw-view-root",
-      onBlur: !inputFocus ? void 0 : () => {
-        var _a2, _b2;
-        (_a2 = editorRef.current) == null ? void 0 : _a2.selectNone();
-        (_b2 = editorRef.current) == null ? void 0 : _b2.blur();
+      onBlur: !inputFocus ? void 0 : (e2) => {
+        editor == null ? void 0 : editor.selectNone();
+        editor == null ? void 0 : editor.blur();
       },
-      onFocus: !inputFocus ? void 0 : () => {
-        var _a2;
-        return (_a2 = editorRef.current) == null ? void 0 : _a2.focus();
+      onFocus: !inputFocus ? void 0 : (e2) => {
+        editor == null ? void 0 : editor.focus();
       }
     },
     displayImage ? /* @__PURE__ */ React72.createElement("div", { className: "ptl-tldraw-image-container", style: {
@@ -94054,9 +92652,11 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
     } }, /* @__PURE__ */ React72.createElement(
       TldrawImage,
       {
-        snapshot: storeMetaRef.current.store.getStoreSnapshot(),
+        snapshot: storeSnapshot,
         padding: 0,
-        ...viewOptions
+        assetUrls: assetUrls.current,
+        bounds: bounds === void 0 ? void 0 : Box.From(bounds),
+        ...viewOptionsOther
       }
     ))) : /* @__PURE__ */ React72.createElement(
       "div",
@@ -94067,47 +92667,55 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
           height: "100%"
         }
       },
-      persistenceKey === void 0 ? /* @__PURE__ */ React72.createElement(
+      /* @__PURE__ */ React72.createElement(
         Tldraw,
         {
-          assetUrls: {
-            fonts: plugin.getFontOverrides(),
-            icons: plugin.getIconOverrides()
-          },
+          persistenceKey: persistenceKey != null ? persistenceKey : initialData.meta.uuid,
+          snapshot: storeSnapshot,
+          assetUrls: assetUrls.current,
           hideUi,
-          overrides: uiOverrides(plugin),
-          store: storeMetaRef.current.store,
-          components: components(plugin),
+          overrides: overridesUi.current,
+          components: overridesUiComponents.current,
           autoFocus,
-          onMount
-        }
-      ) : /* @__PURE__ */ React72.createElement(
-        Tldraw,
-        {
-          persistenceKey,
-          snapshot: storeMetaRef.current.store.getStoreSnapshot(),
-          assetUrls: {
-            fonts: plugin.getFontOverrides(),
-            icons: plugin.getIconOverrides()
-          },
-          hideUi,
-          overrides: uiOverrides(plugin),
-          components: components(plugin),
-          autoFocus,
-          onMount
+          onMount: setAppState
         }
       )
     )
   );
 };
+function processInitialData(initialData) {
+  const { meta, store } = (() => {
+    if (initialData.store) {
+      return initialData;
+    }
+    return {
+      meta: initialData.meta,
+      store: createTLStore({
+        shapeUtils: defaultShapeUtils,
+        initialData: initialData.raw
+      })
+    };
+  })();
+  return {
+    meta,
+    snapshot: store.getStoreSnapshot()
+  };
+}
 var createRootAndRenderTldrawApp = (node, initialData, setFileData, plugin, options = {}) => {
+  const { meta, snapshot } = processInitialData(initialData);
   const root = (0, import_client2.createRoot)(node);
   root.render(
     /* @__PURE__ */ React72.createElement(
       TldrawApp,
       {
-        setFileData,
-        initialData,
+        setFileData: (tldrawFile) => setFileData({
+          meta,
+          tldrawFile
+        }),
+        initialData: {
+          meta,
+          initialSnapshot: snapshot
+        },
         plugin,
         options
       }
@@ -94134,9 +92742,9 @@ function TldrawLoadableMixin(Base) {
      * Removes the previously added entry point `tldraw-view-content`, and unmounts {@linkcode reactRoot}.
      */
     onunload() {
-      var _a2;
+      var _a3;
       this.contentEl.removeClass("tldraw-view-content");
-      (_a2 = this.reactRoot) == null ? void 0 : _a2.unmount();
+      (_a3 = this.reactRoot) == null ? void 0 : _a3.unmount();
     }
     getTldrawOptions() {
       return {};
@@ -94156,9 +92764,9 @@ function TldrawLoadableMixin(Base) {
      * @returns 
      */
     async setTlData(tldata, useIframe = false) {
-      var _a2;
+      var _a3;
       const tldrawContainer = this.tldrawContainer;
-      (_a2 = this.reactRoot) == null ? void 0 : _a2.unmount();
+      (_a3 = this.reactRoot) == null ? void 0 : _a3.unmount();
       if (!useIframe) {
         this.reactRoot = this.createReactRoot(tldrawContainer, tldata);
         return;
@@ -94196,8 +92804,7 @@ var TldrawView = class extends TldrawLoadableMixin(import_obsidian7.TextFileView
         TLDATA_DELIMITER_END,
         stringifiedData
       );
-      if (!this.file)
-        return;
+      if (!this.file) return;
       await this.app.vault.modify(this.file, result);
     };
     this.plugin = plugin;
@@ -94219,13 +92826,11 @@ var TldrawView = class extends TldrawLoadableMixin(import_obsidian7.TextFileView
   clear() {
   }
 };
-var TldrawFileView = class extends TldrawView {
+var TldrawFileView = class _TldrawFileView extends TldrawView {
   constructor() {
     super(...arguments);
     this.setFileData = async (data) => {
-      console.log("Saving document.");
-      if (!TldrawFileView.isTldrFile(this.file))
-        return;
+      if (!_TldrawFileView.isTldrFile(this.file)) return;
       await this.app.vault.modify(
         this.file,
         JSON.stringify(
@@ -94244,8 +92849,7 @@ var TldrawFileView = class extends TldrawView {
     this.contentEl.addClass("tldraw-view-content");
   }
   async onLoadFile(file) {
-    console.log("tldraw file view on load file");
-    if (!TldrawFileView.isTldrFile(file)) {
+    if (!_TldrawFileView.isTldrFile(file)) {
       this.tldrawContainer.createDiv({
         text: 'This file is not a ".tldr" file!'
       });
@@ -94260,10 +92864,10 @@ var TldrawFileView = class extends TldrawView {
     });
   }
   getTldrawOptions() {
-    var _a2;
+    var _a3;
     return {
       ...super.getTldrawOptions(),
-      persistenceKey: (_a2 = this.file) == null ? void 0 : _a2.path
+      persistenceKey: (_a3 = this.file) == null ? void 0 : _a3.path
     };
   }
 };
@@ -94275,7 +92879,7 @@ var import_obsidian10 = require("obsidian");
 var import_obsidian8 = require("obsidian");
 var FileSearchModal = class extends import_obsidian8.SuggestModal {
   constructor(plugin, options) {
-    var _a2;
+    var _a3;
     super(plugin.app);
     this.searchRes = {
       searchPath: "",
@@ -94309,7 +92913,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
     this.onEmptyStateText = options.onEmptyStateText;
     this.setSelection = options.setSelection;
     this.initialValue = options.initialValue;
-    this.selectDir = (_a2 = options.selectDir) != null ? _a2 : false;
+    this.selectDir = (_a3 = options.selectDir) != null ? _a3 : false;
   }
   onOpen() {
     super.onOpen();
@@ -94343,8 +92947,8 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
     });
   }
   renderSuggestion(file, el) {
-    var _a2, _b2;
-    if (file.path === ((_b2 = (_a2 = this.searchRes) == null ? void 0 : _a2.currDir) == null ? void 0 : _b2.path)) {
+    var _a3, _b2;
+    if (file.path === ((_b2 = (_a3 = this.searchRes) == null ? void 0 : _a3.currDir) == null ? void 0 : _b2.path)) {
       el.createEl("div", { text: `Use this directory (${file.path})` });
       return;
     }
@@ -94359,8 +92963,8 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
     this.close();
   }
   selectSuggestion(value, evt) {
-    var _a2, _b2;
-    if (value instanceof import_obsidian8.TFile || value.path === ((_b2 = (_a2 = this.searchRes) == null ? void 0 : _a2.currDir) == null ? void 0 : _b2.path)) {
+    var _a3, _b2;
+    if (value instanceof import_obsidian8.TFile || value.path === ((_b2 = (_a3 = this.searchRes) == null ? void 0 : _a3.currDir) == null ? void 0 : _b2.path)) {
       this.onChooseSuggestion(value, evt);
       return;
     }
@@ -94541,8 +93145,7 @@ var iconTypes2 = [
 
 // src/obsidian/plugin/settings.ts
 function processFontOverrides(overrides, getResourcePath) {
-  if (overrides === void 0)
-    return void 0;
+  if (overrides === void 0) return void 0;
   const { draw, monospace, sansSerif, serif } = overrides;
   const processed = {};
   if (draw !== void 0) {
@@ -94560,12 +93163,10 @@ function processFontOverrides(overrides, getResourcePath) {
   return processed;
 }
 function processIconOverrides(overrides, getResourcePath) {
-  if (overrides === void 0)
-    return void 0;
+  if (overrides === void 0) return void 0;
   const processed = {};
   for (const [iconName, override] of Object.entries(overrides)) {
-    if (override === void 0)
-      continue;
+    if (override === void 0) continue;
     processed[iconName] = getResourcePath(override);
   }
   return processed;
@@ -94576,8 +93177,8 @@ function addIfDefined(object2, key, value) {
   }
 }
 function getOverrideOrUndefinedForDefault(key, original, updates) {
-  var _a2;
-  return updates[key] === null ? void 0 : (_a2 = updates[key]) != null ? _a2 : original == null ? void 0 : original[key];
+  var _a3;
+  return updates[key] === null ? void 0 : (_a3 = updates[key]) != null ? _a3 : original == null ? void 0 : original[key];
 }
 function updateFontOverrides(original, updates) {
   const object2 = {};
@@ -94619,15 +93220,15 @@ function updateIconOverrides(original, updates) {
 var import_obsidian9 = require("obsidian");
 function createIconOverridesSettingsEl(plugin, containerEl) {
   const currentValue = () => {
-    var _a2, _b2;
-    return Object.entries((_b2 = (_a2 = plugin.settings.icons) == null ? void 0 : _a2.overrides) != null ? _b2 : {}).filter((e2) => e2[1] !== void 0);
+    var _a3, _b2;
+    return Object.entries((_b2 = (_a3 = plugin.settings.icons) == null ? void 0 : _a3.overrides) != null ? _b2 : {}).filter((e2) => e2[1] !== void 0);
   };
   let resetButton;
   const saveIconSettings = async (updates) => {
-    var _a2;
+    var _a3;
     plugin.settings.icons = updates === null ? void 0 : {
       overrides: updateIconOverrides(
-        (_a2 = plugin.settings.icons) == null ? void 0 : _a2.overrides,
+        (_a3 = plugin.settings.icons) == null ? void 0 : _a3.overrides,
         updates
       )
     };
@@ -94641,8 +93242,7 @@ function createIconOverridesSettingsEl(plugin, containerEl) {
           if (file instanceof import_obsidian9.TFolder) {
             const updates = {};
             for (const child of file.children) {
-              if (!(child instanceof import_obsidian9.TFile))
-                continue;
+              if (!(child instanceof import_obsidian9.TFile)) continue;
               if (iconExtensions.includes(child.extension) && iconTypes2.includes(child.basename)) {
                 updates[child.basename] = child.path;
               }
@@ -94663,12 +93263,12 @@ function createIconOverridesSettingsEl(plugin, containerEl) {
   });
   const newIconOverrideSetting = (icon) => {
     const currentValue2 = () => {
-      var _a2, _b2;
-      return (_b2 = (_a2 = plugin.settings.icons) == null ? void 0 : _a2.overrides) == null ? void 0 : _b2[icon];
+      var _a3, _b2;
+      return (_b2 = (_a3 = plugin.settings.icons) == null ? void 0 : _a3.overrides) == null ? void 0 : _b2[icon];
     };
     let resetButton2;
     const setIcon = async (iconPath) => {
-      var _a2;
+      var _a3;
       if (iconPath !== null && iconPath.length === 0) {
         iconPath = null;
       }
@@ -94678,7 +93278,7 @@ function createIconOverridesSettingsEl(plugin, containerEl) {
       } else {
         new import_obsidian9.Notice(`Reset icon "${icon}" to default.`);
       }
-      textInput == null ? void 0 : textInput.setValue((_a2 = currentValue2()) != null ? _a2 : "");
+      textInput == null ? void 0 : textInput.setValue((_a3 = currentValue2()) != null ? _a3 : "");
       resetButton2 == null ? void 0 : resetButton2.setDisabled(currentValue2() === void 0);
     };
     let textInput;
@@ -94871,10 +93471,10 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
       this.containerEl.createEl("h1", { text: "Fonts" });
       this.containerEl.createEl("h2", { text: "Default font overrides" });
       const saveFontSettings = async (updates) => {
-        var _a2;
+        var _a3;
         this.plugin.settings.fonts = {
           overrides: updateFontOverrides(
-            (_a2 = this.plugin.settings.fonts) == null ? void 0 : _a2.overrides,
+            (_a3 = this.plugin.settings.fonts) == null ? void 0 : _a3.overrides,
             updates
           )
         };
@@ -94882,12 +93482,12 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
       };
       const newFontOverrideSetting = (args) => {
         const currentValue = () => {
-          var _a2, _b2;
-          return (_b2 = (_a2 = this.plugin.settings.fonts) == null ? void 0 : _a2.overrides) == null ? void 0 : _b2[args.font];
+          var _a3, _b2;
+          return (_b2 = (_a3 = this.plugin.settings.fonts) == null ? void 0 : _a3.overrides) == null ? void 0 : _b2[args.font];
         };
         let resetButton;
         const setFont = async (fontPath) => {
-          var _a2;
+          var _a3;
           if (fontPath !== null && fontPath.length === 0) {
             fontPath = null;
           }
@@ -94897,7 +93497,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
           } else {
             new import_obsidian10.Notice(`Reset font "${args.font}" to default.`);
           }
-          textInput == null ? void 0 : textInput.setValue((_a2 = currentValue()) != null ? _a2 : "");
+          textInput == null ? void 0 : textInput.setValue((_a3 = currentValue()) != null ? _a3 : "");
           resetButton == null ? void 0 : resetButton.setDisabled(currentValue() === void 0);
         };
         let textInput;
@@ -95163,11 +93763,11 @@ function pluginMenuLabel(menuItem, {
 }
 
 // src/obsidian/TldrawReadonly.ts
-var TldrawReadonly = class extends TldrawLoadableMixin(import_obsidian11.FileView) {
+var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_obsidian11.FileView) {
   constructor(leaf, plugin) {
     super(leaf);
     this.setFileData = () => {
-      logClass(TldrawReadonly, this.setFileData, "Ignore saving file due to read only mode.");
+      logClass(_TldrawReadonly, this.setFileData, "Ignore saving file due to read only mode.");
     };
     this.plugin = plugin;
     this.navigation = true;
@@ -95204,8 +93804,7 @@ var TldrawReadonly = class extends TldrawLoadableMixin(import_obsidian11.FileVie
   onPaneMenu(menu, source) {
     super.onPaneMenu(menu, source);
     const { file } = this;
-    if (!file)
-      return;
+    if (!file) return;
     menu.addItem((item) => pluginMenuLabel(
       item.setSection("tldraw")
     )).addItem(
@@ -95248,20 +93847,23 @@ function sealed(target, args) {
   Object.seal(target.prototype);
 }
 function pluginBuild(Base, args) {
+  var _TldrawPluginDevelopment_decorators, _init2, _a3;
   const decoratedPlugin = Base.name;
-  let TldrawPluginDevelopment = class extends Base {
+  _TldrawPluginDevelopment_decorators = [sealed];
+  let _TldrawPluginDevelopment = class _TldrawPluginDevelopment extends (_a3 = Base) {
     onload() {
-      logClass(TldrawPluginDevelopment, this.onload, `Loading plugin '${decoratedPlugin}.`);
+      logClass(_TldrawPluginDevelopment, this.onload, `Loading plugin '${decoratedPlugin}.`);
       return super.onload();
     }
     onunload() {
-      logClass(TldrawPluginDevelopment, this.onload, `Unloading plugin '${decoratedPlugin}'.`);
+      logClass(_TldrawPluginDevelopment, this.onload, `Unloading plugin '${decoratedPlugin}'.`);
       return super.onunload();
     }
   };
-  TldrawPluginDevelopment = __decorateClass([
-    sealed
-  ], TldrawPluginDevelopment);
+  _init2 = __decoratorStart(_a3);
+  _TldrawPluginDevelopment = __decorateElement(_init2, 0, "TldrawPluginDevelopment", _TldrawPluginDevelopment_decorators, _TldrawPluginDevelopment);
+  __runInitializers(_init2, 1, _TldrawPluginDevelopment);
+  let TldrawPluginDevelopment = _TldrawPluginDevelopment;
   console.log(`Decorating '${decoratedPlugin}' as '${TldrawPluginDevelopment.name}'`);
   return TldrawPluginDevelopment;
 }
@@ -95273,7 +93875,7 @@ var import_obsidian13 = require("obsidian");
 var durationTreshold = 0;
 var log = console.log.bind(window.console);
 var DEBUG_MODE = false;
-var CustomMutationObserver = class extends MutationObserver {
+var CustomMutationObserver = class _CustomMutationObserver extends MutationObserver {
   constructor(callback, name) {
     super(!DEBUG_MODE ? callback : async (mutationsList, observer) => {
       const startTime = performance.now();
@@ -95281,7 +93883,7 @@ var CustomMutationObserver = class extends MutationObserver {
       const endTime = performance.now();
       const executionTime = endTime - startTime;
       if (executionTime > durationTreshold) {
-        console.log(`${CustomMutationObserver.name}.${name} MutationObserver callback took ${executionTime}ms to execute`, observer);
+        console.log(`${_CustomMutationObserver.name}.${name} MutationObserver callback took ${executionTime}ms to execute`, observer);
       }
     });
   }
@@ -95308,18 +93910,22 @@ function createTldrawAppViewModeController(initialBounds) {
       return this.viewOptions;
     },
     setImageBounds(bounds) {
-      var _a2;
+      var _a3;
       this.viewOptions.bounds = bounds;
-      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onImageBounds(bounds);
+      (_a3 = this.onChangeHandlers) == null ? void 0 : _a3.onImageBounds(bounds);
+    },
+    setUpdatedData(tlDataDocument) {
+      var _a3;
+      (_a3 = this.onChangeHandlers) == null ? void 0 : _a3.onFileModified(tlDataDocument);
     },
     setViewMode(viewMode) {
-      var _a2;
+      var _a3;
       this.viewMode = viewMode;
-      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onViewMode(viewMode);
+      (_a3 = this.onChangeHandlers) == null ? void 0 : _a3.onViewMode(viewMode);
     },
     setImageSize(size4) {
-      var _a2;
-      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onImageSize(size4);
+      var _a3;
+      (_a3 = this.onChangeHandlers) == null ? void 0 : _a3.onImageSize(size4);
     },
     setOnChangeHandlers(handlers) {
       this.onChangeHandlers = handlers;
@@ -95330,9 +93936,9 @@ function createTldrawAppViewModeController(initialBounds) {
       };
     },
     toggleBackground() {
-      var _a2;
+      var _a3;
       this.viewOptions.background = !this.viewOptions.background;
-      (_a2 = this.onChangeHandlers) == null ? void 0 : _a2.onViewOptions(this.viewOptions);
+      (_a3 = this.onChangeHandlers) == null ? void 0 : _a3.onViewOptions(this.viewOptions);
     },
     toggleInteractive() {
       if (this.viewMode !== "image") {
@@ -95347,9 +93953,9 @@ function createTldrawAppViewModeController(initialBounds) {
 // src/obsidian/menu/create-embed-menu.ts
 var import_obsidian12 = require("obsidian");
 function background(menuItem, controller) {
-  var _a2;
+  var _a3;
   return menuItem.setTitle("Show background").setChecked(
-    (_a2 = controller.getViewOptions().background) != null ? _a2 : null
+    (_a3 = controller.getViewOptions().background) != null ? _a3 : null
   );
 }
 function interactiveMode(menuItem, controller) {
@@ -95445,8 +94051,7 @@ async function markdownPostProcessor(plugin, element, context) {
     return;
   }
   const file = plugin.app.vault.getAbstractFileByPath(context.sourcePath);
-  if (!(file instanceof import_obsidian13.TFile))
-    return;
+  if (!(file instanceof import_obsidian13.TFile)) return;
   if (!context.frontmatter || context.frontmatter["tldraw-file"] !== true) {
     return;
   }
@@ -95461,8 +94066,7 @@ async function markdownPostProcessor(plugin, element, context) {
     }
     return internalEmbedDiv2;
   })();
-  if (internalEmbedDiv === void 0)
-    return;
+  if (internalEmbedDiv === void 0) return;
   const markdownEmbed = internalEmbedDiv.hasClass("markdown-embed");
   const markdownReadingView = internalEmbedDiv.hasClass("markdown-reading-view");
   const isMarkdownView = markdownEmbed || markdownReadingView;
@@ -95492,68 +94096,103 @@ async function markdownPostProcessor(plugin, element, context) {
       controller
     });
     const parent = internalEmbedDiv.parentElement;
-    if (parent === null)
-      throw Error(`${markdownPostProcessor.name}: No parent element for internalEmbedDiv.
+    if (parent === null) throw Error(`${markdownPostProcessor.name}: No parent element for internalEmbedDiv.
 
 	It is needed to ensure the attached react root component is unmounted properly.`);
-    let reactRoot;
-    let timer = null;
-    const activateReactRoot = async () => {
-      if (timer) {
-        clearTimeout(timer);
-      }
-      try {
-        reactRoot = await createReactTldrawAppRoot({
-          controller,
-          file,
-          plugin,
-          tldrawEmbedViewContent,
-          embedValues
-        });
-      } catch (e2) {
-        console.error("There was an error while mounting the tldraw app: ", e2);
-      }
-    };
-    const markdownObserverFn = (m) => {
-      if (reactRoot === void 0) {
-        activateReactRoot().then(() => {
-          observerParent.observe(parent, { childList: true });
-        });
-        return;
-      }
-      const { target, attributeName } = m[0];
-      if (!(target instanceof HTMLElement) || !["alt", "width", "height"].contains(attributeName)) {
-        return;
-      }
-      if (timer) {
-        clearTimeout(timer);
-      }
-      const { bounds, imageSize } = parseEmbedValues(target);
-      timer = setTimeout(async () => {
-        controller.setImageSize(imageSize);
-        controller.setImageBounds(bounds);
-      }, 500);
-    };
-    const observer = new CustomMutationObserver(markdownObserverFn, "markdownPostProcessorObserverFn");
-    observer.observe(internalEmbedDiv, { attributes: true });
-    const observerParent = new CustomMutationObserver(function markdownParentObserverFn(m) {
-      if (!parent.contains(internalEmbedDiv)) {
-        reactRoot == null ? void 0 : reactRoot.unmount();
-        reactRoot = void 0;
-        if (timer) {
-          clearTimeout(timer);
-        }
-        observerParent.disconnect();
-        return;
-      }
-    }, "markdownPostProcessorObserverFn");
-    observerParent.observe(parent, { childList: true });
-    await activateReactRoot();
+    await loadEmbedTldraw(tldrawEmbedViewContent, {
+      controller,
+      embedValues,
+      file,
+      internalEmbedDiv,
+      parent,
+      plugin
+    });
     return;
   } else if (!isInternal && isMarkdownView) {
     throw new Error(`${markdownPostProcessor.name}: Unexpected`);
   }
   throw new Error(`${markdownPostProcessor.name}: Unexpected`);
+}
+async function loadEmbedTldraw(tldrawEmbedViewContent, {
+  controller,
+  embedValues,
+  file,
+  internalEmbedDiv,
+  parent,
+  plugin
+}) {
+  let reactRoot;
+  let timer = null;
+  const parseData = async () => {
+    const fileData = await plugin.app.vault.read(file);
+    return parseTLDataDocument(plugin.manifest.version, fileData);
+  };
+  const fileListener = plugin.tldrawFileListeners.addListener(file, async () => {
+    if (!parent.isConnected) {
+      fileListener.remove();
+      return;
+    }
+    controller.setUpdatedData(await parseData());
+  }, { immediatelyPause: true });
+  const activateReactRoot = async () => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    try {
+      fileListener.isPaused = true;
+      const parsedData = await parseData();
+      reactRoot = await createReactTldrawAppRoot({
+        controller,
+        parsedData,
+        plugin,
+        tldrawEmbedViewContent,
+        embedValues
+      });
+      fileListener.isPaused = false;
+    } catch (e2) {
+      console.error("There was an error while mounting the tldraw app: ", e2);
+    }
+  };
+  const markdownObserverFn = (m) => {
+    if (reactRoot === void 0) {
+      activateReactRoot().then(() => {
+        observerParent.observe(parent, { childList: true });
+      });
+      return;
+    }
+    const { target, attributeName } = m[0];
+    if (!(target instanceof HTMLElement) || !["alt", "width", "height"].contains(attributeName)) {
+      return;
+    }
+    if (timer) {
+      clearTimeout(timer);
+    }
+    const { bounds, imageSize } = parseEmbedValues(target);
+    timer = setTimeout(async () => {
+      controller.setImageSize(imageSize);
+      controller.setImageBounds(bounds);
+    }, 500);
+  };
+  const observer = new CustomMutationObserver(markdownObserverFn, "markdownPostProcessorObserverFn");
+  observer.observe(internalEmbedDiv, { attributes: true });
+  const observerParent = new CustomMutationObserver(function markdownParentObserverFn(m) {
+    if (!parent.contains(internalEmbedDiv)) {
+      fileListener.isPaused = true;
+      reactRoot == null ? void 0 : reactRoot.unmount();
+      reactRoot = void 0;
+      if (timer) {
+        clearTimeout(timer);
+      }
+      observerParent.disconnect();
+      return;
+    }
+  }, "markdownPostProcessorObserverFn");
+  observerParent.observe(parent, { childList: true });
+  new CustomMutationObserver(function(m) {
+    if (parent.isConnected) return;
+    fileListener.remove();
+  }, "markdownTldrawFileListener").observe(parent, { childList: true });
+  await activateReactRoot();
 }
 function createTldrawEmbedView(internalEmbedDiv, {
   file,
@@ -95622,8 +94261,8 @@ function parseEmbedValues(el, imageBounds = {
     h: Number.NaN
   }
 }) {
-  var _a2, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
-  const alt = (_b2 = (_a2 = el.attributes.getNamedItem("alt")) == null ? void 0 : _a2.value) != null ? _b2 : "";
+  var _a3, _b2, _c, _d, _e, _f, _g, _h, _i, _j, _k, _l, _m, _n;
+  const alt = (_b2 = (_a3 = el.attributes.getNamedItem("alt")) == null ? void 0 : _a3.value) != null ? _b2 : "";
   const altSplit = alt.split(";").map((e2) => e2.trim());
   const altEntries = altSplit.map((e2) => e2.split("="));
   const altNamedProps = Object.fromEntries(altEntries);
@@ -95646,14 +94285,12 @@ function parseEmbedValues(el, imageBounds = {
 }
 async function createReactTldrawAppRoot({
   controller,
-  file,
+  parsedData,
   plugin,
   tldrawEmbedViewContent,
   embedValues
 }) {
-  const fileData = await plugin.app.vault.read(file);
-  const parsedData = parseTLDataDocument(plugin.manifest.version, fileData);
-  const { bounds, imageSize } = embedValues;
+  const { imageSize } = embedValues;
   return createRootAndRenderTldrawApp(
     tldrawEmbedViewContent,
     parsedData,
@@ -95667,7 +94304,6 @@ async function createReactTldrawAppRoot({
       inputFocus: true,
       selectNone: true,
       initialTool: "hand",
-      initialBounds: bounds,
       initialImageSize: imageSize,
       zoomToBounds: true
     }
@@ -95681,11 +94317,9 @@ function registerCommands(plugin) {
     name: "Toggle view mode",
     checkCallback: (checking) => {
       const file = plugin.app.workspace.getActiveFile();
-      if (!file)
-        return false;
+      if (!file) return false;
       const fileIsTldraw = plugin.isTldrawFile(file);
-      if (checking)
-        return fileIsTldraw;
+      if (checking) return fileIsTldraw;
       const leaf = plugin.app.workspace.getLeaf(false);
       const currentViewMode = plugin.getLeafFileViewMode(leaf, file);
       const oppositeViewMode = currentViewMode === VIEW_TYPE_MARKDOWN ? VIEW_TYPE_TLDRAW : VIEW_TYPE_MARKDOWN;
@@ -95769,13 +94403,56 @@ function registerCommands(plugin) {
   });
 }
 
+// src/obsidian/plugin/TldrawFileListenerMap.ts
+var TldrawFileListenerMap = class {
+  constructor(plugin) {
+    this.map = /* @__PURE__ */ new Map();
+    this.plugin = plugin;
+  }
+  addListener(tFile, callback, {
+    immediatelyPause = false
+  } = {}) {
+    if (!this.plugin.isTldrawFile(tFile)) {
+      throw new Error(`${tFile.path} is not a valid tldraw markdown file.`);
+    }
+    const { path } = tFile;
+    let listeners = this.map.get(path);
+    if (listeners === void 0) {
+      this.map.set(path, listeners = []);
+    }
+    const listener = {
+      isPaused: immediatelyPause,
+      call() {
+        if (this.isPaused) return;
+        callback();
+      },
+      remove: () => {
+        listeners.remove(listener);
+        if (listeners.length === 0) {
+          this.map.delete(path);
+        }
+      }
+    };
+    listeners.push(listener);
+    return listener;
+  }
+  getListeners(tFile) {
+    const listeners = this.map.get(tFile.path);
+    if (listeners === void 0) return;
+    return [...listeners];
+  }
+};
+
 // src/main.ts
-var TldrawPlugin = class extends import_obsidian14.Plugin {
+var _TldrawPlugin_decorators, _init, _a2;
+_TldrawPlugin_decorators = [pluginBuild];
+var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
   constructor() {
     super(...arguments);
     this.transientUpdate = false;
     // keeps track of what view mode each tab-file combo should be in:
     this.leafFileViewModes = {};
+    this.tldrawFileListeners = new TldrawFileListenerMap(this);
     this.registerCommands = () => registerCommands(this);
     this.setMarkdownView = async (leaf) => {
       await leaf.setViewState({
@@ -95839,8 +94516,7 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
         leaf = this.app.workspace.getLeaf("window");
       else if (location === "split-tab")
         leaf = this.app.workspace.getLeaf("split");
-      else
-        leaf = this.app.workspace.getLeaf(false);
+      else leaf = this.app.workspace.getLeaf(false);
       await leaf.openFile(file);
       await this.updateViewMode(viewType, leaf);
     };
@@ -95857,6 +94533,14 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
           location,
           VIEW_TYPE_TLDRAW_FILE
         );
+      }
+    };
+    this.settingsProvider = {
+      getCurrent: () => this.settings,
+      listen: (callback) => {
+        console.log(`TODO: Settings listener callback not implemented.`);
+        return () => {
+        };
       }
     };
   }
@@ -95940,10 +94624,8 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
       this.app.workspace.on("editor-menu", (menu, editor, source) => {
         const file = source.file;
         const leaf = this.app.workspace.getLeaf(false);
-        if (!leaf || !(file instanceof import_obsidian14.TFile))
-          return;
-        if (!this.isTldrawFile(file))
-          return;
+        if (!leaf || !(file instanceof import_obsidian14.TFile)) return;
+        if (!this.isTldrawFile(file)) return;
         menu.addItem((item) => {
           item.setIcon(TLDRAW_ICON_NAME).setSection("close").setTitle("View as Tldraw").onClick(async () => {
             await this.updateViewMode(VIEW_TYPE_TLDRAW, leaf);
@@ -95953,8 +94635,7 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
     );
     this.registerEvent(
       this.app.workspace.on("file-menu", (menu, file, source, leaf) => {
-        if (!(file instanceof import_obsidian14.TFile))
-          return;
+        if (!(file instanceof import_obsidian14.TFile)) return;
         if (file.path.endsWith(TLDRAW_FILE_EXTENSION)) {
           menu.addItem((item) => pluginMenuLabel(
             item.setSection("tldraw")
@@ -95971,10 +94652,8 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
           });
           return;
         }
-        if (!leaf)
-          return;
-        if (!this.isTldrawFile(file))
-          return;
+        if (!leaf) return;
+        if (!this.isTldrawFile(file)) return;
         const { type } = leaf.getViewState();
         const viewMode = this.getLeafFileViewMode(leaf, file) || type;
         const isMDMode = viewMode === VIEW_TYPE_MARKDOWN;
@@ -95991,17 +94670,14 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
     this.registerEvent(
       this.app.workspace.on("active-leaf-change", async (leaf) => {
         this.setStatusBarViewModeVisibility(false);
-        if (!leaf)
-          return;
+        if (!leaf) return;
         const leafViewState = leaf.getViewState();
         const leafViewMode = leafViewState.type;
         const validViewType = isValidViewType(leafViewMode);
-        if (!validViewType)
-          return;
+        if (!validViewType) return;
         const fileFromState = leafViewState.state.file;
         const file = this.app.workspace.getActiveFile();
-        if (!file || !fileFromState)
-          return;
+        if (!file || !fileFromState) return;
         if (fileFromState !== file.path || !this.isTldrawFile(file))
           return;
         const viewMode = this.getLeafFileViewMode(leaf, file);
@@ -96009,12 +94685,18 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
         this.updateStatusBarViewMode(viewMode);
       })
     );
+    this.registerEvent(this.app.vault.on("modify", async (file) => {
+      if (!(file instanceof import_obsidian14.TFile)) return;
+      if (!this.hasTldrawFrontMatterKey(file)) return;
+      const listeners = this.tldrawFileListeners.getListeners(file);
+      if (listeners === void 0 || listeners.length === 0) return;
+      listeners.forEach((e2) => e2.call());
+    }));
   }
   setStatusBarViewModeVisibility(visible) {
     if (visible)
       this.statusBarRoot.removeClass("ptl-hide-statusbar-viewmode");
-    else
-      this.statusBarRoot.addClass("ptl-hide-statusbar-viewmode");
+    else this.statusBarRoot.addClass("ptl-hide-statusbar-viewmode");
   }
   updateStatusBarViewMode(view) {
     useStatusBarState.setState({ view: { mode: view, source: "plugin" } });
@@ -96026,11 +94708,11 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
    * @returns
    */
   getLeafFileId(leaf, file) {
-    var _a2;
+    var _a3;
     leaf != null ? leaf : leaf = this.app.workspace.getLeaf(false);
     file != null ? file : file = this.app.workspace.getActiveFile();
     const leafId = leaf.id;
-    const filePath = (_a2 = file == null ? void 0 : file.path) != null ? _a2 : "";
+    const filePath = (_a3 = file == null ? void 0 : file.path) != null ? _a3 : "";
     return `${leafId}-${filePath}`;
   }
   getLeafFileViewMode(leaf, file) {
@@ -96046,8 +94728,7 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
     view != null ? view : view = VIEW_TYPE_TLDRAW;
     leaf != null ? leaf : leaf = this.app.workspace.getLeaf(false);
     const { type } = leaf == null ? void 0 : leaf.getViewState();
-    if (type === view)
-      return;
+    if (type === view) return;
     switch (view) {
       case VIEW_TYPE_TLDRAW:
         await this.setTldrawView(leaf);
@@ -96082,8 +94763,10 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
     return filename;
   }
   isTldrawFile(file) {
-    if (!file)
-      return false;
+    if (!file) return false;
+    return this.hasTldrawFrontMatterKey(file);
+  }
+  hasTldrawFrontMatterKey(file) {
     const fcache = file ? this.app.metadataCache.getFileCache(file) : null;
     return !!(fcache == null ? void 0 : fcache.frontmatter) && !!fcache.frontmatter[FRONTMATTER_KEY];
   }
@@ -96107,21 +94790,21 @@ var TldrawPlugin = class extends import_obsidian14.Plugin {
     await this.saveData(this.settings);
   }
   getFontOverrides() {
-    var _a2;
-    return processFontOverrides((_a2 = this.settings.fonts) == null ? void 0 : _a2.overrides, (font) => {
+    var _a3;
+    return processFontOverrides((_a3 = this.settings.fonts) == null ? void 0 : _a3.overrides, (font) => {
       return this.app.vault.adapter.getResourcePath(font).split("?")[0];
     });
   }
   getIconOverrides() {
-    var _a2;
-    return processIconOverrides((_a2 = this.settings.icons) == null ? void 0 : _a2.overrides, (icon) => {
+    var _a3;
+    return processIconOverrides((_a3 = this.settings.icons) == null ? void 0 : _a3.overrides, (icon) => {
       return this.app.vault.adapter.getResourcePath(icon).split("?")[0];
     });
   }
 };
-TldrawPlugin = __decorateClass([
-  pluginBuild
-], TldrawPlugin);
+_init = __decoratorStart(_a2);
+TldrawPlugin = __decorateElement(_init, 0, "TldrawPlugin", _TldrawPlugin_decorators, TldrawPlugin);
+__runInitializers(_init, 1, TldrawPlugin);
 /*! Bundled license information:
 
 react/cjs/react.development.js:
