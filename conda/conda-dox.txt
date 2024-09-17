@@ -3,7 +3,6 @@ conda-tree
 contextily
 geopandas
 jupyter-book
-manim
 nbconvert
 plotnine
 rocketpy

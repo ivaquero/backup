@@ -1,4 +1,3 @@
-bambi
 blackjax
 conda-tree
 ipykernel
@@ -8,8 +7,8 @@ multiprocess
 nbconvert
 openpyxl
 plotnine
-preliz
 pygwalker
+pytorch
 scikit-learn
 tabulate
 yfinance

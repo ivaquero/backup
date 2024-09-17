@@ -1,15 +1,17 @@
 {
     "files": {
-        "ignoreUnknown": true
-    },
-    "formatter": {
-        "enabled": true
-    },
-    "linter": {
-        "enabled": true,
+        "ignoreUnknown": true,
         "ignore": [
             "katex/*.js"
         ]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "lineWidth": 80
+    },
+    "linter": {
+        "enabled": true
     },
     "organizeImports": {
         "enabled": true

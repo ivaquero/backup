@@ -53,7 +53,8 @@
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
-    "*.m": "matlab"
+    "*.m": "matlab",
+    "*.rb": "ruby",
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -209,25 +210,22 @@
   "bookmarks.sideBar.expanded": true,
   "bookmarks.useWorkaroundForFormatters": true,
   // front end & formatters
+  "emmet.showSuggestionsAsSnippets": true,
+  "biome.rename": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "html.format.indentInnerHtml": true,
-  "html.format.indentHandlebars": true,
-  "css.format.enable": true,
-  "css.format.spaceAroundSelectorSeparator": true,
-  "emmet.showSuggestionsAsSnippets": true,
-  "javascript.format.semicolons": "remove",
+  "[css]": {
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "[javascript][typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+  },
   "javascript.suggest.autoImports": true,
-  "typescript.format.semicolons": "remove",
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "typescript.suggest.autoImports": true,
-  "[javascript][typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
-  },
-  "biome.rename": true,
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -412,7 +410,7 @@
   "wordcounter.simple_wordcount": false,
   // others
   "material-icon-theme.files.associations": {
-    "*.m": "matlab"
+    "*.m": "matlab",
   },
   "color-picker-universal.languages": [
     "*",
@@ -424,6 +422,7 @@
     "editor.defaultFormatter": "julialang.language-julia"
   },
   "julia.deleteJuliaCovFiles": true,
+  "julia.enableCrashReporter": false,
   "julia.enableTelemetry": false,
   "julia.environmentPath": "${workspaceFolder}",
   "julia.execution.codeInREPL": true,
@@ -438,6 +437,7 @@
   "MATLAB.indexWorkspace": false,
   "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
   "MATLAB.matlabConnectionTiming": "never",
+  "MATLAB.showFeatureNotAvailableError": false,
   "MATLAB.telemetry": false,
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
@@ -468,6 +468,5 @@
     }
   },
   "redhat.telemetry.enabled": false,
-  "julia.enableCrashReporter": false,
-  "MATLAB.showFeatureNotAvailableError": false,
+  "githubPullRequests.createOnPublishBranch": "never",
 }
