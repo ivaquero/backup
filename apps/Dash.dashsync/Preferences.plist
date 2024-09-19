@@ -3418,6 +3418,20 @@ $("h1").each(function() {
 					<string>https://www.pymc.io/</string>
 				</dict>
 			</dict>
+			<key>https://www.statsmodels.org/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-09-17T17:38:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>statsmodels 0.14.3</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.statsmodels.org/stable/</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict>
@@ -3657,20 +3671,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.pydy.org/</string>
-				</dict>
-			</dict>
-			<key>https://www.statsmodels.org/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-09-17T09:49:46Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>statsmodels 0.14.1</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://www.statsmodels.org/stable/</string>
 				</dict>
 			</dict>
 		</dict>
