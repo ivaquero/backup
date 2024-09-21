@@ -28974,10 +28974,10 @@ __export(main_exports, {
   default: () => TldrawPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian14 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 
 // src/obsidian/TldrawView.ts
-var import_obsidian7 = require("obsidian");
+var import_obsidian8 = require("obsidian");
 
 // src/utils/constants.ts
 var VIEW_TYPE_TLDRAW = "tldraw-view";
@@ -29141,7 +29141,9 @@ var codeBlockTemplate = (data) => {
   str += "\n";
   str += `${JSON.stringify(data, null, "	")}
 `;
-  str += `${TLDATA_DELIMITER_END} \`\`\``;
+  str += `${TLDATA_DELIMITER_END}
+`;
+  str += "```";
   return str;
 };
 var tlFileTemplate = (frontmatter, codeblock) => {
@@ -91558,7 +91560,11 @@ var TldrawImage = (0, import_react117.memo)(function TldrawImage2(props) {
     () => [...defaultBindingUtils, ...bindingUtils],
     [bindingUtils]
   );
-  const store = useTLStore({ snapshot: props.snapshot, shapeUtils: shapeUtilsWithDefaults });
+  const store = useTLStore({
+    assets: props.assets,
+    snapshot: props.snapshot,
+    shapeUtils: shapeUtilsWithDefaults
+  });
   const assets = useDefaultEditorAssetsWithOverrides(props.assetUrls);
   const { done: preloadingComplete, error: preloadingError } = usePreloadAssets(assets);
   const {
@@ -92572,6 +92578,7 @@ function LocalFileMenu(props) {
   return /* @__PURE__ */ React72.createElement(TldrawUiMenuSubmenu, { id: "file", label: "menu.file" }, import_obsidian6.Platform.isMobile ? /* @__PURE__ */ React72.createElement(React72.Fragment, null) : /* @__PURE__ */ React72.createElement(TldrawUiMenuItem, { ...actions[SAVE_FILE_COPY_ACTION] }), /* @__PURE__ */ React72.createElement(TldrawUiMenuItem, { ...actions[SAVE_FILE_COPY_IN_VAULT_ACTION] }), /* @__PURE__ */ React72.createElement(TldrawUiMenuItem, { ...actions[OPEN_FILE_ACTION] }));
 }
 var TldrawApp = ({ plugin, initialData, setFileData, options: {
+  assetStore,
   autoFocus = true,
   controller,
   hideUi = false,
@@ -92654,6 +92661,7 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
       {
         snapshot: storeSnapshot,
         padding: 0,
+        assets: assetStore,
         assetUrls: assetUrls.current,
         bounds: bounds === void 0 ? void 0 : Box.From(bounds),
         ...viewOptionsOther
@@ -92676,6 +92684,7 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
           hideUi,
           overrides: overridesUi.current,
           components: overridesUiComponents.current,
+          assets: assetStore,
           autoFocus,
           onMount: setAppState
         }
@@ -92724,6 +92733,133 @@ var createRootAndRenderTldrawApp = (node, initialData, setFileData, plugin, opti
   return root;
 };
 
+// src/tldraw/asset-store.ts
+var import_obsidian7 = require("obsidian");
+var blockRefAsset = "obsidian.blockref.";
+var ObsidianTLAssetStore = class {
+  constructor(plugin, tFile, {
+    persistenceKey,
+    storeAsset
+  }) {
+    /**
+     * <block reference id, asset base64 URI string>
+     * 
+     * We utilize a base64 data URI string here instead of a non-data URI because the TldrawImage component will display an image error without it.
+     */
+    this.resolvedCache = /* @__PURE__ */ new Map();
+    this.plugin = plugin;
+    this.tldrawFile = tFile;
+    this.storeAsset = storeAsset;
+    this.upload = this.upload.bind(this);
+    this.resolve = this.resolve.bind(this);
+    this.db = new TldrawAssetsViewIndexedDB(persistenceKey);
+  }
+  async upload(asset, file) {
+    if (!this.storeAsset) throw new Error("storeAsset callback was not provided.");
+    const blockRefId = window.crypto.randomUUID();
+    const objectName = `${blockRefId}-${file.name}`.replace(/\W/g, "-");
+    const ext = file.type.split("/").at(1);
+    const {
+      filename,
+      folder
+    } = await createAttachmentFilepath(!ext ? objectName : `${objectName}.${ext}`, this.tldrawFile, this.plugin.app.fileManager);
+    const tFile = await this.plugin.app.vault.createBinary(
+      `${folder}/${filename}`,
+      await file.arrayBuffer()
+    );
+    await this.storeAsset(blockRefId, tFile);
+    const assetDataUri = await FileHelpers.blobToDataUrl(file);
+    const assetSrc = `asset:${blockRefAsset}${blockRefId}`;
+    this.resolvedCache.set(assetSrc, assetDataUri);
+    return assetSrc;
+  }
+  async resolve(asset, ctx) {
+    var _a3, _b2;
+    const assetSrc = asset.props.src;
+    if (!assetSrc) return null;
+    if (!assetSrc.startsWith("asset:")) return assetSrc;
+    const assetUri = this.resolvedCache.get(assetSrc);
+    if (assetUri) return assetUri;
+    const assetId = assetSrc.split(":").at(1);
+    if (!assetId) return null;
+    if (!assetId.startsWith(blockRefAsset)) {
+      return this.getFromIndexedDB(assetSrc);
+    }
+    const blockRefId = assetId.slice(blockRefAsset.length);
+    const blocks = (_a3 = this.plugin.app.metadataCache.getFileCache(this.tldrawFile)) == null ? void 0 : _a3.blocks;
+    if (!blocks) return null;
+    const assetBlock = blocks[blockRefId];
+    if (!assetBlock) {
+      new import_obsidian7.Notice(`Asset block not found: ${blockRefId}`);
+      return null;
+    }
+    const assetBlockContents = (await this.plugin.app.vault.cachedRead(this.tldrawFile)).substring(assetBlock.position.start.offset, assetBlock.position.end.offset);
+    const insideBrackets = /\[\[(.*?)\]\]/;
+    const link = (_b2 = assetBlockContents.match(insideBrackets)) == null ? void 0 : _b2.at(1);
+    if (!link) {
+      new import_obsidian7.Notice(`Asset block does not reference a link: ${blockRefId}`);
+      return null;
+    }
+    const assetFile = this.plugin.app.metadataCache.getFirstLinkpathDest(link, this.tldrawFile.path);
+    if (!assetFile) {
+      new import_obsidian7.Notice(`Asset block link did not reference a known file: ${blockRefId} (${link})`);
+      return null;
+    }
+    const assetData = await this.plugin.app.vault.readBinary(assetFile);
+    const assetFileBlob = new Blob([assetData]);
+    const assetDataUri = await FileHelpers.blobToDataUrl(assetFileBlob);
+    this.resolvedCache.set(assetSrc, assetDataUri);
+    return assetDataUri;
+  }
+  async getFromIndexedDB(assetSrc) {
+    await this.db.openDb();
+    const blob = await this.db.getAsset(assetSrc);
+    if (!blob) return null;
+    return URL.createObjectURL(blob);
+  }
+};
+var STORE_PREFIX2 = "TLDRAW_DOCUMENT_v2";
+var DB_VERSION = 4;
+var ASSETS_STORE_NAME = "assets";
+var TldrawAssetsViewIndexedDB = class {
+  constructor(persistenceKey) {
+    this.dbName = STORE_PREFIX2 + persistenceKey;
+  }
+  openDb() {
+    if (this.db) return;
+    return new Promise((res, rej) => {
+      const dbReq = window.indexedDB.open(this.dbName, DB_VERSION);
+      dbReq.onsuccess = () => {
+        this.db = dbReq.result;
+        res();
+      };
+      dbReq.onerror = () => {
+        rej(dbReq.error);
+      };
+    });
+  }
+  getAsset(assetSrc) {
+    const { db } = this;
+    if (db === void 0) {
+      throw new Error("tldraw IndexedDB has not been opened yet.");
+    }
+    return new Promise((res, rej) => {
+      const transaction2 = db.transaction(ASSETS_STORE_NAME, "readonly");
+      let fileBlob;
+      transaction2.oncomplete = () => {
+        res(fileBlob);
+      };
+      transaction2.onerror = () => {
+        rej(transaction2.error);
+      };
+      const getRes = transaction2.objectStore(ASSETS_STORE_NAME).get(assetSrc);
+      getRes.onsuccess = () => {
+        fileBlob = getRes.result;
+      };
+    });
+  }
+};
+
 // src/obsidian/TldrawMixins.ts
 function TldrawLoadableMixin(Base) {
   class _TldrawLoadableMixin extends Base {
@@ -92750,12 +92886,21 @@ function TldrawLoadableMixin(Base) {
       return {};
     }
     createReactRoot(entryPoint, tldata) {
+      if (!this.file) {
+        throw new Error("There is no file associated with this tldraw view.");
+      }
       return createRootAndRenderTldrawApp(
         entryPoint,
         tldata,
         this.setFileData,
         this.plugin,
-        this.getTldrawOptions()
+        {
+          assetStore: new ObsidianTLAssetStore(this.plugin, this.file, {
+            persistenceKey: tldata.meta.uuid,
+            storeAsset: this.storeAsset
+          }),
+          ...this.getTldrawOptions()
+        }
       );
     }
     /**
@@ -92784,7 +92929,7 @@ function TldrawLoadableMixin(Base) {
 }
 
 // src/obsidian/TldrawView.ts
-var TldrawView = class extends TldrawLoadableMixin(import_obsidian7.TextFileView) {
+var TldrawView = class extends TldrawLoadableMixin(import_obsidian8.TextFileView) {
   constructor(leaf, plugin) {
     super(leaf);
     this.getTldrawData = (rawFileData) => {
@@ -92804,8 +92949,28 @@ var TldrawView = class extends TldrawLoadableMixin(import_obsidian7.TextFileView
         TLDATA_DELIMITER_END,
         stringifiedData
       );
+      this.data = result;
       if (!this.file) return;
       await this.app.vault.modify(this.file, result);
+    };
+    this.storeAsset = async (id, assetFile) => {
+      const { file } = this;
+      if (!file) return;
+      const internalLink = this.plugin.app.fileManager.generateMarkdownLink(assetFile, file.path);
+      const linkBlock = `${internalLink}
+^${id}`;
+      this.data = await this.plugin.app.vault.process(file, (data) => {
+        var _a3, _b2;
+        const { start, end } = (_b2 = (_a3 = this.plugin.app.metadataCache.getFileCache(file)) == null ? void 0 : _a3.frontmatterPosition) != null ? _b2 : {
+          start: { offset: 0 },
+          end: { offset: 0 }
+        };
+        const frontmatter = data.slice(start.offset, end.offset);
+        const rest = data.slice(end.offset);
+        return `${frontmatter}
+${linkBlock}
+${rest}`;
+      });
     };
     this.plugin = plugin;
     this.navigation = true;
@@ -92867,17 +93032,19 @@ var TldrawFileView = class _TldrawFileView extends TldrawView {
     var _a3;
     return {
       ...super.getTldrawOptions(),
-      persistenceKey: (_a3 = this.file) == null ? void 0 : _a3.path
+      persistenceKey: (_a3 = this.file) == null ? void 0 : _a3.path,
+      // Since TldrawFileView is only meant to be used with .tldr files we disable the Obsidian based asset store.
+      assetStore: void 0
     };
   }
 };
 
 // src/obsidian/TldrawSettingsTab.ts
-var import_obsidian10 = require("obsidian");
+var import_obsidian11 = require("obsidian");
 
 // src/obsidian/modal/FileSearchModal.ts
-var import_obsidian8 = require("obsidian");
-var FileSearchModal = class extends import_obsidian8.SuggestModal {
+var import_obsidian9 = require("obsidian");
+var FileSearchModal = class extends import_obsidian9.SuggestModal {
   constructor(plugin, options) {
     var _a3;
     super(plugin.app);
@@ -92894,7 +93061,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
       const dir = this.app.vault.getAbstractFileByPath(searchDir);
       if (searchPath.endsWith("/")) {
         const dir2 = this.app.vault.getAbstractFileByPath(searchPath.slice(0, searchPath.length - 1));
-        if (!(dir2 instanceof import_obsidian8.TFolder)) {
+        if (!(dir2 instanceof import_obsidian9.TFolder)) {
           return res({ searchPath, results: [] });
         }
         return res({
@@ -92905,7 +93072,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
       }
       res({
         searchPath,
-        results: !(dir instanceof import_obsidian8.TFolder) ? [] : this.filterSearchPath(dir, searchPath)
+        results: !(dir instanceof import_obsidian9.TFolder) ? [] : this.filterSearchPath(dir, searchPath)
       });
     }, 100);
     this.plugin = plugin;
@@ -92931,7 +93098,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
       const resolver = (r2) => {
         this.searchResolver = void 0;
         this.searchRes = r2;
-        const suggestions = r2.results.sort((a, b) => a instanceof import_obsidian8.TFolder && b instanceof import_obsidian8.TFolder || a instanceof import_obsidian8.TFile && b instanceof import_obsidian8.TFolder ? a.path.localeCompare(b.path) : a instanceof import_obsidian8.TFolder ? -1 : 1);
+        const suggestions = r2.results.sort((a, b) => a instanceof import_obsidian9.TFolder && b instanceof import_obsidian9.TFolder || a instanceof import_obsidian9.TFile && b instanceof import_obsidian9.TFolder ? a.path.localeCompare(b.path) : a instanceof import_obsidian9.TFolder ? -1 : 1);
         return res(
           r2.currDir === void 0 || !this.selectDir ? suggestions : [
             r2.currDir,
@@ -92955,7 +93122,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
     const { searchPath } = this.searchRes;
     const parsedSearchDir = getDir(searchPath);
     const searchDir = parsedSearchDir.length === 0 ? searchPath : parsedSearchDir;
-    const text = searchPath.length === 0 || searchDir === "/" ? `${file.path}${file instanceof import_obsidian8.TFolder ? "/" : ""}` : `...${file.path.substring(searchDir.length)}${file instanceof import_obsidian8.TFolder ? "/" : ""}`;
+    const text = searchPath.length === 0 || searchDir === "/" ? `${file.path}${file instanceof import_obsidian9.TFolder ? "/" : ""}` : `...${file.path.substring(searchDir.length)}${file instanceof import_obsidian9.TFolder ? "/" : ""}`;
     el.createEl("div", { text });
   }
   onChooseSuggestion(value, evt) {
@@ -92964,7 +93131,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
   }
   selectSuggestion(value, evt) {
     var _a3, _b2;
-    if (value instanceof import_obsidian8.TFile || value.path === ((_b2 = (_a3 = this.searchRes) == null ? void 0 : _a3.currDir) == null ? void 0 : _b2.path)) {
+    if (value instanceof import_obsidian9.TFile || value.path === ((_b2 = (_a3 = this.searchRes) == null ? void 0 : _a3.currDir) == null ? void 0 : _b2.path)) {
       this.onChooseSuggestion(value, evt);
       return;
     }
@@ -92979,7 +93146,7 @@ var FileSearchModal = class extends import_obsidian8.SuggestModal {
   }
 };
 function filterSearchPath(tFolder, searchPath, extensions) {
-  return tFolder.children.map((e2) => !(e2 instanceof import_obsidian8.TFolder) && !(e2 instanceof import_obsidian8.TFile) ? void 0 : e2 instanceof import_obsidian8.TFolder ? e2 : extensions === void 0 ? e2 : extensions.includes(e2.extension) ? e2 : void 0).filter((e2) => e2 !== void 0).filter((e2) => e2.path.startsWith(searchPath));
+  return tFolder.children.map((e2) => !(e2 instanceof import_obsidian9.TFolder) && !(e2 instanceof import_obsidian9.TFile) ? void 0 : e2 instanceof import_obsidian9.TFolder ? e2 : extensions === void 0 ? e2 : extensions.includes(e2.extension) ? e2 : void 0).filter((e2) => e2 !== void 0).filter((e2) => e2.path.startsWith(searchPath));
 }
 function debounce2(cb, wait) {
   let timeout;
@@ -93217,7 +93384,7 @@ function updateIconOverrides(original, updates) {
 }
 
 // src/obsidian/settings/icon-overrides.ts
-var import_obsidian9 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 function createIconOverridesSettingsEl(plugin, containerEl) {
   const currentValue = () => {
     var _a3, _b2;
@@ -93235,20 +93402,20 @@ function createIconOverridesSettingsEl(plugin, containerEl) {
     await plugin.saveSettings();
     resetButton == null ? void 0 : resetButton.setDisabled(currentValue().length === 0);
   };
-  new import_obsidian9.Setting(containerEl).setName("Use icon set").setDesc("Select a folder to load an icon set from. This option will only update an override if an icon name in the provided folder matches one of the names below.").addButton((button) => {
+  new import_obsidian10.Setting(containerEl).setName("Use icon set").setDesc("Select a folder to load an icon set from. This option will only update an override if an icon name in the provided folder matches one of the names below.").addButton((button) => {
     button.setIcon("file-search").onClick(() => {
       new FileSearchModal(plugin, {
         setSelection: async (file) => {
-          if (file instanceof import_obsidian9.TFolder) {
+          if (file instanceof import_obsidian10.TFolder) {
             const updates = {};
             for (const child of file.children) {
-              if (!(child instanceof import_obsidian9.TFile)) continue;
+              if (!(child instanceof import_obsidian10.TFile)) continue;
               if (iconExtensions.includes(child.extension) && iconTypes2.includes(child.basename)) {
                 updates[child.basename] = child.path;
               }
             }
             await saveIconSettings(updates);
-            new import_obsidian9.Notice(`Updated icon overrides for ${Object.entries(updates).length}`);
+            new import_obsidian10.Notice(`Updated icon overrides for ${Object.entries(updates).length}`);
           }
         },
         selectDir: true,
@@ -93274,16 +93441,16 @@ function createIconOverridesSettingsEl(plugin, containerEl) {
       }
       await saveIconSettings({ [icon]: iconPath });
       if (iconPath) {
-        new import_obsidian9.Notice(`Updated icon override for "${icon}" to "${iconPath}"`);
+        new import_obsidian10.Notice(`Updated icon override for "${icon}" to "${iconPath}"`);
       } else {
-        new import_obsidian9.Notice(`Reset icon "${icon}" to default.`);
+        new import_obsidian10.Notice(`Reset icon "${icon}" to default.`);
       }
       textInput == null ? void 0 : textInput.setValue((_a3 = currentValue2()) != null ? _a3 : "");
       resetButton2 == null ? void 0 : resetButton2.setDisabled(currentValue2() === void 0);
     };
     let textInput;
     const current = currentValue2();
-    return new import_obsidian9.Setting(containerEl).addText((text) => {
+    return new import_obsidian10.Setting(containerEl).addText((text) => {
       textInput = text.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
       textInput.inputEl.readOnly = true;
     }).addButton((button) => {
@@ -93334,7 +93501,7 @@ var DEFAULT_SETTINGS = {
   focusMode: false,
   useAttachmentsFolder: true
 };
-var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
+var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
@@ -93343,13 +93510,13 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     this.containerEl.createEl("h1", { text: "File" });
-    new import_obsidian10.Setting(containerEl).setName("Save folder").setDesc("The folder that tldraw files will be created in.").addText(
+    new import_obsidian11.Setting(containerEl).setName("Save folder").setDesc("The folder that tldraw files will be created in.").addText(
       (text2) => text2.setPlaceholder("root").setValue(this.plugin.settings.folder).onChange(async (value) => {
         this.plugin.settings.folder = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian10.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
+    new import_obsidian11.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.useAttachmentsFolder);
       toggle.onChange(async (value) => {
         this.plugin.settings.useAttachmentsFolder = value;
@@ -93359,7 +93526,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
     const defaultDelay = msToSeconds(DEFAULT_SAVE_DELAY);
     const minDelay = msToSeconds(MIN_SAVE_DELAY);
     const maxDelay = msToSeconds(MAX_SAVE_DELAY);
-    const saveDelaySetting = new import_obsidian10.Setting(containerEl).setName("Save delay").setDesc(
+    const saveDelaySetting = new import_obsidian11.Setting(containerEl).setName("Save delay").setDesc(
       `The delay in seconds to automatically save after a change has been made to a tlraw drawing. Must be a value between ${minDelay} and ${maxDelay} (1 hour). Requires reloading any tldraw files you may have open in a tab.`
     ).addText(
       (text2) => text2.setPlaceholder(`${defaultDelay}`).setValue(`${this.plugin.settings.saveFileDelay}`).onChange(async (value) => {
@@ -93376,7 +93543,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
       cls: "ptl-default-code",
       text: `DEFAULT: [${DEFAULT_SETTINGS.saveFileDelay}]`
     });
-    const filePrefixSettings = new import_obsidian10.Setting(containerEl).setName("New file prefix").setDesc(
+    const filePrefixSettings = new import_obsidian11.Setting(containerEl).setName("New file prefix").setDesc(
       "When creating a new tldraw file, the file name will automatically prepend the prefix. Can be left empty, however if both the prefix and time format are empty, it will use the defaults to name the file."
     ).addText(
       (text2) => text2.setPlaceholder("Prefix").setValue(this.plugin.settings.newFilePrefix).onChange(async (value) => {
@@ -93389,7 +93556,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
       cls: "ptl-default-code"
     });
     let dateFormatSampleEl;
-    const dateFormat = new import_obsidian10.Setting(containerEl).setName("New file time format").setDesc(
+    const dateFormat = new import_obsidian11.Setting(containerEl).setName("New file time format").setDesc(
       "When creating a new tldraw file, this represents the time format that will get appended to the file name. It can be left empty, however if both the Prefix and Time Format are empty, it will use the defaults to name the file. "
     ).addMomentFormat((format) => {
       dateFormatSampleEl = format.setDefaultFormat(DEFAULT_SETTINGS.newFileTimeFormat).setPlaceholder(DEFAULT_SETTINGS.newFileTimeFormat).setValue(this.plugin.settings.newFileTimeFormat).onChange(async (value) => {
@@ -93415,7 +93582,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
       });
     });
     this.containerEl.createEl("h1", { text: "Start up" });
-    new import_obsidian10.Setting(containerEl).setName("Theme").setDesc(
+    new import_obsidian11.Setting(containerEl).setName("Theme").setDesc(
       "When opening a tldraw file, this setting decides what theme should be applied."
     ).addDropdown((cb) => {
       cb.addOption("light", "Light theme").addOption("dark", "Dark theme").addOption("match-theme", "Match theme").setValue(this.plugin.settings.themeMode).onChange(async (value) => {
@@ -93423,7 +93590,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian10.Setting(containerEl).setName("Default tool").setDesc(
+    new import_obsidian11.Setting(containerEl).setName("Default tool").setDesc(
       "When opening a tldraw file, this setting decides which tool should be selected."
     ).addDropdown((cb) => {
       cb.addOption("select", "Select").addOption("hand", "Hand").addOption("draw", "Draw").addOption("text", "Text").addOption("eraser", "Eraser").addOption("highlight", "Highlight").addOption("rectangle", "Rectangle").addOption("ellipse", "Ellipse").setValue(this.plugin.settings.toolSelected).onChange(async (value) => {
@@ -93431,7 +93598,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian10.Setting(containerEl).setName("Grid mode").setDesc(
+    new import_obsidian11.Setting(containerEl).setName("Grid mode").setDesc(
       "When opening tldraw files, this setting determines whether grid mode is enabled. Keep in mind that enabling grid mode will both show a grid and enforce snap-to-grid functionality."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.gridMode);
@@ -93440,7 +93607,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian10.Setting(containerEl).setName("Snap mode").setDesc(
+    new import_obsidian11.Setting(containerEl).setName("Snap mode").setDesc(
       "When opening tldraw files, this setting determines whether snap mode is enabled. Snap mode is a feature that places guides on shapes as you move them, ensuring they align with specific points or positions for precise placement."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.snapMode);
@@ -93449,7 +93616,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian10.Setting(containerEl).setName("Focus mode").setDesc(
+    new import_obsidian11.Setting(containerEl).setName("Focus mode").setDesc(
       "When opening tldraw files, this setting determines whether to launch tldraw in focus mode. Great if you like to use tldraw to quickly jot something down."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.focusMode);
@@ -93458,7 +93625,7 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian10.Setting(containerEl).setName("Debug mode").setDesc(
+    new import_obsidian11.Setting(containerEl).setName("Debug mode").setDesc(
       "When opening tldraw files, this setting toggles the tldraw debug mode. Debug mode is useful for the developer."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.debugMode);
@@ -93493,16 +93660,16 @@ var TldrawSettingsTab = class extends import_obsidian10.PluginSettingTab {
           }
           await saveFontSettings({ [args.font]: fontPath });
           if (fontPath) {
-            new import_obsidian10.Notice(`Updated font override for "${args.font}" to "${fontPath}"`);
+            new import_obsidian11.Notice(`Updated font override for "${args.font}" to "${fontPath}"`);
           } else {
-            new import_obsidian10.Notice(`Reset font "${args.font}" to default.`);
+            new import_obsidian11.Notice(`Reset font "${args.font}" to default.`);
           }
           textInput == null ? void 0 : textInput.setValue((_a3 = currentValue()) != null ? _a3 : "");
           resetButton == null ? void 0 : resetButton.setDisabled(currentValue() === void 0);
         };
         let textInput;
         const current = currentValue();
-        return new import_obsidian10.Setting(containerEl).setName(args.name).setDesc(`Appears as "${args.appearsAs}" in the style panel.`).addText((text2) => {
+        return new import_obsidian11.Setting(containerEl).setName(args.name).setDesc(`Appears as "${args.appearsAs}" in the style panel.`).addText((text2) => {
           textInput = text2.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
           textInput.inputEl.readOnly = true;
         }).addButton((button) => {
@@ -93744,7 +93911,7 @@ function around1(obj, method, createWrapper) {
 }
 
 // src/obsidian/TldrawReadonly.ts
-var import_obsidian11 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 
 // src/utils/logging/index.ts
 function logClass(targetClass, target, ...args) {
@@ -93763,7 +93930,7 @@ function pluginMenuLabel(menuItem, {
 }
 
 // src/obsidian/TldrawReadonly.ts
-var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_obsidian11.FileView) {
+var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_obsidian12.FileView) {
   constructor(leaf, plugin) {
     super(leaf);
     this.setFileData = () => {
@@ -93837,7 +94004,7 @@ var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_ob
       )
     });
     await this.plugin.openTldrFile(newFile, location, viewType);
-    new import_obsidian11.Notice(`Created a new file for editing "${newFile.path}"`);
+    new import_obsidian12.Notice(`Created a new file for editing "${newFile.path}"`);
   }
 };
 
@@ -93869,7 +94036,7 @@ function pluginBuild(Base, args) {
 }
 
 // src/obsidian/plugin/markdown-post-processor.ts
-var import_obsidian13 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 
 // src/utils/debug-mutation-observer.ts
 var durationTreshold = 0;
@@ -93951,7 +94118,7 @@ function createTldrawAppViewModeController(initialBounds) {
 }
 
 // src/obsidian/menu/create-embed-menu.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 function background(menuItem, controller) {
   var _a3;
   return menuItem.setTitle("Show background").setChecked(
@@ -93983,7 +94150,7 @@ function createEmbedMenu({
   tFile
 }) {
   const bounds = controller.getViewOptions().bounds;
-  return new import_obsidian12.Menu().addItem((item) => pluginMenuLabel(item, {
+  return new import_obsidian13.Menu().addItem((item) => pluginMenuLabel(item, {
     title: tFile.name
   })).addItem((item) => background(item, controller).onClick(() => {
     controller.toggleBackground();
@@ -94051,7 +94218,7 @@ async function markdownPostProcessor(plugin, element, context) {
     return;
   }
   const file = plugin.app.vault.getAbstractFileByPath(context.sourcePath);
-  if (!(file instanceof import_obsidian13.TFile)) return;
+  if (!(file instanceof import_obsidian14.TFile)) return;
   if (!context.frontmatter || context.frontmatter["tldraw-file"] !== true) {
     return;
   }
@@ -94142,6 +94309,10 @@ async function loadEmbedTldraw(tldrawEmbedViewContent, {
       fileListener.isPaused = true;
       const parsedData = await parseData();
       reactRoot = await createReactTldrawAppRoot({
+        assetStore: new ObsidianTLAssetStore(plugin, file, {
+          persistenceKey: parsedData.meta.uuid,
+          storeAsset: void 0
+        }),
         controller,
         parsedData,
         plugin,
@@ -94284,6 +94455,7 @@ function parseEmbedValues(el, imageBounds = {
   };
 }
 async function createReactTldrawAppRoot({
+  assetStore,
   controller,
   parsedData,
   plugin,
@@ -94299,6 +94471,7 @@ async function createReactTldrawAppRoot({
     },
     plugin,
     {
+      assetStore,
       isReadonly: true,
       controller,
       inputFocus: true,
@@ -94446,7 +94619,7 @@ var TldrawFileListenerMap = class {
 // src/main.ts
 var _TldrawPlugin_decorators, _init, _a2;
 _TldrawPlugin_decorators = [pluginBuild];
-var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
+var TldrawPlugin = class extends (_a2 = import_obsidian15.Plugin) {
   constructor() {
     super(...arguments);
     this.transientUpdate = false;
@@ -94559,8 +94732,8 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
     );
     await this.loadSettings();
     this.addSettingTab(new TldrawSettingsTab(this.app, this));
-    (0, import_obsidian14.addIcon)(TLDRAW_ICON_NAME, TLDRAW_ICON);
-    (0, import_obsidian14.addIcon)(MARKDOWN_ICON_NAME, MARKDOWN_ICON);
+    (0, import_obsidian15.addIcon)(TLDRAW_ICON_NAME, TLDRAW_ICON);
+    (0, import_obsidian15.addIcon)(MARKDOWN_ICON_NAME, MARKDOWN_ICON);
     this.addRibbonIcon(
       TLDRAW_ICON_NAME,
       RIBBON_NEW_FILE,
@@ -94591,7 +94764,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
   registerEvents() {
     const self2 = this;
     this.register(
-      around(import_obsidian14.WorkspaceLeaf.prototype, {
+      around(import_obsidian15.WorkspaceLeaf.prototype, {
         setViewState(next) {
           return function(state, ...rest) {
             const leaf = this;
@@ -94608,7 +94781,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
                 const file = self2.app.vault.getAbstractFileByPath(
                   filePath
                 );
-                if (file instanceof import_obsidian14.TFile) {
+                if (file instanceof import_obsidian15.TFile) {
                   self2.setLeafFileViewMode(view, leaf, file);
                   self2.updateStatusBarViewMode(view);
                 }
@@ -94624,7 +94797,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
       this.app.workspace.on("editor-menu", (menu, editor, source) => {
         const file = source.file;
         const leaf = this.app.workspace.getLeaf(false);
-        if (!leaf || !(file instanceof import_obsidian14.TFile)) return;
+        if (!leaf || !(file instanceof import_obsidian15.TFile)) return;
         if (!this.isTldrawFile(file)) return;
         menu.addItem((item) => {
           item.setIcon(TLDRAW_ICON_NAME).setSection("close").setTitle("View as Tldraw").onClick(async () => {
@@ -94635,7 +94808,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
     );
     this.registerEvent(
       this.app.workspace.on("file-menu", (menu, file, source, leaf) => {
-        if (!(file instanceof import_obsidian14.TFile)) return;
+        if (!(file instanceof import_obsidian15.TFile)) return;
         if (file.path.endsWith(TLDRAW_FILE_EXTENSION)) {
           menu.addItem((item) => pluginMenuLabel(
             item.setSection("tldraw")
@@ -94647,7 +94820,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
                 )
               });
               await this.openTldrFile(newFile, "new-tab", VIEW_TYPE_TLDRAW_FILE);
-              new import_obsidian14.Notice(`Created a new file for editing "${newFile.path}"`);
+              new import_obsidian15.Notice(`Created a new file for editing "${newFile.path}"`);
             });
           });
           return;
@@ -94686,7 +94859,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
       })
     );
     this.registerEvent(this.app.vault.on("modify", async (file) => {
-      if (!(file instanceof import_obsidian14.TFile)) return;
+      if (!(file instanceof import_obsidian15.TFile)) return;
       if (!this.hasTldrawFrontMatterKey(file)) return;
       const listeners = this.tldrawFileListeners.getListeners(file);
       if (listeners === void 0 || listeners.length === 0) return;
@@ -94745,7 +94918,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
     }
   }
   async createFile(filename, foldername, data) {
-    const folderpath = (0, import_obsidian14.normalizePath)(foldername || this.settings.folder);
+    const folderpath = (0, import_obsidian15.normalizePath)(foldername || this.settings.folder);
     await checkAndCreateFolder(folderpath, this.app.vault);
     const fname = getNewUniqueFilepath(
       this.app.vault,
@@ -94756,10 +94929,10 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
   }
   createDefaultFilename() {
     const { newFilePrefix, newFileTimeFormat } = this.settings;
-    const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian14.moment)().format(newFileTimeFormat) : "";
+    const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian15.moment)().format(newFileTimeFormat) : "";
     let filename = newFilePrefix + date;
     if (filename.trim() === "")
-      filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian14.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
+      filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian15.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
     return filename;
   }
   isTldrawFile(file) {
@@ -94773,7 +94946,7 @@ var TldrawPlugin = class extends (_a2 = import_obsidian14.Plugin) {
   switchToTldrawViewAfterLoad() {
     this.app.workspace.onLayoutReady(() => {
       for (let leaf of this.app.workspace.getLeavesOfType("markdown")) {
-        if (leaf.view instanceof import_obsidian14.MarkdownView && leaf.view.file && this.isTldrawFile(leaf.view.file)) {
+        if (leaf.view instanceof import_obsidian15.MarkdownView && leaf.view.file && this.isTldrawFile(leaf.view.file)) {
           this.updateViewMode(VIEW_TYPE_TLDRAW, leaf);
         }
       }
