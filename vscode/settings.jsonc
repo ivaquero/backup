@@ -116,7 +116,7 @@
   "errorLens.statusBarMessageEnabled": true,
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "always"
     }
@@ -300,7 +300,6 @@
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.autoClean.run": "onBuilt",
   "latex-workshop.latex.clean.subfolder.enabled": true,
-  "latex-workshop.latexindent.path": "latexindent",
   "latex-workshop.message.error.show": false,
   "latex-workshop.message.warning.show": false,
   "latex-workshop.showContextMenu": true,
