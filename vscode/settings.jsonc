@@ -91,7 +91,6 @@
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio"
   },
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
@@ -116,7 +115,11 @@
   "errorLens.statusBarMessageEnabled": true,
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": [
+      "yzhang.markdown-all-in-one",
+      "DavidAnson.vscode-markdownlint"
+    ],
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "always"
     }
@@ -467,5 +470,6 @@
     }
   },
   "redhat.telemetry.enabled": false,
-  "githubPullRequests.createOnPublishBranch": "never",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.defaultFormatter": null,
 }
