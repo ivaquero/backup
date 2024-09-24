@@ -597,7 +597,7 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
     );
     new import_obsidian.Setting(containerEl).setName("Share your shortcuts").setDesc(descr).setHeading();
     new import_obsidian.Setting(containerEl).setName("Import shortcuts from file").setDesc(
-      "Import other shortcuts from a JSON export file. It will override existing shortcuts."
+      "Import additional shortcuts from a JSON export file. Any conflicting existing shortcuts will be overridden."
     ).addButton(
       (button) => button.setButtonText("Import").setCta().onClick(() => __async(this, null, function* () {
         const input = document.createElement("input");
@@ -735,18 +735,24 @@ var EnhancedSymbolsPrettifierSettingsTab = class extends import_obsidian.PluginS
     new import_obsidian.Setting(containerEl).setName("Flexible start word boundaries").setDesc(
       "Loosen the word boundary detection by allowing symbols or punctuation (like quotes, commas, or parentheses) before a word."
     ).addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings.flexibleWordsStart || DEFAULT_SETTINGS.flexibleWordsStart).onChange((value) => __async(this, null, function* () {
-        this.plugin.settings.flexibleWordsStart = value;
-        yield this.plugin.saveSettings();
-      }))
+      (toggle) => {
+        var _a;
+        return toggle.setValue((_a = this.plugin.settings.flexibleWordsStart) != null ? _a : DEFAULT_SETTINGS.flexibleWordsStart).onChange((value) => __async(this, null, function* () {
+          this.plugin.settings.flexibleWordsStart = value;
+          yield this.plugin.saveSettings();
+        }));
+      }
     );
     new import_obsidian.Setting(containerEl).setName("Flexible end word boundaries").setDesc(
       "Allow punctuation or symbols immediately after a word to be part of the word boundary, enabling substitutions even when the word isn't followed by a space."
     ).addToggle(
-      (toggle) => toggle.setValue(this.plugin.settings.flexibleWordsEnd || DEFAULT_SETTINGS.flexibleWordsEnd).onChange((value) => __async(this, null, function* () {
-        this.plugin.settings.flexibleWordsEnd = value;
-        yield this.plugin.saveSettings();
-      }))
+      (toggle) => {
+        var _a;
+        return toggle.setValue((_a = this.plugin.settings.flexibleWordsEnd) != null ? _a : DEFAULT_SETTINGS.flexibleWordsEnd).onChange((value) => __async(this, null, function* () {
+          this.plugin.settings.flexibleWordsEnd = value;
+          yield this.plugin.saveSettings();
+        }));
+      }
     );
   }
   displayReset(containerEl) {
@@ -1015,10 +1021,16 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
         let sequence = "";
         for (let i = cursor.ch - 1; i >= 0; i--) {
           if (this.isWordStart(line, i)) {
-            const excludeWhitespace = i + 1;
-            from = excludeWhitespace;
-            sequence = line.slice(excludeWhitespace, cursor.ch);
-            break;
+            const excludeWordStartIndex = i + 1;
+            from = excludeWordStartIndex;
+            sequence = line.slice(excludeWordStartIndex, cursor.ch);
+            if (this.settings.replacements[sequence] && !this.settings.replacements[sequence].disabled || this.isSpaceCharacter(line, i)) {
+              break;
+            } else if (i === 0) {
+              from = i;
+              sequence = line.slice(i, cursor.ch);
+              break;
+            }
           } else if (i === 0) {
             from = i;
             sequence = line.slice(i, cursor.ch);
@@ -1078,7 +1090,10 @@ var EnhancedSymbolsPrettifier = class extends import_obsidian2.Plugin {
     }
   }
   isWordStart(line, i) {
-    return line.charAt(i) === " " || this.settings.flexibleWordsStart && FLEXIBLE_WORDS_START.includes(line.charAt(i));
+    return this.isSpaceCharacter(line, i) || this.settings.flexibleWordsStart && FLEXIBLE_WORDS_START.includes(line.charAt(i));
+  }
+  isSpaceCharacter(line, i) {
+    return line.charAt(i) === " ";
   }
   isWordEnd(event, isSpacebar) {
     return event.key === " " || isSpacebar || this.settings.flexibleWordsEnd && FLEXIBLE_WORDS_END.includes(event.key);

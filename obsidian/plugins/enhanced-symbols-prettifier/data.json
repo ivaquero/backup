@@ -246,5 +246,7 @@
       "group": "Arrows"
     }
   },
-  "exclusions": []
+  "exclusions": [],
+  "flexibleWordsStart": true,
+  "flexibleWordsEnd": true
 }
