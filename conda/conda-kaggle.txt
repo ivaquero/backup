@@ -1,6 +1,6 @@
 blackjax
 conda-tree
-ipykernel
+jupyter-book
 keras
 mplfinance
 multiprocess
@@ -10,5 +10,4 @@ plotnine
 pygwalker
 pytorch
 scikit-learn
-tabulate
 yfinance
