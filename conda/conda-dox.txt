@@ -4,5 +4,6 @@ contextily
 geopandas
 jupyter-book
 nbconvert
+openpyxl
 plotnine
 rocketpy
