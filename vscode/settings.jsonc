@@ -272,7 +272,7 @@
     "!cpp",
     "!h"
   ],
-  "cSpell.language": "en,uk",
+  "cSpell.language": "en,es,fr,uk",
   "cSpell.ignoreRegExpList": [
     "`.+`", // md quotes
     "\\|\\s+\\w+", // md tables
@@ -352,6 +352,9 @@
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
   "tinymist.preview.cursorIndicator": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
