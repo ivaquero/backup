@@ -94,6 +94,7 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
+  "workbench.iconTheme": "material-icon-theme",
   // scm
   "scm.alwaysShowRepositories": true,
   "scm.alwaysShowActions": true,
@@ -473,6 +474,4 @@
     }
   },
   "redhat.telemetry.enabled": false,
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.defaultFormatter": null,
 }
