@@ -404,7 +404,7 @@
     "@attention"
   ],
   "[cmake]": {
-    "editor.defaultFormatter": "cheshirekow.cmake-format"
+    "editor.defaultFormatter": "Decodetalkers.neocmakelsp-vscode"
   },
   // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
