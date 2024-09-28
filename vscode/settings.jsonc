@@ -55,6 +55,7 @@
     "*.h": "cpp",
     "*.m": "matlab",
     "*.rb": "ruby",
+    "Doxyfile": "conf",
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
