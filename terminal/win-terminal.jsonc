@@ -38,23 +38,24 @@
     "profiles": {
         "defaults": {
             "font": {
-                "face": "Courier New"
+                "face": "FiraCode Nerd Font",
+                "size": 14.0
             },
             "snapOnInput": true,
             "useAcrylic": true
         },
         "list": [
             {
-                "commandline": "C:\\Program Files\\Git\\bin\\bash.exe --login -i",
-                "guid": "{c891c3d2-b798-4857-83c0-89bf2ea34021}",
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash"
-            },
-            {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "C:\\Scoop\\shims\\git-bash.exe",
+                "guid": "{c891c3d2-b798-4857-83c0-89bf2ea34021}",
+                "icon": "C:\\Scoop\\apps\\git\\current\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Git Bash"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
@@ -279,5 +280,42 @@
             "yellow": "#808000"
         }
     ],
-    "themes": []
+    "themes": [
+        {
+            "name": "legacyDark",
+            "tab": {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": {
+                "applicationTheme": "dark",
+                "useMica": false
+            }
+        },
+        {
+            "name": "legacyLight",
+            "tab": {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": {
+                "applicationTheme": "light",
+                "useMica": false
+            }
+        },
+        {
+            "name": "legacySystem",
+            "tab": {
+                "background": null,
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "window": {
+                "applicationTheme": "system",
+                "useMica": false
+            }
+        }
+    ]
 }
