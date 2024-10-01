@@ -1,3 +1,4 @@
+blackjax
 conda-tree
 ipykernel
 keras
