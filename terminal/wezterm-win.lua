@@ -57,19 +57,19 @@ end)
 wezterm.on("gui-startup", function(cmd)
 	local tab, left_top_pane, window = wezterm.mux.spawn_window(cmd or {})
 
-	local right_top_pane = left_top_pane:split({
-		direction = "Right",
-		size = 0.40,
-	})
+	-- local right_top_pane = left_top_pane:split({
+	-- 	direction = "Right",
+	-- 	size = 0.40,
+	-- })
 
-	local left_bottom_pane = left_top_pane:split({
-		direction = "Bottom",
-		size = 0.60,
-	})
+	-- local left_bottom_pane = left_top_pane:split({
+	-- 	direction = "Bottom",
+	-- 	size = 0.60,
+	-- })
 
-	left_top_pane:send_text("b\n")
-	left_bottom_pane:send_text("\nz backup\nc\nb\n")
-	right_top_pane:send_text("k\n")
+	-- left_top_pane:send_text("b\n")
+	-- left_bottom_pane:send_text("\nz backup\nc\nb\n")
+	-- right_top_pane:send_text("k\n")
 	window:gui_window():maximize()
 end)
 
