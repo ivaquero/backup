@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-01T22:45:10.603-00:00",
+	"CreationDate" : "2024-10-03T08:29:07.226-00:00",
 	"Sources" : 
 	[
 		{
@@ -8,6 +8,9 @@
 			[
 				{
 					"PackageIdentifier" : "Apple.Bonjour"
+				},
+				{
+					"PackageIdentifier" : "Nutstore.Nutstore"
 				},
 				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
@@ -26,6 +29,12 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+				},
+				{
+					"PackageIdentifier" : "Espanso.Espanso"
+				},
+				{
+					"PackageIdentifier" : "Ollama.Ollama"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller"

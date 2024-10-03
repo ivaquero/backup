@@ -7,6 +7,10 @@ local set_environment_variables = {}
 -- Shell
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 	table.insert(launch_menu, {
+		label = "PowerShell",
+		args = { "powershell.exe" },
+	})
+	table.insert(launch_menu, {
 		label = "Git Bash",
 		args = { "bash.exe", "-l" },
 	})
@@ -14,7 +18,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 		label = "WSL",
 		args = { "wsl.exe", "--cd", "/home/" },
 	})
-	default_prog = { "bash.exe", "-l" }
+	default_prog = { "powershell.exe" }
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	table.insert(launch_menu, {
 		label = "Bash",
@@ -29,6 +33,7 @@ else
 	default_prog = { "zsh", "-l" }
 end
 
+-- Title
 function basename(s)
 	return string.gsub(s, "(.*[/\\])(.*)", "%2")
 end
