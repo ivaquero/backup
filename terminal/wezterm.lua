@@ -40,13 +40,14 @@ end
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	local pane = tab.active_pane
-	local index = ""
 
+	local index = ""
 	if #tabs > 1 then
 		index = string.format("%d: ", tab.tab_index + 1)
 	end
 
 	local process = basename(pane.foreground_process_name)
+
 	return { {
 		Text = " " .. index .. process .. " ",
 	} }
@@ -121,6 +122,7 @@ local config = {
 
 	-- Allow using ^ with single key press.
 	use_dead_keys = false,
+
 	keys = { -- New/close pane
 		{
 			key = "c",
@@ -378,7 +380,9 @@ local config = {
 			action = "QuickSelect",
 		},
 	},
+
 	color_scheme = "Monokai (base16)",
+
 	inactive_pane_hsb = {
 		hue = 1.0,
 		saturation = 1.0,
@@ -422,6 +426,7 @@ local config = {
 			action = "OpenLinkAtMouseCursor",
 		},
 	},
+
 	default_prog = default_prog,
 	set_environment_variables = set_environment_variables,
 	launch_menu = launch_menu,
