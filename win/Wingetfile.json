@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-04T18:49:17.724-00:00",
+	"CreationDate" : "2024-10-04T22:11:20.057-00:00",
 	"Sources" : 
 	[
 		{
@@ -16,10 +16,16 @@
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
 				},
 				{
 					"PackageIdentifier" : "WinFsp.WinFsp"
