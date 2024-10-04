@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-04T22:11:20.057-00:00",
+	"CreationDate" : "2024-10-04T23:27:37.164-00:00",
 	"Sources" : 
 	[
 		{
@@ -32,9 +32,6 @@
 				},
 				{
 					"PackageIdentifier" : "Espanso.Espanso"
-				},
-				{
-					"PackageIdentifier" : "Ollama.Ollama"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.AppInstaller"
