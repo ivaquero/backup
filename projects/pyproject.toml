@@ -1,0 +1,63 @@
+[tool.ruff]
+    fix = true
+    line-length = 88
+    show-fixes = true
+    target-version = "py38"
+
+    fixable = ["ALL"]
+    include = ["*.py"]
+    extend-include = ["*.ipynb", "__pycache__"]
+
+[tool.ruff.format]
+    docstring-code-format = true
+    docstring-code-line-length = 60
+    indent-style = "space"
+    line-ending = "lf"
+    quote-style = "single"
+    skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+    # On top of the default `select` (`E4`, E7`, `E9`, and `F`), enable flake8-bugbear (`B`) and flake8-quotes (`Q`).
+    select = [
+        "A",
+        "ASYNC",
+        "B",
+        "C4",
+        "DTZ",
+        "EM",
+        "EXE",
+        "F",
+        "FA",
+        "FBT",
+        "FIX",
+        "I",
+        "ICN",
+        "ISC",
+        "NPY",
+        "PD",
+        "PERF",
+        "PIE",
+        "PYI",
+        "R",
+        "RET",
+        "S",
+        "SIM",
+        "TCH",
+        "TID",
+        "TRIO",
+        "UP",
+        "W",
+        "YTT",
+    ]
+    ignore = ["C419", "F403", "F405", "NPY002"]
+
+[tool.ruff.lint.isort]
+    case-sensitive = true
+    combine-as-imports = true
+    force-single-line = true
+    force-sort-within-sections = true
+    force-wrap-aliases = true
+    from-first = false
+    lines-after-imports = 2
+    order-by-type = true
+    relative-imports-order = "furthest-to-closest"
