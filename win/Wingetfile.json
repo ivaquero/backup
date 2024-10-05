@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-04T23:27:37.164-00:00",
+	"CreationDate" : "2024-10-05T18:58:53.784-00:00",
 	"Sources" : 
 	[
 		{
@@ -17,6 +17,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier" : "Insecure.Npcap"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
