@@ -17,8 +17,7 @@
                 "fr-FR"
             ],
             "architectures": [
-                "x64",
-                "arm64"
+                "x64"
             ]
         }
     },
