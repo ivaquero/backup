@@ -40,7 +40,6 @@
     "strings": true,
     "other": true
   },
-  "diffEditor.hideUnchangedRegions.enabled": true,
   // explorer
   "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
@@ -382,12 +381,12 @@
     "--pch-storage=memory",
     "--pretty",
     "--ranking-model=decision_forest",
-    "-j=12",
+    "-j=12"
   ],
   "clangd.fallbackFlags": [
     "-std=c++11",
     "-I${workspaceFolder}/src/includes",
-    "-I/opt/homebrew/include",
+    "-I/opt/homebrew/include"
   ],
   "clangd.onConfigChanged": "restart",
   // doxygen
@@ -487,4 +486,7 @@
     "workbench.action.tasks.runTask"
   ],
   "cmake.showConfigureWithDebuggerNotification": false,
+  "cSpell.userWords": [
+    "MSYS"
+  ],
 }
