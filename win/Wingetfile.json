@@ -1,11 +1,14 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-05T18:58:53.784-00:00",
+	"CreationDate" : "2024-10-06T23:18:17.244-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
+				{
+					"PackageIdentifier" : "ByteDance.StreamingTool"
+				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour"
 				},

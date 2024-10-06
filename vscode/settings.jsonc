@@ -55,8 +55,6 @@
     "*.condarc": "yaml",
     "*.h": "cpp",
     "*.m": "matlab",
-    "*.rb": "ruby",
-    "Doxyfile": "conf",
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -66,7 +64,28 @@
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "/C",
+        "chcp 65001"
+      ],
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [
+        "/K",
+        "chcp 65001"
+      ],
+      "icon": "terminal-cmd"
+    },
     "Git Bash": {
       "path": [
         "C:\\Program Files\\Git\\git-bash.exe"
