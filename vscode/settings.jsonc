@@ -34,6 +34,7 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.useTabStops": false,
   "editor.wordWrap": "on",
+  "editor.experimentalEditContextEnabled": true,
   "editor.quickSuggestions": {
     "comments": true,
     "strings": true,
@@ -54,8 +55,6 @@
     "*.condarc": "yaml",
     "*.h": "cpp",
     "*.m": "matlab",
-    "*.rb": "ruby",
-    "Doxyfile": "conf",
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -65,7 +64,28 @@
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "/C",
+        "chcp 65001"
+      ],
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [
+        "/K",
+        "chcp 65001"
+      ],
+      "icon": "terminal-cmd"
+    },
     "Git Bash": {
       "path": [
         "C:\\Program Files\\Git\\git-bash.exe"
@@ -182,13 +202,14 @@
     "notebook.source.organizeImports": "explicit"
   },
   "notebook.consolidatedRunButton": true,
+  "notebook.compactView": true,
   "notebook.diff.enablePreview": false,
   "notebook.diff.ignoreOutputs": true,
-  "notebook.compactView": true,
   "notebook.experimental.variablesView": true,
   "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 18,
+  "notebook.multiCursor.enabled": true,
   "notebook.output.minimalErrorRendering": true,
   // python
   "[python]": {
@@ -258,6 +279,8 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "shellcheck.exclude": [
+    "SC1017",
+    "SC1090",
     "SC2154",
     "SC2034"
   ],
@@ -377,12 +400,12 @@
     "--pch-storage=memory",
     "--pretty",
     "--ranking-model=decision_forest",
-    "-j=12",
+    "-j=12"
   ],
   "clangd.fallbackFlags": [
     "-std=c++11",
     "-I${workspaceFolder}/src/includes",
-    "-I/opt/homebrew/include",
+    "-I/opt/homebrew/include"
   ],
   "clangd.onConfigChanged": "restart",
   // doxygen
@@ -405,7 +428,7 @@
     "@attention"
   ],
   "[cmake]": {
-    "editor.defaultFormatter": "Decodetalkers.neocmakelsp-vscode"
+    // "editor.defaultFormatter": "Decodetalkers.neocmake-lsp-vscode"
   },
   // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
@@ -475,4 +498,14 @@
     }
   },
   "redhat.telemetry.enabled": false,
+  "astGrep.serverPath": "C:\\Scoop\\shims\\sg.exe",
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "cSpell.userWords": [
+    "MSYS"
+  ],
 }

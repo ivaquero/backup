@@ -24,7 +24,7 @@ colorMoved = default
 cf = config
 h = help
 ii = init
-ui = !gitui
+ui = !lazygit
 # summary
 cnt = rev-list --count HEAD
 sum = !onefetch
@@ -40,7 +40,9 @@ aa = a --all
 br = branch
 br-ls = br --all
 br-rm = br --delete
-br-rm-remote = br --delete --remotes
+br-rm-rmt = br --delete --remotes
+br-clean = "!f(){ git branch -D $(git branch --list '${1}*') };f"
+default = "!f(){ git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5; };f"
 # commit
 c = commit
 ci = c --interactive
@@ -72,15 +74,17 @@ lsfn = ls --full-name
 m = merge
 # pull
 p = pull
+pup = pull upstream
+sync = "!f(){ git pull upstream ${1} && git push origin ${1}; };f"
 # push
 ps = push
-pbl = push --set-upstream origin
+publish = "!f(){ git push --set-upstream origin ${1}; };f"
 # rebase
 rb = rebase
 rbi = rebase --interactive
 # reset
 undo = reset --soft HEAD^
-unstage = reset HEAD --
+squash = "!f(){ git reset --soft HEAD~${1}; };f"
 # revert
 rv = revert
 # status
@@ -88,7 +92,7 @@ st = status
 # tag
 tg = tag
 tg-rm = tg --delete
-tg-rm-remote = push origin --delete
+tg-rm-rmt = push origin --delete
 tg-ls = tg --list
 tg-cl = tg --cleanup
 tg-edit = tg --edit
@@ -96,16 +100,16 @@ tg-annot = tg --annotate
 # origin
 org-add = remote add origin
 org-add-url = remote set-url
-org-rename = remote rename origin
+org-rnm = remote rename origin
 # filter-repo
 flt = filter-repo
 flt-id = flt --strip-blobs-with-ids
 flt-path = flt --invert-paths --path-glob
 flt-size = flt --strip-blobs-bigger-than
 
-[http]
-version = HTTP/1.1
-proxy = http://127.0.0.1:7898
+# [http]
+# version = HTTP/1.1
+# proxy = http://127.0.0.1:7890
 
-[https]
-proxy = https://127.0.0.1:7898
+# [https]
+# proxy = https://127.0.0.1:7890

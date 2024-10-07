@@ -9,6 +9,7 @@
         "anonymizeDisplayedPaths": true
     },
     "installBehavior": {
+        "disableInstallNotes": false,
         "preferences": {
             "scope": "user",
             "locale": [
@@ -16,7 +17,6 @@
                 "fr-FR"
             ],
             "architectures": [
-                "arm64",
                 "x64"
             ]
         }
@@ -27,15 +27,20 @@
     "telemetry": {
         "disable": true
     },
+    "logging": {
+        "level": "warning"
+    },
     "network": {
         "downloader": "do",
         "doProgressTimeoutInSeconds": 60
     },
+    "interactivity": {
+        "disable": true
+    },
     "experimentalFeatures": {
-        "experimentalCmd": true,
-        "experimentalArg": false,
-        "resume": true,
         "configuration03": true,
-        "configureExport": true
+        "configureExport": true,
+        "configureSelfElevate": true,
+        "resume": true
     }
 }
