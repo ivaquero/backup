@@ -87,6 +87,7 @@
   height: 100%;
   width: 100%;
   overflow: clip;
+  color: var(--color-text);
 }
 .tl-theme__light {
   --color-accent: hsl(0, 76%, 60%);
@@ -471,6 +472,10 @@ input,
   width: 100%;
   height: 100%;
 }
+.tl-video.tl-video-is-fullscreen {
+  object-fit: contain;
+  background-size: contain;
+}
 .tl-video-container,
 .tl-image-container,
 .tl-embed-container {
@@ -480,6 +485,14 @@ input,
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.tl-image-container {
+  position: relative;
+  overflow: hidden;
+}
+.tl-image {
+  position: absolute;
+  inset: 0;
 }
 .tl-image__tg {
   --scale: calc(min(2, var(--tl-scale)));
@@ -491,15 +504,6 @@ input,
   background-color: var(--color-background);
   padding: 2px 4px;
   border-radius: var(--radius-1);
-}
-.tl-flip-x {
-  transform: scale(-1, 1);
-}
-.tl-flip-y {
-  transform: scale(1, -1);
-}
-.tl-flip-xy {
-  transform: scale(-1, -1);
 }
 .tl-collaborator-cursor {
   position: absolute;
@@ -664,6 +668,7 @@ input,
   text-shadow: inherit;
   text-transform: none;
   white-space: pre-wrap;
+  line-break: normal;
   word-spacing: 0px;
   word-wrap: break-word;
   writing-mode: horizontal-tb !important;
@@ -677,7 +682,6 @@ input,
   width: max-content;
   box-sizing: border-box;
   pointer-events: none;
-  line-break: normal;
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -754,6 +758,9 @@ input,
   flex-direction: column;
   overflow: hidden;
 }
+.tl-bookmark__container--safariExport {
+  border: 1px solid var(--color-divider);
+}
 .tl-bookmark__image_container {
   flex: 1 1 100%;
   overflow: hidden;
@@ -806,6 +813,7 @@ input,
   max-height: calc((16px * 1.5) * 2);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   text-overflow: ellipsis;
   display: -webkit-box;
 }
@@ -816,6 +824,7 @@ input,
   max-height: calc((12px * 1.5) * 3);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   text-overflow: ellipsis;
   display: -webkit-box;
   color: var(--color-text-2);
@@ -1333,7 +1342,6 @@ input,
   --layer-focused-input: 10;
   --layer-panels: 300;
   --layer-menus: 400;
-  --layer-canvas-overlays: 500;
   --layer-toasts: 650;
   --layer-cursor: 700;
   --layer-header-footer: 999;
@@ -1373,6 +1381,7 @@ input,
   z-index: var(--layer-above);
 }
 .tlui-button__label {
+  font-size: 12px;
   flex-grow: 2;
   text-align: left;
 }
@@ -1489,6 +1498,9 @@ input,
   margin-left: -2px;
   margin-right: -2px;
 }
+.tlui-button__tool:focus-visible:not(:hover) {
+  border-radius: var(--radius-4);
+}
 .tlui-button__tool:nth-of-type(1) {
   margin-left: 0px;
 }
@@ -1516,7 +1528,7 @@ input,
 }
 .tlui-layout__mobile .tlui-button__tool {
   height: 48px;
-  width: 44px;
+  width: 43px;
 }
 .tlui-layout__mobile .tlui-button__tool > .tlui-icon {
   height: 16px;
@@ -1551,9 +1563,6 @@ input,
 }
 .tlui-buttons__horizontal > *:nth-last-child(1) {
   margin-right: 0px;
-}
-.tlui-buttons__horizontal > *:only-child {
-  width: 56px;
 }
 .tlui-buttons__grid {
   display: grid;
@@ -1979,6 +1988,19 @@ input,
   color: var(--color-text-1);
   user-select: all;
   -webkit-user-select: text;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.tlui-dialog__body a {
+  color: var(--color-selected);
+}
+.tlui-dialog__body ul,
+.tlui-dialog__body ol {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 .tlui-dialog__footer {
   position: relative;
@@ -2697,6 +2719,10 @@ input,
   overflow-y: auto;
   touch-action: auto;
 }
+.tlui-people-menu__section:first-child,
+.tlui-people-menu__section:last-child {
+  flex-shrink: 0;
+}
 .tlui-people-menu__section:not(:last-child) {
   border-bottom: 1px solid var(--color-divider);
 }
@@ -2880,6 +2906,8 @@ div[data-type=tldraw-read-only] .view-content.tldraw-view-content {
 }
 .ptl-markdown-embed .ptl-view-content {
   height: 300px;
+}
+.ptl-markdown-embed .ptl-view-content[data-showBgDots=true] {
   background-image: radial-gradient(rgb(78, 78, 78) 1px, transparent 1px), radial-gradient(rgb(78, 78, 78) 1px, transparent 1px);
   background-size: 48px 48px;
   background-position: 0 0, 24px 24px;
