@@ -428,8 +428,14 @@
     "@attention"
   ],
   "[cmake]": {
-    // "editor.defaultFormatter": "Decodetalkers.neocmake-lsp-vscode"
+    "editor.defaultFormatter": "Decodetalkers.neocmake-lsp-vscode"
   },
+  "cmake.showOptionsMovedNotification": false,
+  "cmake.showConfigureWithDebuggerNotification": false,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
   // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
@@ -498,14 +504,5 @@
     }
   },
   "redhat.telemetry.enabled": false,
-  "astGrep.serverPath": "C:\\Scoop\\shims\\sg.exe",
-  "cmake.showOptionsMovedNotification": false,
-  "cmake.pinnedCommands": [
-    "workbench.action.tasks.configureTaskRunner",
-    "workbench.action.tasks.runTask"
-  ],
-  "cmake.showConfigureWithDebuggerNotification": false,
-  "cSpell.userWords": [
-    "MSYS"
-  ],
+  // "astGrep.serverPath": "C:\\Scoop\\shims\\sg.exe"
 }
