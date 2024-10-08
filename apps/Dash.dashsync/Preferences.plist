@@ -179,177 +179,6 @@ $("h1").each(function() {
 					<string>Eigen</string>
 				</dict>
 			</dict>
-			<key>Keras</key>
-			<dict>
-				<key>date</key>
-				<date>2024-08-18T08:27:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://keras.io/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>k</string>
-						<key>docsetName</key>
-						<string>Keras</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://keras.io/</string>
-					</dict>
-					<key>name</key>
-					<string>Keras</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>Keras</string>
-				</dict>
-			</dict>
-			<key>Makie</key>
-			<dict>
-				<key>date</key>
-				<date>2024-08-18T14:16:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>docs.makie.org/stable/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>mj</string>
-						<key>docsetName</key>
-						<string>Makie.jl</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.makie.org/stable/</string>
-					</dict>
-					<key>name</key>
-					<string>Makie.jl</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>Makie</string>
-				</dict>
-			</dict>
-			<key>RocketPy</key>
-			<dict>
-				<key>date</key>
-				<date>2024-09-13T13:55:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.rocketpy.org/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>rp</string>
-						<key>docsetName</key>
-						<string>RocketPy</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string>R</string>
-						<key>websiteURL</key>
-						<string>https://docs.rocketpy.org</string>
-					</dict>
-					<key>name</key>
-					<string>RocketPy</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>RocketPy</string>
-				</dict>
-			</dict>
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
@@ -1550,6 +1379,63 @@ $("h1").each(function() {
 					<string>Jupyter Book</string>
 				</dict>
 			</dict>
+			<key>Keras</key>
+			<dict>
+				<key>date</key>
+				<date>2024-10-07T16:34:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://keras.io/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>k</string>
+						<key>docsetName</key>
+						<string>Keras</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://keras.io/</string>
+					</dict>
+					<key>name</key>
+					<string>Keras</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Keras</string>
+				</dict>
+			</dict>
 			<key>MLX</key>
 			<dict>
 				<key>date</key>
@@ -1605,6 +1491,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>MLX</string>
+				</dict>
+			</dict>
+			<key>Makie</key>
+			<dict>
+				<key>date</key>
+				<date>2024-10-07T16:33:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>docs.makie.org/stable/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>mj</string>
+						<key>docsetName</key>
+						<string>Makie.jl</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.makie.org/stable/</string>
+					</dict>
+					<key>name</key>
+					<string>Makie.jl</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Makie</string>
 				</dict>
 			</dict>
 			<key>Match.jl</key>
@@ -2289,6 +2232,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Pyro</string>
+				</dict>
+			</dict>
+			<key>RocketPy</key>
+			<dict>
+				<key>date</key>
+				<date>2024-10-07T16:33:40Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.rocketpy.org/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>rp</string>
+						<key>docsetName</key>
+						<string>RocketPy</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string>R</string>
+						<key>websiteURL</key>
+						<string>https://docs.rocketpy.org</string>
+					</dict>
+					<key>name</key>
+					<string>RocketPy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>RocketPy</string>
 				</dict>
 			</dict>
 			<key>SymPy</key>
@@ -3236,6 +3236,20 @@ $("h1").each(function() {
 					<string>https://contextily.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://docs.rocketpy.org/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-10-08T03:11:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>RocketPy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.rocketpy.org/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3318,6 +3332,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.org/</string>
+				</dict>
+			</dict>
+			<key>https://preliz.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-10-07T16:37:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PreliZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://python.arviz.org/en/stable/</key>
@@ -3601,20 +3629,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://preliz.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-10-07T15:12:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PreliZ</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://scikit-image.org/docs/stable/</key>
@@ -5238,6 +5252,8 @@ $("h1").each(function() {
 			<string>pt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
 			<string>rq</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/RocketPy/RocketPy.docset</key>
+			<string>rp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>
@@ -5268,6 +5284,8 @@ $("h1").each(function() {
 			<string>skm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0141/statsmodels 0.14.1.docset</key>
 			<string>sm</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.3.docset</key>
+			<string>sms</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
