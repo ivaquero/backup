@@ -123,60 +123,7 @@ local config = {
 	-- Allow using ^ with single key press.
 	use_dead_keys = false,
 
-	keys = { -- New/close pane
-		{
-			key = "c",
-			mods = "LEADER",
-			action = wezterm.action({
-				SpawnTab = "CurrentPaneDomain",
-			}),
-		},
-		{
-			key = "x",
-			mods = "LEADER",
-			action = wezterm.action({
-				CloseCurrentPane = {
-					confirm = true,
-				},
-			}),
-		},
-		{
-			key = "X",
-			mods = "LEADER",
-			action = wezterm.action({
-				CloseCurrentTab = {
-					confirm = true,
-				},
-			}),
-		}, -- Pane navigation
-		{
-			key = "LeftArrow",
-			mods = "ALT",
-			action = wezterm.action({
-				ActivatePaneDirection = "Left",
-			}),
-		},
-		{
-			key = "DownArrow",
-			mods = "ALT",
-			action = wezterm.action({
-				ActivatePaneDirection = "Down",
-			}),
-		},
-		{
-			key = "UpArrow",
-			mods = "ALT",
-			action = wezterm.action({
-				ActivatePaneDirection = "Up",
-			}),
-		},
-		{
-			key = "RightArrow",
-			mods = "ALT",
-			action = wezterm.action({
-				ActivatePaneDirection = "Right",
-			}),
-		}, -- Tab navigation
+	keys = { -- Tab navigation
 		{
 			key = "z",
 			mods = "CMD",
@@ -248,20 +195,17 @@ local config = {
 		{
 			key = "t",
 			mods = "CTRL",
-			action = wezterm.action.SpawnTab("CurrentPaneDomain"),
+			action = wezterm.action({
+				SpawnTab = "CurrentPaneDomain",
+			}),
 		},
 		{
 			key = "w",
 			mods = "CTRL",
-			action = wezterm.action.CloseCurrentTab({
-				confirm = true,
-			}),
-		},
-		{
-			key = "d",
-			mods = "CTRL",
-			action = wezterm.action.CloseCurrentPane({
-				confirm = true,
+			action = wezterm.action({
+				CloseCurrentTab = {
+					confirm = true,
+				},
 			}),
 		},
 		{
@@ -277,7 +221,35 @@ local config = {
 			action = wezterm.action({
 				ActivateTabRelative = 1,
 			}),
-		}, -- Resize
+		}, -- Pane navigation
+		{
+			key = "LeftArrow",
+			mods = "ALT",
+			action = wezterm.action({
+				ActivatePaneDirection = "Left",
+			}),
+		},
+		{
+			key = "DownArrow",
+			mods = "ALT",
+			action = wezterm.action({
+				ActivatePaneDirection = "Down",
+			}),
+		},
+		{
+			key = "UpArrow",
+			mods = "ALT",
+			action = wezterm.action({
+				ActivatePaneDirection = "Up",
+			}),
+		},
+		{
+			key = "RightArrow",
+			mods = "ALT",
+			action = wezterm.action({
+				ActivatePaneDirection = "Right",
+			}),
+		}, -- Resize pane
 		{
 			key = "LeftArrow",
 			mods = "ALT|SHIFT",
@@ -305,7 +277,16 @@ local config = {
 			action = wezterm.action({
 				AdjustPaneSize = { "Right", 5 },
 			}),
-		}, -- Split
+		}, -- Close pane
+		{
+			key = "d",
+			mods = "CTRL",
+			action = wezterm.action({
+				CloseCurrentPane = {
+					confirm = true,
+				},
+			}),
+		}, -- Split pane
 		{
 			key = "-",
 			mods = "CMD",
