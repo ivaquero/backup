@@ -3239,7 +3239,7 @@ $("h1").each(function() {
 			<key>https://docs.rocketpy.org/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-10-08T03:11:05Z</date>
+				<date>2024-10-14T15:29:51Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3435,7 +3435,7 @@ $("h1").each(function() {
 			<key>https://www.statsmodels.org/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-09-17T17:38:31Z</date>
+				<date>2024-10-14T16:09:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -5286,6 +5286,8 @@ $("h1").each(function() {
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.3.docset</key>
 			<string>sms</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.4.docset</key>
+			<string>sm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
