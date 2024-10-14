@@ -28974,7 +28974,7 @@ __export(main_exports, {
   default: () => TldrawPlugin
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian15 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 
 // src/obsidian/TldrawView.ts
 var import_obsidian8 = require("obsidian");
@@ -29560,7 +29560,7 @@ function annotateError(error, annotations) {
 }
 
 // node_modules/@tldraw/utils/dist-esm/lib/network.mjs
-async function fetch(input, init) {
+async function fetch2(input, init) {
   return window.fetch(input, {
     // We want to make sure that the referrer is not sent to other domains.
     referrerPolicy: "strict-origin-when-cross-origin",
@@ -29581,7 +29581,7 @@ var FileHelpers = class {
    * from https://stackoverflow.com/a/53817185
    */
   static async dataUrlToArrayBuffer(dataURL) {
-    return fetch(dataURL).then(function(result) {
+    return fetch2(dataURL).then(function(result) {
       return result.arrayBuffer();
     });
   }
@@ -45487,7 +45487,7 @@ function fetchCache(cb, init) {
     if (existing) return existing;
     const promise = (async () => {
       try {
-        const response = await fetch(url, init);
+        const response = await fetch2(url, init);
         assert(response.ok);
         return await cb(response);
       } catch (err) {
@@ -46683,7 +46683,7 @@ var SharedStyleMap = class extends ReadonlySharedStyleMap {
 
 // node_modules/@tldraw/editor/dist-esm/lib/utils/assets.mjs
 function dataUrlToFile(url, filename, mimeType) {
-  return fetch(url).then(function(res) {
+  return fetch2(url).then(function(res) {
     return res.arrayBuffer();
   }).then(function(buf) {
     return new File([buf], filename, { type: mimeType });
@@ -55943,7 +55943,7 @@ var Editor = class extends (_a2 = import_eventemitter3.default, _getIsShapeHidde
             shouldResolveToOriginal: true
           });
           assetWithDataUrl.props.src = await FileHelpers.blobToDataUrl(
-            await fetch(objectUrl).then((r2) => r2.blob())
+            await fetch2(objectUrl).then((r2) => r2.blob())
           );
           assets.push(assetWithDataUrl);
         } else {
@@ -58309,7 +58309,7 @@ var LicenseManager = class {
     this.getLicenseFromKey(licenseKey).then((result) => {
       const isUnlicensed = isEditorUnlicensed(result);
       if (!this.isDevelopment && isUnlicensed) {
-        fetch(WATERMARK_TRACK_SRC);
+        fetch2(WATERMARK_TRACK_SRC);
       }
       if (isUnlicensed) {
         this.state.set("unlicensed");
@@ -60467,7 +60467,7 @@ var EN_TRANSLATION = {
   dir: "ltr"
 };
 async function fetchTranslation(locale, assetUrls) {
-  const mainRes = await fetch(assetUrls.translations.en);
+  const mainRes = await fetch2(assetUrls.translations.en);
   if (!mainRes.ok) {
     console.warn(`No main translations found.`);
     return EN_TRANSLATION;
@@ -60480,7 +60480,7 @@ async function fetchTranslation(locale, assetUrls) {
     console.warn(`No translation found for locale ${locale}`);
     return EN_TRANSLATION;
   }
-  const res = await fetch(assetUrls.translations[language.locale]);
+  const res = await fetch2(assetUrls.translations[language.locale]);
   const messages = await res.json();
   if (!messages) {
     console.warn(`No messages found for locale ${locale}`);
@@ -64135,7 +64135,7 @@ var getFill = (element) => {
 
 // node_modules/tldraw/dist-esm/lib/ui/hooks/clipboard/pasteFiles.mjs
 async function pasteFiles(editor, urls, point, sources) {
-  const blobs = await Promise.all(urls.map(async (url) => await (await fetch(url)).blob()));
+  const blobs = await Promise.all(urls.map(async (url) => await (await fetch2(url)).blob()));
   const files = blobs.map((blob) => new File([blob], "tldrawFile", { type: blob.type }));
   editor.markHistoryStoppingPoint("paste");
   await editor.putExternalContent({
@@ -74597,7 +74597,7 @@ function registerDefaultExternalContentHandlers(editor, {
     var _a5, _b2, _c, _d, _e, _f, _g, _h, _i, _j;
     let meta;
     try {
-      const resp = await fetch(url, {
+      const resp = await fetch2(url, {
         method: "GET",
         mode: "no-cors"
       });
@@ -76639,7 +76639,7 @@ function getFontDefForExport(fontStyle) {
       const url = font.$$_url;
       const fontFaceRule = font.$$_fontface;
       if (!url || !fontFaceRule) return null;
-      const fontFile = await (await fetch(url)).blob();
+      const fontFile = await (await fetch2(url)).blob();
       const base64FontFile = await FileHelpers.blobToDataUrl(fontFile);
       const newFontFaceRule = fontFaceRule.replace(url, base64FontFile);
       return /* @__PURE__ */ (0, import_jsx_runtime86.jsx)("style", { children: newFontFaceRule });
@@ -81598,7 +81598,7 @@ function usePrefersReducedMotion() {
 
 // node_modules/tldraw/dist-esm/lib/shapes/image/ImageShapeUtil.mjs
 async function getDataURIFromURL(url) {
-  const response = await fetch(url);
+  const response = await fetch2(url);
   const blob = await response.blob();
   return FileHelpers.blobToDataUrl(blob);
 }
@@ -94642,7 +94642,7 @@ async function serializeTldrawJson(editor) {
             if (!src.startsWith("http")) {
               src = await editor.resolveAssetUrl(record.id, { shouldResolveToOriginal: true }) || "";
             }
-            assetSrcToSave = await FileHelpers.blobToDataUrl(await (await fetch(src)).blob());
+            assetSrcToSave = await FileHelpers.blobToDataUrl(await (await fetch2(src)).blob());
           } catch (e2) {
             assetSrcToSave = record.props.src;
           }
@@ -95583,7 +95583,6 @@ var TldrawApp = ({ plugin, initialData, setFileData, options: {
         onTouchStart: (e2) => e2.stopPropagation(),
         ref: editorContainerRef,
         onFocus: (e2) => {
-          console.log("onFocus");
           setFocusedEditor(editor);
         },
         style: {
@@ -95956,7 +95955,7 @@ var TldrawFileView = class _TldrawFileView extends TldrawView {
 };
 
 // src/obsidian/TldrawSettingsTab.ts
-var import_obsidian11 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 
 // src/obsidian/modal/FileSearchModal.ts
 var import_obsidian9 = require("obsidian");
@@ -96072,8 +96071,17 @@ function debounce2(cb, wait) {
   };
 }
 
+// src/obsidian/settings/icon-overrides.ts
+var import_obsidian10 = require("obsidian");
+
 // src/obsidian/settings/constants.ts
-var fontTypes = [
+var defaultFonts = {
+  monospace: "IBMPlexMono-Medium.woff2",
+  sansSerif: "IBMPlexSans-Medium.woff2",
+  serif: "IBMPlexSerif-Medium.woff2",
+  draw: "Shantell_Sans-Tldrawish.woff2"
+};
+var fontExtensions = [
   "otf",
   "ttf",
   "woff",
@@ -96226,6 +96234,95 @@ var iconTypes2 = [
   "zoom-out"
 ];
 
+// src/obsidian/settings/icon-overrides.ts
+function createIconOverridesSettingsEl(plugin, containerEl, manager, downloadIcon) {
+  const currentValue = () => Object.entries(manager.overrides).filter((e2) => e2[1] !== void 0);
+  let resetButton;
+  const _saveIconSettings = async (updates) => {
+    await manager.saveIconSettings(updates);
+    resetButton == null ? void 0 : resetButton.setDisabled(currentValue().length === 0);
+  };
+  new import_obsidian10.Setting(containerEl).setName("Use icon set").setDesc("Select a folder to load an icon set from. This option will only update an override if an icon name in the provided folder matches one of the names below.").addButton((button) => {
+    button.setIcon("file-search").onClick(() => {
+      new FileSearchModal(plugin, {
+        setSelection: async (file) => {
+          if (file instanceof import_obsidian10.TFolder) {
+            const updates = {};
+            for (const child of file.children) {
+              if (!(child instanceof import_obsidian10.TFile)) continue;
+              if (iconExtensions.includes(child.extension) && iconTypes2.includes(child.basename)) {
+                updates[child.basename] = child.path;
+              }
+            }
+            await _saveIconSettings(updates);
+            new import_obsidian10.Notice(`Updated icon overrides for ${Object.entries(updates).length}`);
+          }
+        },
+        selectDir: true,
+        extensions: [],
+        onEmptyStateText: (searchPath) => `No folders found at "${searchPath}"`
+      }).open();
+    });
+  }).addExtraButton((button) => {
+    resetButton = button.setIcon("rotate-ccw").setTooltip("Clear all overrides").setDisabled(currentValue().length === 0).onClick(async () => {
+      await _saveIconSettings(null);
+    });
+  });
+  const newIconOverrideSetting = (icon) => {
+    const currentValue2 = () => manager.overrides[icon];
+    let resetButton2;
+    const setIcon = async (iconPath) => manager.setIconPath(icon, iconPath);
+    manager.onChanged(icon, () => {
+      var _a5;
+      textInput == null ? void 0 : textInput.setValue((_a5 = currentValue2()) != null ? _a5 : "");
+      resetButton2 == null ? void 0 : resetButton2.setDisabled(currentValue2() === void 0);
+    });
+    let textInput;
+    const current = currentValue2();
+    const config = manager.getDownloadConfig(icon);
+    return new import_obsidian10.Setting(containerEl).addText((text) => {
+      textInput = text.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
+      textInput.inputEl.readOnly = true;
+    }).addButton((button) => {
+      button.setIcon("file-search").onClick(() => {
+        new FileSearchModal(plugin, {
+          extensions: [...iconExtensions],
+          initialValue: currentValue2(),
+          onEmptyStateText: (searchPath) => `No folders or icons found at "${searchPath}"`,
+          setSelection: (file) => setIcon(file.path)
+        }).open();
+      });
+    }).addExtraButton((button) => {
+      button.setIcon("download").setTooltip(`Download from ${config.url}`).onClick(() => downloadIcon(icon, config));
+    }).addExtraButton((button) => {
+      resetButton2 = button.setIcon("rotate-ccw").setTooltip("Use default").setDisabled(current === void 0).onClick(async () => {
+        await setIcon(null);
+      });
+    });
+  };
+  containerEl.createEl("h2", { text: "Individual icon overrides." });
+  containerEl.createEl("p", {
+    text: "Click an icon name to view the default in your web browser. All of the default icons are available to browse on "
+  }, (el) => {
+    const href = `https://github.com/tldraw/tldraw/tree/v${TLDRAW_VERSION}/assets/icons/icon`;
+    el.createEl("a", {
+      text: "tldraw's GitHub repository",
+      href,
+      title: href
+    });
+    el.appendText(".");
+  });
+  for (const icon of iconTypes2) {
+    const setting = newIconOverrideSetting(icon);
+    const href = `https://github.com/tldraw/tldraw/blob/v${TLDRAW_VERSION}/assets/icons/icon/${icon}.svg`;
+    setting.nameEl.createEl("a", {
+      text: icon,
+      href,
+      title: href
+    });
+  }
+}
+
 // src/obsidian/plugin/settings.ts
 function processFontOverrides(overrides, getResourcePath) {
   if (overrides === void 0) return void 0;
@@ -96299,109 +96396,234 @@ function updateIconOverrides(original, updates) {
   return object2;
 }
 
-// src/obsidian/settings/icon-overrides.ts
-var import_obsidian10 = require("obsidian");
-function createIconOverridesSettingsEl(plugin, containerEl) {
-  const currentValue = () => {
+// src/obsidian/settings/IconsSettingsManager.ts
+var import_obsidian11 = require("obsidian");
+var _IconsSettingsManager = class _IconsSettingsManager {
+  constructor(plugin) {
+    this.plugin = plugin;
+    this.onChangedCallbacks = /* @__PURE__ */ new Map();
+  }
+  static getIconUrl(icon) {
+    return `${_IconsSettingsManager.ICON_DOWNLOAD_BASE_URL}/${icon}.svg`;
+  }
+  getDownloadConfig(icon) {
+    return {
+      url: _IconsSettingsManager.getIconUrl(icon),
+      destination: `${this.plugin.settings.assetsFolder}/icons/${icon}.svg`
+    };
+  }
+  getAllDownloadConfigs() {
+    return new Map(iconTypes2.map(
+      (e2) => [
+        e2,
+        this.getDownloadConfig(e2)
+      ]
+    ));
+  }
+  get overrides() {
     var _a5, _b2;
-    return Object.entries((_b2 = (_a5 = plugin.settings.icons) == null ? void 0 : _a5.overrides) != null ? _b2 : {}).filter((e2) => e2[1] !== void 0);
-  };
-  let resetButton;
-  const saveIconSettings = async (updates) => {
-    var _a5;
-    plugin.settings.icons = updates === null ? void 0 : {
+    return (_b2 = (_a5 = this.plugin.settings.icons) == null ? void 0 : _a5.overrides) != null ? _b2 : {};
+  }
+  onChanged(icon, callback) {
+    this.onChangedCallbacks.set(icon, callback);
+  }
+  async saveIconSettings(updates) {
+    var _a5, _b2;
+    this.plugin.settings.icons = updates === null ? void 0 : {
       overrides: updateIconOverrides(
-        (_a5 = plugin.settings.icons) == null ? void 0 : _a5.overrides,
+        (_a5 = this.plugin.settings.icons) == null ? void 0 : _a5.overrides,
         updates
       )
     };
-    await plugin.saveSettings();
-    resetButton == null ? void 0 : resetButton.setDisabled(currentValue().length === 0);
-  };
-  new import_obsidian10.Setting(containerEl).setName("Use icon set").setDesc("Select a folder to load an icon set from. This option will only update an override if an icon name in the provided folder matches one of the names below.").addButton((button) => {
-    button.setIcon("file-search").onClick(() => {
-      new FileSearchModal(plugin, {
-        setSelection: async (file) => {
-          if (file instanceof import_obsidian10.TFolder) {
-            const updates = {};
-            for (const child of file.children) {
-              if (!(child instanceof import_obsidian10.TFile)) continue;
-              if (iconExtensions.includes(child.extension) && iconTypes2.includes(child.basename)) {
-                updates[child.basename] = child.path;
-              }
-            }
-            await saveIconSettings(updates);
-            new import_obsidian10.Notice(`Updated icon overrides for ${Object.entries(updates).length}`);
-          }
-        },
-        selectDir: true,
-        extensions: [],
-        onEmptyStateText: (searchPath) => `No folders found at "${searchPath}"`
-      }).open();
-    });
-  }).addExtraButton((button) => {
-    resetButton = button.setIcon("rotate-ccw").setTooltip("Clear all overrides").setDisabled(currentValue().length === 0).onClick(async () => {
-      await saveIconSettings(null);
-    });
-  });
-  const newIconOverrideSetting = (icon) => {
-    const currentValue2 = () => {
-      var _a5, _b2;
-      return (_b2 = (_a5 = plugin.settings.icons) == null ? void 0 : _a5.overrides) == null ? void 0 : _b2[icon];
-    };
-    let resetButton2;
-    const setIcon = async (iconPath) => {
-      var _a5;
-      if (iconPath !== null && iconPath.length === 0) {
-        iconPath = null;
+    await this.plugin.saveSettings();
+    console.log(this.overrides);
+    if (updates === null) {
+      for (const callback of this.onChangedCallbacks.values()) {
+        callback();
       }
-      await saveIconSettings({ [icon]: iconPath });
-      if (iconPath) {
-        new import_obsidian10.Notice(`Updated icon override for "${icon}" to "${iconPath}"`);
-      } else {
-        new import_obsidian10.Notice(`Reset icon "${icon}" to default.`);
+    } else {
+      for (const iconType of Object.keys(updates)) {
+        (_b2 = this.onChangedCallbacks.get(iconType)) == null ? void 0 : _b2();
       }
-      textInput == null ? void 0 : textInput.setValue((_a5 = currentValue2()) != null ? _a5 : "");
-      resetButton2 == null ? void 0 : resetButton2.setDisabled(currentValue2() === void 0);
+    }
+  }
+  async setIconPath(icon, iconFile) {
+    if (iconFile !== null && iconFile.length === 0) {
+      iconFile = null;
+    }
+    await this.saveIconSettings({ [icon]: iconFile });
+    if (iconFile) {
+      new import_obsidian11.Notice(`Updated icon override for "${icon}" to "${iconFile}"`);
+    } else {
+      new import_obsidian11.Notice(`Reset icon "${icon}" to default.`);
+    }
+  }
+};
+_IconsSettingsManager.ICON_DOWNLOAD_BASE_URL = `https://raw.githubusercontent.com/tldraw/tldraw/refs/tags/v${TLDRAW_VERSION}/assets/icons/icon`;
+var IconsSettingsManager = _IconsSettingsManager;
+
+// src/obsidian/settings/FontsSettingsManager.ts
+var import_obsidian12 = require("obsidian");
+var _FontsSettingsManager = class _FontsSettingsManager {
+  constructor(plugin) {
+    this.plugin = plugin;
+    this.onChangedCallbacks = /* @__PURE__ */ new Map();
+  }
+  static getFontUrl(font) {
+    const fontName = defaultFonts[font];
+    return `${_FontsSettingsManager.FONT_DOWNLOAD_BASE_URL}/${fontName}`;
+  }
+  get overrides() {
+    var _a5, _b2;
+    return (_b2 = (_a5 = this.plugin.settings.fonts) == null ? void 0 : _a5.overrides) != null ? _b2 : {};
+  }
+  onChanged(font, callback) {
+    this.onChangedCallbacks.set(font, callback);
+  }
+  getDownloadConfig(font) {
+    return {
+      url: _FontsSettingsManager.getFontUrl(font),
+      destination: `${this.plugin.settings.assetsFolder}/fonts/${defaultFonts[font]}`
     };
-    let textInput;
-    const current = currentValue2();
-    return new import_obsidian10.Setting(containerEl).addText((text) => {
-      textInput = text.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
-      textInput.inputEl.readOnly = true;
-    }).addButton((button) => {
-      button.setIcon("file-search").onClick(() => {
-        new FileSearchModal(plugin, {
-          extensions: [...iconExtensions],
-          initialValue: currentValue2(),
-          onEmptyStateText: (searchPath) => `No folders or icons found at "${searchPath}"`,
-          setSelection: (file) => setIcon(file.path)
-        }).open();
+  }
+  getAllAssetsConfigs() {
+    return new Map(Object.keys(defaultFonts).map(
+      (e2) => [
+        e2,
+        this.getDownloadConfig(e2)
+      ]
+    ));
+  }
+  async saveFontSettings(updates) {
+    var _a5, _b2;
+    this.plugin.settings.fonts = updates === null ? void 0 : {
+      overrides: updateFontOverrides(
+        (_a5 = this.plugin.settings.fonts) == null ? void 0 : _a5.overrides,
+        updates
+      )
+    };
+    await this.plugin.saveSettings();
+    if (updates === null) {
+      for (const callback of this.onChangedCallbacks.values()) {
+        callback();
+      }
+    } else {
+      for (const fontType of Object.keys(updates)) {
+        (_b2 = this.onChangedCallbacks.get(fontType)) == null ? void 0 : _b2();
+      }
+    }
+  }
+  async setFontPath(font, fontFile) {
+    if (fontFile !== null && fontFile.length === 0) {
+      fontFile = null;
+    }
+    await this.saveFontSettings({ [font]: fontFile });
+    if (fontFile) {
+      new import_obsidian12.Notice(`Updated font override for "${font}" to "${fontFile}"`);
+    } else {
+      new import_obsidian12.Notice(`Reset font "${font}" to default.`);
+    }
+  }
+};
+_FontsSettingsManager.FONT_DOWNLOAD_BASE_URL = `https://raw.githubusercontent.com/tldraw/tldraw/refs/tags/v${TLDRAW_VERSION}/assets/fonts`;
+var FontsSettingsManager = _FontsSettingsManager;
+
+// src/obsidian/modal/DownloadManagerModal.ts
+var import_obsidian14 = require("obsidian");
+
+// src/utils/fetch/download.ts
+var import_obsidian13 = require("obsidian");
+var DownloadError = class extends Error {
+};
+var DownloadErrorTAbstractFileExists = class extends DownloadError {
+  constructor(tAbstractFile) {
+    super(`File exists: ${tAbstractFile.path}`);
+    this.tAbstractFile = tAbstractFile;
+  }
+};
+async function fetchAndSaveDownload(vault, {
+  url,
+  destination
+}) {
+  const dir = getDir(destination);
+  let maybeDir = vault.getAbstractFileByPath(dir);
+  if (maybeDir === null) {
+    maybeDir = await vault.createFolder(dir);
+  } else if (!(maybeDir instanceof import_obsidian13.TFolder)) {
+    throw new DownloadError(`Could not download file: ${dir} is not a folder.`);
+  }
+  const downloadTo = (0, import_obsidian13.normalizePath)(`${maybeDir.path}/${pathBasename(destination)}`);
+  const existing = vault.getAbstractFileByPath(downloadTo);
+  if (existing) {
+    throw new DownloadErrorTAbstractFileExists(existing);
+  }
+  const res = await fetch(url);
+  if (!res.ok) {
+    throw new DownloadError(`Fetch unsuccessful: ${url}`);
+  }
+  return vault.createBinary((0, import_obsidian13.normalizePath)(downloadTo), await res.arrayBuffer());
+}
+
+// src/obsidian/modal/DownloadManagerModal.ts
+var DownloadManagerModal = class extends import_obsidian14.Modal {
+  onClose() {
+    super.onClose();
+    this.contentEl.empty();
+  }
+  async startDownload(download, onSuccess, container) {
+    this.open();
+    const downloadCtx = {
+      info: download,
+      container: container != null ? container : this.contentEl.createDiv({
+        cls: "ptl-download-job"
+      })
+    };
+    try {
+      container == null ? void 0 : container.empty();
+      this.setDownloading(downloadCtx);
+      const tFile = await fetchAndSaveDownload(this.app.vault, download);
+      this.setFinished({
+        ...downloadCtx,
+        tFile
       });
-    }).addExtraButton((button) => {
-      resetButton2 = button.setIcon("rotate-ccw").setTooltip("Use default").setDisabled(current === void 0).onClick(async () => {
-        await setIcon(null);
+      await onSuccess(tFile);
+    } catch (e2) {
+      this.setErrored({
+        ...downloadCtx,
+        error: e2,
+        onRetrySuccess: onSuccess
       });
-    });
-  };
-  containerEl.createEl("h2", { text: "Individual icon overrides." });
-  containerEl.createEl("p", {
-    text: "Click an icon name to view the default in your web browser. All of the default icons are hosted on "
-  }, (el) => {
-    el.createEl("a", {
-      text: "tldraw's GitHub repository",
-      href: "https://github.com/tldraw/tldraw/tree/main/assets/icons/icon"
-    });
-    el.appendText(".");
-  });
-  for (const icon of iconTypes2) {
-    const setting = newIconOverrideSetting(icon);
-    setting.nameEl.createEl("a", {
-      text: icon,
-      href: `https://github.com/tldraw/tldraw/blob/main/assets/icons/icon/${icon}.svg`
+    }
+  }
+  setDownloading(item) {
+    item.container.createEl("p", {
+      text: item.info.destination
     });
   }
-}
+  setFinished(item) {
+    item.container.createEl("p", {
+      cls: "ptl-download-success",
+      text: "Done."
+    });
+  }
+  setErrored({
+    container,
+    error,
+    info,
+    onRetrySuccess
+  }) {
+    container.createEl("p", {
+      cls: "ptl-download-error",
+      text: error instanceof Error ? error.message : "Uknown error"
+    });
+    if (error instanceof DownloadErrorTAbstractFileExists) {
+      new import_obsidian14.ButtonComponent(container).setButtonText("Replace file").onClick(async () => {
+        await this.app.vault.delete(error.tAbstractFile);
+        await this.startDownload(info, onRetrySuccess, container);
+      });
+    }
+  }
+};
 
 // src/obsidian/TldrawSettingsTab.ts
 var DEFAULT_SETTINGS = {
@@ -96419,12 +96641,16 @@ var DEFAULT_SETTINGS = {
   embeds: {
     showBg: true,
     showBgDots: true
-  }
+  },
+  assetsFolder: "tldraw/assets"
 };
-var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
+var TldrawSettingsTab = class extends import_obsidian15.PluginSettingTab {
   constructor(app, plugin) {
     super(app, plugin);
     this.plugin = plugin;
+    this.fontsSettingsManager = new FontsSettingsManager(this.plugin);
+    this.iconsSettingsManager = new IconsSettingsManager(this.plugin);
+    this.downloadManagerModal = new DownloadManagerModal(this.app);
   }
   display() {
     const { containerEl } = this;
@@ -96432,19 +96658,18 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
     this.fileSettings();
     this.startUpSettings();
     this.embedsSettings();
-    this.fontSettings();
-    this.iconsSettings();
+    this.assetsSettings();
   }
   fileSettings() {
     const { containerEl } = this;
     containerEl.createEl("h1", { text: "File" });
-    new import_obsidian11.Setting(containerEl).setName("Save folder").setDesc("The folder that tldraw files will be created in.").addText(
+    new import_obsidian15.Setting(containerEl).setName("Save folder").setDesc("The folder that tldraw files will be created in.").addText(
       (text2) => text2.setPlaceholder("root").setValue(this.plugin.settings.folder).onChange(async (value) => {
         this.plugin.settings.folder = value;
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian11.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
+    new import_obsidian15.Setting(containerEl).setName("Use attachments folder").setDesc('Use the location defined in the "Files and links" options tab for newly created tldraw files if they are embed as an attachment.').addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.useAttachmentsFolder);
       toggle.onChange(async (value) => {
         this.plugin.settings.useAttachmentsFolder = value;
@@ -96454,7 +96679,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
     const defaultDelay = msToSeconds(DEFAULT_SAVE_DELAY);
     const minDelay = msToSeconds(MIN_SAVE_DELAY);
     const maxDelay = msToSeconds(MAX_SAVE_DELAY);
-    const saveDelaySetting = new import_obsidian11.Setting(containerEl).setName("Save delay").setDesc(
+    const saveDelaySetting = new import_obsidian15.Setting(containerEl).setName("Save delay").setDesc(
       `The delay in seconds to automatically save after a change has been made to a tlraw drawing. Must be a value between ${minDelay} and ${maxDelay} (1 hour). Requires reloading any tldraw files you may have open in a tab.`
     ).addText(
       (text2) => text2.setPlaceholder(`${defaultDelay}`).setValue(`${this.plugin.settings.saveFileDelay}`).onChange(async (value) => {
@@ -96471,7 +96696,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
       cls: "ptl-default-code",
       text: `DEFAULT: [${DEFAULT_SETTINGS.saveFileDelay}]`
     });
-    const filePrefixSettings = new import_obsidian11.Setting(containerEl).setName("New file prefix").setDesc(
+    const filePrefixSettings = new import_obsidian15.Setting(containerEl).setName("New file prefix").setDesc(
       "When creating a new tldraw file, the file name will automatically prepend the prefix. Can be left empty, however if both the prefix and time format are empty, it will use the defaults to name the file."
     ).addText(
       (text2) => text2.setPlaceholder("Prefix").setValue(this.plugin.settings.newFilePrefix).onChange(async (value) => {
@@ -96484,7 +96709,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
       cls: "ptl-default-code"
     });
     let dateFormatSampleEl;
-    const dateFormat = new import_obsidian11.Setting(containerEl).setName("New file time format").setDesc(
+    const dateFormat = new import_obsidian15.Setting(containerEl).setName("New file time format").setDesc(
       "When creating a new tldraw file, this represents the time format that will get appended to the file name. It can be left empty, however if both the Prefix and Time Format are empty, it will use the defaults to name the file. "
     ).addMomentFormat((format2) => {
       dateFormatSampleEl = format2.setDefaultFormat(DEFAULT_SETTINGS.newFileTimeFormat).setPlaceholder(DEFAULT_SETTINGS.newFileTimeFormat).setValue(this.plugin.settings.newFileTimeFormat).onChange(async (value) => {
@@ -96513,7 +96738,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
   startUpSettings() {
     const { containerEl } = this;
     containerEl.createEl("h1", { text: "Start up" });
-    new import_obsidian11.Setting(containerEl).setName("Theme").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Theme").setDesc(
       "When opening a tldraw file, this setting decides what theme should be applied."
     ).addDropdown((cb) => {
       cb.addOption("light", "Light theme").addOption("dark", "Dark theme").addOption("match-theme", "Match theme").setValue(this.plugin.settings.themeMode).onChange(async (value) => {
@@ -96521,7 +96746,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian11.Setting(containerEl).setName("Default tool").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Default tool").setDesc(
       "When opening a tldraw file, this setting decides which tool should be selected."
     ).addDropdown((cb) => {
       cb.addOption("select", "Select").addOption("hand", "Hand").addOption("draw", "Draw").addOption("text", "Text").addOption("eraser", "Eraser").addOption("highlight", "Highlight").addOption("rectangle", "Rectangle").addOption("ellipse", "Ellipse").setValue(this.plugin.settings.toolSelected).onChange(async (value) => {
@@ -96529,7 +96754,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian11.Setting(containerEl).setName("Grid mode").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Grid mode").setDesc(
       "When opening tldraw files, this setting determines whether grid mode is enabled. Keep in mind that enabling grid mode will both show a grid and enforce snap-to-grid functionality."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.gridMode);
@@ -96538,7 +96763,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian11.Setting(containerEl).setName("Snap mode").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Snap mode").setDesc(
       "When opening tldraw files, this setting determines whether snap mode is enabled. Snap mode is a feature that places guides on shapes as you move them, ensuring they align with specific points or positions for precise placement."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.snapMode);
@@ -96547,7 +96772,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian11.Setting(containerEl).setName("Focus mode").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Focus mode").setDesc(
       "When opening tldraw files, this setting determines whether to launch tldraw in focus mode. Great if you like to use tldraw to quickly jot something down."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.focusMode);
@@ -96556,7 +96781,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian11.Setting(containerEl).setName("Debug mode").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Debug mode").setDesc(
       "When opening tldraw files, this setting toggles the tldraw debug mode. Debug mode is useful for the developer."
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.debugMode);
@@ -96572,7 +96797,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
     containerEl.createEl("p", {
       text: "Reload Obsidian to apply changes"
     });
-    new import_obsidian11.Setting(containerEl).setName("Show background").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Show background").setDesc(
       "Whether to show the background for a markdown embed by default"
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.embeds.showBg);
@@ -96581,7 +96806,7 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
         await this.plugin.saveSettings();
       });
     });
-    new import_obsidian11.Setting(containerEl).setName("Show background dotted pattern").setDesc(
+    new import_obsidian15.Setting(containerEl).setName("Show background dotted pattern").setDesc(
       "Whether to show the background dotted pattern for a markdown embed by default"
     ).addToggle((cb) => {
       cb.setValue(this.plugin.settings.embeds.showBgDots);
@@ -96591,54 +96816,80 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
       });
     });
   }
+  downloadFont(font, config) {
+    return this.downloadManagerModal.startDownload(
+      config,
+      async (tFile) => this.fontsSettingsManager.setFontPath(font, tFile.path)
+    );
+  }
+  async downloadAllFonts() {
+    const configs = this.fontsSettingsManager.getAllAssetsConfigs();
+    for (const [font, downloadInfo] of configs) {
+      await this.downloadFont(font, downloadInfo);
+    }
+  }
+  downloadIcon(icon, config) {
+    return this.downloadManagerModal.startDownload(
+      config,
+      async (tFile) => this.iconsSettingsManager.setIconPath(icon, tFile.path)
+    );
+  }
+  async downloadAllIcons() {
+    const configs = this.iconsSettingsManager.getAllDownloadConfigs();
+    for (const [icon, downloadInfo] of configs) {
+      await this.downloadIcon(icon, downloadInfo);
+    }
+  }
+  assetsSettings() {
+    this.containerEl.createEl("h1", { text: "Assets" });
+    const offlineFonts = new import_obsidian15.Setting(this.containerEl).setName("Offline assets").setDesc("Download all assets offline use").addButton((button) => button.setButtonText("Download all").onClick(async () => {
+      await this.downloadAllFonts();
+      await this.downloadAllIcons();
+    }));
+    offlineFonts.descEl.createEl("code", {
+      cls: "ptl-default-code",
+      text: `Vault folder: ${this.plugin.settings.assetsFolder}`
+    });
+    this.fontSettings();
+    this.iconsSettings();
+  }
   fontSettings() {
-    const { containerEl } = this;
-    containerEl.createEl("h1", { text: "Fonts" });
-    containerEl.createEl("h2", { text: "Default font overrides" });
-    const saveFontSettings = async (updates) => {
-      var _a5;
-      this.plugin.settings.fonts = {
-        overrides: updateFontOverrides(
-          (_a5 = this.plugin.settings.fonts) == null ? void 0 : _a5.overrides,
-          updates
-        )
-      };
-      await this.plugin.saveSettings();
-    };
+    const { containerEl, fontsSettingsManager } = this;
+    containerEl.createEl("h2", { text: "Fonts" });
+    const offlineFonts = new import_obsidian15.Setting(this.containerEl).setName("Offline fonts").setDesc("Download all fonts for offline use").addButton((button) => button.setButtonText("Download all").onClick(async () => {
+      await this.downloadAllFonts();
+    }));
+    offlineFonts.descEl.createEl("code", {
+      cls: "ptl-default-code",
+      text: `Vault folder: ${this.plugin.settings.assetsFolder}/fonts`
+    });
+    containerEl.createEl("h2", { text: "Font assets overrides" });
     const newFontOverrideSetting = (args) => {
-      const currentValue = () => {
-        var _a5, _b2;
-        return (_b2 = (_a5 = this.plugin.settings.fonts) == null ? void 0 : _a5.overrides) == null ? void 0 : _b2[args.font];
-      };
+      const currentValue = () => fontsSettingsManager.overrides[args.font];
       let resetButton;
-      const setFont = async (fontPath) => {
+      const setFont = async (fontPath) => fontsSettingsManager.setFontPath(args.font, fontPath);
+      fontsSettingsManager.onChanged(args.font, () => {
         var _a5;
-        if (fontPath !== null && fontPath.length === 0) {
-          fontPath = null;
-        }
-        await saveFontSettings({ [args.font]: fontPath });
-        if (fontPath) {
-          new import_obsidian11.Notice(`Updated font override for "${args.font}" to "${fontPath}"`);
-        } else {
-          new import_obsidian11.Notice(`Reset font "${args.font}" to default.`);
-        }
         textInput == null ? void 0 : textInput.setValue((_a5 = currentValue()) != null ? _a5 : "");
         resetButton == null ? void 0 : resetButton.setDisabled(currentValue() === void 0);
-      };
+      });
       let textInput;
       const current = currentValue();
-      return new import_obsidian11.Setting(containerEl).setName(args.name).setDesc(`Appears as "${args.appearsAs}" in the style panel.`).addText((text) => {
+      const config = fontsSettingsManager.getDownloadConfig(args.font);
+      return new import_obsidian15.Setting(containerEl).setName(args.name).setDesc(`Appears as "${args.appearsAs}" in the style panel.`).addText((text) => {
         textInput = text.setValue(current != null ? current : "").setPlaceholder("[ DEFAULT ]");
         textInput.inputEl.readOnly = true;
       }).addButton((button) => {
         button.setIcon("file-search").onClick(() => {
           new FileSearchModal(this.plugin, {
-            extensions: [...fontTypes],
+            extensions: [...fontExtensions],
             initialValue: currentValue(),
             onEmptyStateText: (searchPath) => `No folders or fonts at "${searchPath}".`,
             setSelection: (file) => setFont(file.path)
           }).open();
         });
+      }).addExtraButton((button) => {
+        button.setIcon("download").setTooltip(`Download from ${config.url}`).onClick(() => this.downloadFont(args.font, config));
       }).addExtraButton((button) => {
         resetButton = button.setIcon("rotate-ccw").setTooltip("Use default").setDisabled(current === void 0).onClick(async () => {
           await setFont(null);
@@ -96667,9 +96918,21 @@ var TldrawSettingsTab = class extends import_obsidian11.PluginSettingTab {
     });
   }
   iconsSettings() {
-    this.containerEl.createEl("h1", { text: "Icons" });
-    this.containerEl.createEl("h2", { text: "Default icon overrides" });
-    createIconOverridesSettingsEl(this.plugin, this.containerEl);
+    this.containerEl.createEl("h2", { text: "Icons" });
+    const offlineIcons = new import_obsidian15.Setting(this.containerEl).setName("Offline icons").setDesc("Download all icons for offline use").addButton((button) => button.setButtonText("Download all").onClick(async () => {
+      await this.downloadAllIcons();
+    }));
+    offlineIcons.descEl.createEl("code", {
+      cls: "ptl-default-code",
+      text: `Vault folder: ${this.plugin.settings.assetsFolder}/icons`
+    });
+    this.containerEl.createEl("h2", { text: "Icon assets overrides" });
+    createIconOverridesSettingsEl(
+      this.plugin,
+      this.containerEl,
+      this.iconsSettingsManager,
+      (icon, config) => this.downloadIcon(icon, config)
+    );
   }
 };
 
@@ -96868,7 +97131,7 @@ function around1(obj, method, createWrapper) {
 }
 
 // src/obsidian/TldrawReadonly.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian16 = require("obsidian");
 
 // src/utils/logging/index.ts
 function logClass(targetClass, target, ...args) {
@@ -96887,7 +97150,7 @@ function pluginMenuLabel(menuItem, {
 }
 
 // src/obsidian/TldrawReadonly.ts
-var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_obsidian12.FileView) {
+var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_obsidian16.FileView) {
   constructor(leaf, plugin) {
     super(leaf);
     this.setFileData = () => {
@@ -96961,7 +97224,7 @@ var TldrawReadonly = class _TldrawReadonly extends TldrawLoadableMixin(import_ob
       )
     });
     await this.plugin.openTldrFile(newFile, location, viewType);
-    new import_obsidian12.Notice(`Created a new file for editing "${newFile.path}"`);
+    new import_obsidian16.Notice(`Created a new file for editing "${newFile.path}"`);
   }
 };
 
@@ -96983,7 +97246,7 @@ function pluginBuild(Base, args) {
 }
 
 // src/obsidian/plugin/markdown-post-processor.ts
-var import_obsidian14 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 
 // src/utils/debug-mutation-observer.ts
 var durationTreshold = 0;
@@ -97074,7 +97337,7 @@ function createTldrawAppViewModeController({
 }
 
 // src/obsidian/menu/create-embed-menu.ts
-var import_obsidian13 = require("obsidian");
+var import_obsidian17 = require("obsidian");
 function background(menuItem, controller) {
   var _a5;
   return menuItem.setTitle("Show background").setChecked(
@@ -97106,7 +97369,7 @@ function createEmbedMenu({
   tFile
 }) {
   const bounds = controller.getViewOptions().bounds;
-  return new import_obsidian13.Menu().addItem((item) => pluginMenuLabel(item, {
+  return new import_obsidian17.Menu().addItem((item) => pluginMenuLabel(item, {
     title: tFile.name
   })).addItem((item) => background(item, controller).onClick(() => {
     controller.toggleBackground();
@@ -97160,7 +97423,7 @@ async function markdownPostProcessor(plugin, element, context) {
     return;
   }
   const file = plugin.app.vault.getAbstractFileByPath(context.sourcePath);
-  if (!(file instanceof import_obsidian14.TFile)) return;
+  if (!(file instanceof import_obsidian18.TFile)) return;
   if (!context.frontmatter || context.frontmatter["tldraw-file"] !== true) {
     return;
   }
@@ -97575,7 +97838,7 @@ var TldrawFileListenerMap = class {
 // src/main.ts
 var _TldrawPlugin_decorators, _init13, _a4;
 _TldrawPlugin_decorators = [pluginBuild];
-var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
+var TldrawPlugin = class extends (_a4 = import_obsidian19.Plugin) {
   constructor() {
     super(...arguments);
     this.transientUpdate = false;
@@ -97688,8 +97951,8 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
     );
     await this.loadSettings();
     this.addSettingTab(new TldrawSettingsTab(this.app, this));
-    (0, import_obsidian15.addIcon)(TLDRAW_ICON_NAME, TLDRAW_ICON);
-    (0, import_obsidian15.addIcon)(MARKDOWN_ICON_NAME, MARKDOWN_ICON);
+    (0, import_obsidian19.addIcon)(TLDRAW_ICON_NAME, TLDRAW_ICON);
+    (0, import_obsidian19.addIcon)(MARKDOWN_ICON_NAME, MARKDOWN_ICON);
     this.addRibbonIcon(
       TLDRAW_ICON_NAME,
       RIBBON_NEW_FILE,
@@ -97720,7 +97983,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
   registerEvents() {
     const self2 = this;
     this.register(
-      around(import_obsidian15.WorkspaceLeaf.prototype, {
+      around(import_obsidian19.WorkspaceLeaf.prototype, {
         setViewState(next) {
           return function(state, ...rest) {
             const leaf = this;
@@ -97737,7 +98000,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
                 const file = self2.app.vault.getAbstractFileByPath(
                   filePath
                 );
-                if (file instanceof import_obsidian15.TFile) {
+                if (file instanceof import_obsidian19.TFile) {
                   self2.setLeafFileViewMode(view, leaf, file);
                   self2.updateStatusBarViewMode(view);
                 }
@@ -97753,7 +98016,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
       this.app.workspace.on("editor-menu", (menu, editor, source) => {
         const file = source.file;
         const leaf = this.app.workspace.getLeaf(false);
-        if (!leaf || !(file instanceof import_obsidian15.TFile)) return;
+        if (!leaf || !(file instanceof import_obsidian19.TFile)) return;
         if (!this.isTldrawFile(file)) return;
         menu.addItem((item) => {
           item.setIcon(TLDRAW_ICON_NAME).setSection("close").setTitle("View as Tldraw").onClick(async () => {
@@ -97764,7 +98027,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
     );
     this.registerEvent(
       this.app.workspace.on("file-menu", (menu, file, source, leaf) => {
-        if (!(file instanceof import_obsidian15.TFile)) return;
+        if (!(file instanceof import_obsidian19.TFile)) return;
         if (file.path.endsWith(TLDRAW_FILE_EXTENSION)) {
           menu.addItem((item) => pluginMenuLabel(
             item.setSection("tldraw")
@@ -97776,7 +98039,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
                 )
               });
               await this.openTldrFile(newFile, "new-tab", VIEW_TYPE_TLDRAW_FILE);
-              new import_obsidian15.Notice(`Created a new file for editing "${newFile.path}"`);
+              new import_obsidian19.Notice(`Created a new file for editing "${newFile.path}"`);
             });
           });
           return;
@@ -97815,7 +98078,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
       })
     );
     this.registerEvent(this.app.vault.on("modify", async (file) => {
-      if (!(file instanceof import_obsidian15.TFile)) return;
+      if (!(file instanceof import_obsidian19.TFile)) return;
       if (!this.hasTldrawFrontMatterKey(file)) return;
       const listeners = this.tldrawFileListeners.getListeners(file);
       if (listeners === void 0 || listeners.length === 0) return;
@@ -97874,7 +98137,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
     }
   }
   async createFile(filename, foldername, data) {
-    const folderpath = (0, import_obsidian15.normalizePath)(foldername || this.settings.folder);
+    const folderpath = (0, import_obsidian19.normalizePath)(foldername || this.settings.folder);
     await checkAndCreateFolder(folderpath, this.app.vault);
     const fname = getNewUniqueFilepath(
       this.app.vault,
@@ -97885,10 +98148,10 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
   }
   createDefaultFilename() {
     const { newFilePrefix, newFileTimeFormat } = this.settings;
-    const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian15.moment)().format(newFileTimeFormat) : "";
+    const date = newFileTimeFormat.trim() !== "" ? (0, import_obsidian19.moment)().format(newFileTimeFormat) : "";
     let filename = newFilePrefix + date;
     if (filename.trim() === "")
-      filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian15.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
+      filename = DEFAULT_SETTINGS.newFilePrefix + (0, import_obsidian19.moment)().format(DEFAULT_SETTINGS.newFileTimeFormat);
     return filename;
   }
   isTldrawFile(file) {
@@ -97902,7 +98165,7 @@ var TldrawPlugin = class extends (_a4 = import_obsidian15.Plugin) {
   switchToTldrawViewAfterLoad() {
     this.app.workspace.onLayoutReady(() => {
       for (let leaf of this.app.workspace.getLeavesOfType("markdown")) {
-        if (leaf.view instanceof import_obsidian15.MarkdownView && leaf.view.file && this.isTldrawFile(leaf.view.file)) {
+        if (leaf.view instanceof import_obsidian19.MarkdownView && leaf.view.file && this.isTldrawFile(leaf.view.file)) {
           this.updateViewMode(VIEW_TYPE_TLDRAW, leaf);
         }
       }
