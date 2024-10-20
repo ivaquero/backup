@@ -54,7 +54,7 @@
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
-    "*.m": "matlab",
+    "*.m": "matlab"
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -179,7 +179,6 @@
     "MD041": false,
     "MD042": false
   },
-  "markdowntable.showMenu.csvToTable": true,
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
@@ -220,8 +219,6 @@
     }
   },
   "ruff.configuration": "pyproject.toml",
-  "ruff.format.preview": true,
-  "ruff.lint.preview": true,
   "ruff.nativeServer": "on",
   "autoDocstring.docstringFormat": "numpy",
   // jupyter
@@ -235,7 +232,7 @@
   "bookmarks.saveBookmarksInProject": true,
   "bookmarks.sideBar.expanded": true,
   "bookmarks.useWorkaroundForFormatters": true,
-  // front end & formatters
+  // front end
   "emmet.showSuggestionsAsSnippets": true,
   "biome.rename": true,
   "[html]": {
@@ -330,7 +327,6 @@
   "latex-workshop.latex.clean.subfolder.enabled": true,
   "latex-workshop.message.error.show": false,
   "latex-workshop.message.warning.show": false,
-  "latex-workshop.showContextMenu": true,
   "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.tools": [
@@ -504,5 +500,6 @@
     }
   },
   "redhat.telemetry.enabled": false,
-  // "astGrep.serverPath": "C:\\Scoop\\shims\\sg.exe"
+  "editor.defaultFormatter": null,
+  // "astGrep.serverPath": "C:\\Scoop\\shims\\sg.exe",
 }
