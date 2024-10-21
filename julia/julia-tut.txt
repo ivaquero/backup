@@ -1,5 +1,6 @@
 BetterFileWatching
 CairoMakie
+Colors
 CommonMark
 Deno_jll
 DifferentialEquations
