@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-11T22:30:09.341-00:00",
+	"CreationDate" : "2024-10-21T23:40:23.335-00:00",
 	"Sources" : 
 	[
 		{
@@ -16,9 +16,6 @@
 					"PackageIdentifier" : "Apple.Bonjour"
 				},
 				{
-					"PackageIdentifier" : "Nutstore.Nutstore"
-				},
-				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
@@ -29,12 +26,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.Edge"
