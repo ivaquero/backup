@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-21T23:40:23.335-00:00",
+	"CreationDate" : "2024-10-22T06:21:01.387-00:00",
 	"Sources" : 
 	[
 		{
@@ -13,7 +13,16 @@
 					"PackageIdentifier" : "OpenRocket.OpenRocket"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+				},
+				{
 					"PackageIdentifier" : "Apple.Bonjour"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
+				},
+				{
+					"PackageIdentifier" : "Nutstore.Nutstore"
 				},
 				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
@@ -28,6 +37,21 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.Edge"
 				},
 				{
@@ -35,6 +59,12 @@
 				},
 				{
 					"PackageIdentifier" : "WinFsp.WinFsp"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
 				},
 				{
 					"PackageIdentifier" : "Espanso.Espanso"
