@@ -15,7 +15,6 @@ Logging
 MarkdownLiteral
 Memoize
 ModelingToolkit
-PalmerPenguins
 Pkg
 Pluto
 PlutoHooks
@@ -31,7 +30,6 @@ ThreadsX
 TidierData
 TidierFiles
 TidierPlots
-Turing
 URIs
 Unicode
 WGLMakie
