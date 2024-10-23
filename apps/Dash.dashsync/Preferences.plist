@@ -3306,6 +3306,20 @@ $("h1").each(function() {
 					<string>https://mamba.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://mesa.readthedocs.io/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-10-23T01:20:08Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Mesa</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mesa.readthedocs.io/stable/</string>
+				</dict>
+			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3407,7 +3421,7 @@ $("h1").each(function() {
 			<key>https://scitools.org.uk/cartopy/docs/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-08-22T15:39:59Z</date>
+				<date>2024-10-23T01:25:38Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>

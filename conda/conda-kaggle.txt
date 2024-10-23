@@ -1,3 +1,4 @@
+blackjax
 conda-tree
 ipykernel
 keras
@@ -7,6 +8,7 @@ nbconvert
 openpyxl
 plotnine
 pygwalker
+python-graphviz
 pytorch
 scikit-learn
 tabulate
