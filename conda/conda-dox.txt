@@ -3,6 +3,7 @@ conda-tree
 contextily
 geopandas
 jupyter-book
+marimo
 mesa
 nbconvert
 openpyxl
