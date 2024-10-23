@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-10-22T06:21:01.387-00:00",
+	"CreationDate" : "2024-10-24T00:18:52.558-00:00",
 	"Sources" : 
 	[
 		{
@@ -43,6 +43,9 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
+					"PackageIdentifier" : "WinFsp.WinFsp"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
 				},
 				{
@@ -56,9 +59,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
-				},
-				{
-					"PackageIdentifier" : "WinFsp.WinFsp"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
