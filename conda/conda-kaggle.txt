@@ -1,0 +1,13 @@
+bambi
+conda-tree
+cvxpy
+dowhy
+ipykernel
+mplfinance
+nasdaq-data-link
+nbconvert
+openpyxl
+pygwalker
+seaborn
+tabulate
+yfinance

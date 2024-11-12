@@ -1,0 +1,11 @@
+{
+  "ipv6": false,
+  "registry-mirrors": [
+    "https://docker.1panel.dev",
+    "https://docker.cloudlayer.icu",
+    "https://docker.m.daocloud.io",
+    "https://docker.rainbond.cc",
+    "https://dockerpull.org",
+    "https://registry.dockermirror.com"
+  ]
+}

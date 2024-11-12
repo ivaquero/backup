@@ -1,0 +1,22 @@
+{
+  "cookies": [],
+  "noteLocation": "/",
+  "dailyNotesLocation": "/",
+  "insertAfter": "<!-- start of weread -->",
+  "insertBefore": "<!-- end of weread -->",
+  "dailyNotesFormat": "YYYY-MM-DD",
+  "lastCookieTime": -1,
+  "isCookieValid": false,
+  "user": "",
+  "userVid": "",
+  "template": "---\nisbn: {{metaData.isbn}}\nlastReadDate: {{metaData.lastReadDate}}\n---\n# 元数据\n> [!abstract] {{metaData.title}}\n> - ![ {{metaData.title}}|200]({{metaData.cover}})\n> - 书名： {{metaData.title}}\n> - 作者： {{metaData.author}}\n> - 简介： {{metaData.intro}}\n> - 出版时间： {{metaData.publishTime}}\n> - ISBN： {{metaData.isbn}}\n> - 分类： {{metaData.category}}\n> - 出版社： {{metaData.publisher}}\n> - PC地址：{{metaData.pcUrl}}\n\n# 高亮划线\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}## {{chapter.chapterTitle}}{% elif chapter.level == 2 %}### {{chapter.chapterTitle}}{% elif chapter.level == 3 %}#### {{chapter.chapterTitle}}{% endif %}\n{% for highlight in chapter.highlights %}{% if highlight.reviewContent %}\n> 📌 {{ highlight.markText |trim }} ^{{highlight.bookmarkId}}\n- 💭 {{highlight.reviewContent}} - ⏱ {{highlight.createTime}} {% else %}\n> 📌 {{ highlight.markText |trim }} \n> ⏱ {{highlight.createTime}} ^{{highlight.bookmarkId}}{% endif %}\n{% endfor %}{% endfor %}\n# 读书笔记\n{% for chapter in bookReview.chapterReviews %}{% if chapter.reviews or chapter.chapterReview %}\n## {{chapter.chapterTitle}}\n{% if chapter.chapterReviews %}{% for chapterReview in chapter.chapterReviews %}\n### 章节评论 No.{{loop.index}}\n- {{chapterReview.content}} ^{{chapterReview.reviewId}}\n    - ⏱ {{chapterReview.createTime}} {% endfor %}{% endif %}{% if chapter.reviews %}{% for review in chapter.reviews %}\n### 划线评论\n> 📌 {{review.abstract |trim }}  ^{{review.reviewId}}\n    - 💭 {{review.content}}\n    - ⏱ {{review.createTime}}\n{% endfor %} {% endif %} {% endif %} {% endfor %}\n# 本书评论\n{% if bookReview.bookReviews %}{% for bookReview in bookReview.bookReviews %}\n## 书评 No.{{loop.index}} \n{{bookReview.mdContent}} ^{{bookReview.reviewId}}\n⏱ {{bookReview.createTime}}\n{% endfor %}{% endif %}\n",
+  "noteCountLimit": -1,
+  "subFolderType": "-1",
+  "fileNameType": "BOOK_NAME",
+  "dailyNotesToggle": false,
+  "notesBlacklist": "",
+  "showEmptyChapterTitleToggle": false,
+  "convertTags": true,
+  "saveArticleToggle": true,
+  "saveReadingInfoToggle": true
+}

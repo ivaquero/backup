@@ -1,0 +1,5 @@
+cmakelang
+conda-tree
+mamba
+python-pptx
+xeus-cpp

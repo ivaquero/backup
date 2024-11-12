@@ -1,0 +1,111 @@
+{
+  "ubits": {
+    "prefix": "ubits",
+    "description": "ubits",
+    "body": [
+      "#include <bits/stdc++.h>"
+    ]
+  },
+  "ucio": {
+    "prefix": "ucio",
+    "description": "",
+    "body": [
+      "#include <cstdio>",
+      ""
+    ]
+  },
+  "uios": {
+    "prefix": "uios",
+    "description": "",
+    "body": [
+      "#include <iostream>",
+      ""
+    ]
+  },
+  "uls": {
+    "prefix": "uls",
+    "description": "",
+    "body": [
+      "#include <list>"
+    ]
+  },
+  "uvec": {
+    "prefix": "uvec",
+    "description": "",
+    "body": [
+      "#include <vector>"
+    ]
+  },
+  "ualg": {
+    "prefix": "ualg",
+    "description": "",
+    "body": [
+      "#include <algorithm>"
+    ]
+  },
+  "uns": {
+    "prefix": "uns",
+    "description": "",
+    "body": [
+      "using namespace std;"
+    ]
+  },
+  "main": {
+    "prefix": "main",
+    "description": "",
+    "body": [
+      "int main() {",
+      "  ",
+      "  return 0;",
+      "}"
+    ]
+  },
+  "prf": {
+    "prefix": "prf",
+    "description": "",
+    "body": [
+      "printf(\": %d\\n\", );"
+    ]
+  },
+  "f": {
+    "prefix": "for",
+    "description": "",
+    "body": [
+      "for (auto i = 0; i < 5; i++) {",
+      "}"
+    ]
+  },
+  "fi": {
+    "prefix": "forit",
+    "description": "",
+    "body": [
+      "for (auto it = v.begin(); it != v.end(); it++) {",
+      "}"
+    ]
+  },
+  "ts": {
+    "prefix": "ts",
+    "description": "",
+    "body": [
+      "void test() {}"
+    ]
+  },
+  "coln": {
+    "prefix": "coln",
+    "description": "",
+    "body": [
+      "std::cout << Name << std::endl;"
+    ]
+  },
+  "covec": {
+    "prefix": "covec",
+    "description": "",
+    "body": [
+      "cout << \"w1: \";",
+      "for (int i : w1)",
+      "  std::cout << i << \", \";",
+      "std::cout << std::endl;",
+      ""
+    ]
+  }
+}

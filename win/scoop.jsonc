@@ -1,0 +1,10 @@
+{
+    "root_path": "C:\\Scoop",
+    "global_path": "C:\\Program Files",
+    "last_update": "2024-10-23T14:36:53.2503044+08:00",
+    "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
+    "scoop_branch": "master",
+    "use_sqlite_cache": true,
+    "aria2-enabled": true,
+    "aria2-max-connection-per-server": "10"
+}
