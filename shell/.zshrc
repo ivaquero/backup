@@ -15,7 +15,7 @@ unset __mamba_setup
 export OXIDIZER=${HOME}/Documents/GitHub/oxidizer
 source ${OXIDIZER}/oxidizer.sh
 
-if [[ "$(uname -sm)" = "Darwin arm64" ]]; then
+if [[ "$(uname -sm)" == "Darwin arm64" ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
     export CPATH="/opt/homebrew/include"
     export LIBRARY_PATH="/opt/homebrew/lib"
