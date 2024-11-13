@@ -290,7 +290,6 @@
   "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
   "blockman.n32BlackListOfFileFormats": "^c, ^cpp, ^python, ^json, ^javascript, ^typescript",
   // grammar
-  "ltex.language": "en-US",
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
     "dictionary": "workspaceFolderExternalFile",
