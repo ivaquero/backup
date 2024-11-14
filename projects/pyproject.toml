@@ -52,10 +52,12 @@
     ]
     fixable = ["ALL"]
     ignore = [
+        "B905",   # `zip()` without an explicit `strict=` parameter
         "EM101",  # exception must not use a string literal
         "EM102",  # exception must not use an f-string literal
         "ISC001", # conflicts with formatter
         "NPY002", # replace legacy `np.random.random`
+        "E501",   # line too long
         "E741",
         "F403",
         "F405",
@@ -73,5 +75,4 @@
     combine-as-imports = true
     force-single-line = true
     force-wrap-aliases = true
-    from-first = true
     order-by-type = true
