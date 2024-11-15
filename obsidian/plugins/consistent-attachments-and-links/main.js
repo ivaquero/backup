@@ -332,7 +332,7 @@ var require_Error = __commonJS({
       const title = `${error.name}: ${error.message}`;
       entries.push({ level, message: title, shouldClearAnsiSequence: true });
       if (error.stack) {
-        const restStack = error.stack.startsWith(title) ? error.stack.substring(title.length + 1) : error.stack;
+        const restStack = error.stack.startsWith(title) ? error.stack.slice(title.length + 1) : error.stack;
         entries.push({ level, message: `Error stack:
 ${restStack}` });
       }
@@ -389,6 +389,7 @@ var require_Async = __commonJS({
       convertAsyncToSync: () => convertAsyncToSync,
       convertSyncToAsync: () => convertSyncToAsync,
       invokeAsyncSafely: () => invokeAsyncSafely,
+      marksAsTerminateRetry: () => marksAsTerminateRetry,
       retryWithTimeout: () => retryWithTimeout,
       runWithTimeout: () => runWithTimeout,
       sleep: () => sleep,
@@ -400,8 +401,9 @@ var require_Async = __commonJS({
     async function retryWithTimeout(fn, retryOptions = {}) {
       const stackTrace = (0, import_Error.getStackTrace)();
       const DEFAULT_RETRY_OPTIONS = {
-        timeoutInMilliseconds: 5e3,
-        retryDelayInMilliseconds: 100
+        retryDelayInMilliseconds: 100,
+        shouldRetryOnError: true,
+        timeoutInMilliseconds: 5e3
       };
       const overriddenOptions = { ...DEFAULT_RETRY_OPTIONS, ...retryOptions };
       await runWithTimeout(overriddenOptions.timeoutInMilliseconds, async () => {
@@ -412,6 +414,9 @@ var require_Async = __commonJS({
           try {
             isSuccess = await fn();
           } catch (error) {
+            if (!overriddenOptions.shouldRetryOnError || error.__terminateRetry) {
+              throw error;
+            }
             (0, import_Error.printError)(error);
             isSuccess = false;
           }
@@ -473,6 +478,9 @@ var require_Async = __commonJS({
         arr.push(item);
       }
       return arr;
+    }
+    function marksAsTerminateRetry(error) {
+      return Object.assign(error, { __terminateRetry: true });
     }
   }
 });
@@ -580,25 +588,25 @@ var require_Logger = __commonJS({
         stackTrace = (0, import_Error.getStackTrace)().split("\n").slice(1).join("\n");
       }
       console.debug(`${title}:start`, {
-        timestampStart,
         fn,
-        stackTrace
+        stackTrace,
+        timestampStart
       });
       try {
         await fn();
         const timestampEnd = Date.now();
         console.debug(`${title}:end`, {
-          timestampStart,
+          duration: timestampEnd - timestampStart,
           timestampEnd,
-          duration: timestampEnd - timestampStart
+          timestampStart
         });
       } catch (error) {
         const timestampEnd = Date.now();
         console.debug(`${title}:error`, {
-          timestampStart,
-          timestampEnd: Date.now(),
           duration: timestampEnd - timestampStart,
-          error
+          error,
+          timestampEnd: Date.now(),
+          timestampStart
         });
         throw error;
       }
@@ -715,7 +723,7 @@ var require_implementations = __commonJS({
         let values = this.get(key);
         if (!values) {
           values = [];
-          this.data.set(key, []);
+          this.data.set(key, values);
         }
         if (!values.includes(value)) {
           values.push(value);
@@ -1353,6 +1361,7 @@ var require_String = __commonJS({
       ensureEndsWith: () => ensureEndsWith,
       ensureStartsWith: () => ensureStartsWith,
       escape: () => escape,
+      insertAt: () => insertAt,
       makeValidVariableName: () => makeValidVariableName,
       normalize: () => normalize,
       replace: () => replace,
@@ -1366,14 +1375,14 @@ var require_String = __commonJS({
     var import_RegExp = require_RegExp();
     var import_ValueProvider = require_ValueProvider();
     var ESCAPE_MAP = {
-      "\\": "\\\\",
-      '"': '\\"',
-      "'": "\\'",
       "\n": "\\n",
       "\r": "\\r",
       "	": "\\t",
       "\b": "\\b",
-      "\f": "\\f"
+      "\f": "\\f",
+      "'": "\\'",
+      '"': '\\"',
+      "\\": "\\\\"
     };
     var UNESCAPE_MAP = {};
     for (const [key, value] of Object.entries(ESCAPE_MAP)) {
@@ -1427,6 +1436,10 @@ var require_String = __commonJS({
     function replace(str, replacementsMap) {
       const regExp = new RegExp(Object.keys(replacementsMap).map((source) => (0, import_RegExp.escapeRegExp)(source)).join("|"), "g");
       return str.replaceAll(regExp, (source) => replacementsMap[source] ?? (0, import_Error.throwExpression)(new Error(`Unexpected replacement source: ${source}`)));
+    }
+    function insertAt(str, substring, startIndex, endIndex) {
+      endIndex ??= startIndex;
+      return str.slice(0, startIndex) + substring + str.slice(endIndex);
     }
   }
 });
@@ -1813,32 +1826,56 @@ var require_PluginBase = __commonJS({
       "platform": "android"
     };
     var PluginBase2 = class extends import_obsidian5.Plugin {
+      _abortSignal;
       _settings;
       notice;
-      _abortSignal;
       /**
-       * Gets the AbortSignal used for aborting long-running operations.
+       * Called when the layout is ready. This method can be overridden by subclasses to perform actions once
+       * the layout is ready.
        *
-       * @returns The abort signal.
+       * @returns A promise or void indicating the completion of the layout setup.
        */
-      get abortSignal() {
-        return this._abortSignal;
+      onLayoutReady() {
+        (0, import_Function2.noop)();
       }
       /**
-       * Gets a copy of the current plugin settings.
+       * Called when the plugin loading is complete. This method must be implemented by subclasses to perform
+       * any additional setup required after loading is complete.
        *
-       * @returns A copy of the plugin settings.
+       * @returns A promise or void indicating the completion of the load process.
        */
-      get settingsCopy() {
-        return (0, import_PluginSettings.clonePluginSettings)(this.createDefaultPluginSettings.bind(this), this.settings);
+      onloadComplete() {
+        (0, import_Function2.noop)();
       }
       /**
-       * Gets the plugin settings.
+       * Parses the provided settings data and returns the parsed `PluginSettings`.
        *
-       * @returns The plugin settings.
+       * @param data - The raw data to be parsed into `PluginSettings`.
+       * @returns A promise that resolves to `PluginSettings` or the settings directly.
        */
-      get settings() {
-        return this._settings;
+      parseSettings(data) {
+        return (0, import_PluginSettings.loadPluginSettings)(this.createDefaultPluginSettings.bind(this), data);
+      }
+      /**
+       * Displays a notice message to the user.
+       *
+       * @param message - The message to display.
+       */
+      showNotice(message) {
+        if (this.notice) {
+          this.notice.hide();
+        }
+        this.notice = new import_obsidian5.Notice(`${this.manifest.name}
+${message}`);
+      }
+      /**
+       * Loads the plugin settings from the saved data.
+       *
+       * @returns A promise that resolves when the settings are loaded.
+       */
+      async loadSettings() {
+        const data = await this.loadData();
+        this._settings = await this.parseSettings(data);
       }
       /**
        * Called when the plugin is loaded
@@ -1861,42 +1898,6 @@ var require_PluginBase = __commonJS({
         this.app.workspace.onLayoutReady(this.onLayoutReady.bind(this));
       }
       /**
-       * Called when the plugin loading is complete. This method must be implemented by subclasses to perform
-       * any additional setup required after loading is complete.
-       *
-       * @returns A promise or void indicating the completion of the load process.
-       */
-      onloadComplete() {
-        (0, import_Function2.noop)();
-      }
-      /**
-       * Called when the layout is ready. This method can be overridden by subclasses to perform actions once
-       * the layout is ready.
-       *
-       * @returns A promise or void indicating the completion of the layout setup.
-       */
-      onLayoutReady() {
-        (0, import_Function2.noop)();
-      }
-      /**
-       * Loads the plugin settings from the saved data.
-       *
-       * @returns A promise that resolves when the settings are loaded.
-       */
-      async loadSettings() {
-        const data = await this.loadData();
-        this._settings = await this.parseSettings(data);
-      }
-      /**
-       * Parses the provided settings data and returns the parsed `PluginSettings`.
-       *
-       * @param data - The raw data to be parsed into `PluginSettings`.
-       * @returns A promise that resolves to `PluginSettings` or the settings directly.
-       */
-      parseSettings(data) {
-        return (0, import_PluginSettings.loadPluginSettings)(this.createDefaultPluginSettings.bind(this), data);
-      }
-      /**
        * Saves the new plugin settings.
        *
        * @param newSettings - The new settings to save.
@@ -1907,16 +1908,28 @@ var require_PluginBase = __commonJS({
         await this.saveData(this.settings);
       }
       /**
-       * Displays a notice message to the user.
+       * Gets the AbortSignal used for aborting long-running operations.
        *
-       * @param message - The message to display.
+       * @returns The abort signal.
        */
-      showNotice(message) {
-        if (this.notice) {
-          this.notice.hide();
-        }
-        this.notice = new import_obsidian5.Notice(`${this.manifest.name}
-${message}`);
+      get abortSignal() {
+        return this._abortSignal;
+      }
+      /**
+       * Gets the plugin settings.
+       *
+       * @returns The plugin settings.
+       */
+      get settings() {
+        return this._settings;
+      }
+      /**
+       * Gets a copy of the current plugin settings.
+       *
+       * @returns A copy of the plugin settings.
+       */
+      get settingsCopy() {
+        return (0, import_PluginSettings.clonePluginSettings)(this.createDefaultPluginSettings.bind(this), this.settings);
       }
     };
   }
@@ -2022,6 +2035,8 @@ var require_Object = __commonJS({
     var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
     var Object_exports = {};
     __export2(Object_exports, {
+      assignWithNonEnumerableProperties: () => assignWithNonEnumerableProperties,
+      cloneWithNonEnumerableProperties: () => cloneWithNonEnumerableProperties,
       deepEqual: () => deepEqual,
       getNestedPropertyValue: () => getNestedPropertyValue,
       getPrototypeOf: () => getPrototypeOf,
@@ -2061,6 +2076,9 @@ var require_Object = __commonJS({
       return name;
     }
     function getPrototypeOf(instance) {
+      if (instance === void 0 || instance === null) {
+        return instance;
+      }
       return Object.getPrototypeOf(instance);
     }
     function toJson(value, options = {}) {
@@ -2110,6 +2128,23 @@ var require_Object = __commonJS({
         throw error;
       }
       node[lastKey] = value;
+    }
+    function cloneWithNonEnumerableProperties(obj) {
+      return Object.create(getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));
+    }
+    function assignWithNonEnumerableProperties(target, ...sources) {
+      return _assignWithNonEnumerableProperties(target, ...sources);
+    }
+    function _assignWithNonEnumerableProperties(target, ...sources) {
+      for (const source of sources) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      }
+      const sourcePrototypes = sources.map((source) => getPrototypeOf(source)).filter((proto) => !!proto);
+      if (sourcePrototypes.length > 0) {
+        const targetPrototype = _assignWithNonEnumerableProperties({}, getPrototypeOf(target), ...sourcePrototypes);
+        Object.setPrototypeOf(target, targetPrototype);
+      }
+      return target;
     }
   }
 });
@@ -2240,6 +2275,7 @@ var require_FrontMatter = __commonJS({
     });
     module2.exports = __toCommonJS2(FrontMatter_exports);
     var import_obsidian5 = require("obsidian");
+    var import_String = require_String();
     var __process2 = globalThis["process"] ?? {
       "cwd": () => "/",
       "env": {},
@@ -2255,7 +2291,7 @@ var require_FrontMatter = __commonJS({
         return content.slice(frontMatterInfo.contentStart);
       }
       const newFrontMatterStr = (0, import_obsidian5.stringifyYaml)(newFrontMatter);
-      return frontMatterInfo.exists ? content.slice(0, frontMatterInfo.from) + newFrontMatterStr + content.slice(frontMatterInfo.to) : "---\n" + newFrontMatterStr + "---\n" + content;
+      return frontMatterInfo.exists ? (0, import_String.insertAt)(content, newFrontMatterStr, frontMatterInfo.from, frontMatterInfo.to) : "---\n" + newFrontMatterStr + "---\n" + content;
     }
   }
 });
@@ -2308,16 +2344,16 @@ var require_Reference = __commonJS({
     function referenceToFileChange2(reference, newContent) {
       if ((0, import_implementations.isReferenceCache)(reference)) {
         return {
-          startIndex: reference.position.start.offset,
           endIndex: reference.position.end.offset,
+          newContent,
           oldContent: reference.original,
-          newContent
+          startIndex: reference.position.start.offset
         };
       } else if ((0, import_implementations.isFrontmatterLinkCache)(reference)) {
         return {
-          oldContent: reference.original,
+          frontMatterKey: reference.key,
           newContent,
-          frontMatterKey: reference.key
+          oldContent: reference.original
         };
       }
       throw new Error("Unknown link type");
@@ -2639,6 +2675,9 @@ var require_Vault = __commonJS({
       const DEFAULT_RETRY_OPTIONS = { timeoutInMilliseconds: 6e4 };
       const overriddenOptions = { ...DEFAULT_RETRY_OPTIONS, ...retryOptions };
       await (0, import_Async.retryWithTimeout)(async () => {
+        if (file.deleted) {
+          throw (0, import_Async.marksAsTerminateRetry)(new Error(`File ${file.path} is deleted`));
+        }
         const oldContent = await app.vault.read(file);
         const newContent = await (0, import_ValueProvider.resolveValue)(newContentProvider, oldContent);
         if (newContent === null) {
@@ -2648,9 +2687,9 @@ var require_Vault = __commonJS({
         await app.vault.process(file, (content) => {
           if (content !== oldContent) {
             console.warn("Content has changed since it was read. Retrying...", {
-              path: file.path,
+              actualContent: content,
               expectedContent: oldContent,
-              actualContent: content
+              path: file.path
             });
             success = false;
             return content;
@@ -2901,11 +2940,11 @@ var require_FileChange = __commonJS({
             const actualContent = content.slice(change.startIndex, change.endIndex);
             if (actualContent !== change.oldContent) {
               console.warn("Content mismatch", {
-                startIndex: change.startIndex,
+                actualContent,
                 endIndex: change.endIndex,
-                path: (0, import_FileSystem4.getPath)(pathOrFile),
                 expectedContent: change.oldContent,
-                actualContent
+                path: (0, import_FileSystem4.getPath)(pathOrFile),
+                startIndex: change.startIndex
               });
               return null;
             }
@@ -2913,10 +2952,10 @@ var require_FileChange = __commonJS({
             const actualContent = (0, import_Object.getNestedPropertyValue)(frontMatter, change.frontMatterKey);
             if (actualContent !== change.oldContent) {
               console.warn("Content mismatch", {
-                path: (0, import_FileSystem4.getPath)(pathOrFile),
-                expectedContent: change.oldContent,
                 actualContent,
-                frontMatterKey: change.frontMatterKey
+                expectedContent: change.oldContent,
+                frontMatterKey: change.frontMatterKey,
+                path: (0, import_FileSystem4.getPath)(pathOrFile)
               });
               return null;
             }
@@ -2951,8 +2990,8 @@ var require_FileChange = __commonJS({
           }
           if (isContentChange(previousChange) && isContentChange(change) && previousChange.endIndex && change.startIndex && previousChange.endIndex > change.startIndex) {
             console.warn("Overlapping changes", {
-              previousChange,
-              change
+              change,
+              previousChange
             });
             return null;
           }
@@ -3085,11 +3124,11 @@ var require_Link = __commonJS({
     async function updateLinksInFile2(options) {
       const {
         app,
-        pathOrFile,
-        oldPathOrFile,
-        renameMap,
-        forceMarkdownLinks,
         embedOnlyLinks,
+        forceMarkdownLinks,
+        oldPathOrFile,
+        pathOrFile,
+        renameMap,
         shouldUpdateFilenameAlias
       } = options;
       await editLinks(app, pathOrFile, (link) => {
@@ -3099,25 +3138,25 @@ var require_Link = __commonJS({
         }
         return convertLink({
           app,
+          forceMarkdownLinks,
           link,
-          sourcePathOrFile: pathOrFile,
           oldPathOrFile,
           renameMap,
-          forceMarkdownLinks,
-          shouldUpdateFilenameAlias
+          shouldUpdateFilenameAlias,
+          sourcePathOrFile: pathOrFile
         });
       });
     }
     function convertLink(options) {
       return updateLink({
         app: options.app,
-        link: options.link,
-        pathOrFile: extractLinkFile3(options.app, options.link, options.sourcePathOrFile),
-        oldPathOrFile: options.oldPathOrFile,
-        sourcePathOrFile: options.sourcePathOrFile,
-        renameMap: options.renameMap,
         forceMarkdownLinks: options.forceMarkdownLinks,
-        shouldUpdateFilenameAlias: options.shouldUpdateFilenameAlias
+        link: options.link,
+        oldPathOrFile: options.oldPathOrFile,
+        pathOrFile: extractLinkFile3(options.app, options.link, options.sourcePathOrFile),
+        renameMap: options.renameMap,
+        shouldUpdateFilenameAlias: options.shouldUpdateFilenameAlias,
+        sourcePathOrFile: options.sourcePathOrFile
       });
     }
     function extractLinkFile3(app, link, notePathOrFile) {
@@ -3127,13 +3166,13 @@ var require_Link = __commonJS({
     function updateLink(options) {
       const {
         app,
-        link,
-        pathOrFile,
-        oldPathOrFile,
-        sourcePathOrFile,
-        renameMap,
         forceMarkdownLinks,
-        shouldUpdateFilenameAlias
+        link,
+        oldPathOrFile,
+        pathOrFile,
+        renameMap,
+        shouldUpdateFilenameAlias,
+        sourcePathOrFile
       } = options;
       if (!pathOrFile) {
         return link.original;
@@ -3146,10 +3185,10 @@ var require_Link = __commonJS({
       let alias = shouldResetAlias({
         app,
         displayText: link.displayText,
-        pathOrFile,
+        isWikilink,
         otherPathOrFiles: [oldPath, newPath],
-        sourcePathOrFile,
-        isWikilink
+        pathOrFile,
+        sourcePathOrFile
       }) ? void 0 : link.displayText;
       if (shouldUpdateFilenameAlias ?? true) {
         if (alias?.toLowerCase() === (0, import_Path4.basename)(oldPath, (0, import_Path4.extname)(oldPath)).toLowerCase()) {
@@ -3162,13 +3201,13 @@ var require_Link = __commonJS({
         file = (0, import_FileSystem4.getFile)(app, newPath, true);
       }
       const newLink = generateMarkdownLink2({
+        alias,
         app,
+        isWikilink: forceMarkdownLinks ? false : void 0,
+        originalLink: link.original,
         pathOrFile: file,
         sourcePathOrFile,
-        subpath,
-        alias,
-        isWikilink: forceMarkdownLinks ? false : void 0,
-        originalLink: link.original
+        subpath
       });
       return newLink;
     }
@@ -3176,10 +3215,10 @@ var require_Link = __commonJS({
       const {
         app,
         displayText,
-        pathOrFile,
+        isWikilink,
         otherPathOrFiles,
-        sourcePathOrFile,
-        isWikilink
+        pathOrFile,
+        sourcePathOrFile
       } = options;
       if (isWikilink === false) {
         return false;
@@ -3457,11 +3496,11 @@ var require_RenameDeleteHandler = __commonJS({
             return (0, import_Link3.updateLink)({
               app,
               link,
-              pathOrFile: newRelatedPath,
               oldPathOrFile: oldRelatedPath,
-              sourcePathOrFile: newBacklinkPath,
+              pathOrFile: newRelatedPath,
               renameMap,
-              shouldUpdateFilenameAlias: settings.shouldUpdateFilenameAliases
+              shouldUpdateFilenameAlias: settings.shouldUpdateFilenameAliases,
+              sourcePathOrFile: newBacklinkPath
             });
           });
         }
@@ -3489,8 +3528,8 @@ var require_RenameDeleteHandler = __commonJS({
         } else if ((0, import_FileSystem4.isMarkdownFile)(newPath)) {
           await (0, import_Link3.updateLinksInFile)({
             app,
-            pathOrFile: newPath,
             oldPathOrFile: oldPath,
+            pathOrFile: newPath,
             renameMap,
             shouldUpdateFilenameAlias: settings.shouldUpdateFilenameAliases
           });
@@ -3693,9 +3732,9 @@ var require_PluginSettingsTabBase = __commonJS({
   }
 });
 
-// node_modules/obsidian-dev-utils/dist/lib/obsidian/Plugin/UIComponent.cjs
-var require_UIComponent = __commonJS({
-  "node_modules/obsidian-dev-utils/dist/lib/obsidian/Plugin/UIComponent.cjs"(exports2, module2) {
+// node_modules/obsidian-dev-utils/dist/lib/obsidian/Plugin/ValueComponent.cjs
+var require_ValueComponent = __commonJS({
+  "node_modules/obsidian-dev-utils/dist/lib/obsidian/Plugin/ValueComponent.cjs"(exports2, module2) {
     (function patchRequireEsmDefault() {
       const __require = require;
       require = Object.assign((id) => {
@@ -3720,54 +3759,91 @@ var require_UIComponent = __commonJS({
       return to;
     };
     var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
-    var UIComponent_exports = {};
-    __export2(UIComponent_exports, {
-      bindUiComponent: () => bindUiComponent2
+    var ValueComponent_exports = {};
+    __export2(ValueComponent_exports, {
+      extend: () => extend2
     });
-    module2.exports = __toCommonJS2(UIComponent_exports);
+    module2.exports = __toCommonJS2(ValueComponent_exports);
     var import_obsidian5 = require("obsidian");
-    function bindUiComponent2(plugin, uiComponent, property, options) {
-      const DEFAULT_OPTIONS = {
-        autoSave: true,
-        settingToUIValueConverter: (value) => value,
-        uiToSettingValueConverter: (value) => value
-      };
-      const optionsExt = { ...DEFAULT_OPTIONS, ...options };
-      const pluginExt = plugin;
-      const uiComponentExt = uiComponent;
-      const pluginSettingsFn = () => optionsExt.pluginSettings ?? pluginExt.settingsCopy;
-      uiComponentExt.setValue(optionsExt.settingToUIValueConverter(pluginSettingsFn()[property])).onChange(async (uiValue) => {
-        if (optionsExt.uiValueValidator) {
-          const errorMessage = optionsExt.uiValueValidator(uiValue);
-          const validatorElement = getValidatorElement(uiComponent);
-          if (validatorElement) {
-            validatorElement.setCustomValidity(errorMessage ?? "");
-            validatorElement.reportValidity();
+    var import_Object = require_Object();
+    var ValueComponentEx = class {
+      constructor(valueComponent) {
+        this.valueComponent = valueComponent;
+      }
+      /**
+       * Returns the ValueComponent with extended functionality.
+       */
+      asExtended() {
+        return (0, import_Object.assignWithNonEnumerableProperties)({}, this.valueComponent, this);
+      }
+      /**
+       * Binds the ValueComponent to a property in the plugin settings.
+       *
+       * @typeParam Plugin - The type of the plugin that extends `PluginBase`.
+       * @typeParam Property - The key of the plugin setting that the component is bound to.
+       * @typeParam PluginSettings - The type of the plugin settings object.
+       * @param plugin - The plugin.
+       * @param property - The property key in `PluginSettings` to bind to the UI component.
+       * @param options - Configuration options.
+       * @returns The `ValueComponent` instance that was bound to the property.
+       */
+      bind(plugin, property, options) {
+        const DEFAULT_OPTIONS = {
+          autoSave: true,
+          componentToPluginSettingsValueConverter: (value) => value,
+          pluginSettingsToComponentValueConverter: (value) => value
+        };
+        const optionsExt = { ...DEFAULT_OPTIONS, ...options };
+        const pluginExt = plugin;
+        const pluginSettingsFn = () => optionsExt.pluginSettings ?? pluginExt.settingsCopy;
+        const validate = (uiValue) => {
+          if (!optionsExt.valueValidator) {
+            return true;
           }
-          if (errorMessage) {
+          uiValue ??= this.valueComponent.getValue();
+          const errorMessage = optionsExt.valueValidator(uiValue);
+          const validatorElement2 = getValidatorElement(this.valueComponent);
+          if (validatorElement2) {
+            validatorElement2.setCustomValidity(errorMessage ?? "");
+            validatorElement2.reportValidity();
+          }
+          return !errorMessage;
+        };
+        this.valueComponent.setValue(optionsExt.pluginSettingsToComponentValueConverter(pluginSettingsFn()[property])).onChange(async (uiValue) => {
+          if (!validate(uiValue)) {
             return;
           }
+          const pluginSettings = pluginSettingsFn();
+          pluginSettings[property] = optionsExt.componentToPluginSettingsValueConverter(uiValue);
+          if (optionsExt.autoSave) {
+            await pluginExt.saveSettings(pluginSettings);
+          }
+          await optionsExt.onChanged?.();
+        });
+        validate();
+        const validatorElement = getValidatorElement(this.valueComponent);
+        if (validatorElement) {
+          validatorElement.addEventListener("focus", () => validate());
+          validatorElement.addEventListener("blur", () => validate());
         }
-        const pluginSettings = pluginSettingsFn();
-        pluginSettings[property] = optionsExt.uiToSettingValueConverter(uiValue);
-        if (optionsExt.autoSave) {
-          await pluginExt.saveSettings(pluginSettings);
-        }
-      });
-      return uiComponent;
+        return this.asExtended();
+      }
+    };
+    function extend2(valueComponent) {
+      return new ValueComponentEx(valueComponent).asExtended();
     }
-    function getValidatorElement(uiComponent) {
-      if (uiComponent instanceof import_obsidian5.DropdownComponent) {
-        return uiComponent.selectEl;
+    function getValidatorElement(valueComponent) {
+      if (valueComponent instanceof import_obsidian5.DropdownComponent) {
+        return valueComponent.selectEl;
       }
-      if (uiComponent instanceof import_obsidian5.SliderComponent) {
-        return uiComponent.sliderEl;
+      if (valueComponent instanceof import_obsidian5.SliderComponent) {
+        return valueComponent.sliderEl;
       }
-      if (uiComponent instanceof import_obsidian5.TextAreaComponent) {
-        return uiComponent.inputEl;
+      if (valueComponent instanceof import_obsidian5.TextAreaComponent) {
+        return valueComponent.inputEl;
       }
-      if (uiComponent instanceof import_obsidian5.TextComponent) {
-        return uiComponent.inputEl;
+      if (valueComponent instanceof import_obsidian5.TextComponent) {
+        return valueComponent.inputEl;
       }
       return null;
     }
@@ -3812,35 +3888,35 @@ var ConsistentAttachmentsAndLinksPluginSettings = class {
 // src/ConsistentAttachmentsAndLinksPluginSettingsTab.ts
 var import_obsidian = require("obsidian");
 var import_PluginSettingsTabBase = __toESM(require_PluginSettingsTabBase(), 1);
-var import_UIComponent = __toESM(require_UIComponent(), 1);
+var import_ValueComponent = __toESM(require_ValueComponent(), 1);
 var ConsistentAttachmentsAndLinksPluginSettingsTab = class extends import_PluginSettingsTabBase.PluginSettingsTabBase {
+  getNormalizedPath(path) {
+    return path.length == 0 ? path : (0, import_obsidian.normalizePath)(path);
+  }
   display() {
     this.containerEl.empty();
-    new import_obsidian.Setting(this.containerEl).setName("Move Attachments with Note").setDesc("Automatically move attachments when a note is relocated. This includes attachments located in the same folder or any of its subfolders.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "moveAttachmentsWithNote"));
-    new import_obsidian.Setting(this.containerEl).setName("Delete Unused Attachments with Note").setDesc("Automatically remove attachments that are no longer referenced in other notes when the note is deleted.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "deleteAttachmentsWithNote"));
-    new import_obsidian.Setting(this.containerEl).setName("Update Links").setDesc("Automatically update links to attachments and other notes when moving notes or attachments.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "updateLinks"));
-    new import_obsidian.Setting(this.containerEl).setName("Delete Empty Folders").setDesc("Automatically remove empty folders after moving notes with attachments.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "deleteEmptyFolders"));
-    new import_obsidian.Setting(this.containerEl).setName("Delete Duplicate Attachments on Note Move").setDesc("Automatically delete attachments when moving a note if a file with the same name exists in the destination folder. If disabled, the file will be renamed and moved.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "deleteExistFilesWhenMoveNote"));
-    new import_obsidian.Setting(this.containerEl).setName("Update Backlink Text on Note Rename").setDesc("When a note is renamed, its linked references are automatically updated. If this option is enabled, the text of backlinks to this note will also be modified.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "changeNoteBacklinksAlt"));
+    new import_obsidian.Setting(this.containerEl).setName("Move Attachments with Note").setDesc("Automatically move attachments when a note is relocated. This includes attachments located in the same folder or any of its subfolders.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "moveAttachmentsWithNote"));
+    new import_obsidian.Setting(this.containerEl).setName("Delete Unused Attachments with Note").setDesc("Automatically remove attachments that are no longer referenced in other notes when the note is deleted.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteAttachmentsWithNote"));
+    new import_obsidian.Setting(this.containerEl).setName("Update Links").setDesc("Automatically update links to attachments and other notes when moving notes or attachments.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "updateLinks"));
+    new import_obsidian.Setting(this.containerEl).setName("Delete Empty Folders").setDesc("Automatically remove empty folders after moving notes with attachments.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteEmptyFolders"));
+    new import_obsidian.Setting(this.containerEl).setName("Delete Duplicate Attachments on Note Move").setDesc("Automatically delete attachments when moving a note if a file with the same name exists in the destination folder. If disabled, the file will be renamed and moved.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteExistFilesWhenMoveNote"));
+    new import_obsidian.Setting(this.containerEl).setName("Update Backlink Text on Note Rename").setDesc("When a note is renamed, its linked references are automatically updated. If this option is enabled, the text of backlinks to this note will also be modified.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "changeNoteBacklinksAlt"));
     new import_obsidian.Setting(this.containerEl).setName("Ignore Folders").setDesc("Specify a list of folders to ignore. Enter each folder on a new line.").addTextArea(
-      (textArea) => (0, import_UIComponent.bindUiComponent)(this.plugin, textArea, "ignoreFolders", {
-        settingToUIValueConverter: (value) => value.join("\n"),
-        uiToSettingValueConverter: (value) => value.trim().split("\n").map((value2) => this.getNormalizedPath(value2) + "/")
+      (textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "ignoreFolders", {
+        componentToPluginSettingsValueConverter: (value) => value.trim().split("\n").map((value2) => this.getNormalizedPath(value2) + "/"),
+        pluginSettingsToComponentValueConverter: (value) => value.join("\n")
       }).setPlaceholder("Example: .git, .obsidian")
     );
     new import_obsidian.Setting(this.containerEl).setName("Ignore Files").setDesc("Specify a list of files to ignore. Enter each file on a new line.").addTextArea(
-      (textArea) => (0, import_UIComponent.bindUiComponent)(this.plugin, textArea, "ignoreFiles", {
-        settingToUIValueConverter: (value) => value.join("\n"),
-        uiToSettingValueConverter: (value) => value.trim().split("\n")
+      (textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "ignoreFiles", {
+        componentToPluginSettingsValueConverter: (value) => value.trim().split("\n"),
+        pluginSettingsToComponentValueConverter: (value) => value.join("\n")
       }).setPlaceholder("Example: consistent-report.md")
     );
     new import_obsidian.Setting(this.containerEl).setName("Consistency Report Filename").setDesc("Specify the name of the file for the consistency report.").addText(
-      (text) => (0, import_UIComponent.bindUiComponent)(this.plugin, text, "consistencyReportFile").setPlaceholder("Example: consistency-report.md")
+      (text) => (0, import_ValueComponent.extend)(text).bind(this.plugin, "consistencyReportFile").setPlaceholder("Example: consistency-report.md")
     );
-    new import_obsidian.Setting(this.containerEl).setName("Auto Collect Attachments").setDesc("Automatically collect attachments when the note is edited.").addToggle((toggle) => (0, import_UIComponent.bindUiComponent)(this.plugin, toggle, "autoCollectAttachments"));
-  }
-  getNormalizedPath(path) {
-    return path.length == 0 ? path : (0, import_obsidian.normalizePath)(path);
+    new import_obsidian.Setting(this.containerEl).setName("Auto Collect Attachments").setDesc("Automatically collect attachments when the note is edited.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "autoCollectAttachments"));
   }
 };
 
@@ -3913,9 +3989,71 @@ var LinksHandler = class {
     this.ignoreFolders = ignoreFolders;
     this.ignoreFilesRegex = ignoreFilesRegex;
   }
+  async convertAllNoteRefPathsToRelative(notePath, isEmbed) {
+    if (this.isPathIgnored(notePath)) {
+      return [];
+    }
+    const note = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
+    if (!note) {
+      return [];
+    }
+    const changedRefs = [];
+    await (0, import_FileChange.applyFileChanges)(this.app, note, async () => {
+      const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, note);
+      if (!cache) {
+        return [];
+      }
+      const refs = (isEmbed ? cache.embeds : cache.links) ?? [];
+      const changes = [];
+      for (const ref of refs) {
+        const change = {
+          endIndex: ref.position.end.offset,
+          newContent: this.convertLink({
+            forceRelativePath: true,
+            link: ref,
+            note,
+            oldNotePath: notePath
+          }),
+          oldContent: ref.original,
+          startIndex: ref.position.start.offset
+        };
+        changes.push(change);
+        changedRefs.push({ newLink: change.newContent, old: ref });
+      }
+      return changes;
+    });
+    return changedRefs;
+  }
+  convertLink({
+    forceRelativePath,
+    link,
+    note,
+    oldNotePath,
+    pathChangeMap
+  }) {
+    const { linkPath, subpath } = (0, import_Link.splitSubpath)(link.link);
+    const oldLinkPath = (0, import_Link.extractLinkFile)(this.app, link, oldNotePath)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(oldNotePath), linkPath);
+    const newLinkPath = pathChangeMap ? pathChangeMap.get(oldLinkPath) : (0, import_Link.extractLinkFile)(this.app, link, note.path)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(note.path), linkPath);
+    if (!newLinkPath) {
+      return link.original;
+    }
+    const newLinkedNote = (0, import_FileSystem.getFileOrNull)(this.app, oldLinkPath) ?? (0, import_FileSystem.getFileOrNull)(this.app, newLinkPath);
+    if (!newLinkedNote) {
+      return link.original;
+    }
+    return (0, import_Link.generateMarkdownLink)({
+      alias: link.displayText,
+      app: this.app,
+      forceRelativePath,
+      originalLink: link.original,
+      pathOrFile: newLinkedNote,
+      sourcePathOrFile: note.path,
+      subpath
+    });
+  }
   isPathIgnored(path) {
     if (path.startsWith("./")) {
-      path = path.substring(2);
+      path = path.slice(2);
     }
     for (const folder of this.ignoreFolders) {
       if (path.startsWith(folder)) {
@@ -3928,12 +4066,6 @@ var LinksHandler = class {
       }
     }
     return false;
-  }
-  getFullPathForLink(link, owningNotePath) {
-    ({ linkPath: link } = (0, import_Link.splitSubpath)(link));
-    const parentFolder = (0, import_Path.dirname)(owningNotePath);
-    const fullPath = (0, import_Path.join)(parentFolder, link);
-    return fullPath;
   }
   async isValidLink(link, notePath) {
     const { linkPath, subpath } = (0, import_Link.splitSubpath)(link.link);
@@ -3969,121 +4101,20 @@ var LinksHandler = class {
       return (cache.headings ?? []).map((h) => h.heading.replaceAll("#", " ")).includes(subpath.slice(1));
     }
   }
-  async updateChangedPathsInNote(notePath, changedLinks) {
-    if (this.isPathIgnored(notePath)) {
-      return;
-    }
-    const note = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
-    if (!note) {
-      console.warn(this.consoleLogPrefix + "can't update links in note, file not found: " + notePath);
-      return;
-    }
-    const pathChangeMap = /* @__PURE__ */ new Map();
-    for (const change of changedLinks) {
-      pathChangeMap.set(change.oldPath, change.newPath);
-    }
-    await this.updateLinks(note, note.path, pathChangeMap);
-  }
-  convertLink({
-    note,
-    link,
-    oldNotePath,
-    pathChangeMap,
-    forceRelativePath
-  }) {
-    const { linkPath, subpath } = (0, import_Link.splitSubpath)(link.link);
-    const oldLinkPath = (0, import_Link.extractLinkFile)(this.app, link, oldNotePath)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(oldNotePath), linkPath);
-    const newLinkPath = pathChangeMap ? pathChangeMap.get(oldLinkPath) : (0, import_Link.extractLinkFile)(this.app, link, note.path)?.path ?? (0, import_Path.join)((0, import_Path.dirname)(note.path), linkPath);
-    if (!newLinkPath) {
-      return link.original;
-    }
-    const newLinkedNote = (0, import_FileSystem.getFileOrNull)(this.app, oldLinkPath) ?? (0, import_FileSystem.getFileOrNull)(this.app, newLinkPath);
-    if (!newLinkedNote) {
-      return link.original;
-    }
-    return (0, import_Link.generateMarkdownLink)({
-      app: this.app,
-      pathOrFile: newLinkedNote,
-      sourcePathOrFile: note.path,
-      subpath,
-      alias: link.displayText,
-      forceRelativePath,
-      originalLink: link.original
-    });
-  }
-  async getCachedNotesThatHaveLinkToFile(filePath) {
-    const file = (0, import_FileSystem.getFileOrNull)(this.app, filePath);
-    if (!file) {
-      return [];
-    }
-    const backlinks = await (0, import_MetadataCache.getBacklinksForFileSafe)(this.app, file);
-    return backlinks.keys();
-  }
-  async convertAllNoteEmbedsPathsToRelative(notePath) {
-    return this.convertAllNoteRefPathsToRelative(notePath, true);
-  }
-  async convertAllNoteRefPathsToRelative(notePath, isEmbed) {
-    if (this.isPathIgnored(notePath)) {
-      return [];
-    }
-    const note = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
-    if (!note) {
-      return [];
-    }
-    const changedRefs = [];
+  async updateLinks(note, oldNotePath, pathChangeMap) {
     await (0, import_FileChange.applyFileChanges)(this.app, note, async () => {
       const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, note);
       if (!cache) {
         return [];
       }
-      const refs = (isEmbed ? cache.embeds : cache.links) ?? [];
-      const changes = [];
-      for (const ref of refs) {
-        const change = {
-          startIndex: ref.position.start.offset,
-          endIndex: ref.position.end.offset,
-          oldContent: ref.original,
-          newContent: this.convertLink({
-            note,
-            link: ref,
-            oldNotePath: notePath,
-            forceRelativePath: true
-          })
-        };
-        changes.push(change);
-        changedRefs.push({ old: ref, newLink: change.newContent });
-      }
-      return changes;
+      const links = (0, import_MetadataCache.getAllLinks)(cache);
+      return links.map((link) => (0, import_Reference.referenceToFileChange)(link, this.convertLink({
+        link,
+        note,
+        oldNotePath,
+        pathChangeMap
+      })));
     });
-    return changedRefs;
-  }
-  async convertAllNoteLinksPathsToRelative(notePath) {
-    return this.convertAllNoteRefPathsToRelative(notePath, false);
-  }
-  async replaceAllNoteWikilinksWithMarkdownLinks(notePath, embedOnlyLinks) {
-    if (this.isPathIgnored(notePath)) {
-      return 0;
-    }
-    const noteFile = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
-    if (!noteFile) {
-      console.warn(this.consoleLogPrefix + "can't update wikilinks in note, file not found: " + notePath);
-      return 0;
-    }
-    const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, noteFile);
-    if (!cache) {
-      return 0;
-    }
-    const links = (embedOnlyLinks ? cache.embeds : cache.links) ?? [];
-    const result = links.filter((link) => (0, import_Link.testWikilink)(link.original)).length;
-    await (0, import_Link.updateLinksInFile)({
-      app: this.app,
-      pathOrFile: noteFile,
-      oldPathOrFile: noteFile.path,
-      renameMap: /* @__PURE__ */ new Map(),
-      forceMarkdownLinks: true,
-      embedOnlyLinks
-    });
-    return result;
   }
   async checkConsistency(note, badLinks, badEmbeds, wikiLinks, wikiEmbeds) {
     if (this.isPathIgnored(note.path)) {
@@ -4112,20 +4143,65 @@ var LinksHandler = class {
       }
     }
   }
-  async updateLinks(note, oldNotePath, pathChangeMap) {
-    await (0, import_FileChange.applyFileChanges)(this.app, note, async () => {
-      const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, note);
-      if (!cache) {
-        return [];
-      }
-      const links = (0, import_MetadataCache.getAllLinks)(cache);
-      return links.map((link) => (0, import_Reference.referenceToFileChange)(link, this.convertLink({
-        note,
-        link,
-        oldNotePath,
-        pathChangeMap
-      })));
+  async convertAllNoteEmbedsPathsToRelative(notePath) {
+    return this.convertAllNoteRefPathsToRelative(notePath, true);
+  }
+  async convertAllNoteLinksPathsToRelative(notePath) {
+    return this.convertAllNoteRefPathsToRelative(notePath, false);
+  }
+  async getCachedNotesThatHaveLinkToFile(filePath) {
+    const file = (0, import_FileSystem.getFileOrNull)(this.app, filePath);
+    if (!file) {
+      return [];
+    }
+    const backlinks = await (0, import_MetadataCache.getBacklinksForFileSafe)(this.app, file);
+    return backlinks.keys();
+  }
+  getFullPathForLink(link, owningNotePath) {
+    ({ linkPath: link } = (0, import_Link.splitSubpath)(link));
+    const parentFolder = (0, import_Path.dirname)(owningNotePath);
+    const fullPath = (0, import_Path.join)(parentFolder, link);
+    return fullPath;
+  }
+  async replaceAllNoteWikilinksWithMarkdownLinks(notePath, embedOnlyLinks) {
+    if (this.isPathIgnored(notePath)) {
+      return 0;
+    }
+    const noteFile = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
+    if (!noteFile) {
+      console.warn(this.consoleLogPrefix + "can't update wikilinks in note, file not found: " + notePath);
+      return 0;
+    }
+    const cache = await (0, import_MetadataCache.getCacheSafe)(this.app, noteFile);
+    if (!cache) {
+      return 0;
+    }
+    const links = (embedOnlyLinks ? cache.embeds : cache.links) ?? [];
+    const result = links.filter((link) => (0, import_Link.testWikilink)(link.original)).length;
+    await (0, import_Link.updateLinksInFile)({
+      app: this.app,
+      embedOnlyLinks,
+      forceMarkdownLinks: true,
+      oldPathOrFile: noteFile.path,
+      pathOrFile: noteFile,
+      renameMap: /* @__PURE__ */ new Map()
     });
+    return result;
+  }
+  async updateChangedPathsInNote(notePath, changedLinks) {
+    if (this.isPathIgnored(notePath)) {
+      return;
+    }
+    const note = (0, import_FileSystem.getFileOrNull)(this.app, notePath);
+    if (!note) {
+      console.warn(this.consoleLogPrefix + "can't update links in note, file not found: " + notePath);
+      return;
+    }
+    const pathChangeMap = /* @__PURE__ */ new Map();
+    for (const change of changedLinks) {
+      pathChangeMap.set(change.oldPath, change.newPath);
+    }
+    await this.updateLinks(note, note.path, pathChangeMap);
   }
 };
 
@@ -4139,9 +4215,25 @@ var FilesHandler = class {
     this.ignoreFilesRegex = ignoreFilesRegex;
     this.shouldDeleteEmptyFolders = shouldDeleteEmptyFolders;
   }
+  async createFolderForAttachmentFromPath(filePath) {
+    await (0, import_Vault.createFolderSafe)(this.app, (0, import_Path2.dirname)(filePath));
+  }
+  async deleteFile(file, deleteEmptyFolders) {
+    await this.app.fileManager.trashFile(file);
+    if (deleteEmptyFolders) {
+      let dir = file.parent;
+      while (dir && dir.children.length === 0) {
+        await this.app.fileManager.trashFile(dir);
+        dir = dir.parent;
+      }
+    }
+  }
+  isAttachment(file) {
+    return !(0, import_FileSystem2.isNote)(file);
+  }
   isPathIgnored(path) {
     if (path.startsWith("./")) {
-      path = path.substring(2);
+      path = path.slice(2);
     }
     for (const folder of this.ignoreFolders) {
       if (path.startsWith(folder)) {
@@ -4156,8 +4248,71 @@ var FilesHandler = class {
     }
     return false;
   }
-  async createFolderForAttachmentFromPath(filePath) {
-    await (0, import_Vault.createFolderSafe)(this.app, (0, import_Path2.dirname)(filePath));
+  async moveAttachment(file, newLinkPath, parentNotePaths, deleteExistFiles, deleteEmptyFolders) {
+    const path = file.path;
+    const result = {
+      movedAttachments: [],
+      renamedFiles: []
+    };
+    if (this.isPathIgnored(path)) {
+      return result;
+    }
+    if (!this.isAttachment(file)) {
+      return result;
+    }
+    if (path == newLinkPath) {
+      console.warn(this.consoleLogPrefix + "Can't move file. Source and destination path the same.");
+      return result;
+    }
+    await this.createFolderForAttachmentFromPath(newLinkPath);
+    const linkedNotes = await this.lh.getCachedNotesThatHaveLinkToFile(path);
+    for (const notePath of parentNotePaths) {
+      linkedNotes.remove(notePath);
+    }
+    if (path !== file.path) {
+      console.warn(this.consoleLogPrefix + "File was moved already");
+      return await this.moveAttachment(file, newLinkPath, parentNotePaths, deleteExistFiles, deleteEmptyFolders);
+    }
+    const oldFolder = file.parent;
+    if (linkedNotes.length == 0) {
+      const existFile = (0, import_FileSystem2.getFileOrNull)(this.app, newLinkPath);
+      if (!existFile) {
+        console.log(this.consoleLogPrefix + "move file [from, to]: \n   " + path + "\n   " + newLinkPath);
+        result.movedAttachments.push({ newPath: newLinkPath, oldPath: path });
+        await (0, import_Vault.renameSafe)(this.app, file, newLinkPath);
+      } else {
+        if (deleteExistFiles) {
+          console.log(this.consoleLogPrefix + "delete file: \n   " + path);
+          result.movedAttachments.push({ newPath: newLinkPath, oldPath: path });
+          await this.deleteFile(file, deleteEmptyFolders);
+        } else {
+          const newFileCopyName = (0, import_Vault.getAvailablePath)(this.app, newLinkPath);
+          console.log(this.consoleLogPrefix + "copy file with new name [from, to]: \n   " + path + "\n   " + newFileCopyName);
+          result.movedAttachments.push({ newPath: newFileCopyName, oldPath: path });
+          await (0, import_Vault.renameSafe)(this.app, file, newFileCopyName);
+          result.renamedFiles.push({ newPath: newFileCopyName, oldPath: newLinkPath });
+        }
+      }
+    } else {
+      const existFile = (0, import_FileSystem2.getFileOrNull)(this.app, newLinkPath);
+      if (!existFile) {
+        console.log(this.consoleLogPrefix + "copy file [from, to]: \n   " + path + "\n   " + newLinkPath);
+        result.movedAttachments.push({ newPath: newLinkPath, oldPath: path });
+        await (0, import_Vault.renameSafe)(this.app, file, newLinkPath);
+        await (0, import_Vault.copySafe)(this.app, file, path);
+      } else if (!deleteExistFiles) {
+        const newFileCopyName = (0, import_Vault.getAvailablePath)(this.app, newLinkPath);
+        console.log(this.consoleLogPrefix + "copy file with new name [from, to]: \n   " + path + "\n   " + newFileCopyName);
+        result.movedAttachments.push({ newPath: newFileCopyName, oldPath: file.path });
+        await (0, import_Vault.renameSafe)(this.app, file, newFileCopyName);
+        await (0, import_Vault.copySafe)(this.app, file, path);
+        result.renamedFiles.push({ newPath: newFileCopyName, oldPath: newLinkPath });
+      }
+    }
+    if (this.shouldDeleteEmptyFolders) {
+      await (0, import_Vault.deleteEmptyFolderHierarchy)(this.app, oldFolder);
+    }
+    return result;
   }
   async collectAttachmentsForCachedNote(notePath, deleteExistFiles, deleteEmptyFolders) {
     if (this.isPathIgnored(notePath)) {
@@ -4199,78 +4354,12 @@ var FilesHandler = class {
     }
     return result;
   }
-  async moveAttachment(file, newLinkPath, parentNotePaths, deleteExistFiles, deleteEmptyFolders) {
-    const path = file.path;
-    const result = {
-      movedAttachments: [],
-      renamedFiles: []
-    };
-    if (this.isPathIgnored(path)) {
-      return result;
-    }
-    if (!this.isAttachment(file)) {
-      return result;
-    }
-    if (path == newLinkPath) {
-      console.warn(this.consoleLogPrefix + "Can't move file. Source and destination path the same.");
-      return result;
-    }
-    await this.createFolderForAttachmentFromPath(newLinkPath);
-    const linkedNotes = await this.lh.getCachedNotesThatHaveLinkToFile(path);
-    for (const notePath of parentNotePaths) {
-      linkedNotes.remove(notePath);
-    }
-    if (path !== file.path) {
-      console.warn(this.consoleLogPrefix + "File was moved already");
-      return await this.moveAttachment(file, newLinkPath, parentNotePaths, deleteExistFiles, deleteEmptyFolders);
-    }
-    const oldFolder = file.parent;
-    if (linkedNotes.length == 0) {
-      const existFile = (0, import_FileSystem2.getFileOrNull)(this.app, newLinkPath);
-      if (!existFile) {
-        console.log(this.consoleLogPrefix + "move file [from, to]: \n   " + path + "\n   " + newLinkPath);
-        result.movedAttachments.push({ oldPath: path, newPath: newLinkPath });
-        await (0, import_Vault.renameSafe)(this.app, file, newLinkPath);
-      } else {
-        if (deleteExistFiles) {
-          console.log(this.consoleLogPrefix + "delete file: \n   " + path);
-          result.movedAttachments.push({ oldPath: path, newPath: newLinkPath });
-          await this.deleteFile(file, deleteEmptyFolders);
-        } else {
-          const newFileCopyName = (0, import_Vault.getAvailablePath)(this.app, newLinkPath);
-          console.log(this.consoleLogPrefix + "copy file with new name [from, to]: \n   " + path + "\n   " + newFileCopyName);
-          result.movedAttachments.push({ oldPath: path, newPath: newFileCopyName });
-          await (0, import_Vault.renameSafe)(this.app, file, newFileCopyName);
-          result.renamedFiles.push({ oldPath: newLinkPath, newPath: newFileCopyName });
-        }
-      }
-    } else {
-      const existFile = (0, import_FileSystem2.getFileOrNull)(this.app, newLinkPath);
-      if (!existFile) {
-        console.log(this.consoleLogPrefix + "copy file [from, to]: \n   " + path + "\n   " + newLinkPath);
-        result.movedAttachments.push({ oldPath: path, newPath: newLinkPath });
-        await (0, import_Vault.renameSafe)(this.app, file, newLinkPath);
-        await (0, import_Vault.copySafe)(this.app, file, path);
-      } else if (!deleteExistFiles) {
-        const newFileCopyName = (0, import_Vault.getAvailablePath)(this.app, newLinkPath);
-        console.log(this.consoleLogPrefix + "copy file with new name [from, to]: \n   " + path + "\n   " + newFileCopyName);
-        result.movedAttachments.push({ oldPath: file.path, newPath: newFileCopyName });
-        await (0, import_Vault.renameSafe)(this.app, file, newFileCopyName);
-        await (0, import_Vault.copySafe)(this.app, file, path);
-        result.renamedFiles.push({ oldPath: newLinkPath, newPath: newFileCopyName });
-      }
-    }
-    if (this.shouldDeleteEmptyFolders) {
-      await (0, import_Vault.deleteEmptyFolderHierarchy)(this.app, oldFolder);
-    }
-    return result;
-  }
   async deleteEmptyFolders(dirName) {
     if (this.isPathIgnored(dirName)) {
       return;
     }
     if (dirName.startsWith("./")) {
-      dirName = dirName.substring(2);
+      dirName = dirName.slice(2);
     }
     let list = await (0, import_Vault.listSafe)(this.app, dirName);
     for (const folder of list.folders) {
@@ -4290,19 +4379,6 @@ var FilesHandler = class {
       }
     }
   }
-  async deleteFile(file, deleteEmptyFolders) {
-    await this.app.fileManager.trashFile(file);
-    if (deleteEmptyFolders) {
-      let dir = file.parent;
-      while (dir && dir.children.length === 0) {
-        await this.app.fileManager.trashFile(dir);
-        dir = dir.parent;
-      }
-    }
-  }
-  isAttachment(file) {
-    return !(0, import_FileSystem2.isNote)(file);
-  }
 };
 
 // src/ConsistentAttachmentsAndLinksPlugin.ts
@@ -4312,8 +4388,9 @@ var __process = globalThis["process"] ?? {
   "platform": "android"
 };
 var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.PluginBase {
-  lh;
+  deletedNoteCache = /* @__PURE__ */ new Map();
   fh;
+  lh;
   createDefaultPluginSettings() {
     return new ConsistentAttachmentsAndLinksPluginSettings();
   }
@@ -4331,7 +4408,7 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
         appendCodeBlock(f, "Attachment Subfolder");
         f.appendText(" removed. This is a BREAKING CHANGE.");
         f.appendChild(createEl("br"));
-        f.appendChild(createEl("a", { text: "Read more", href: "https://github.com/dy-sh/obsidian-consistent-attachments-and-links?tab=readme-ov-file#attachment-subfolder-setting" }));
+        f.appendChild(createEl("a", { href: "https://github.com/dy-sh/obsidian-consistent-attachments-and-links?tab=readme-ov-file#attachment-subfolder-setting", text: "Read more" }));
       }), 0);
       notice.noticeEl.onClickEvent((ev) => {
         (0, import_ChainedPromise.chain)(this.app, async () => {
@@ -4362,69 +4439,69 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       return settings;
     });
     this.addCommand({
+      callback: () => this.collectAllAttachments(),
       id: "collect-all-attachments",
-      name: "Collect All Attachments",
-      callback: () => this.collectAllAttachments()
+      name: "Collect All Attachments"
     });
     this.addCommand({
+      checkCallback: this.collectAttachmentsCurrentNote.bind(this),
       id: "collect-attachments-current-note",
-      name: "Collect Attachments in Current Note",
-      checkCallback: this.collectAttachmentsCurrentNote.bind(this)
+      name: "Collect Attachments in Current Note"
     });
     this.addCommand({
+      callback: () => this.deleteEmptyFolders(),
       id: "delete-empty-folders",
-      name: "Delete Empty Folders",
-      callback: () => this.deleteEmptyFolders()
+      name: "Delete Empty Folders"
     });
     this.addCommand({
+      callback: () => this.convertAllLinkPathsToRelative(),
       id: "convert-all-link-paths-to-relative",
-      name: "Convert All Link Paths to Relative",
-      callback: () => this.convertAllLinkPathsToRelative()
+      name: "Convert All Link Paths to Relative"
     });
     this.addCommand({
+      checkCallback: this.convertAllLinkPathsToRelativeCurrentNote.bind(this),
       id: "convert-all-link-paths-to-relative-current-note",
-      name: "Convert All Link Paths to Relative in Current Note",
-      checkCallback: this.convertAllLinkPathsToRelativeCurrentNote.bind(this)
+      name: "Convert All Link Paths to Relative in Current Note"
     });
     this.addCommand({
+      callback: () => this.convertAllEmbedsPathsToRelative(),
       id: "convert-all-embed-paths-to-relative",
-      name: "Convert All Embed Paths to Relative",
-      callback: () => this.convertAllEmbedsPathsToRelative()
+      name: "Convert All Embed Paths to Relative"
     });
     this.addCommand({
+      checkCallback: this.convertAllEmbedsPathsToRelativeCurrentNote.bind(this),
       id: "convert-all-embed-paths-to-relative-current-note",
-      name: "Convert All Embed Paths to Relative in Current Note",
-      checkCallback: this.convertAllEmbedsPathsToRelativeCurrentNote.bind(this)
+      name: "Convert All Embed Paths to Relative in Current Note"
     });
     this.addCommand({
+      callback: () => this.replaceAllWikilinksWithMarkdownLinks(),
       id: "replace-all-wikilinks-with-markdown-links",
-      name: "Replace All Wiki Links with Markdown Links",
-      callback: () => this.replaceAllWikilinksWithMarkdownLinks()
+      name: "Replace All Wiki Links with Markdown Links"
     });
     this.addCommand({
+      checkCallback: this.replaceAllWikilinksWithMarkdownLinksCurrentNote.bind(this),
       id: "replace-all-wikilinks-with-markdown-links-current-note",
-      name: "Replace All Wiki Links with Markdown Links in Current Note",
-      checkCallback: this.replaceAllWikilinksWithMarkdownLinksCurrentNote.bind(this)
+      name: "Replace All Wiki Links with Markdown Links in Current Note"
     });
     this.addCommand({
+      callback: () => this.replaceAllWikiEmbedsWithMarkdownEmbeds(),
       id: "replace-all-wiki-embeds-with-markdown-embeds",
-      name: "Replace All Wiki Embeds with Markdown Embeds",
-      callback: () => this.replaceAllWikiEmbedsWithMarkdownEmbeds()
+      name: "Replace All Wiki Embeds with Markdown Embeds"
     });
     this.addCommand({
+      checkCallback: this.replaceAllWikiEmbedsWithMarkdownEmbedsCurrentNote.bind(this),
       id: "replace-all-wiki-embeds-with-markdown-embeds-current-note",
-      name: "Replace All Wiki Embeds with Markdown Embeds in Current Note",
-      checkCallback: this.replaceAllWikiEmbedsWithMarkdownEmbedsCurrentNote.bind(this)
+      name: "Replace All Wiki Embeds with Markdown Embeds in Current Note"
     });
     this.addCommand({
+      callback: () => this.reorganizeVault(),
       id: "reorganize-vault",
-      name: "Reorganize Vault",
-      callback: () => this.reorganizeVault()
+      name: "Reorganize Vault"
     });
     this.addCommand({
+      callback: () => this.checkConsistency(),
       id: "check-consistency",
-      name: "Check Vault consistency",
-      callback: () => this.checkConsistency()
+      name: "Check Vault consistency"
     });
     this.registerEvent(this.app.metadataCache.on("changed", (file) => {
       (0, import_ChainedPromise.chain)(this.app, () => this.handleMetadataCacheChanged(file));
@@ -4444,59 +4521,40 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       this.settings.deleteEmptyFolders
     );
   }
-  deletedNoteCache = /* @__PURE__ */ new Map();
-  isPathIgnored(path) {
-    if (path.startsWith("./")) {
-      path = path.substring(2);
-    }
-    for (const folder of this.settings.ignoreFolders) {
-      if (path.startsWith(folder)) {
-        return true;
-      }
-    }
-    for (const fileRegex of this.settings.getIgnoreFilesRegex()) {
-      if (fileRegex.test(path)) {
-        return true;
-      }
-    }
-    return false;
-  }
-  handleDeletedMetadata(file, prevCache) {
-    if (!this.settings.deleteAttachmentsWithNote || this.isPathIgnored(file.path) || !(0, import_FileSystem3.isMarkdownFile)(file)) {
-      return;
-    }
-    this.deletedNoteCache.set(file.path, prevCache);
-  }
-  collectAttachmentsCurrentNote(checking) {
-    const note = this.app.workspace.getActiveFile();
-    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
-      return false;
-    }
-    if (!checking) {
-      (0, import_ChainedPromise.chain)(this.app, () => this.collectAttachments(note));
-    }
-    return true;
-  }
-  async collectAttachments(note, isVerbose = true) {
-    if (this.isPathIgnored(note.path)) {
-      new import_obsidian4.Notice("Note path is ignored");
-      return;
-    }
+  async checkConsistency() {
     await this.saveAllOpenNotes();
-    const result = await this.fh.collectAttachmentsForCachedNote(
-      note.path,
-      this.settings.deleteExistFilesWhenMoveNote,
-      this.settings.deleteEmptyFolders
-    );
-    if (result.movedAttachments.length > 0) {
-      await this.lh.updateChangedPathsInNote(note.path, result.movedAttachments);
-    }
-    if (result.movedAttachments.length == 0) {
-      if (isVerbose) {
-        new import_obsidian4.Notice("No files found that need to be moved");
+    const badLinks = new ConsistencyCheckResult("Bad links");
+    const badEmbeds = new ConsistencyCheckResult("Bad embeds");
+    const wikiLinks = new ConsistencyCheckResult("Wiki links");
+    const wikiEmbeds = new ConsistencyCheckResult("Wiki embeds");
+    const notes = (0, import_Vault2.getMarkdownFilesSorted)(this.app);
+    let i = 0;
+    const notice = new import_obsidian4.Notice("", 0);
+    for (const note2 of notes) {
+      if (this.abortSignal.aborted) {
+        notice.hide();
+        return;
       }
-    } else {
-      new import_obsidian4.Notice(`Moved ${result.movedAttachments.length.toString()} attachment${result.movedAttachments.length > 1 ? "s" : ""}`);
+      i++;
+      const message = `Checking note # ${i.toString()} / ${notes.length.toString()} - ${note2.path}`;
+      notice.setMessage(message);
+      console.debug(message);
+      await this.lh.checkConsistency(note2, badLinks, badEmbeds, wikiLinks, wikiEmbeds);
+    }
+    notice.hide();
+    const notePath = this.settings.consistencyReportFile;
+    const text = badLinks.toString(this.app, notePath) + badEmbeds.toString(this.app, notePath) + wikiLinks.toString(this.app, notePath) + wikiEmbeds.toString(this.app, notePath);
+    await (0, import_Vault2.createFolderSafe)(this.app, (0, import_Path3.dirname)(notePath));
+    const note = await (0, import_FileSystem3.getOrCreateFile)(this.app, notePath);
+    await this.app.vault.modify(note, text);
+    let fileOpened = false;
+    this.app.workspace.iterateAllLeaves((leaf) => {
+      if (leaf.getDisplayText() != "" && notePath.startsWith(leaf.getDisplayText())) {
+        fileOpened = true;
+      }
+    });
+    if (!fileOpened) {
+      await this.app.workspace.openLinkText(notePath, "/", false);
     }
   }
   async collectAllAttachments() {
@@ -4536,6 +4594,38 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       new import_obsidian4.Notice(`Moved ${movedAttachmentsCount.toString()} attachment${movedAttachmentsCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
     }
   }
+  async collectAttachments(note, isVerbose = true) {
+    if (this.isPathIgnored(note.path)) {
+      new import_obsidian4.Notice("Note path is ignored");
+      return;
+    }
+    await this.saveAllOpenNotes();
+    const result = await this.fh.collectAttachmentsForCachedNote(
+      note.path,
+      this.settings.deleteExistFilesWhenMoveNote,
+      this.settings.deleteEmptyFolders
+    );
+    if (result.movedAttachments.length > 0) {
+      await this.lh.updateChangedPathsInNote(note.path, result.movedAttachments);
+    }
+    if (result.movedAttachments.length == 0) {
+      if (isVerbose) {
+        new import_obsidian4.Notice("No files found that need to be moved");
+      }
+    } else {
+      new import_obsidian4.Notice(`Moved ${result.movedAttachments.length.toString()} attachment${result.movedAttachments.length > 1 ? "s" : ""}`);
+    }
+  }
+  collectAttachmentsCurrentNote(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_ChainedPromise.chain)(this.app, () => this.collectAttachments(note));
+    }
+    return true;
+  }
   async convertAllEmbedsPathsToRelative() {
     await this.saveAllOpenNotes();
     let changedEmbedCount = 0;
@@ -4567,6 +4657,16 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
     } else {
       new import_obsidian4.Notice(`Converted ${changedEmbedCount.toString()} embed${changedEmbedCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
     }
+  }
+  convertAllEmbedsPathsToRelativeCurrentNote(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.convertAllNoteEmbedsPathsToRelative(note.path)));
+    }
+    return true;
   }
   async convertAllLinkPathsToRelative() {
     await this.saveAllOpenNotes();
@@ -4600,35 +4700,60 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       new import_obsidian4.Notice(`Converted ${changedLinksCount.toString()} link${changedLinksCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
     }
   }
-  async replaceAllWikilinksWithMarkdownLinks() {
+  convertAllLinkPathsToRelativeCurrentNote(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.convertAllNoteLinksPathsToRelative(note.path)));
+    }
+    return true;
+  }
+  async deleteEmptyFolders() {
+    await this.fh.deleteEmptyFolders("/");
+  }
+  handleDeletedMetadata(file, prevCache) {
+    if (!this.settings.deleteAttachmentsWithNote || this.isPathIgnored(file.path) || !(0, import_FileSystem3.isMarkdownFile)(file)) {
+      return;
+    }
+    this.deletedNoteCache.set(file.path, prevCache);
+  }
+  async handleMetadataCacheChanged(file) {
+    if (!this.settings.autoCollectAttachments) {
+      return;
+    }
+    const suggestionContainer = document.querySelector(".suggestion-container");
+    if (suggestionContainer && suggestionContainer.style.display !== "none") {
+      return;
+    }
+    await this.collectAttachments(file, false);
+  }
+  isPathIgnored(path) {
+    if (path.startsWith("./")) {
+      path = path.slice(2);
+    }
+    for (const folder of this.settings.ignoreFolders) {
+      if (path.startsWith(folder)) {
+        return true;
+      }
+    }
+    for (const fileRegex of this.settings.getIgnoreFilesRegex()) {
+      if (fileRegex.test(path)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  async reorganizeVault() {
     await this.saveAllOpenNotes();
-    let changedLinksCount = 0;
-    let processedNotesCount = 0;
-    const notes = (0, import_Vault2.getMarkdownFilesSorted)(this.app);
-    let i = 0;
-    const notice = new import_obsidian4.Notice("", 0);
-    for (const note of notes) {
-      if (this.abortSignal.aborted) {
-        notice.hide();
-        return;
-      }
-      i++;
-      const message = `Replacing wikilinks with markdown links # ${i.toString()} / ${notes.length.toString()} - ${note.path}`;
-      notice.setMessage(message);
-      console.debug(message);
-      if (this.isPathIgnored(note.path)) {
-        continue;
-      }
-      const result = await this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, false);
-      changedLinksCount += result;
-      processedNotesCount++;
-    }
-    notice.hide();
-    if (changedLinksCount == 0) {
-      new import_obsidian4.Notice("No wiki links found that need to be replaced");
-    } else {
-      new import_obsidian4.Notice(`Replaced ${changedLinksCount.toString()} wikilink${changedLinksCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
-    }
+    await this.replaceAllWikilinksWithMarkdownLinks();
+    await this.replaceAllWikiEmbedsWithMarkdownEmbeds();
+    await this.convertAllEmbedsPathsToRelative();
+    await this.convertAllLinkPathsToRelative();
+    await this.collectAllAttachments();
+    await this.deleteEmptyFolders();
+    new import_obsidian4.Notice("Reorganization of the vault completed");
   }
   async replaceAllWikiEmbedsWithMarkdownEmbeds() {
     await this.saveAllOpenNotes();
@@ -4660,54 +4785,62 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       new import_obsidian4.Notice(`Replaced ${changedLinksCount.toString()} wiki embed${changedLinksCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
     }
   }
-  async deleteEmptyFolders() {
-    await this.fh.deleteEmptyFolders("/");
+  replaceAllWikiEmbedsWithMarkdownEmbedsCurrentNote(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, true)));
+    }
+    return true;
   }
-  async checkConsistency() {
+  async replaceAllWikilinksWithMarkdownLinks() {
     await this.saveAllOpenNotes();
-    const badLinks = new ConsistencyCheckResult("Bad links");
-    const badEmbeds = new ConsistencyCheckResult("Bad embeds");
-    const wikiLinks = new ConsistencyCheckResult("Wiki links");
-    const wikiEmbeds = new ConsistencyCheckResult("Wiki embeds");
+    let changedLinksCount = 0;
+    let processedNotesCount = 0;
     const notes = (0, import_Vault2.getMarkdownFilesSorted)(this.app);
     let i = 0;
     const notice = new import_obsidian4.Notice("", 0);
-    for (const note2 of notes) {
+    for (const note of notes) {
       if (this.abortSignal.aborted) {
         notice.hide();
         return;
       }
       i++;
-      const message = `Checking note # ${i.toString()} / ${notes.length.toString()} - ${note2.path}`;
+      const message = `Replacing wikilinks with markdown links # ${i.toString()} / ${notes.length.toString()} - ${note.path}`;
       notice.setMessage(message);
       console.debug(message);
-      await this.lh.checkConsistency(note2, badLinks, badEmbeds, wikiLinks, wikiEmbeds);
+      if (this.isPathIgnored(note.path)) {
+        continue;
+      }
+      const result = await this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, false);
+      changedLinksCount += result;
+      processedNotesCount++;
     }
     notice.hide();
-    const notePath = this.settings.consistencyReportFile;
-    const text = badLinks.toString(this.app, notePath) + badEmbeds.toString(this.app, notePath) + wikiLinks.toString(this.app, notePath) + wikiEmbeds.toString(this.app, notePath);
-    await (0, import_Vault2.createFolderSafe)(this.app, (0, import_Path3.dirname)(notePath));
-    const note = await (0, import_FileSystem3.getOrCreateFile)(this.app, notePath);
-    await this.app.vault.modify(note, text);
-    let fileOpened = false;
-    this.app.workspace.iterateAllLeaves((leaf) => {
-      if (leaf.getDisplayText() != "" && notePath.startsWith(leaf.getDisplayText())) {
-        fileOpened = true;
-      }
-    });
-    if (!fileOpened) {
-      await this.app.workspace.openLinkText(notePath, "/", false);
+    if (changedLinksCount == 0) {
+      new import_obsidian4.Notice("No wiki links found that need to be replaced");
+    } else {
+      new import_obsidian4.Notice(`Replaced ${changedLinksCount.toString()} wikilink${changedLinksCount > 1 ? "s" : ""} from ${processedNotesCount.toString()} note${processedNotesCount > 1 ? "s" : ""}`);
     }
   }
-  async reorganizeVault() {
-    await this.saveAllOpenNotes();
-    await this.replaceAllWikilinksWithMarkdownLinks();
-    await this.replaceAllWikiEmbedsWithMarkdownEmbeds();
-    await this.convertAllEmbedsPathsToRelative();
-    await this.convertAllLinkPathsToRelative();
-    await this.collectAllAttachments();
-    await this.deleteEmptyFolders();
-    new import_obsidian4.Notice("Reorganization of the vault completed");
+  replaceAllWikilinksWithMarkdownLinksCurrentNote(checking) {
+    const note = this.app.workspace.getActiveFile();
+    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
+      return false;
+    }
+    if (!checking) {
+      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, false)));
+    }
+    return true;
+  }
+  async saveAllOpenNotes() {
+    for (const leaf of this.app.workspace.getLeavesOfType("markdown")) {
+      if (leaf.view instanceof import_obsidian4.MarkdownView) {
+        await leaf.view.save();
+      }
+    }
   }
   async saveSettings(newSettings) {
     await super.saveSettings(newSettings);
@@ -4724,63 +4857,6 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
       this.settings.ignoreFolders,
       this.settings.getIgnoreFilesRegex()
     );
-  }
-  async saveAllOpenNotes() {
-    for (const leaf of this.app.workspace.getLeavesOfType("markdown")) {
-      if (leaf.view instanceof import_obsidian4.MarkdownView) {
-        await leaf.view.save();
-      }
-    }
-  }
-  convertAllLinkPathsToRelativeCurrentNote(checking) {
-    const note = this.app.workspace.getActiveFile();
-    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
-      return false;
-    }
-    if (!checking) {
-      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.convertAllNoteLinksPathsToRelative(note.path)));
-    }
-    return true;
-  }
-  convertAllEmbedsPathsToRelativeCurrentNote(checking) {
-    const note = this.app.workspace.getActiveFile();
-    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
-      return false;
-    }
-    if (!checking) {
-      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.convertAllNoteEmbedsPathsToRelative(note.path)));
-    }
-    return true;
-  }
-  replaceAllWikilinksWithMarkdownLinksCurrentNote(checking) {
-    const note = this.app.workspace.getActiveFile();
-    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
-      return false;
-    }
-    if (!checking) {
-      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, false)));
-    }
-    return true;
-  }
-  replaceAllWikiEmbedsWithMarkdownEmbedsCurrentNote(checking) {
-    const note = this.app.workspace.getActiveFile();
-    if (!note || !(0, import_FileSystem3.isMarkdownFile)(note)) {
-      return false;
-    }
-    if (!checking) {
-      (0, import_ChainedPromise.chain)(this.app, (0, import_Function.omitAsyncReturnType)(() => this.lh.replaceAllNoteWikilinksWithMarkdownLinks(note.path, true)));
-    }
-    return true;
-  }
-  async handleMetadataCacheChanged(file) {
-    if (!this.settings.autoCollectAttachments) {
-      return;
-    }
-    const suggestionContainer = document.querySelector(".suggestion-container");
-    if (suggestionContainer && suggestionContainer.style.display !== "none") {
-      return;
-    }
-    await this.collectAttachments(file, false);
   }
 };
 function appendCodeBlock(fragment, text) {
