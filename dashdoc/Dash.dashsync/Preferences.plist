@@ -3208,20 +3208,6 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
-			<key>https://blackjax-devs.github.io/blackjax/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-02T02:02:24Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>blackjax</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://blackjax-devs.github.io/blackjax/</string>
-				</dict>
-			</dict>
 			<key>https://contextily.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3304,20 +3290,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mamba.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://mesa.readthedocs.io/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-12T02:13:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Mesa</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://mesa.readthedocs.io/latest/</string>
 				</dict>
 			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
@@ -3505,6 +3477,20 @@ $("h1").each(function() {
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>https://blackjax-devs.github.io/blackjax/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-11-15T01:07:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>blackjax</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://blackjax-devs.github.io/blackjax/</string>
+				</dict>
+			</dict>
 			<key>https://causalpy.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3643,6 +3629,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mesa.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://mesa.readthedocs.io/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-11-15T01:21:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Mesa</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mesa.readthedocs.io/latest/</string>
 				</dict>
 			</dict>
 			<key>https://mesa.readthedocs.io/stable/</key>
