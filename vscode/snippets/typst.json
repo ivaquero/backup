@@ -6,6 +6,13 @@
       "#h(0em)"
     ]
   },
+  "ind2": {
+    "prefix": "ind2",
+    "description": "",
+    "body": [
+      "#h(2em)"
+    ]
+  },
   "pg": {
     "prefix": "pg",
     "description": "",

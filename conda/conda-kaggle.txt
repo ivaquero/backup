@@ -5,7 +5,6 @@ dowhy
 ipykernel
 mplfinance
 nasdaq-data-link
-nbconvert
 openpyxl
 pygwalker
 seaborn
