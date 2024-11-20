@@ -3211,7 +3211,7 @@ $("h1").each(function() {
 			<key>https://contextily.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-10-07T15:25:22Z</date>
+				<date>2024-11-20T05:20:54Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3791,7 +3791,28 @@ $("h1").each(function() {
 	<key>DHUserRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>pytest</key>
+			<dict>
+				<key>date</key>
+				<date>2024-11-20T16:19:20Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pytest#readme</string>
+					<key>authorLinkText</key>
+					<string>Tom Forbes</string>
+					<key>name</key>
+					<string>pytest</string>
+					<key>platform</key>
+					<string>usercontribpytest</string>
+					<key>uniqueIdentifier</key>
+					<string>pytest</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict>
 			<key>Bambi</key>
@@ -5030,26 +5051,6 @@ $("h1").each(function() {
 					<string>pyro</string>
 				</dict>
 			</dict>
-			<key>pytest</key>
-			<dict>
-				<key>date</key>
-				<date>2023-01-10T00:33:34Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pytest#readme</string>
-					<key>authorLinkText</key>
-					<string>Tom Forbes</string>
-					<key>name</key>
-					<string>pytest</string>
-					<key>platform</key>
-					<string>usercontribpytest</string>
-					<key>uniqueIdentifier</key>
-					<string>pytest</string>
-				</dict>
-			</dict>
 			<key>statsmodels</key>
 			<dict>
 				<key>date</key>
@@ -5461,7 +5462,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/pyro/Pyro.docset</key>
 			<string>pr</string>
 			<key>~/Library/Application Support/Dash/User Contributed/pytest/pytest.docset</key>
-			<string>pt</string>
+			<string>pts:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitimage/scikit-image.docset</key>
 			<string>skm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn 1.2.docset</key>
