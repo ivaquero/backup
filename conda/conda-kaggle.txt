@@ -6,6 +6,7 @@ ipykernel
 mplfinance
 nasdaq-data-link
 openpyxl
+preliz
 pygwalker
 pytest
 seaborn
