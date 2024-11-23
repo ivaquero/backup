@@ -230,6 +230,8 @@
     }
   },
   "ruff.configuration": "pyproject.toml",
+  "ruff.format.preview": true,
+  "ruff.lint.preview": true,
   "ruff.nativeServer": "on",
   "autoDocstring.docstringFormat": "numpy",
   // jupyter
