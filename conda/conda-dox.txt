@@ -6,7 +6,6 @@ marimo
 mesa
 openpyxl
 plotnine
-pytest
 quaternion
 rocketpy
 sympy
