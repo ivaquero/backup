@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "Justice",
+      "path": "ibooks-highlights/Justice.md"
+    },
+    {
+      "basename": "El Tiempo Entre Costuras",
+      "path": "ibooks-highlights/El Tiempo Entre Costuras.md"
+    },
+    {
+      "basename": "太白金星有点烦",
+      "path": "public/历史/太白金星有点烦.md"
+    },
+    {
+      "basename": "人类群星闪耀时：十四篇历史人物画像",
+      "path": "public/历史/人类群星闪耀时：十四篇历史人物画像.md"
+    },
+    {
+      "basename": "西班牙语幽默故事100篇（西汉对照）",
+      "path": "public/教育学习/西班牙语幽默故事100篇（西汉对照）.md"
+    },
+    {
+      "basename": "心中有数 生活中的数学思维",
+      "path": "public/教育学习/心中有数 生活中的数学思维.md"
+    },
+    {
+      "basename": "发论文、拿项目，其实很简单",
+      "path": "public/教育学习/发论文、拿项目，其实很简单.md"
+    },
+    {
+      "basename": "断头王后：玛丽·安托瓦内特传",
+      "path": "public/人物传记/断头王后：玛丽·安托瓦内特传.md"
+    },
+    {
       "basename": "面试-中电科",
       "path": "logs/面试-中电科.md"
     },
@@ -81,5 +113,7 @@
       "path": "drafts/面试-生物方向.md"
     }
   ],
-  "omittedPaths": []
+  "omittedPaths": [],
+  "omittedTags": [],
+  "omitBookmarks": false
 }
