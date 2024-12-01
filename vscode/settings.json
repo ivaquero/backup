@@ -101,10 +101,6 @@
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
-  "workbench.colorCustomizations": {
-    "editor.lineHighlightBackground": "#1073cf2d",
-    "editor.lineHighlightBorder": "#9fced11f"
-  },
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.perEditorGroup": true,
@@ -296,8 +292,6 @@
     "SC2154",
     "SC2034"
   ],
-  "blockman.n04ColorComboPreset": "Classic Light (Gradients)",
-  "blockman.n32BlackListOfFileFormats": "^c, ^cpp, ^python, ^json, ^javascript, ^typescript",
   // grammar
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
