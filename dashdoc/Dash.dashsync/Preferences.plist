@@ -3279,10 +3279,24 @@ $("h1").each(function() {
 					<string>https://contextily.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://docs.pydantic.dev/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-02T14:25:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Pydantic</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.pydantic.dev/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.rocketpy.org/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-11-09T09:12:09Z</date>
+				<date>2024-12-02T14:32:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3319,20 +3333,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://geopandas.org/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://jax.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-27T21:14:03Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>JAX</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://jax.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://mamba.readthedocs.io/en/latest/</key>
@@ -3630,6 +3630,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://imbalanced-learn.org/stable/</string>
+				</dict>
+			</dict>
+			<key>https://jax.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-02T14:23:15Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>JAX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://jax.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://jupyterbook.org/en/stable/</key>
@@ -5370,6 +5384,8 @@ $("h1").each(function() {
 			<string>pm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
 			<string>pt</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Pydantic/Pydantic.docset</key>
+			<string>pdt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/RocketPy/RocketPy.docset</key>
@@ -5519,7 +5535,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/pyro/Pyro.docset</key>
 			<string>pr</string>
 			<key>~/Library/Application Support/Dash/User Contributed/pytest/pytest.docset</key>
-			<string>pts:</string>
+			<string>pts</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitimage/scikit-image.docset</key>
 			<string>skm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn 1.2.docset</key>
