@@ -1,14 +1,11 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-11-04T09:52:59.131-00:00",
+	"CreationDate" : "2024-12-01T11:02:17.312-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
-				{
-					"PackageIdentifier" : "ByteDance.StreamingTool"
-				},
 				{
 					"PackageIdentifier" : "OpenRocket.OpenRocket"
 				},
@@ -25,16 +22,16 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
-					"PackageIdentifier" : "Rakuten.Viber"
+					"PackageIdentifier" : "Nutstore.Nutstore"
 				},
 				{
-					"PackageIdentifier" : "Nutstore.Nutstore"
+					"PackageIdentifier" : "Rakuten.Viber"
 				},
 				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+					"PackageIdentifier" : "Microsoft.VCRedist.2005.x64"
 				},
 				{
 					"PackageIdentifier" : "Insecure.Npcap"
@@ -44,9 +41,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
 					"PackageIdentifier" : "WinFsp.WinFsp"
@@ -61,16 +55,19 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Edge"
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+					"PackageIdentifier" : "Microsoft.Edge"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
 					"PackageIdentifier" : "Espanso.Espanso"
@@ -86,6 +83,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WSL"
 				}
 			],
 			"SourceDetails" : 
@@ -112,5 +112,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.9.25180"
+	"WinGetVersion" : "1.9.25200"
 }
