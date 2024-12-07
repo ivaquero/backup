@@ -5,7 +5,8 @@ geopandas
 marimo
 mesa
 openpyxl
+phytreeviz
 plotnine
-quaternion
-rocketpy
+pycirclize
+scikit-bio
 sympy
