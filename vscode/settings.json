@@ -442,33 +442,7 @@
     "line"
   ],
   "wordcounter.simple_wordcount": false,
-  // julia
-  "[julia]": {
-    "editor.defaultFormatter": "julialang.language-julia"
-  },
-  "julia.deleteJuliaCovFiles": true,
-  "julia.enableCrashReporter": false,
-  "julia.enableTelemetry": false,
-  "julia.environmentPath": "${workspaceFolder}",
-  "julia.execution.codeInREPL": true,
-  "julia.execution.saveOnEval": true,
-  "julia.inlayHints.static.enabled": true,
-  "julia.plots.path": "../../images",
-  "julia.symbolCacheDownload": false,
-  // matlab
-  "[matlab]": {
-    "editor.defaultFormatter": "MathWorks.language-matlab"
-  },
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
-  // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
-  "MATLAB.matlabConnectionTiming": "never",
-  "MATLAB.showFeatureNotAvailableError": false,
-  "MATLAB.telemetry": false,
-  "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt",
-    "language-julia.interrupt"
-  ],
-  // other
+  // ui
   "material-icon-theme.files.associations": {
     "*.m": "matlab",
   },
@@ -502,5 +476,30 @@
       "folder": "${language}",
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
+  }, // matlab
+  "[matlab]": {
+    "editor.defaultFormatter": "MathWorks.language-matlab"
   },
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
+  "MATLAB.matlabConnectionTiming": "never",
+  "MATLAB.showFeatureNotAvailableError": false,
+  "MATLAB.telemetry": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt",
+    "language-julia.interrupt"
+  ],
+  // julia
+  // "[julia]": {
+  //   "editor.defaultFormatter": "julialang.language-julia"
+  // },
+  // "julia.deleteJuliaCovFiles": true,
+  // "julia.enableCrashReporter": false,
+  // "julia.enableTelemetry": false,
+  // "julia.environmentPath": "${workspaceFolder}",
+  // "julia.execution.codeInREPL": true,
+  // "julia.execution.saveOnEval": true,
+  // "julia.inlayHints.static.enabled": true,
+  // "julia.plots.path": "../../images",
+  // "julia.symbolCacheDownload": false,
 }
