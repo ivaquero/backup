@@ -64,6 +64,7 @@
   "files.trimTrailingWhitespace": true,
   // terminal
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontLigatures": true,
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.defaultProfile.windows": "PowerShell",

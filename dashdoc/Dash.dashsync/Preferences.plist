@@ -182,7 +182,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2024-11-10T05:07:40Z</date>
+				<date>2024-12-11T15:58:10Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3324,7 +3324,7 @@ $("h1").each(function() {
 			<key>https://mamba.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-09-05T00:56:43Z</date>
+				<date>2024-12-11T10:25:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3436,7 +3436,7 @@ $("h1").each(function() {
 			<key>https://scikit-learn.org/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-07-27T16:35:49Z</date>
+				<date>2024-12-11T18:53:40Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -5591,6 +5591,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-04-17T00:09:54Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Go.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-11T15:53:53Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
