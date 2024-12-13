@@ -490,6 +490,10 @@
     "matlab.interrupt",
     "language-julia.interrupt"
   ],
+  // marimo
+  "marimo.enableToken": true,
+  "marimo.https": true,
+  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
   // julia
   // "[julia]": {
   //   "editor.defaultFormatter": "julialang.language-julia"

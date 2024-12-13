@@ -1,4 +1,4 @@
 conda-tree
-mamba
-python-pptx
+pip
+touying
 xeus-cpp

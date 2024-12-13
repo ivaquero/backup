@@ -10,3 +10,4 @@ plotnine
 pycirclize
 scikit-bio
 sympy
+uv

@@ -3,6 +3,7 @@ conda-tree
 cvxpy
 dowhy
 ipykernel
+marimo
 mplfinance
 nasdaq-data-link
 openpyxl
@@ -11,4 +12,5 @@ pygwalker
 pytest
 seaborn
 tabulate
+uv
 yfinance
