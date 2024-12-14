@@ -1,8 +1,8 @@
 # channel
 channels:
   - conda-forge
-custom_channels:
-  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# custom_channels:
+#   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 
 # path
 envs_dirs:
@@ -20,7 +20,7 @@ channel_priority: strict
 pip_interop_enabled: true
 create_default_packages:
   - conda-tree
-pinned_packages: []
+pinned_packages: [arviz=0.20.0]
 disallow:
   - anaconda
 add_pip_as_python_dependency: false

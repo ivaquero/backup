@@ -3307,6 +3307,20 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
+			<key>https://docs.xarray.dev/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-14T15:53:46Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>xarray</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.xarray.dev/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://geopandas.org/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3380,7 +3394,7 @@ $("h1").each(function() {
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-11-23T03:46:32Z</date>
+				<date>2024-12-14T14:15:22Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -5243,18 +5257,18 @@ $("h1").each(function() {
 			<key>xarray</key>
 			<dict>
 				<key>date</key>
-				<date>2022-09-14T14:58:19Z</date>
+				<date>2024-12-14T15:56:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
 					<array>
-						<string>xarray Python</string>
+						<string>Python</string>
 						<string>N-D labeled arrays and datasets in Python</string>
 					</array>
 					<key>authorLinkHref</key>
 					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/xarray#readme</string>
 					<key>authorLinkText</key>
-					<string>Florian Knoop</string>
+					<string>Florian Knoop, Xavier Yang</string>
 					<key>name</key>
 					<string>xarray</string>
 					<key>platform</key>
@@ -5440,6 +5454,8 @@ $("h1").each(function() {
 			<string>sms</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.4.docset</key>
 			<string>sm</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/xarray/xarray.docset</key>
+			<string>xr</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
