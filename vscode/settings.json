@@ -495,6 +495,8 @@
   "marimo.enableToken": true,
   "marimo.https": true,
   "marimo.showTerminal": true,
+  "marimo.marimoPath": "marimo",
+  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
   // julia
   // "[julia]": {
   //   "editor.defaultFormatter": "julialang.language-julia"
