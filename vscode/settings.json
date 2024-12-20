@@ -366,7 +366,8 @@
   ],
   // typst
   "[typst]": {
-    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
@@ -493,7 +494,7 @@
   // marimo
   "marimo.enableToken": true,
   "marimo.https": true,
-  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "marimo.showTerminal": true,
   // julia
   // "[julia]": {
   //   "editor.defaultFormatter": "julialang.language-julia"
