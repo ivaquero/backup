@@ -8,7 +8,8 @@ mplfinance
 nasdaq-data-link
 openpyxl
 preliz
-pygwalker
+pydantic
+pymc-bart
 pytest
 seaborn
 tabulate
