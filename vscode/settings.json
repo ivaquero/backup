@@ -7,11 +7,10 @@
   // search
   "search.followSymlinks": false,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
-  // extensions
-  "extensions.ignoreRecommendations": true,
   // editor
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": true,
+  "editor.experimentalEditContextEnabled": true,
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
@@ -21,7 +20,6 @@
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
-  "editor.mouseWheelZoom": true,
   "editor.semanticHighlighting.enabled": true,
   "editor.suggest.preview": true,
   "editor.suggest.selectionMode": "whenQuickSuggestion",
@@ -34,8 +32,6 @@
   "editor.wordSeparators": "`~!@%^&*()=+[{]}\\|;:'\",.<>/?（），。；：",
   "editor.wordWrap": "on",
   "editor.wrappingStrategy": "advanced",
-  "editor.defaultFormatter": null,
-  "editor.experimentalEditContextEnabled": true,
   "editor.quickSuggestions": {
     "comments": true,
     "strings": true,
@@ -111,10 +107,10 @@
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio"
   },
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
-  "workbench.iconTheme": "material-icon-theme",
   // scm
   "scm.alwaysShowRepositories": true,
   "scm.alwaysShowActions": true,
@@ -193,14 +189,14 @@
   "code-runner.executorMap": {
     "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out && rm ./a.out",
     "cpp": "cd $dir && clang++ -std=c++11 $fileName && ./a.out && rm ./a.out",
+    "dart": "cd $dir && dart $fileName",
+    "go": "go run",
     "javascript": "node run --allow-net $fullFileName",
-    "typescript": "ts-node",
+    "julia": "julia",
     "python": "$(which python) -u $fullFileName",
     "rust": "cd $dir && rustc $fileName && $fileNameWithoutExt",
-    "julia": "julia",
     "shellscript": "bash",
-    "go": "go run",
-    "dart": "cd $dir && dart $fileName",
+    "typescript": "ts-node",
     "matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt"
   },
   // notebook
@@ -274,6 +270,10 @@
   "evenBetterToml.formatter.arrayAutoCollapse": true,
   "evenBetterToml.formatter.indentEntries": true,
   "evenBetterToml.schema.enabled": false,
+  // yaml
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   // ui & preview
   "conventionalCommits.autoCommit": false,
   "conventionalCommits.emojiFormat": "emoji",
@@ -290,27 +290,9 @@
   "shellcheck.exclude": [
     "SC1017",
     "SC1090",
+    "SC2034",
     "SC2154",
-    "SC2034"
   ],
-  // grammar
-  "ltex.completionEnabled": true,
-  "ltex.configurationTarget": {
-    "dictionary": "workspaceFolderExternalFile",
-    "disabledRules": "workspaceFolderExternalFile",
-    "hiddenFalsePositives": "workspaceFolderExternalFile"
-  },
-  "ltex.enabled": [
-    "latex",
-    "markdown"
-  ],
-  "ltex.latex.commands": {
-    "\\ref{}": "ignore",
-    "\\documentclass[]{}": "ignore",
-    "\\cite{}": "dummy",
-    "\\cite[]{}": "dummy"
-  },
-  "ltex.additionalRules.enablePickyRules": true,
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
@@ -369,13 +351,31 @@
     "editor.defaultFormatter": "myriad-dreamin.tinymist",
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
+  "[typst-code]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
   "tinymist.preview.cursorIndicator": true,
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+  // grammar
+  "ltex.completionEnabled": true,
+  "ltex.configurationTarget": {
+    "dictionary": "workspaceFolderExternalFile",
+    "disabledRules": "workspaceFolderExternalFile",
+    "hiddenFalsePositives": "workspaceFolderExternalFile"
   },
+  "ltex.enabled": [
+    "latex",
+    "markdown"
+  ],
+  "ltex.latex.commands": {
+    "\\ref{}": "ignore",
+    "\\documentclass[]{}": "ignore",
+    "\\cite{}": "dummy",
+    "\\cite[]{}": "dummy"
+  },
+  "ltex.additionalRules.enablePickyRules": true,
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
@@ -454,7 +454,6 @@
     "!plaintext"
   ],
   "redhat.telemetry.enabled": false,
-  "codeium.aggressiveShutdown": true,
   // lua
   "[lua]": {
     "editor.defaultFormatter": "JohnnyMorganz.stylua"
@@ -494,9 +493,9 @@
   // marimo
   "marimo.enableToken": true,
   "marimo.https": true,
-  "marimo.showTerminal": true,
   "marimo.marimoPath": "marimo",
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "marimo.showTerminal": true,
   // julia
   // "[julia]": {
   //   "editor.defaultFormatter": "julialang.language-julia"

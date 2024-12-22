@@ -3461,20 +3461,6 @@ $("h1").each(function() {
 					<string>https://scikit-learn.org/stable/</string>
 				</dict>
 			</dict>
-			<key>https://scikit.bio/docs/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-07T08:36:12Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>scikit-bio</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scikit.bio/docs/latest/</string>
-				</dict>
-			</dict>
 			<key>https://scitools.org.uk/cartopy/docs/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3812,6 +3798,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://scikit-image.org/docs/stable/</string>
+				</dict>
+			</dict>
+			<key>https://scikit.bio/docs/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-22T13:51:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>scikit-bio</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scikit.bio/docs/latest/</string>
 				</dict>
 			</dict>
 			<key>https://www.nltk.org/</key>
