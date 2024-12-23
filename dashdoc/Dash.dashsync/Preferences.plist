@@ -3517,6 +3517,20 @@ $("h1").each(function() {
 					<string>https://www.pymc.io/</string>
 				</dict>
 			</dict>
+			<key>https://www.pymc.io/projects/bart/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-23T17:53:25Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyMC-BART</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pymc.io/projects/bart/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://www.pywhy.org/dowhy/v0.11.1/</key>
 			<dict>
 				<key>date</key>
@@ -3784,6 +3798,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://pymoo.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-23T15:15:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pymoo: Multi-objective Optimization in Python</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pymoo.org/</string>
 				</dict>
 			</dict>
 			<key>https://scikit-image.org/docs/stable/</key>
@@ -5410,6 +5438,8 @@ $("h1").each(function() {
 			<string>pz</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyMC project website/PyMC project website.docset</key>
 			<string>pm</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/PyMCBART/PyMC-BART.docset</key>
+			<string>pmb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
 			<string>pt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Pydantic/Pydantic.docset</key>
@@ -5438,6 +5468,8 @@ $("h1").each(function() {
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
 			<string>pc</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pymoo Multiobjective Optimization in Python/pymoo: Multi-objective Optimization in Python.docset</key>
+			<string>oo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitbio/scikit-bio.docset</key>
 			<string>skb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitlearn/scikit-learn.docset</key>
