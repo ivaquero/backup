@@ -1,5 +1,4 @@
 alefragnani.bookmarks
-alibaba-cloud.tongyi-lingma
 bierner.markdown-mermaid
 biomejs.biome
 ccagml.vscode-leetcode-problem-rating
@@ -7,15 +6,17 @@ charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 christian-kohler.path-intellisense
 clover.md-table-editor
-codeium.codeium
 cschlosser.doxdocgen
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
+dioxuslabs.dioxus
 evertjunior.mass-renamer
 fill-labs.dependi
 foam.foam-vscode
 formulahendry.code-runner
 foxundermoon.shell-format
+github.copilot
+github.copilot-chat
 golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
@@ -28,6 +29,7 @@ jota0222.multi-formatter
 kirozen.wordcounter
 llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
+marimo-team.vscode-marimo
 mathworks.language-matlab
 ms-python.debugpy
 ms-python.python
