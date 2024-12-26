@@ -11,6 +11,7 @@ preliz
 pydantic
 pymc-bart
 pytest
+scikit-image
 seaborn
 tabulate
 uv

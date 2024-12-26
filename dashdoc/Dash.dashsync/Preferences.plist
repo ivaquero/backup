@@ -3447,6 +3447,20 @@ $("h1").each(function() {
 					<string>https://requests.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://scikit-image.org/docs/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2024-12-25T06:29:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>skimage</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scikit-image.org/docs/stable/</string>
+				</dict>
+			</dict>
 			<key>https://scikit-learn.org/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3812,20 +3826,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://pymoo.org/</string>
-				</dict>
-			</dict>
-			<key>https://scikit-image.org/docs/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-05T17:54:11Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>skimage</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scikit-image.org/docs/stable/</string>
 				</dict>
 			</dict>
 			<key>https://scikit.bio/docs/latest/</key>
@@ -5479,7 +5479,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/seaborn/seaborn.docset</key>
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/skimage/skimage.docset</key>
-			<string>skm</string>
+			<string>ski</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0141/statsmodels 0.14.1.docset</key>
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.3.docset</key>
