@@ -9,7 +9,6 @@ clover.md-table-editor
 cschlosser.doxdocgen
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
-dioxuslabs.dioxus
 evertjunior.mass-renamer
 fill-labs.dependi
 foam.foam-vscode
@@ -52,7 +51,6 @@ timonwong.shellcheck
 usernamehw.errorlens
 vadimcn.vscode-lldb
 vivaxy.vscode-conventional-commits
-vscodevim.vim
 wangqvq.easy-pytorch
 xiaohuohumax.format-files-by-ignores
 yutengjing.open-in-external-app
