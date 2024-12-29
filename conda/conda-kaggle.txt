@@ -8,11 +8,10 @@ mplfinance
 nasdaq-data-link
 openpyxl
 preliz
-pydantic
 pymc-bart
-pytest
 scikit-image
 seaborn
 tabulate
+transformers
 uv
 yfinance

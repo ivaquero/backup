@@ -1,4 +1,5 @@
 conda-tree
+ipykernel
 pip
 touying
 xeus-cpp
