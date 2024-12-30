@@ -39,7 +39,6 @@ ms-toolsai.vscode-jupyter-cell-tags
 ms-vscode.cmake-tools
 ms-vscode.live-server
 myriad-dreamin.tinymist
-nefrob.vscode-just-syntax
 njpwerner.autodocstring
 peterschmalfeldt.explorer-exclude
 pkief.material-icon-theme

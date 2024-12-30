@@ -182,7 +182,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2024-12-11T15:58:10Z</date>
+				<date>2024-12-29T18:07:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
