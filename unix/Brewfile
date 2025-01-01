@@ -50,7 +50,7 @@ brew "node"
 brew "mailsy"
 brew "micromamba"
 brew "nomino"
-brew "ollama"
+brew "ollama", restart_service: true
 brew "onefetch"
 brew "ouch"
 brew "oxipng"
