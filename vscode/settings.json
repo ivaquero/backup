@@ -2,6 +2,7 @@
   "window.nativeTabs": true,
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "all",
+  "extensions.ignoreRecommendations": true,
   // security
   "security.workspace.trust.untrustedFiles": "open",
   // search
@@ -10,6 +11,7 @@
   // editor
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": true,
+  "editor.defaultFormatter": null,
   "editor.experimentalEditContextEnabled": true,
   "editor.foldingStrategy": "indentation",
   "editor.fontFamily": "FiraCode Nerd Font",
@@ -454,10 +456,6 @@
     "!plaintext"
   ],
   "redhat.telemetry.enabled": false,
-  // lua
-  "[lua]": {
-    "editor.defaultFormatter": "JohnnyMorganz.stylua"
-  },
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",

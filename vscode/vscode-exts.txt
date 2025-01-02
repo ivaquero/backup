@@ -23,8 +23,8 @@ james-yu.latex-workshop
 janisdd.vscode-edit-csv
 jeronimoekerdt.color-picker-universal
 jock.svg
-johnnymorganz.stylua
 jota0222.multi-formatter
+julialang.language-julia
 kirozen.wordcounter
 llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
