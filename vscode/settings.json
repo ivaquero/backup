@@ -356,6 +356,7 @@
   "[typst-code]": {
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
+  "tinymist.completion.triggerOnSnippetPlaceholders": true,
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
@@ -495,16 +496,16 @@
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
   "marimo.showTerminal": true,
   // julia
-  // "[julia]": {
-  //   "editor.defaultFormatter": "julialang.language-julia"
-  // },
-  // "julia.deleteJuliaCovFiles": true,
-  // "julia.enableCrashReporter": false,
-  // "julia.enableTelemetry": false,
-  // "julia.environmentPath": "${workspaceFolder}",
-  // "julia.execution.codeInREPL": true,
-  // "julia.execution.saveOnEval": true,
-  // "julia.inlayHints.static.enabled": true,
-  // "julia.plots.path": "../../images",
-  // "julia.symbolCacheDownload": false,
+  "[julia]": {
+    "editor.defaultFormatter": "julialang.language-julia"
+  },
+  "julia.deleteJuliaCovFiles": true,
+  "julia.enableCrashReporter": false,
+  "julia.enableTelemetry": false,
+  "julia.environmentPath": "${workspaceFolder}",
+  "julia.execution.codeInREPL": true,
+  "julia.execution.saveOnEval": true,
+  "julia.inlayHints.static.enabled": true,
+  "julia.plots.path": "../../images",
+  "julia.symbolCacheDownload": false,
 }
