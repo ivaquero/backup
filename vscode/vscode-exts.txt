@@ -8,6 +8,8 @@ christian-kohler.path-intellisense
 clover.md-table-editor
 cschlosser.doxdocgen
 czhang03.unicode-math-input
+dart-code.dart-code
+dart-code.flutter
 davidanson.vscode-markdownlint
 evertjunior.mass-renamer
 fill-labs.dependi
