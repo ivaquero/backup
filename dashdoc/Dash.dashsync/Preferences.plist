@@ -239,7 +239,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-05T14:28:48Z</date>
+				<date>2025-01-09T14:44:37Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3437,7 +3437,7 @@ $("h1").each(function() {
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-06T10:07:04Z</date>
+				<date>2025-01-09T10:53:45Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
