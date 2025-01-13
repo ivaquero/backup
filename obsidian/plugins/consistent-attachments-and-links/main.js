@@ -50,50 +50,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// node_modules/obsidian-dev-utils/dist/lib/DocumentFragment.cjs
-var require_DocumentFragment = __commonJS({
-  "node_modules/obsidian-dev-utils/dist/lib/DocumentFragment.cjs"(exports2, module2) {
-    function __extractDefault(module22) {
-      return module22 && module22.__esModule && module22.default ? module22.default : module22;
-    }
-    (function patchRequireEsmDefault() {
-      const __require = require;
-      require = Object.assign((id) => {
-        const module22 = __require(id) ?? {};
-        return __extractDefault(module22);
-      }, __require);
-    })();
-    var __defProp2 = Object.defineProperty;
-    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
-    var __getOwnPropNames2 = Object.getOwnPropertyNames;
-    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
-    var __export2 = (target, all2) => {
-      for (var name in all2)
-        __defProp2(target, name, { get: all2[name], enumerable: true });
-    };
-    var __copyProps2 = (to, from, except, desc) => {
-      if (from && typeof from === "object" || typeof from === "function") {
-        for (let key of __getOwnPropNames2(from))
-          if (!__hasOwnProp2.call(to, key) && key !== except)
-            __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
-      }
-      return to;
-    };
-    var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
-    var DocumentFragment_exports = {};
-    __export2(DocumentFragment_exports, {
-      appendCodeBlock: () => appendCodeBlock3
-    });
-    module2.exports = __toCommonJS2(DocumentFragment_exports);
-    function appendCodeBlock3(fragment, code2) {
-      fragment.appendChild(createSpan({ cls: "markdown-rendered code" }, (span) => {
-        span.style.fontWeight = "bold";
-        span.appendChild(createEl("code", { text: code2 }));
-      }));
-    }
-  }
-});
-
 // node_modules/obsidian-dev-utils/dist/lib/Function.cjs
 var require_Function = __commonJS({
   "node_modules/obsidian-dev-utils/dist/lib/Function.cjs"(exports2, module2) {
@@ -1848,6 +1804,79 @@ var require_Loop = __commonJS({
         }
       }
       notice.hide();
+    }
+  }
+});
+
+// node_modules/obsidian-dev-utils/dist/lib/obsidian/Modal/Alert.cjs
+var require_Alert = __commonJS({
+  "node_modules/obsidian-dev-utils/dist/lib/obsidian/Modal/Alert.cjs"(exports2, module2) {
+    function __extractDefault(module22) {
+      return module22 && module22.__esModule && module22.default ? module22.default : module22;
+    }
+    (function patchRequireEsmDefault() {
+      const __require = require;
+      require = Object.assign((id) => {
+        const module22 = __require(id) ?? {};
+        return __extractDefault(module22);
+      }, __require);
+    })();
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = (target, all2) => {
+      for (var name in all2)
+        __defProp2(target, name, { get: all2[name], enumerable: true });
+    };
+    var __copyProps2 = (to, from, except, desc) => {
+      if (from && typeof from === "object" || typeof from === "function") {
+        for (let key of __getOwnPropNames2(from))
+          if (!__hasOwnProp2.call(to, key) && key !== except)
+            __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      }
+      return to;
+    };
+    var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
+    var Alert_exports = {};
+    __export2(Alert_exports, {
+      alert: () => alert3
+    });
+    module2.exports = __toCommonJS2(Alert_exports);
+    var import_obsidian5 = require("obsidian");
+    var AlertModal = class extends import_obsidian5.Modal {
+      constructor(options, resolve) {
+        super(options.app);
+        this.resolve = resolve;
+        const DEFAULT_OPTIONS = {
+          app: options.app,
+          message: "",
+          okButtonStyles: {},
+          okButtonText: "OK",
+          title: ""
+        };
+        this.options = { ...DEFAULT_OPTIONS, ...options };
+      }
+      options;
+      onClose() {
+        this.resolve();
+      }
+      onOpen() {
+        this.titleEl.setText(this.options.title);
+        const paragraph2 = this.contentEl.createEl("p");
+        paragraph2.setText(this.options.message);
+        const okButton = new import_obsidian5.ButtonComponent(this.contentEl);
+        okButton.setButtonText(this.options.okButtonText);
+        okButton.setCta();
+        okButton.onClick(this.close.bind(this));
+        Object.assign(okButton.buttonEl.style, this.options.okButtonStyles);
+      }
+    };
+    async function alert3(options) {
+      return new Promise((resolve) => {
+        const modal = new AlertModal(options, resolve);
+        modal.open();
+      });
     }
   }
 });
@@ -15704,6 +15733,50 @@ var require_PluginSettingsBase = __commonJS({
   }
 });
 
+// node_modules/obsidian-dev-utils/dist/lib/DocumentFragment.cjs
+var require_DocumentFragment = __commonJS({
+  "node_modules/obsidian-dev-utils/dist/lib/DocumentFragment.cjs"(exports2, module2) {
+    function __extractDefault(module22) {
+      return module22 && module22.__esModule && module22.default ? module22.default : module22;
+    }
+    (function patchRequireEsmDefault() {
+      const __require = require;
+      require = Object.assign((id) => {
+        const module22 = __require(id) ?? {};
+        return __extractDefault(module22);
+      }, __require);
+    })();
+    var __defProp2 = Object.defineProperty;
+    var __getOwnPropDesc2 = Object.getOwnPropertyDescriptor;
+    var __getOwnPropNames2 = Object.getOwnPropertyNames;
+    var __hasOwnProp2 = Object.prototype.hasOwnProperty;
+    var __export2 = (target, all2) => {
+      for (var name in all2)
+        __defProp2(target, name, { get: all2[name], enumerable: true });
+    };
+    var __copyProps2 = (to, from, except, desc) => {
+      if (from && typeof from === "object" || typeof from === "function") {
+        for (let key of __getOwnPropNames2(from))
+          if (!__hasOwnProp2.call(to, key) && key !== except)
+            __defProp2(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc2(from, key)) || desc.enumerable });
+      }
+      return to;
+    };
+    var __toCommonJS2 = (mod) => __copyProps2(__defProp2({}, "__esModule", { value: true }), mod);
+    var DocumentFragment_exports = {};
+    __export2(DocumentFragment_exports, {
+      appendCodeBlock: () => appendCodeBlock2
+    });
+    module2.exports = __toCommonJS2(DocumentFragment_exports);
+    function appendCodeBlock2(fragment, code2) {
+      fragment.appendChild(createSpan({ cls: "markdown-rendered code" }, (span) => {
+        span.style.fontWeight = "bold";
+        span.appendChild(createEl("code", { text: code2 }));
+      }));
+    }
+  }
+});
+
 // node_modules/obsidian-dev-utils/dist/lib/obsidian/Plugin/PluginSettingsTabBase.cjs
 var require_PluginSettingsTabBase = __commonJS({
   "node_modules/obsidian-dev-utils/dist/lib/obsidian/Plugin/PluginSettingsTabBase.cjs"(exports2, module2) {
@@ -15880,10 +15953,10 @@ module.exports = __toCommonJS(main_exports);
 
 // src/ConsistentAttachmentsAndLinksPlugin.ts
 var import_obsidian4 = require("obsidian");
-var import_DocumentFragment2 = __toESM(require_DocumentFragment(), 1);
 var import_Function = __toESM(require_Function(), 1);
 var import_FileSystem3 = __toESM(require_FileSystem(), 1);
 var import_Loop = __toESM(require_Loop(), 1);
+var import_Alert2 = __toESM(require_Alert(), 1);
 var import_PluginBase = __toESM(require_PluginBase(), 1);
 var import_Queue = __toESM(require_Queue(), 1);
 var import_RenameDeleteHandler = __toESM(require_RenameDeleteHandler(), 1);
@@ -15899,11 +15972,11 @@ var ConsistentAttachmentsAndLinksPluginSettings = class extends import_PluginSet
   autoCollectAttachments = false;
   changeNoteBacklinksAlt = true;
   consistencyReportFile = "consistency-report.md";
-  deleteAttachmentsWithNote = true;
+  deleteAttachmentsWithNote = false;
   deleteEmptyFolders = true;
-  deleteExistFilesWhenMoveNote = true;
-  moveAttachmentsWithNote = true;
-  showWarning = true;
+  deleteExistFilesWhenMoveNote = false;
+  moveAttachmentsWithNote = false;
+  showBackupWarning = true;
   updateLinks = true;
   get excludePaths() {
     return this.#excludePaths;
@@ -15911,6 +15984,9 @@ var ConsistentAttachmentsAndLinksPluginSettings = class extends import_PluginSet
   set excludePaths(value) {
     this.#excludePaths = value.filter(Boolean);
     this.#excludePathsRegExp = makeRegExp(this.#excludePaths, NEVER_MATCH_REG_EXP);
+  }
+  get hadDangerousSettingsReverted() {
+    return this.#hadDangerousSettingsReverted;
   }
   get includePaths() {
     return this.#includePaths;
@@ -15921,6 +15997,7 @@ var ConsistentAttachmentsAndLinksPluginSettings = class extends import_PluginSet
   }
   #excludePaths = [];
   #excludePathsRegExp = NEVER_MATCH_REG_EXP;
+  #hadDangerousSettingsReverted = false;
   #includePaths = [];
   #includePathsRegExp = ALWAYS_MATCH_REG_EXP;
   constructor(data) {
@@ -15945,6 +16022,13 @@ var ConsistentAttachmentsAndLinksPluginSettings = class extends import_PluginSet
       delete legacySettings.ignoreFolders;
     }
     super.initFromRecord(legacySettings);
+    if (this.showBackupWarning) {
+      this.#hadDangerousSettingsReverted = this.deleteAttachmentsWithNote || this.deleteExistFilesWhenMoveNote || this.moveAttachmentsWithNote || this.autoCollectAttachments;
+      this.deleteAttachmentsWithNote = false;
+      this.deleteExistFilesWhenMoveNote = false;
+      this.moveAttachmentsWithNote = false;
+      this.autoCollectAttachments = false;
+    }
   }
   isPathIgnored(path) {
     return !this.#includePathsRegExp.test(path) || this.#excludePathsRegExp.test(path);
@@ -15973,17 +16057,33 @@ function makeRegExp(paths, defaultRegExp) {
 // src/ConsistentAttachmentsAndLinksPluginSettingsTab.ts
 var import_obsidian = require("obsidian");
 var import_DocumentFragment = __toESM(require_DocumentFragment(), 1);
+var import_Alert = __toESM(require_Alert(), 1);
 var import_PluginSettingsTabBase = __toESM(require_PluginSettingsTabBase(), 1);
 var import_ValueComponent = __toESM(require_ValueComponent(), 1);
 var import_RegExp2 = __toESM(require_RegExp(), 1);
 var ConsistentAttachmentsAndLinksPluginSettingsTab = class extends import_PluginSettingsTabBase.PluginSettingsTabBase {
   display() {
     this.containerEl.empty();
-    new import_obsidian.Setting(this.containerEl).setName("Move Attachments with Note").setDesc("Automatically move attachments when a note is relocated. This includes attachments located in the same folder or any of its subfolders.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "moveAttachmentsWithNote"));
-    new import_obsidian.Setting(this.containerEl).setName("Delete Unused Attachments with Note").setDesc("Automatically remove attachments that are no longer referenced in other notes when the note is deleted.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteAttachmentsWithNote"));
+    const moveAttachmentsWithNoteSettingName = "Move Attachments with Note";
+    new import_obsidian.Setting(this.containerEl).setName(moveAttachmentsWithNoteSettingName).setDesc("Automatically move attachments when a note is relocated. This includes attachments located in the same folder or any of its subfolders.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "moveAttachmentsWithNote", {
+      onChanged: async () => {
+        await this.checkDangerousSetting("moveAttachmentsWithNote", moveAttachmentsWithNoteSettingName);
+      }
+    }));
+    const deleteAttachmentsWithNoteSettingName = "Delete Unused Attachments with Note";
+    new import_obsidian.Setting(this.containerEl).setName(deleteAttachmentsWithNoteSettingName).setDesc("Automatically remove attachments that are no longer referenced in other notes when the note is deleted.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteAttachmentsWithNote", {
+      onChanged: async () => {
+        await this.checkDangerousSetting("deleteAttachmentsWithNote", deleteAttachmentsWithNoteSettingName);
+      }
+    }));
     new import_obsidian.Setting(this.containerEl).setName("Update Links").setDesc("Automatically update links to attachments and other notes when moving notes or attachments.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "updateLinks"));
     new import_obsidian.Setting(this.containerEl).setName("Delete Empty Folders").setDesc("Automatically remove empty folders after moving notes with attachments.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteEmptyFolders"));
-    new import_obsidian.Setting(this.containerEl).setName("Delete Duplicate Attachments on Note Move").setDesc("Automatically delete attachments when moving a note if a file with the same name exists in the destination folder. If disabled, the file will be renamed and moved.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteExistFilesWhenMoveNote"));
+    const deleteExistFilesWhenMoveNoteSettingName = "Delete Duplicate Attachments on Note Move";
+    new import_obsidian.Setting(this.containerEl).setName(deleteExistFilesWhenMoveNoteSettingName).setDesc("Automatically delete attachments when moving a note if a file with the same name exists in the destination folder. If disabled, the file will be renamed and moved.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "deleteExistFilesWhenMoveNote", {
+      onChanged: async () => {
+        await this.checkDangerousSetting("deleteExistFilesWhenMoveNote", deleteExistFilesWhenMoveNoteSettingName);
+      }
+    }));
     new import_obsidian.Setting(this.containerEl).setName("Update Backlink Text on Note Rename").setDesc("When a note is renamed, its linked references are automatically updated. If this option is enabled, the text of backlinks to this note will also be modified.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "changeNoteBacklinksAlt"));
     new import_obsidian.Setting(this.containerEl).setName("Consistency Report Filename").setDesc("Specify the name of the file for the consistency report.").addText(
       (text4) => (0, import_ValueComponent.extend)(text4).bind(this.plugin, "consistencyReportFile").setPlaceholder("Example: consistency-report.md")
@@ -16004,7 +16104,12 @@ var ConsistentAttachmentsAndLinksPluginSettingsTab = class extends import_Plugin
         return null;
       }
     };
-    new import_obsidian.Setting(this.containerEl).setName("Auto Collect Attachments").setDesc("Automatically collect attachments when the note is edited.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "autoCollectAttachments"));
+    const autoCollectAttachmentsSettingName = "Auto Collect Attachments";
+    new import_obsidian.Setting(this.containerEl).setName(autoCollectAttachmentsSettingName).setDesc("Automatically collect attachments when the note is edited.").addToggle((toggle) => (0, import_ValueComponent.extend)(toggle).bind(this.plugin, "autoCollectAttachments", {
+      onChanged: async () => {
+        await this.checkDangerousSetting("autoCollectAttachments", autoCollectAttachmentsSettingName);
+      }
+    }));
     new import_obsidian.Setting(this.containerEl).setName("Include paths").setDesc(createFragment((f) => {
       f.appendText("Include notes from the following paths");
       f.createEl("br");
@@ -16025,6 +16130,32 @@ var ConsistentAttachmentsAndLinksPluginSettingsTab = class extends import_Plugin
       f.createEl("br");
       f.appendText("If the setting is empty, no notes are excluded");
     })).addTextArea((textArea) => (0, import_ValueComponent.extend)(textArea).bind(this.plugin, "excludePaths", pathBindSettings));
+  }
+  async checkDangerousSetting(settingKey, settingName) {
+    if (!this.plugin.settingsCopy[settingKey]) {
+      return;
+    }
+    await (0, import_Alert.alert)({
+      app: this.app,
+      message: createFragment((f) => {
+        f.createDiv({ cls: "community-modal-readme" }, (wrapper) => {
+          wrapper.appendText("You enabled ");
+          wrapper.createEl("strong", { cls: "markdown-rendered-code", text: settingName });
+          wrapper.appendText(" setting. Without proper configuration it might lead to inconvenient attachment rearrangements or even data loss in your vault.");
+          wrapper.createEl("br");
+          wrapper.appendText("It is ");
+          wrapper.createEl("strong", { text: "STRONGLY" });
+          wrapper.appendText(" recommended to backup your vault before using the plugin.");
+          wrapper.createEl("br");
+          wrapper.createEl("a", { href: "https://github.com/dy-sh/obsidian-consistent-attachments-and-links?tab=readme-ov-file", text: "Read more" });
+          wrapper.appendText(" about how to use the plugin.");
+        });
+      }),
+      title: createFragment((f) => {
+        (0, import_obsidian.setIcon)(f.createSpan(), "triangle-alert");
+        f.appendText(" Consistent Attachments and Links");
+      })
+    });
   }
 };
 
@@ -16479,29 +16610,10 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
   createPluginSettingsTab() {
     return new ConsistentAttachmentsAndLinksPluginSettingsTab(this);
   }
+  async onLayoutReady() {
+    await this.showBackupWarning();
+  }
   onloadComplete() {
-    if (this.settings.showWarning) {
-      const notice = new import_obsidian4.Notice(createFragment((f) => {
-        f.appendText("Starting from ");
-        (0, import_DocumentFragment2.appendCodeBlock)(f, "v3.0.0");
-        f.appendText(", the plugin ");
-        (0, import_DocumentFragment2.appendCodeBlock)(f, "Consistent Attachments and Links");
-        f.appendText(" has setting ");
-        (0, import_DocumentFragment2.appendCodeBlock)(f, "Attachment Subfolder");
-        f.appendText(" removed. This is a BREAKING CHANGE.");
-        f.appendChild(createEl("br"));
-        f.appendChild(createEl("a", { href: "https://github.com/dy-sh/obsidian-consistent-attachments-and-links?tab=readme-ov-file#attachment-subfolder-setting", text: "Read more" }));
-      }), 0);
-      notice.noticeEl.onClickEvent((ev) => {
-        (0, import_Queue.addToQueue)(this.app, async () => {
-          if (ev.target instanceof HTMLAnchorElement) {
-            window.open(ev.target.href, "_blank");
-          }
-          this.settings.showWarning = false;
-          await this.saveSettings(this.settings);
-        });
-      });
-    }
     this.registerEvent(
       this.app.metadataCache.on("deleted", (file, prevCache) => {
         if (prevCache) {
@@ -16896,6 +17008,38 @@ var ConsistentAttachmentsAndLinksPlugin = class extends import_PluginBase.Plugin
         await leaf.view.save();
       }
     }
+  }
+  async showBackupWarning() {
+    if (!this.settings.showBackupWarning) {
+      return;
+    }
+    await (0, import_Alert2.alert)({
+      app: this.app,
+      message: createFragment((f) => {
+        f.createDiv({ cls: "community-modal-readme" }, (wrapper) => {
+          wrapper.appendText("Using 'Consistent Attachments and Links' plugin without proper configuration might lead to inconvenient attachment rearrangements or even data loss in your vault.");
+          wrapper.createEl("br");
+          wrapper.appendText("It is ");
+          wrapper.createEl("strong", { text: "STRONGLY" });
+          wrapper.appendText(" recommended to backup your vault before using the plugin.");
+          wrapper.createEl("br");
+          if (this.settings.hadDangerousSettingsReverted) {
+            wrapper.appendText("Some of your plugin settings has been changed to their safe values.");
+            wrapper.createEl("br");
+          }
+          wrapper.createEl("a", { href: "https://github.com/dy-sh/obsidian-consistent-attachments-and-links?tab=readme-ov-file", text: "Read more" });
+          wrapper.appendText(" about how to use the plugin.");
+          wrapper.createEl("br");
+          wrapper.appendText("This warning will not appear again.");
+        });
+      }),
+      title: createFragment((f) => {
+        (0, import_obsidian4.setIcon)(f.createSpan(), "triangle-alert");
+        f.appendText(" Consistent Attachments and Links");
+      })
+    });
+    this.settings.showBackupWarning = false;
+    await this.saveSettings(this.settings);
   }
 };
 

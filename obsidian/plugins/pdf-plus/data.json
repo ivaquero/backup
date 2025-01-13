@@ -220,6 +220,7 @@
   "focusEditorAfterAutoPaste": true,
   "clearSelectionAfterAutoPaste": true,
   "respectCursorPositionWhenAutoPaste": true,
+  "blankLineAboveAppendedContent": true,
   "autoCopy": false,
   "autoFocus": false,
   "autoPaste": false,
