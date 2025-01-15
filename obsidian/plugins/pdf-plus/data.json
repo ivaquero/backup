@@ -285,6 +285,7 @@
   "defaultZoomValue": "page-width",
   "scrollModeOnLoad": 0,
   "spreadModeOnLoad": 0,
+  "usePageUpAndPageDown": true,
   "hoverableDropdownMenuInToolbar": true,
   "zoomLevelInputBoxInToolbar": true,
   "popoverPreviewOnExternalLinkHover": true,

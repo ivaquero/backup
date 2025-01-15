@@ -239,7 +239,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-09T14:44:37Z</date>
+				<date>2025-01-13T09:15:01Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3367,7 +3367,7 @@ $("h1").each(function() {
 			<key>https://docs.xarray.dev/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-06T02:37:07Z</date>
+				<date>2025-01-13T22:46:09Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>

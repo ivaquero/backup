@@ -1,4 +1,11 @@
 {
+  "rxlsx": {
+    "prefix": "rxlsx",
+    "description": "rxlsx",
+    "body": [
+      "#xlsx-parser(read(\"test.xlsx\", encoding: none))"
+    ]
+  },
   "ind": {
     "prefix": "ind",
     "description": "",
