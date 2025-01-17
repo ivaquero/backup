@@ -3,7 +3,12 @@
     "prefix": "rxlsx",
     "description": "rxlsx",
     "body": [
-      "#xlsx-parser(read(\"test.xlsx\", encoding: none))"
+      "#figure(",
+      "  xlsx-parser(read(\"\", encoding: none), parse-table-style: false),",
+      "  caption: \"\",",
+      "  supplement: \"表\",",
+      "  kind: table,",
+      ")"
     ]
   },
   "ind": {

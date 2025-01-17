@@ -3322,20 +3322,6 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
-			<key>https://contextily.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-20T05:20:54Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>contextily</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://contextily.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
 			<key>https://docs.pydantic.dev/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3376,20 +3362,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.xarray.dev/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://geopandas.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-08-22T15:28:16Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>GeoPandas</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://geopandas.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://mamba.readthedocs.io/en/latest/</key>
@@ -3518,20 +3490,6 @@ $("h1").each(function() {
 					<string>https://scikit-learn.org/stable/</string>
 				</dict>
 			</dict>
-			<key>https://scitools.org.uk/cartopy/docs/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-10-23T01:25:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>cartopy</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scitools.org.uk/cartopy/docs/latest/</string>
-				</dict>
-			</dict>
 			<key>https://seaborn.pydata.org/</key>
 			<dict>
 				<key>date</key>
@@ -3647,6 +3605,20 @@ $("h1").each(function() {
 					<string>https://causalpy.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://contextily.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-01-16T07:04:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>contextily</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://contextily.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3701,6 +3673,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://faker.readthedocs.io/en/master/</string>
+				</dict>
+			</dict>
+			<key>https://geopandas.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-01-16T07:04:54Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>GeoPandas</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://geopandas.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://hvplot.holoviz.org/</key>
@@ -3897,6 +3883,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://scikit.bio/docs/latest/</string>
+				</dict>
+			</dict>
+			<key>https://scitools.org.uk/cartopy/docs/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-01-16T07:04:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>cartopy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scitools.org.uk/cartopy/docs/latest/</string>
 				</dict>
 			</dict>
 			<key>https://www.nltk.org/</key>

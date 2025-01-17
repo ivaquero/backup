@@ -1,13 +1,6 @@
-cartopy
 conda-tree
-contextily
-geopandas
 marimo
-mesa
 openpyxl
-phytreeviz
 plotnine
-pycirclize
-scikit-bio
-sympy
+rvc3python
 uv
