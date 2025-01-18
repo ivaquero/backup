@@ -1,5 +1,4 @@
 conda-tree
-marimo
 openpyxl
 plotnine
 rvc3python
