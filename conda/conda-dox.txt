@@ -2,4 +2,3 @@ conda-tree
 openpyxl
 plotnine
 rvc3python
-uv
