@@ -7,11 +7,11 @@ marimo
 mplfinance
 nasdaq-data-link
 openpyxl
+plotnine
 preliz
 pymc-bart
 scikit-image
 seaborn
 tabulate
-transformers
 uv
 yfinance
