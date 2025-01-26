@@ -15,8 +15,6 @@ evertjunior.mass-renamer
 fill-labs.dependi
 formulahendry.code-runner
 foxundermoon.shell-format
-github.copilot
-github.copilot-chat
 golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
@@ -27,6 +25,7 @@ jock.svg
 jota0222.multi-formatter
 julialang.language-julia
 kirozen.wordcounter
+litchi.plt-snippet
 llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
@@ -46,6 +45,7 @@ pkief.material-icon-theme
 qcz.text-power-tools
 redhat.vscode-yaml
 rust-lang.rust-analyzer
+saoudrizwan.claude-dev
 tamasfe.even-better-toml
 timonwong.shellcheck
 usernamehw.errorlens
