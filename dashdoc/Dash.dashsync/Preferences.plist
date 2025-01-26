@@ -239,7 +239,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-17T14:35:26Z</date>
+				<date>2025-01-24T02:21:59Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -5748,7 +5748,7 @@ $("h1").each(function() {
 			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2022-05-09T03:54:05Z</date>
+				<date>2025-01-23T02:50:19Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
