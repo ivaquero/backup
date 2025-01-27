@@ -5,7 +5,6 @@ dowhy
 ipykernel
 marimo
 mplfinance
-nasdaq-data-link
 openpyxl
 plotnine
 preliz
