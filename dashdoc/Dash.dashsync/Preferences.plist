@@ -3364,6 +3364,20 @@ $("h1").each(function() {
 					<string>https://docs.xarray.dev/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://lets-plot.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-01-27T18:21:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>lets-plot</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://lets-plot.org/</string>
+				</dict>
+			</dict>
 			<key>https://mamba.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3757,20 +3771,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://koaning.github.io/scikit-lego/</string>
-				</dict>
-			</dict>
-			<key>https://lets-plot.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-04T19:05:39Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>lets-plot</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://lets-plot.org/</string>
 				</dict>
 			</dict>
 			<key>https://mesa.readthedocs.io/en/stable/</key>

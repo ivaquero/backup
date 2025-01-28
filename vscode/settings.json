@@ -49,10 +49,10 @@
   "explorer.sortOrder": "type",
   // files
   "files.associations": {
-    "*.vimrc": "viml",
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
+    "*.vimrc": "viml",
     "*.m": "matlab",
   },
   "files.autoGuessEncoding": true,
@@ -507,5 +507,5 @@
   "julia.execution.saveOnEval": true,
   "julia.inlayHints.static.enabled": true,
   "julia.plots.path": "../../images",
-  "julia.symbolCacheDownload": false,
+  "julia.symbolCacheDownload": false
 }
