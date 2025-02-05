@@ -3322,20 +3322,6 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
-			<key>https://docs.pydantic.dev/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-02T14:25:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Pydantic</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.pydantic.dev/latest/</string>
-				</dict>
-			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3659,6 +3645,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.marimo.io/</string>
+				</dict>
+			</dict>
+			<key>https://docs.pydantic.dev/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-04T08:41:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Pydantic</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.pydantic.dev/latest/</string>
 				</dict>
 			</dict>
 			<key>https://docs.rocketpy.org/en/latest/</key>

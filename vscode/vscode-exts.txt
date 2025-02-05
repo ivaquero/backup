@@ -15,6 +15,8 @@ evertjunior.mass-renamer
 fill-labs.dependi
 formulahendry.code-runner
 foxundermoon.shell-format
+github.copilot
+github.copilot-chat
 golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
