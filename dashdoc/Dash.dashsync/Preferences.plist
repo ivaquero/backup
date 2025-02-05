@@ -3308,6 +3308,20 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>https://aqtinstall.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T14:55:52Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>aqtinstall</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://aqtinstall.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://bambinos.github.io/bambi/</key>
 			<dict>
 				<key>date</key>
@@ -3320,6 +3334,48 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://bambinos.github.io/bambi/</string>
+				</dict>
+			</dict>
+			<key>https://docs.manim.community/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T15:28:32Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Manim</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.manim.community/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://docs.marimo.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T15:36:09Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.marimo.io/</string>
+				</dict>
+			</dict>
+			<key>https://docs.pydantic.dev/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T15:19:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Pydantic</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.pydantic.dev/latest/</string>
 				</dict>
 			</dict>
 			<key>https://docs.sympy.org/latest/</key>
@@ -3364,6 +3420,20 @@ $("h1").each(function() {
 					<string>https://mamba.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://moshi4.github.io/pyCirclize/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T15:54:50Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pyCirclize</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://moshi4.github.io/pyCirclize/</string>
+				</dict>
+			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3406,6 +3476,20 @@ $("h1").each(function() {
 					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://pymoo.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T15:50:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pymoo: Multi-objective Optimization in Python</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pymoo.org/</string>
+				</dict>
+			</dict>
 			<key>https://python.arviz.org/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3432,6 +3516,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://pytorch.org/docs/stable/</string>
+				</dict>
+			</dict>
+			<key>https://ranaroussi.github.io/yfinance/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T15:53:23Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>yfinance - market data downloader</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://ranaroussi.github.io/yfinance/</string>
 				</dict>
 			</dict>
 			<key>https://requests.readthedocs.io/en/latest/</key>
@@ -3605,46 +3703,18 @@ $("h1").each(function() {
 					<string>https://contextily.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
-			<key>https://docs.manim.community/en/stable/</key>
+			<key>https://docs.pytest.org/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-09-12T16:21:58Z</date>
+				<date>2025-02-05T15:28:33Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
-					<string>Manim</string>
+					<string>pytest</string>
 					<key>platform</key>
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
-					<string>https://docs.manim.community/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://docs.marimo.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-08-25T12:05:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>marimo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.marimo.io/</string>
-				</dict>
-			</dict>
-			<key>https://docs.pydantic.dev/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-04T08:41:12Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Pydantic</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.pydantic.dev/latest/</string>
+					<string>https://docs.pytest.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://docs.rocketpy.org/en/latest/</key>
@@ -3829,20 +3899,6 @@ $("h1").each(function() {
 					<string>https://ml-explore.github.io/mlx/build/html/</string>
 				</dict>
 			</dict>
-			<key>https://moshi4.github.io/pyCirclize/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-27T05:38:01Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pyCirclize</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://moshi4.github.io/pyCirclize/</string>
-				</dict>
-			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3855,20 +3911,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://pymoo.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-23T15:15:58Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pymoo: Multi-objective Optimization in Python</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://pymoo.org/</string>
 				</dict>
 			</dict>
 			<key>https://scikit.bio/docs/latest/</key>
@@ -3976,6 +4018,28 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-05T16:03:23Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Gary Miguel</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
 			<key>pytest</key>
 			<dict>
 				<key>date</key>
@@ -5049,29 +5113,6 @@ $("h1").each(function() {
 					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-27T21:13:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-						<string>flax</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Yuxin Wu</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
-				</dict>
-			</dict>
 			<key>jq</key>
 			<dict>
 				<key>date</key>
@@ -5462,7 +5503,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Docset Generator/PyGWalker/PyGWalker.docset</key>
 			<string>pgw:</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Typst/Typst.docset</key>
-			<string>t</string>
+			<string>tt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/ArviZ/ArviZ.docset</key>
 			<string>az</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Bambi/Bambi.docset</key>
@@ -5482,7 +5523,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
 			<string>mx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Manim/Manim.docset</key>
-			<string>ma</string>
+			<string>mm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Mesa - 2/Mesa.docset</key>
 			<string>ms</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Mesa/Mesa.docset</key>
@@ -5498,7 +5539,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/PyMCBART/PyMC-BART.docset</key>
 			<string>pmb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
-			<string>pt</string>
+			<string>t</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Pydantic/Pydantic.docset</key>
 			<string>pdt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
@@ -5507,6 +5548,8 @@ $("h1").each(function() {
 			<string>rp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/aqtinstall/aqtinstall.docset</key>
+			<string>aq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>
 			<string>bjx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/cartopy/cartopy.docset</key>
@@ -5518,15 +5561,17 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
 			<string>lp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/mamba/mamba.docset</key>
-			<string>mm</string>
+			<string>mb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/marimo/marimo.docset</key>
 			<string>mo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
-			<string>pc</string>
+			<string>pcc:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pymoo Multiobjective Optimization in Python/pymoo: Multi-objective Optimization in Python.docset</key>
-			<string>oo</string>
+			<string>moo</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pytest/pytest.docset</key>
+			<string>pts:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitbio/scikit-bio.docset</key>
 			<string>skb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitlearn/scikit-learn.docset</key>
@@ -5545,6 +5590,8 @@ $("h1").each(function() {
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/xarray/xarray.docset</key>
 			<string>xr</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/yfinance  market data downloader/yfinance - market data downloader.docset</key>
+			<string>yf</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
