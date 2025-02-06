@@ -4,10 +4,8 @@ biomejs.biome
 ccagml.vscode-leetcode-problem-rating
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
-christian-kohler.path-intellisense
 clover.md-table-editor
 cschlosser.doxdocgen
-czhang03.unicode-math-input
 dart-code.dart-code
 dart-code.flutter
 davidanson.vscode-markdownlint
@@ -19,9 +17,9 @@ github.copilot
 github.copilot-chat
 golang.go
 hediet.vscode-drawio
+ho-oto.mathematical-symbols
 huacnlee.autocorrect
 james-yu.latex-workshop
-janisdd.vscode-edit-csv
 jeronimoekerdt.color-picker-universal
 jock.svg
 jota0222.multi-formatter
@@ -46,6 +44,7 @@ peterschmalfeldt.explorer-exclude
 pkief.material-icon-theme
 qcz.text-power-tools
 redhat.vscode-yaml
+reporting-cz.omegasheets-vscode
 rust-lang.rust-analyzer
 saoudrizwan.claude-dev
 tamasfe.even-better-toml

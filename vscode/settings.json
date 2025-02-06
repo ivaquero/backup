@@ -106,8 +106,12 @@
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "git:/**/*.code-snippets": "default",
+    "gitlens:/**/*.code-snippets": "default",
     "*.md": "default",
-    "*.drawio.png": "hediet.vscode-drawio"
+    "*.drawio.png": "hediet.vscode-drawio",
+    "*.csv": "omegasheets.csv-default"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -295,6 +299,14 @@
     "SC2034",
     "SC2154",
   ],
+  // unicode
+  "mathematicalSymbols.enabledLanguages": [
+    "plaintext",
+    "markdown",
+    "typst",
+    "python",
+    "julia"
+  ],
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
@@ -361,24 +373,6 @@
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
   "tinymist.preview.cursorIndicator": true,
-  // grammar
-  "ltex.completionEnabled": true,
-  "ltex.configurationTarget": {
-    "dictionary": "workspaceFolderExternalFile",
-    "disabledRules": "workspaceFolderExternalFile",
-    "hiddenFalsePositives": "workspaceFolderExternalFile"
-  },
-  "ltex.enabled": [
-    "latex",
-    "markdown"
-  ],
-  "ltex.latex.commands": {
-    "\\ref{}": "ignore",
-    "\\documentclass[]{}": "ignore",
-    "\\cite{}": "dummy",
-    "\\cite[]{}": "dummy"
-  },
-  "ltex.additionalRules.enablePickyRules": true,
   // cpp
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
@@ -491,10 +485,8 @@
   ],
   // marimo
   "marimo.enableToken": true,
-  "marimo.https": true,
   "marimo.marimoPath": "marimo",
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
-  "marimo.showTerminal": true,
   // julia
   "[julia]": {
     "editor.defaultFormatter": "julialang.language-julia"
@@ -507,5 +499,23 @@
   "julia.execution.saveOnEval": true,
   "julia.inlayHints.static.enabled": true,
   "julia.plots.path": "../../images",
-  "julia.symbolCacheDownload": false
+  "julia.symbolCacheDownload": false,
+  // grammar
+  "ltex.completionEnabled": true,
+  "ltex.configurationTarget": {
+    "dictionary": "workspaceFolderExternalFile",
+    "disabledRules": "workspaceFolderExternalFile",
+    "hiddenFalsePositives": "workspaceFolderExternalFile"
+  },
+  "ltex.enabled": [
+    "latex",
+    "markdown"
+  ],
+  "ltex.latex.commands": {
+    "\\ref{}": "ignore",
+    "\\documentclass[]{}": "ignore",
+    "\\cite{}": "dummy",
+    "\\cite[]{}": "dummy"
+  },
+  "ltex.additionalRules.enablePickyRules": true,
 }
