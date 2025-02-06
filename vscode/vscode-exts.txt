@@ -1,4 +1,5 @@
 alefragnani.bookmarks
+alpinebuster.vscode-latex-table-editor
 bierner.markdown-mermaid
 biomejs.biome
 ccagml.vscode-leetcode-problem-rating
