@@ -6,7 +6,6 @@ ccagml.vscode-leetcode-problem-rating
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 clover.md-table-editor
-cschlosser.doxdocgen
 dart-code.dart-code
 dart-code.flutter
 davidanson.vscode-markdownlint
@@ -57,4 +56,5 @@ wangqvq.easy-pytorch
 xiaohuohumax.format-files-by-ignores
 yutengjing.open-in-external-app
 yzhang.markdown-all-in-one
+zatkins-dev.doxdocgen-with-direction
 zjffun.snippetsmanager

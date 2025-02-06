@@ -139,7 +139,7 @@
   "errorLens.statusBarMessageEnabled": true,
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "multiFormatter.formatterList": [
       "yzhang.markdown-all-in-one",
       "DavidAnson.vscode-markdownlint"
@@ -404,14 +404,19 @@
   // doxygen
   "doxdocgen.c.triggerSequence": "///",
   "doxdocgen.c.firstLine": "/*!",
-  "doxdocgen.cpp.tparamTemplate": "@tparam{indent:15}{param}",
-  "doxdocgen.file.fileTemplate": "@file{indent:15}{name}",
+  "doxdocgen.cpp.tparamTemplate": "@tparam{align:1} {param}",
+  "doxdocgen.generic.authorTag": "@author{align:1} {author}",
+  "doxdocgen.generic.briefTemplate": "@brief{align:1} {text}",
+  "doxdocgen.generic.dateTemplate": "@date{align:1} {date}",
+  "doxdocgen.generic.paramTemplate": "@param{direction}{align:1}{align:1} {param}{align:2}",
+  "doxdocgen.generic.returnTemplate": "@return{align:1} {type}",
+  "doxdocgen.generic.includeTypeAtReturn": false,
   "doxdocgen.generic.useGitUserName": true,
-  "doxdocgen.generic.authorTag": "@author{indent:15}{author}",
-  "doxdocgen.generic.briefTemplate": "@brief{indent:15}{text}",
-  "doxdocgen.generic.dateTemplate": "@date{indent:15}{date}",
-  "doxdocgen.generic.paramTemplate": "@param{indent:15}{param}",
-  "doxdocgen.generic.returnTemplate": "@return{indent:15}{type}",
+  "doxdocgen.generic.order": [
+    "brief",
+    "param"
+  ],
+  "doxdocgen.file.fileTemplate": "@file{align:1} {name}",
   "doxdocgen.file.fileOrder": [
     "file",
     "author",
