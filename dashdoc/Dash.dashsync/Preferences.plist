@@ -3274,7 +3274,22 @@ $("h1").each(function() {
 		<key>installed</key>
 		<dict/>
 		<key>uninstalled</key>
-		<dict/>
+		<dict>
+			<key>github.com/pdfcpu/pdfcpu/pkg/api</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-07T07:08:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/pdfcpu/pdfcpu/pkg/api</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/pdfcpu/pdfcpu/pkg/api</string>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>DHHaskellRepo</key>
 	<dict>
@@ -3446,6 +3461,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://networkx.org/documentation/stable/</string>
+				</dict>
+			</dict>
+			<key>https://ocrmypdf.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-07T06:31:19Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>ocrmypdf</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://ocrmypdf.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.org/</key>
@@ -3984,10 +4013,38 @@ $("h1").each(function() {
 		<dict/>
 		<key>uninstalled</key>
 		<dict>
+			<key>maturin</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-07T06:36:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>maturin</string>
+					<key>platform</key>
+					<string>crate</string>
+					<key>uniqueIdentifier</key>
+					<string>maturin</string>
+				</dict>
+			</dict>
+			<key>pyo3</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-07T06:36:53Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pyo3</string>
+					<key>platform</key>
+					<string>crate</string>
+					<key>uniqueIdentifier</key>
+					<string>pyo3</string>
+				</dict>
+			</dict>
 			<key>typst</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-03T12:54:39Z</date>
+				<date>2025-02-07T06:36:21Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -5564,6 +5621,8 @@ $("h1").each(function() {
 			<string>mb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/marimo/marimo.docset</key>
 			<string>mo</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/ocrmypdf/ocrmypdf.docset</key>
+			<string>omp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>

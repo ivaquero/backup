@@ -53,6 +53,7 @@ brew "node"
 brew "mailsy"
 brew "micromamba"
 brew "nomino"
+brew "ocrmypdf"
 brew "ollama", restart_service: :changed
 brew "onefetch"
 brew "ouch"

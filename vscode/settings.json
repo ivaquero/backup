@@ -62,9 +62,10 @@
   "files.trimTrailingWhitespace": true,
   // terminal
   "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  "terminal.integrated.fontLigatures": true,
+  "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.suggest.enabled": true,
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
@@ -106,12 +107,10 @@
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
-    "*.copilotmd": "vscode.markdown.preview.editor",
-    "git:/**/*.code-snippets": "default",
-    "gitlens:/**/*.code-snippets": "default",
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.csv": "omegasheets.csv-default"
+    "*.csv": "omegasheets.csv-default",
+    "*.copilotmd": "vscode.markdown.preview.editor",
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -214,6 +213,7 @@
   "notebook.consolidatedRunButton": true,
   "notebook.diff.ignoreOutputs": true,
   "notebook.formatOnSave.enabled": true,
+  "notebook.inlineValues": true,
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 18,
   "notebook.multiCursor.enabled": true,
@@ -523,4 +523,8 @@
     "\\cite[]{}": "dummy"
   },
   "ltex.additionalRules.enablePickyRules": true,
+  // ai
+  "github.copilot.chat.edits.codesearch.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
 }
