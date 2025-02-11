@@ -1,3 +1,4 @@
+autogen-core
 conda-tree
 ipykernel
 ollama

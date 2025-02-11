@@ -54,6 +54,7 @@
     "*.h": "cpp",
     "*.vimrc": "viml",
     "*.m": "matlab",
+    "docker-compose.yml": "yaml",
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
