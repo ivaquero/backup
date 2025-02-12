@@ -1,15 +1,14 @@
 {
   "tgrm": {
     "prefix": "tgrm",
-    "description": "",
     "body": [
       "const strippedString = originalString.replace(/(<([^>]+)>)/gi, '');",
       ""
-    ]
+    ],
+    "description": ""
   },
   "srv": {
     "prefix": "srv",
-    "description": "",
     "body": [
       "function reverseString(string) {",
       "  return string.split(' ').reverse().join(' ');",
@@ -17,15 +16,16 @@
       "",
       "revereseString();",
       ""
-    ]
+    ],
+    "description": ""
   },
   "mrnd": {
     "prefix": "mrnd",
-    "description": "",
     "body": [
       "const rnd = Math.floor(Math.random() * items.length);",
       "items[rnd];",
       ""
-    ]
+    ],
+    "description": ""
   }
 }

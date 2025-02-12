@@ -1,15 +1,14 @@
 {
   "ind": {
     "prefix": "ind",
-    "description": "",
     "body": [
       "&emsp;&emsp;",
       ""
-    ]
+    ],
+    "description": ""
   },
   "t3": {
     "prefix": "t3",
-    "description": "",
     "body": [
       "|   ${0:title}  |     |     |",
       "| :-: | :-: | :-: |",
@@ -17,11 +16,11 @@
       "|     |     |     |",
       "|     |     |     |",
       ""
-    ]
+    ],
+    "description": ""
   },
   "t32": {
     "prefix": "t3",
-    "description": "",
     "body": [
       "|     |     |     |",
       "| :-: | :-: | :-: |",
@@ -29,11 +28,11 @@
       "|     |     |     |",
       "|     |     |     |",
       ""
-    ]
+    ],
+    "description": ""
   },
   "t31": {
     "prefix": "t3",
-    "description": "",
     "body": [
       "|     |     |     |",
       "| :-: | :-: | :-: |",
@@ -41,11 +40,11 @@
       "|     |     |     |",
       "|     |     |     |",
       ""
-    ]
+    ],
+    "description": ""
   },
   "t4": {
     "prefix": "t4",
-    "description": "",
     "body": [
       "|     |     |     |     |",
       "| :-: | :-: | :-: | :-: |",
@@ -53,11 +52,11 @@
       "|     |     |     |     |",
       "|     |     |     |     |",
       ""
-    ]
+    ],
+    "description": ""
   },
   "t5": {
     "prefix": "t5",
-    "description": "",
     "body": [
       "|     |     |     |     |     |",
       "| :-: | :-: | :-: | :-: | :-: |",
@@ -65,101 +64,101 @@
       "|     |     |     |     |     |",
       "|     |     |     |     |     |",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cpy": {
     "prefix": "cpy",
-    "description": "",
     "body": [
       "```python",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "ccc": {
     "prefix": "ccc",
-    "description": "",
     "body": [
       "```cpp",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cjl": {
     "prefix": "cjl",
-    "description": "",
     "body": [
       "```julia",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cmd": {
     "prefix": "cmd",
-    "description": "",
     "body": [
       "```markdown",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cjs": {
     "prefix": "cjs",
-    "description": "",
     "body": [
       "```js",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cmm": {
     "prefix": "cmm",
-    "description": "",
     "body": [
       "```mermaid",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "crs": {
     "prefix": "crs",
-    "description": "",
     "body": [
       "```rust",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cbs": {
     "prefix": "cbs",
-    "description": "",
     "body": [
       "```bash",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "cc": {
     "prefix": "cc",
-    "description": "",
     "body": [
       "```c",
       "",
       "```",
       ""
-    ]
+    ],
+    "description": ""
   },
   "style": {
     "prefix": "style",
-    "description": "",
     "body": [
       "<style>",
       "    table {",
@@ -179,11 +178,11 @@
       "        flex: 1;",
       "    }",
       "</style>"
-    ]
+    ],
+    "description": ""
   },
   "col2": {
     "prefix": "col2",
-    "description": "",
     "body": [
       "<div class=\"box\">",
       "    <div class=\"left\">",
@@ -191,88 +190,88 @@
       "    <div class=\"right\">",
       "    </div>",
       "</div>"
-    ]
+    ],
+    "description": ""
   },
   "va": {
     "prefix": "va",
-    "description": "",
     "body": [
       "𝒂"
-    ]
+    ],
+    "description": ""
   },
   "aa": {
     "prefix": "aa",
-    "description": "",
     "body": [
       "\\$a_1, a_2, …, a_n\\$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "av": {
     "prefix": "av",
-    "description": "",
     "body": [
       "$$",
       "\\begin{bmatrix} a_1 \\\\ a_2 \\\\ ⋮ \\\\ a_n \\end{bmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "ah": {
     "prefix": "ah",
-    "description": "",
     "body": [
       "$$",
       "\\bigg(a_1 a_2 … a_n \\bigg)",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "ak": {
     "prefix": "ak",
-    "description": "",
     "body": [
       "\\$k_1, k_2, …, k_n\\$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "theo": {
     "prefix": "theo",
-    "description": "",
     "body": [
       ":::{admonition} 定理",
       "",
       ":::",
       ""
-    ]
+    ],
+    "description": ""
   },
   "sum": {
     "prefix": "sum",
-    "description": "",
     "body": [
       "∑_{i=1}^n",
       ""
-    ]
+    ],
+    "description": ""
   },
   "def": {
     "prefix": "def",
-    "description": "",
     "body": [
       "**定义**：",
       ""
-    ]
+    ],
+    "description": ""
   },
   "uxy": {
     "prefix": "uxy",
-    "description": "",
     "body": [
       "$X$和$Y$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "m33": {
     "prefix": "m33",
-    "description": "",
     "body": [
       "$$",
       "\\begin{pmatrix}",
@@ -282,11 +281,11 @@
       "\\end{pmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "m22": {
     "prefix": "m22",
-    "description": "",
     "body": [
       "$$",
       "\\begin{pmatrix}",
@@ -295,11 +294,11 @@
       "\\end{pmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "m01": {
     "prefix": "m01",
-    "description": "",
     "body": [
       "$$",
       "\\begin{pmatrix}",
@@ -307,11 +306,11 @@
       "\\end{pmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "mmn": {
     "prefix": "mmn",
-    "description": "",
     "body": [
       "$$",
       "𝐀 =",
@@ -323,11 +322,11 @@
       "\\end{pmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "m0m": {
     "prefix": "m0m",
-    "description": "",
     "body": [
       "$$",
       "\\begin{pmatrix}",
@@ -335,11 +334,11 @@
       "\\end{pmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "detn": {
     "prefix": "detn",
-    "description": "",
     "body": [
       "$$",
       "|𝐀| =",
@@ -351,11 +350,11 @@
       "\\end{vmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "mvdm": {
     "prefix": "mvdm",
-    "description": "",
     "body": [
       "$$",
       "𝐕 =",
@@ -367,11 +366,11 @@
       "\\end{pmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "detvdm": {
     "prefix": "detvdm",
-    "description": "",
     "body": [
       "$$",
       "|𝐕| =",
@@ -383,11 +382,11 @@
       "\\end{vmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "diag1": {
     "prefix": "diag1",
-    "description": "",
     "body": [
       "$$",
       "\\begin{bmatrix}",
@@ -398,11 +397,11 @@
       "\\end{bmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "det3": {
     "prefix": "det3",
-    "description": "",
     "body": [
       "$$",
       "|𝐀| =",
@@ -413,11 +412,11 @@
       "\\end{vmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "det2": {
     "prefix": "det2",
-    "description": "",
     "body": [
       "$$",
       "|𝐀| =",
@@ -427,11 +426,11 @@
       "\\end{vmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "m1n": {
     "prefix": "m1n",
-    "description": "",
     "body": [
       "$$",
       "𝒂 =",
@@ -440,98 +439,99 @@
       "\\end{bmatrix}",
       "$$",
       ""
-    ]
+    ],
+    "description": ""
   },
   "ma": {
     "prefix": "ma",
-    "description": "",
     "body": [
       "𝑨"
-    ]
+    ],
+    "description": ""
   },
   "mb": {
     "prefix": "mb",
-    "description": "",
     "body": [
       "𝑩"
-    ]
+    ],
+    "description": ""
   },
   "mc": {
     "prefix": "mc",
-    "description": "",
     "body": [
       "𝑪"
-    ]
+    ],
+    "description": ""
   },
   "me": {
     "prefix": "me",
-    "description": "",
     "body": [
       "𝑬"
-    ]
+    ],
+    "description": ""
   },
   "mh": {
     "prefix": "mh",
-    "description": "",
     "body": [
       "𝑯"
-    ]
+    ],
+    "description": ""
   },
   "mj": {
     "prefix": "mj",
-    "description": "",
     "body": [
       "𝑱"
-    ]
+    ],
+    "description": ""
   },
   "mp": {
     "prefix": "mp",
-    "description": "",
     "body": [
       "𝑷"
-    ]
+    ],
+    "description": ""
   },
   "mq": {
     "prefix": "mq",
-    "description": "",
     "body": [
       "𝑸"
-    ]
+    ],
+    "description": ""
   },
   "mx": {
     "prefix": "mx",
-    "description": "",
     "body": [
       "𝑿"
-    ]
+    ],
+    "description": ""
   },
   "vx": {
     "prefix": "vx",
-    "description": "",
     "body": [
       "𝒙"
-    ]
+    ],
+    "description": ""
   },
   "vy": {
     "prefix": "vy",
-    "description": "",
     "body": [
       "𝒚"
-    ]
+    ],
+    "description": ""
   },
   "eig": {
     "prefix": "eig",
-    "description": "",
     "body": [
       "𝑨 - λ 𝑰"
-    ]
+    ],
+    "description": ""
   },
   "aha": {
     "prefix": "aha",
-    "description": "",
     "body": [
       "𝑨^H 𝑨"
-    ]
+    ],
+    "description": ""
   },
   "h2": {
     "prefix": "h2",
@@ -544,5 +544,59 @@
     "body": [
       "###"
     ]
+  },
+  "t4-1739335033131": {
+    "prefix": "t4",
+    "body": [
+      "|     |     |     |     |",
+      "| :-: | :-: | :-: | :-: |",
+      "|     |     |     |     |",
+      "|     |     |     |     |",
+      "|     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "t31-1739335037464": {
+    "prefix": "t3",
+    "body": [
+      "|     |     |     |",
+      "| :-: | :-: | :-: |",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "cpy-1739335075645": {
+    "prefix": "cpy",
+    "body": [
+      "```python",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cpy-1739335078890": {
+    "prefix": "cpy",
+    "body": [
+      "```python",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cpy-1739335080192": {
+    "prefix": "cpy",
+    "body": [
+      "```python",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
   }
 }

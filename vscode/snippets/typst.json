@@ -1,7 +1,6 @@
 {
   "rxlsx": {
     "prefix": "rxlsx",
-    "description": "rxlsx",
     "body": [
       "#figure(",
       "  xlsx-parser(",
@@ -14,35 +13,36 @@
       "  supplement: \"表\",",
       "  kind: table,",
       ")"
-    ]
+    ],
+    "description": ""
   },
   "ind": {
     "prefix": "ind",
-    "description": "",
     "body": [
       "#h(0em)"
-    ]
+    ],
+    "description": ""
   },
   "ind2": {
     "prefix": "ind2",
-    "description": "",
     "body": [
       "#h(2em)"
-    ]
+    ],
+    "description": ""
   },
   "pg": {
     "prefix": "pg",
-    "description": "",
     "body": [
       "#pagebreak()"
-    ]
+    ],
+    "description": ""
   },
   "pgw": {
     "prefix": "pgw",
-    "description": "",
     "body": [
       "#pagebreak(weak: true)"
-    ]
+    ],
+    "description": ""
   },
   "t3": {
     "prefix": "t3",
@@ -133,18 +133,17 @@
   },
   "ls": {
     "prefix": "ls",
-    "description": "",
     "body": [
       "#list(",
       "  [],",
       "  [],",
       "  indent: 0.1em",
       ")"
-    ]
+    ],
+    "description": ""
   },
   "en": {
     "prefix": "en",
-    "description": "",
     "body": [
       "#enum(",
       "  [],",
@@ -153,11 +152,11 @@
       "  numbering: \"1\",",
       "  indent: 0.1em",
       ")"
-    ]
+    ],
+    "description": ""
   },
   "col2": {
     "prefix": "col2",
-    "description": "",
     "body": [
       "#block(",
       "  height: 9em,",
@@ -165,11 +164,11 @@
       "",
       "  ],",
       ")"
-    ]
+    ],
+    "description": ""
   },
   "f12": {
     "prefix": "f12",
-    "description": "",
     "body": [
       "#sgrid(",
       "  figure(",
@@ -184,7 +183,8 @@
       "  gutter: 2pt,",
       "  caption: \"\"",
       ")"
-    ]
+    ],
+    "description": ""
   },
   "rcsv": {
     "prefix": "rcsv",
@@ -201,30 +201,30 @@
   },
   "rimg": {
     "prefix": "rimg",
-    "description": "",
     "body": [
       "#figure(",
       "  image(\"images\", width: 40%),",
       "  caption: \"\",",
       "  supplement: [图]",
       ")"
-    ]
+    ],
+    "description": ""
   },
   "rpy": {
     "prefix": "rpy",
-    "description": "",
     "body": [
       "#let code1 = read(\"python\")",
       "#code(code1)"
-    ]
+    ],
+    "description": ""
   },
   "rjl": {
     "prefix": "rjl",
-    "description": "",
     "body": [
       "#let code1 = read(\"julia\")",
       "#code(code1, lang: \"julia\")"
-    ]
+    ],
+    "description": ""
   },
   "rcpp": {
     "prefix": "rcpp",
@@ -236,10 +236,10 @@
   },
   "lm": {
     "prefix": "lm",
-    "description": "",
     "body": [
       "$$"
-    ]
+    ],
+    "description": ""
   },
   "braw": {
     "prefix": "raw",
@@ -251,499 +251,499 @@
   },
   "bm": {
     "prefix": "bm",
-    "description": "",
     "body": [
       "$  $"
-    ]
+    ],
+    "description": ""
   },
   "bdef": {
     "prefix": "def",
-    "description": "",
     "body": [
       "#definition[",
       "]"
-    ]
+    ],
+    "description": ""
   },
   "btheo": {
     "prefix": "btheo",
-    "description": "",
     "body": [
       "#theorem[",
       "]"
-    ]
+    ],
+    "description": ""
   },
   "bcoro": {
     "prefix": "bcoro",
-    "description": "",
     "body": [
       "#corollary[",
       "]"
-    ]
+    ],
+    "description": ""
   },
   "btp": {
     "prefix": "btp",
-    "description": "",
     "body": [
       "#tip[",
       "]"
-    ]
+    ],
+    "description": ""
   },
   "balg": {
     "prefix": "balg",
-    "description": "",
     "body": [
       "#algo[",
       "]"
-    ]
+    ],
+    "description": ""
   },
   "ma": {
     "prefix": "ma",
-    "description": "",
     "body": [
       "𝑨"
-    ]
+    ],
+    "description": ""
   },
   "mb": {
     "prefix": "mb",
-    "description": "",
     "body": [
       "𝑩"
-    ]
+    ],
+    "description": ""
   },
   "mc": {
     "prefix": "mc",
-    "description": "",
     "body": [
       "𝑪"
-    ]
+    ],
+    "description": ""
   },
   "me": {
     "prefix": "me",
-    "description": "",
     "body": [
       "𝑬"
-    ]
+    ],
+    "description": ""
   },
   "mg": {
     "prefix": "mg",
-    "description": "",
     "body": [
       "𝑮"
-    ]
+    ],
+    "description": ""
   },
   "mh": {
     "prefix": "mh",
-    "description": "",
     "body": [
       "𝑯"
-    ]
+    ],
+    "description": ""
   },
   "mi": {
     "prefix": "mi",
-    "description": "",
     "body": [
       "𝑰"
-    ]
+    ],
+    "description": ""
   },
   "mj": {
     "prefix": "mj",
-    "description": "",
     "body": [
       "𝑱"
-    ]
+    ],
+    "description": ""
   },
   "ml": {
     "prefix": "ml",
-    "description": "",
     "body": [
       "𝑳"
-    ]
+    ],
+    "description": ""
   },
   "mm": {
     "prefix": "mm",
-    "description": "",
     "body": [
       "𝑴"
-    ]
+    ],
+    "description": ""
   },
   "mo": {
     "prefix": "mo",
-    "description": "",
     "body": [
       "𝑶"
-    ]
+    ],
+    "description": ""
   },
   "mp": {
     "prefix": "mp",
-    "description": "",
     "body": [
       "𝑷"
-    ]
+    ],
+    "description": ""
   },
   "mq": {
     "prefix": "mq",
-    "description": "",
     "body": [
       "𝑸"
-    ]
+    ],
+    "description": ""
   },
   "mr": {
     "prefix": "mr",
-    "description": "",
     "body": [
       "𝑹"
-    ]
+    ],
+    "description": ""
   },
   "ms": {
     "prefix": "ms",
-    "description": "",
     "body": [
       "𝑺"
-    ]
+    ],
+    "description": ""
   },
   "mu": {
     "prefix": "mu",
-    "description": "",
     "body": [
       "𝑼"
-    ]
+    ],
+    "description": ""
   },
   "mx": {
     "prefix": "mx",
-    "description": "",
     "body": [
       "𝑿"
-    ]
+    ],
+    "description": ""
   },
   "my": {
     "prefix": "my",
-    "description": "",
     "body": [
       "𝒀"
-    ]
+    ],
+    "description": ""
   },
   "mgl": {
     "prefix": "mgl",
-    "description": "",
     "body": [
       "𝜦"
-    ]
+    ],
+    "description": ""
   },
   "v0": {
     "prefix": "v0",
-    "description": "",
     "body": [
       "𝟎"
-    ]
+    ],
+    "description": ""
   },
   "va": {
     "prefix": "va",
-    "description": "",
     "body": [
       "𝒂"
-    ]
+    ],
+    "description": ""
   },
   "vb": {
     "prefix": "vb",
-    "description": "",
     "body": [
       "𝒃"
-    ]
+    ],
+    "description": ""
   },
   "vc": {
     "prefix": "vc",
-    "description": "",
     "body": [
       "𝒄"
-    ]
+    ],
+    "description": ""
   },
   "ve": {
     "prefix": "ve",
-    "description": "",
     "body": [
       "𝒆"
-    ]
+    ],
+    "description": ""
   },
   "vu": {
     "prefix": "vu",
-    "description": "",
     "body": [
       "𝒖"
-    ]
+    ],
+    "description": ""
   },
   "vx": {
     "prefix": "vx",
-    "description": "",
     "body": [
       "𝒙"
-    ]
+    ],
+    "description": ""
   },
   "vy": {
     "prefix": "vy",
-    "description": "",
     "body": [
       "𝒚"
-    ]
+    ],
+    "description": ""
   },
   "vz": {
     "prefix": "vz",
-    "description": "",
     "body": [
       "𝒛"
-    ]
+    ],
+    "description": ""
   },
   "vxax": {
     "prefix": "vxax",
-    "description": "",
     "body": [
       "𝒙^⊤ 𝑨 𝒙"
-    ]
+    ],
+    "description": ""
   },
   "vxt": {
     "prefix": "vxt",
-    "description": "",
     "body": [
       "𝒙^⊤"
-    ]
+    ],
+    "description": ""
   },
   "vxx": {
     "prefix": "vxx",
-    "description": "",
     "body": [
       "𝒙^⊤ 𝒙"
-    ]
+    ],
+    "description": ""
   },
   "vyy": {
     "prefix": "vyy",
-    "description": "",
     "body": [
       "𝒚^⊤ 𝒚"
-    ]
+    ],
+    "description": ""
   },
   "aeig": {
     "prefix": "aeig",
-    "description": "",
     "body": [
       "𝑨 - λ 𝑰"
-    ]
+    ],
+    "description": ""
   },
   "ata": {
     "prefix": "ata",
-    "description": "",
     "body": [
       "𝑨^⊤ 𝑨"
-    ]
+    ],
+    "description": ""
   },
   "aat": {
     "prefix": "aat",
-    "description": "",
     "body": [
       "𝑨 𝑨^⊤"
-    ]
+    ],
+    "description": ""
   },
   "maha": {
     "prefix": "aha",
-    "description": "",
     "body": [
       "𝑨^H 𝑨"
-    ]
+    ],
+    "description": ""
   },
   "v00": {
     "prefix": "v00",
-    "description": "",
     "body": [
       "vec(delim: \"[\", 0, 0)"
-    ]
+    ],
+    "description": ""
   },
   "vx12": {
     "prefix": "vx12",
-    "description": "",
     "body": [
       "vec(delim: \"[\", x_1, x_2)"
-    ]
+    ],
+    "description": ""
   },
   "vy12": {
     "prefix": "vy12",
-    "description": "",
     "body": [
       "vec(delim: \"[\", y_1, y_2)"
-    ]
+    ],
+    "description": ""
   },
   "inv": {
     "prefix": "inv",
-    "description": "",
     "body": [
       "^(-1)"
-    ]
+    ],
+    "description": ""
   },
   "tt": {
     "prefix": "tt",
-    "description": "",
     "body": [
       "^(⊤)"
-    ]
+    ],
+    "description": ""
   },
   "dt": {
     "prefix": "dt",
-    "description": "",
     "body": [
       "dd(t)"
-    ]
+    ],
+    "description": ""
   },
   "arr": {
     "prefix": "arr",
-    "description": "",
     "body": [
       "⇒"
-    ]
+    ],
+    "description": ""
   },
   "areq": {
     "prefix": "darr",
-    "description": "",
     "body": [
       "⇔"
-    ]
+    ],
+    "description": ""
   },
   "si0n": {
     "prefix": "si0n",
-    "description": "",
     "body": [
       "∑_(i=0)^(i=N)"
-    ]
+    ],
+    "description": ""
   },
   "si1n": {
     "prefix": "si1n",
-    "description": "",
     "body": [
       "∑_(i=1)^(i=N)"
-    ]
+    ],
+    "description": ""
   },
   "sk0n": {
     "prefix": "sk0n",
-    "description": "",
     "body": [
       "∑_(k=0)^(k=N)"
-    ]
+    ],
+    "description": ""
   },
   "sk1n": {
     "prefix": "sk1n",
-    "description": "",
     "body": [
       "∑_(k=1)^(k=N)"
-    ]
+    ],
+    "description": ""
   },
   "pi0n": {
     "prefix": "pi0n",
-    "description": "",
     "body": [
       "∏_(i=0)^(i=N)"
-    ]
+    ],
+    "description": ""
   },
   "pi1n": {
     "prefix": "pi1n",
-    "description": "",
     "body": [
       "∏_(i=1)^(i=N)"
-    ]
+    ],
+    "description": ""
   },
   "pk0n": {
     "prefix": "pk0n",
-    "description": "",
     "body": [
       "∏_(k=0)^(k=N)"
-    ]
+    ],
+    "description": ""
   },
   "pk1n": {
     "prefix": "pk1n",
-    "description": "",
     "body": [
       "∏_(k=1)^(k=N)"
-    ]
+    ],
+    "description": ""
   },
   "ork": {
     "prefix": "ork",
-    "description": "",
     "body": [
       "op(\"rank\")()"
-    ]
+    ],
+    "description": ""
   },
   "ovar": {
     "prefix": "ovar",
-    "description": "",
     "body": [
       "op(\"Var\")(X)"
-    ]
+    ],
+    "description": ""
   },
   "r2r": {
     "prefix": "r2r",
-    "description": "",
     "body": [
       "ℝ → ℝ"
-    ]
+    ],
+    "description": ""
   },
   "dnorm": {
     "prefix": "dnorm",
-    "description": "",
     "body": [
       "N(μ, σ^2)"
-    ]
+    ],
+    "description": ""
   },
   "iii": {
     "prefix": "iii",
-    "description": "",
     "body": [
       "∫_(-∞)^(∞)"
-    ]
+    ],
+    "description": ""
   },
   "i11": {
     "prefix": "i01",
-    "description": "",
     "body": [
       "∫_(-1)^1"
-    ]
+    ],
+    "description": ""
   },
   "i01": {
     "prefix": "i01",
-    "description": "",
     "body": [
       "∫_0^1"
-    ]
+    ],
+    "description": ""
   },
   "i0t": {
     "prefix": "i0t",
-    "description": "",
     "body": [
       "∫_0^t"
-    ]
+    ],
+    "description": ""
   },
   "iid": {
     "prefix": "iid",
-    "description": "",
     "body": [
       "limits(∼)^(\"i.i.d\")"
-    ]
+    ],
+    "description": ""
   },
   "rvxn": {
     "prefix": "rvxn",
-    "description": "",
     "body": [
       "X_1, …, X_n"
-    ]
+    ],
+    "description": ""
   },
   "rvxy": {
     "prefix": "rvxy",
-    "description": "",
     "body": [
       "$X$和$Y$"
-    ]
+    ],
+    "description": ""
   },
   "bib": {
     "prefix": "bib",
-    "description": "",
     "body": [
       "#bibliography(\"data/works.bib\", title: \"参考文献\")",
       ""
-    ]
+    ],
+    "description": ""
   },
   "ce": {
     "prefix": "ce",
@@ -751,5 +751,22 @@
       "#ce()",
       ""
     ]
+  },
+  "rxlsx-1739335146959": {
+    "prefix": "rxlsx",
+    "body": [
+      "#figure(",
+      "  xlsx-parser(",
+      "    read(\"data\", encoding: none),",
+      "    parse-table-style: false,",
+      "    parse-stroke: false,",
+      "    stroke: frame(rgb(\"000\")),",
+      "  ),",
+      "  caption: \"\",",
+      "  supplement: \"表\",",
+      "  kind: table,",
+      ")"
+    ],
+    "description": ""
   }
 }
