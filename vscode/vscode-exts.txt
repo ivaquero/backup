@@ -9,6 +9,8 @@ clover.md-table-editor
 dart-code.dart-code
 dart-code.flutter
 davidanson.vscode-markdownlint
+decodetalkers.neocmakelsp-vscode
+elijah-potter.harper
 evertjunior.mass-renamer
 fill-labs.dependi
 formulahendry.code-runner
@@ -36,7 +38,6 @@ ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
-ms-vscode.cmake-tools
 ms-vscode.live-server
 myriad-dreamin.tinymist
 njpwerner.autodocstring
@@ -49,6 +50,7 @@ rust-lang.rust-analyzer
 saoudrizwan.claude-dev
 tamasfe.even-better-toml
 timonwong.shellcheck
+tomjs.vscode-snippets-manager
 usernamehw.errorlens
 vadimcn.vscode-lldb
 vivaxy.vscode-conventional-commits
@@ -57,4 +59,3 @@ xiaohuohumax.format-files-by-ignores
 yutengjing.open-in-external-app
 yzhang.markdown-all-in-one
 zatkins-dev.doxdocgen-with-direction
-zjffun.snippetsmanager

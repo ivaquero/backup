@@ -214,7 +214,6 @@
   "notebook.consolidatedRunButton": true,
   "notebook.diff.ignoreOutputs": true,
   "notebook.formatOnSave.enabled": true,
-  "notebook.inlineValues": true,
   "notebook.lineNumbers": "on",
   "notebook.markup.fontSize": 18,
   "notebook.multiCursor.enabled": true,
