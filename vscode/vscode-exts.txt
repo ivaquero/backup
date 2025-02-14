@@ -31,7 +31,6 @@ litchi.plt-snippet
 llvm-vs-code-extensions.vscode-clangd
 marimo-team.vscode-marimo
 mathworks.language-matlab
-ms-python.debugpy
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
@@ -39,7 +38,6 @@ ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-vscode.live-server
 myriad-dreamin.tinymist
-njpwerner.autodocstring
 peterschmalfeldt.explorer-exclude
 pkief.material-icon-theme
 qcz.text-power-tools
