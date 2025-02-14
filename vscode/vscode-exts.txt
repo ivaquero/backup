@@ -29,7 +29,6 @@ julialang.language-julia
 kirozen.wordcounter
 litchi.plt-snippet
 llvm-vs-code-extensions.vscode-clangd
-ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
 mathworks.language-matlab
 ms-python.debugpy
