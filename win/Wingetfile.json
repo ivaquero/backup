@@ -1,16 +1,19 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2024-12-01T11:02:17.312-00:00",
+	"CreationDate" : "2025-02-14T19:27:08.636-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "OpenRocket.OpenRocket"
+					"PackageIdentifier" : "Nutstore.Nutstore"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+				},
+				{
+					"PackageIdentifier" : "Rakuten.Viber"
 				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour"
@@ -22,16 +25,13 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
-					"PackageIdentifier" : "Nutstore.Nutstore"
-				},
-				{
-					"PackageIdentifier" : "Rakuten.Viber"
-				},
-				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2005.x64"
+				},
+				{
+					"PackageIdentifier" : "Alibaba.AliWorkbench"
 				},
 				{
 					"PackageIdentifier" : "Insecure.Npcap"
@@ -70,6 +70,12 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
+					"PackageIdentifier" : "Baidu.BaiduNetdisk"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.OneDrive"
+				},
+				{
 					"PackageIdentifier" : "Espanso.Espanso"
 				},
 				{
@@ -99,6 +105,9 @@
 		{
 			"Packages" : 
 			[
+				{
+					"PackageIdentifier" : "XPFCPF4NZNRHZT"
+				},
 				{
 					"PackageIdentifier" : "9NBLGGH5R558"
 				}
