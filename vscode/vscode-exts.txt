@@ -6,8 +6,6 @@ ccagml.vscode-leetcode-problem-rating
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 clover.md-table-editor
-dart-code.dart-code
-dart-code.flutter
 davidanson.vscode-markdownlint
 decodetalkers.neocmakelsp-vscode
 elijah-potter.harper
