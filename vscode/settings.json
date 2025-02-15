@@ -269,7 +269,7 @@
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.codeActionsOnSave": {
       "source.fixAll": "never"
-    },
+    }
   },
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.allowedBlankLines": 1,

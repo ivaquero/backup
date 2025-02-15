@@ -24,3 +24,4 @@ if [[ "$(uname -sm)" == "Darwin arm64" ]]; then
 fi
 
 export VCPKG_ROOT="$HOME/vcpkg"
+export PATH=$PATH:$VCPKG_ROOT
