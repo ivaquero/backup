@@ -7,6 +7,7 @@ ccagml.vscode-leetcode-problem-rating
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 clover.md-table-editor
+codeium.codeium
 davidanson.vscode-markdownlint
 decodetalkers.neocmakelsp-vscode
 elijah-potter.harper
@@ -14,8 +15,6 @@ evertjunior.mass-renamer
 fill-labs.dependi
 formulahendry.code-runner
 foxundermoon.shell-format
-github.copilot
-github.copilot-chat
 golang.go
 hediet.vscode-drawio
 ho-oto.mathematical-symbols
