@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "liter-chinese",
+      "path": "summary/liter-chinese.md"
+    },
+    {
+      "basename": "教学-文献检索",
+      "path": "articles/教学-文献检索.pdf"
+    },
+    {
+      "basename": "C-CMake",
+      "path": "articles/C-CMake.pdf"
+    },
+    {
       "basename": "面试-中电科",
       "path": "logs/面试-中电科.md"
     },
