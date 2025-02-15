@@ -3492,6 +3492,20 @@ $("h1").each(function() {
 					<string>https://mamba.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://mesa.readthedocs.io/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-15T02:45:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Mesa</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mesa.readthedocs.io/stable/</string>
+				</dict>
+			</dict>
 			<key>https://moshi4.github.io/pyCirclize/</key>
 			<dict>
 				<key>date</key>
@@ -3955,20 +3969,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mesa.readthedocs.io/latest/</string>
-				</dict>
-			</dict>
-			<key>https://mesa.readthedocs.io/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-12T02:11:59Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Mesa</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://mesa.readthedocs.io/stable/</string>
 				</dict>
 			</dict>
 			<key>https://ml-explore.github.io/mlx/build/html/</key>
