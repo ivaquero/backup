@@ -288,12 +288,13 @@
   "conventionalCommits.showNewVersionNotes": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.resizeImages": null,
-  "hediet.vscode-drawio.theme": "Kennedy",
+  "hediet.vscode-drawio.theme": "kennedy",
   // shell
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "shellcheck.exclude": [
+    "SC1017",
     "SC1090",
     "SC2016",
     "SC2034",
