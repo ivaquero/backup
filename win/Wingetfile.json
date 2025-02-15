@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-02-14T19:27:08.636-00:00",
+	"CreationDate" : "2025-02-15T14:47:28.197-00:00",
 	"Sources" : 
 	[
 		{
@@ -71,6 +71,12 @@
 				},
 				{
 					"PackageIdentifier" : "Baidu.BaiduNetdisk"
+				},
+				{
+					"PackageIdentifier" : "kangfenmao.CherryStudio"
+				},
+				{
+					"PackageIdentifier" : "ByteDance.CapCut"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
