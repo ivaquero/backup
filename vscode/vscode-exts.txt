@@ -1,5 +1,6 @@
 alefragnani.bookmarks
 alpinebuster.vscode-latex-table-editor
+antfu.slidev
 bierner.markdown-mermaid
 biomejs.biome
 ccagml.vscode-leetcode-problem-rating
