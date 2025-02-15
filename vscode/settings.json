@@ -54,7 +54,7 @@
     "*.h": "cpp",
     "*.vimrc": "viml",
     "*.m": "matlab",
-    "docker-compose.yml": "yaml",
+    "docker-compose.yml": "yaml"
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -111,7 +111,7 @@
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
     "*.csv": "omegasheets.csv-default",
-    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.copilotmd": "vscode.markdown.preview.editor"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -251,10 +251,10 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[javascript][typescript]": {
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "javascript.suggest.autoImports": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
@@ -268,7 +268,7 @@
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "never",
+      "source.fixAll": "never"
     },
   },
   "evenBetterToml.formatter.alignComments": true,
@@ -298,7 +298,7 @@
     "SC1090",
     "SC2016",
     "SC2034",
-    "SC2154",
+    "SC2154"
   ],
   // unicode
   "mathematicalSymbols.enabledLanguages": [
@@ -443,7 +443,7 @@
   "wordcounter.simple_wordcount": false,
   // ui
   "material-icon-theme.files.associations": {
-    "*.m": "matlab",
+    "*.m": "matlab"
   },
   "color-picker-universal.languages": [
     "*",
@@ -500,9 +500,6 @@
   "julia.inlayHints.static.enabled": true,
   "julia.plots.path": "../../images",
   "julia.symbolCacheDownload": false,
-  // ai
-  "github.copilot.chat.edits.codesearch.enabled": true,
-  "github.copilot.chat.edits.temporalContext.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "harper-ls.fileDictPath": "${HOME}/Documents/GitHub/notes",
+  // others
+  "harper-ls.fileDictPath": "$HOME/Documents/GitHub/notes"
 }

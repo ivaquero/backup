@@ -23,5 +23,4 @@ if [[ "$(uname -sm)" == "Darwin arm64" ]]; then
     export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
 fi
 
-# Added by Windsurf
-export PATH="~/.codeium/windsurf/bin:$PATH"
+export VCPKG_ROOT="$HOME/vcpkg"
