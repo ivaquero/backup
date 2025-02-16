@@ -8,6 +8,7 @@ charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 clover.md-table-editor
 codeium.codeium
+czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 decodetalkers.neocmakelsp-vscode
 elijah-potter.harper
@@ -17,7 +18,6 @@ formulahendry.code-runner
 foxundermoon.shell-format
 golang.go
 hediet.vscode-drawio
-ho-oto.mathematical-symbols
 huacnlee.autocorrect
 james-yu.latex-workshop
 jeronimoekerdt.color-picker-universal
