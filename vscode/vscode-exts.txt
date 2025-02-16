@@ -11,7 +11,6 @@ codeium.codeium
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 decodetalkers.neocmakelsp-vscode
-elijah-potter.harper
 evertjunior.mass-renamer
 fill-labs.dependi
 formulahendry.code-runner
@@ -27,6 +26,7 @@ julialang.language-julia
 kirozen.wordcounter
 litchi.plt-snippet
 llvm-vs-code-extensions.vscode-clangd
+ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
 mathworks.language-matlab
 ms-python.python
