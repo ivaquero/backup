@@ -1,7 +1,5 @@
-autogen-core
 conda-tree
 ipykernel
-ollama
 touying
 uv
 xeus-cpp
