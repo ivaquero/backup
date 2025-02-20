@@ -182,7 +182,7 @@ $("h1").each(function() {
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
-				<date>2024-10-19T08:11:53Z</date>
+				<date>2025-02-20T06:29:56Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3649,7 +3649,7 @@ $("h1").each(function() {
 			<key>https://scikit-image.org/docs/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-27T05:56:42Z</date>
+				<date>2025-02-20T06:42:21Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
