@@ -1,5 +1,5 @@
 conda-tree
 openpyxl
-rvc3python
+roboticstoolbox-python
 transformers
 ultralytics
