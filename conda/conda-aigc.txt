@@ -3,6 +3,7 @@ aiosqlite
 anthropic
 argon2-cffi
 async-lru
+autogen-agentchat
 autogen-core
 conda-tree
 cryptography

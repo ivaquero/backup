@@ -122,67 +122,10 @@ $("h1").each(function() {
 					<string>Eigen</string>
 				</dict>
 			</dict>
-			<key>Flutter</key>
-			<dict>
-				<key>date</key>
-				<date>2025-01-05T14:59:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.flutter.dev/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>f</string>
-						<key>docsetName</key>
-						<string>Flutter</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.flutter.dev/</string>
-					</dict>
-					<key>name</key>
-					<string>Flutter</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>Flutter</string>
-				</dict>
-			</dict>
 			<key>Typst</key>
 			<dict>
 				<key>date</key>
-				<date>2025-02-20T06:29:56Z</date>
+				<date>2025-02-25T16:52:47Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -239,7 +182,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-24T02:21:59Z</date>
+				<date>2025-02-25T17:04:09Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -348,6 +291,120 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>slidev</string>
+				</dict>
+			</dict>
+			<key>transformers</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T17:12:46Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://huggingface.co/docs/huggingface_hub/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>hg</string>
+						<key>docsetName</key>
+						<string>transformers</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://huggingface.co/docs/huggingface_hub</string>
+					</dict>
+					<key>name</key>
+					<string>transformers</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>transformers</string>
+				</dict>
+			</dict>
+			<key>uv</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T16:59:44Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.astral.sh/uv/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>uv</string>
+						<key>docsetName</key>
+						<string>uv</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.astral.sh/uv/</string>
+					</dict>
+					<key>name</key>
+					<string>uv</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>uv</string>
 				</dict>
 			</dict>
 		</dict>
@@ -1035,6 +1092,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Faker</string>
+				</dict>
+			</dict>
+			<key>Flutter</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T16:49:54Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.flutter.dev/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>f</string>
+						<key>docsetName</key>
+						<string>Flutter</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.flutter.dev/</string>
+					</dict>
+					<key>name</key>
+					<string>Flutter</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>Flutter</string>
 				</dict>
 			</dict>
 			<key>Flux.jl</key>
@@ -3383,7 +3497,7 @@ $("h1").each(function() {
 			<key>https://aqtinstall.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-02-05T14:55:52Z</date>
+				<date>2025-02-25T16:51:31Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3537,7 +3651,7 @@ $("h1").each(function() {
 			<key>https://ocrmypdf.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-02-07T06:31:19Z</date>
+				<date>2025-02-25T16:51:31Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3546,6 +3660,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://ocrmypdf.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://petercorke.github.io/robotics-toolbox-python/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T16:55:41Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Robotics Toolbox for Python</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.org/</key>
@@ -4132,28 +4260,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T16:03:23Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Gary Miguel</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
-				</dict>
-			</dict>
 			<key>pytest</key>
 			<dict>
 				<key>date</key>
@@ -5227,6 +5333,28 @@ $("h1").each(function() {
 					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T17:01:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Gary Miguel</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
 			<key>jq</key>
 			<dict>
 				<key>date</key>
@@ -5658,6 +5786,8 @@ $("h1").each(function() {
 			<string>pdt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
 			<string>rq</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Robotics Toolbox for Python/Robotics Toolbox for Python.docset</key>
+			<string>ro:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/RocketPy/RocketPy.docset</key>
 			<string>rp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
