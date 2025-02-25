@@ -9,7 +9,6 @@ cryptography
 discord.py
 ollama
 openai
-pip
 psutil
 pycryptodome
 pyjwt

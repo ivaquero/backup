@@ -1,5 +1,4 @@
 conda-tree
 ipykernel
-touying
 uv
 xeus-cpp

@@ -1,131 +1,126 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-02-15T14:47:28.197-00:00",
-	"Sources" : 
-	[
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2025-02-25T21:09:42.932-00:00",
+	"Sources": [
 		{
-			"Packages" : 
-			[
+			"Packages": [
 				{
-					"PackageIdentifier" : "Nutstore.Nutstore"
+					"PackageIdentifier": "Nutstore.Nutstore"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+					"PackageIdentifier": "Microsoft.VCRedist.2010.x64"
 				},
 				{
-					"PackageIdentifier" : "Rakuten.Viber"
+					"PackageIdentifier": "Apple.Bonjour"
 				},
 				{
-					"PackageIdentifier" : "Apple.Bonjour"
+					"PackageIdentifier": "Giorgiotani.Peazip"
 				},
 				{
-					"PackageIdentifier" : "Giorgiotani.Peazip"
+					"PackageIdentifier": "Microsoft.VCRedist.2008.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
+					"PackageIdentifier": "Rakuten.Viber"
 				},
 				{
-					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
+					"PackageIdentifier": "Apple.AppleMobileDeviceSupport"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2005.x64"
+					"PackageIdentifier": "Microsoft.VCRedist.2005.x64"
 				},
 				{
-					"PackageIdentifier" : "Alibaba.AliWorkbench"
+					"PackageIdentifier": "Alibaba.AliWorkbench"
 				},
 				{
-					"PackageIdentifier" : "Insecure.Npcap"
+					"PackageIdentifier": "Insecure.Npcap"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
+					"PackageIdentifier": "Microsoft.VCRedist.2013.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2012.x86"
 				},
 				{
-					"PackageIdentifier" : "WinFsp.WinFsp"
+					"PackageIdentifier": "WinFsp.WinFsp"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2005.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2005.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2008.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2013.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Edge"
+					"PackageIdentifier": "Microsoft.Edge"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2010.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2012.x64"
 				},
 				{
-					"PackageIdentifier" : "Baidu.BaiduNetdisk"
+					"PackageIdentifier": "Baidu.BaiduNetdisk"
 				},
 				{
-					"PackageIdentifier" : "kangfenmao.CherryStudio"
+					"PackageIdentifier": "ByteDance.CapCut"
 				},
 				{
-					"PackageIdentifier" : "ByteDance.CapCut"
+					"PackageIdentifier": "Microsoft.OneDrive"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.OneDrive"
+					"PackageIdentifier": "Espanso.Espanso"
 				},
 				{
-					"PackageIdentifier" : "Espanso.Espanso"
+					"PackageIdentifier": "Canonical.Ubuntu.2204"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.AppInstaller"
+					"PackageIdentifier": "Microsoft.AppInstaller"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7"
+					"PackageIdentifier": "Microsoft.UI.Xaml.2.7"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8"
+					"PackageIdentifier": "Microsoft.UI.Xaml.2.8"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
+					"PackageIdentifier": "Microsoft.VCLibs.Desktop.14"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WSL"
+					"PackageIdentifier": "Microsoft.WSL"
 				}
 			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://cdn.winget.microsoft.com/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
+			"SourceDetails": {
+				"Argument": "https://cdn.winget.microsoft.com/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
 			}
 		},
 		{
-			"Packages" : 
-			[
+			"Packages": [
 				{
-					"PackageIdentifier" : "XPFCPF4NZNRHZT"
+					"PackageIdentifier": "XPFCPF4NZNRHZT"
 				},
 				{
-					"PackageIdentifier" : "9NBLGGH5R558"
+					"PackageIdentifier": "9NBLGGH5R558"
 				}
 			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
-				"Identifier" : "StoreEdgeFD",
-				"Name" : "msstore",
-				"Type" : "Microsoft.Rest"
+			"SourceDetails": {
+				"Argument": "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
+				"Identifier": "StoreEdgeFD",
+				"Name": "msstore",
+				"Type": "Microsoft.Rest"
 			}
 		}
 	],
-	"WinGetVersion" : "1.9.25200"
+	"WinGetVersion": "1.9.25200"
 }
