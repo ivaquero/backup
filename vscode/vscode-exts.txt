@@ -1,6 +1,5 @@
 alefragnani.bookmarks
 alpinebuster.vscode-latex-table-editor
-antfu.slidev
 bierner.markdown-mermaid
 biomejs.biome
 ccagml.vscode-leetcode-problem-rating
@@ -19,7 +18,6 @@ golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
-jeronimoekerdt.color-picker-universal
 jock.svg
 jota0222.multi-formatter
 julialang.language-julia
