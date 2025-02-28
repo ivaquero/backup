@@ -300,14 +300,6 @@
     "SC2034",
     "SC2154"
   ],
-  // unicode
-  "mathematicalSymbols.enabledLanguages": [
-    "plaintext",
-    "markdown",
-    "typst",
-    "python",
-    "julia"
-  ],
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"

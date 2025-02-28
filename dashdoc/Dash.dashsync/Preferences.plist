@@ -3522,6 +3522,34 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
+			<key>https://causalpy.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-26T14:47:15Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>CausalPy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://causalpy.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://docs.jax.dev/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-27T11:21:57Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>JAX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.jax.dev/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3564,6 +3592,20 @@ $("h1").each(function() {
 					<string>https://docs.pydantic.dev/latest/</string>
 				</dict>
 			</dict>
+			<key>https://docs.pytest.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T17:17:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pytest</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.pytest.org/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://docs.sympy.org/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3578,10 +3620,24 @@ $("h1").each(function() {
 					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
+			<key>https://docs.ultralytics.com/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-26T00:06:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Ultralytics YOLO Docs</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.ultralytics.com/</string>
+				</dict>
+			</dict>
 			<key>https://docs.xarray.dev/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-13T22:46:09Z</date>
+				<date>2025-02-27T11:21:32Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3618,6 +3674,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mesa.readthedocs.io/stable/</string>
+				</dict>
+			</dict>
+			<key>https://microsoft.github.io/autogen/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-26T15:59:06Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>autogen_core</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://microsoft.github.io/autogen/stable/</string>
 				</dict>
 			</dict>
 			<key>https://moshi4.github.io/pyCirclize/</key>
@@ -3830,6 +3900,20 @@ $("h1").each(function() {
 					<string>https://www.cvxpy.org/</string>
 				</dict>
 			</dict>
+			<key>https://www.pymc-marketing.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-28T11:53:32Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pymc-marketing</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pymc-marketing.io/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://www.pymc.io/</key>
 			<dict>
 				<key>date</key>
@@ -3931,20 +4015,6 @@ $("h1").each(function() {
 					<string>https://contextily.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
-			<key>https://docs.pytest.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T15:28:33Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pytest</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.pytest.org/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://docs.rocketpy.org/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3957,6 +4027,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.rocketpy.org/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://docs.ultralytics.com/zh/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-02-25T17:17:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Ultralytics YOLO Docs</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.ultralytics.com/zh/</string>
 				</dict>
 			</dict>
 			<key>https://faker.readthedocs.io/en/master/</key>
@@ -5753,7 +5837,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/CVXPY/CVXPY.docset</key>
 			<string>cp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/CausalPy/CausalPy.docset</key>
-			<string>cp</string>
+			<string>cl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/DoWhy/DoWhy.docset</key>
 			<string>dw</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Faker/Faker.docset</key>
@@ -5792,8 +5876,12 @@ $("h1").each(function() {
 			<string>rp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO Docs/Ultralytics YOLO Docs.docset</key>
+			<string>yl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/aqtinstall/aqtinstall.docset</key>
 			<string>aq</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/autogencore/autogen_core.docset</key>
+			<string>ag</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>
 			<string>bjx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/cartopy/cartopy.docset</key>
@@ -5814,6 +5902,8 @@ $("h1").each(function() {
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
 			<string>pcc:</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pymcmarketing/pymc-marketing.docset</key>
+			<string>pmm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pymoo Multiobjective Optimization in Python/pymoo: Multi-objective Optimization in Python.docset</key>
 			<string>moo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pytest/pytest.docset</key>

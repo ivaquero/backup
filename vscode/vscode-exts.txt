@@ -24,7 +24,6 @@ jock.svg
 jota0222.multi-formatter
 julialang.language-julia
 kirozen.wordcounter
-litchi.plt-snippet
 llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
@@ -36,7 +35,6 @@ ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-vscode.live-server
 myriad-dreamin.tinymist
-peterschmalfeldt.explorer-exclude
 pkief.material-icon-theme
 qcz.text-power-tools
 redhat.vscode-yaml
