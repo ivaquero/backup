@@ -1,6 +1,8 @@
 conda-tree
+eigen
 openpyxl
 pytorch
 roboticstoolbox-python
 transformers
 ultralytics
+xeus-cpp

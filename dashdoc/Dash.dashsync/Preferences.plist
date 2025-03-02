@@ -3760,20 +3760,6 @@ $("h1").each(function() {
 					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
 				</dict>
 			</dict>
-			<key>https://plotnine.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-06T04:47:04Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>plotnine</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://plotnine.org/</string>
-				</dict>
-			</dict>
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -4195,6 +4181,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://ml-explore.github.io/mlx/build/html/</string>
+				</dict>
+			</dict>
+			<key>https://plotnine.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-02T10:58:37Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://plotnine.org/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>

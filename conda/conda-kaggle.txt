@@ -6,10 +6,9 @@ dowhy
 ipykernel
 marimo
 mplfinance
-numba
 openpyxl
-plotnine
 pymc-marketing
+pymoo
 scikit-image
 tabulate
 uv
