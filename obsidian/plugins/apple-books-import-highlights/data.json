@@ -1,7 +1,0 @@
-{
-  "highlightsFolder": "ibooks-highlights",
-  "backup": false,
-  "importOnStart": false,
-  "highlightsSortingCriterion": "creationDateOldToNew",
-  "template": "Title:: 📕 {{{bookTitle}}}\nAuthor:: {{{bookAuthor}}}\nLink:: [Apple Books Link](ibooks://assetid/{{bookId}})\n\n## Annotations\n\nNumber of annotations:: {{annotations.length}}\n\n{{#each annotations}}\n----\n\n- 🎯 {{{highlight}}}\n- 📝 {{#if note}}{{{note}}}{{else}}N/A{{/if}}\n\n{{/each}}\n"
-}
