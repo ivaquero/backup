@@ -35,6 +35,7 @@ ms-vscode.live-server
 myriad-dreamin.tinymist
 pkief.material-icon-theme
 qcz.text-power-tools
+redhat.vscode-xml
 redhat.vscode-yaml
 reporting-cz.omegasheets-vscode
 rust-lang.rust-analyzer
