@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-02-26T11:29:41.475-00:00",
+	"CreationDate" : "2025-03-03T21:52:03.525-00:00",
 	"Sources" : 
 	[
 		{
@@ -11,9 +11,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
-				},
-				{
-					"PackageIdentifier" : "StirlingTools.StirlingPDF"
 				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour"
@@ -127,5 +124,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.9.25200"
+	"WinGetVersion" : "1.10.320"
 }
