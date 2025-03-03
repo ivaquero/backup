@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-03-03T22:26:57.966-00:00",
+	"CreationDate" : "2025-03-03T22:31:06.549-00:00",
 	"Sources" : 
 	[
 		{
@@ -71,6 +71,9 @@
 				},
 				{
 					"PackageIdentifier" : "Baidu.BaiduNetdisk"
+				},
+				{
+					"PackageIdentifier" : "Discord.Discord"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
