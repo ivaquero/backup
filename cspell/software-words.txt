@@ -1,10 +1,17 @@
+AIGC
 Bitwarden
 Cmder
 coreutils
 Espanso
 Logseq
+Micromamba
+Miniconda
+Miniforge
+Navicat
 Ollama
 Pixi
+Renamer
 rustup
 tlmgr
+typst
 wttr

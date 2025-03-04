@@ -436,7 +436,8 @@
   "cSpell.language": "en,fr,es,ru",
   "cSpell.ignoreRegExpList": [
     "/\\`[\\w\\s-\\.]+\\`/gi",
-    "/\\[[\\w\\s-]+\\]/gi"
+    "/\\[[\\w\\s-]+\\]/gi",
+    "/@[\\w-]+\\s/gi"
   ],
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
