@@ -6080,11 +6080,6 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-04-17T00:09:54Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Dart.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-01-05T14:18:21Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
 				<key>date</key>
@@ -6147,6 +6142,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-05-19T12:52:46Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-04T03:34:15Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTTP.xml</key>
 			<dict>
