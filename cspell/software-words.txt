@@ -1,0 +1,10 @@
+Bitwarden
+Cmder
+coreutils
+Espanso
+Logseq
+Ollama
+Pixi
+rustup
+tlmgr
+wttr

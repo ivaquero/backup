@@ -241,9 +241,9 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "[javascript][typescript]": {
+  "[javascript][typescript][javascriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
   "javascript.suggest.autoImports": true,
@@ -428,7 +428,16 @@
     "*.m": "matlab"
   },
   "redhat.telemetry.enabled": false,
-  // grammar
+  // spell & grammar
+  "cSpell.enabledFileTypes": {
+    "*": false,
+    "typst,markdown,txt": true
+  },
+  "cSpell.language": "en,fr,es,ru",
+  "cSpell.ignoreRegExpList": [
+    "/\\`[\\w\\s-\\.]+\\`/gi",
+    "/\\[[\\w\\s-]+\\]/gi"
+  ],
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
     "dictionary": "workspaceFolderExternalFile",

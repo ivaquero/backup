@@ -40,6 +40,8 @@ redhat.vscode-yaml
 reporting-cz.omegasheets-vscode
 rust-lang.rust-analyzer
 saoudrizwan.claude-dev
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-french
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
