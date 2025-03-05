@@ -74,7 +74,6 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.suggest.enabled": true,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -95,23 +94,12 @@
         "chcp 65001"
       ],
       "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "path": [
-        "C:\\Program Files\\Git\\git-bash.exe"
-      ],
-      "icon": "terminal-bash",
-      "args": [
-        "-l"
-      ]
     }
   },
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.editor.highlightModifiedTabs": true,
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.perEditorGroup": true,
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
@@ -126,9 +114,6 @@
   // scm
   "scm.alwaysShowRepositories": true,
   "scm.alwaysShowActions": true,
-  "scm.diffDecorationsGutterPattern": {
-    "added": true
-  },
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
@@ -138,11 +123,6 @@
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
-  "diffEditor.maxComputationTime": 0,
-  // error
-  "errorLens.statusBarColorsEnabled": true,
-  "errorLens.statusBarIconsEnabled": true,
-  "errorLens.statusBarMessageEnabled": true,
   // markdown
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
@@ -168,7 +148,6 @@
   "markdown.preview.markEditorSelection": true,
   "markdown.preview.openMarkdownLinks": "inEditor",
   "markdown.preview.scrollPreviewWithEditor": true,
-  "markdown.preview.typographer": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
