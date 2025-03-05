@@ -436,26 +436,10 @@
     "*": false,
     "typst,markdown,txt": true
   },
-  "cSpell.language": "en,fr,es,ru",
+  "cSpell.language": "en,fr,es,ru,uk",
   "cSpell.ignoreRegExpList": [
     "[\"`'].*[\"`']",
     "^```\\w+.\\n[\\w\\s\\n(){},]+\\n```",
-  ],
-  "cSpell.dictionaries": [
-    "custom-words",
-    "software-words",
-  ],
-  "cSpell.dictionaryDefinitions": [
-    {
-      "name": "custom-words",
-      "path": "${workspaceFolder}/../backup/cspell/custom-words.txt",
-      "addWords": true
-    },
-    {
-      "name": "software-words",
-      "path": "${workspaceFolder}/../backup/cspell/software-words.txt",
-      "addWords": true
-    },
   ],
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
@@ -517,5 +501,4 @@
   "marimo.enableToken": true,
   "marimo.marimoPath": "marimo",
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
-  "cSpell.experimental.enableRegexpView": true,
 }
