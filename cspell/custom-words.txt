@@ -1,4 +1,11 @@
+Atrous
+dataframes
+deconvolution
+downsample
 ivaquero
 lcpr
 Misaka
 scibook
+Sobel
+upsample
+zhihu

@@ -56,6 +56,13 @@
     "*.m": "matlab",
     "docker-compose.yml": "yaml"
   },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.svn": true,
+    "**/Thumbs.db": true,
+  },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
   "files.eol": "\n",
@@ -166,16 +173,12 @@
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
   "markdownlint.config": {
-    "MD001": false,
     "MD003": false,
-    "MD010": false,
     "MD024": false,
     "MD025": false,
     "MD026": false,
     "MD029": false,
     "MD033": false,
-    "MD034": false,
-    "MD036": false,
     "MD037": false,
     "MD041": false,
     "MD042": false
@@ -381,7 +384,6 @@
   "clangd.fallbackFlags": [
     "-std=c++11",
     "-I${workspaceFolder}/src/includes",
-    "-I/opt/homebrew/include"
   ],
   "clangd.onConfigChanged": "restart",
   // doxygen
@@ -427,6 +429,7 @@
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
   },
+  "svg.preview.background": "black",
   "redhat.telemetry.enabled": false,
   // spell & grammar
   "cSpell.enabledFileTypes": {
@@ -435,9 +438,24 @@
   },
   "cSpell.language": "en,fr,es,ru",
   "cSpell.ignoreRegExpList": [
-    "/\\`[\\w\\s-\\.]+\\`/gi",
-    "/\\[[\\w\\s-]+\\]/gi",
-    "/@[\\w-]+\\s/gi"
+    "[\"`'].*[\"`']",
+    "^```\\w+.\\n[\\w\\s\\n(){},]+\\n```",
+  ],
+  "cSpell.dictionaries": [
+    "custom-words",
+    "software-words",
+  ],
+  "cSpell.dictionaryDefinitions": [
+    {
+      "name": "custom-words",
+      "path": "${workspaceFolder}/../backup/cspell/custom-words.txt",
+      "addWords": true
+    },
+    {
+      "name": "software-words",
+      "path": "${workspaceFolder}/../backup/cspell/software-words.txt",
+      "addWords": true
+    },
   ],
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
@@ -456,6 +474,17 @@
     "\\cite[]{}": "dummy"
   },
   "ltex.additionalRules.enablePickyRules": true,
+  // julia
+  // "[julia]": {
+  //   "editor.defaultFormatter": "julialang.language-julia"
+  // },
+  // "julia.deleteJuliaCovFiles": true,
+  // "julia.enableCrashReporter": false,
+  // "julia.environmentPath": "${workspaceFolder}",
+  // "julia.execution.codeInREPL": true,
+  // "julia.inlayHints.static.enabled": true,
+  // "julia.plots.path": "${workspaceFolder}/images",
+  // "julia.symbolCacheDownload": false,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
@@ -484,26 +513,9 @@
   // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.showFeatureNotAvailableError": false,
-  "MATLAB.telemetry": false,
-  "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt",
-    "language-julia.interrupt"
-  ],
   // marimo
   "marimo.enableToken": true,
   "marimo.marimoPath": "marimo",
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
-  // julia
-  "[julia]": {
-    "editor.defaultFormatter": "julialang.language-julia"
-  },
-  "julia.deleteJuliaCovFiles": true,
-  "julia.enableCrashReporter": false,
-  "julia.enableTelemetry": false,
-  "julia.environmentPath": "${workspaceFolder}",
-  "julia.execution.codeInREPL": true,
-  "julia.execution.saveOnEval": true,
-  "julia.inlayHints.static.enabled": true,
-  "julia.plots.path": "../../images",
-  "julia.symbolCacheDownload": false,
+  "cSpell.experimental.enableRegexpView": true,
 }

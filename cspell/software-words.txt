@@ -4,6 +4,7 @@ Cmder
 coreutils
 Espanso
 Logseq
+Mambaforge
 Micromamba
 Miniconda
 Miniforge
