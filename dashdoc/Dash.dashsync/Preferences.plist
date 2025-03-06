@@ -3522,20 +3522,6 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
-			<key>https://causalpy.readthedocs.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-26T14:47:15Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>CausalPy</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://causalpy.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://docs.jax.dev/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3651,7 +3637,7 @@ $("h1").each(function() {
 			<key>https://lets-plot.org/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-03-01T06:01:31Z</date>
+				<date>2025-03-06T01:00:31Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3660,20 +3646,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://lets-plot.org/</string>
-				</dict>
-			</dict>
-			<key>https://mamba.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-11T10:25:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>mamba</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://mamba.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://mesa.readthedocs.io/stable/</key>
@@ -3900,20 +3872,6 @@ $("h1").each(function() {
 					<string>https://www.cvxpy.org/</string>
 				</dict>
 			</dict>
-			<key>https://www.pymc-marketing.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-28T11:53:32Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pymc-marketing</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://www.pymc-marketing.io/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://www.pymc.io/</key>
 			<dict>
 				<key>date</key>
@@ -3926,20 +3884,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.pymc.io/</string>
-				</dict>
-			</dict>
-			<key>https://www.pymc.io/projects/bart/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-23T17:53:25Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PyMC-BART</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://www.pymc.io/projects/bart/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://www.pywhy.org/dowhy/v0.11.1/</key>
@@ -3999,6 +3943,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://causalpy.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://causalpy.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-05T17:24:30Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>CausalPy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://causalpy.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://contextily.readthedocs.io/en/latest/</key>
@@ -4141,6 +4099,20 @@ $("h1").each(function() {
 					<string>https://koaning.github.io/scikit-lego/</string>
 				</dict>
 			</dict>
+			<key>https://mamba.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-05T17:34:57Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>mamba</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mamba.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://mesa.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -4265,6 +4237,34 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.pydy.org/</string>
+				</dict>
+			</dict>
+			<key>https://www.pymc-marketing.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-05T17:19:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pymc-marketing</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pymc-marketing.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://www.pymc.io/projects/bart/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-05T17:20:46Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyMC-BART</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pymc.io/projects/bart/en/latest/</string>
 				</dict>
 			</dict>
 		</dict>
@@ -6146,7 +6146,7 @@ $("h1").each(function() {
 			<key>http://kapeli.com/feeds/Dart.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2025-03-04T03:34:15Z</date>
+				<date>2025-03-05T17:19:34Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTTP.xml</key>
 			<dict>
