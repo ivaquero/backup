@@ -296,7 +296,7 @@ $("h1").each(function() {
 			<key>uv</key>
 			<dict>
 				<key>date</key>
-				<date>2025-02-25T16:59:44Z</date>
+				<date>2025-03-07T06:38:24Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3763,7 +3763,7 @@ $("h1").each(function() {
 			<key>https://python.arviz.org/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-09-28T23:39:37Z</date>
+				<date>2025-03-07T06:50:22Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
