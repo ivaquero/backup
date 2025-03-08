@@ -3676,20 +3676,6 @@ $("h1").each(function() {
 					<string>https://microsoft.github.io/autogen/stable/</string>
 				</dict>
 			</dict>
-			<key>https://moshi4.github.io/pyCirclize/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T15:54:50Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pyCirclize</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://moshi4.github.io/pyCirclize/</string>
-				</dict>
-			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3702,20 +3688,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://networkx.org/documentation/stable/</string>
-				</dict>
-			</dict>
-			<key>https://ocrmypdf.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-25T16:51:31Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>ocrmypdf</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://ocrmypdf.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://petercorke.github.io/robotics-toolbox-python/</key>
@@ -3735,7 +3707,7 @@ $("h1").each(function() {
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-01-09T10:53:45Z</date>
+				<date>2025-03-08T02:09:39Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -4153,6 +4125,34 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://ml-explore.github.io/mlx/build/html/</string>
+				</dict>
+			</dict>
+			<key>https://moshi4.github.io/pyCirclize/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-08T02:05:21Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pyCirclize</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://moshi4.github.io/pyCirclize/</string>
+				</dict>
+			</dict>
+			<key>https://ocrmypdf.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-08T02:04:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>ocrmypdf</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://ocrmypdf.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.org/</key>
@@ -6075,25 +6075,10 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:48:22Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/CSS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-17T00:09:54Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2024-12-11T15:53:53Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/HTML.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-15T10:08:23Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/JavaScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-05T17:58:38Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
 			<dict>
@@ -6143,15 +6128,30 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-05-19T12:52:46Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/CSS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-08T02:03:46Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Dart.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2025-03-05T17:19:34Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/HTML.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-08T02:03:53Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/HTTP.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2024-04-18T15:52:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/JavaScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-08T02:03:51Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/LaTeX.xml</key>
 			<dict>
