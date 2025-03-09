@@ -2,3 +2,15 @@ collection-latex
 collection-latexrecommended
 collection-metapost
 collection-xetex
+adjustbox
+csquotes
+enumitem
+fontawesome5
+makecell
+multirow
+tcolorbox
+tikzfill
+titlesec
+worldflags
+wrapfig
+xecjk
