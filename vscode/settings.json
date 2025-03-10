@@ -124,10 +124,6 @@
   // markdown
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "multiFormatter.formatterList": [
-      "yzhang.markdown-all-in-one",
-      "DavidAnson.vscode-markdownlint"
-    ],
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "always"
     }
@@ -408,15 +404,24 @@
   "svg.preview.background": "black",
   "redhat.telemetry.enabled": false,
   // spell & grammar
-  "cSpell.enabledFileTypes": {
-    "*": false,
-    "typst,markdown,txt": true
-  },
-  "cSpell.language": "en,fr,es,ru,uk",
-  "cSpell.ignoreRegExpList": [
-    "[\"`'].*[\"`']",
-    "^```\\w+.\\n[\\w\\s\\n(){},]+\\n```",
+  "spellright.configurationScope": "user",
+  "spellright.language": [
+    "en",
+    "es",
+    "fr",
+    "pt"
   ],
+  "spellright.ignoreRegExpsByClass": {
+    "markdown": [
+      "/\\$.+\\$/g",
+      "/\\$\\$.+\\$\\$/g"
+    ],
+  },
+  "spellright.spellContextByClass": {
+    "latex": "body",
+    "cpp": "comments",
+    "python": "strings"
+  },
   "ltex.completionEnabled": true,
   "ltex.configurationTarget": {
     "dictionary": "workspaceFolderExternalFile",

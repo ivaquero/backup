@@ -1,5 +1,6 @@
 alefragnani.bookmarks
 alpinebuster.vscode-latex-table-editor
+ban.spellright
 bierner.markdown-mermaid
 biomejs.biome
 ccagml.vscode-leetcode-problem-rating
@@ -19,7 +20,6 @@ hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
 jock.svg
-jota0222.multi-formatter
 julialang.language-julia
 kirozen.wordcounter
 llvm-vs-code-extensions.vscode-clangd
@@ -40,8 +40,6 @@ redhat.vscode-yaml
 reporting-cz.omegasheets-vscode
 rust-lang.rust-analyzer
 saoudrizwan.claude-dev
-streetsidesoftware.code-spell-checker
-streetsidesoftware.code-spell-checker-french
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
