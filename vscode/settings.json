@@ -425,7 +425,9 @@
   "spellright.ignoreRegExpsByClass": {
     "markdown": [
       "/\\$.+\\$/g",
-      "/\\$\\$.+\\$\\$/g"
+      "/\\$\\$.+\\$\\$/g",
+      "/\\[.+\\]/g",
+      "/@[\\w\\d]+\\s/g",
     ],
   },
   "spellright.spellContextByClass": {
