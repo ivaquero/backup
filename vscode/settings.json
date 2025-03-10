@@ -405,6 +405,17 @@
   "redhat.telemetry.enabled": false,
   // spell & grammar
   "spellright.configurationScope": "user",
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext",
+    "typst"
+  ],
+  "spellright.parserByClass": {
+    "typst": {
+      "parser": "markdown"
+    }
+  },
   "spellright.language": [
     "en",
     "es",
@@ -439,17 +450,6 @@
     "\\cite[]{}": "dummy"
   },
   "ltex.additionalRules.enablePickyRules": true,
-  // julia
-  // "[julia]": {
-  //   "editor.defaultFormatter": "julialang.language-julia"
-  // },
-  // "julia.deleteJuliaCovFiles": true,
-  // "julia.enableCrashReporter": false,
-  // "julia.environmentPath": "${workspaceFolder}",
-  // "julia.execution.codeInREPL": true,
-  // "julia.inlayHints.static.enabled": true,
-  // "julia.plots.path": "${workspaceFolder}/images",
-  // "julia.symbolCacheDownload": false,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",
@@ -482,4 +482,5 @@
   "marimo.enableToken": true,
   "marimo.marimoPath": "marimo",
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "window.newWindowProfile": "Default",
 }

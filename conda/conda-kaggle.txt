@@ -13,5 +13,4 @@ pytest
 scikit-image
 seaborn
 tabulate
-uv
 yfinance

@@ -12,7 +12,6 @@ czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 decodetalkers.neocmakelsp-vscode
 evertjunior.mass-renamer
-fill-labs.dependi
 formulahendry.code-runner
 foxundermoon.shell-format
 golang.go
@@ -20,7 +19,6 @@ hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
 jock.svg
-julialang.language-julia
 kirozen.wordcounter
 llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
@@ -47,7 +45,6 @@ usernamehw.errorlens
 vadimcn.vscode-lldb
 vivaxy.vscode-conventional-commits
 wangqvq.easy-pytorch
-xiaohuohumax.format-files-by-ignores
 yutengjing.open-in-external-app
 yzhang.markdown-all-in-one
 zatkins-dev.doxdocgen-with-direction
