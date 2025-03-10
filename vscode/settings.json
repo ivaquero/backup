@@ -2,6 +2,7 @@
   "window.nativeTabs": true,
   "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "all",
+  "extensions.autoUpdate": false,
   "extensions.ignoreRecommendations": true,
   // security
   "security.workspace.trust.untrustedFiles": "open",
@@ -392,11 +393,6 @@
   // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
-  "wordcounter.side.left": [
-    "word",
-    "line"
-  ],
-  "wordcounter.simple_wordcount": false,
   // ui
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
@@ -484,5 +480,4 @@
   "marimo.enableToken": true,
   "marimo.marimoPath": "marimo",
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
-  "window.newWindowProfile": "Default",
 }
