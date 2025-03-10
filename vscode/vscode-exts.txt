@@ -5,6 +5,7 @@ ban.spellright
 bierner.markdown-mermaid
 biomejs.biome
 ccagml.vscode-leetcode-problem-rating
+chanhx.crabviz
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 codeium.codeium
