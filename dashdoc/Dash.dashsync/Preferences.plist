@@ -6153,6 +6153,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2025-03-08T02:03:51Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/Julia.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-11T14:38:58Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/LaTeX.xml</key>
 			<dict>
 				<key>date</key>

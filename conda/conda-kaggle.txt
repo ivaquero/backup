@@ -7,9 +7,7 @@ manim
 marimo
 mplfinance
 openpyxl
-pydantic
 pymoo
-pytest
 scikit-image
 seaborn
 tabulate
