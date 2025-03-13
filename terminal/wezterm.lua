@@ -19,6 +19,22 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 		args = { "wsl.exe", "--cd", "/home/" },
 	})
 	default_prog = { "powershell.exe" }
+
+	wezterm.on("gui-startup", function(cmd)
+		local tab, left_top_pane, window = wezterm.mux.spawn_window(cmd or {})
+
+		local right_top_pane = left_top_pane:split({
+			direction = "Right",
+			size = 0.40,
+		})
+
+		local left_bottom_pane = left_top_pane:split({
+			direction = "Bottom",
+			size = 0.60,
+		})
+
+		window:gui_window():maximize()
+	end)
 elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
 	table.insert(launch_menu, {
 		label = "Bash",
@@ -31,6 +47,25 @@ else
 		args = { "zsh", "-l" },
 	})
 	default_prog = { "zsh", "-l" }
+
+	wezterm.on("gui-startup", function(cmd)
+		local tab, left_top_pane, window = wezterm.mux.spawn_window(cmd or {})
+
+		local right_top_pane = left_top_pane:split({
+			direction = "Right",
+			size = 0.40,
+		})
+
+		local left_bottom_pane = left_top_pane:split({
+			direction = "Bottom",
+			size = 0.60,
+		})
+
+		left_top_pane:send_text("r\n")
+		left_bottom_pane:send_text("\nz backup\nc\nb\n")
+		right_top_pane:send_text("k\n")
+		window:gui_window():maximize()
+	end)
 end
 
 -- Title
@@ -54,25 +89,6 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 end)
 
 -- Startup
-wezterm.on("gui-startup", function(cmd)
-	local tab, left_top_pane, window = wezterm.mux.spawn_window(cmd or {})
-
-	local right_top_pane = left_top_pane:split({
-		direction = "Right",
-		size = 0.40,
-	})
-
-	local left_bottom_pane = left_top_pane:split({
-		direction = "Bottom",
-		size = 0.60,
-	})
-
-	left_top_pane:send_text("b\n")
-	left_bottom_pane:send_text("\nz backup\nc\nb\n")
-	right_top_pane:send_text("k\n")
-	window:gui_window():maximize()
-end)
-
 local config = {
 	-- Basic
 	check_for_updates = false,
