@@ -3638,7 +3638,7 @@ $("h1").each(function() {
 			<key>https://docs.pytest.org/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-02-25T17:17:31Z</date>
+				<date>2025-03-14T01:26:26Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -6151,6 +6151,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-12-11T15:53:53Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/JavaScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-14T00:26:55Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
 			<dict>
 				<key>date</key>
@@ -6218,11 +6223,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-04-18T15:52:05Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/JavaScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-08T02:03:51Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Julia.xml</key>
 			<dict>

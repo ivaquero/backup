@@ -1,4 +1,6 @@
 #!/bin/bash /bin/zsh
+# Refer to https://macos-defaults.com/
+
 # Keep Alive Root
 while true; do
     sudo -n true
@@ -10,11 +12,11 @@ printf "[System Preferences]: Starting\n"
 
 # Set computer name (as done via System Preferences → Sharing)
 printf "🔧 Set Computer Name"
-read computer_name
-sudo scutil --set ComputerName $computer_name
+read -r computer_name
+sudo scutil --set ComputerName "$computer_name"
 printf "🔧 Set Local Hostname"
-read host_name
-sudo scutil --set HostName $host_name
+read -r host_name
+sudo scutil --set HostName "$host_name"
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we're about to change
@@ -28,58 +30,27 @@ printf "[System Preferences]: Note that some of these changes require a logout/r
 ##########################################
 
 printf "⚙️ Configure Dock...\n"
-# Enable highlight hover effect for the grid view of a stack
-defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
-# Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+# Position (default value: bottom)
+defaults write com.apple.dock "orientation" -string "right" && killall Dock
 
-# Change minimize/maximize window effect
-defaults write com.apple.dock mineffect -string "genie"
+# Icon size (default value: 48)
+defaults write com.apple.dock "tilesize" -int "36" && killall Dock
 
-# Minimize windows into their application's icon
-defaults write com.apple.dock minimize-to-application -bool true
+# Autohide (default value: false)
+defaults write com.apple.dock "autohide" -bool "false" && killall Dock
 
-# Enable spring loading for all Dock items
-defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+# Show recents (default value: true)
+defaults write com.apple.dock "show-recents" -bool "false" && killall Dock
 
-# Don't show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool false
+# Minimize animation effect (default value: genie)
+defaults write com.apple.dock "mineffect" -string "genie" && killall Dock
 
-# Show only open applications in the Dock
-defaults write com.apple.dock static-only -bool true
+# Scroll to Exposé app (default value: false)
+defaults write com.apple.dock "scroll-to-open" -bool "false" && killall Dock
 
-# Don't animate opening applications from the Dock
-defaults write com.apple.dock launchanim -bool false
-
-# Automatically hide and show the Dock
-defaults write com.apple.dock autohide -bool false
-
-# Make Dock icons of hidden applications translucent
-defaults write com.apple.dock showhidden -bool true
-
-# Don't show recent applications in Dock
-defaults write com.apple.dock show-recents -bool false
-
-# Remove the auto-hiding Dock delay
-defaults write com.apple.dock autohide-delay -float 0
-
-# Remove the animation when hiding/showing the Dock
-defaults write com.apple.dock autohide-time-modifier -float 0
-
-##########################################
-# Dashboard
-##########################################
-
-printf "⚙️ Configure Dashboard...\n"
-# Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -bool true
-
-# Don't show Dashboard as a Space
-defaults write com.apple.dock dashboard-in-overlay -bool true
-
-# Don't automatically rearrange spaces based on most recent use
-defaults write com.apple.dock mru-spaces -bool false
+# Spring loading for Dock items (default value: false)
+defaults write com.apple.dock "enable-spring-load-actions-on-all-items" -bool "false" && killall Dock
 
 ##########################################
 # Hot Corners
@@ -100,189 +71,261 @@ printf "⚙️ Configure Hot Corners...\n"
 # 13: Lock Screen
 
 # Top left screen corner → DISABLED
-# defaults read com.apple.dock wvous-tl-corner -int 1
-# defaults read com.apple.dock wvous-tl-modifier -int 0
+defaults read com.apple.dock wvous-tl-corner -int 0
+defaults read com.apple.dock wvous-tl-modifier -int 0
 
-# # Top right screen corner → Mission Control Centre
-# defaults read com.apple.dock wvous-tr-corner -int 2
-# defaults read com.apple.dock wvous-tr-modifier -int 0
+# Top right screen corner → Mission Control
+defaults read com.apple.dock wvous-tr-corner -int 2
+defaults read com.apple.dock wvous-tr-modifier -int 0
 
 # # Bottom left screen corner → Launchpad
-# defaults read com.apple.dock wvous-bl-corner -int 11
-# defaults read com.apple.dock wvous-bl-modifier -int 0
+defaults read com.apple.dock wvous-bl-corner -int 11
+defaults read com.apple.dock wvous-bl-modifier -int 0
 
 # # Bottom right screen corner → Mission Control
-# defaults read com.apple.dock wvous-br-corner -int 2
-# defaults read com.apple.dock wvous-br-modifier -int 0
+defaults read com.apple.dock wvous-br-corner -int 2
+defaults read com.apple.dock wvous-br-modifier -int 0
 
-##########################################
+##########################################################
 # Finder
-##########################################
+##########################################################
 
-printf "⚙️ Configure Finder...\n"
-# allow quitting via ⌘ + Q; doing so will also hide desktop icons
-defaults write com.apple.finder QuitMenuItem -bool true
+# Quit (default value: false)
+defaults write com.apple.finder "QuitMenuItem" -bool "false" && killall Finder
 
-# disable window animations and Get Info animations
-defaults write com.apple.finder DisableAllAnimations -bool true
+# Show extensions (default value: false)
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true" && killall Finder
 
-# Show icons for hard drives, servers, and removable media on the desktop
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+# Show hidden files (default value: false)
+defaults write com.apple.finder "AppleShowAllFiles" -bool "false" && killall Finder
 
-# Don't show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool false
+# Path bar (default value: false)
+defaults write com.apple.finder "ShowPathbar" -bool "false" && killall Finder
 
-# Show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Default view style (default value: icnv)
+defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv" && killall Finder
 
-# Show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+# Keep folders on top (default value: false)
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true" && killall Finder
 
-# Don't show path bar
-defaults write com.apple.finder ShowPathbar -bool false
+# Open folders destination (default value: true)
+defaults write com.apple.finder "FinderSpawnTab" -bool "true" && killall Finder
 
-# Don't display full POSIX path as Finder window title
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
+# Default search scope (default value: SCev)
+defaults write com.apple.finder "FXDefaultSearchScope" -string "SCev" && killall Finder
 
-# Keep folders on top when sorting by name
-defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# Empty bin items after 30 days (default value: false)
+defaults write com.apple.finder "FXRemoveOldTrashItems" -bool "true" && killall Finder
 
-# Use list view in all Finder windows by default
-# Four-letter codes for the other view modes: `icnv`, `glyv`, `Nlsv`
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+# Changing file extension warning (default value: true)
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false" && killall Finder
 
-# Disable the warning before emptying the Trash
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
+# Title bar icons (default value: false)
+defaults write com.apple.universalaccess "showWindowTitlebarIcons" -bool "false" && killall Finder
 
-# When performing a search, search the current folder by default
-defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+# Toolbar title rollover delay (default value: 0.5)
+defaults write NSGlobalDomain "NSToolbarTitleViewRolloverDelay" -float "0" && killall Finder
 
-# Disable the warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# Sidebar icon size (default value: 2)
+defaults write NSGlobalDomain "NSTableViewDefaultSizeMode" -int "2" && killall Finder
 
-# Enable spring loading for directories
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
+##########################################################
+# Desktop
+##########################################################
 
-# Remove the spring loading delay for directories
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+# Keep folders on top (default value: false)
+defaults write com.apple.finder "_FXSortFoldersFirstOnDesktop" -bool "true" && killall Finder
 
-# Avoid creating .DS_Store files on network or USB volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+# Show all icons (default value: true)
+defaults write com.apple.finder "CreateDesktop" -bool "true" && killall Finder
 
-# Disable disk image verification
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+# Show hard disks on desktop (default value: false)
+defaults write com.apple.finder "ShowHardDrivesOnDesktop" -bool "false" && killall Finder
 
-# Don't automatically open a new Finder window when a volume is mounted
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool false
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool false
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool false
+# Show external disks (default value: true)
+defaults write com.apple.finder "ShowExternalHardDrivesOnDesktop" -bool "true" && killall Finder
 
-# Expand the following File Info panes:
-# "General", "Open with", and "Sharing & Permissions"
-defaults write com.apple.finder FXInfoPanesExpanded -dict \
-    General -bool true \
-    OpenWith -bool true \
-    Privileges -bool true
+# Show removable media (default value: true)
+defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "true" && killall Finder
 
-# Set Tag Names
-defaults write com.apple.finder FavoriteTagNames -array "" "TODO" "WIP" "DONE"
+# Show connected servers (default value: false)
+defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true" && killall Finder
 
-##########################################
-# Input
-##########################################
+##########################################################
+# Menu Bar
+##########################################################
 
-printf "⚙️ Configure Input...\n"
-# Set language and text formats
-# Note: if you're in the US, replace `EUR` with `USD`, `Centimeters` with
-# `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en-US" "en"
-defaults write NSGlobalDomain AppleLocale -string "zh_CN@currency=CN¥"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Metric"
-defaults write NSGlobalDomain AppleTemperatureUnit -string "Celsius"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+# Flash clock time separators (default value: false)
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "false" && killall SystemUIServer
 
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# Digital clock format
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm\""
 
-# Disable automatic period substitution as it's annoying when typing code
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+##########################################################
+# Mouse
+##########################################################
 
-# Disable smart dashes as they're annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# Enable mouse acceleration (default value: false)
+defaults write NSGlobalDomain com.apple.mouse.linear -bool "false"
 
-# Disable automatic capitalization as it's annoying when typing code
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+# Set movement speed of the mouse cursor (default value: 1.0)
+defaults write NSGlobalDomain com.apple.mouse.scaling -float "1"
 
-##########################################
-# Energy
-##########################################
+# Focus Follows Mouse (default value: false)
+defaults write com.apple.Terminal "FocusFollowsMouse" -bool "false" && killall Terminal
 
-printf "⚙️ Configure Energy...\n"
-# Enable lid wakeup
-sudo pmset -a lidwake 1
+##########################################################
+# Trackpad
+##########################################################
 
-# Sleep the display after 15 minutes
-sudo pmset -a displaysleep 15
+# Click weight (threshold) (default value: 1)
+defaults write com.apple.AppleMultitouchTrackpad "FirstClickThreshold" -int "1"
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# Dragging with drag lock (default value: false)
+defaults write com.apple.AppleMultitouchTrackpad "DragLock" -bool "false"
 
-# Hibernation mode
-# 0: Disable hibernation
-# 3: Copy RAM to disk so the system state can still be restored in case of a power failure.
-sudo pmset -a hibernatemode 0
+# Dragging without drag lock (default value: false)
+defaults write com.apple.AppleMultitouchTrackpad "Dragging" -bool "false"
 
-# other options
+# Dragging with three finger drag (default value: false)
+defaults write com.apple.AppleMultitouchTrackpad "TrackpadThreeFingerDrag" -bool "false"
 
-# Disable machine sleep while charging
-# sudo pmset -c sleep 0
+##########################################################
+# Keyboard
+##########################################################
 
-# Set machine sleep to 5 minutes on battery
-# sudo pmset -b sleep 5
+# Key held down behavior (default value: true)
+defaults write NSGlobalDomain "ApplePressAndHoldEnabled" -bool "true"
 
-# Restart automatically on power loss
-# sudo pmset -a autorestart 1
+# Fn/🌐 key usage (default value: 0, 0: nothing, 1: input source, 2: Emoji & Symbols, 3: Dictation)
+defaults write com.apple.HIToolbox AppleFnUsageType -int "1"
 
-# Restart automatically if the computer freezes
-# sudo systemsetup -setrestartfreeze on
-
-# Never go into computer sleep mode
-# sudo systemsetup -setcomputersleep Off >/dev/null
-
-##########################################
+##########################################################
 # General UI/UX
-##########################################
+##########################################################
 
-printf "⚙️ Configure UI/UX...\n"
-# Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# Function keys behavior (default value: false)
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool false
 
-# Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
+# Enable moving focus with Tab and Shift Tab (default value: 0)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int "2"
 
-# Disable the over-the-top focus ring animation
-defaults write NSGlobalDomain NSUseAnimatedFocusRing -bool false
+# Toggle language indicator (default value: true)
+defaults write kCFPreferencesAnyApplication TSMLanguageIndicatorEnabled -bool "true"
 
-# Disable the "Are you sure you want to open this application?" dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+# Close confirm changes popup (default value: true)
+defaults write NSGlobalDomain "NSCloseAlwaysConfirmsChanges" -bool "true"
 
-# Automatically quit printer app once the print jobs complete
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+# Keep windows when quitting an application (default value: true)
+defaults write NSGlobalDomain "NSQuitAlwaysKeepsWindow" -bool "true"
 
-# Save to disk (not to iCloud) by default
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+##########################################################
+# Mission Control
+##########################################################
 
-# Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+# Rearrange automatically (default value: true)
+defaults write com.apple.dock "mru-spaces" -bool "true" && killall Dock
 
-# Expand print panel by default
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+# Group windows by application (default value: false)
+defaults write com.apple.dock "expose-group-apps" -bool "true" && killall Dock
+
+# Switch to Space with open windows (default value: true)
+defaults write NSGlobalDomain "AppleSpacesSwitchOnActivate" -bool "true" && killall Dock
+
+# Spaces span all displays (default value: false)
+defaults write com.apple.spaces "spans-displays" -bool "false" && killall SystemUIServer
+
+##########################################################
+# TextEdit
+##########################################################
+
+# Enable rich text (default value: true)
+defaults write com.apple.TextEdit "RichText" -bool "true" && killall TextEdit
+
+# Smart quotes (default value: true)
+defaults write com.apple.TextEdit "SmartQuotes" -bool "true" && killall TextEdit
+
+##########################################################
+# Activity Monitor
+##########################################################
+
+# Update Frequency (default value: 5)
+defaults write com.apple.ActivityMonitor "UpdatePeriod" -int "2" && killall Activity\ Monitor
+
+# Dock Icon type (default value: 0)
+defaults write com.apple.ActivityMonitor "IconType" -int "0" && killall Activity\ Monitor
+
+##########################################################
+# Screenshots
+##########################################################
+
+# Disable shadow (default value: false)
+defaults write com.apple.screencapture "disable-shadow" -bool "false"
+
+# Include date (default value: true)
+defaults write com.apple.screencapture "include-date" -bool "false"
+
+# Location (default value: Desktop)
+defaults write com.apple.screencapture "location" -string "$HOME/Documents" && killall SystemUIServer
+
+# Display thumbnail (default value: true)
+defaults write com.apple.screencapture "show-thumbnail" -bool "true"
+
+# Choose screenshot format (default value: png)
+defaults write com.apple.screencapture "type" -string "png"
+
+##########################################################
+# Time Machine
+##########################################################
+
+# When a new disk is connected, system does not prompt to ask if you want to use it as a backup volume (default value: false)
+defaults write com.apple.TimeMachine "DoNotOfferNewDisksForBackup" -bool "false"
+
+##########################################################
+# Apple Intelligence
+##########################################################
+
+# Activate Apple Intelligence (default value: true)
+defaults write com.apple.CloudSubscriptionFeatures.optIn "545129924" -bool "true"
+
+##########################################################
+# Safari
+##########################################################
+
+# Show full URL (default value: false)
+defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "false" && killall Safari
+
+##########################################################
+# Messages
+##########################################################
+
+# Show Subject Field (default value: false)
+defaults write com.apple.MobileSMS "MMSShowSubject" -bool "false" && killall Messages
+
+##########################################################
+# Music
+##########################################################
+
+# Show song notifications (default value: true)
+defaults write com.apple.Music "userWantsPlaybackNotifications" -bool "false" && killall Music
+
+##########################################################
+# Launch Services
+##########################################################
+
+# Application quarantine message (default value: true)
+defaults write com.apple.LaunchServices "LSQuarantine" -bool "false"
+
+##########################################################
+# Feedback Assistant
+##########################################################
+
+# Autogather large files when submitting a feedback report (default value: true)
+defaults write com.apple.appleseed.FeedbackAssistant "Autogather" -bool "true"
+
+##########################################################
+# Help Menu
+##########################################################
+
+# Enable behind other windows (default value: false)
+defaults write com.apple.helpviewer "DevMode" -bool "false"
