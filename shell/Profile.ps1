@@ -12,3 +12,4 @@ $Env:MAMBA_EXE = "C:\Scoop\apps\micromamba\shims\micromamba.exe"
 
 $env:VCPKG_ROOT="$HOME\vcpkg"
 $env:PATH="$env:VCPKG_ROOT;$env:PATH"
+$env:AQT_CONFIG="$HOME\aqt"
