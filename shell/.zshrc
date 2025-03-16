@@ -20,7 +20,6 @@ if [[ "$(uname -sm)" == "Darwin arm64" ]]; then
     export CPATH="/opt/homebrew/include"
     export LIBRARY_PATH="/opt/homebrew/lib"
     export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
-    export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
     export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
 fi
 
