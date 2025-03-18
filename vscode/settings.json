@@ -337,6 +337,10 @@
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
+  "C_Cpp.default.cStandard": "gnu17",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.mergeConfigurations": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.arguments": [
     "--all-scopes-completion",
     "--background-index",
@@ -349,15 +353,10 @@
     "--function-arg-placeholders=false",
     "--header-insertion-decorators",
     "--header-insertion=iwyu",
-    "--log=verbose",
     "--pch-storage=memory",
     "--pretty",
     "--ranking-model=decision_forest",
     "-j=12"
-  ],
-  "clangd.fallbackFlags": [
-    "-std=c++11",
-    "-I${workspaceFolder}/src/includes",
   ],
   "clangd.onConfigChanged": "restart",
   "[cmake]": {
@@ -372,9 +371,6 @@
     "editor.defaultFormatter": "golang.go"
   },
   "go.inlayHints.assignVariableTypes": true,
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  },
   // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
@@ -390,13 +386,7 @@
     "markdown",
     "latex",
     "plaintext",
-    "typst"
   ],
-  "spellright.parserByClass": {
-    "typst": {
-      "parser": "markdown"
-    }
-  },
   "spellright.language": [
     "en",
     "es",
@@ -416,16 +406,12 @@
       "/\\$\\$.+\\$\\$/g",
       "/\\[.+\\]/g",
       "/@[\\w\\d\\s]+\\s/g",
+      "/#\\w+()/g"
     ],
-    "typst": [
-      "/\".+\"/g",
-      "/\\w+()/g",
-      "/@[\\w\\d\\s]+\\s/g",
-    ]
   },
   "spellright.spellContextByClass": {
-    "latex": "body",
     "cpp": "comments",
+    "latex": "body",
     "python": "strings"
   },
   "ltex.completionEnabled": true,
