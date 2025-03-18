@@ -25,4 +25,8 @@ fi
 
 export VCPKG_ROOT="$HOME/vcpkg"
 export PATH=$PATH:$VCPKG_ROOT
-export AQT_CONFIG="$HOME/aqt/settings.ini"
+export VCPKG_BINARY_SOURCES=clear
+
+autoload bashcompinit
+bashcompinit
+source "$HOME/vcpkg/scripts/vcpkg_completion.zsh"

@@ -3551,20 +3551,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>https://aqtinstall.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-25T16:51:31Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>aqtinstall</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://aqtinstall.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
 			<key>https://bambinos.github.io/bambi/</key>
 			<dict>
 				<key>date</key>
@@ -3946,6 +3932,20 @@ $("h1").each(function() {
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>https://aqtinstall.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-17T16:12:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>aqtinstall</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://aqtinstall.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://blackjax-devs.github.io/blackjax/</key>
 			<dict>
 				<key>date</key>
