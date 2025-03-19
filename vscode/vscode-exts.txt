@@ -3,7 +3,6 @@ alefragnani.bookmarks
 alpinebuster.vscode-latex-table-editor
 ban.spellright
 bierner.markdown-mermaid
-biomejs.biome
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
@@ -33,6 +32,7 @@ ms-vscode.cpptools
 ms-vscode.live-server
 myriad-dreamin.tinymist
 octop162.markdown-table-editor
+oxc.oxc-vscode
 pkief.material-icon-theme
 qcz.text-power-tools
 redhat.vscode-xml
