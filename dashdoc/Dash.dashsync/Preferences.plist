@@ -3817,20 +3817,6 @@ $("h1").each(function() {
 					<string>https://requests.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
-			<key>https://scikit-image.org/docs/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-20T06:42:21Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>skimage</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scikit-image.org/docs/stable/</string>
-				</dict>
-			</dict>
 			<key>https://scikit-learn.org/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3885,20 +3871,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.pymc.io/</string>
-				</dict>
-			</dict>
-			<key>https://www.pywhy.org/dowhy/v0.11.1/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-11T05:21:22Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>DoWhy</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://www.pywhy.org/dowhy/v0.11.1/</string>
 				</dict>
 			</dict>
 			<key>https://www.statsmodels.org/stable/</key>
@@ -4240,6 +4212,20 @@ $("h1").each(function() {
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://scikit-image.org/docs/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-19T12:10:41Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>skimage</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scikit-image.org/docs/stable/</string>
+				</dict>
+			</dict>
 			<key>https://scikit.bio/docs/latest/</key>
 			<dict>
 				<key>date</key>
@@ -4322,6 +4308,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.pymc.io/projects/bart/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://www.pywhy.org/dowhy/v0.11.1/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-19T12:10:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>DoWhy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pywhy.org/dowhy/v0.11.1/</string>
 				</dict>
 			</dict>
 		</dict>
