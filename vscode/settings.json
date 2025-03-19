@@ -213,15 +213,14 @@
   "bookmarks.useWorkaroundForFormatters": true,
   // front end & formatters
   "emmet.showSuggestionsAsSnippets": true,
-  "biome.rename": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "[javascript][typescript][javascriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome"
+  "[javascript][javascriptreact][typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "javascript.suggest.autoImports": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
