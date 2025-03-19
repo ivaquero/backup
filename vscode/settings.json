@@ -360,8 +360,9 @@
   ],
   "clangd.onConfigChanged": "restart",
   "[cmake]": {
-    "editor.defaultFormatter": "Decodetalkers.neocmakelsp-vscode"
+    "editor.defaultFormatter": "ms-vscode.cmake-tools"
   },
+  "cmake.allowCommentsInPresetsFile": true,
   "lldb.launch.breakpointMode": "file",
   "lldb.launch.expressions": "python",
   "lldb.launch.terminal": "integrated",
