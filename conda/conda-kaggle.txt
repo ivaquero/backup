@@ -3,10 +3,8 @@ conda-tree
 cvxpy
 ipykernel
 ipywidgets
-lets-plot
 manim
 mplfinance
-pip
 preliz
 pydantic
 pymoo

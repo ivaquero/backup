@@ -74,6 +74,15 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": [
+        "-l"
+      ]
+    }
+  },
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -83,19 +92,9 @@
         "chcp 65001"
       ],
       "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [
-        "/K",
-        "chcp 65001"
-      ],
-      "icon": "terminal-cmd"
     }
   },
+  "terminal.integrated.showExitAlert": false,
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
