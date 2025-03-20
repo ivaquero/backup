@@ -2,9 +2,11 @@ bambi
 conda-tree
 cvxpy
 ipykernel
+lets-plot
 manim
 marimo
 mplfinance
+pip
 preliz
 pydantic
 pymoo

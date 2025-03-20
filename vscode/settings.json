@@ -106,6 +106,7 @@
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
     "*.csv": "omegasheets.csv-default",
+    "*.plist": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
@@ -219,7 +220,7 @@
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "[javascript][javascriptreact][typescript]": {
+  "[javascript][javascriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "javascript.suggest.autoImports": true,
@@ -378,7 +379,6 @@
   "material-icon-theme.files.associations": {
     "*.m": "matlab"
   },
-  "svg.preview.background": "black",
   "redhat.telemetry.enabled": false,
   // spell & grammar
   "spellright.configurationScope": "user",

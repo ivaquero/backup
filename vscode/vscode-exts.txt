@@ -22,6 +22,7 @@ llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
 mathworks.language-matlab
+ms-python.debugpy
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
@@ -38,8 +39,8 @@ qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
 reporting-cz.omegasheets-vscode
+rickaym.manim-sideview
 tamasfe.even-better-toml
-thinker.data-size-count
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
 usernamehw.errorlens
