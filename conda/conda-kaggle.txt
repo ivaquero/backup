@@ -2,9 +2,9 @@ bambi
 conda-tree
 cvxpy
 ipykernel
+ipywidgets
 lets-plot
 manim
-marimo
 mplfinance
 pip
 preliz

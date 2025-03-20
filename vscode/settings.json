@@ -73,7 +73,7 @@
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.suggest.enabled": true,
+  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
@@ -460,7 +460,6 @@
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.showFeatureNotAvailableError": false,
   // marimo
-  "marimo.enableToken": true,
-  "marimo.marimoPath": "marimo",
-  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  // "marimo.enableToken": true,
+  // "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
 }
