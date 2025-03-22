@@ -23,6 +23,7 @@ ltex-plus.vscode-ltex-plus
 mathworks.language-matlab
 ms-python.debugpy
 ms-python.python
+ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers

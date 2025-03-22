@@ -7,45 +7,7 @@
 		<key>installed</key>
 		<dict/>
 		<key>uninstalled</key>
-		<dict>
-			<key>Git_Flow</key>
-			<dict>
-				<key>date</key>
-				<date>2023-08-26T04:13:20Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>terminal</string>
-						<string>shell</string>
-						<string>bash</string>
-						<string>zsh</string>
-					</array>
-					<key>name</key>
-					<string>Git Flow</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Git_Flow</string>
-				</dict>
-			</dict>
-			<key>Vim</key>
-			<dict>
-				<key>date</key>
-				<date>2023-08-26T04:13:55Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Vim</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Vim</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>DHClojureRepo</key>
 	<dict>
@@ -78,9 +40,7 @@
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -96,19 +56,12 @@
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -135,9 +88,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -153,19 +104,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -177,63 +121,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Typst</string>
-				</dict>
-			</dict>
-			<key>mdbook</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-12T11:53:45Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://rust-lang.github.io/mdBook/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>mdb</string>
-						<key>docsetName</key>
-						<string>mdbook</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://rust-lang.github.io/mdBook/</string>
-					</dict>
-					<key>name</key>
-					<string>mdbook</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>mdbook</string>
 				</dict>
 			</dict>
 			<key>ruff</key>
@@ -249,9 +136,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -267,19 +152,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -306,9 +184,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -324,19 +200,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -348,63 +217,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>transformers</string>
-				</dict>
-			</dict>
-			<key>uv</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-18T01:35:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.astral.sh/uv/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>uv</string>
-						<key>docsetName</key>
-						<string>uv</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.astral.sh/uv/</string>
-					</dict>
-					<key>name</key>
-					<string>uv</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>uv</string>
 				</dict>
 			</dict>
 		</dict>
@@ -423,9 +235,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -441,19 +251,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -480,9 +283,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -498,19 +299,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -537,9 +331,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -555,19 +347,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -594,9 +379,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -612,19 +395,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -636,63 +412,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>Armadillo</string>
-				</dict>
-			</dict>
-			<key>AstroVim</key>
-			<dict>
-				<key>date</key>
-				<date>2024-04-15T10:10:19Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.astronvim.com/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>av</string>
-						<key>docsetName</key>
-						<string>AstroVim</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.astronvim.com/</string>
-					</dict>
-					<key>name</key>
-					<string>AstroVim</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>AstroVim</string>
 				</dict>
 			</dict>
 			<key>Beautiful Makie</key>
@@ -708,9 +427,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -726,19 +443,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -765,9 +475,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -783,19 +491,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -822,9 +523,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -840,19 +539,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -879,9 +571,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -897,19 +587,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -936,9 +619,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -954,19 +635,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -993,9 +667,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1011,19 +683,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1050,9 +715,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1068,19 +731,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1107,9 +763,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1125,19 +779,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1164,9 +811,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1182,19 +827,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1221,9 +859,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1239,19 +875,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1278,9 +907,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1296,19 +923,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1335,9 +955,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1353,19 +971,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1392,9 +1003,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1410,19 +1019,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1449,9 +1051,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1467,19 +1067,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1506,9 +1099,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1524,19 +1115,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string>jupyterbook.org/en/stable/</string>
 						<key>websiteURL</key>
@@ -1563,9 +1147,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1581,19 +1163,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1620,9 +1195,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1638,19 +1211,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1677,9 +1243,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1695,19 +1259,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1734,9 +1291,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1752,19 +1307,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1791,9 +1339,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1809,19 +1355,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1848,9 +1387,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1866,19 +1403,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1905,9 +1435,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1923,19 +1451,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -1962,9 +1483,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -1980,19 +1499,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2019,9 +1531,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2037,19 +1547,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2076,9 +1579,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<false/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2094,19 +1595,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<true/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2133,9 +1627,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2151,19 +1643,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2190,9 +1675,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2208,19 +1691,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2247,9 +1723,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2265,19 +1739,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2304,9 +1771,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2322,19 +1787,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2361,9 +1819,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2379,19 +1835,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2418,9 +1867,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2436,19 +1883,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string>R</string>
 						<key>websiteURL</key>
@@ -2475,9 +1915,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2493,19 +1931,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2532,9 +1963,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2550,19 +1979,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2589,9 +2011,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2607,19 +2027,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2646,9 +2059,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2664,19 +2075,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2703,9 +2107,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2721,19 +2123,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2760,9 +2155,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2778,19 +2171,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2817,9 +2203,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2835,19 +2219,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2874,9 +2251,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2892,19 +2267,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2931,9 +2299,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -2949,19 +2315,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -2988,9 +2347,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3006,19 +2363,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3045,9 +2395,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3063,19 +2411,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3102,9 +2443,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3120,19 +2459,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3159,9 +2491,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3177,19 +2507,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3216,9 +2539,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3234,19 +2555,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3273,9 +2587,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3291,19 +2603,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3330,9 +2635,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3348,19 +2651,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3387,9 +2683,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3405,19 +2699,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3429,6 +2716,54 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>slidev</string>
+				</dict>
+			</dict>
+			<key>uv</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T13:59:46Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.astral.sh/uv/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer { display: none !important; }</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>uv</string>
+						<key>docsetName</key>
+						<string>uv</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.astral.sh/uv/</string>
+					</dict>
+					<key>name</key>
+					<string>uv</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>uv</string>
 				</dict>
 			</dict>
 			<key>xmake</key>
@@ -3444,9 +2779,7 @@ $("h1").each(function() {
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
+						<string>footer { display: none !important; }</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -3462,19 +2795,12 @@ $("h1").each(function() {
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
+						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
+								pageTitle, type: "Guide"}); $("h1").each(function() { const
+								entryName = $(this).text(); var entryHash = $(this).attr('id');
+								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
+								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
+								type: "Section", hash: entryHash}); });</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -3515,6 +2841,20 @@ $("h1").each(function() {
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
 					<string>github.com/pdfcpu/pdfcpu/pkg/api</string>
+				</dict>
+			</dict>
+			<key>github.com/spf13/cobra</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T14:16:11Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/cobra</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/cobra</string>
 				</dict>
 			</dict>
 		</dict>
@@ -3593,20 +2933,6 @@ $("h1").each(function() {
 					<string>https://docs.manim.community/en/stable/</string>
 				</dict>
 			</dict>
-			<key>https://docs.marimo.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T15:36:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>marimo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.marimo.io/</string>
-				</dict>
-			</dict>
 			<key>https://docs.pydantic.dev/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3619,20 +2945,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.pydantic.dev/latest/</string>
-				</dict>
-			</dict>
-			<key>https://docs.pytest.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-14T01:26:26Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pytest</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.pytest.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://docs.sympy.org/latest/</key>
@@ -3661,48 +2973,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.ultralytics.com/</string>
-				</dict>
-			</dict>
-			<key>https://docs.xarray.dev/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-27T11:21:32Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>xarray</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.xarray.dev/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://lets-plot.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-09T13:05:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>lets-plot</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://lets-plot.org/</string>
-				</dict>
-			</dict>
-			<key>https://mesa.readthedocs.io/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-15T02:45:27Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Mesa</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://mesa.readthedocs.io/stable/</string>
 				</dict>
 			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
@@ -3960,6 +3230,34 @@ $("h1").each(function() {
 					<string>https://contextily.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://docs.marimo.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T13:59:10Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.marimo.io/</string>
+				</dict>
+			</dict>
+			<key>https://docs.pytest.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T14:15:20Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pytest</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.pytest.org/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://docs.rocketpy.org/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3986,6 +3284,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.ultralytics.com/zh/</string>
+				</dict>
+			</dict>
+			<key>https://docs.xarray.dev/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T14:11:25Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>xarray</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.xarray.dev/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://faker.readthedocs.io/en/master/</key>
@@ -4086,6 +3398,20 @@ $("h1").each(function() {
 					<string>https://koaning.github.io/scikit-lego/</string>
 				</dict>
 			</dict>
+			<key>https://lets-plot.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T13:59:16Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>lets-plot</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://lets-plot.org/</string>
+				</dict>
+			</dict>
 			<key>https://mamba.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -4126,6 +3452,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://mesa.readthedocs.io/latest/</string>
+				</dict>
+			</dict>
+			<key>https://mesa.readthedocs.io/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-20T14:00:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Mesa</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://mesa.readthedocs.io/stable/</string>
 				</dict>
 			</dict>
 			<key>https://microsoft.github.io/autogen/stable/</key>
@@ -4424,7 +3764,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pytest#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pytest#readme</string>
 					<key>authorLinkText</key>
 					<string>Tom Forbes</string>
 					<key>name</key>
@@ -4450,7 +3791,8 @@ $("h1").each(function() {
 						<string>BAyesian Model-Building Interface</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bambi#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bambi#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -4474,7 +3816,8 @@ $("h1").each(function() {
 						<string>Beautiful Soup</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Beautiful_Soup#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Beautiful_Soup#readme</string>
 					<key>authorLinkText</key>
 					<string>Aziz Alto</string>
 					<key>name</key>
@@ -4492,7 +3835,8 @@ $("h1").each(function() {
 				<key>entry</key>
 				<dict>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Blender#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Blender#readme</string>
 					<key>authorLinkText</key>
 					<string>Alex Widener</string>
 					<key>name</key>
@@ -4517,7 +3861,8 @@ $("h1").each(function() {
 						<string>bokeh</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bokeh#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Bokeh#readme</string>
 					<key>authorLinkText</key>
 					<string>Angelo Varlotta</string>
 					<key>name</key>
@@ -4541,7 +3886,8 @@ $("h1").each(function() {
 						<string>Causal Inference in Quasi-Experimental Settings</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/CausalPy#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/CausalPy#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -4565,7 +3911,8 @@ $("h1").each(function() {
 						<string>Package Manager</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Conan#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Conan#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -4588,7 +3935,8 @@ $("h1").each(function() {
 						<string>Package Management</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Conda#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Conda#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -4610,7 +3958,8 @@ $("h1").each(function() {
 						<string>julia</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/DataFrames.jl#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/DataFrames.jl#readme</string>
 					<key>authorLinkText</key>
 					<string>Sergio Sánchez Ramírez</string>
 					<key>name</key>
@@ -4632,7 +3981,8 @@ $("h1").each(function() {
 						<string>Deno API</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Deno#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Deno#readme</string>
 					<key>authorLinkText</key>
 					<string>Yuto Oguchi</string>
 					<key>name</key>
@@ -4657,7 +4007,8 @@ $("h1").each(function() {
 						<string>Numerical Solvers</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Eigen#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Eigen#readme</string>
 					<key>authorLinkText</key>
 					<string>Egor Larionov</string>
 					<key>name</key>
@@ -4680,7 +4031,8 @@ $("h1").each(function() {
 						<string>PHP Faker</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Faker#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Faker#readme</string>
 					<key>authorLinkText</key>
 					<string>Adnan RIHAN</string>
 					<key>name</key>
@@ -4702,7 +4054,8 @@ $("h1").each(function() {
 						<string>julia</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Flux.jl#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Flux.jl#readme</string>
 					<key>authorLinkText</key>
 					<string>Sergio Sánchez Ramírez</string>
 					<key>name</key>
@@ -4725,7 +4078,8 @@ $("h1").each(function() {
 						<string>Scientific Library</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/GNU_Scientific_Library#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/GNU_Scientific_Library#readme</string>
 					<key>authorLinkText</key>
 					<string>Canautumn</string>
 					<key>name</key>
@@ -4747,7 +4101,8 @@ $("h1").each(function() {
 						<string>lgbm</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/LightGBM#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/LightGBM#readme</string>
 					<key>authorLinkText</key>
 					<string>Kindulov M.</string>
 					<key>name</key>
@@ -4773,7 +4128,8 @@ $("h1").each(function() {
 						<string>BSD</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Linux_Man_Pages#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Linux_Man_Pages#readme</string>
 					<key>authorLinkText</key>
 					<string>Yan Pashkovsky</string>
 					<key>name</key>
@@ -4797,7 +4153,8 @@ $("h1").each(function() {
 						<string>Deep Learning Framework</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/MLX#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/MLX#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -4819,7 +4176,8 @@ $("h1").each(function() {
 						<string>julia</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Metal.jl#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Metal.jl#readme</string>
 					<key>authorLinkText</key>
 					<string>Sergio Sánchez Ramírez</string>
 					<key>name</key>
@@ -4843,7 +4201,8 @@ $("h1").each(function() {
 						<string>Natural Language ToolKit</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/NLTK#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/NLTK#readme</string>
 					<key>authorLinkText</key>
 					<string>Aziz Alto, Xavier Yang</string>
 					<key>name</key>
@@ -4866,7 +4225,8 @@ $("h1").each(function() {
 						<string>Network Analysis</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/NetworkX#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/NetworkX#readme</string>
 					<key>authorLinkText</key>
 					<string>AllanLRH, Xavier Yang</string>
 					<key>name</key>
@@ -4888,7 +4248,8 @@ $("h1").each(function() {
 						<string>MatLab</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Octave#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Octave#readme</string>
 					<key>authorLinkText</key>
 					<string>Hans-Helge Buerger</string>
 					<key>name</key>
@@ -4908,7 +4269,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Optuna#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Optuna#readme</string>
 					<key>authorLinkText</key>
 					<string>Takuya Shimada</string>
 					<key>name</key>
@@ -4932,7 +4294,8 @@ $("h1").each(function() {
 						<string>Markdown</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Pandoc#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Pandoc#readme</string>
 					<key>authorLinkText</key>
 					<string>Aziz Alto, Bernhard Waldbrunner</string>
 					<key>name</key>
@@ -4957,7 +4320,8 @@ $("h1").each(function() {
 						<string>Windows automation</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Powershell#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Powershell#readme</string>
 					<key>authorLinkText</key>
 					<string>tddschn</string>
 					<key>name</key>
@@ -4981,7 +4345,8 @@ $("h1").each(function() {
 						<string>Python Executable</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyInstaller#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyInstaller#readme</string>
 					<key>authorLinkText</key>
 					<string>Aziz Alto</string>
 					<key>name</key>
@@ -5013,7 +4378,8 @@ $("h1").each(function() {
 						<string>statistics</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyMC3#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyMC3#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa</string>
 					<key>name</key>
@@ -5038,7 +4404,8 @@ $("h1").each(function() {
 						<string>Neural Networks</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
 					<key>authorLinkText</key>
 					<string>Yue Gao</string>
 					<key>name</key>
@@ -5063,7 +4430,8 @@ $("h1").each(function() {
 						<string>pytorch-lightning</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PytorchLightning#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PytorchLightning#readme</string>
 					<key>authorLinkText</key>
 					<string>Mun Hou</string>
 					<key>name</key>
@@ -5086,7 +4454,8 @@ $("h1").each(function() {
 						<string>PySide6</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
 					<key>authorLinkText</key>
 					<string>AC Better</string>
 					<key>name</key>
@@ -5115,7 +4484,8 @@ $("h1").each(function() {
 						<string>Android</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/React_Native#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/React_Native#readme</string>
 					<key>authorLinkText</key>
 					<string>mnmaraes</string>
 					<key>name</key>
@@ -5138,7 +4508,8 @@ $("h1").each(function() {
 						<string>Requests</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Requests#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Requests#readme</string>
 					<key>authorLinkText</key>
 					<string>Thiago Medeiros, Xavier Yang</string>
 					<key>name</key>
@@ -5161,9 +4532,11 @@ $("h1").each(function() {
 						<string>Machine Learning</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
 					<key>authorLinkText</key>
-					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
+					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian
+							Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
 					<key>name</key>
 					<string>scikit-learn</string>
 					<key>platform</key>
@@ -5185,7 +4558,8 @@ $("h1").each(function() {
 						<string>skimage</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit-image#readme</string>
 					<key>authorLinkText</key>
 					<string>Aziz Alto, Xavier Yang</string>
 					<key>name</key>
@@ -5209,7 +4583,8 @@ $("h1").each(function() {
 						<string>matplotlib</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Seaborn#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Seaborn#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa, Xavier Yang</string>
 					<key>name</key>
@@ -5232,7 +4607,8 @@ $("h1").each(function() {
 						<string>Symbolic Mathematics Python Library</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/SymPy#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/SymPy#readme</string>
 					<key>authorLinkText</key>
 					<string>Jan Winkler, Xavier Yang</string>
 					<key>name</key>
@@ -5257,7 +4633,8 @@ $("h1").each(function() {
 						<string>Metrics</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/TorchMetrics#readme</string>
 					<key>authorLinkText</key>
 					<string>Seungjae Jung</string>
 					<key>name</key>
@@ -5277,7 +4654,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/UnicodeCharacters#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/UnicodeCharacters#readme</string>
 					<key>authorLinkText</key>
 					<string>Remko Tronçon</string>
 					<key>name</key>
@@ -5299,7 +4677,8 @@ $("h1").each(function() {
 						<string>Xmake</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/XMake#readme</string>
 					<key>authorLinkText</key>
 					<string>kassane</string>
 					<key>name</key>
@@ -5319,7 +4698,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Zsh#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Zsh#readme</string>
 					<key>authorLinkText</key>
 					<string>bosr</string>
 					<key>name</key>
@@ -5344,7 +4724,8 @@ $("h1").each(function() {
 						<string>altair 3.2</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/altair#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/altair#readme</string>
 					<key>authorLinkText</key>
 					<string>Angelo Varlotta</string>
 					<key>name</key>
@@ -5370,7 +4751,8 @@ $("h1").each(function() {
 						<string>data</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/arviz#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/arviz#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa</string>
 					<key>name</key>
@@ -5390,7 +4772,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/cvxpy#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/cvxpy#readme</string>
 					<key>authorLinkText</key>
 					<string>Ben Dichter</string>
 					<key>name</key>
@@ -5410,7 +4793,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/discord.py#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/discord.py#readme</string>
 					<key>authorLinkText</key>
 					<string>UserBlackBox</string>
 					<key>name</key>
@@ -5434,7 +4818,8 @@ $("h1").each(function() {
 						<string>rlang</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/ggplot2#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/ggplot2#readme</string>
 					<key>authorLinkText</key>
 					<string>Michael Peteuil</string>
 					<key>name</key>
@@ -5454,7 +4839,8 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
 					<key>authorLinkText</key>
 					<string>The igraph core team</string>
 					<key>name</key>
@@ -5477,7 +4863,8 @@ $("h1").each(function() {
 						<string>Tackle the Curse of Imbalanced Datasets in Machine Learning</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/imbalanced-learn#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/imbalanced-learn#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -5499,7 +4886,8 @@ $("h1").each(function() {
 						<string>jaxlib</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
 					<key>authorLinkText</key>
 					<string>Gary Miguel</string>
 					<key>name</key>
@@ -5517,7 +4905,8 @@ $("h1").each(function() {
 				<key>entry</key>
 				<dict>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jq#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jq#readme</string>
 					<key>authorLinkText</key>
 					<string>Mattias Wadman</string>
 					<key>name</key>
@@ -5537,10 +4926,12 @@ $("h1").each(function() {
 					<key>aliases</key>
 					<array>
 						<string>Python</string>
-						<string>open-source tool for building publication-quality books and documents</string>
+						<string>open-source tool for building publication-quality books and
+								documents</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jupyter-book#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jupyter-book#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -5566,7 +4957,8 @@ $("h1").each(function() {
 						<string>data</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/nox#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/nox#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa</string>
 					<key>name</key>
@@ -5589,7 +4981,8 @@ $("h1").each(function() {
 						<string>implementation of a grammar of graphics based on ggplot2</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/plotnine#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/plotnine#readme</string>
 					<key>authorLinkText</key>
 					<string>Xavier Yang</string>
 					<key>name</key>
@@ -5615,7 +5008,8 @@ $("h1").each(function() {
 						<string>data</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/polars#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/polars#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa</string>
 					<key>name</key>
@@ -5638,7 +5032,8 @@ $("h1").each(function() {
 						<string>Bayesian Modeling</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa, Xavier Yang</string>
 					<key>name</key>
@@ -5662,7 +5057,8 @@ $("h1").each(function() {
 						<string>Pytorch Probability</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pyro#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pyro#readme</string>
 					<key>authorLinkText</key>
 					<string>Songpeng Zu, Xavier Yang</string>
 					<key>name</key>
@@ -5687,7 +5083,8 @@ $("h1").each(function() {
 						<string>statsmodels 0.14.0</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/statsmodels#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/statsmodels#readme</string>
 					<key>authorLinkText</key>
 					<string>Angelo Varlotta</string>
 					<key>name</key>
@@ -5713,7 +5110,8 @@ $("h1").each(function() {
 						<string>Natural Language Processing</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchtext#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchtext#readme</string>
 					<key>authorLinkText</key>
 					<string>Yue Gao</string>
 					<key>name</key>
@@ -5735,7 +5133,8 @@ $("h1").each(function() {
 						<string>vision</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchvision#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchvision#readme</string>
 					<key>authorLinkText</key>
 					<string>Yue Gao</string>
 					<key>name</key>
@@ -5766,7 +5165,8 @@ $("h1").each(function() {
 						<string>gpt</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/transformers#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/transformers#readme</string>
 					<key>authorLinkText</key>
 					<string>Venkat</string>
 					<key>name</key>
@@ -5789,7 +5189,8 @@ $("h1").each(function() {
 						<string>N-D labeled arrays and datasets in Python</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/xarray#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/xarray#readme</string>
 					<key>authorLinkText</key>
 					<string>Florian Knoop, Xavier Yang</string>
 					<key>name</key>
@@ -5814,7 +5215,8 @@ $("h1").each(function() {
 						<string>xgboost</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/xgboost#readme</string>
+					<string>
+							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/xgboost#readme</string>
 					<key>authorLinkText</key>
 					<string>Angelo Varlotta</string>
 					<key>name</key>
@@ -5837,7 +5239,8 @@ $("h1").each(function() {
 		<dict>
 			<key>~/Documents/GitHub/Dash-User-Contributions/docsets/PyMC/pymc.docset</key>
 			<string>pymc</string>
-			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
+			<key>~/Library/Application
+					Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
 			<string>a</string>
 			<key>~/Library/Application Support/Dash/DocSets/Bash/Bash.docset</key>
 			<string>bs</string>
@@ -5851,6 +5254,8 @@ $("h1").each(function() {
 			<string>css</string>
 			<key>~/Library/Application Support/Dash/DocSets/Dart/Dart.docset</key>
 			<string>d</string>
+			<key>~/Library/Application Support/Dash/DocSets/Go/Go.docset</key>
+			<string>g</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
 			<string>h</string>
 			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
@@ -5878,13 +5283,13 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/DocSets/PostgreSQL/PostgreSQL.docset</key>
 			<string>pg</string>
 			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
-			<string>py</string>
+			<string>p</string>
 			<key>~/Library/Application Support/Dash/DocSets/Qt_5/Qt.docset</key>
 			<string>qt:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
 			<string>qt:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
-			<string>rs</string>
+			<string>r</string>
 			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
 			<string>sa</string>
 			<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
@@ -5893,6 +5298,8 @@ $("h1").each(function() {
 			<string>ts</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Doxygen/Doxygen.docset</key>
 			<string>d</string>
+			<key>~/Library/Application Support/Dash/Docset Generator/Eigen/Eigen.docset</key>
+			<string>e</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/JuMPjl/JuMP.jl.docset</key>
 			<string>mpj</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/NLTK/NLTK.docset</key>
@@ -5901,6 +5308,17 @@ $("h1").each(function() {
 			<string>pgw:</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Typst/Typst.docset</key>
 			<string>tt</string>
+			<key>~/Library/Application Support/Dash/Go DocSets/github.com spf13 cobra/GoDoc.docset</key>
+			<string>gcb</string>
+			<key>~/Library/Application Support/Dash/Python
+					DocSets/autogencore/autogen_core.docset</key>
+			<string>ag</string>
+			<key>~/Library/Application Support/Dash/Python
+					DocSets/pymcmarketing/pymc-marketing.docset</key>
+			<string>pmm</string>
+			<key>~/Library/Application Support/Dash/Python
+					DocSets/scikitlearn/scikit-learn.docset</key>
+			<string>sk</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/ArviZ/ArviZ.docset</key>
 			<string>az</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Bambi/Bambi.docset</key>
@@ -5931,6 +5349,9 @@ $("h1").each(function() {
 			<string>nx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PreliZ/PreliZ.docset</key>
 			<string>pz</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/PyMC project website/PyMC
+					project website.docset</key>
+			<string>pm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyMC project website/PyMC project website.docset</key>
 			<string>pm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyMCBART/PyMC-BART.docset</key>
@@ -5941,18 +5362,22 @@ $("h1").each(function() {
 			<string>pdt</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
 			<string>rq</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Robotics Toolbox for
+					Python/Robotics Toolbox for Python.docset</key>
+			<string>ro:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Robotics Toolbox for Python/Robotics Toolbox for Python.docset</key>
 			<string>ro:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/RocketPy/RocketPy.docset</key>
 			<string>rp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO
+					Docs/Ultralytics YOLO Docs.docset</key>
+			<string>yl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO Docs/Ultralytics YOLO Docs.docset</key>
 			<string>yl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/aqtinstall/aqtinstall.docset</key>
 			<string>aq</string>
-			<key>~/Library/Application Support/Dash/Python DocSets/autogencore/autogen_core.docset</key>
-			<string>ag</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>
 			<string>bjx</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/cartopy/cartopy.docset</key>
@@ -5973,10 +5398,11 @@ $("h1").each(function() {
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
 			<string>pcc:</string>
-			<key>~/Library/Application Support/Dash/Python DocSets/pymcmarketing/pymc-marketing.docset</key>
-			<string>pmm</string>
-			<key>~/Library/Application Support/Dash/Python DocSets/pymoo Multiobjective Optimization in Python/pymoo: Multi-objective Optimization in Python.docset</key>
+			<key>~/Library/Application Support/Dash/Python DocSets/pymoo Multiobjective
+					Optimization in Python/pymoo: Multi-objective Optimization in Python.docset</key>
 			<string>moo</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pymoo Multiobjective Optimization in Python/pymoo: Multi-objective Optimization in Python.docset</key>
+			<string>mo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pytest/pytest.docset</key>
 			<string>pts:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitbio/scikit-bio.docset</key>
@@ -5989,21 +5415,63 @@ $("h1").each(function() {
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/skimage/skimage.docset</key>
 			<string>ski</string>
-			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0141/statsmodels 0.14.1.docset</key>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0141/statsmodels
+					0.14.1.docset</key>
 			<string>sm</string>
-			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.3.docset</key>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels
+					0.14.3.docset</key>
 			<string>sms</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels
+					0.14.4.docset</key>
+			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.4.docset</key>
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/xarray/xarray.docset</key>
 			<string>xr</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/yfinance  market data downloader/yfinance - market data downloader.docset</key>
 			<string>yf</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/yfinance market data
+					downloader/yfinance - market data downloader.docset</key>
+			<string>yf</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/DataFramesjl/DataFrames.jl.docset</key>
+			<string>df</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/Powershell/Powershell.docset</key>
+			<string>ps</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/PyInstaller/PyInstaller.docset</key>
+			<string>pi</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/PytorchLightning/PytorchLightning.docset</key>
+			<string>tl</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/TorchMetrics/torchmetrics.docset</key>
+			<string>tm</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/Transformers/transformers.docset</key>
+			<string>tfs</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/imbalancedlearn/imbalanced-learn.docset</key>
+			<string>ib</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/jupyterbook/jupyter-book.docset</key>
+			<string>jrb</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/scikitimage/scikit-image.docset</key>
+			<string>skm</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/scikitlearn/scikit-learn.docset</key>
+			<string>sk</string>
+			<key>~/Library/Application Support/Dash/User
+					Contributed/torchvision/torchvision.docset</key>
+			<string>tv</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Altair/altair.docset</key>
 			<string>alt:</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Bambi/Bambi.docset</key>
 			<string>bb</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Beautiful Soup/Beautiful_Soup.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/Beautiful
+					Soup/Beautiful_Soup.docset</key>
 			<string>b</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Blender/Blender.docset</key>
 			<string>bp</string>
@@ -6015,19 +5483,19 @@ $("h1").each(function() {
 			<string>cn</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Conda/Conda.docset</key>
 			<string>ac</string>
-			<key>~/Library/Application Support/Dash/User Contributed/DataFramesjl/DataFrames.jl.docset</key>
-			<string>df</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Deno/deno.docset</key>
 			<string>dn</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Eigen/Eigen.docset</key>
 			<string>eg</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Fluxjl/Flux.jl.docset</key>
 			<string>fx</string>
-			<key>~/Library/Application Support/Dash/User Contributed/GNU Scientific Library/GNU Scientific Library.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/GNU Scientific Library/GNU
+					Scientific Library.docset</key>
 			<string>gsl</string>
 			<key>~/Library/Application Support/Dash/User Contributed/LightGBM/LightGBM.docset</key>
 			<string>lgb:</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Linux Man Pages/Linux.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/Linux Man
+					Pages/Linux.docset</key>
 			<string>gnu</string>
 			<key>~/Library/Application Support/Dash/User Contributed/MLX/MLX.docset</key>
 			<string>mx</string>
@@ -6045,39 +5513,36 @@ $("h1").each(function() {
 			<string>op</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Pandoc/Pandoc.docset</key>
 			<string>pc</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Powershell/Powershell.docset</key>
-			<string>ps</string>
-			<key>~/Library/Application Support/Dash/User Contributed/PyInstaller/PyInstaller.docset</key>
-			<string>pi</string>
 			<key>~/Library/Application Support/Dash/User Contributed/PyMC/pymc.docset</key>
 			<string>pm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/PyMC3/PyMC3.docset</key>
 			<string>pm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/PyTorch/PyTorch.docset</key>
 			<string>pt:</string>
-			<key>~/Library/Application Support/Dash/User Contributed/PytorchLightning/PytorchLightning.docset</key>
-			<string>tl</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide 2PySide 6/Qt_for_Python.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/Qt for Python PySide
+					2PySide 6/Qt_for_Python.docset</key>
 			<string>qtp:</string>
-			<key>~/Library/Application Support/Dash/User Contributed/React Native/React_Native.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/React
+					Native/React_Native.docset</key>
 			<string>rn</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
 			<string>rq</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Swift Language Guide/SwiftLanguageGuide.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/Swift Language
+					Guide/SwiftLanguageGuide.docset</key>
 			<string>sw</string>
 			<key>~/Library/Application Support/Dash/User Contributed/SymPy/SymPy.docset</key>
 			<string>sy</string>
-			<key>~/Library/Application Support/Dash/User Contributed/TensorFlow 2/TensorFlow 2.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/TensorFlow 2/TensorFlow
+					2.docset</key>
 			<string>tf</string>
-			<key>~/Library/Application Support/Dash/User Contributed/TorchMetrics/torchmetrics.docset</key>
-			<string>tm</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Transformers/transformers.docset</key>
-			<string>tfs</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Unicode Characters/UnicodeCharacters.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/Unicode
+					Characters/UnicodeCharacters.docset</key>
 			<string>uni</string>
-			<key>~/Library/Application Support/Dash/User Contributed/Visual Studio Code/Visual_Studio_Code.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/Visual Studio
+					Code/Visual_Studio_Code.docset</key>
 			<string>vs:</string>
-			<key>~/Library/Application Support/Dash/User Contributed/XGBoost/XGBoost 1.2.0.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/XGBoost/XGBoost
+					1.2.0.docset</key>
 			<string>xg</string>
 			<key>~/Library/Application Support/Dash/User Contributed/XMake/XMake.docset</key>
 			<string>xm</string>
@@ -6093,12 +5558,8 @@ $("h1").each(function() {
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/User Contributed/igraph/igraph.docset</key>
 			<string>ig</string>
-			<key>~/Library/Application Support/Dash/User Contributed/imbalancedlearn/imbalanced-learn.docset</key>
-			<string>ib</string>
 			<key>~/Library/Application Support/Dash/User Contributed/jax/jax.docset</key>
 			<string>jx</string>
-			<key>~/Library/Application Support/Dash/User Contributed/jupyterbook/jupyter-book.docset</key>
-			<string>jrb</string>
 			<key>~/Library/Application Support/Dash/User Contributed/nox/Nox.docset</key>
 			<string>nox</string>
 			<key>~/Library/Application Support/Dash/User Contributed/plotnine/plotnine.docset</key>
@@ -6110,30 +5571,30 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/pyro/Pyro.docset</key>
 			<string>pr</string>
 			<key>~/Library/Application Support/Dash/User Contributed/pytest/pytest.docset</key>
-			<string>pts</string>
-			<key>~/Library/Application Support/Dash/User Contributed/scikitimage/scikit-image.docset</key>
-			<string>skm</string>
-			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn 1.2.docset</key>
+			<string>ts</string>
+			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn
+					1.2.docset</key>
 			<string>sk:</string>
-			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
-			<string>sk</string>
-			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn 0.11.0.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn
+					0.11.0.docset</key>
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn.docset</key>
 			<string>s</string>
-			<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels 0.13.1.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels
+					0.13.1.docset</key>
 			<string>sm</string>
-			<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels 0.14.docset</key>
+			<key>~/Library/Application Support/Dash/User Contributed/statsmodels/statsmodels
+					0.14.docset</key>
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/torchtext/torchtext.docset</key>
 			<string>tt</string>
-			<key>~/Library/Application Support/Dash/User Contributed/torchvision/torchvision.docset</key>
-			<string>tv</string>
 			<key>~/Library/Application Support/Dash/User Contributed/xarray/xarray.docset</key>
 			<string>xr</string>
-			<key>~/Library/Application Support/Dash/Versioned DocSets/Qt for Python PySide 2PySide 6 - DHUserRepo/5-15-0/Qt_for_Python.docset</key>
+			<key>~/Library/Application Support/Dash/Versioned DocSets/Qt for Python PySide
+					2PySide 6 - DHUserRepo/5-15-0/Qt_for_Python.docset</key>
 			<string>qt</string>
-			<key>~/Library/Application Support/Dash/Versioned DocSets/Qt for Python PySide 2PySide 6 - DHUserRepo/6-2-2/Qt_for_Python.docset</key>
+			<key>~/Library/Application Support/Dash/Versioned DocSets/Qt for Python PySide
+					2PySide 6 - DHUserRepo/6-2-2/Qt_for_Python.docset</key>
 			<string>qt</string>
 		</dict>
 	</dict>
@@ -6466,7 +5927,8 @@ $("h1").each(function() {
 							<string>PySide6</string>
 						</array>
 						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
+						<string>
+								https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
 						<key>authorLinkText</key>
 						<string>AC Better</string>
 						<key>name</key>
@@ -6489,7 +5951,8 @@ $("h1").each(function() {
 							<string>PySide6</string>
 						</array>
 						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
+						<string>
+								https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Qt_for_Python#readme</string>
 						<key>authorLinkText</key>
 						<string>AC Better</string>
 						<key>name</key>
@@ -6515,7 +5978,8 @@ $("h1").each(function() {
 							<string>Requests</string>
 						</array>
 						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Requests#readme</string>
+						<string>
+								https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Requests#readme</string>
 						<key>authorLinkText</key>
 						<string>Thiago Medeiros, ivaquero</string>
 						<key>name</key>
@@ -6541,7 +6005,8 @@ $("h1").each(function() {
 							<string>Bayesian Modeling</string>
 						</array>
 						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
+						<string>
+								https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pymc#readme</string>
 						<key>authorLinkText</key>
 						<string>Paulo S. Costa, Xavier Yang</string>
 						<key>name</key>
@@ -6568,7 +6033,8 @@ $("h1").each(function() {
 							<string>Pytorch Probability</string>
 						</array>
 						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pyro#readme</string>
+						<string>
+								https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/pyro#readme</string>
 						<key>authorLinkText</key>
 						<string>Songpeng Zu, Xavier Yang</string>
 						<key>name</key>
