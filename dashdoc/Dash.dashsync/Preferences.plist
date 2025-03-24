@@ -123,6 +123,63 @@
 					<string>Typst</string>
 				</dict>
 			</dict>
+			<key>great-tables</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-24T02:22:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://posit-dev.github.io/great-tables/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>gt</string>
+						<key>docsetName</key>
+						<string>great-tables</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://posit-dev.github.io/great-tables</string>
+					</dict>
+					<key>name</key>
+					<string>great-tables</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>great-tables</string>
+				</dict>
+			</dict>
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
@@ -2891,6 +2948,20 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>https://altair-viz.github.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-24T05:43:30Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Vega-Altair</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://altair-viz.github.io/</string>
+				</dict>
+			</dict>
 			<key>https://bambinos.github.io/bambi/</key>
 			<dict>
 				<key>date</key>
