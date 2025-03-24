@@ -1,6 +1,5 @@
 adachishingo.open-with
 alefragnani.bookmarks
-alpinebuster.vscode-latex-table-editor
 ban.spellright
 bierner.markdown-mermaid
 ccagml.vscode-leetcode-problem-rating

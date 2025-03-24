@@ -247,11 +247,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   // ui & preview
-  "conventionalCommits.autoCommit": false,
-  "conventionalCommits.emojiFormat": "emoji",
-  "conventionalCommits.lineBreak": "\\n",
-  "conventionalCommits.promptScopes": false,
-  "conventionalCommits.showNewVersionNotes": false,
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.resizeImages": null,
   "hediet.vscode-drawio.theme": "kennedy",
@@ -374,10 +369,6 @@
   // pandoc
   "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
   "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
-  // ui
-  "material-icon-theme.files.associations": {
-    "*.m": "matlab"
-  },
   "redhat.telemetry.enabled": false,
   // spell & grammar
   "spellright.configurationScope": "user",
