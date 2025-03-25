@@ -5447,6 +5447,8 @@ $("h1").each(function() {
 			<string>yl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO Docs/Ultralytics YOLO Docs.docset</key>
 			<string>yl</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/VegaAltair/Vega-Altair.docset</key>
+			<string>at</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/aqtinstall/aqtinstall.docset</key>
 			<string>aq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/blackjax/blackjax.docset</key>

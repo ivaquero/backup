@@ -10,8 +10,8 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-
 # Oxidizer
+
 export OXIDIZER=${HOME}/Documents/GitHub/oxidizer
 source ${OXIDIZER}/oxidizer.sh
 
@@ -31,5 +31,4 @@ autoload bashcompinit
 bashcompinit
 source "$HOME/vcpkg/scripts/vcpkg_completion.zsh"
 
-# export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
-# clear
+export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
