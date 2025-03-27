@@ -2,7 +2,6 @@ altair
 bambi
 conda-tree
 cvxpy
-great_tables
 ipykernel
 ipywidgets
 manim

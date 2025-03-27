@@ -1,5 +1,5 @@
 conda-tree
-pytorch
-roboticstoolbox-python
+ipykernel
+torchvision
 transformers
 ultralytics

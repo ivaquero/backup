@@ -2631,6 +2631,63 @@ $("h1").each(function() {
 					<string>plotnine</string>
 				</dict>
 			</dict>
+			<key>polars</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:13:23Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.pola.rs/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>pl</string>
+						<key>docsetName</key>
+						<string>polars</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.pola.rs/</string>
+					</dict>
+					<key>name</key>
+					<string>polars</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>polars</string>
+				</dict>
+			</dict>
 			<key>scikit-learn</key>
 			<dict>
 				<key>date</key>
@@ -3144,34 +3201,6 @@ $("h1").each(function() {
 					<string>https://ranaroussi.github.io/yfinance/</string>
 				</dict>
 			</dict>
-			<key>https://requests.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-05-31T06:34:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Requests</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://requests.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://scikit-learn.org/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-11T18:53:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>scikit-learn</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scikit-learn.org/stable/</string>
-				</dict>
-			</dict>
 			<key>https://seaborn.pydata.org/</key>
 			<dict>
 				<key>date</key>
@@ -3623,6 +3652,20 @@ $("h1").each(function() {
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://requests.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:16:17Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Requests</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://requests.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://scikit-image.org/docs/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3635,6 +3678,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://scikit-image.org/docs/stable/</string>
+				</dict>
+			</dict>
+			<key>https://scikit-learn.org/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:15:35Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scikit-learn.org/stable/</string>
 				</dict>
 			</dict>
 			<key>https://scikit.bio/docs/latest/</key>
@@ -3826,6 +3883,78 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>Requests</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:16:17Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Requests</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Requests#readme</string>
+					<key>authorLinkText</key>
+					<string>Thiago Medeiros, Xavier Yang</string>
+					<key>name</key>
+					<string>Requests</string>
+					<key>platform</key>
+					<string>usercontribRequests</string>
+					<key>uniqueIdentifier</key>
+					<string>Requests</string>
+				</dict>
+			</dict>
+			<key>Scikit</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:16:03Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Machine Learning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>usercontribScikit</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit</string>
+				</dict>
+			</dict>
+			<key>polars</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:14:13Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>python</string>
+						<string>graph</string>
+						<string>matplotlib</string>
+						<string>visualization</string>
+						<string>data</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/polars#readme</string>
+					<key>authorLinkText</key>
+					<string>Paulo S. Costa</string>
+					<key>name</key>
+					<string>polars</string>
+					<key>platform</key>
+					<string>usercontribpolars</string>
+					<key>uniqueIdentifier</key>
+					<string>polars</string>
+				</dict>
+			</dict>
 			<key>pytest</key>
 			<dict>
 				<key>date</key>
@@ -4567,55 +4696,6 @@ $("h1").each(function() {
 					<string>React_Native</string>
 				</dict>
 			</dict>
-			<key>Requests</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T09:33:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Requests</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Requests#readme</string>
-					<key>authorLinkText</key>
-					<string>Thiago Medeiros, Xavier Yang</string>
-					<key>name</key>
-					<string>Requests</string>
-					<key>platform</key>
-					<string>usercontribRequests</string>
-					<key>uniqueIdentifier</key>
-					<string>Requests</string>
-				</dict>
-			</dict>
-			<key>Scikit</key>
-			<dict>
-				<key>date</key>
-				<date>2024-07-27T19:11:51Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Machine Learning</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian
-							Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
-					<key>name</key>
-					<string>scikit-learn</string>
-					<key>platform</key>
-					<string>usercontribScikit</string>
-					<key>uniqueIdentifier</key>
-					<string>Scikit</string>
-				</dict>
-			</dict>
 			<key>Scikit-image</key>
 			<dict>
 				<key>date</key>
@@ -5062,33 +5142,6 @@ $("h1").each(function() {
 					<string>usercontribplotnine</string>
 					<key>uniqueIdentifier</key>
 					<string>plotnine</string>
-				</dict>
-			</dict>
-			<key>polars</key>
-			<dict>
-				<key>date</key>
-				<date>2023-08-24T05:17:55Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>python</string>
-						<string>graph</string>
-						<string>matplotlib</string>
-						<string>visualization</string>
-						<string>data</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/polars#readme</string>
-					<key>authorLinkText</key>
-					<string>Paulo S. Costa</string>
-					<key>name</key>
-					<string>polars</string>
-					<key>platform</key>
-					<string>usercontribpolars</string>
-					<key>uniqueIdentifier</key>
-					<string>polars</string>
 				</dict>
 			</dict>
 			<key>pymc</key>
@@ -5648,6 +5701,8 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn
 					1.2.docset</key>
 			<string>sk:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
+			<string>sk</string>
 			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn
 					0.11.0.docset</key>
 			<string>s</string>
@@ -5704,11 +5759,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:38:01Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Rust.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-12T02:31:55Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SciPy.xml</key>
 			<dict>
@@ -5812,6 +5862,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-01-03T12:56:13Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Rust.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-27T07:28:17Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SQLAlchemy.xml</key>
 			<dict>
