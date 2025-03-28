@@ -1,3 +1,4 @@
 conda-tree
-touying
-uv
+pip
+python-pptx
+typst-py
