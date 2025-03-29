@@ -2,6 +2,7 @@
 . $HOME\oxidizer\oxidizer.ps1
 
 Import-Module scoop-completion
+Import-Module 'C:\Scoop\apps\vcpkg\current\scripts\posh-vcpkg'
 
 # #region mamba initialize
 # !! Contents within this block are managed by 'mamba shell init' !!
@@ -12,4 +13,4 @@ $Env:MAMBA_EXE = "C:\Scoop\apps\micromamba\shims\micromamba.exe"
 
 $env:VCPKG_ROOT="$HOME\vcpkg"
 $env:PATH="$env:VCPKG_ROOT;$env:PATH"
-$env:VCPKG_BINARY_SOURCES="clear"
+$env:VCPKG_FEATURE_FLAG = "-binarycaching"
