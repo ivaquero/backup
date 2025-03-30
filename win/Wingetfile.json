@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-03-13T23:29:39.464-00:00",
+	"CreationDate" : "2025-03-30T14:42:43.653-00:00",
 	"Sources" : 
 	[
 		{
@@ -14,6 +14,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
 				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour"
@@ -35,6 +38,9 @@
 				},
 				{
 					"PackageIdentifier" : "Insecure.Npcap"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
