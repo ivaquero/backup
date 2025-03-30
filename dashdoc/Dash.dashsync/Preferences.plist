@@ -3173,20 +3173,6 @@ $("h1").each(function() {
 					<string>https://python.arviz.org/en/stable/</string>
 				</dict>
 			</dict>
-			<key>https://pytorch.org/docs/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-01-31T09:38:47Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PyTorch</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://pytorch.org/docs/stable/</string>
-				</dict>
-			</dict>
 			<key>https://ranaroussi.github.io/yfinance/</key>
 			<dict>
 				<key>date</key>
@@ -3652,6 +3638,20 @@ $("h1").each(function() {
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://pytorch.org/docs/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-30T02:23:21Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyTorch</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pytorch.org/docs/stable/</string>
+				</dict>
+			</dict>
 			<key>https://requests.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3883,6 +3883,31 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>PyTorch</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-30T02:23:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>PyTorch</string>
+						<string>Deep Learning</string>
+						<string>Machine Learning</string>
+						<string>Neural Networks</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>PyTorch</string>
+					<key>platform</key>
+					<string>usercontribPyTorch</string>
+					<key>uniqueIdentifier</key>
+					<string>PyTorch</string>
+				</dict>
+			</dict>
 			<key>Requests</key>
 			<dict>
 				<key>date</key>
@@ -3974,6 +3999,28 @@ $("h1").each(function() {
 					<string>usercontribpytest</string>
 					<key>uniqueIdentifier</key>
 					<string>pytest</string>
+				</dict>
+			</dict>
+			<key>torchvision</key>
+			<dict>
+				<key>date</key>
+				<date>2025-03-30T02:23:08Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>vision</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchvision#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>torchvision</string>
+					<key>platform</key>
+					<string>usercontribtorchvision</string>
+					<key>uniqueIdentifier</key>
+					<string>torchvision</string>
 				</dict>
 			</dict>
 		</dict>
@@ -4588,32 +4635,6 @@ $("h1").each(function() {
 					<string>usercontribPyMC3</string>
 					<key>uniqueIdentifier</key>
 					<string>PyMC3</string>
-				</dict>
-			</dict>
-			<key>PyTorch</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T12:23:27Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>PyTorch</string>
-						<string>Deep Learning</string>
-						<string>Machine Learning</string>
-						<string>Neural Networks</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/PyTorch#readme</string>
-					<key>authorLinkText</key>
-					<string>Yue Gao</string>
-					<key>name</key>
-					<string>PyTorch</string>
-					<key>platform</key>
-					<string>usercontribPyTorch</string>
-					<key>uniqueIdentifier</key>
-					<string>PyTorch</string>
 				</dict>
 			</dict>
 			<key>PytorchLightning</key>
@@ -5244,29 +5265,6 @@ $("h1").each(function() {
 					<string>usercontribtorchtext</string>
 					<key>uniqueIdentifier</key>
 					<string>torchtext</string>
-				</dict>
-			</dict>
-			<key>torchvision</key>
-			<dict>
-				<key>date</key>
-				<date>2023-08-27T06:02:22Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>vision</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/torchvision#readme</string>
-					<key>authorLinkText</key>
-					<string>Yue Gao</string>
-					<key>name</key>
-					<string>torchvision</string>
-					<key>platform</key>
-					<string>usercontribtorchvision</string>
-					<key>uniqueIdentifier</key>
-					<string>torchvision</string>
 				</dict>
 			</dict>
 			<key>transformers</key>
