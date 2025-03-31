@@ -1,7 +1,6 @@
 adachishingo.open-with
 alefragnani.bookmarks
 ban.spellright
-bierner.markdown-mermaid
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
@@ -33,6 +32,7 @@ ms-vscode.live-server
 myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
+pomdtr.markdown-kroki
 qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
