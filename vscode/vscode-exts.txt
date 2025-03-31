@@ -31,7 +31,6 @@ ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
 myriad-dreamin.tinymist
-octop162.markdown-table-editor
 oxc.oxc-vscode
 pkief.material-icon-theme
 qcz.text-power-tools
@@ -39,6 +38,7 @@ redhat.vscode-xml
 redhat.vscode-yaml
 reporting-cz.omegasheets-vscode
 rickaym.manim-sideview
+takumii.markdowntable
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
