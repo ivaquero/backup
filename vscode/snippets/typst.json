@@ -58,8 +58,8 @@
       "    [], [], [],",
       "    [], [], [],",
       "  ),",
-      "  caption: [],",
-      "  supplement: [表],",
+      "  caption: none,",
+      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -79,8 +79,8 @@
       "    [], [], [], [],",
       "    [], [], [], [],",
       "  ),",
-      "  caption: [],",
-      "  supplement: [表],",
+      "  caption: none,",
+      "  supplement:\"表\",",
       "  kind: table",
       ")",
       ""
@@ -101,8 +101,8 @@
       "    [], [], [], [], [],",
       "    [], [], [], [], [],",
       "  ),",
-      "  caption: [],",
-      "  supplement: [表],",
+      "  caption: none,",
+      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -123,8 +123,8 @@
       "    [], [], [], [], [], [],",
       "    [], [], [], [], [], [],",
       "  ),",
-      "  caption: [],",
-      "  supplement: [表],",
+      "  caption: none,",
+      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -192,8 +192,8 @@
       "#let data = csv(\"data\")",
       "#figure(",
       "  ktable(data, 4),",
-      "  caption: \"\",",
-      "  supplement: [表],",
+      "  caption: none,",
+      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -204,9 +204,10 @@
     "body": [
       "#figure(",
       "  image(\"images\", width: 40%),",
-      "  caption: \"\",",
-      "  supplement: [图]",
-      ")"
+      "  caption: none,",
+      "  supplement: \"图\",",
+      ")",
+      ""
     ],
     "description": ""
   },
