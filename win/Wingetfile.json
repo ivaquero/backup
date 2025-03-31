@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-03-30T14:42:43.653-00:00",
+	"CreationDate" : "2025-03-30T22:39:55.856-00:00",
 	"Sources" : 
 	[
 		{
@@ -98,9 +98,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WSL"
 				}
 			],
 			"SourceDetails" : 
