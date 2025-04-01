@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-03-30T22:39:55.856-00:00",
+	"CreationDate" : "2025-04-01T09:56:13.572-00:00",
 	"Sources" : 
 	[
 		{
@@ -10,13 +10,13 @@
 					"PackageIdentifier" : "Nutstore.Nutstore"
 				},
 				{
-					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
+				},
+				{
+					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
 					"PackageIdentifier" : "Apple.Bonjour"
