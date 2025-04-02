@@ -48,6 +48,7 @@ brew "libuv"
 brew "lsd"
 brew "node"
 brew "mailsy"
+brew "mas"
 brew "micromamba"
 brew "nomino"
 brew "ollama", restart_service: :changed
