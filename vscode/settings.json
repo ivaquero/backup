@@ -331,7 +331,6 @@
   },
   "tinymist.completion.triggerOnSnippetPlaceholders": true,
   "tinymist.exportPdf": "onDocumentHasTitle",
-  "tinymist.exportTarget": "html",
   "tinymist.formatterMode": "typstyle",
   "tinymist.outputPath": "$root/articles/$name",
   "tinymist.preview.cursorIndicator": true,

@@ -769,5 +769,12 @@
       ")"
     ],
     "description": ""
+  },
+  "hred": {
+    "prefix": "hred",
+    "body": [
+      "text(,fill: #rgb(\"#ff0000\"))"
+    ],
+    "description": ""
   }
 }
