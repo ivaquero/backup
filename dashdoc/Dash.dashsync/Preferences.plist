@@ -123,63 +123,6 @@
 					<string>Typst</string>
 				</dict>
 			</dict>
-			<key>great-tables</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-24T02:22:14Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://posit-dev.github.io/great-tables/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>gt</string>
-						<key>docsetName</key>
-						<string>great-tables</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://posit-dev.github.io/great-tables</string>
-					</dict>
-					<key>name</key>
-					<string>great-tables</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>great-tables</string>
-				</dict>
-			</dict>
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
@@ -274,6 +217,63 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>transformers</string>
+				</dict>
+			</dict>
+			<key>uv</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-02T15:11:33Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://docs.astral.sh/uv/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>uv</string>
+						<key>docsetName</key>
+						<string>uv</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://docs.astral.sh/uv/</string>
+					</dict>
+					<key>name</key>
+					<string>uv</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>uv</string>
 				</dict>
 			</dict>
 		</dict>
@@ -2295,6 +2295,63 @@ $("h1").each(function() {
 					<string>conda</string>
 				</dict>
 			</dict>
+			<key>great-tables</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-02T15:10:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://posit-dev.github.io/great-tables/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>gt</string>
+						<key>docsetName</key>
+						<string>great-tables</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://posit-dev.github.io/great-tables</string>
+					</dict>
+					<key>name</key>
+					<string>great-tables</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>great-tables</string>
+				</dict>
+			</dict>
 			<key>gt</key>
 			<dict>
 				<key>date</key>
@@ -2832,54 +2889,6 @@ $("h1").each(function() {
 					<string>slidev</string>
 				</dict>
 			</dict>
-			<key>uv</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-20T13:59:46Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://docs.astral.sh/uv/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer { display: none !important; }</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>uv</string>
-						<key>docsetName</key>
-						<string>uv</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
-								pageTitle, type: "Guide"}); $("h1").each(function() { const
-								entryName = $(this).text(); var entryHash = $(this).attr('id');
-								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
-								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
-								type: "Section", hash: entryHash}); });</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://docs.astral.sh/uv/</string>
-					</dict>
-					<key>name</key>
-					<string>uv</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>uv</string>
-				</dict>
-			</dict>
 			<key>xmake</key>
 			<dict>
 				<key>date</key>
@@ -3115,20 +3124,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://networkx.org/documentation/stable/</string>
-				</dict>
-			</dict>
-			<key>https://petercorke.github.io/robotics-toolbox-python/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-25T16:55:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Robotics Toolbox for Python</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
 				</dict>
 			</dict>
 			<key>https://preliz.readthedocs.io/en/latest/</key>
@@ -3608,6 +3603,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://ocrmypdf.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://petercorke.github.io/robotics-toolbox-python/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-02T15:13:07Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Robotics Toolbox for Python</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.org/</key>
@@ -5413,7 +5422,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
 			<string>q</string>
 			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
-			<string>r</string>
+			<string>rs</string>
 			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
 			<string>sa</string>
 			<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
@@ -5716,6 +5725,8 @@ $("h1").each(function() {
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/torchtext/torchtext.docset</key>
 			<string>tt</string>
+			<key>~/Library/Application Support/Dash/User Contributed/torchvision/torchvision.docset</key>
+			<string>tv</string>
 			<key>~/Library/Application Support/Dash/User Contributed/xarray/xarray.docset</key>
 			<string>xr</string>
 			<key>~/Library/Application Support/Dash/Versioned DocSets/Qt for Python PySide
@@ -5769,6 +5780,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2025-03-28T04:59:07Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Rust.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-02T15:39:34Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SciPy.xml</key>
 			<dict>
@@ -5862,11 +5878,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-01-03T12:56:13Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Rust.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-27T07:28:17Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SQLAlchemy.xml</key>
 			<dict>
