@@ -126,7 +126,7 @@
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-02-25T17:04:09Z</date>
+				<date>2025-04-04T06:01:17Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -136,7 +136,9 @@
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer { display: none !important; }</string>
+						<string>footer {
+    display: none !important;
+}</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -152,12 +154,19 @@
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
-								pageTitle, type: "Guide"}); $("h1").each(function() { const
-								entryName = $(this).text(); var entryHash = $(this).attr('id');
-								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
-								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
-								type: "Section", hash: entryHash}); });</string>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
@@ -219,10 +228,67 @@
 					<string>transformers</string>
 				</dict>
 			</dict>
+			<key>typst-lilaq</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-03T15:40:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://lilaq.org/docs/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>ttl</string>
+						<key>docsetName</key>
+						<string>typst-lilaq</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://lilaq.org/docs</string>
+					</dict>
+					<key>name</key>
+					<string>typst-lilaq</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>typst-lilaq</string>
+				</dict>
+			</dict>
 			<key>uv</key>
 			<dict>
 				<key>date</key>
-				<date>2025-04-02T15:11:33Z</date>
+				<date>2025-04-04T05:54:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3042,20 +3108,6 @@ $("h1").each(function() {
 					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
-			<key>https://docs.jax.dev/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-27T11:21:57Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>JAX</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.jax.dev/en/latest/</string>
-				</dict>
-			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3309,6 +3361,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://contextily.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://docs.jax.dev/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-04T05:55:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>JAX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.jax.dev/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://docs.marimo.io/</key>
@@ -3961,6 +4027,28 @@ $("h1").each(function() {
 					<string>usercontribScikit</string>
 					<key>uniqueIdentifier</key>
 					<string>Scikit</string>
+				</dict>
+			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-04T05:55:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Gary Miguel</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
 				</dict>
 			</dict>
 			<key>polars</key>
@@ -5054,29 +5142,6 @@ $("h1").each(function() {
 					<string>usercontribimbalanced-learn</string>
 					<key>uniqueIdentifier</key>
 					<string>imbalanced-learn</string>
-				</dict>
-			</dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-25T17:01:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Gary Miguel</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
 				</dict>
 			</dict>
 			<key>jq</key>
