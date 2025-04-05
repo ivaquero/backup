@@ -3136,20 +3136,6 @@ $("h1").each(function() {
 					<string>https://docs.pydantic.dev/latest/</string>
 				</dict>
 			</dict>
-			<key>https://docs.sympy.org/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-09-21T14:18:20Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>SymPy</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.sympy.org/latest/</string>
-				</dict>
-			</dict>
 			<key>https://docs.ultralytics.com/</key>
 			<dict>
 				<key>date</key>
@@ -3417,6 +3403,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.rocketpy.org/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://docs.sympy.org/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-05T03:43:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>SymPy</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.sympy.org/latest/</string>
 				</dict>
 			</dict>
 			<key>https://docs.ultralytics.com/zh/</key>
@@ -4027,6 +4027,29 @@ $("h1").each(function() {
 					<string>usercontribScikit</string>
 					<key>uniqueIdentifier</key>
 					<string>Scikit</string>
+				</dict>
+			</dict>
+			<key>SymPy</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-05T03:43:17Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Symbolic Mathematics Python Library</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/SymPy#readme</string>
+					<key>authorLinkText</key>
+					<string>Jan Winkler, Xavier Yang</string>
+					<key>name</key>
+					<string>SymPy</string>
+					<key>platform</key>
+					<string>usercontribSymPy</string>
+					<key>uniqueIdentifier</key>
+					<string>SymPy</string>
 				</dict>
 			</dict>
 			<key>jax</key>
@@ -4862,30 +4885,6 @@ $("h1").each(function() {
 					<string>usercontribSeaborn</string>
 					<key>uniqueIdentifier</key>
 					<string>Seaborn</string>
-				</dict>
-			</dict>
-			<key>SymPy</key>
-			<dict>
-				<key>date</key>
-				<date>2024-01-28T09:43:48Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Symbolic Mathematics Python Library</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/SymPy#readme</string>
-					<key>authorLinkText</key>
-					<string>Jan Winkler, Xavier Yang</string>
-					<key>name</key>
-					<string>SymPy</string>
-					<key>platform</key>
-					<string>usercontribSymPy</string>
-					<key>uniqueIdentifier</key>
-					<string>SymPy</string>
 				</dict>
 			</dict>
 			<key>TorchMetrics</key>

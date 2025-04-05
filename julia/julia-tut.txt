@@ -27,10 +27,8 @@ RDatasets
 ReverseDiff
 Symbolics
 ThreadsX
-TidierData
-TidierFiles
-TidierPlots
+Tidier
+Turing
 URIs
 Unicode
-WGLMakie
 YAML
