@@ -29,6 +29,7 @@ ms-toolsai.vscode-jupyter-cell-tags
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
+ms-vscode.powershell
 myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
