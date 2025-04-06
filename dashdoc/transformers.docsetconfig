@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>allowFilters</key>
-	<string>https://www.doxygen.nl/manual/*</string>
+	<string>https://huggingface.co/docs/huggingface_hub/*</string>
 	<key>basicIndexEnabled</key>
 	<true/>
 	<key>cssToInject</key>
@@ -13,9 +13,9 @@
 	<key>denyFilters</key>
 	<string></string>
 	<key>docsetKeyword</key>
-	<string>dx</string>
+	<string>hg</string>
 	<key>docsetName</key>
-	<string>Doxygen</string>
+	<string>transformers</string>
 	<key>extraInfoPlist</key>
 	<string></string>
 	<key>isFromLocalFolder</key>
@@ -41,6 +41,6 @@ $("h1").each(function() {
 	<key>localFolderPath</key>
 	<string></string>
 	<key>websiteURL</key>
-	<string>https://www.doxygen.nl/manual/index.html</string>
+	<string>https://huggingface.co/docs/huggingface_hub</string>
 </dict>
 </plist>

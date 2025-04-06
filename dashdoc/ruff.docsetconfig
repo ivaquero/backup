@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>allowFilters</key>
-	<string>https://tidierorg.github.io/TidierPlots.jl/latest/*</string>
+	<string>https://docs.astral.sh/ruff/*</string>
 	<key>basicIndexEnabled</key>
 	<true/>
 	<key>cssToInject</key>
@@ -13,9 +13,9 @@
 	<key>denyFilters</key>
 	<string></string>
 	<key>docsetKeyword</key>
-	<string>tpj</string>
+	<string>rf</string>
 	<key>docsetName</key>
-	<string>TidierPlots</string>
+	<string>ruff</string>
 	<key>extraInfoPlist</key>
 	<string></string>
 	<key>isFromLocalFolder</key>
@@ -41,6 +41,6 @@ $("h1").each(function() {
 	<key>localFolderPath</key>
 	<string></string>
 	<key>websiteURL</key>
-	<string>https://tidierorg.github.io/TidierPlots.jl/latest/</string>
+	<string>https://docs.astral.sh/ruff/</string>
 </dict>
 </plist>

@@ -3015,7 +3015,50 @@ $("h1").each(function() {
 	<key>DHGoRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>github.com/spf13/cobra</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-06T01:27:18Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/cobra</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/cobra</string>
+				</dict>
+			</dict>
+			<key>github.com/spf13/viper</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-06T01:30:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/viper</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/viper</string>
+				</dict>
+			</dict>
+			<key>github.com/tidwall/gjson</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-06T01:28:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/tidwall/gjson</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/tidwall/gjson</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
 		<dict>
 			<key>github.com/pdfcpu/pdfcpu/pkg/api</key>
@@ -3030,20 +3073,6 @@ $("h1").each(function() {
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
 					<string>github.com/pdfcpu/pdfcpu/pkg/api</string>
-				</dict>
-			</dict>
-			<key>github.com/spf13/cobra</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-20T14:16:11Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/spf13/cobra</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/spf13/cobra</string>
 				</dict>
 			</dict>
 		</dict>
@@ -5506,7 +5535,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Docset Generator/Typst/Typst.docset</key>
 			<string>tt</string>
 			<key>~/Library/Application Support/Dash/Go DocSets/github.com spf13 cobra/GoDoc.docset</key>
-			<string>gcb</string>
+			<string>godoc</string>
 			<key>~/Library/Application Support/Dash/Python
 					DocSets/autogencore/autogen_core.docset</key>
 			<string>ag</string>

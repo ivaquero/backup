@@ -15,7 +15,7 @@
 	<key>docsetKeyword</key>
 	<string>typ</string>
 	<key>docsetName</key>
-	<string>Typst</string>
+	<string>typst</string>
 	<key>extraInfoPlist</key>
 	<string></string>
 	<key>isFromLocalFolder</key>

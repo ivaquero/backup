@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>allowFilters</key>
-	<string>beautiful.makie.org/dev/*</string>
+	<string>https://docs.astral.sh/uv/*</string>
 	<key>basicIndexEnabled</key>
 	<true/>
 	<key>cssToInject</key>
@@ -13,9 +13,9 @@
 	<key>denyFilters</key>
 	<string></string>
 	<key>docsetKeyword</key>
-	<string>bm</string>
+	<string>uv</string>
 	<key>docsetName</key>
-	<string>Beautiful Makie</string>
+	<string>uv</string>
 	<key>extraInfoPlist</key>
 	<string></string>
 	<key>isFromLocalFolder</key>
@@ -41,6 +41,6 @@ $("h1").each(function() {
 	<key>localFolderPath</key>
 	<string></string>
 	<key>websiteURL</key>
-	<string>https://beautiful.makie.org/dev/</string>
+	<string>https://docs.astral.sh/uv/</string>
 </dict>
 </plist>
