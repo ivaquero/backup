@@ -37,8 +37,6 @@ export VCPKG_ROOT="$HOME/vcpkg"
 export PATH=$PATH:$VCPKG_ROOT
 export VCPKG_BINARY_SOURCES=clear
 
-autoload bashcompinit
-bashcompinit
 source "$HOME/vcpkg/scripts/vcpkg_completion.zsh"
 
 export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
