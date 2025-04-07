@@ -29,14 +29,14 @@ if [[ "$(uname -sm)" == "Darwin arm64" ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
     export CPATH="/opt/homebrew/include"
     export LIBRARY_PATH="/opt/homebrew/lib"
-    export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+    export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+    export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
     export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
 fi
 
 export VCPKG_ROOT="$HOME/vcpkg"
 export PATH=$PATH:$VCPKG_ROOT
 export VCPKG_BINARY_SOURCES=clear
-
 source "$HOME/vcpkg/scripts/vcpkg_completion.zsh"
 
 export DOCKER_HOST=unix://$(podman machine inspect --format '{{.ConnectionInfo.PodmanSocket.Path}}')
