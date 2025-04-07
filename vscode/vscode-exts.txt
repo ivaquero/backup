@@ -33,6 +33,7 @@ ms-vscode.powershell
 myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
+platformio.platformio-ide
 pomdtr.markdown-kroki
 qcz.text-power-tools
 redhat.vscode-xml
