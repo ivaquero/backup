@@ -418,7 +418,6 @@
   },
   "ltex.enabled": [
     "latex",
-    "markdown"
   ],
   "ltex.latex.commands": {
     "\\ref{}": "ignore",
