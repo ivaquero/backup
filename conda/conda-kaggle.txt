@@ -8,7 +8,6 @@ mplfinance
 pip
 polars
 preliz
-pydantic
 pymoo
 python-calamine
 scikit-learn
