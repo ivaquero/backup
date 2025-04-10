@@ -3193,6 +3193,20 @@ $("h1").each(function() {
 					<string>https://networkx.org/documentation/stable/</string>
 				</dict>
 			</dict>
+			<key>https://numba.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-10T01:57:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Numba</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://numba.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
