@@ -3179,6 +3179,20 @@ $("h1").each(function() {
 					<string>https://docs.ultralytics.com/</string>
 				</dict>
 			</dict>
+			<key>https://gymnasium.farama.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-11T05:40:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Gymnasium</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://gymnasium.farama.org/</string>
+				</dict>
+			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>

@@ -12,6 +12,7 @@ evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
 foxundermoon.shell-format
+github.vscode-pull-request-github
 golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
@@ -33,7 +34,6 @@ ms-vscode.powershell
 myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
-platformio.platformio-ide
 pomdtr.markdown-kroki
 qcz.text-power-tools
 redhat.vscode-xml
