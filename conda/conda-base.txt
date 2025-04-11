@@ -1,6 +1,5 @@
 conda-build
 conda-tree
-jinja2
 pip
 python-build
 python-pptx

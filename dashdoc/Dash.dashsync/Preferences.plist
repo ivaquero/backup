@@ -5587,6 +5587,8 @@ $("h1").each(function() {
 			<string>n</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/NetworkX/NetworkX.docset</key>
 			<string>nx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Numba/Numba.docset</key>
+			<string>nb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PreliZ/PreliZ.docset</key>
 			<string>pz</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/PyMC project website/PyMC

@@ -4,8 +4,8 @@ conda-tree
 cvxpy
 ipykernel
 ipywidgets
+manim
 mplfinance
-pip
 polars
 preliz
 pymoo
