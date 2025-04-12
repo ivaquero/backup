@@ -1,0 +1,344 @@
+{
+  "inm": {
+    "prefix": "inm",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import numpy as np",
+    ]
+  },
+  "inmp": {
+    "prefix": "inmp",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import numpy as np",
+      "import pandas as pd"
+    ]
+  },
+  "inms": {
+    "prefix": "inms",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt",
+      "import numpy as np",
+      "import scipy.stats as stats"
+    ]
+  },
+  "inp": {
+    "prefix": "inp",
+    "description": "",
+    "body": [
+      "import numpy as np"
+    ]
+  },
+  "ipd": {
+    "prefix": "ipd",
+    "description": "",
+    "body": [
+      "import pandas as pd"
+    ]
+  },
+  "iplt": {
+    "prefix": "iplt",
+    "description": "",
+    "body": [
+      "import matplotlib.pyplot as plt"
+    ]
+  },
+  "impl": {
+    "prefix": "impl",
+    "description": "",
+    "body": [
+      "import matplotlib as mpl"
+    ]
+  },
+  "ists": {
+    "prefix": "ists",
+    "description": "",
+    "body": [
+      "import scipy.stats as stats"
+    ]
+  },
+  "isns": {
+    "prefix": "isns",
+    "description": "",
+    "body": [
+      "import seaborn as sns"
+    ]
+  },
+  "isy": {
+    "prefix": "isy",
+    "description": "",
+    "body": [
+      "import sympy as sy",
+      ""
+    ]
+  },
+  "iaz": {
+    "prefix": "iaz",
+    "description": "",
+    "body": [
+      "import arviz as az",
+      ""
+    ]
+  },
+  "ipm": {
+    "prefix": "ipm",
+    "description": "",
+    "body": [
+      "import pymc as pm",
+      "import arviz as az",
+      "",
+      "az.style.use('arviz-darkgrid')"
+    ]
+  },
+  "inn": {
+    "prefix": "inn",
+    "description": "",
+    "body": [
+      "import torch.nn as nn"
+    ]
+  },
+  "irnd": {
+    "prefix": "irnd",
+    "description": "",
+    "body": [
+      "import numpy.random as random",
+      ""
+    ]
+  },
+  "rcsv": {
+    "prefix": "rcsv",
+    "description": "",
+    "body": [
+      "data = pd.read_csv('')"
+    ]
+  },
+  "fshow": {
+    "prefix": "fshow",
+    "description": "",
+    "body": [
+      "plt.show()"
+    ]
+  },
+  "f12": {
+    "prefix": "f12",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)"
+    ]
+  },
+  "f21": {
+    "prefix": "f21",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(2, 1, figsize=(10, 8), constrained_layout=True)"
+    ]
+  },
+  "f31": {
+    "prefix": "f31",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(3, 1, figsize=(10, 8), constrained_layout=True)"
+    ]
+  },
+  "f13": {
+    "prefix": "f13",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(1, 3, figsize=(10, 6), constrained_layout=True)"
+    ]
+  },
+  "f1": {
+    "prefix": "f1",
+    "description": "",
+    "body": [
+      "_, ax = plt.subplots(figsize=(8, 4))"
+    ]
+  },
+  "f22": {
+    "prefix": "f22",
+    "description": "",
+    "body": [
+      "_, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)"
+    ]
+  },
+  "fsv": {
+    "prefix": "fsv",
+    "description": "",
+    "body": [
+      "plt.savefig('../images/')"
+    ]
+  },
+  "faj": {
+    "prefix": "faj",
+    "description": "",
+    "body": [
+      "plt.subplots_adjust(bottom=0.1,",
+      "                    left=0.15,",
+      "                    right=1,",
+      "                    top=1,",
+      "                    wspace=0.3,",
+      "                    hspace=0.25)"
+    ]
+  },
+  "rndsd": {
+    "prefix": "rndsd",
+    "description": "",
+    "body": [
+      "np.random.seed(42)"
+    ]
+  },
+  "mesh": {
+    "prefix": "mesh",
+    "description": "",
+    "body": [
+      "def make_mesh(lims, h):",
+      "",
+      "    x = np.linspace(lims[0], lims[1], h)",
+      "    y = np.linspace(lims[2], lims[3], h)",
+      "    X, Y = np.meshgrid(x, y)",
+      "",
+      "    return X, Y",
+      ""
+    ]
+  },
+  "meshd": {
+    "prefix": "meshd",
+    "description": "",
+    "body": [
+      "def make_mesh_d(lims, h):",
+      "",
+      "    x = np.arange(lims[0], lims[1], h)",
+      "    y = np.arange(lims[2], lims[3], h)",
+      "    X, Y = np.meshgrid(x, y)",
+      "",
+      "    return X, Y",
+      ""
+    ]
+  },
+  "fcbar": {
+    "prefix": "cbar",
+    "description": "",
+    "body": [
+      "def add_cbar(fig,",
+      "             loc,",
+      "             orient='v',",
+      "             cmap='RdBu_r',",
+      "             vmin=-1,",
+      "             vmax=1,",
+      "             labelsize=20):",
+      "",
+      "    norm = mpl.colors.Normalize(vmin=vmin, vmax=vmax)",
+      "    sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)",
+      "",
+      "    ruler = fig.add_axes(loc)",
+      "    if orient == 'h':",
+      "        cbar = f1.colorbar(sm, cax=ruler, orientation='horizontal')",
+      "    if orient == 'v':",
+      "        cbar = f1.colorbar(sm, cax=ruler, orientation='vertical')",
+      "    cbar.ax.tick_params(labelsize=labelsize)",
+      "",
+      "    return cbar",
+      ""
+    ]
+  },
+  "fcbar2": {
+    "prefix": "cbar2",
+    "description": "",
+    "body": [
+      "def add_cbar(tick_values,",
+      "             tickformat='value',",
+      "             ticksize='medium',",
+      "             label=None,",
+      "             labelsize='medium'):",
+      "    cbar = plt.colorbar(ticks=tick_values / tick_values.max())",
+      "    cbar.ax.set_yticklabels([f\"{tickformat}\" for value in tick_values],",
+      "                            fontsize=ticksize)",
+      "    if label:",
+      "        cbar.set_label(label, fontsize=labelsize)",
+      ""
+    ]
+  },
+  "a3d": {
+    "prefix": "a3d",
+    "description": "",
+    "body": [
+      "fig = plt.figure(figsize=(12, 6))",
+      "ax = fig.add_subplot(111, projection='3d')",
+      "",
+      "lims = [-1.8, 1.8, -1.3, 1.3, -1.0, 1.0]",
+      "",
+      "ax.set(xlabel=\"$x_1$\",",
+      "       ylabel=\"$x_2$\",",
+      "       zlabel=\"$x_3$\",",
+      "       xlim=lims[:2],",
+      "       ylim=lims[2:4],",
+      "       zlim=lims[4:6])",
+      ""
+    ]
+  },
+  "aslb": {
+    "prefix": "aslb",
+    "description": "",
+    "body": [
+      "ax.set(xlabel='x', ylabel='y')",
+      ""
+    ]
+  },
+  "aspine": {
+    "prefix": "spine",
+    "description": "",
+    "body": [
+      "ax.spines[['top', 'right']].set_visible(False)",
+      ""
+    ]
+  },
+  "tgpu": {
+    "prefix": "gpu",
+    "description": "",
+    "body": [
+      "device = torch.device('mps' if torch.backends.mps.is_available() else 'cuda')",
+      "model = model.to(device)"
+    ]
+  },
+  "main": {
+    "prefix": "main",
+    "description": "",
+    "body": [
+      "if __name__ == '__main__':"
+    ]
+  },
+  "aannote": {
+    "prefix": "aannote",
+    "description": "",
+    "body": [
+      "for p in ax.patches:",
+      "    width = p.get_width()",
+      "    height = p.get_height()",
+      "    x, y = p.get_xy()",
+      "    ax.annotate(f'{height/100:.2%}', (x + width / 2, y + height * 1.02 + 5),",
+      "                ha='center')",
+      ""
+    ]
+  },
+  "fsty": {
+    "prefix": "fsty",
+    "description": "",
+    "body": [
+      "plt.style.use():",
+    ]
+  },
+  "frc": {
+    "prefix": "frc",
+    "description": "",
+    "body": [
+      "@mpl.rc_context({",
+      "    'font.family': 'sans-serif',",
+      "    'axes.titleweight': 'bold',",
+      "})",
+      ""
+    ]
+  }
+}

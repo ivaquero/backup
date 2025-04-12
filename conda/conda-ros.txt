@@ -1,0 +1,8 @@
+conda-tree
+gymnasium
+ipykernel
+scikit-learn
+tensorboard
+torchvision
+transformers
+ultralytics

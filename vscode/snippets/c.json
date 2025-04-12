@@ -1,0 +1,9 @@
+{
+  "iio": {
+    "prefix": "iio",
+    "description": "",
+    "body": [
+      "#include <stdio.h>"
+    ]
+  }
+}

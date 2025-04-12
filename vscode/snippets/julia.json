@@ -1,0 +1,73 @@
+{
+  "2df": {
+    "prefix": "2df",
+    "description": "",
+    "body": [
+      "|> DataFrame",
+      ""
+    ]
+  },
+  "fs5": {
+    "prefix": "fs5",
+    "description": "",
+    "body": [
+      "|> x -> first(x, 5)",
+      ""
+    ]
+  },
+  "uaog": {
+    "prefix": "uaog",
+    "description": "",
+    "body": [
+      "using AlgebraOfGraphics",
+      ""
+    ]
+  },
+  "ucm": {
+    "prefix": "ucm",
+    "description": "",
+    "body": [
+      "using CairoMakie",
+      ""
+    ]
+  },
+  "ude": {
+    "prefix": "ude",
+    "description": "",
+    "body": [
+      "using DifferentialEquations",
+      ""
+    ]
+  },
+  "udf": {
+    "prefix": "udf",
+    "description": "",
+    "body": [
+      "using DataFrames",
+      "using CSV: File",
+      ""
+    ]
+  },
+  "umtk": {
+    "prefix": "umtk",
+    "description": "",
+    "body": [
+      "using ModelingToolKit",
+      ""
+    ]
+  },
+  "f1": {
+    "prefix": "f1",
+    "description": "",
+    "body": [
+      "fig = Figure()",
+      "",
+      "ax = Axis(fig[1, 1],",
+      "    title=\"\",",
+      "    xlabel=\"x\",",
+      "    ylabel=\"f(x)\"",
+      ")",
+      ""
+    ]
+  }
+}

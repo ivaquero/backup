@@ -1,0 +1,548 @@
+{
+  "ind": {
+    "prefix": "ind",
+    "body": [
+      "&emsp;&emsp;",
+      ""
+    ],
+    "description": ""
+  },
+  "t3": {
+    "prefix": "t3",
+    "body": [
+      "|   ${0:title}  |     |     |",
+      "| :-: | :-: | :-: |",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "t32": {
+    "prefix": "t3",
+    "body": [
+      "|     |     |     |",
+      "| :-: | :-: | :-: |",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "t31": {
+    "prefix": "t3",
+    "body": [
+      "|     |     |     |",
+      "| :-: | :-: | :-: |",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "t4": {
+    "prefix": "t4",
+    "body": [
+      "|     |     |     |     |",
+      "| :-: | :-: | :-: | :-: |",
+      "|     |     |     |     |",
+      "|     |     |     |     |",
+      "|     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "t5": {
+    "prefix": "t5",
+    "body": [
+      "|     |     |     |     |     |",
+      "| :-: | :-: | :-: | :-: | :-: |",
+      "|     |     |     |     |     |",
+      "|     |     |     |     |     |",
+      "|     |     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "cpy": {
+    "prefix": "cpy",
+    "body": [
+      "```python",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "ccc": {
+    "prefix": "ccc",
+    "body": [
+      "```cpp",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cjl": {
+    "prefix": "cjl",
+    "body": [
+      "```julia",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cmd": {
+    "prefix": "cmd",
+    "body": [
+      "```markdown",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cjs": {
+    "prefix": "cjs",
+    "body": [
+      "```js",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cmm": {
+    "prefix": "cmm",
+    "body": [
+      "```mermaid",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "crs": {
+    "prefix": "crs",
+    "body": [
+      "```rust",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cbs": {
+    "prefix": "cbs",
+    "body": [
+      "```bash",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "cc": {
+    "prefix": "cc",
+    "body": [
+      "```c",
+      "",
+      "```",
+      ""
+    ],
+    "description": ""
+  },
+  "style": {
+    "prefix": "style",
+    "body": [
+      "<style>",
+      "    table {",
+      "        width: auto;",
+      "        display: table;",
+      "        margin-left: auto;",
+      "        margin-right: auto;",
+      "    }",
+      "",
+      "    .box {",
+      "        display: flex;",
+      "    }",
+      "    .left {",
+      "        width: 200px;",
+      "    }",
+      "    .right {",
+      "        flex: 1;",
+      "    }",
+      "</style>"
+    ],
+    "description": ""
+  },
+  "col2": {
+    "prefix": "col2",
+    "body": [
+      "<div class=\"box\">",
+      "    <div class=\"left\">",
+      "    </div>",
+      "    <div class=\"right\">",
+      "    </div>",
+      "</div>"
+    ],
+    "description": ""
+  },
+  "va": {
+    "prefix": "va",
+    "body": [
+      "𝒂"
+    ],
+    "description": ""
+  },
+  "aa": {
+    "prefix": "aa",
+    "body": [
+      "\\$a_1, a_2, …, a_n\\$",
+      ""
+    ],
+    "description": ""
+  },
+  "av": {
+    "prefix": "av",
+    "body": [
+      "$$",
+      "\\begin{bmatrix} a_1 \\\\ a_2 \\\\ ⋮ \\\\ a_n \\end{bmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "ah": {
+    "prefix": "ah",
+    "body": [
+      "$$",
+      "\\bigg(a_1 a_2 … a_n \\bigg)",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "ak": {
+    "prefix": "ak",
+    "body": [
+      "\\$k_1, k_2, …, k_n\\$",
+      ""
+    ],
+    "description": ""
+  },
+  "theo": {
+    "prefix": "theo",
+    "body": [
+      ":::{admonition} 定理",
+      "",
+      ":::",
+      ""
+    ],
+    "description": ""
+  },
+  "sum": {
+    "prefix": "sum",
+    "body": [
+      "∑_{i=1}^n",
+      ""
+    ],
+    "description": ""
+  },
+  "def": {
+    "prefix": "def",
+    "body": [
+      "**定义**：",
+      ""
+    ],
+    "description": ""
+  },
+  "uxy": {
+    "prefix": "uxy",
+    "body": [
+      "$X$和$Y$",
+      ""
+    ],
+    "description": ""
+  },
+  "m33": {
+    "prefix": "m33",
+    "body": [
+      "$$",
+      "\\begin{pmatrix}",
+      "a_{11} & a_{12} & a_{13} \\\\\\",
+      "a_{21} & a_{22} & a_{23} \\\\\\",
+      "a_{31} & a_{32} & a_{33}",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "m22": {
+    "prefix": "m22",
+    "body": [
+      "$$",
+      "\\begin{pmatrix}",
+      "a_{11} & a_{12} \\\\\\",
+      "a_{21} & a_{22}",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "m01": {
+    "prefix": "m01",
+    "body": [
+      "$$",
+      "\\begin{pmatrix}",
+      "a_1 \\\\\\ a_2",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "mmn": {
+    "prefix": "mmn",
+    "body": [
+      "$$",
+      "𝐀 =",
+      "\\begin{pmatrix}",
+      "a_{11} & a_{12} & … & a_{1n} \\\\\\",
+      "a_{21} & a_{22} & … & a_{2n} \\\\\\",
+      "⋮ & ⋮ & … & ⋮ \\\\\\",
+      "a_{m1} & a_{m2} & … & a_{mn}",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "m0m": {
+    "prefix": "m0m",
+    "body": [
+      "$$",
+      "\\begin{pmatrix}",
+      "a_1 \\\\\\ a_2 \\\\\\ ⋮ \\\\\\ a_m",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "detn": {
+    "prefix": "detn",
+    "body": [
+      "$$",
+      "|𝐀| =",
+      "\\begin{vmatrix}",
+      "a_{11} & a_{12} & … & a_{1n} \\\\\\",
+      "a_{21} & a_{22} & … & a_{2n} \\\\\\",
+      "⋮ & ⋮ & ⋱ & ⋮ \\\\\\",
+      "a_{n1} & a_{n2} & … & a_{nn}",
+      "\\end{vmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "mvdm": {
+    "prefix": "mvdm",
+    "body": [
+      "$$",
+      "𝐕 =",
+      "\\begin{pmatrix}",
+      "1 & 1 & … & 1 \\\\\\",
+      "x_1 & x_2 & … & x_n \\\\\\",
+      "⋮ & ⋮ & … & ⋮ \\\\\\",
+      "x_1^{n - 1} & x_2^{n - 1} & … & x_n^{n - 1}",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "detvdm": {
+    "prefix": "detvdm",
+    "body": [
+      "$$",
+      "|𝐕| =",
+      "\\begin{vmatrix}",
+      "1 & 1 & … & 1 \\\\\\",
+      "x_1 & x_2 & … & x_n \\\\\\",
+      "⋮ & ⋮ & … & ⋮ \\\\\\",
+      "x_1^{n - 1} & x_2^{n - 1} & … & x_n^{n - 1}",
+      "\\end{vmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "diag1": {
+    "prefix": "diag1",
+    "body": [
+      "$$",
+      "\\begin{bmatrix}",
+      "  1 & & & \\\\",
+      "  & 1 & & \\\\",
+      "  & & ⋱ & \\\\",
+      "  & & & 1",
+      "\\end{bmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "det3": {
+    "prefix": "det3",
+    "body": [
+      "$$",
+      "|𝐀| =",
+      "\\begin{vmatrix}",
+      "a_{11} & a_{12} & a_{13} \\\\\\",
+      "a_{21} & a_{22} & a_{23} \\\\\\",
+      "a_{31} & a_{32} & a_{33}",
+      "\\end{vmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "det2": {
+    "prefix": "det2",
+    "body": [
+      "$$",
+      "|𝐀| =",
+      "\\begin{vmatrix}",
+      "a_{11} & a_{12} \\\\\\",
+      "a_{21} & a_{22}",
+      "\\end{vmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "m1n": {
+    "prefix": "m1n",
+    "body": [
+      "$$",
+      "𝒂 =",
+      "\\begin{bmatrix}",
+      "a_1, a_2, …, a_n",
+      "\\end{bmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "ma": {
+    "prefix": "ma",
+    "body": [
+      "𝑨"
+    ],
+    "description": ""
+  },
+  "mb": {
+    "prefix": "mb",
+    "body": [
+      "𝑩"
+    ],
+    "description": ""
+  },
+  "mc": {
+    "prefix": "mc",
+    "body": [
+      "𝑪"
+    ],
+    "description": ""
+  },
+  "me": {
+    "prefix": "me",
+    "body": [
+      "𝑬"
+    ],
+    "description": ""
+  },
+  "mh": {
+    "prefix": "mh",
+    "body": [
+      "𝑯"
+    ],
+    "description": ""
+  },
+  "mj": {
+    "prefix": "mj",
+    "body": [
+      "𝑱"
+    ],
+    "description": ""
+  },
+  "mp": {
+    "prefix": "mp",
+    "body": [
+      "𝑷"
+    ],
+    "description": ""
+  },
+  "mq": {
+    "prefix": "mq",
+    "body": [
+      "𝑸"
+    ],
+    "description": ""
+  },
+  "mx": {
+    "prefix": "mx",
+    "body": [
+      "𝑿"
+    ],
+    "description": ""
+  },
+  "vx": {
+    "prefix": "vx",
+    "body": [
+      "𝒙"
+    ],
+    "description": ""
+  },
+  "vy": {
+    "prefix": "vy",
+    "body": [
+      "𝒚"
+    ],
+    "description": ""
+  },
+  "eig": {
+    "prefix": "eig",
+    "body": [
+      "𝑨 - λ 𝑰"
+    ],
+    "description": ""
+  },
+  "aha": {
+    "prefix": "aha",
+    "body": [
+      "𝑨^H 𝑨"
+    ],
+    "description": ""
+  },
+  "h2": {
+    "prefix": "h2",
+    "body": [
+      "##"
+    ]
+  },
+  "h3": {
+    "prefix": "h3",
+    "body": [
+      "###"
+    ]
+  }
+}

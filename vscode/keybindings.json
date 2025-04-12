@@ -1,0 +1,163 @@
+[
+	{
+		"key": "shift+alt+t",
+		"command": "markdown.extension.toc.update"
+	},
+	{
+		"key": "shift+alt+c",
+		"command": "markdown.extension.editing.toggleCodeBlock"
+	},
+	{
+		"key": "alt+-",
+		"command": "type",
+		"args": {
+			"text": " != "
+		},
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+=",
+		"command": "type",
+		"args": {
+			"text": "=>"
+		},
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+\\",
+		"command": "type",
+		"args": {
+			"text": "|>"
+		},
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+[",
+		"command": "type",
+		"args": {
+			"text": "<-"
+		},
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+]",
+		"command": "type",
+		"args": {
+			"text": "->"
+		},
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+p",
+		"command": "workbench.action.pinEditor",
+		"when": "!activeEditorIsPinned"
+	},
+	{
+		"key": "cmd+k shift+enter",
+		"command": "-workbench.action.pinEditor",
+		"when": "!activeEditorIsPinned"
+	},
+	{
+		"key": "shift+ctrl+b",
+		"command": "bookmarks.toggle",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+cmd+k",
+		"command": "-bookmarks.toggle",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+m",
+		"command": "markdown.extension.editing.toggleMath",
+		"when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+alt+cmd+down",
+		"command": "editor.emmet.action.decrementNumberByOne"
+	},
+	{
+		"key": "ctrl+alt+cmd+up",
+		"command": "editor.emmet.action.incrementNumberByOne"
+	},
+	{
+		"key": "shift+alt+p",
+		"command": "print-it.PrintIt",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+[",
+		"command": "-print-it.PrintIt",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+cmd+m",
+		"command": "markdown-editor.openEditor",
+		"when": "editorTextFocus && editorLangId == 'markdown'"
+	},
+	{
+		"key": "shift+alt+cmd+m",
+		"command": "-markdown-editor.openEditor",
+		"when": "editorTextFocus && editorLangId == 'markdown'"
+	},
+	{
+		"key": "shift+cmd+a",
+		"command": "workbench.action.toggleActivityBarVisibility"
+	},
+	{
+		"key": "shift+alt+=",
+		"command": "notebook.cell.joinBelow",
+		"when": "notebookEditorFocused"
+	},
+	{
+		"key": "ctrl+alt+j",
+		"command": "-notebook.cell.joinBelow",
+		"when": "notebookEditorFocused"
+	},
+	{
+		"key": "shift+alt+-",
+		"command": "notebook.cell.split",
+		"when": "notebookCellEditable && notebookEditable && notebookEditorFocused"
+	},
+	{
+		"key": "cmd+k shift+cmd+\\",
+		"command": "-notebook.cell.split",
+		"when": "notebookCellEditable && notebookEditable && notebookEditorFocused"
+	},
+	{
+		"key": "ctrl+cmd+]",
+		"command": "workbench.action.nextEditor"
+	},
+	{
+		"key": "shift+cmd+]",
+		"command": "-workbench.action.nextEditor"
+	},
+	{
+		"key": "alt+cmd+right",
+		"command": "-workbench.action.nextEditor"
+	},
+	{
+		"key": "ctrl+cmd+[",
+		"command": "workbench.action.previousEditor"
+	},
+	{
+		"key": "alt+cmd+left",
+		"command": "-workbench.action.previousEditor"
+	},
+	{
+		"key": "shift+cmd+[",
+		"command": "-workbench.action.previousEditor"
+	},
+	{
+		"key": "cmd+enter",
+		"command": "workbench.action.terminal.runSelectedText"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "workbench.action.reopenWithEditor"
+	},
+	{
+		"key": "ctrl+shift+t",
+		"command": "python.createTerminal"
+	}
+]

@@ -1,0 +1,59 @@
+{
+  "cookies": [
+    {
+      "name": "wr_gid",
+      "value": "209985040"
+    },
+    {
+      "name": "wr_fp",
+      "value": "3025406398"
+    },
+    {
+      "name": "wr_localvid",
+      "value": "f59322507245d67bf59dc91"
+    },
+    {
+      "name": "wr_name",
+      "value": "嗯哼"
+    },
+    {
+      "name": "wr_avatar",
+      "value": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erDcWFOFyTicPlTx4xYzWfmLUu96icIzM4lKCTk24aAVGWt7IykOIOrWSmgwzmxiaJ0VZDCg3Ub69xVA/132"
+    },
+    {
+      "name": "wr_gender",
+      "value": "1"
+    },
+    {
+      "name": "wr_skey",
+      "value": "uyyfboku"
+    },
+    {
+      "name": "wr_vid",
+      "value": "38131323"
+    },
+    {
+      "name": "wr_rt",
+      "value": "web@8YoAjFpDE1Z0AgBo1Hs_AL"
+    }
+  ],
+  "noteLocation": "public",
+  "dailyNotesLocation": "/",
+  "insertAfter": "<!-- start of weread -->",
+  "insertBefore": "<!-- end of weread -->",
+  "dailyNotesFormat": "YYYY-MM-DD",
+  "lastCookieTime": 1740479308669,
+  "isCookieValid": true,
+  "user": "嗯哼",
+  "userVid": "38131323",
+  "template": "# 高亮划线\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}## {{chapter.chapterTitle}}{% elif chapter.level == 2 %}### {{chapter.chapterTitle}}{% elif chapter.level == 3 %}#### {{chapter.chapterTitle}}{% endif %}\n{% for highlight in chapter.highlights %}\n{{ highlight.markText }} \n{% endfor %}{% endfor %}\n",
+  "noteCountLimit": -1,
+  "subFolderType": "category",
+  "fileNameType": "BOOK_NAME",
+  "dailyNotesToggle": false,
+  "notesBlacklist": "3300110962,825606,635838,3300019758,35808734,3300081924,3300017722",
+  "showEmptyChapterTitleToggle": false,
+  "convertTags": true,
+  "saveArticleToggle": false,
+  "saveReadingInfoToggle": false
+}

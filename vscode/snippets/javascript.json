@@ -1,0 +1,31 @@
+{
+  "tgrm": {
+    "prefix": "tgrm",
+    "body": [
+      "const strippedString = originalString.replace(/(<([^>]+)>)/gi, '');",
+      ""
+    ],
+    "description": ""
+  },
+  "srv": {
+    "prefix": "srv",
+    "body": [
+      "function reverseString(string) {",
+      "  return string.split(' ').reverse().join(' ');",
+      "}",
+      "",
+      "revereseString();",
+      ""
+    ],
+    "description": ""
+  },
+  "mrnd": {
+    "prefix": "mrnd",
+    "body": [
+      "const rnd = Math.floor(Math.random() * items.length);",
+      "items[rnd];",
+      ""
+    ],
+    "description": ""
+  }
+}

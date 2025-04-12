@@ -1,0 +1,460 @@
+{
+  "window.nativeTabs": true,
+  "window.newWindowDimensions": "inherit",
+  "window.restoreWindows": "all",
+  "extensions.autoUpdate": false,
+  "extensions.ignoreRecommendations": true,
+  "http.experimental.systemCertificatesV2": true,
+  // security
+  "security.workspace.trust.untrustedFiles": "open",
+  // search
+  "search.followSymlinks": false,
+  "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  // editor
+  "editor.acceptSuggestionOnEnter": "smart",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.defaultFormatter": null,
+  "editor.foldingStrategy": "indentation",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "interval",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorLimit": 100000,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.selectionMode": "whenQuickSuggestion",
+  "editor.suggest.shareSuggestSelections": true,
+  "editor.tabCompletion": "on",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.useTabStops": false,
+  "editor.wordBasedSuggestions": "matchingDocuments",
+  "editor.wordSeparators": "`~!@%^&*()=+[{]}\\|;:'\",.<>/?（），。；：",
+  "editor.wordWrap": "on",
+  "editor.quickSuggestions": {
+    "comments": true,
+    "strings": true,
+    "other": true
+  },
+  // explorer
+  "explorer.compactFolders": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.incrementalNaming": "smart",
+  "explorer.sortOrder": "type",
+  // files
+  "files.associations": {
+    "*.clangd": "yaml",
+    "*.condarc": "yaml",
+    "*.h": "cpp",
+    "*.vimrc": "viml",
+    "*.m": "matlab",
+    "docker-compose.yml": "yaml"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.svn": true,
+    "**/Thumbs.db": true,
+  },
+  "files.autoGuessEncoding": true,
+  "files.defaultLanguage": "markdown",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  // terminal
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": [
+        "-l"
+      ]
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "/C",
+        "chcp 65001"
+      ],
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.showExitAlert": false,
+  // workbench
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Visual Studio Light",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.wrapTabs": true,
+  "workbench.editorAssociations": {
+    "*.md": "default",
+    "*.drawio.png": "hediet.vscode-drawio",
+    "*.csv": "omegasheets.csv-default",
+    "*.plist": "default"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "none",
+  "workbench.tree.expandMode": "singleClick",
+  // scm
+  "scm.alwaysShowRepositories": true,
+  "scm.alwaysShowActions": true,
+  // git
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.suggestSmartCommit": true,
+  "git.supportCancellation": true,
+  // markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": "always"
+    },
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    }
+  },
+  "markdown.extension.completion.enabled": true,
+  "markdown.extension.italic.indicator": "*",
+  "markdown.extension.print.theme": "light",
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+  "markdown.extension.theming.decoration.renderLink": true,
+  "markdown.extension.theming.decoration.renderParagraph": true,
+  "markdown.extension.toc.levels": "2..4",
+  "markdown.extension.toc.orderedList": true,
+  "markdown.occurrencesHighlight.enabled": true,
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.linkify": true,
+  "markdown.preview.markEditorSelection": true,
+  "markdown.preview.openMarkdownLinks": "inEditor",
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
+  "markdown.validate.enabled": true,
+  "markdownlint.config": {
+    "MD003": false,
+    "MD024": false,
+    "MD025": false,
+    "MD026": false,
+    "MD029": false,
+    "MD033": false,
+    "MD037": false,
+    "MD041": false,
+    "MD042": false
+  },
+  // shortcuts
+  "code-runner.runInTerminal": true,
+  "code-runner.enableAppInsights": false,
+  "code-runner.executorMap": {
+    "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out && rm ./a.out",
+    "cpp": "cd $dir && clang++ -std=c++11 $fileName && ./a.out && rm ./a.out",
+    "go": "go run",
+    "javascript": "node run --allow-net $fullFileName",
+    "julia": "julia",
+    "python": "$(which python) -u $fullFileName",
+    "rust": "cd $dir && rustc $fileName && $fileNameWithoutExt",
+    "shellscript": "bash",
+    "typescript": "ts-node",
+    "matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt"
+  },
+  // notebook
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "never",
+    "notebook.source.organizeImports": "explicit"
+  },
+  "notebook.compactView": true,
+  "notebook.consolidatedRunButton": true,
+  "notebook.diff.experimental.toggleInline": true,
+  "notebook.diff.ignoreOutputs": true,
+  "notebook.formatOnSave.enabled": true,
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 18,
+  "notebook.multiCursor.enabled": true,
+  "notebook.output.minimalErrorRendering": true,
+  "notebook.output.wordWrap": true,
+  "notebook.variablesView": true,
+  // python
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never",
+      "source.organizeImports": "explicit"
+    }
+  },
+  "ruff.configuration": "pyproject.toml",
+  "ruff.format.preview": true,
+  "ruff.lint.preview": true,
+  "ruff.nativeServer": "on",
+  // jupyter
+  "jupyter.askForKernelRestart": false,
+  "jupyter.exportWithOutputEnabled": true,
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
+  "jupyter.pythonExportMethod": "nbconvert",
+  // bookmarks
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
+  // front end & formatters
+  "emmet.showSuggestionsAsSnippets": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[javascript][javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "javascript.suggest.autoImports": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "typescript.suggest.autoImports": true,
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // toml
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never"
+    }
+  },
+  "evenBetterToml.formatter.alignComments": true,
+  "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.arrayAutoCollapse": true,
+  "evenBetterToml.formatter.indentEntries": true,
+  "evenBetterToml.schema.enabled": false,
+  // yaml
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "yaml.format.singleQuote": true,
+  "yaml.validate": false,
+  // ui & preview
+  "hediet.vscode-drawio.offline": true,
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.theme": "kennedy",
+  // shell
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "shellcheck.exclude": [
+    "SC1017",
+    "SC1090",
+    "SC2016",
+    "SC2034",
+    "SC2154"
+  ],
+  // latex
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "latex-workshop.bibtex-fields.sort.enabled": true,
+  "latex-workshop.bibtex-format.sort.enabled": true,
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.intellisense.unimathsymbols.enabled": true,
+  "latex-workshop.intellisense.update.aggressive.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.showContextMenu": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "bibtex",
+      "command": "bibtex",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex",
+      "tools": [
+        "xelatex"
+      ]
+    },
+    {
+      "name": "xelatex -> bibtex -> xelatex*2",
+      "tools": [
+        "xelatex",
+        "bibtex",
+        "xelatex",
+        "xelatex"
+      ]
+    }
+  ],
+  // typst
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "[typst-code]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "tinymist.completion.triggerOnSnippetPlaceholders": true,
+  "tinymist.exportPdf": "onDocumentHasTitle",
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.outputPath": "$root/articles/$name",
+  "tinymist.preview.cursorIndicator": true,
+  // cpp
+  "[c][cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "C_Cpp.default.cStandard": "gnu17",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.mergeConfigurations": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.arguments": [
+    "--all-scopes-completion",
+    "--background-index",
+    "--clang-tidy",
+    "--compile-commands-dir=.vscode",
+    "--completion-parse=auto",
+    "--completion-style=detailed",
+    "--enable-config",
+    "--fallback-style=LLVM",
+    "--function-arg-placeholders=false",
+    "--header-insertion-decorators",
+    "--header-insertion=iwyu",
+    "--pch-storage=memory",
+    "--pretty",
+    "--ranking-model=decision_forest",
+    "-j=12"
+  ],
+  "clangd.onConfigChanged": "restart",
+  "[cmake]": {
+    "editor.defaultFormatter": "ms-vscode.cmake-tools"
+  },
+  "cmake.allowCommentsInPresetsFile": true,
+  "lldb.launch.breakpointMode": "file",
+  "lldb.launch.expressions": "python",
+  "lldb.launch.terminal": "integrated",
+  "lldb.suppressUpdateNotifications": true,
+  // golang
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "go.inlayHints.assignVariableTypes": true,
+  // pandoc
+  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
+  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
+  "redhat.telemetry.enabled": false,
+  // spell & grammar
+  "spellright.configurationScope": "user",
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+  ],
+  "spellright.language": [
+    "en",
+    "es",
+    "fr",
+    "pt"
+  ],
+  "spellright.ignoreFiles": [
+    "**/.vimrc",
+    "**/.gitignore",
+    "**/.spellignore",
+    "**/password.txt",
+  ],
+  "spellright.ignoreRegExpsByClass": {
+    "markdown": [
+      "/(.+)/g",
+      "/\\$.+\\$/g",
+      "/\\$\\$.+\\$\\$/g",
+      "/\\[.+\\]/g",
+      "/@[\\w\\d\\s]+\\s/g",
+      "/#\\w+()/g"
+    ],
+  },
+  "spellright.spellContextByClass": {
+    "cpp": "comments",
+    "latex": "body",
+    "python": "strings"
+  },
+  "ltex.completionEnabled": true,
+  "ltex.configurationTarget": {
+    "dictionary": "workspaceFolderExternalFile",
+    "disabledRules": "workspaceFolderExternalFile",
+    "hiddenFalsePositives": "workspaceFolderExternalFile"
+  },
+  "ltex.enabled": [
+    "latex",
+  ],
+  "ltex.latex.commands": {
+    "\\ref{}": "ignore",
+    "\\documentclass[]{}": "ignore",
+    "\\cite{}": "dummy",
+    "\\cite[]{}": "dummy"
+  },
+  "ltex.additionalRules.enablePickyRules": true,
+  // leetcode
+  "leetcode-problem-rating.cppCompiler": "clang",
+  "leetcode-problem-rating.defaultLanguage": "cpp",
+  "leetcode-problem-rating.hideScore": "Score",
+  "leetcode-problem-rating.hint.commandShortcut": false,
+  "leetcode-problem-rating.hint.commentDescription": false,
+  "leetcode-problem-rating.hint.configWebviewMarkdown": false,
+  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/algo",
+  "leetcode-problem-rating.editor.shortcuts": [
+    "submit",
+    "case",
+    "test",
+    "solution"
+  ],
+  "leetcode-problem-rating.filePath": {
+    "default": {
+      "folder": "${language}",
+      "filename": "${tag}_${id}_${snake_case_name}.${ext}"
+    }
+  },
+  // matlab
+  "[matlab]": {
+    "editor.defaultFormatter": "MathWorks.language-matlab"
+  },
+  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
+  // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
+  "MATLAB.matlabConnectionTiming": "never",
+  "MATLAB.showFeatureNotAvailableError": false,
+  // marimo
+  // "marimo.enableToken": true,
+  // "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+}

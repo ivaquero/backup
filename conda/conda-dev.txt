@@ -1,0 +1,11 @@
+aiosqlite
+anthropic
+autogen-agentchat
+autogen-core
+conda-tree
+discord.py
+ollama
+openai
+python-telegram-bot
+sqlalchemy
+tiktoken

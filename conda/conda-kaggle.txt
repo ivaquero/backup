@@ -1,0 +1,16 @@
+altair
+bambi
+conda-tree
+cvxpy
+ipykernel
+ipywidgets
+manim
+mplfinance
+polars
+preliz
+pymoo
+python-calamine
+scikit-learn
+seaborn
+tabulate
+yfinance

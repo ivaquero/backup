@@ -1,0 +1,13 @@
+{
+  "debug": true,
+  "ipv6": false,
+  "registry-mirrors": [
+    "https://docker.1panel.dev",
+    "https://docker.m.daocloud.io",
+    "https://ghcr.m.daocloud.io",
+    "https://gcr.m.daocloud.io",
+    "https://dockerpull.org"
+  ],
+  "insecure-registries": [],
+  "experimental": false
+}

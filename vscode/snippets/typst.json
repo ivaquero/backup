@@ -1,0 +1,780 @@
+{
+  "rxlsx": {
+    "prefix": "rxlsx",
+    "body": [
+      "#figure(",
+      "  xlsx-parser(",
+      "    read(\"data\", encoding: none),",
+      "    parse-table-style: false,",
+      "    parse-stroke: false,",
+      "    stroke: frame(rgb(\"000\")),",
+      "  ),",
+      "  caption: \"\",",
+      "  supplement: \"表\",",
+      "  kind: table,",
+      ")"
+    ],
+    "description": ""
+  },
+  "ind": {
+    "prefix": "ind",
+    "body": [
+      "#h(0em)"
+    ],
+    "description": ""
+  },
+  "ind2": {
+    "prefix": "ind2",
+    "body": [
+      "#h(2em)"
+    ],
+    "description": ""
+  },
+  "pg": {
+    "prefix": "pg",
+    "body": [
+      "#pagebreak()"
+    ],
+    "description": ""
+  },
+  "pgw": {
+    "prefix": "pgw",
+    "body": [
+      "#pagebreak(weak: true)"
+    ],
+    "description": ""
+  },
+  "t3": {
+    "prefix": "t3",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: (auto, auto, auto),",
+      "    inset: 0.3em,",
+      "    align: center + horizon,",
+      "    stroke: frame(rgb(\"000\")),",
+      "    [], [], [],",
+      "    [], [], [],",
+      "    [], [], [],",
+      "    [], [], [],",
+      "  ),",
+      "  caption: none,",
+      "  supplement: \"表\",",
+      "  kind: table",
+      ")",
+      ""
+    ]
+  },
+  "t4": {
+    "prefix": "t4",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: (auto, auto, auto, auto),",
+      "    inset: 0.3em,",
+      "    align: center + horizon,",
+      "    stroke: frame(rgb(\"000\")),",
+      "    [], [], [], [],",
+      "    [], [], [], [],",
+      "    [], [], [], [],",
+      "    [], [], [], [],",
+      "  ),",
+      "  caption: none,",
+      "  supplement:\"表\",",
+      "  kind: table",
+      ")",
+      ""
+    ],
+    "description": ""
+  },
+  "t5": {
+    "prefix": "t5",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: (auto, auto, auto, auto, auto),",
+      "    inset: 0.3em,",
+      "    align: center + horizon,",
+      "    stroke: frame(rgb(\"000\")),",
+      "    [], [], [], [], [],",
+      "    [], [], [], [], [],",
+      "    [], [], [], [], [],",
+      "    [], [], [], [], [],",
+      "  ),",
+      "  caption: none,",
+      "  supplement: \"表\",",
+      "  kind: table",
+      ")",
+      ""
+    ],
+    "description": ""
+  },
+  "t6": {
+    "prefix": "t6",
+    "body": [
+      "#figure(",
+      "  table(",
+      "    columns: (auto, auto, auto, auto, auto, auto),",
+      "    inset: 0.3em,",
+      "    align: center + horizon,",
+      "    stroke: frame(rgb(\"000\")),",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "    [], [], [], [], [], [],",
+      "  ),",
+      "  caption: none,",
+      "  supplement: \"表\",",
+      "  kind: table",
+      ")",
+      ""
+    ],
+    "description": ""
+  },
+  "ls": {
+    "prefix": "ls",
+    "body": [
+      "#list(",
+      "  [],",
+      "  [],",
+      "  indent: 0.1em",
+      ")"
+    ],
+    "description": ""
+  },
+  "en": {
+    "prefix": "en",
+    "body": [
+      "#enum(",
+      "  [],",
+      "  [],",
+      "  [],",
+      "  numbering: \"1\",",
+      "  indent: 0.1em",
+      ")"
+    ],
+    "description": ""
+  },
+  "col2": {
+    "prefix": "col2",
+    "body": [
+      "#block(",
+      "  height: 9em,",
+      "  columns()[",
+      "",
+      "  ],",
+      ")"
+    ],
+    "description": ""
+  },
+  "f12": {
+    "prefix": "f12",
+    "body": [
+      "#sgrid(",
+      "  figure(",
+      "    image(\"images\", width: 90%),",
+      "    caption: \"\"",
+      "  ),",
+      "  figure(",
+      "    image(\"images\", width: 90%),",
+      "    caption: \"\"",
+      "  ),",
+      "  columns: (200pt,) * 2,",
+      "  gutter: 2pt,",
+      "  caption: \"\"",
+      ")"
+    ],
+    "description": ""
+  },
+  "rcsv": {
+    "prefix": "rcsv",
+    "body": [
+      "#let data = csv(\"data\")",
+      "#figure(",
+      "  ktable(data, 4),",
+      "  caption: none,",
+      "  supplement: \"表\",",
+      "  kind: table",
+      ")",
+      ""
+    ]
+  },
+  "rimg": {
+    "prefix": "rimg",
+    "body": [
+      "#figure(",
+      "  image(\"images\", width: 40%),",
+      "  caption: none,",
+      "  supplement: \"图\",",
+      ")",
+      ""
+    ],
+    "description": ""
+  },
+  "rpy": {
+    "prefix": "rpy",
+    "body": [
+      "#let code1 = read(\"python\")",
+      "#code(code1)"
+    ],
+    "description": ""
+  },
+  "rjl": {
+    "prefix": "rjl",
+    "body": [
+      "#let code1 = read(\"julia\")",
+      "#code(code1, lang: \"julia\")"
+    ],
+    "description": ""
+  },
+  "rcpp": {
+    "prefix": "rcpp",
+    "body": [
+      "#let code1 = read(\"code\")",
+      "#code(code1, lang: \"c++\")",
+      ""
+    ]
+  },
+  "lm": {
+    "prefix": "lm",
+    "body": [
+      "$$"
+    ],
+    "description": ""
+  },
+  "braw": {
+    "prefix": "raw",
+    "body": [
+      "```",
+      "",
+      "```"
+    ]
+  },
+  "bm": {
+    "prefix": "bm",
+    "body": [
+      "$  $"
+    ],
+    "description": ""
+  },
+  "bdef": {
+    "prefix": "def",
+    "body": [
+      "#definition[",
+      "]"
+    ],
+    "description": ""
+  },
+  "btheo": {
+    "prefix": "btheo",
+    "body": [
+      "#theorem[",
+      "]"
+    ],
+    "description": ""
+  },
+  "bcoro": {
+    "prefix": "bcoro",
+    "body": [
+      "#corollary[",
+      "]"
+    ],
+    "description": ""
+  },
+  "btp": {
+    "prefix": "btp",
+    "body": [
+      "#tip[",
+      "]"
+    ],
+    "description": ""
+  },
+  "balg": {
+    "prefix": "balg",
+    "body": [
+      "#algo[",
+      "]"
+    ],
+    "description": ""
+  },
+  "ma": {
+    "prefix": "ma",
+    "body": [
+      "𝑨"
+    ],
+    "description": ""
+  },
+  "mb": {
+    "prefix": "mb",
+    "body": [
+      "𝑩"
+    ],
+    "description": ""
+  },
+  "mc": {
+    "prefix": "mc",
+    "body": [
+      "𝑪"
+    ],
+    "description": ""
+  },
+  "me": {
+    "prefix": "me",
+    "body": [
+      "𝑬"
+    ],
+    "description": ""
+  },
+  "mg": {
+    "prefix": "mg",
+    "body": [
+      "𝑮"
+    ],
+    "description": ""
+  },
+  "mh": {
+    "prefix": "mh",
+    "body": [
+      "𝑯"
+    ],
+    "description": ""
+  },
+  "mi": {
+    "prefix": "mi",
+    "body": [
+      "𝑰"
+    ],
+    "description": ""
+  },
+  "mj": {
+    "prefix": "mj",
+    "body": [
+      "𝑱"
+    ],
+    "description": ""
+  },
+  "ml": {
+    "prefix": "ml",
+    "body": [
+      "𝑳"
+    ],
+    "description": ""
+  },
+  "mm": {
+    "prefix": "mm",
+    "body": [
+      "𝑴"
+    ],
+    "description": ""
+  },
+  "mo": {
+    "prefix": "mo",
+    "body": [
+      "𝑶"
+    ],
+    "description": ""
+  },
+  "mp": {
+    "prefix": "mp",
+    "body": [
+      "𝑷"
+    ],
+    "description": ""
+  },
+  "mq": {
+    "prefix": "mq",
+    "body": [
+      "𝑸"
+    ],
+    "description": ""
+  },
+  "mr": {
+    "prefix": "mr",
+    "body": [
+      "𝑹"
+    ],
+    "description": ""
+  },
+  "ms": {
+    "prefix": "ms",
+    "body": [
+      "𝑺"
+    ],
+    "description": ""
+  },
+  "mu": {
+    "prefix": "mu",
+    "body": [
+      "𝑼"
+    ],
+    "description": ""
+  },
+  "mx": {
+    "prefix": "mx",
+    "body": [
+      "𝑿"
+    ],
+    "description": ""
+  },
+  "my": {
+    "prefix": "my",
+    "body": [
+      "𝒀"
+    ],
+    "description": ""
+  },
+  "mgl": {
+    "prefix": "mgl",
+    "body": [
+      "𝜦"
+    ],
+    "description": ""
+  },
+  "v0": {
+    "prefix": "v0",
+    "body": [
+      "𝟎"
+    ],
+    "description": ""
+  },
+  "va": {
+    "prefix": "va",
+    "body": [
+      "𝒂"
+    ],
+    "description": ""
+  },
+  "vb": {
+    "prefix": "vb",
+    "body": [
+      "𝒃"
+    ],
+    "description": ""
+  },
+  "vc": {
+    "prefix": "vc",
+    "body": [
+      "𝒄"
+    ],
+    "description": ""
+  },
+  "ve": {
+    "prefix": "ve",
+    "body": [
+      "𝒆"
+    ],
+    "description": ""
+  },
+  "vu": {
+    "prefix": "vu",
+    "body": [
+      "𝒖"
+    ],
+    "description": ""
+  },
+  "vx": {
+    "prefix": "vx",
+    "body": [
+      "𝒙"
+    ],
+    "description": ""
+  },
+  "vy": {
+    "prefix": "vy",
+    "body": [
+      "𝒚"
+    ],
+    "description": ""
+  },
+  "vz": {
+    "prefix": "vz",
+    "body": [
+      "𝒛"
+    ],
+    "description": ""
+  },
+  "vxax": {
+    "prefix": "vxax",
+    "body": [
+      "𝒙^⊤ 𝑨 𝒙"
+    ],
+    "description": ""
+  },
+  "vxt": {
+    "prefix": "vxt",
+    "body": [
+      "𝒙^⊤"
+    ],
+    "description": ""
+  },
+  "vxx": {
+    "prefix": "vxx",
+    "body": [
+      "𝒙^⊤ 𝒙"
+    ],
+    "description": ""
+  },
+  "vyy": {
+    "prefix": "vyy",
+    "body": [
+      "𝒚^⊤ 𝒚"
+    ],
+    "description": ""
+  },
+  "aeig": {
+    "prefix": "aeig",
+    "body": [
+      "𝑨 - λ 𝑰"
+    ],
+    "description": ""
+  },
+  "ata": {
+    "prefix": "ata",
+    "body": [
+      "𝑨^⊤ 𝑨"
+    ],
+    "description": ""
+  },
+  "aat": {
+    "prefix": "aat",
+    "body": [
+      "𝑨 𝑨^⊤"
+    ],
+    "description": ""
+  },
+  "maha": {
+    "prefix": "aha",
+    "body": [
+      "𝑨^H 𝑨"
+    ],
+    "description": ""
+  },
+  "v00": {
+    "prefix": "v00",
+    "body": [
+      "vec(delim: \"[\", 0, 0)"
+    ],
+    "description": ""
+  },
+  "vx12": {
+    "prefix": "vx12",
+    "body": [
+      "vec(delim: \"[\", x_1, x_2)"
+    ],
+    "description": ""
+  },
+  "vy12": {
+    "prefix": "vy12",
+    "body": [
+      "vec(delim: \"[\", y_1, y_2)"
+    ],
+    "description": ""
+  },
+  "inv": {
+    "prefix": "inv",
+    "body": [
+      "^(-1)"
+    ],
+    "description": ""
+  },
+  "tt": {
+    "prefix": "tt",
+    "body": [
+      "^(⊤)"
+    ],
+    "description": ""
+  },
+  "dt": {
+    "prefix": "dt",
+    "body": [
+      "dd(t)"
+    ],
+    "description": ""
+  },
+  "arr": {
+    "prefix": "arr",
+    "body": [
+      "⇒"
+    ],
+    "description": ""
+  },
+  "areq": {
+    "prefix": "darr",
+    "body": [
+      "⇔"
+    ],
+    "description": ""
+  },
+  "si0n": {
+    "prefix": "si0n",
+    "body": [
+      "∑_(i=0)^(i=N)"
+    ],
+    "description": ""
+  },
+  "si1n": {
+    "prefix": "si1n",
+    "body": [
+      "∑_(i=1)^(i=N)"
+    ],
+    "description": ""
+  },
+  "sk0n": {
+    "prefix": "sk0n",
+    "body": [
+      "∑_(k=0)^(k=N)"
+    ],
+    "description": ""
+  },
+  "sk1n": {
+    "prefix": "sk1n",
+    "body": [
+      "∑_(k=1)^(k=N)"
+    ],
+    "description": ""
+  },
+  "pi0n": {
+    "prefix": "pi0n",
+    "body": [
+      "∏_(i=0)^(i=N)"
+    ],
+    "description": ""
+  },
+  "pi1n": {
+    "prefix": "pi1n",
+    "body": [
+      "∏_(i=1)^(i=N)"
+    ],
+    "description": ""
+  },
+  "pk0n": {
+    "prefix": "pk0n",
+    "body": [
+      "∏_(k=0)^(k=N)"
+    ],
+    "description": ""
+  },
+  "pk1n": {
+    "prefix": "pk1n",
+    "body": [
+      "∏_(k=1)^(k=N)"
+    ],
+    "description": ""
+  },
+  "ork": {
+    "prefix": "ork",
+    "body": [
+      "op(\"rank\")()"
+    ],
+    "description": ""
+  },
+  "ovar": {
+    "prefix": "ovar",
+    "body": [
+      "op(\"Var\")(X)"
+    ],
+    "description": ""
+  },
+  "r2r": {
+    "prefix": "r2r",
+    "body": [
+      "ℝ → ℝ"
+    ],
+    "description": ""
+  },
+  "dnorm": {
+    "prefix": "dnorm",
+    "body": [
+      "N(μ, σ^2)"
+    ],
+    "description": ""
+  },
+  "iii": {
+    "prefix": "iii",
+    "body": [
+      "∫_(-∞)^(∞)"
+    ],
+    "description": ""
+  },
+  "i11": {
+    "prefix": "i01",
+    "body": [
+      "∫_(-1)^1"
+    ],
+    "description": ""
+  },
+  "i01": {
+    "prefix": "i01",
+    "body": [
+      "∫_0^1"
+    ],
+    "description": ""
+  },
+  "i0t": {
+    "prefix": "i0t",
+    "body": [
+      "∫_0^t"
+    ],
+    "description": ""
+  },
+  "iid": {
+    "prefix": "iid",
+    "body": [
+      "limits(∼)^(\"i.i.d\")"
+    ],
+    "description": ""
+  },
+  "rvxn": {
+    "prefix": "rvxn",
+    "body": [
+      "X_1, …, X_n"
+    ],
+    "description": ""
+  },
+  "rvxy": {
+    "prefix": "rvxy",
+    "body": [
+      "$X$和$Y$"
+    ],
+    "description": ""
+  },
+  "bib": {
+    "prefix": "bib",
+    "body": [
+      "#bibliography(\"data/works.bib\", title: \"参考文献\")",
+      ""
+    ],
+    "description": ""
+  },
+  "ce": {
+    "prefix": "ce",
+    "body": [
+      "#ce()",
+      ""
+    ]
+  },
+  "rxlsx-1739335146959": {
+    "prefix": "rxlsx",
+    "body": [
+      "#figure(",
+      "  xlsx-parser(",
+      "    read(\"data\", encoding: none),",
+      "    parse-table-style: false,",
+      "    parse-stroke: false,",
+      "    stroke: frame(rgb(\"000\")),",
+      "  ),",
+      "  caption: \"\",",
+      "  supplement: \"表\",",
+      "  kind: table,",
+      ")"
+    ],
+    "description": ""
+  },
+  "hred": {
+    "prefix": "hred",
+    "body": [
+      "text(,fill: #rgb(\"#ff0000\"))"
+    ],
+    "description": ""
+  }
+}
