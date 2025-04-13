@@ -6,11 +6,12 @@ ipykernel
 ipywidgets
 manim
 mplfinance
+openpyxl
 polars
 preliz
 pymoo
-python-calamine
 scikit-learn
 seaborn
 tabulate
+xlsxwriter
 yfinance

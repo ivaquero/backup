@@ -3221,6 +3221,20 @@ $("h1").each(function() {
 					<string>https://numba.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://openpyxl.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-13T14:40:52Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>openpyxl</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://openpyxl.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -5509,7 +5523,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/DocSets/Dart/Dart.docset</key>
 			<string>d</string>
 			<key>~/Library/Application Support/Dash/DocSets/Go/Go.docset</key>
-			<string>g</string>
+			<string>go</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
 			<string>h</string>
 			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
@@ -5537,7 +5551,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/DocSets/PostgreSQL/PostgreSQL.docset</key>
 			<string>pg</string>
 			<key>~/Library/Application Support/Dash/DocSets/Python_3/Python 3.docset</key>
-			<string>p</string>
+			<string>py</string>
 			<key>~/Library/Application Support/Dash/DocSets/Qt_5/Qt.docset</key>
 			<string>qt:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
@@ -5587,6 +5601,8 @@ $("h1").each(function() {
 			<string>fk</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/GeoPandas/GeoPandas.docset</key>
 			<string>gpd</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Gymnasium/Gymnasium.docset</key>
+			<string>gm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/JAX/JAX.docset</key>
 			<string>jx:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
@@ -5615,7 +5631,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/PyTorch/PyTorch.docset</key>
 			<string>t</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Pydantic/Pydantic.docset</key>
-			<string>pdt</string>
+			<string>pc</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Requests/Requests.docset</key>
 			<string>rq</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Robotics Toolbox for
@@ -5652,6 +5668,8 @@ $("h1").each(function() {
 			<string>mo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/ocrmypdf/ocrmypdf.docset</key>
 			<string>omp</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/openpyxl/openpyxl.docset</key>
+			<string>ol</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
@@ -5829,7 +5847,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/pyro/Pyro.docset</key>
 			<string>pr</string>
 			<key>~/Library/Application Support/Dash/User Contributed/pytest/pytest.docset</key>
-			<string>ts</string>
+			<string>ps</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn
 					1.2.docset</key>
 			<string>sk:</string>
