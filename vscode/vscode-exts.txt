@@ -14,6 +14,7 @@ formulahendry.code-runner
 foxundermoon.shell-format
 github.vscode-pull-request-github
 golang.go
+grapecity.gc-excelviewer
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
@@ -38,7 +39,6 @@ pomdtr.markdown-kroki
 qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
-reporting-cz.omegasheets-vscode
 rickaym.manim-sideview
 takumii.markdowntable
 tamasfe.even-better-toml

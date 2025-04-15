@@ -2,6 +2,8 @@ altair
 bambi
 conda-tree
 cvxpy
+forallpeople
+handcalcs
 ipykernel
 ipywidgets
 manim
@@ -10,8 +12,8 @@ openpyxl
 polars
 preliz
 pymoo
+scienceplots
 scikit-learn
 seaborn
-tabulate
 xlsxwriter
 yfinance
