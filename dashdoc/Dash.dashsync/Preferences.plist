@@ -123,6 +123,63 @@
 					<string>Typst</string>
 				</dict>
 			</dict>
+			<key>cetz</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-16T16:54:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://cetz-package.github.io/docs/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>cz</string>
+						<key>docsetName</key>
+						<string>cetz</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://cetz-package.github.io/docs/</string>
+					</dict>
+					<key>name</key>
+					<string>cetz</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>cetz</string>
+				</dict>
+			</dict>
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
@@ -226,63 +283,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>transformers</string>
-				</dict>
-			</dict>
-			<key>typst-lilaq</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-03T15:40:58Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://lilaq.org/docs/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>ttl</string>
-						<key>docsetName</key>
-						<string>typst-lilaq</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://lilaq.org/docs</string>
-					</dict>
-					<key>name</key>
-					<string>typst-lilaq</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>typst-lilaq</string>
 				</dict>
 			</dict>
 		</dict>
@@ -2898,6 +2898,63 @@ $("h1").each(function() {
 					<string>slidev</string>
 				</dict>
 			</dict>
+			<key>typst-lilaq</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-16T08:02:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://lilaq.org/docs/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>ttl</string>
+						<key>docsetName</key>
+						<string>typst-lilaq</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://lilaq.org/docs</string>
+					</dict>
+					<key>name</key>
+					<string>typst-lilaq</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>typst-lilaq</string>
+				</dict>
+			</dict>
 			<key>uv</key>
 			<dict>
 				<key>date</key>
@@ -3219,6 +3276,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://openpyxl.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://plotnine.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-16T03:39:18Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://plotnine.org/</string>
 				</dict>
 			</dict>
 			<key>https://preliz.readthedocs.io/en/latest/</key>
@@ -3754,20 +3825,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
-				</dict>
-			</dict>
-			<key>https://plotnine.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-02T10:58:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>plotnine</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://plotnine.org/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>

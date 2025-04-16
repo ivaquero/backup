@@ -27,7 +27,6 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
-ms-toolsai.vscode-jupyter-cell-tags
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
@@ -44,6 +43,7 @@ takumii.markdowntable
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
+ultralytics.ultralytics-snippets
 usernamehw.errorlens
 vadimcn.vscode-lldb
 wangqvq.easy-pytorch
