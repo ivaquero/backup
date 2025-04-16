@@ -1,4 +1,3 @@
-altair
 bambi
 conda-tree
 cvxpy
@@ -9,6 +8,7 @@ ipywidgets
 manim
 mplfinance
 openpyxl
+plotnine
 polars
 preliz
 pymoo

@@ -104,7 +104,7 @@
   "workbench.editorAssociations": {
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.csv": "omegasheets.csv-default",
+    "*.csv": "gc-excelviewer-csv-editor",
     "*.plist": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
@@ -454,6 +454,9 @@
   // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.showFeatureNotAvailableError": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
   // marimo
   // "marimo.enableToken": true,
   // "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
