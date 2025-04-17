@@ -5969,6 +5969,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:00:56Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/OpenCV.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-17T02:13:20Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Pandas.xml</key>
 			<dict>
 				<key>date</key>
@@ -6051,11 +6056,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-11-11T14:17:15Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/OpenCV.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-12-04T16:53:25Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/OpenGL_4.xml</key>
 			<dict>
