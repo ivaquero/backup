@@ -6,6 +6,7 @@ handcalcs
 ipykernel
 ipywidgets
 manim
+marimo
 mplfinance
 openpyxl
 plotnine
