@@ -1,0 +1,9 @@
+{
+  "center": {
+    "prefix": "center",
+    "body": [
+      "div {text-align: center;}"
+    ],
+    "description": ""
+  }
+}

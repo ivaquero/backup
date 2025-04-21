@@ -19,7 +19,8 @@
   "ind": {
     "prefix": "ind",
     "body": [
-      "#h(0em)"
+      "#set par(first-line-indent: 0em)",
+      ""
     ],
     "description": ""
   },
@@ -774,6 +775,15 @@
     "prefix": "hred",
     "body": [
       "text(,fill: #rgb(\"#ff0000\"))"
+    ],
+    "description": ""
+  },
+  "brl": {
+    "prefix": "brl",
+    "body": [
+      "#rule()[",
+      "",
+      "]"
     ],
     "description": ""
   }

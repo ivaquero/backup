@@ -1,0 +1,13 @@
+{
+  "center": {
+    "prefix": "center",
+    "body": [
+      "img {",
+      "  display: block;",
+      "  margin-left: auto;",
+      "  margin-right: auto;",
+      "}"
+    ],
+    "description": ""
+  }
+}
