@@ -458,6 +458,6 @@
     "matlab.interrupt"
   ],
   // marimo
-  // "marimo.enableToken": true,
-  // "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "marimo.enableToken": true,
+  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
 }
