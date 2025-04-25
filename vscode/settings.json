@@ -373,9 +373,6 @@
     "editor.defaultFormatter": "golang.go"
   },
   "go.inlayHints.assignVariableTypes": true,
-  // pandoc
-  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
-  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
   "redhat.telemetry.enabled": false,
   // spell & grammar
   "spellright.configurationScope": "user",

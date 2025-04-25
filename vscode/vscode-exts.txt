@@ -4,7 +4,6 @@ ban.spellright
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
-chrischinchilla.vscode-pandoc
 codeium.codeium
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
