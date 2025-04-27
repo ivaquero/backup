@@ -10,6 +10,7 @@
     },
     "installBehavior": {
         "disableInstallNotes": false,
+        "portablePackageMachineRoot": "C:/Program Files/Portables",
         "preferences": {
             "scope": "user",
             "locale": [
@@ -17,12 +18,16 @@
                 "fr-FR"
             ],
             "architectures": [
-                "x64"
+                "x64",
+                "arm64"
             ]
         }
     },
     "uninstallBehavior": {
         "purgePortablePackage": true
+    },
+    "downloadBehavior": {
+        "defaultDownloadDirectory": "C:/Users/Default/Downloads"
     },
     "telemetry": {
         "disable": true
