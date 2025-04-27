@@ -1,8 +1,10 @@
 conda-tree
+gradio
 gymnasium
 ipykernel
+keras
 scikit-learn
-tensorboard
 torchvision
 transformers
 ultralytics
+wandb

@@ -3292,6 +3292,20 @@ $("h1").each(function() {
 					<string>https://openpyxl.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://pingouin-stats.org/build/html/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-27T12:10:37Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pingouin</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pingouin-stats.org/build/html/</string>
+				</dict>
+			</dict>
 			<key>https://plotnine.org/</key>
 			<dict>
 				<key>date</key>
@@ -5729,6 +5743,8 @@ $("h1").each(function() {
 			<string>crs</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/contextily/contextily.docset</key>
 			<string>cx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/graphviz/graphviz.docset</key>
+			<string>gv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
 			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
@@ -5741,6 +5757,8 @@ $("h1").each(function() {
 			<string>omp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/openpyxl/openpyxl.docset</key>
 			<string>ol</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pingouin/pingouin.docset</key>
+			<string>pg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>

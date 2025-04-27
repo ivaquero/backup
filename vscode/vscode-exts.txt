@@ -13,7 +13,6 @@ evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
 foxundermoon.shell-format
-github.vscode-pull-request-github
 golang.go
 grapecity.gc-excelviewer
 hediet.vscode-drawio
@@ -48,5 +47,6 @@ tomjs.vscode-snippets-manager
 ultralytics.ultralytics-snippets
 usernamehw.errorlens
 vadimcn.vscode-lldb
+vincent-templier.vscode-netron
 wangqvq.easy-pytorch
 yzhang.markdown-all-in-one
