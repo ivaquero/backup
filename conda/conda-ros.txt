@@ -3,6 +3,8 @@ gradio
 gymnasium
 ipykernel
 keras
+onnx
+onnxruntime
 scikit-learn
 torchvision
 transformers

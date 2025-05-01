@@ -1,7 +1,6 @@
 bambi
 conda-tree
 cvxpy
-forallpeople
 handcalcs
 ipykernel
 ipywidgets
