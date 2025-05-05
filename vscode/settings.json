@@ -373,7 +373,6 @@
     "editor.defaultFormatter": "golang.go"
   },
   "go.inlayHints.assignVariableTypes": true,
-  "redhat.telemetry.enabled": false,
   // spell & grammar
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [

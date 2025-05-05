@@ -3194,6 +3194,20 @@ $("h1").each(function() {
 					<string>https://docs.manim.community/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://docs.marimo.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-02T09:37:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.marimo.io/</string>
+				</dict>
+			</dict>
 			<key>https://docs.pydantic.dev/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3323,7 +3337,7 @@ $("h1").each(function() {
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-03-08T02:09:39Z</date>
+				<date>2025-05-02T10:13:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3531,20 +3545,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.jax.dev/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://docs.marimo.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-20T13:59:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>marimo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.marimo.io/</string>
 				</dict>
 			</dict>
 			<key>https://docs.pytest.org/en/stable/</key>
