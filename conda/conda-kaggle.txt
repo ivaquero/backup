@@ -1,3 +1,4 @@
+altair
 bambi
 conda-tree
 cvxpy
