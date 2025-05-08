@@ -1,10 +1,13 @@
+altair
 conda-tree
+fastexcel
 gradio
 gymnasium
 ipykernel
 keras
 onnx
 onnxruntime
+polars
 scikit-learn
 torchvision
 transformers
