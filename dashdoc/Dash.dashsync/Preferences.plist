@@ -3320,20 +3320,6 @@ $("h1").each(function() {
 					<string>https://openpyxl.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
-			<key>https://pingouin-stats.org/build/html/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-27T12:10:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pingouin</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://pingouin-stats.org/build/html/</string>
-				</dict>
-			</dict>
 			<key>https://plotnine.org/</key>
 			<dict>
 				<key>date</key>
@@ -3853,6 +3839,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
+				</dict>
+			</dict>
+			<key>https://pingouin-stats.org/build/html/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-09T02:32:55Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pingouin</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pingouin-stats.org/build/html/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>

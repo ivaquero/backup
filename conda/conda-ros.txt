@@ -7,6 +7,7 @@ ipykernel
 keras
 onnx
 onnxruntime
+plotnine
 polars
 scikit-learn
 torchvision

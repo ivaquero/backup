@@ -8,7 +8,6 @@ manim
 marimo
 mplfinance
 openpyxl
-plotnine
 polars
 preliz
 pymoo
