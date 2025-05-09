@@ -1,4 +1,3 @@
-altair
 conda-tree
 fastexcel
 gradio
@@ -9,6 +8,7 @@ onnx
 onnxruntime
 plotnine
 polars
+scienceplots
 scikit-learn
 torchvision
 transformers
