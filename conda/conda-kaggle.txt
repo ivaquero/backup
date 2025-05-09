@@ -1,4 +1,3 @@
-bambi
 conda-tree
 cvxpy
 handcalcs
@@ -8,10 +7,11 @@ manim
 marimo
 mplfinance
 openpyxl
+plotnine
 polars
 preliz
+pymc
 pymoo
 scikit-learn
-seaborn
 xlsxwriter
 yfinance

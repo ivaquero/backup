@@ -3180,20 +3180,6 @@ $("h1").each(function() {
 					<string>https://altair-viz.github.io/</string>
 				</dict>
 			</dict>
-			<key>https://bambinos.github.io/bambi/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-23T06:20:04Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Bambi</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://bambinos.github.io/bambi/</string>
-				</dict>
-			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3390,20 +3376,6 @@ $("h1").each(function() {
 					<string>https://ranaroussi.github.io/yfinance/</string>
 				</dict>
 			</dict>
-			<key>https://seaborn.pydata.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-12T02:43:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>seaborn</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://seaborn.pydata.org/</string>
-				</dict>
-			</dict>
 			<key>https://www.cvxpy.org/</key>
 			<dict>
 				<key>date</key>
@@ -3461,6 +3433,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://aqtinstall.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://bambinos.github.io/bambi/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-09T16:37:19Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Bambi</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
 			<key>https://blackjax-devs.github.io/blackjax/</key>
@@ -3951,6 +3937,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://scitools.org.uk/cartopy/docs/latest/</string>
+				</dict>
+			</dict>
+			<key>https://seaborn.pydata.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-09T13:50:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>seaborn</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://seaborn.pydata.org/</string>
 				</dict>
 			</dict>
 			<key>https://www.nltk.org/</key>
@@ -5021,7 +5021,7 @@ $("h1").each(function() {
 			<key>Seaborn</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:06:29Z</date>
+				<date>2025-05-09T16:31:26Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -5031,8 +5031,7 @@ $("h1").each(function() {
 						<string>matplotlib</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Seaborn#readme</string>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Seaborn#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa, Xavier Yang</string>
 					<key>name</key>
