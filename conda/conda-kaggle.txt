@@ -1,4 +1,3 @@
-bambi
 conda-tree
 cvxpy
 handcalcs
@@ -11,9 +10,8 @@ openpyxl
 plotnine
 polars
 preliz
+pymc
 pymoo
-scienceplots
 scikit-learn
-seaborn
 xlsxwriter
 yfinance
