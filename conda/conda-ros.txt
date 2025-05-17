@@ -1,8 +1,16 @@
 conda-tree
+fastexcel
+gradio
 gymnasium
 ipykernel
+keras
+onnx
+onnxruntime
+plotnine
+polars
+scienceplots
 scikit-learn
-tensorboard
 torchvision
 transformers
 ultralytics
+wandb

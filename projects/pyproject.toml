@@ -73,6 +73,5 @@
 [tool.ruff.lint.isort]
     case-sensitive = true
     combine-as-imports = true
-    force-single-line = true
     force-wrap-aliases = true
     order-by-type = true

@@ -123,6 +123,63 @@
 					<string>Typst</string>
 				</dict>
 			</dict>
+			<key>cetz</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-16T16:54:02Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://cetz-package.github.io/docs/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>cz</string>
+						<key>docsetName</key>
+						<string>cetz</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://cetz-package.github.io/docs/</string>
+					</dict>
+					<key>name</key>
+					<string>cetz</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>cetz</string>
+				</dict>
+			</dict>
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
@@ -226,63 +283,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>transformers</string>
-				</dict>
-			</dict>
-			<key>typst-lilaq</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-03T15:40:58Z</date>
-				<key>entry</key>
-				<dict>
-					<key>docsetGeneratorSettings</key>
-					<dict>
-						<key>allowFilters</key>
-						<string>https://lilaq.org/docs/*</string>
-						<key>basicIndexEnabled</key>
-						<true/>
-						<key>cssToInject</key>
-						<string>footer {
-    display: none !important;
-}</string>
-						<key>denyFilters</key>
-						<string></string>
-						<key>docsetKeyword</key>
-						<string>ttl</string>
-						<key>docsetName</key>
-						<string>typst-lilaq</string>
-						<key>extraInfoPlist</key>
-						<string></string>
-						<key>isFromLocalFolder</key>
-						<false/>
-						<key>isFromWebsite</key>
-						<true/>
-						<key>javaScriptIndexEnabled</key>
-						<false/>
-						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text();
-dashDoc.addEntry({name: pageTitle, type: "Guide"});
-
-$("h1").each(function() {
-    const entryName = $(this).text();
-    var entryHash = $(this).attr('id');
-    if(!entryHash)
-    {
-        entryHash = entryName.replace(/\W/g, '');
-        $(this).attr('id', entryHash);
-    }
-    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
-});</string>
-						<key>localFolderPath</key>
-						<string></string>
-						<key>websiteURL</key>
-						<string>https://lilaq.org/docs</string>
-					</dict>
-					<key>name</key>
-					<string>typst-lilaq</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>typst-lilaq</string>
 				</dict>
 			</dict>
 		</dict>
@@ -2898,6 +2898,63 @@ $("h1").each(function() {
 					<string>slidev</string>
 				</dict>
 			</dict>
+			<key>typst-lilaq</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-16T08:02:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>docsetGeneratorSettings</key>
+					<dict>
+						<key>allowFilters</key>
+						<string>https://lilaq.org/docs/*</string>
+						<key>basicIndexEnabled</key>
+						<true/>
+						<key>cssToInject</key>
+						<string>footer {
+    display: none !important;
+}</string>
+						<key>denyFilters</key>
+						<string></string>
+						<key>docsetKeyword</key>
+						<string>ttl</string>
+						<key>docsetName</key>
+						<string>typst-lilaq</string>
+						<key>extraInfoPlist</key>
+						<string></string>
+						<key>isFromLocalFolder</key>
+						<false/>
+						<key>isFromWebsite</key>
+						<true/>
+						<key>javaScriptIndexEnabled</key>
+						<false/>
+						<key>javaScriptUsedToIndex</key>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
+						<key>localFolderPath</key>
+						<string></string>
+						<key>websiteURL</key>
+						<string>https://lilaq.org/docs</string>
+					</dict>
+					<key>name</key>
+					<string>typst-lilaq</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>typst-lilaq</string>
+				</dict>
+			</dict>
 			<key>uv</key>
 			<dict>
 				<key>date</key>
@@ -3109,34 +3166,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>https://altair-viz.github.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-24T05:43:30Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Vega-Altair</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://altair-viz.github.io/</string>
-				</dict>
-			</dict>
-			<key>https://bambinos.github.io/bambi/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-06-23T06:20:04Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Bambi</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://bambinos.github.io/bambi/</string>
-				</dict>
-			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3149,6 +3178,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.manim.community/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://docs.marimo.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-02T09:37:58Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>marimo</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.marimo.io/</string>
 				</dict>
 			</dict>
 			<key>https://docs.pydantic.dev/latest/</key>
@@ -3177,6 +3220,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.ultralytics.com/</string>
+				</dict>
+			</dict>
+			<key>https://graphviz.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-24T08:32:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>graphviz</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://graphviz.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://gymnasium.farama.org/</key>
@@ -3235,10 +3292,24 @@ $("h1").each(function() {
 					<string>https://openpyxl.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://plotnine.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-16T03:39:18Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>plotnine</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://plotnine.org/</string>
+				</dict>
+			</dict>
 			<key>https://preliz.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-03-08T02:09:39Z</date>
+				<date>2025-05-02T10:13:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3291,20 +3362,6 @@ $("h1").each(function() {
 					<string>https://ranaroussi.github.io/yfinance/</string>
 				</dict>
 			</dict>
-			<key>https://seaborn.pydata.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-11-12T02:43:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>seaborn</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://seaborn.pydata.org/</string>
-				</dict>
-			</dict>
 			<key>https://www.cvxpy.org/</key>
 			<dict>
 				<key>date</key>
@@ -3350,6 +3407,20 @@ $("h1").each(function() {
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>https://altair-viz.github.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-15T18:06:57Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Vega-Altair</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://altair-viz.github.io/</string>
+				</dict>
+			</dict>
 			<key>https://aqtinstall.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3362,6 +3433,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://aqtinstall.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://bambinos.github.io/bambi/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-09T16:37:19Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Bambi</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://bambinos.github.io/bambi/</string>
 				</dict>
 			</dict>
 			<key>https://blackjax-devs.github.io/blackjax/</key>
@@ -3432,20 +3517,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.jax.dev/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://docs.marimo.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-20T13:59:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>marimo</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.marimo.io/</string>
 				</dict>
 			</dict>
 			<key>https://docs.pytest.org/en/stable/</key>
@@ -3756,18 +3827,18 @@ $("h1").each(function() {
 					<string>https://petercorke.github.io/robotics-toolbox-python/</string>
 				</dict>
 			</dict>
-			<key>https://plotnine.org/</key>
+			<key>https://pingouin-stats.org/build/html/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-03-02T10:58:37Z</date>
+				<date>2025-05-09T02:32:55Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
-					<string>plotnine</string>
+					<string>pingouin</string>
 					<key>platform</key>
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
-					<string>https://plotnine.org/</string>
+					<string>https://pingouin-stats.org/build/html/</string>
 				</dict>
 			</dict>
 			<key>https://plotnine.readthedocs.io/en/stable/</key>
@@ -3866,6 +3937,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://scitools.org.uk/cartopy/docs/latest/</string>
+				</dict>
+			</dict>
+			<key>https://seaborn.pydata.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-09T13:50:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>seaborn</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://seaborn.pydata.org/</string>
 				</dict>
 			</dict>
 			<key>https://www.nltk.org/</key>
@@ -4148,7 +4233,7 @@ $("h1").each(function() {
 			<key>polars</key>
 			<dict>
 				<key>date</key>
-				<date>2025-03-27T07:14:13Z</date>
+				<date>2025-05-07T23:15:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -4936,7 +5021,7 @@ $("h1").each(function() {
 			<key>Seaborn</key>
 			<dict>
 				<key>date</key>
-				<date>2024-01-28T09:06:29Z</date>
+				<date>2025-05-09T16:31:26Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -4946,8 +5031,7 @@ $("h1").each(function() {
 						<string>matplotlib</string>
 					</array>
 					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Seaborn#readme</string>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Seaborn#readme</string>
 					<key>authorLinkText</key>
 					<string>Paulo S. Costa, Xavier Yang</string>
 					<key>name</key>
@@ -5658,6 +5742,8 @@ $("h1").each(function() {
 			<string>crs</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/contextily/contextily.docset</key>
 			<string>cx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/graphviz/graphviz.docset</key>
+			<string>gv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
 			<string>hv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
@@ -5670,6 +5756,8 @@ $("h1").each(function() {
 			<string>omp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/openpyxl/openpyxl.docset</key>
 			<string>ol</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pingouin/pingouin.docset</key>
+			<string>pg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/plotnine/plotnine.docset</key>
 			<string>gg</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pyCirclize/pyCirclize.docset</key>
@@ -5912,6 +6000,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:00:56Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/OpenCV.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-04-17T02:13:20Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Pandas.xml</key>
 			<dict>
 				<key>date</key>
@@ -5994,11 +6087,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-11-11T14:17:15Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/OpenCV.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2022-12-04T16:53:25Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/OpenGL_4.xml</key>
 			<dict>

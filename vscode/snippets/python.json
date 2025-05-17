@@ -4,7 +4,7 @@
     "description": "",
     "body": [
       "import matplotlib.pyplot as plt",
-      "import numpy as np",
+      "import numpy as np"
     ]
   },
   "inmp": {
@@ -327,7 +327,7 @@
     "prefix": "fsty",
     "description": "",
     "body": [
-      "plt.style.use():",
+      "plt.style.use():"
     ]
   },
   "frc": {

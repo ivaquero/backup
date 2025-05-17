@@ -104,7 +104,7 @@
   "workbench.editorAssociations": {
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.csv": "omegasheets.csv-default",
+    "*.csv": "gc-excelviewer-csv-editor",
     "*.plist": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
@@ -200,12 +200,14 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": "never",
       "source.organizeImports": "explicit"
-    }
+    },
   },
+  "python.languageServer": "None",
   "ruff.configuration": "pyproject.toml",
   "ruff.format.preview": true,
   "ruff.lint.preview": true,
   "ruff.nativeServer": "on",
+  "ty.experimental.completions.enable": true,
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
@@ -373,10 +375,6 @@
     "editor.defaultFormatter": "golang.go"
   },
   "go.inlayHints.assignVariableTypes": true,
-  // pandoc
-  "pandoc.htmlOptString": "--standalone --mathjax --shift-heading-level-by=-1",
-  "pandoc.pdfOptString": "--quiet --pdf-engine=tectonic -V CJKmainfont=\"Songti SC\"",
-  "redhat.telemetry.enabled": false,
   // spell & grammar
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [
@@ -454,7 +452,11 @@
   // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
   "MATLAB.matlabConnectionTiming": "never",
   "MATLAB.showFeatureNotAvailableError": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
   // marimo
-  // "marimo.enableToken": true,
-  // "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "marimo.enableToken": true,
+  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "redhat.telemetry.enabled": false,
 }

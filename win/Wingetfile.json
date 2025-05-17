@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-04-01T09:56:13.572-00:00",
+	"CreationDate" : "2025-04-28T10:07:52.665-00:00",
 	"Sources" : 
 	[
 		{
@@ -11,9 +11,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.CLRTypesSQLServer.2019"
 				},
 				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
@@ -37,10 +34,10 @@
 					"PackageIdentifier" : "Alibaba.AliWorkbench"
 				},
 				{
-					"PackageIdentifier" : "Insecure.Npcap"
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
+					"PackageIdentifier" : "Insecure.Npcap"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
@@ -76,13 +73,10 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
 				},
 				{
-					"PackageIdentifier" : "Baidu.BaiduNetdisk"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.OneDrive"
 				},
 				{
-					"PackageIdentifier" : "Espanso.Espanso"
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
 				{
 					"PackageIdentifier" : "Canonical.Ubuntu.2204"
@@ -124,5 +118,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.10.340"
+	"WinGetVersion" : "1.10.390"
 }
