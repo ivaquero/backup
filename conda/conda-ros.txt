@@ -1,7 +1,6 @@
 conda-tree
 fastexcel
 gradio
-gymnasium
 ipykernel
 keras
 onnx
