@@ -1,9 +1,9 @@
 {
-  "iio": {
-    "prefix": "iio",
-    "description": "",
+  "istd": {
+    "prefix": "istd",
     "body": [
       "#include <stdio.h>"
-    ]
+    ],
+    "description": ""
   }
 }

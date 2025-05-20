@@ -138,8 +138,9 @@
       "#list(",
       "  [],",
       "  [],",
-      "  indent: 0.1em",
-      ")"
+      "  indent: 0em,",
+      ")",
+      ""
     ],
     "description": ""
   },
@@ -151,8 +152,9 @@
       "  [],",
       "  [],",
       "  numbering: \"1\",",
-      "  indent: 0.1em",
-      ")"
+      "  indent: 0em,",
+      ")",
+      ""
     ],
     "description": ""
   },
@@ -162,9 +164,16 @@
       "#block(",
       "  height: 9em,",
       "  columns()[",
-      "",
+      "    #enum(",
+      "      [],",
+      "      [],",
+      "      [],",
+      "      numbering: \"1\",",
+      "      indent: 0em,",
+      "    )",
       "  ],",
-      ")"
+      ")",
+      ""
     ],
     "description": ""
   },
@@ -581,7 +590,7 @@
   "tt": {
     "prefix": "tt",
     "body": [
-      "^⊤"
+      "^(⊤)"
     ],
     "description": ""
   },
@@ -784,6 +793,17 @@
       "#rule()[",
       "",
       "]"
+    ],
+    "description": ""
+  },
+  "rdiag": {
+    "prefix": "rdiag",
+    "body": [
+      "#figure(",
+      " ,",
+      "  caption: none,",
+      "  supplement: \"图\",",
+      ")"
     ],
     "description": ""
   }
