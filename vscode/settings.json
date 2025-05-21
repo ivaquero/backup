@@ -334,6 +334,7 @@
   "tinymist.completion.triggerOnSnippetPlaceholders": true,
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
+  "tinymist.lint.enabled": true,
   "tinymist.outputPath": "$root/articles/$name",
   "tinymist.preview.cursorIndicator": true,
   // cpp

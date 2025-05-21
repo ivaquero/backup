@@ -3236,20 +3236,6 @@ $("h1").each(function() {
 					<string>https://graphviz.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
-			<key>https://gymnasium.farama.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-11T05:40:51Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Gymnasium</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://gymnasium.farama.org/</string>
-				</dict>
-			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3304,20 +3290,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.org/</string>
-				</dict>
-			</dict>
-			<key>https://preliz.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-02T10:13:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PreliZ</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://pymoo.org/</key>
@@ -3617,6 +3589,20 @@ $("h1").each(function() {
 					<string>https://geopandas.org/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://gymnasium.farama.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-21T07:12:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Gymnasium</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://gymnasium.farama.org/</string>
+				</dict>
+			</dict>
 			<key>https://hvplot.holoviz.org/</key>
 			<dict>
 				<key>date</key>
@@ -3853,6 +3839,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://preliz.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-21T07:20:05Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PreliZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://pytorch.org/docs/stable/</key>

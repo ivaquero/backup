@@ -10,7 +10,6 @@
       "    stroke: frame(rgb(\"000\")),",
       "  ),",
       "  caption: \"\",",
-      "  supplement: \"表\",",
       "  kind: table,",
       ")"
     ],
@@ -60,7 +59,6 @@
       "    [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -81,7 +79,6 @@
       "    [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement:\"表\",",
       "  kind: table",
       ")",
       ""
@@ -103,7 +100,6 @@
       "    [], [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -125,7 +121,6 @@
       "    [], [], [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -203,7 +198,6 @@
       "#figure(",
       "  ktable(data, 4),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -215,7 +209,6 @@
       "#figure(",
       "  image(\"images\", width: 40%),",
       "  caption: none,",
-      "  supplement: \"图\",",
       ")",
       ""
     ],
@@ -774,7 +767,6 @@
       "    stroke: frame(rgb(\"000\")),",
       "  ),",
       "  caption: \"\",",
-      "  supplement: \"表\",",
       "  kind: table,",
       ")"
     ],
@@ -793,17 +785,6 @@
       "#rule()[",
       "",
       "]"
-    ],
-    "description": ""
-  },
-  "rdiag": {
-    "prefix": "rdiag",
-    "body": [
-      "#figure(",
-      " ,",
-      "  caption: none,",
-      "  supplement: \"图\",",
-      ")"
     ],
     "description": ""
   }
