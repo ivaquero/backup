@@ -6,6 +6,7 @@ ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
 codeium.codeium
+cweijan.vscode-excel
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 efanzh.graphviz-preview
@@ -14,7 +15,6 @@ foam.foam-vscode
 formulahendry.code-runner
 foxundermoon.shell-format
 golang.go
-grapecity.gc-excelviewer
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
@@ -22,7 +22,6 @@ llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
 mathworks.language-matlab
-ms-python.debugpy
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap

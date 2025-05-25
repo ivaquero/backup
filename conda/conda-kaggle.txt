@@ -10,7 +10,6 @@ plotnine
 polars
 preliz
 pymc
-pymoo
 scikit-learn
 xlsxwriter
 yfinance

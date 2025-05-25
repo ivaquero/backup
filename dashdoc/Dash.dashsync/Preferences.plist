@@ -3264,20 +3264,6 @@ $("h1").each(function() {
 					<string>https://numba.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
-			<key>https://openpyxl.readthedocs.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-13T14:40:52Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>openpyxl</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://openpyxl.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://plotnine.org/</key>
 			<dict>
 				<key>date</key>
@@ -3304,20 +3290,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://preliz.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://pymoo.org/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T15:50:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>pymoo: Multi-objective Optimization in Python</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://pymoo.org/</string>
 				</dict>
 			</dict>
 			<key>https://python.arviz.org/en/stable/</key>
@@ -3813,6 +3785,20 @@ $("h1").each(function() {
 					<string>https://ocrmypdf.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://openpyxl.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-25T14:32:00Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>openpyxl</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://openpyxl.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://petercorke.github.io/robotics-toolbox-python/</key>
 			<dict>
 				<key>date</key>
@@ -3853,6 +3839,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://pymoo.org/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-25T14:32:59Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>pymoo: Multi-objective Optimization in Python</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://pymoo.org/</string>
 				</dict>
 			</dict>
 			<key>https://pytorch.org/docs/stable/</key>
