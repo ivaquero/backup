@@ -183,7 +183,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-04-04T06:01:17Z</date>
+				<date>2025-05-24T01:50:35Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3292,6 +3292,20 @@ $("h1").each(function() {
 					<string>https://plotnine.org/</string>
 				</dict>
 			</dict>
+			<key>https://preliz.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-24T02:15:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PreliZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://preliz.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://pymoo.org/</key>
 			<dict>
 				<key>date</key>
@@ -3839,20 +3853,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
-			<key>https://preliz.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-21T07:20:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PreliZ</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://preliz.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
 			<key>https://pytorch.org/docs/stable/</key>

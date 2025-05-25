@@ -153,6 +153,18 @@
     ],
     "description": ""
   },
+  "col": {
+    "prefix": "col",
+    "body": [
+      "#block(",
+      "  height: 9em,",
+      "  columns()[",
+      "  ],",
+      ")",
+      ""
+    ],
+    "description": ""
+  },
   "col2": {
     "prefix": "col2",
     "body": [
