@@ -1,6 +1,5 @@
 adachishingo.open-with
 alefragnani.bookmarks
-astral-sh.ty
 ban.spellright
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
