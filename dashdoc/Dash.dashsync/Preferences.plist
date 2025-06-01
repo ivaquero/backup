@@ -3138,50 +3138,7 @@ $("h1").each(function() {
 	<key>DHGoRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict>
-			<key>github.com/spf13/cobra</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-06T01:27:18Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/spf13/cobra</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/spf13/cobra</string>
-				</dict>
-			</dict>
-			<key>github.com/spf13/viper</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-06T01:30:02Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/spf13/viper</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/spf13/viper</string>
-				</dict>
-			</dict>
-			<key>github.com/tidwall/gjson</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-06T01:28:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/tidwall/gjson</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/tidwall/gjson</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 		<key>uninstalled</key>
 		<dict>
 			<key>github.com/pdfcpu/pdfcpu/pkg/api</key>
@@ -3196,6 +3153,48 @@ $("h1").each(function() {
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
 					<string>github.com/pdfcpu/pdfcpu/pkg/api</string>
+				</dict>
+			</dict>
+			<key>github.com/spf13/cobra</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-31T02:28:06Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/cobra</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/cobra</string>
+				</dict>
+			</dict>
+			<key>github.com/spf13/viper</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-31T02:28:06Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/viper</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/viper</string>
+				</dict>
+			</dict>
+			<key>github.com/tidwall/gjson</key>
+			<dict>
+				<key>date</key>
+				<date>2025-05-31T02:28:07Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/tidwall/gjson</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/tidwall/gjson</string>
 				</dict>
 			</dict>
 		</dict>
@@ -3305,7 +3304,7 @@ $("h1").each(function() {
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2024-10-23T04:48:12Z</date>
+				<date>2025-05-30T17:47:22Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>

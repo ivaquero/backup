@@ -49,6 +49,7 @@ brew "mailsy"
 brew "mas"
 brew "micromamba"
 brew "nomino"
+brew "numbat"
 brew "ollama", restart_service: :changed
 brew "openjdk"
 brew "ouch"
@@ -140,6 +141,7 @@ cask "xnviewmp"
 cask "zoom"
 cask "zotero"
 mas "Microsoft To Do", id: 1274495053
+mas "Xcode", id: 497799835
 vscode "adachishingo.open-with"
 vscode "alefragnani.bookmarks"
 vscode "ban.spellright"
