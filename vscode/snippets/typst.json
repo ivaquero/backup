@@ -208,7 +208,7 @@
     "body": [
       "#let data = csv(\"data\")",
       "#figure(",
-      "  ktable(data, 4),",
+      "  tableq(data, 4),",
       "  caption: none,",
       "  kind: table",
       ")",

@@ -52,6 +52,8 @@
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
+    "*.wxml": "xml",
+    "*.wxss": "css",
     "*.vimrc": "viml",
     "*.m": "matlab",
     "docker-compose.yml": "yaml"
@@ -104,7 +106,7 @@
   "workbench.editorAssociations": {
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.csv": "gc-excelviewer-csv-editor",
+    "*.csv": "cweijan.officeViewer",
     "*.plist": "default"
   },
   "workbench.iconTheme": "material-icon-theme",

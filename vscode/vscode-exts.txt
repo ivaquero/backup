@@ -34,6 +34,7 @@ oxc.oxc-vscode
 pkief.material-icon-theme
 pomdtr.markdown-kroki
 qcz.text-power-tools
+redhat.vscode-xml
 redhat.vscode-yaml
 rickaym.manim-sideview
 takumii.markdowntable
