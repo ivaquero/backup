@@ -1,6 +1,4 @@
-conda-build
 conda-tree
 pip
-python-build
 python-pptx
 typst-py

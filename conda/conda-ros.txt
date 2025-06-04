@@ -1,13 +1,13 @@
 conda-tree
 fastexcel
 gradio
-gymnasium
 ipykernel
 keras
 onnx
 onnxruntime
 plotnine
 polars
+pytesseract
 scienceplots
 scikit-learn
 torchvision

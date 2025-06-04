@@ -1,13 +1,13 @@
 {
-  "tgrm": {
-    "prefix": "tgrm",
+  "rm-tag": {
+    "prefix": "rmtag",
     "body": [
       "const strippedString = originalString.replace(/(<([^>]+)>)/gi, '');",
       ""
     ],
     "description": ""
   },
-  "srv": {
+  "str-reverse": {
     "prefix": "srv",
     "body": [
       "function reverseString(string) {",
@@ -19,8 +19,8 @@
     ],
     "description": ""
   },
-  "mrnd": {
-    "prefix": "mrnd",
+  "random": {
+    "prefix": "rnd",
     "body": [
       "const rnd = Math.floor(Math.random() * items.length);",
       "items[rnd];",

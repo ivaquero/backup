@@ -5,10 +5,10 @@ ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
 codeium.codeium
+cweijan.vscode-excel
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 efanzh.graphviz-preview
-elazarcoh.simply-view-image-for-python-debugging
 evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
@@ -22,9 +22,7 @@ llvm-vs-code-extensions.vscode-clangd
 ltex-plus.vscode-ltex-plus
 marimo-team.vscode-marimo
 mathworks.language-matlab
-ms-python.debugpy
 ms-python.python
-ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers

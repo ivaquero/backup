@@ -52,6 +52,8 @@
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
+    "*.wxml": "xml",
+    "*.wxss": "css",
     "*.vimrc": "viml",
     "*.m": "matlab",
     "docker-compose.yml": "yaml"
@@ -104,7 +106,7 @@
   "workbench.editorAssociations": {
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.csv": "gc-excelviewer-csv-editor",
+    "*.csv": "cweijan.officeViewer",
     "*.plist": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
@@ -200,12 +202,14 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": "never",
       "source.organizeImports": "explicit"
-    }
+    },
   },
+  "python.languageServer": "None",
   "ruff.configuration": "pyproject.toml",
   "ruff.format.preview": true,
   "ruff.lint.preview": true,
   "ruff.nativeServer": "on",
+  "ty.experimental.completions.enable": true,
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
@@ -332,6 +336,7 @@
   "tinymist.completion.triggerOnSnippetPlaceholders": true,
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
+  "tinymist.lint.enabled": true,
   "tinymist.outputPath": "$root/articles/$name",
   "tinymist.preview.cursorIndicator": true,
   // cpp
@@ -456,4 +461,5 @@
   // marimo
   "marimo.enableToken": true,
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "redhat.telemetry.enabled": false,
 }

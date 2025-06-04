@@ -1,111 +1,104 @@
 {
-  "ubits": {
-    "prefix": "ubits",
-    "description": "ubits",
+  "ibits": {
+    "prefix": "ibits",
     "body": [
       "#include <bits/stdc++.h>"
-    ]
+    ],
+    "description": ""
   },
-  "ucio": {
-    "prefix": "ucio",
-    "description": "",
+  "icstd": {
+    "prefix": "icstd",
     "body": [
       "#include <cstdio>",
       ""
-    ]
+    ],
+    "description": ""
   },
-  "uios": {
-    "prefix": "uios",
-    "description": "",
+  "iuios": {
+    "prefix": "iios",
     "body": [
       "#include <iostream>",
       ""
-    ]
+    ],
+    "description": ""
   },
-  "uls": {
-    "prefix": "uls",
-    "description": "",
+  "ils": {
+    "prefix": "ils",
     "body": [
       "#include <list>"
-    ]
+    ],
+    "description": ""
   },
-  "uvec": {
-    "prefix": "uvec",
-    "description": "",
+  "ivec": {
+    "prefix": "ivec",
     "body": [
       "#include <vector>"
-    ]
+    ],
+    "description": ""
   },
-  "ualg": {
-    "prefix": "ualg",
-    "description": "",
+  "ialg": {
+    "prefix": "ialg",
     "body": [
       "#include <algorithm>"
-    ]
+    ],
+    "description": ""
   },
-  "uns": {
-    "prefix": "uns",
-    "description": "",
+  "ins": {
+    "prefix": "ins",
     "body": [
       "using namespace std;"
-    ]
+    ],
+    "description": ""
   },
   "main": {
     "prefix": "main",
-    "description": "",
     "body": [
       "int main() {",
       "  ",
       "  return 0;",
       "}"
-    ]
+    ],
+    "description": ""
   },
-  "prf": {
-    "prefix": "prf",
-    "description": "",
+  "printf": {
+    "prefix": "pf",
     "body": [
       "printf(\": %d\\n\", );"
-    ]
+    ],
+    "description": ""
   },
-  "f": {
+  "for": {
     "prefix": "for",
-    "description": "",
     "body": [
       "for (auto i = 0; i < 5; i++) {",
       "}"
-    ]
+    ],
+    "description": ""
   },
-  "fi": {
+  "forit": {
     "prefix": "forit",
-    "description": "",
     "body": [
       "for (auto it = v.begin(); it != v.end(); it++) {",
       "}"
-    ]
+    ],
+    "description": ""
   },
-  "ts": {
-    "prefix": "ts",
-    "description": "",
-    "body": [
-      "void test() {}"
-    ]
-  },
-  "coln": {
-    "prefix": "coln",
-    "description": "",
+  "cout": {
+    "prefix": "cout",
     "body": [
       "std::cout << Name << std::endl;"
-    ]
+    ],
+    "description": ""
   },
-  "covec": {
-    "prefix": "covec",
-    "description": "",
+  "coutv": {
+    "prefix": "coutv",
     "body": [
       "cout << \"w1: \";",
       "for (int i : w1)",
       "  std::cout << i << \", \";",
       "std::cout << std::endl;",
       ""
-    ]
+    ],
+    "description": ""
   }
 }

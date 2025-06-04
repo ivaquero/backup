@@ -10,7 +10,6 @@
       "    stroke: frame(rgb(\"000\")),",
       "  ),",
       "  caption: \"\",",
-      "  supplement: \"表\",",
       "  kind: table,",
       ")"
     ],
@@ -60,7 +59,6 @@
       "    [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -81,7 +79,6 @@
       "    [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement:\"表\",",
       "  kind: table",
       ")",
       ""
@@ -103,7 +100,6 @@
       "    [], [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -125,7 +121,6 @@
       "    [], [], [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -138,8 +133,9 @@
       "#list(",
       "  [],",
       "  [],",
-      "  indent: 0.1em",
-      ")"
+      "  indent: 0em,",
+      ")",
+      ""
     ],
     "description": ""
   },
@@ -151,8 +147,21 @@
       "  [],",
       "  [],",
       "  numbering: \"1\",",
-      "  indent: 0.1em",
-      ")"
+      "  indent: 0em,",
+      ")",
+      ""
+    ],
+    "description": ""
+  },
+  "col": {
+    "prefix": "col",
+    "body": [
+      "#block(",
+      "  height: 9em,",
+      "  columns()[",
+      "  ],",
+      ")",
+      ""
     ],
     "description": ""
   },
@@ -162,9 +171,16 @@
       "#block(",
       "  height: 9em,",
       "  columns()[",
-      "",
+      "    #enum(",
+      "      [],",
+      "      [],",
+      "      [],",
+      "      numbering: \"1\",",
+      "      indent: 0em,",
+      "    )",
       "  ],",
-      ")"
+      ")",
+      ""
     ],
     "description": ""
   },
@@ -192,9 +208,8 @@
     "body": [
       "#let data = csv(\"data\")",
       "#figure(",
-      "  ktable(data, 4),",
+      "  tableq(data, 4),",
       "  caption: none,",
-      "  supplement: \"表\",",
       "  kind: table",
       ")",
       ""
@@ -206,7 +221,6 @@
       "#figure(",
       "  image(\"images\", width: 40%),",
       "  caption: none,",
-      "  supplement: \"图\",",
       ")",
       ""
     ],
@@ -765,7 +779,6 @@
       "    stroke: frame(rgb(\"000\")),",
       "  ),",
       "  caption: \"\",",
-      "  supplement: \"表\",",
       "  kind: table,",
       ")"
     ],
