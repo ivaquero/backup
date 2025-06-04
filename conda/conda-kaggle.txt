@@ -1,6 +1,5 @@
 conda-tree
 cvxpy
-handcalcs
 ipykernel
 ipywidgets
 manim

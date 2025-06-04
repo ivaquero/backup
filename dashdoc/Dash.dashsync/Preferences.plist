@@ -3076,7 +3076,7 @@ $("h1").each(function() {
 			<key>github.com/spf13/cobra</key>
 			<dict>
 				<key>date</key>
-				<date>2025-04-06T01:27:18Z</date>
+				<date>2025-06-04T16:07:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3090,7 +3090,7 @@ $("h1").each(function() {
 			<key>github.com/spf13/viper</key>
 			<dict>
 				<key>date</key>
-				<date>2025-04-06T01:30:02Z</date>
+				<date>2025-06-04T16:07:58Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3104,7 +3104,7 @@ $("h1").each(function() {
 			<key>github.com/tidwall/gjson</key>
 			<dict>
 				<key>date</key>
-				<date>2025-04-06T01:28:38Z</date>
+				<date>2025-06-04T16:07:36Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
