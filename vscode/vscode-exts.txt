@@ -8,7 +8,6 @@ codeium.codeium
 cweijan.vscode-excel
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
-efanzh.graphviz-preview
 evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
@@ -25,10 +24,13 @@ ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
 ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.powershell
+ms-vscode.remote-explorer
 myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
@@ -45,5 +47,4 @@ ultralytics.ultralytics-snippets
 usernamehw.errorlens
 vadimcn.vscode-lldb
 vincent-templier.vscode-netron
-wangqvq.easy-pytorch
 yzhang.markdown-all-in-one
