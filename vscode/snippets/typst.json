@@ -595,7 +595,7 @@
   "tt": {
     "prefix": "tt",
     "body": [
-      "^⊤"
+      "^(⊤)"
     ],
     "description": ""
   },

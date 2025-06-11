@@ -106,7 +106,7 @@
   "workbench.editorAssociations": {
     "*.md": "default",
     "*.drawio.png": "hediet.vscode-drawio",
-    "*.csv": "cweijan.officeViewer",
+    "*.csv": "default",
     "*.plist": "default"
   },
   "workbench.iconTheme": "material-icon-theme",
