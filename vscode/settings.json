@@ -411,22 +411,6 @@
     "latex": "body",
     "python": "strings"
   },
-  "ltex.completionEnabled": true,
-  "ltex.configurationTarget": {
-    "dictionary": "workspaceFolderExternalFile",
-    "disabledRules": "workspaceFolderExternalFile",
-    "hiddenFalsePositives": "workspaceFolderExternalFile"
-  },
-  "ltex.enabled": [
-    "latex",
-  ],
-  "ltex.latex.commands": {
-    "\\ref{}": "ignore",
-    "\\documentclass[]{}": "ignore",
-    "\\cite{}": "dummy",
-    "\\cite[]{}": "dummy"
-  },
-  "ltex.additionalRules.enablePickyRules": true,
   // leetcode
   "leetcode-problem-rating.cppCompiler": "clang",
   "leetcode-problem-rating.defaultLanguage": "cpp",

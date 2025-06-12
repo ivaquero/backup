@@ -40,10 +40,17 @@
     ],
     "description": ""
   },
-  "rndsd": {
-    "prefix": "rndsd",
+  "nprnd": {
+    "prefix": "nprnd",
     "body": [
       "np.random.seed(42)"
+    ],
+    "description": ""
+  },
+  "trnd": {
+    "prefix": "trnd",
+    "body": [
+      "torch.random_seed(42)"
     ],
     "description": ""
   },
