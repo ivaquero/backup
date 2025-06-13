@@ -10,6 +10,7 @@
   // search
   "search.followSymlinks": false,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
+  "search.searchView.keywordSuggestions": true,
   // editor
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.bracketPairColorization.enabled": true,
@@ -97,6 +98,7 @@
     }
   },
   "terminal.integrated.showExitAlert": false,
+  "terminal.integrated.suggest.enabled": true,
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
