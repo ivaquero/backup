@@ -3288,20 +3288,6 @@ $("h1").each(function() {
 					<string>https://docs.ultralytics.com/</string>
 				</dict>
 			</dict>
-			<key>https://graphviz.readthedocs.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-24T08:32:14Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>graphviz</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://graphviz.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3398,6 +3384,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://python.arviz.org/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://python.igraph.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-15T16:00:19Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>igraph</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://python.igraph.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://ranaroussi.github.io/yfinance/</key>
@@ -3667,6 +3667,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://geopandas.org/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://graphviz.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-15T15:29:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>graphviz</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://graphviz.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://gymnasium.farama.org/</key>
@@ -4294,6 +4308,30 @@ $("h1").each(function() {
 					<string>usercontribjax</string>
 					<key>uniqueIdentifier</key>
 					<string>jax</string>
+				</dict>
+			</dict>
+			<key>lxml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-15T06:03:23Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python XML toolkit</string>
+						<string>Python HTML package</string>
+						<string>XML ElementTree</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/lxml#readme</string>
+					<key>authorLinkText</key>
+					<string>laggardkernel</string>
+					<key>name</key>
+					<string>lxml</string>
+					<key>platform</key>
+					<string>usercontriblxml</string>
+					<key>uniqueIdentifier</key>
+					<string>lxml</string>
 				</dict>
 			</dict>
 			<key>polars</key>
@@ -5322,14 +5360,13 @@ $("h1").each(function() {
 			<key>igraph</key>
 			<dict>
 				<key>date</key>
-				<date>2023-08-02T02:42:40Z</date>
+				<date>2025-06-15T15:30:35Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
 					<array/>
 					<key>authorLinkHref</key>
-					<string>
-							https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
 					<key>authorLinkText</key>
 					<string>The igraph core team</string>
 					<key>name</key>
@@ -5812,6 +5849,8 @@ $("h1").each(function() {
 			<string>gv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/hvPlot/hvPlot.docset</key>
 			<string>hv</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/igraph/igraph.docset</key>
+			<string>ig</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/letsplot/lets-plot.docset</key>
 			<string>lp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/mamba/mamba.docset</key>
@@ -5990,6 +6029,8 @@ $("h1").each(function() {
 			<string>ig</string>
 			<key>~/Library/Application Support/Dash/User Contributed/jax/jax.docset</key>
 			<string>jx</string>
+			<key>~/Library/Application Support/Dash/User Contributed/lxml/lxml.docset</key>
+			<string>lx</string>
 			<key>~/Library/Application Support/Dash/User Contributed/nox/Nox.docset</key>
 			<string>nox</string>
 			<key>~/Library/Application Support/Dash/User Contributed/plotnine/plotnine.docset</key>
