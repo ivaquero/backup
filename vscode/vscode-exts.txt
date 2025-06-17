@@ -1,5 +1,6 @@
 adachishingo.open-with
 alefragnani.bookmarks
+astral-sh.ty
 ban.spellright
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
@@ -18,7 +19,6 @@ huacnlee.autocorrect
 james-yu.latex-workshop
 llvm-vs-code-extensions.vscode-clangd
 marimo-team.vscode-marimo
-mathworks.language-matlab
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
@@ -38,6 +38,7 @@ qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
 rickaym.manim-sideview
+rust-lang.rust-analyzer
 takumii.markdowntable
 tamasfe.even-better-toml
 timonwong.shellcheck
