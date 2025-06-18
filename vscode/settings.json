@@ -433,17 +433,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  // matlab
-  "[matlab]": {
-    "editor.defaultFormatter": "MathWorks.language-matlab"
-  },
-  "MATLAB.installPath": "/Applications/MATLAB_R2023b.app",
-  // "MATLAB.installPath": "C:\\Program Files\\Polyspace\\R2021a",
-  "MATLAB.matlabConnectionTiming": "never",
-  "MATLAB.showFeatureNotAvailableError": false,
-  "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt"
-  ],
   // marimo
   "marimo.enableToken": true,
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
