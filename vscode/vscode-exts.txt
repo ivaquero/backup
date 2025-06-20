@@ -14,6 +14,7 @@ foam.foam-vscode
 formulahendry.code-runner
 foxundermoon.shell-format
 golang.go
+gsgupta.opencv-snippets
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
