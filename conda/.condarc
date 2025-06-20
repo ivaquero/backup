@@ -20,7 +20,7 @@ channel_priority: strict
 pip_interop_enabled: true
 create_default_packages:
   - conda-tree
-pinned_packages: [arviz=0.20.0]
+pinned_packages: [conda=25.5.1]
 disallow:
   - anaconda
 add_pip_as_python_dependency: false
