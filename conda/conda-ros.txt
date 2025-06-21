@@ -7,7 +7,6 @@ onnx
 onnxruntime
 plotnine
 polars
-pytesseract
 scienceplots
 scikit-learn
 torchvision

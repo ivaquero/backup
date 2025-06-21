@@ -1,4 +1,1 @@
-eslint
 npm
-tsc
-typescript

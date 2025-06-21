@@ -10,7 +10,6 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-# Oxidizer
 
 case $(uname -a) in
 *Darwin* | *Ubuntu* | *Debian*)
@@ -21,6 +20,7 @@ case $(uname -a) in
     ;;
 esac
 
+# Oxidizer
 export OXIDIZER=${HOME}/Documents/GitHub/oxidizer
 source ${OXIDIZER}/oxidizer.sh
 export GENVIRON=${HOME}/Documents/GitHub/genviron
