@@ -437,4 +437,10 @@
   "marimo.enableToken": true,
   "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
   "redhat.telemetry.enabled": false,
+  // powershell
+  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
+  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+  "powershell.codeFormatting.useConstantStrings": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true,
 }
