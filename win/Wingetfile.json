@@ -1,11 +1,17 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-04-28T10:07:52.665-00:00",
-	"Sources" : 
+	"CreationDate" : "2025-06-21T10:51:52.092-00:00",
+	"Sources" :
 	[
 		{
-			"Packages" : 
+			"Packages" :
 			[
+				{
+					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},
 				{
 					"PackageIdentifier" : "Nutstore.Nutstore"
 				},
@@ -34,13 +40,13 @@
 					"PackageIdentifier" : "Alibaba.AliWorkbench"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
-				},
-				{
 					"PackageIdentifier" : "Insecure.Npcap"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
@@ -67,13 +73,10 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.OneDrive"
+					"PackageIdentifier" : "Baidu.BaiduNetdisk"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
@@ -94,7 +97,7 @@
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
 				}
 			],
-			"SourceDetails" : 
+			"SourceDetails" :
 			{
 				"Argument" : "https://cdn.winget.microsoft.com/cache",
 				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
@@ -103,13 +106,13 @@
 			}
 		},
 		{
-			"Packages" : 
+			"Packages" :
 			[
 				{
 					"PackageIdentifier" : "9NBLGGH5R558"
 				}
 			],
-			"SourceDetails" : 
+			"SourceDetails" :
 			{
 				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
 				"Identifier" : "StoreEdgeFD",
