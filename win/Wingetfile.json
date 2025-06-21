@@ -1,10 +1,10 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-06-21T10:51:52.092-00:00",
-	"Sources" :
+	"CreationDate" : "2025-06-21T11:27:47.327-00:00",
+	"Sources" : 
 	[
 		{
-			"Packages" :
+			"Packages" : 
 			[
 				{
 					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
@@ -97,7 +97,7 @@
 					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
 				}
 			],
-			"SourceDetails" :
+			"SourceDetails" : 
 			{
 				"Argument" : "https://cdn.winget.microsoft.com/cache",
 				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
@@ -106,13 +106,13 @@
 			}
 		},
 		{
-			"Packages" :
+			"Packages" : 
 			[
 				{
 					"PackageIdentifier" : "9NBLGGH5R558"
 				}
 			],
-			"SourceDetails" :
+			"SourceDetails" : 
 			{
 				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
 				"Identifier" : "StoreEdgeFD",
