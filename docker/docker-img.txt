@@ -1,2 +1,2 @@
+docker.io/awwaawwa/pdfmathtranslate-next:latest
 docker.io/stirlingtools/stirling-pdf:latest
-docker.io/byaidu/pdf2zh:latest
