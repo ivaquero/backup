@@ -5709,6 +5709,8 @@ $("h1").each(function() {
 			<string>css</string>
 			<key>~/Library/Application Support/Dash/DocSets/Dart/Dart.docset</key>
 			<string>d</string>
+			<key>~/Library/Application Support/Dash/DocSets/Django/Django.docset</key>
+			<string>dj</string>
 			<key>~/Library/Application Support/Dash/DocSets/Go/Go.docset</key>
 			<string>go</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
@@ -6086,6 +6088,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:48:22Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Django.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-28T16:38:11Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
