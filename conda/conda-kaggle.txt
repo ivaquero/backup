@@ -4,7 +4,6 @@ ipykernel
 ipywidgets
 manim
 marimo
-mplfinance
 openpyxl
 plotnine
 polars
