@@ -34,11 +34,13 @@ if [[ "$(uname -sm)" == "Darwin arm64" ]]; then
     export PATH="/Applications/MATLAB_R2023b.app/bin:$PATH"
 fi
 
-export VCPKG_ROOT="$HOME/vcpkg"
-export PATH=$PATH:$VCPKG_ROOT
-export VCPKG_BINARY_SOURCES=clear
-source "$HOME/vcpkg/scripts/vcpkg_completion.zsh"
+if command -v vcpkg >/dev/null 2>&1; then
+    export VCPKG_ROOT="$HOME/vcpkg"
+    export PATH=$PATH:$VCPKG_ROOT
+    export VCPKG_BINARY_SOURCES=clear
+    source "$HOME/vcpkg/scripts/vcpkg_completion.zsh"
+fi
 
-if ! command -v podman >/dev/null 2>&1; then
+if command -v podman >/dev/null 2>&1; then
     export DOCKER_HOST='unix:///var/folders/py/n14256yd5r5ddms88x9bvsv40000gn/T/podman/podman-machine-default-api.sock'
 fi
