@@ -3386,20 +3386,6 @@ $("h1").each(function() {
 					<string>https://python.arviz.org/en/stable/</string>
 				</dict>
 			</dict>
-			<key>https://python.igraph.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-15T16:00:19Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>igraph</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://python.igraph.org/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://ranaroussi.github.io/yfinance/</key>
 			<dict>
 				<key>date</key>
@@ -3935,6 +3921,20 @@ $("h1").each(function() {
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
 				</dict>
 			</dict>
+			<key>https://python.igraph.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-30T11:00:20Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>igraph</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://python.igraph.org/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://pytorch.org/docs/stable/</key>
 			<dict>
 				<key>date</key>
@@ -4286,6 +4286,26 @@ $("h1").each(function() {
 					<string>usercontribSymPy</string>
 					<key>uniqueIdentifier</key>
 					<string>SymPy</string>
+				</dict>
+			</dict>
+			<key>igraph</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-30T10:59:27Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
+					<key>authorLinkText</key>
+					<string>The igraph core team</string>
+					<key>name</key>
+					<string>igraph</string>
+					<key>platform</key>
+					<string>usercontribigraph</string>
+					<key>uniqueIdentifier</key>
+					<string>igraph</string>
 				</dict>
 			</dict>
 			<key>jax</key>
@@ -5357,26 +5377,6 @@ $("h1").each(function() {
 					<string>ggplot2</string>
 				</dict>
 			</dict>
-			<key>igraph</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-15T15:30:35Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
-					<key>authorLinkText</key>
-					<string>The igraph core team</string>
-					<key>name</key>
-					<string>igraph</string>
-					<key>platform</key>
-					<string>usercontribigraph</string>
-					<key>uniqueIdentifier</key>
-					<string>igraph</string>
-				</dict>
-			</dict>
 			<key>imbalanced-learn</key>
 			<dict>
 				<key>date</key>
@@ -6089,6 +6089,16 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2022-01-19T16:48:22Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/CMake.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-30T10:51:12Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-30T10:51:05Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Django.xml</key>
 			<dict>
 				<key>date</key>
@@ -6103,6 +6113,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2025-06-21T12:28:58Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Julia.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-30T10:48:44Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/MatPlotLib.xml</key>
 			<dict>
@@ -6123,11 +6138,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:38:01Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Qt_6.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-28T04:59:07Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Rust.xml</key>
 			<dict>
@@ -6152,20 +6162,10 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-06-23T05:38:30Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/CMake.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-05-19T12:52:46Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/CSS.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2025-03-08T02:03:46Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Dart.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-05T17:19:34Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
@@ -6176,11 +6176,6 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2024-04-18T15:52:05Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Julia.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-11T14:38:58Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/LaTeX.xml</key>
 			<dict>
@@ -6216,6 +6211,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2023-08-29T13:38:16Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Qt_6.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-06-30T10:46:29Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Ruby_3.xml</key>
 			<dict>
