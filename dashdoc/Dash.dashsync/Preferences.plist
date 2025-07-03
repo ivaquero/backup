@@ -5715,6 +5715,8 @@ $("h1").each(function() {
 			<string>go</string>
 			<key>~/Library/Application Support/Dash/DocSets/HTML/HTML.docset</key>
 			<string>h</string>
+			<key>~/Library/Application Support/Dash/DocSets/Java/Java.docset</key>
+			<string>j</string>
 			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
 			<string>js</string>
 			<key>~/Library/Application Support/Dash/DocSets/Julia/Julia.docset</key>
@@ -5751,6 +5753,8 @@ $("h1").each(function() {
 			<string>sa</string>
 			<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
 			<string>sp</string>
+			<key>~/Library/Application Support/Dash/DocSets/Spring_Framework/Spring Framework.docset</key>
+			<string>s</string>
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
 			<string>ts</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Doxygen/Doxygen.docset</key>
@@ -6109,6 +6113,11 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2024-12-11T15:53:53Z</date>
 			</dict>
+			<key>http://kapeli.com/feeds/Java.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-03T14:29:19Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
 				<key>date</key>
@@ -6148,6 +6157,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-01-19T16:17:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Spring_Framework.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-03T14:29:03Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
