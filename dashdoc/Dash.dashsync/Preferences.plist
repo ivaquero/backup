@@ -5757,6 +5757,10 @@ $("h1").each(function() {
 			<string>s</string>
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
 			<string>ts</string>
+			<key>~/Library/Application Support/Dash/DocSets/VueJS/VueJS_(Composition).docset</key>
+			<string>v</string>
+			<key>~/Library/Application Support/Dash/DocSets/VueJS/VueJS_(Options).docset</key>
+			<string>vv</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Doxygen/Doxygen.docset</key>
 			<string>d</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Eigen/Eigen.docset</key>
@@ -6162,6 +6166,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2025-07-03T14:29:03Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/VueJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-04T02:32:37Z</date>
 			</dict>
 		</dict>
 		<key>uninstalled</key>
