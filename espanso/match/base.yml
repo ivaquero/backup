@@ -1,315 +1,516 @@
 matches:
-  - trigger: ":now"
-    replace: "It's {{mytime}}"
+  - trigger: ':now'
+    replace: '{{mytime}}'
     vars:
       - name: mytime
         type: date
         params:
-          format: "%H:%M"
+          format: '%H:%M'
 
   # Math superscripts
-  - trigger: ":^int:"
-    replace: "ᶴ"
+  - trigger: ':^int:'
+    replace: 'ᶴ'
 
-  - trigger: ":^=:"
-    replace: "₌"
+  - trigger: ':^=:'
+    replace: '₌'
 
-  - trigger: ":^0:"
-    replace: "⁰"
+  - trigger: ':^0:'
+    replace: '⁰'
 
-  - trigger: ":^1:"
-    replace: "¹"
+  - trigger: ':^1:'
+    replace: '¹'
 
-  - trigger: ":^2:"
-    replace: "²"
+  - trigger: ':^2:'
+    replace: '²'
 
-  - trigger: ":^3:"
-    replace: "³"
+  - trigger: ':^3:'
+    replace: '³'
 
-  - trigger: ":^4:"
-    replace: "⁴"
+  - trigger: ':^4:'
+    replace: '⁴'
 
-  - trigger: ":^5:"
-    replace: "⁵"
+  - trigger: ':^5:'
+    replace: '⁵'
 
-  - trigger: ":^6:"
-    replace: "⁶"
+  - trigger: ':^6:'
+    replace: '⁶'
 
-  - trigger: ":^7:"
-    replace: "⁷"
+  - trigger: ':^7:'
+    replace: '⁷'
 
-  - trigger: ":^8:"
-    replace: "⁸"
+  - trigger: ':^8:'
+    replace: '⁸'
 
-  - trigger: ":^9:"
-    replace: "⁹"
+  - trigger: ':^9:'
+    replace: '⁹'
 
   # Math subscripts
-  - trigger: ":_0:"
-    replace: "₀"
+  - trigger: ':_0:'
+    replace: '₀'
 
-  - trigger: ":_1:"
-    replace: "₁"
+  - trigger: ':_1:'
+    replace: '₁'
 
-  - trigger: ":_2:"
-    replace: "₂"
+  - trigger: ':_2:'
+    replace: '₂'
 
-  - trigger: ":_3:"
-    replace: "₃"
+  - trigger: ':_3:'
+    replace: '₃'
 
-  - trigger: ":_4:"
-    replace: "₄"
+  - trigger: ':_4:'
+    replace: '₄'
 
-  - trigger: ":_5:"
-    replace: "₅"
+  - trigger: ':_5:'
+    replace: '₅'
 
-  - trigger: ":_6:"
-    replace: "₆"
+  - trigger: ':_6:'
+    replace: '₆'
 
-  - trigger: ":_7:"
-    replace: "₇"
+  - trigger: ':_7:'
+    replace: '₇'
 
-  - trigger: ":_8:"
-    replace: "₈"
+  - trigger: ':_8:'
+    replace: '₈'
 
-  - trigger: ":_9:"
-    replace: "₉"
+  - trigger: ':_9:'
+    replace: '₉'
 
-  - trigger: ":_+:"
-    replace: "₊"
+  - trigger: ':_+:'
+    replace: '₊'
 
-  - trigger: ":_-:"
-    replace: "₋"
+  - trigger: ':_-:'
+    replace: '₋'
 
-  - trigger: ":_=:"
-    replace: "₌"
+  - trigger: ':_=:'
+    replace: '₌'
 
-  - trigger: ":_(:"
-    replace: "₍"
+  - trigger: ':_(:'
+    replace: '₍'
 
-  - trigger: ":_):"
-    replace: "₎"
+  - trigger: ':_):'
+    replace: '₎'
 
   # Latin lowercase superscripts
-  - trigger: ":^a:"
-    replace: "ᵃ"
+  - trigger: ':^a:'
+    replace: 'ᵃ'
 
-  - trigger: ":^b:"
-    replace: "ᵇ"
+  - trigger: ':^b:'
+    replace: 'ᵇ'
 
-  - trigger: ":^c:"
-    replace: "ᶜ"
+  - trigger: ':^c:'
+    replace: 'ᶜ'
 
-  - trigger: ":^d:"
-    replace: "ᵈ"
+  - trigger: ':^d:'
+    replace: 'ᵈ'
 
-  - trigger: ":^e:"
-    replace: "ᵉ"
+  - trigger: ':^e:'
+    replace: 'ᵉ'
 
-  - trigger: ":^f:"
-    replace: "ᶠ"
+  - trigger: ':^f:'
+    replace: 'ᶠ'
 
-  - trigger: ":^g:"
-    replace: "ᵍ"
+  - trigger: ':^g:'
+    replace: 'ᵍ'
 
-  - trigger: ":^h:"
-    replace: "ʰ"
+  - trigger: ':^h:'
+    replace: 'ʰ'
 
-  - trigger: ":^i:"
-    replace: "ⁱ"
+  - trigger: ':^i:'
+    replace: 'ⁱ'
 
-  - trigger: ":^j:"
-    replace: "ʲ"
+  - trigger: ':^j:'
+    replace: 'ʲ'
 
-  - trigger: ":^k:"
-    replace: "ᵏ"
+  - trigger: ':^k:'
+    replace: 'ᵏ'
 
-  - trigger: ":^l:"
-    replace: "ˡ"
+  - trigger: ':^l:'
+    replace: 'ˡ'
 
-  - trigger: ":^m:"
-    replace: "ᵐ"
+  - trigger: ':^m:'
+    replace: 'ᵐ'
 
-  - trigger: ":^n:"
-    replace: "ⁿ"
+  - trigger: ':^n:'
+    replace: 'ⁿ'
 
-  - trigger: ":^o:"
-    replace: "ᵒ"
+  - trigger: ':^o:'
+    replace: 'ᵒ'
 
-  - trigger: ":^p:"
-    replace: "ᵖ"
+  - trigger: ':^p:'
+    replace: 'ᵖ'
 
-  - trigger: ":^r:"
-    replace: "ʳ"
+  - trigger: ':^r:'
+    replace: 'ʳ'
 
-  - trigger: ":^s:"
-    replace: "ˢ"
+  - trigger: ':^s:'
+    replace: 'ˢ'
 
-  - trigger: ":^t:"
-    replace: "ᵗ"
+  - trigger: ':^t:'
+    replace: 'ᵗ'
 
-  - trigger: ":^u:"
-    replace: "ᵘ"
+  - trigger: ':^u:'
+    replace: 'ᵘ'
 
-  - trigger: ":^v:"
-    replace: "ᵛ"
+  - trigger: ':^v:'
+    replace: 'ᵛ'
 
-  - trigger: ":^w:"
-    replace: "ʷ"
+  - trigger: ':^w:'
+    replace: 'ʷ'
 
-  - trigger: ":^x:"
-    replace: "ˣ"
+  - trigger: ':^x:'
+    replace: 'ˣ'
 
-  - trigger: ":^y:"
-    replace: "ʸ"
+  - trigger: ':^y:'
+    replace: 'ʸ'
 
-  - trigger: ":^z:"
-    replace: "ᶻ"
+  - trigger: ':^z:'
+    replace: 'ᶻ'
 
   # Latin lowercase subscripts
-  - trigger: ":_a:"
-    replace: "ₐ"
+  - trigger: ':_a:'
+    replace: 'ₐ'
 
-  - trigger: ":_e:"
-    replace: "ₑ"
+  - trigger: ':_e:'
+    replace: 'ₑ'
 
-  - trigger: ":_h:"
-    replace: "ₕ"
+  - trigger: ':_h:'
+    replace: 'ₕ'
 
-  - trigger: ":_i:"
-    replace: "ᵢ"
+  - trigger: ':_i:'
+    replace: 'ᵢ'
 
-  - trigger: ":_j:"
-    replace: "ⱼ"
+  - trigger: ':_j:'
+    replace: 'ⱼ'
 
-  - trigger: ":_k:"
-    replace: "ₖ"
+  - trigger: ':_k:'
+    replace: 'ₖ'
 
-  - trigger: ":_l:"
-    replace: "ₗ"
+  - trigger: ':_l:'
+    replace: 'ₗ'
 
-  - trigger: ":_m:"
-    replace: "ₘ"
+  - trigger: ':_m:'
+    replace: 'ₘ'
 
-  - trigger: ":_n:"
-    replace: "ₙ"
+  - trigger: ':_n:'
+    replace: 'ₙ'
 
-  - trigger: ":_o:"
-    replace: "ₒ"
+  - trigger: ':_o:'
+    replace: 'ₒ'
 
-  - trigger: ":_p:"
-    replace: "ₚ"
+  - trigger: ':_p:'
+    replace: 'ₚ'
 
-  - trigger: ":_r:"
-    replace: "ᵣ"
+  - trigger: ':_r:'
+    replace: 'ᵣ'
 
-  - trigger: ":_s:"
-    replace: "ₛ"
+  - trigger: ':_s:'
+    replace: 'ₛ'
 
-  - trigger: ":_t:"
-    replace: "ₜ"
+  - trigger: ':_t:'
+    replace: 'ₜ'
 
-  - trigger: ":_u:"
-    replace: "ᵤ"
+  - trigger: ':_u:'
+    replace: 'ᵤ'
 
-  - trigger: ":_v:"
-    replace: "ᵥ"
+  - trigger: ':_v:'
+    replace: 'ᵥ'
 
-  - trigger: ":_x:"
-    replace: "ₓ"
+  - trigger: ':_x:'
+    replace: 'ₓ'
 
   # Latin uppercase superscripts
-  - trigger: ":^A:"
-    replace: "ᴬ"
+  - trigger: ':^A:'
+    replace: 'ᴬ'
 
-  - trigger: ":^B:"
-    replace: "ᴮ"
+  - trigger: ':^B:'
+    replace: 'ᴮ'
 
-  - trigger: ":^D:"
-    replace: "ᴰ"
+  - trigger: ':^D:'
+    replace: 'ᴰ'
 
-  - trigger: ":^E:"
-    replace: "ᴱ"
+  - trigger: ':^E:'
+    replace: 'ᴱ'
 
-  - trigger: ":^G:"
-    replace: "ᴳ"
+  - trigger: ':^G:'
+    replace: 'ᴳ'
 
-  - trigger: ":^H:"
-    replace: "ᴴ"
+  - trigger: ':^H:'
+    replace: 'ᴴ'
 
-  - trigger: ":^I:"
-    replace: "ᴵ"
+  - trigger: ':^I:'
+    replace: 'ᴵ'
 
-  - trigger: ":^J:"
-    replace: "ᴶ"
+  - trigger: ':^J:'
+    replace: 'ᴶ'
 
-  - trigger: ":^K:"
-    replace: "ᴷ"
+  - trigger: ':^K:'
+    replace: 'ᴷ'
 
-  - trigger: ":^L:"
-    replace: "ᴸ"
+  - trigger: ':^L:'
+    replace: 'ᴸ'
 
-  - trigger: ":^M:"
-    replace: "ᴹ"
+  - trigger: ':^M:'
+    replace: 'ᴹ'
 
-  - trigger: ":^N:"
-    replace: "ᴺ"
+  - trigger: ':^N:'
+    replace: 'ᴺ'
 
-  - trigger: ":^O:"
-    replace: "ᴼ"
+  - trigger: ':^O:'
+    replace: 'ᴼ'
 
-  - trigger: ":^P:"
-    replace: "ᴾ"
+  - trigger: ':^P:'
+    replace: 'ᴾ'
 
-  - trigger: ":^R:"
-    replace: "ᴿ"
+  - trigger: ':^R:'
+    replace: 'ᴿ'
 
-  - trigger: ":^T:"
-    replace: "ᵀ"
+  - trigger: ':^T:'
+    replace: 'ᵀ'
 
-  - trigger: ":^U:"
-    replace: "ᵁ"
+  - trigger: ':^U:'
+    replace: 'ᵁ'
 
-  - trigger: ":^V:"
-    replace: "ⱽ"
+  - trigger: ':^V:'
+    replace: 'ⱽ'
 
-  - trigger: ":^W:"
-    replace: "ᵂ"
+  - trigger: ':^W:'
+    replace: 'ᵂ'
 
   # Greek superscripts
-  - trigger: ":^alpha:"
-    replace: "ᵅ"
+  - trigger: ':^alpha:'
+    replace: 'ᵅ'
 
-  - trigger: ":^beta:"
-    replace: "ᵝ"
+  - trigger: ':^beta:'
+    replace: 'ᵝ'
 
-  - trigger: ":^gamma:"
-    replace: "ᵞ"
+  - trigger: ':^gamma:'
+    replace: 'ᵞ'
 
-  - trigger: ":^delta:"
-    replace: "ᵟ"
+  - trigger: ':^delta:'
+    replace: 'ᵟ'
 
-  - trigger: ":^epsilon:"
-    replace: "ᵋ"
+  - trigger: ':^epsilon:'
+    replace: 'ᵋ'
 
-  - trigger: ":^theta:"
-    replace: "ᶿ"
+  - trigger: ':^theta:'
+    replace: 'ᶿ'
 
-  - trigger: ":^iota:"
-    replace: "ᶥ"
+  - trigger: ':^iota:'
+    replace: 'ᶥ'
 
-  - trigger: ":^phi:"
-    replace: "ᶲ"
+  - trigger: ':^phi:'
+    replace: 'ᶲ'
 
-  - trigger: ":^chi:"
-    replace: "ᵡ"
+  - trigger: ':^chi:'
+    replace: 'ᵡ'
 
   # Greek subscripts
-  - trigger: ":_beta:"
-    replace: "ᵦ"
+  - trigger: ':_beta:'
+    replace: 'ᵦ'
 
-  - trigger: ":_gamma:"
-    replace: "ᵧ"
+  - trigger: ':_gamma:'
+    replace: 'ᵧ'
 
-  - trigger: ":_chi:"
-    replace: "ᵪ"
+  - trigger: ':_chi:'
+    replace: 'ᵪ'
+
+  # Markdown
+  - trigger: ':h1:'
+    label: 'Header1'
+    replace: '#'
+
+  - trigger: ':h2:'
+    label: 'Header2'
+    replace: '##'
+
+  - trigger: ':h3:'
+    label: 'Header3'
+    replace: '###'
+
+  - trigger: ':h4:'
+    label: 'Header4'
+    replace: '####'
+
+  - trigger: ':h5:'
+    label: 'Header5'
+    replace: '#####'
+
+  - trigger: ':h6:'
+    label: 'Header6'
+    replace: '######'
+
+  - trigger: ':url:'
+    label: 'URL'
+    replace: '[$|$]()'
+
+  - trigger: ':img:'
+    label: 'Image'
+    replace: '![]($|$)'
+
+  - trigger: ':-[:'
+    replace: '- [ ] '
+
+  - trigger: ':-[]:'
+    replace: '- [x] '
+
+  - trigger: ':summary:'
+    label: 'Collapse block'
+    replace: |-
+      <details>
+      <summary></summary>
+      $|$
+      </details>
+    force_clipboard: true
+
+  # Markdown tables
+  - trigger: ':mdt2:'
+    label: 'Two Column Table'
+    replace: |-
+      |  $|$  |    |
+      |:--:|:--:|
+      |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt3:'
+    label: 'Three Column Table'
+    replace: |-
+      |  $|$  |    |    |
+      |:--:|:--:|:--:|
+      |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt4:'
+    label: 'Four Column Table'
+    replace: |-
+      |  $|$  |    |    |    |
+      |:--:|:--:|:--:|:--:|
+      |    |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt5:'
+    label: 'Five Column Table'
+    replace: |-
+      |  $|$  |    |    |    |    |
+      |:--:|:--:|:--:|:--:|:--:|
+      |    |    |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt6:'
+    label: 'Six Column Table'
+    replace: |-
+      |  $|$  |    |    |    |    |    |
+      |:--:|:--:|:--:|:--:|:--:|:--:|
+      |    |    |    |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt7:'
+    label: 'Seven Column Table'
+    replace: |-
+      |  $|$  |    |    |    |    |    |    |
+      |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+      |    |    |    |    |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt8:'
+    label: 'Eight Column Table'
+    replace: |-
+      |  $|$  |    |    |    |    |    |    |    |
+      |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+      |    |    |    |    |    |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdt9:'
+    label: 'Nine Column Table'
+    replace: |-
+      |  $|$  |    |    |    |    |    |    |    |    |
+      |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+      |    |    |    |    |    |    |    |    |    |
+    force_clipboard: true
+
+  - trigger: ':mdr2:'
+    label: 'Two Column Row'
+    replace: '|  $|$  |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr3:'
+    label: 'Three Column Row'
+    replace: '|  $|$  |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr4:'
+    label: 'Four Column Row'
+    replace: '|  $|$  |    |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr5:'
+    label: 'Five Column Row'
+    replace: '|  $|$  |    |    |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr6:'
+    label: 'Six Column Row'
+    replace: '|  $|$  |    |    |    |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr7:'
+    label: 'Seven Column Row'
+    replace: '|  $|$  |    |    |    |    |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr8:'
+    label: 'Eight Column Row'
+    replace: '|  $|$  |    |    |    |    |    |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr9:'
+    label: 'Nine Column Row'
+    replace: '|  $|$  |    |    |    |    |    |    |    |    |'
+    force_clipboard: true
+
+  - trigger: ':mdr10:'
+    label: 'Ten Column Row'
+    replace: '|  $|$  |    |    |    |    |    |    |    |    |    |'
+    force_clipboard: true
+
+  # Markdown code blocks
+  - trigger: ':`py:'
+    replace: "```python\n$|$\n```"
+
+  - trigger: ':`go:'
+    replace: "```go\n$|$\n```"
+
+  - trigger: ':`rs:'
+    replace: "```rust\n$|$\n```"
+
+  - trigger: ':`cpp:'
+    replace: "```cpp\n$|$\n```"
+
+  - trigger: ':`jl:'
+    replace: "```julia\n$|$\n```"
+
+  - trigger: ':`j:'
+    replace: "```java\n$|$\n```"
+
+  - trigger: ':`sh:'
+    replace: "```bash\n$|$\n```"
+
+  - trigger: ':`pw:'
+    replace: "```powershell\n$|$\n```"
+
+  - trigger: ':`js:'
+    replace: "```javascript\n$|$\n```"
+
+  - trigger: ':`ts:'
+    replace: "```typescript\n$|$\n```"
+
+  - trigger: ':`rb:'
+    replace: "```ruby\n$|$\n```"
+
+  - trigger: ':`jn:'
+    replace: "```json\n$|$\n```"
+
+  - trigger: ':`yl:'
+    replace: "```yaml\n$|$\n```"
+
+  - trigger: ':`tl:'
+    replace: "```toml\n$|$\n```"
