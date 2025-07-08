@@ -53,8 +53,7 @@
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
-    "*.wxml": "xml",
-    "*.wxss": "css",
+    "*.jlmd": "markdown",
     "*.vimrc": "viml",
     "*.m": "matlab",
     "docker-compose.yml": "yaml"
@@ -414,8 +413,7 @@
     "python": "strings"
   },
   // leetcode
-  "leetcode-problem-rating.cppCompiler": "clang",
-  "leetcode-problem-rating.defaultLanguage": "cpp",
+  "leetcode-problem-rating.defaultLanguage": "go",
   "leetcode-problem-rating.hideScore": "Score",
   "leetcode-problem-rating.hint.commandShortcut": false,
   "leetcode-problem-rating.hint.commentDescription": false,

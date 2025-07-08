@@ -168,19 +168,17 @@
   "col2": {
     "prefix": "col2",
     "body": [
-      "#block(",
-      "  height: 9em,",
-      "  columns()[",
-      "    #enum(",
-      "      [],",
-      "      [],",
-      "      [],",
-      "      numbering: \"1\",",
-      "      indent: 0em,",
-      "    )",
-      "  ],",
-      ")",
-      ""
+      "#columns(gutter: 20pt, [",
+      "  #let psize = 15pt",
+      "  #let bh = 18em",
+      "  #block(height: bh)[",
+      "",
+      "  ]",
+      "",
+      "  #block(height: bh)[",
+      "",
+      "  ]",
+      "])"
     ],
     "description": ""
   },
