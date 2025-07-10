@@ -1,0 +1,16 @@
+{
+  "blocked": [
+    "eporner.com"
+  ],
+  "crate": 1,
+  "last-update": 1752143531650,
+  "notes": {
+    "eporner.com": {
+      "count": 1,
+      "date": 1752143553158,
+      "origin": "prompt"
+    }
+  },
+  "managed.storage.overwrite.on.start": false,
+  "guid": "f5ac9d45-ccac-4cd8-b8d4-d029618d69d7"
+}

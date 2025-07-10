@@ -447,44 +447,44 @@ matches:
     force_clipboard: true
 
   # Markdown code blocks
-  - trigger: ':`py:'
+  - trigger: ':`py'
     replace: "```python\n$|$\n```"
 
-  - trigger: ':`go:'
+  - trigger: ':`go'
     replace: "```go\n$|$\n```"
 
-  - trigger: ':`rs:'
+  - trigger: ':`rs'
     replace: "```rust\n$|$\n```"
 
-  - trigger: ':`cpp:'
+  - trigger: ':`cpp'
     replace: "```cpp\n$|$\n```"
 
-  - trigger: ':`jl:'
+  - trigger: ':`jl'
     replace: "```julia\n$|$\n```"
 
-  - trigger: ':`j:'
+  - trigger: ':`j'
     replace: "```java\n$|$\n```"
 
-  - trigger: ':`sh:'
+  - trigger: ':`sh'
     replace: "```bash\n$|$\n```"
 
-  - trigger: ':`pw:'
+  - trigger: ':`pw'
     replace: "```powershell\n$|$\n```"
 
-  - trigger: ':`js:'
+  - trigger: ':`js'
     replace: "```javascript\n$|$\n```"
 
-  - trigger: ':`ts:'
+  - trigger: ':`ts'
     replace: "```typescript\n$|$\n```"
 
-  - trigger: ':`rb:'
+  - trigger: ':`rb'
     replace: "```ruby\n$|$\n```"
 
-  - trigger: ':`jn:'
+  - trigger: ':`jn'
     replace: "```json\n$|$\n```"
 
-  - trigger: ':`yl:'
+  - trigger: ':`yl'
     replace: "```yaml\n$|$\n```"
 
-  - trigger: ':`tl:'
+  - trigger: ':`tl'
     replace: "```toml\n$|$\n```"
