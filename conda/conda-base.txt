@@ -1,5 +1,5 @@
 conda-tree
-django-ninja
+django
 jinja2
 pip
 python-pptx
