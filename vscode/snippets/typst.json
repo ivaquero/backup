@@ -797,5 +797,12 @@
       "]"
     ],
     "description": ""
+  },
+  "tsz": {
+    "prefix": "tsz",
+    "body": [
+      "#set text(size: 16pt)"
+    ],
+    "description": ""
   }
 }
