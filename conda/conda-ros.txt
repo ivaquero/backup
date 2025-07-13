@@ -3,8 +3,6 @@ fastexcel
 gradio
 ipykernel
 keras
-onnx
-onnxruntime
 plotnine
 polars
 scienceplots
