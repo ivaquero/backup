@@ -1,14 +1,14 @@
 conda-tree
 cvxpy
 ipykernel
-ipywidgets
 manim
 marimo
 openpyxl
 plotnine
 polars
-preliz
-pymc
+python-graphviz
+python-igraph
 scikit-learn
+sympy
 xlsxwriter
 yfinance

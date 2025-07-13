@@ -3139,32 +3139,18 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>github.com/spf13/cobra</key>
+			<key>github.com/alecthomas/kong</key>
 			<dict>
 				<key>date</key>
-				<date>2025-06-06T09:29:48Z</date>
+				<date>2025-07-13T07:03:33Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
-					<string>github.com/spf13/cobra</string>
+					<string>github.com/alecthomas/kong</string>
 					<key>platform</key>
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
-					<string>github.com/spf13/cobra</string>
-				</dict>
-			</dict>
-			<key>github.com/spf13/viper</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-06T09:29:57Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/spf13/viper</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/spf13/viper</string>
+					<string>github.com/alecthomas/kong</string>
 				</dict>
 			</dict>
 			<key>github.com/tidwall/gjson</key>
@@ -3179,6 +3165,20 @@ $("h1").each(function() {
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
 					<string>github.com/tidwall/gjson</string>
+				</dict>
+			</dict>
+			<key>github.com/urfave/cli/v3</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T07:04:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/urfave/cli/v3</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/urfave/cli/v3</string>
 				</dict>
 			</dict>
 		</dict>
@@ -3196,6 +3196,34 @@ $("h1").each(function() {
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
 					<string>github.com/pdfcpu/pdfcpu/pkg/api</string>
+				</dict>
+			</dict>
+			<key>github.com/spf13/cobra</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T07:02:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/cobra</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/cobra</string>
+				</dict>
+			</dict>
+			<key>github.com/spf13/viper</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T07:02:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/spf13/viper</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/spf13/viper</string>
 				</dict>
 			</dict>
 		</dict>
@@ -3302,20 +3330,6 @@ $("h1").each(function() {
 					<string>https://networkx.org/documentation/stable/</string>
 				</dict>
 			</dict>
-			<key>https://numba.readthedocs.io/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-10T01:57:02Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Numba</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://numba.readthedocs.io/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://openpyxl.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3344,20 +3358,6 @@ $("h1").each(function() {
 					<string>https://plotnine.org/</string>
 				</dict>
 			</dict>
-			<key>https://preliz.readthedocs.io/en/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-02T10:13:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PreliZ</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://preliz.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
 			<key>https://pymoo.org/</key>
 			<dict>
 				<key>date</key>
@@ -3370,20 +3370,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://pymoo.org/</string>
-				</dict>
-			</dict>
-			<key>https://python.arviz.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-07T06:50:22Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>ArviZ</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://python.arviz.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://ranaroussi.github.io/yfinance/</key>
@@ -3412,20 +3398,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.cvxpy.org/</string>
-				</dict>
-			</dict>
-			<key>https://www.pymc.io/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-07-27T17:13:30Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>PyMC project website</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://www.pymc.io/</string>
 				</dict>
 			</dict>
 			<key>https://www.statsmodels.org/stable/</key>
@@ -3865,6 +3837,20 @@ $("h1").each(function() {
 					<string>https://moshi4.github.io/pyCirclize/</string>
 				</dict>
 			</dict>
+			<key>https://numba.readthedocs.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T06:46:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Numba</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://numba.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://ocrmypdf.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -3919,6 +3905,34 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://plotnine.readthedocs.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://preliz.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T06:46:40Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PreliZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://preliz.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://python.arviz.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T06:46:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>ArviZ</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://python.arviz.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://python.igraph.org/en/stable/</key>
@@ -4073,6 +4087,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://www.pymc-marketing.io/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://www.pymc.io/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T06:46:42Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>PyMC project website</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://www.pymc.io/</string>
 				</dict>
 			</dict>
 			<key>https://www.pymc.io/projects/bart/en/latest/</key>
@@ -4240,29 +4268,6 @@ $("h1").each(function() {
 					<string>usercontribRequests</string>
 					<key>uniqueIdentifier</key>
 					<string>Requests</string>
-				</dict>
-			</dict>
-			<key>Scikit</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-27T07:16:03Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Machine Learning</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
-					<key>name</key>
-					<string>scikit-learn</string>
-					<key>platform</key>
-					<string>usercontribScikit</string>
-					<key>uniqueIdentifier</key>
-					<string>Scikit</string>
 				</dict>
 			</dict>
 			<key>SymPy</key>
@@ -5115,6 +5120,29 @@ $("h1").each(function() {
 					<string>usercontribReact_Native</string>
 					<key>uniqueIdentifier</key>
 					<string>React_Native</string>
+				</dict>
+			</dict>
+			<key>Scikit</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-13T07:00:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Machine Learning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>usercontribScikit</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit</string>
 				</dict>
 			</dict>
 			<key>Scikit-image</key>
