@@ -157,7 +157,7 @@
     "prefix": "col",
     "body": [
       "#block(",
-      "  height: 9em,",
+      "  height: 16em,",
       "  columns()[",
       "  ],",
       ")",
@@ -801,7 +801,7 @@
   "tsz": {
     "prefix": "tsz",
     "body": [
-      "#set text(size: 16pt)"
+      "#set text(size: 18pt)"
     ],
     "description": ""
   }
