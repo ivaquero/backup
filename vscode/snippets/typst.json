@@ -169,7 +169,7 @@
     "prefix": "col2",
     "body": [
       "#columns(gutter: 20pt, [",
-      "  #let psize = 15pt",
+      "  #set text(size: 18pt)",
       "  #let bh = 18em",
       "  #block(height: bh)[",
       "",
@@ -217,7 +217,7 @@
     "prefix": "rimg",
     "body": [
       "#figure(",
-      "  image(\"images\", width: 40%),",
+      "  image(\"images\", height: 80%),",
       "  caption: none,",
       ")",
       ""

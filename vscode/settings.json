@@ -331,9 +331,6 @@
     "editor.defaultFormatter": "myriad-dreamin.tinymist",
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
-  "[typst-code]": {
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
-  },
   "tinymist.completion.triggerOnSnippetPlaceholders": true,
   "tinymist.exportPdf": "onDocumentHasTitle",
   "tinymist.formatterMode": "typstyle",
