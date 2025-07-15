@@ -334,10 +334,10 @@ matches:
     replace: '######'
 
   - trigger: ':url'
-    replace: '[$|$]()'
+    replace: '[]()'
 
   - trigger: ':img'
-    replace: '![]($|$)'
+    replace: '![]()'
 
   - trigger: ':-['
     replace: '- [ ] '
@@ -349,142 +349,145 @@ matches:
     replace: |-
       <details>
       <summary></summary>
-      $|$
+
       </details>
     force_clipboard: true
 
   # Markdown tables
   - trigger: ':mdt2'
     replace: |-
-      |  $|$  |    |
+      |    |    |
       |:--:|:--:|
       |    |    |
     force_clipboard: true
 
   - trigger: ':mdt3'
     replace: |-
-      |  $|$  |    |    |
+      |    |    |    |
       |:--:|:--:|:--:|
       |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdt4'
     replace: |-
-      |  $|$  |    |    |    |
+      |    |    |    |    |
       |:--:|:--:|:--:|:--:|
       |    |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdt5'
     replace: |-
-      |  $|$  |    |    |    |    |
+      |    |    |    |    |    |
       |:--:|:--:|:--:|:--:|:--:|
       |    |    |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdt6'
     replace: |-
-      |  $|$  |    |    |    |    |    |
+      |    |    |    |    |    |    |
       |:--:|:--:|:--:|:--:|:--:|:--:|
       |    |    |    |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdt7'
     replace: |-
-      |  $|$  |    |    |    |    |    |    |
+      |    |    |    |    |    |    |    |
       |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
       |    |    |    |    |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdt8'
     replace: |-
-      |  $|$  |    |    |    |    |    |    |    |
+      |    |    |    |    |    |    |    |    |
       |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
       |    |    |    |    |    |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdt9'
     replace: |-
-      |  $|$  |    |    |    |    |    |    |    |    |
+      |    |    |    |    |    |    |    |    |    |
       |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
       |    |    |    |    |    |    |    |    |    |
     force_clipboard: true
 
   - trigger: ':mdr2'
-    replace: '|  $|$  |    |'
+    replace: '|    |    |'
     force_clipboard: true
 
   - trigger: ':mdr3'
-    replace: '|  $|$  |    |    |'
+    replace: '|    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr4'
-    replace: '|  $|$  |    |    |    |'
+    replace: '|    |    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr5'
-    replace: '|  $|$  |    |    |    |    |'
+    replace: '|    |    |    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr6'
-    replace: '|  $|$  |    |    |    |    |    |'
+    replace: '|    |    |    |    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr7'
-    replace: '|  $|$  |    |    |    |    |    |    |'
+    replace: '|    |    |    |    |    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr8'
-    replace: '|  $|$  |    |    |    |    |    |    |    |'
+    replace: '|    |    |    |    |    |    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr9'
-    replace: '|  $|$  |    |    |    |    |    |    |    |    |'
+    replace: '|    |    |    |    |    |    |    |    |    |'
     force_clipboard: true
 
   - trigger: ':mdr10'
-    replace: '|  $|$  |    |    |    |    |    |    |    |    |    |'
+    replace: '|    |    |    |    |    |    |    |    |    |    |'
     force_clipboard: true
 
   # Markdown code blocks
   - trigger: ':`py'
-    replace: "```python\n$|$\n```"
+    replace: "```python\n\n$|$```"
 
   - trigger: ':`go'
-    replace: "```go\n$|$\n```"
+    replace: "```go\n\n$|$```"
 
   - trigger: ':`rs'
-    replace: "```rust\n$|$\n```"
+    replace: "```rust\n\n$|$```"
 
   - trigger: ':`cpp'
-    replace: "```cpp\n$|$\n```"
+    replace: "```cpp\n\n$|$```"
 
   - trigger: ':`jl'
-    replace: "```julia\n$|$\n```"
+    replace: "```julia\n\n$|$```"
 
   - trigger: ':`j'
-    replace: "```java\n$|$\n```"
+    replace: "```java\n\n$|$```"
 
   - trigger: ':`sh'
-    replace: "```bash\n$|$\n```"
+    replace: "```bash\n\n$|$```"
 
   - trigger: ':`pw'
-    replace: "```powershell\n$|$\n```"
+    replace: "```powershell\n\n$|$```"
 
   - trigger: ':`js'
-    replace: "```javascript\n$|$\n```"
+    replace: "```javascript\n\n$|$```"
 
   - trigger: ':`ts'
-    replace: "```typescript\n$|$\n```"
+    replace: "```typescript\n\n$|$```"
+
+  - trigger: ':`ty'
+    replace: "```typst\n\n$|$```"
 
   - trigger: ':`rb'
-    replace: "```ruby\n$|$\n```"
+    replace: "```ruby\n\n$|$```"
 
   - trigger: ':`jn'
-    replace: "```json\n$|$\n```"
+    replace: "```json\n\n$|$```"
 
   - trigger: ':`yl'
-    replace: "```yaml\n$|$\n```"
+    replace: "```yaml\n\n$|$```"
 
   - trigger: ':`tl'
-    replace: "```toml\n$|$\n```"
+    replace: "```toml\n\n$|$```"
