@@ -5,7 +5,7 @@ ipykernel
 keras
 plotnine
 polars
-scienceplots
+python-graphviz
 scikit-learn
 torchvision
 transformers
