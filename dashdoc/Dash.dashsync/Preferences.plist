@@ -3138,11 +3138,13 @@ $("h1").each(function() {
 	<key>DHGoRepo</key>
 	<dict>
 		<key>installed</key>
+		<dict/>
+		<key>uninstalled</key>
 		<dict>
 			<key>github.com/alecthomas/kong</key>
 			<dict>
 				<key>date</key>
-				<date>2025-07-13T07:03:33Z</date>
+				<date>2025-07-22T17:08:56Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3153,37 +3155,6 @@ $("h1").each(function() {
 					<string>github.com/alecthomas/kong</string>
 				</dict>
 			</dict>
-			<key>github.com/tidwall/gjson</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-06T09:29:46Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/tidwall/gjson</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/tidwall/gjson</string>
-				</dict>
-			</dict>
-			<key>github.com/urfave/cli/v3</key>
-			<dict>
-				<key>date</key>
-				<date>2025-07-13T07:04:01Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>github.com/urfave/cli/v3</string>
-					<key>platform</key>
-					<string>godoc</string>
-					<key>uniqueIdentifier</key>
-					<string>github.com/urfave/cli/v3</string>
-				</dict>
-			</dict>
-		</dict>
-		<key>uninstalled</key>
-		<dict>
 			<key>github.com/pdfcpu/pdfcpu/pkg/api</key>
 			<dict>
 				<key>date</key>
@@ -3224,6 +3195,34 @@ $("h1").each(function() {
 					<string>godoc</string>
 					<key>uniqueIdentifier</key>
 					<string>github.com/spf13/viper</string>
+				</dict>
+			</dict>
+			<key>github.com/tidwall/gjson</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:08:56Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/tidwall/gjson</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/tidwall/gjson</string>
+				</dict>
+			</dict>
+			<key>github.com/urfave/cli/v3</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:08:57Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>github.com/urfave/cli/v3</string>
+					<key>platform</key>
+					<string>godoc</string>
+					<key>uniqueIdentifier</key>
+					<string>github.com/urfave/cli/v3</string>
 				</dict>
 			</dict>
 		</dict>
@@ -3286,20 +3285,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.marimo.io/</string>
-				</dict>
-			</dict>
-			<key>https://docs.pydantic.dev/latest/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T15:19:39Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Pydantic</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.pydantic.dev/latest/</string>
 				</dict>
 			</dict>
 			<key>https://docs.ultralytics.com/</key>
@@ -3370,20 +3355,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://pymoo.org/</string>
-				</dict>
-			</dict>
-			<key>https://ranaroussi.github.io/yfinance/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-02-05T15:53:23Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>yfinance - market data downloader</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://ranaroussi.github.io/yfinance/</string>
 				</dict>
 			</dict>
 			<key>https://www.cvxpy.org/</key>
@@ -3527,6 +3498,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.jax.dev/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://docs.pydantic.dev/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:17:13Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Pydantic</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.pydantic.dev/latest/</string>
 				</dict>
 			</dict>
 			<key>https://docs.pytest.org/en/stable/</key>
@@ -3963,6 +3948,20 @@ $("h1").each(function() {
 					<string>https://pytorch.org/docs/stable/</string>
 				</dict>
 			</dict>
+			<key>https://ranaroussi.github.io/yfinance/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:17:37Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>yfinance - market data downloader</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://ranaroussi.github.io/yfinance/</string>
+				</dict>
+			</dict>
 			<key>https://requests.readthedocs.io/en/latest/</key>
 			<dict>
 				<key>date</key>
@@ -4311,52 +4310,6 @@ $("h1").each(function() {
 					<string>usercontribigraph</string>
 					<key>uniqueIdentifier</key>
 					<string>igraph</string>
-				</dict>
-			</dict>
-			<key>jax</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-04T05:55:31Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jaxlib</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
-					<key>authorLinkText</key>
-					<string>Gary Miguel</string>
-					<key>name</key>
-					<string>jax</string>
-					<key>platform</key>
-					<string>usercontribjax</string>
-					<key>uniqueIdentifier</key>
-					<string>jax</string>
-				</dict>
-			</dict>
-			<key>lxml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-15T06:03:23Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python XML toolkit</string>
-						<string>Python HTML package</string>
-						<string>XML ElementTree</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/lxml#readme</string>
-					<key>authorLinkText</key>
-					<string>laggardkernel</string>
-					<key>name</key>
-					<string>lxml</string>
-					<key>platform</key>
-					<string>usercontriblxml</string>
-					<key>uniqueIdentifier</key>
-					<string>lxml</string>
 				</dict>
 			</dict>
 			<key>polars</key>
@@ -5429,6 +5382,28 @@ $("h1").each(function() {
 					<string>imbalanced-learn</string>
 				</dict>
 			</dict>
+			<key>jax</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:16:04Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>jaxlib</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/jax#readme</string>
+					<key>authorLinkText</key>
+					<string>Gary Miguel</string>
+					<key>name</key>
+					<string>jax</string>
+					<key>platform</key>
+					<string>usercontribjax</string>
+					<key>uniqueIdentifier</key>
+					<string>jax</string>
+				</dict>
+			</dict>
 			<key>jq</key>
 			<dict>
 				<key>date</key>
@@ -5471,6 +5446,30 @@ $("h1").each(function() {
 					<string>usercontribjupyter-book</string>
 					<key>uniqueIdentifier</key>
 					<string>jupyter-book</string>
+				</dict>
+			</dict>
+			<key>lxml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:18:14Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python XML toolkit</string>
+						<string>Python HTML package</string>
+						<string>XML ElementTree</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/lxml#readme</string>
+					<key>authorLinkText</key>
+					<string>laggardkernel</string>
+					<key>name</key>
+					<string>lxml</string>
+					<key>platform</key>
+					<string>usercontriblxml</string>
+					<key>uniqueIdentifier</key>
+					<string>lxml</string>
 				</dict>
 			</dict>
 			<key>nox</key>
@@ -5872,7 +5871,7 @@ $("h1").each(function() {
 					Docs/Ultralytics YOLO Docs.docset</key>
 			<string>yl</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO Docs/Ultralytics YOLO Docs.docset</key>
-			<string>yl</string>
+			<string>y</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/VegaAltair/Vega-Altair.docset</key>
 			<string>at</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/aqtinstall/aqtinstall.docset</key>
@@ -6115,11 +6114,6 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-04-02T00:49:51Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/C++.xml</key>
 			<dict>
 				<key>date</key>
@@ -6143,7 +6137,7 @@ $("h1").each(function() {
 			<key>http://kapeli.com/feeds/Go.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2024-12-11T15:53:53Z</date>
+				<date>2025-07-22T17:13:55Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Java.xml</key>
 			<dict>
@@ -6203,6 +6197,11 @@ $("h1").each(function() {
 		</dict>
 		<key>uninstalled</key>
 		<dict>
+			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-07-22T17:19:22Z</date>
+			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
 				<key>date</key>
