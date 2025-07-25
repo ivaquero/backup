@@ -7,19 +7,15 @@
     ],
     "description": ""
   },
-  "t3": {
-    "prefix": "t3",
+  "th": {
+    "prefix": "th",
     "body": [
-      "|   ${0:title}  |     |     |",
+      "|     |     |     |",
       "| :-: | :-: | :-: |",
-      "|     |     |     |",
-      "|     |     |     |",
-      "|     |     |     |",
-      ""
     ],
     "description": ""
   },
-  "t32": {
+  "t3": {
     "prefix": "t3",
     "body": [
       "|     |     |     |",
@@ -32,9 +28,9 @@
     "description": ""
   },
   "t31": {
-    "prefix": "t3",
+    "prefix": "t31",
     "body": [
-      "|     |     |     |",
+      "|   ${0:title}  |     |     |",
       "| :-: | :-: | :-: |",
       "|     |     |     |",
       "|     |     |     |",
@@ -232,16 +228,6 @@
     "prefix": "ak",
     "body": [
       "\\$k_1, k_2, …, k_n\\$",
-      ""
-    ],
-    "description": ""
-  },
-  "theo": {
-    "prefix": "theo",
-    "body": [
-      ":::{admonition} 定理",
-      "",
-      ":::",
       ""
     ],
     "description": ""
@@ -533,16 +519,4 @@
     ],
     "description": ""
   },
-  "h2": {
-    "prefix": "h2",
-    "body": [
-      "##"
-    ]
-  },
-  "h3": {
-    "prefix": "h3",
-    "body": [
-      "###"
-    ]
-  }
 }

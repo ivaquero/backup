@@ -206,6 +206,7 @@
     },
   },
   "python.languageServer": "None",
+  "python-envs.terminal.showActivateButton": true,
   "ruff.configuration": "pyproject.toml",
   "ruff.format.preview": true,
   "ruff.lint.preview": true,
