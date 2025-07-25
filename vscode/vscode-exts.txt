@@ -14,13 +14,13 @@ foam.foam-vscode
 formulahendry.code-runner
 foxundermoon.shell-format
 golang.go
-gsgupta.opencv-snippets
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
 llvm-vs-code-extensions.vscode-clangd
 marimo-team.vscode-marimo
 ms-python.python
+ms-python.vscode-python-envs
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
