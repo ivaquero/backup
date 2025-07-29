@@ -205,13 +205,10 @@
       "source.organizeImports": "explicit"
     },
   },
-  "python.languageServer": "None",
-  "python-envs.terminal.showActivateButton": true,
   "ruff.configuration": "pyproject.toml",
   "ruff.format.preview": true,
   "ruff.lint.preview": true,
   "ruff.nativeServer": "on",
-  "ty.experimental.completions.enable": true,
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
