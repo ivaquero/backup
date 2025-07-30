@@ -16,6 +16,7 @@ golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
+kirigaya.openmcp
 llvm-vs-code-extensions.vscode-clangd
 marcel-goldschen-ohm.manim-viewer
 marimo-team.vscode-marimo
