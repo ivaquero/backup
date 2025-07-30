@@ -1,0 +1,12 @@
+conda-tree
+fastexcel
+gradio
+ipykernel
+keras
+plotnine
+polars
+python-graphviz
+scikit-learn
+torchvision
+transformers
+ultralytics
