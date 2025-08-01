@@ -141,11 +141,11 @@
   "markdown.extension.completion.enabled": true,
   "markdown.extension.italic.indicator": "*",
   "markdown.extension.print.theme": "light",
+  "markdown.extension.tableFormatter.delimiterRowNoPadding": true,
   "markdown.extension.tableFormatter.normalizeIndentation": true,
   "markdown.extension.theming.decoration.renderLink": true,
   "markdown.extension.theming.decoration.renderParagraph": true,
   "markdown.extension.toc.levels": "2..4",
-  "markdown.extension.toc.orderedList": true,
   "markdown.occurrencesHighlight.enabled": true,
   "markdown.preview.fontSize": 16,
   "markdown.preview.linkify": true,
@@ -166,6 +166,7 @@
     "MD041": false,
     "MD042": false
   },
+  "markdowntable.showMenu.csvToTable": true,
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
