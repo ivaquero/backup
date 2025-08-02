@@ -7,154 +7,8 @@
     ],
     "description": ""
   },
-  "th": {
-    "prefix": "th",
-    "body": [
-      "|     |     |     |",
-      "| :-: | :-: | :-: |",
-    ],
-    "description": ""
-  },
-  "t3": {
-    "prefix": "t3",
-    "body": [
-      "|     |     |     |",
-      "| :-: | :-: | :-: |",
-      "|     |     |     |",
-      "|     |     |     |",
-      "|     |     |     |",
-      ""
-    ],
-    "description": ""
-  },
-  "t31": {
-    "prefix": "t31",
-    "body": [
-      "|   ${0:title}  |     |     |",
-      "| :-: | :-: | :-: |",
-      "|     |     |     |",
-      "|     |     |     |",
-      "|     |     |     |",
-      ""
-    ],
-    "description": ""
-  },
-  "t4": {
-    "prefix": "t4",
-    "body": [
-      "|     |     |     |     |",
-      "| :-: | :-: | :-: | :-: |",
-      "|     |     |     |     |",
-      "|     |     |     |     |",
-      "|     |     |     |     |",
-      ""
-    ],
-    "description": ""
-  },
-  "t5": {
-    "prefix": "t5",
-    "body": [
-      "|     |     |     |     |     |",
-      "| :-: | :-: | :-: | :-: | :-: |",
-      "|     |     |     |     |     |",
-      "|     |     |     |     |     |",
-      "|     |     |     |     |     |",
-      ""
-    ],
-    "description": ""
-  },
-  "cpy": {
-    "prefix": "cpy",
-    "body": [
-      "```python",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "ccc": {
-    "prefix": "ccc",
-    "body": [
-      "```cpp",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "cjl": {
-    "prefix": "cjl",
-    "body": [
-      "```julia",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "cmd": {
-    "prefix": "cmd",
-    "body": [
-      "```markdown",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "cjs": {
-    "prefix": "cjs",
-    "body": [
-      "```js",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "cmm": {
-    "prefix": "cmm",
-    "body": [
-      "```mermaid",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "crs": {
-    "prefix": "crs",
-    "body": [
-      "```rust",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "cbs": {
-    "prefix": "cbs",
-    "body": [
-      "```bash",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "cc": {
-    "prefix": "cc",
-    "body": [
-      "```c",
-      "",
-      "```",
-      ""
-    ],
-    "description": ""
-  },
-  "style": {
-    "prefix": "style",
+  "html-style": {
+    "prefix": "hsty",
     "body": [
       "<style>",
       "    table {",
@@ -177,8 +31,8 @@
     ],
     "description": ""
   },
-  "col2": {
-    "prefix": "col2",
+  "html-col2": {
+    "prefix": "hcol2",
     "body": [
       "<div class=\"box\">",
       "    <div class=\"left\">",
@@ -189,10 +43,148 @@
     ],
     "description": ""
   },
-  "va": {
-    "prefix": "va",
+  "html-sum": {
+    "prefix": "hsum",
     "body": [
-      "𝒂"
+      "<details>",
+      "      <summary>",
+      "",
+      "      </summary>",
+      "</details>"
+    ],
+    "description": ""
+  },
+  "table-2": {
+    "prefix": "t2",
+    "body": [
+      "|     |     |",
+      "|:---:|:---:|",
+      "|     |     |",
+      "|     |     |",
+      "|     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "table-3": {
+    "prefix": "t3",
+    "body": [
+      "|     |     |     |",
+      "|:---:|:---:|:---:|",
+      "|     |     |     |",
+      "|     |     |     |",
+      "|     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "table-4": {
+    "prefix": "t4",
+    "body": [
+      "|     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|",
+      "|     |     |     |     |",
+      "|     |     |     |     |",
+      "|     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "table-5": {
+    "prefix": "t5",
+    "body": [
+      "|     |     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|:---:|",
+      "|     |     |     |     |     |",
+      "|     |     |     |     |     |",
+      "|     |     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "table-6": {
+    "prefix": "t6",
+    "body": [
+      "|     |     |     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|:---:|:---:|",
+      "|     |     |     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "table-7": {
+    "prefix": "t7",
+    "body": [
+      "|     |     |     |     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|:---:|:---:|:---:|",
+      "|     |     |     |     |     |     |     |",
+      ""
+    ],
+    "description": ""
+  },
+  "table-h2": {
+    "prefix": "th2",
+    "body": [
+      "|     |     |",
+      "| :-: | :-: |"
+    ],
+    "description": ""
+  },
+  "table-h3": {
+    "prefix": "th3",
+    "body": [
+      "|     |     |     |",
+      "| :-: | :-: | :-: |"
+    ],
+    "description": ""
+  },
+  "table-h4": {
+    "prefix": "th4",
+    "body": [
+      "|     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|",
+      ""
+    ],
+    "description": ""
+  },
+  "table-h5": {
+    "prefix": "th5",
+    "body": [
+      "|     |     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|:---:|",
+      ""
+    ],
+    "description": ""
+  },
+  "table-h6": {
+    "prefix": "th6",
+    "body": [
+      "|     |     |     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|:---:|:---:|",
+      ""
+    ],
+    "description": ""
+  },
+  "table-h7": {
+    "prefix": "th7",
+    "body": [
+      "|     |     |     |     |     |     |     |",
+      "|:---:|:---:|:---:|:---:|:---:|:---:|:---:|",
+      ""
+    ],
+    "description": ""
+  },
+  "list-check": {
+    "prefix": "lck",
+    "body": [
+      "- [ ]"
+    ],
+    "description": ""
+  },
+  "list-check2": {
+    "prefix": "lck2",
+    "body": [
+      "- [x]"
     ],
     "description": ""
   },
@@ -240,55 +232,12 @@
     ],
     "description": ""
   },
-  "def": {
-    "prefix": "def",
-    "body": [
-      "**定义**：",
-      ""
-    ],
-    "description": ""
-  },
-  "uxy": {
-    "prefix": "uxy",
-    "body": [
-      "$X$和$Y$",
-      ""
-    ],
-    "description": ""
-  },
-  "m33": {
-    "prefix": "m33",
-    "body": [
-      "$$",
-      "\\begin{pmatrix}",
-      "a_{11} & a_{12} & a_{13} \\\\\\",
-      "a_{21} & a_{22} & a_{23} \\\\\\",
-      "a_{31} & a_{32} & a_{33}",
-      "\\end{pmatrix}",
-      "$$",
-      ""
-    ],
-    "description": ""
-  },
-  "m22": {
-    "prefix": "m22",
-    "body": [
-      "$$",
-      "\\begin{pmatrix}",
-      "a_{11} & a_{12} \\\\\\",
-      "a_{21} & a_{22}",
-      "\\end{pmatrix}",
-      "$$",
-      ""
-    ],
-    "description": ""
-  },
   "m01": {
     "prefix": "m01",
     "body": [
       "$$",
       "\\begin{pmatrix}",
-      "a_1 \\\\\\ a_2",
+      "a_1 \\\\ a_2",
       "\\end{pmatrix}",
       "$$",
       ""
@@ -301,9 +250,9 @@
       "$$",
       "𝐀 =",
       "\\begin{pmatrix}",
-      "a_{11} & a_{12} & … & a_{1n} \\\\\\",
-      "a_{21} & a_{22} & … & a_{2n} \\\\\\",
-      "⋮ & ⋮ & … & ⋮ \\\\\\",
+      "a_{11} & a_{12} & … & a_{1n} \\\\",
+      "a_{21} & a_{22} & … & a_{2n} \\\\",
+      "⋮ & ⋮ & … & ⋮ \\\\",
       "a_{m1} & a_{m2} & … & a_{mn}",
       "\\end{pmatrix}",
       "$$",
@@ -316,24 +265,8 @@
     "body": [
       "$$",
       "\\begin{pmatrix}",
-      "a_1 \\\\\\ a_2 \\\\\\ ⋮ \\\\\\ a_m",
+      "a_1 \\\\ a_2 \\\\ ⋮ \\\\ a_m",
       "\\end{pmatrix}",
-      "$$",
-      ""
-    ],
-    "description": ""
-  },
-  "detn": {
-    "prefix": "detn",
-    "body": [
-      "$$",
-      "|𝐀| =",
-      "\\begin{vmatrix}",
-      "a_{11} & a_{12} & … & a_{1n} \\\\\\",
-      "a_{21} & a_{22} & … & a_{2n} \\\\\\",
-      "⋮ & ⋮ & ⋱ & ⋮ \\\\\\",
-      "a_{n1} & a_{n2} & … & a_{nn}",
-      "\\end{vmatrix}",
       "$$",
       ""
     ],
@@ -345,9 +278,9 @@
       "$$",
       "𝐕 =",
       "\\begin{pmatrix}",
-      "1 & 1 & … & 1 \\\\\\",
-      "x_1 & x_2 & … & x_n \\\\\\",
-      "⋮ & ⋮ & … & ⋮ \\\\\\",
+      "1 & 1 & … & 1 \\\\",
+      "x_1 & x_2 & … & x_n \\\\",
+      "⋮ & ⋮ & … & ⋮ \\\\",
       "x_1^{n - 1} & x_2^{n - 1} & … & x_n^{n - 1}",
       "\\end{pmatrix}",
       "$$",
@@ -355,15 +288,15 @@
     ],
     "description": ""
   },
-  "detvdm": {
+  "det-vdm": {
     "prefix": "detvdm",
     "body": [
       "$$",
       "|𝐕| =",
       "\\begin{vmatrix}",
-      "1 & 1 & … & 1 \\\\\\",
-      "x_1 & x_2 & … & x_n \\\\\\",
-      "⋮ & ⋮ & … & ⋮ \\\\\\",
+      "1 & 1 & … & 1 \\\\",
+      "x_1 & x_2 & … & x_n \\\\",
+      "⋮ & ⋮ & … & ⋮ \\\\",
       "x_1^{n - 1} & x_2^{n - 1} & … & x_n^{n - 1}",
       "\\end{vmatrix}",
       "$$",
@@ -371,7 +304,34 @@
     ],
     "description": ""
   },
-  "diag1": {
+  "matrix-2": {
+    "prefix": "m22",
+    "body": [
+      "$$",
+      "\\begin{pmatrix}",
+      "a_{11} & a_{12} \\\\",
+      "a_{21} & a_{22}",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "matrix-3": {
+    "prefix": "m33",
+    "body": [
+      "$$",
+      "\\begin{pmatrix}",
+      "a_{11} & a_{12} & a_{13} \\\\",
+      "a_{21} & a_{22} & a_{23} \\\\",
+      "a_{31} & a_{32} & a_{33}",
+      "\\end{pmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "diag-1": {
     "prefix": "diag1",
     "body": [
       "$$",
@@ -386,14 +346,28 @@
     ],
     "description": ""
   },
-  "det3": {
+  "det-2": {
+    "prefix": "det2",
+    "body": [
+      "$$",
+      "|𝐀| =",
+      "\\begin{vmatrix}",
+      "a_{11} & a_{12} \\\\",
+      "a_{21} & a_{22}",
+      "\\end{vmatrix}",
+      "$$",
+      ""
+    ],
+    "description": ""
+  },
+  "det-3": {
     "prefix": "det3",
     "body": [
       "$$",
       "|𝐀| =",
       "\\begin{vmatrix}",
-      "a_{11} & a_{12} & a_{13} \\\\\\",
-      "a_{21} & a_{22} & a_{23} \\\\\\",
+      "a_{11} & a_{12} & a_{13} \\\\",
+      "a_{21} & a_{22} & a_{23} \\\\",
       "a_{31} & a_{32} & a_{33}",
       "\\end{vmatrix}",
       "$$",
@@ -401,14 +375,16 @@
     ],
     "description": ""
   },
-  "det2": {
-    "prefix": "det2",
+  "det-n": {
+    "prefix": "detn",
     "body": [
       "$$",
       "|𝐀| =",
       "\\begin{vmatrix}",
-      "a_{11} & a_{12} \\\\\\",
-      "a_{21} & a_{22}",
+      "a_{11} & a_{12} & … & a_{1n} \\\\",
+      "a_{21} & a_{22} & … & a_{2n} \\\\",
+      "⋮ & ⋮ & ⋱ & ⋮ \\\\",
+      "a_{n1} & a_{n2} & … & a_{nn}",
       "\\end{vmatrix}",
       "$$",
       ""
@@ -428,92 +404,101 @@
     ],
     "description": ""
   },
-  "ma": {
+  "mat-a": {
     "prefix": "ma",
     "body": [
-      "𝑨"
+      "𝑨",
+      ""
     ],
     "description": ""
   },
-  "mb": {
+  "mat-b": {
     "prefix": "mb",
     "body": [
-      "𝑩"
+      "𝑩",
+      ""
     ],
     "description": ""
   },
-  "mc": {
+  "mat-c": {
     "prefix": "mc",
     "body": [
       "𝑪"
     ],
     "description": ""
   },
-  "me": {
+  "mat-e": {
     "prefix": "me",
     "body": [
       "𝑬"
     ],
     "description": ""
   },
-  "mh": {
+  "mat-h": {
     "prefix": "mh",
     "body": [
       "𝑯"
     ],
     "description": ""
   },
-  "mj": {
+  "mat-j": {
     "prefix": "mj",
     "body": [
       "𝑱"
     ],
     "description": ""
   },
-  "mp": {
+  "mat-p": {
     "prefix": "mp",
     "body": [
       "𝑷"
     ],
     "description": ""
   },
-  "mq": {
+  "mat-q": {
     "prefix": "mq",
     "body": [
       "𝑸"
     ],
     "description": ""
   },
-  "mx": {
+  "mat-x": {
     "prefix": "mx",
     "body": [
       "𝑿"
     ],
     "description": ""
   },
-  "vx": {
+  "vec-a": {
+    "prefix": "va",
+    "body": [
+      "𝒂"
+    ],
+    "description": ""
+  },
+  "vec-x": {
     "prefix": "vx",
     "body": [
       "𝒙"
     ],
     "description": ""
   },
-  "vy": {
+  "vec-y": {
     "prefix": "vy",
     "body": [
       "𝒚"
     ],
     "description": ""
   },
-  "eig": {
-    "prefix": "eig",
+  "mat-eig": {
+    "prefix": "meig",
     "body": [
       "𝑨 - λ 𝑰"
     ],
     "description": ""
   },
-  "aha": {
-    "prefix": "aha",
+  "mat-aha": {
+    "prefix": "maha",
     "body": [
       "𝑨^H 𝑨"
     ],

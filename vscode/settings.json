@@ -138,14 +138,6 @@
       "strings": "off"
     }
   },
-  "markdown.extension.completion.enabled": true,
-  "markdown.extension.italic.indicator": "*",
-  "markdown.extension.print.theme": "light",
-  "markdown.extension.tableFormatter.delimiterRowNoPadding": true,
-  "markdown.extension.tableFormatter.normalizeIndentation": true,
-  "markdown.extension.theming.decoration.renderLink": true,
-  "markdown.extension.theming.decoration.renderParagraph": true,
-  "markdown.extension.toc.levels": "2..4",
   "markdown.occurrencesHighlight.enabled": true,
   "markdown.preview.fontSize": 16,
   "markdown.preview.linkify": true,
@@ -155,6 +147,13 @@
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
+  "markdown.extension.completion.enabled": true,
+  "markdown.extension.italic.indicator": "*",
+  "markdown.extension.tableFormatter.delimiterRowNoPadding": true,
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+  "markdown.extension.theming.decoration.renderLink": true,
+  "markdown.extension.theming.decoration.renderParagraph": true,
+  "markdown.extension.toc.levels": "2..4",
   "markdownlint.config": {
     "MD003": false,
     "MD024": false,
