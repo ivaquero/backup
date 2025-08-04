@@ -171,7 +171,7 @@
   "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
     "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out && rm ./a.out",
-    "cpp": "cd $dir && clang++ -std=c++11 $fileName && ./a.out && rm ./a.out",
+    "cpp": "cd $dir && clang++ -std=c++20 $fileName && ./a.out && rm ./a.out",
     "go": "go run",
     "javascript": "node run --allow-net $fullFileName",
     "julia": "julia",
@@ -376,7 +376,7 @@
   // spell & grammar
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [
-    "markdown",
+    // "markdown",
     "latex",
   ],
   "spellright.language": [

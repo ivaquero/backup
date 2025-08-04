@@ -2,6 +2,7 @@ conda-tree
 fastexcel
 gradio
 ipykernel
+jupytext
 keras
 plotnine
 polars
