@@ -11,13 +11,13 @@ davidanson.vscode-markdownlint
 evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
-foxundermoon.shell-format
 golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
 kirigaya.openmcp
 llvm-vs-code-extensions.vscode-clangd
+mads-hartmann.bash-ide-vscode
 marcel-goldschen-ohm.manim-viewer
 marimo-team.vscode-marimo
 ms-python.python
