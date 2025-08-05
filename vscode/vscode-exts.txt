@@ -33,6 +33,7 @@ ms-vscode.live-server
 ms-vscode.powershell
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
+oracle.mysql-shell-for-vs-code
 pkief.material-icon-theme
 pomdtr.markdown-kroki
 qcz.text-power-tools
