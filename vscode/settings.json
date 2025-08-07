@@ -413,7 +413,7 @@
     "python": "strings"
   },
   // leetcode
-  "leetcode-problem-rating.defaultLanguage": "go",
+  "leetcode-problem-rating.defaultLanguage": "cpp",
   "leetcode-problem-rating.hideScore": "Score",
   "leetcode-problem-rating.hint.commandShortcut": false,
   "leetcode-problem-rating.hint.commentDescription": false,
