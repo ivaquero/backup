@@ -211,10 +211,9 @@
       "source.organizeImports": "explicit"
     },
   },
+  "python.analysis.supportAllPythonDocuments": true,
+  "python.terminal.shellIntegration.enabled": true,
   "ruff.configuration": "pyproject.toml",
-  "ruff.format.preview": true,
-  "ruff.lint.preview": true,
-  "ruff.nativeServer": "on",
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
