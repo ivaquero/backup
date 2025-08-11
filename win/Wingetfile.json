@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-06-21T11:27:47.327-00:00",
+	"CreationDate" : "2025-08-11T23:52:12.632-00:00",
 	"Sources" : 
 	[
 		{
@@ -40,9 +40,6 @@
 					"PackageIdentifier" : "Alibaba.AliWorkbench"
 				},
 				{
-					"PackageIdentifier" : "Insecure.Npcap"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
@@ -79,7 +76,7 @@
 					"PackageIdentifier" : "Baidu.BaiduNetdisk"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+					"PackageIdentifier" : "ByteDance.JianyingPro"
 				},
 				{
 					"PackageIdentifier" : "Canonical.Ubuntu.2204"
@@ -121,5 +118,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.10.390"
+	"WinGetVersion" : "1.11.430"
 }
