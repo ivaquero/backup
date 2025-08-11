@@ -3301,20 +3301,6 @@ $("h1").each(function() {
 					<string>https://docs.ultralytics.com/</string>
 				</dict>
 			</dict>
-			<key>https://networkx.org/documentation/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2024-10-23T04:48:12Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>NetworkX</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://networkx.org/documentation/stable/</string>
-				</dict>
-			</dict>
 			<key>https://openpyxl.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3820,6 +3806,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://moshi4.github.io/pyCirclize/</string>
+				</dict>
+			</dict>
+			<key>https://networkx.org/documentation/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-11T12:50:36Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>NetworkX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://networkx.org/documentation/stable/</string>
 				</dict>
 			</dict>
 			<key>https://numba.readthedocs.io/en/stable/</key>
@@ -6124,20 +6124,10 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2025-06-30T10:51:12Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Dart.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-30T10:51:05Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Django.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2025-06-28T16:38:11Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Go.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-07-22T17:13:55Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Java.xml</key>
 			<dict>
@@ -6216,6 +6206,16 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2025-03-08T02:03:46Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Dart.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-11T12:50:19Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Go.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-11T12:51:11Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
