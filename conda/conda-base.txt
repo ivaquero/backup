@@ -5,6 +5,7 @@ ipykernel
 jinja2
 manim
 marimo
+opencv
 openpyxl
 pip
 plotnine

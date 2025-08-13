@@ -1,5 +1,6 @@
 adachishingo.open-with
 alefragnani.bookmarks
+almahdi.code-django
 ban.spellright
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz

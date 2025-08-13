@@ -3,7 +3,6 @@ gradio
 ipykernel
 jupytext
 kaggle
-plotnine
 polars
 python-graphviz
 scikit-learn
