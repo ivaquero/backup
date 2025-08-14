@@ -427,7 +427,7 @@
   },
   // marimo
   "marimo.enableToken": true,
-  "marimo.pythonPath": "$HOME/.conda/envs/kaggle/bin/python",
+  "marimo.pythonPath": "$HOME/mamba/bin/marimo",
   "redhat.telemetry.enabled": false,
   // powershell
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,

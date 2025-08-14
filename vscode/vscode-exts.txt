@@ -15,7 +15,6 @@ formulahendry.code-runner
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop
-kirigaya.openmcp
 llvm-vs-code-extensions.vscode-clangd
 mads-hartmann.bash-ide-vscode
 marcel-goldschen-ohm.manim-viewer
