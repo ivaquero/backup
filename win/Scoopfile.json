@@ -38,6 +38,13 @@
         },
         {
             "Info": "",
+            "Source": "extras-plus",
+            "Name": "bananas",
+            "Version": "0.0.22",
+            "Updated": "\/Date(1755139690441)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "bat",
             "Version": "0.25.0",
@@ -72,11 +79,11 @@
             "Updated": "\/Date(1741614699585)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "cherry-studio",
             "Version": "1.5.5",
-            "Updated": "\/Date(1754917697538)\/"
+            "Updated": "\/Date(1755054441117)\/"
         },
         {
             "Info": "",
@@ -86,11 +93,11 @@
             "Updated": "\/Date(1752924608499)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "cmake",
-            "Version": "4.0.1",
-            "Updated": "\/Date(1746852780137)\/"
+            "Version": "4.1.0",
+            "Updated": "\/Date(1755054514257)\/"
         },
         {
             "Info": "Held package",
@@ -303,11 +310,11 @@
             "Updated": "\/Date(1739790040448)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "imagemagick",
             "Version": "7.1.2-0",
-            "Updated": "\/Date(1752926260464)\/"
+            "Updated": "\/Date(1755054452913)\/"
         },
         {
             "Info": "",
@@ -352,11 +359,11 @@
             "Updated": "\/Date(1751555153989)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "lazygit",
             "Version": "0.54.1",
-            "Updated": "\/Date(1754918048953)\/"
+            "Updated": "\/Date(1755054515914)\/"
         },
         {
             "Info": "",
@@ -485,11 +492,11 @@
             "Updated": "\/Date(1745071898779)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras-plus",
             "Name": "peazip-np",
             "Version": "10.5.0",
-            "Updated": "\/Date(1750082794676)\/"
+            "Updated": "\/Date(1755054540611)\/"
         },
         {
             "Info": "",
@@ -497,13 +504,6 @@
             "Name": "poppler",
             "Version": "24.08.0-0",
             "Updated": "\/Date(1728471065999)\/"
-        },
-        {
-            "Info": "Held package",
-            "Source": "main",
-            "Name": "postgresql",
-            "Version": "17.3",
-            "Updated": "\/Date(1739532377184)\/"
         },
         {
             "Info": "",
@@ -518,13 +518,6 @@
             "Name": "psreadline",
             "Version": "2.3.6",
             "Updated": "\/Date(1728003274365)\/"
-        },
-        {
-            "Info": "Held package",
-            "Source": "extras",
-            "Name": "pycharm-professional",
-            "Version": "2025.1.2-251.26094.141",
-            "Updated": "\/Date(1751784989960)\/"
         },
         {
             "Info": "Held package",
@@ -609,6 +602,13 @@
             "Name": "serpl",
             "Version": "0.3.4",
             "Updated": "\/Date(1749049942937)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "shfmt",
+            "Version": "3.12.0",
+            "Updated": "\/Date(1755139372797)\/"
         },
         {
             "Info": "",
@@ -710,6 +710,13 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "uv",
+            "Version": "0.8.10",
+            "Updated": "\/Date(1755139248503)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "vcredist2022",
             "Version": "14.44.35211.0",
@@ -740,8 +747,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.102.3",
-            "Updated": "\/Date(1753957837567)\/"
+            "Version": "1.103.0",
+            "Updated": "\/Date(1755054967888)\/"
         },
         {
             "Info": "Held package",
@@ -861,19 +868,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1754915530000)\/",
+                "value": "\/Date(1755132113000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025 年 8 月 11 日 20:32:10"
+                "DateTime": "2025 年 8 月 14 日 8:41:53"
             },
-            "Manifests": 1398
+            "Manifests": 1400
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1754915493000)\/",
+                "value": "\/Date(1755132127000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025 年 8 月 11 日 20:31:33"
+                "DateTime": "2025 年 8 月 14 日 8:42:07"
             },
             "Manifests": 2176
         },
@@ -891,9 +898,9 @@
             "Name": "java",
             "Source": "https://github.com/ScoopInstaller/Java",
             "Updated": {
-                "value": "\/Date(1754703808000)\/",
+                "value": "\/Date(1755135900000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025 年 8 月 9 日 9:43:28"
+                "DateTime": "2025 年 8 月 14 日 9:45:00"
             },
             "Manifests": 299
         },
@@ -901,9 +908,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/ivaquero/scoopet",
             "Updated": {
-                "value": "\/Date(1754917821000)\/",
+                "value": "\/Date(1755003955000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025 年 8 月 11 日 21:10:21"
+                "DateTime": "2025 年 8 月 12 日 21:05:55"
             },
             "Manifests": 79
         },
@@ -911,19 +918,19 @@
             "Name": "extras-plus",
             "Source": "https://github.com/scoopforge/extras-plus",
             "Updated": {
-                "value": "\/Date(1754917580000)\/",
+                "value": "\/Date(1755139775000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025 年 8 月 11 日 21:06:20"
+                "DateTime": "2025 年 8 月 14 日 10:49:35"
             },
-            "Manifests": 49
+            "Manifests": 50
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/scoopforge/main-plus",
             "Updated": {
-                "value": "\/Date(1754926483000)\/",
+                "value": "\/Date(1755003796000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025 年 8 月 11 日 23:34:43"
+                "DateTime": "2025 年 8 月 12 日 21:03:16"
             },
             "Manifests": 29
         }
