@@ -1,4 +1,1 @@
-docker.n8n.io/n8nio/n8n:latest
-docker.io/awwaawwa/pdfmathtranslate-next:latest
 docker.io/stirlingtools/stirling-pdf:latest
-docker.io/unclecode/crawl4ai:latest
