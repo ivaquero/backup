@@ -6,8 +6,7 @@ kaggle
 polars
 python-graphviz
 scikit-learn
+supervision
 torchinfo
 torchvision
-torchvista
-transformers
 ultralytics

@@ -11,6 +11,7 @@ pip
 plotnine
 polars
 python-graphviz
+python-igraph
 python-pptx
 scikit-learn
 sympy

@@ -3287,6 +3287,20 @@ $("h1").each(function() {
 					<string>https://docs.marimo.io/</string>
 				</dict>
 			</dict>
+			<key>https://docs.monai.io/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-15T01:16:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>MONAI</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.monai.io/en/stable/</string>
+				</dict>
+			</dict>
 			<key>https://docs.ultralytics.com/</key>
 			<dict>
 				<key>date</key>
@@ -3341,6 +3355,34 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://pymoo.org/</string>
+				</dict>
+			</dict>
+			<key>https://python-pptx.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-15T01:06:46Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>python-pptx</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://python-pptx.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
+			<key>https://supervision.roboflow.com/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-15T01:14:45Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Supervision</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://supervision.roboflow.com/latest/</string>
 				</dict>
 			</dict>
 			<key>https://www.cvxpy.org/</key>
@@ -4269,6 +4311,29 @@ $("h1").each(function() {
 					<string>Requests</string>
 				</dict>
 			</dict>
+			<key>Scikit</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-15T01:07:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Python</string>
+						<string>Machine Learning</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
+					<key>authorLinkText</key>
+					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
+					<key>name</key>
+					<string>scikit-learn</string>
+					<key>platform</key>
+					<string>usercontribScikit</string>
+					<key>uniqueIdentifier</key>
+					<string>Scikit</string>
+				</dict>
+			</dict>
 			<key>SymPy</key>
 			<dict>
 				<key>date</key>
@@ -4290,6 +4355,29 @@ $("h1").each(function() {
 					<string>usercontribSymPy</string>
 					<key>uniqueIdentifier</key>
 					<string>SymPy</string>
+				</dict>
+			</dict>
+			<key>bpy</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-15T01:02:31Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Blender</string>
+						<string>Blender Python API</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/bpy#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>Blender Python API</string>
+					<key>platform</key>
+					<string>usercontribbpy</string>
+					<key>uniqueIdentifier</key>
+					<string>bpy</string>
 				</dict>
 			</dict>
 			<key>igraph</key>
@@ -5075,29 +5163,6 @@ $("h1").each(function() {
 					<string>React_Native</string>
 				</dict>
 			</dict>
-			<key>Scikit</key>
-			<dict>
-				<key>date</key>
-				<date>2025-07-13T07:00:24Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Python</string>
-						<string>Machine Learning</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Scikit#readme</string>
-					<key>authorLinkText</key>
-					<string>Xavier Yang, Tianshu Wang, Aziz Alto, Josh Devlin, Christian Stade-Schuldt, Joel Nothman, Angelo Varlotta</string>
-					<key>name</key>
-					<string>scikit-learn</string>
-					<key>platform</key>
-					<string>usercontribScikit</string>
-					<key>uniqueIdentifier</key>
-					<string>Scikit</string>
-				</dict>
-			</dict>
 			<key>Scikit-image</key>
 			<dict>
 				<key>date</key>
@@ -5831,6 +5896,8 @@ $("h1").each(function() {
 			<string>jx:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/MLX/MLX.docset</key>
 			<string>mx</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/MONAI/MONAI.docset</key>
+			<string>mn</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Manim/Manim.docset</key>
 			<string>mm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Mesa - 2/Mesa.docset</key>
@@ -5865,6 +5932,8 @@ $("h1").each(function() {
 			<string>ro:</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/RocketPy/RocketPy.docset</key>
 			<string>rp</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Supervision/Supervision.docset</key>
+			<string>sv</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/SymPy/SymPy.docset</key>
 			<string>sy</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO
@@ -5911,6 +5980,8 @@ $("h1").each(function() {
 			<string>mo</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/pytest/pytest.docset</key>
 			<string>pts:</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/pythonpptx/python-pptx.docset</key>
+			<string>pp</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitbio/scikit-bio.docset</key>
 			<string>skb</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/scikitlearn/scikit-learn.docset</key>
@@ -5978,6 +6049,8 @@ $("h1").each(function() {
 			<string>bb</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Beautiful
 					Soup/Beautiful_Soup.docset</key>
+			<string>b</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Blender Python API/bpy.docset</key>
 			<string>b</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Blender/Blender.docset</key>
 			<string>bp</string>
@@ -6083,6 +6156,8 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn
 					1.2.docset</key>
 			<string>sk:</string>
+			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn 1.7.docset</key>
+			<string>sk</string>
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn.docset</key>
 			<string>sk</string>
 			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn
