@@ -373,6 +373,9 @@
   "lldb.launch.expressions": "python",
   "lldb.launch.terminal": "integrated",
   "lldb.suppressUpdateNotifications": true,
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
   // spell & grammar
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [
