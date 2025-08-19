@@ -4,3 +4,6 @@
 
 [source.ustc]
     registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+
+[unstable]
+    gc = true
