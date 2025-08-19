@@ -2,16 +2,12 @@ conda-tree
 cvxpy
 drawpyo
 ipykernel
-jinja2
 manim
-opencv
 openpyxl
-pip
 plotnine
 polars
 python-graphviz
 python-igraph
-python-pptx
 scikit-learn
 sympy
-typst-py
+xlsxwriter
