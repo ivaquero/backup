@@ -6,8 +6,9 @@ manim
 openpyxl
 plotnine
 polars
+pypdf
 python-graphviz
 python-igraph
+python-pptx
 scikit-learn
 sympy
-xlsxwriter

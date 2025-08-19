@@ -51,6 +51,8 @@ brew "ollama", restart_service: :changed
 brew "ouch"
 brew "oxipng"
 brew "pandoc"
+brew "poppler"
+brew "pdf2svg"
 brew "pdfcpu"
 brew "pkgconf"
 brew "ripgrep"
