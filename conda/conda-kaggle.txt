@@ -1,10 +1,10 @@
 conda-tree
 gradio
 ipykernel
-kaggle
 keras
 polars
 python-graphviz
+scikit-image
 scikit-learn
 torchinfo
 torchvision

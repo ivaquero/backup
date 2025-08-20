@@ -3357,6 +3357,20 @@ $("h1").each(function() {
 					<string>https://python-pptx.readthedocs.io/en/latest/</string>
 				</dict>
 			</dict>
+			<key>https://scikit-image.org/docs/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-20T08:44:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>skimage</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://scikit-image.org/docs/stable/</string>
+				</dict>
+			</dict>
 			<key>https://www.cvxpy.org/</key>
 			<dict>
 				<key>date</key>
@@ -4002,20 +4016,6 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://requests.readthedocs.io/en/latest/</string>
-				</dict>
-			</dict>
-			<key>https://scikit-image.org/docs/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-03-19T12:10:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>skimage</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://scikit-image.org/docs/stable/</string>
 				</dict>
 			</dict>
 			<key>https://scikit-learn.org/stable/</key>
