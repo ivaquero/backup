@@ -2,7 +2,6 @@ conda-tree
 cvxpy
 drawpyo
 ipykernel
-manim
 openpyxl
 plotnine
 polars
