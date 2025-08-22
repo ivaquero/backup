@@ -3259,6 +3259,20 @@ $("h1").each(function() {
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>https://detectron2.readthedocs.io/en/latest/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-08-22T10:24:39Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>detectron2</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://detectron2.readthedocs.io/en/latest/</string>
+				</dict>
+			</dict>
 			<key>https://docs.manim.community/en/stable/</key>
 			<dict>
 				<key>date</key>

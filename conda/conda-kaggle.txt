@@ -1,4 +1,5 @@
 conda-tree
+detectron2
 gradio
 ipykernel
 keras
@@ -7,5 +8,4 @@ python-graphviz
 scikit-image
 scikit-learn
 torchinfo
-torchvision
 ultralytics
