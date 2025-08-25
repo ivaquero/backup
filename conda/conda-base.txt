@@ -2,9 +2,11 @@ conda-tree
 cvxpy
 drawpyo
 ipykernel
+marimo
 openpyxl
 plotnine
 polars
+pymoo
 pypdf
 python-graphviz
 python-igraph
