@@ -1,3 +1,4 @@
+3dy3day.visual-markdown-table-editor
 adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
@@ -38,12 +39,10 @@ qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
 rust-lang.rust-analyzer
-takumii.markdowntable
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
 ultralytics.ultralytics-snippets
 usernamehw.errorlens
 vadimcn.vscode-lldb
-vincent-templier.vscode-netron
 yzhang.markdown-all-in-one
