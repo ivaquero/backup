@@ -8,7 +8,9 @@
     "*": true,
     "ms-python.vscode-python-envs": false,
     "ms-toolsai.vscode-jupyter-slideshow": false,
-    "ms-toolsai.vscode-jupyter-cell-tags": false
+    "ms-toolsai.vscode-jupyter-cell-tags": false,
+    "ms-toolsai.jupyter-keymap": false,
+    "ms-vscode-remote.remote-ssh-edit": false
   },
   "http.experimental.systemCertificatesV2": true,
   // security
@@ -59,7 +61,6 @@
     "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
-    "*.jlmd": "markdown",
     "*.vimrc": "viml",
     "*.m": "matlab",
     "docker-compose.yml": "yaml"
@@ -171,7 +172,6 @@
     "MD041": false,
     "MD042": false
   },
-  "markdowntable.showMenu.csvToTable": true,
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.enableAppInsights": false,
