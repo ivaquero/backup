@@ -11,7 +11,6 @@ cweijan.vscode-excel
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 evertjunior.mass-renamer
-foam.foam-vscode
 formulahendry.code-runner
 hediet.vscode-drawio
 huacnlee.autocorrect
