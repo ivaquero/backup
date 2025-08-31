@@ -3,6 +3,7 @@ adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
 ban.spellright
+bradlc.vscode-tailwindcss
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
@@ -29,6 +30,7 @@ ms-vscode.powershell
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
 oracle.mysql-shell-for-vs-code
+pfeif.hx-complete
 pkief.material-icon-theme
 pomdtr.markdown-kroki
 qcz.text-power-tools
