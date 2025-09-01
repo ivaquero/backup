@@ -156,15 +156,25 @@
   "col": {
     "prefix": "col",
     "body": [
-      "#block(height: 17em, columns()[",
+      "#block(height: 6em, columns()[",
       "",
       "])",
       ""
     ],
     "description": ""
   },
-  "col2": {
-    "prefix": "col2",
+  "cols": {
+    "prefix": "cols",
+    "body": [
+      "#block(height: 6em, columns()[",
+      "",
+      "])",
+      ""
+    ],
+    "description": ""
+  },
+  "cols2": {
+    "prefix": "cols2",
     "body": [
       "#columns(gutter: 20pt, [",
       "  #set text(size: 18pt)",

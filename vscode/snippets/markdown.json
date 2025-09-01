@@ -31,18 +31,6 @@
     ],
     "description": ""
   },
-  "html-col2": {
-    "prefix": "hcol2",
-    "body": [
-      "<div class=\"box\">",
-      "    <div class=\"left\">",
-      "    </div>",
-      "    <div class=\"right\">",
-      "    </div>",
-      "</div>"
-    ],
-    "description": ""
-  },
   "html-sum": {
     "prefix": "hsum",
     "body": [
@@ -510,5 +498,5 @@
       "𝑨^H 𝑨"
     ],
     "description": ""
-  },
+  }
 }
