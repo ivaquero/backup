@@ -166,7 +166,7 @@
   "cols": {
     "prefix": "cols",
     "body": [
-      "#block(height: 6em, columns()[",
+      "#block(height: 18em, columns()[",
       "",
       "])",
       ""

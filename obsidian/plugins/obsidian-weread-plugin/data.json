@@ -2,11 +2,11 @@
   "cookies": [
     {
       "name": "wr_gid",
-      "value": "209985040"
+      "value": "243360463"
     },
     {
       "name": "wr_fp",
-      "value": "3025406398"
+      "value": "1742480083"
     },
     {
       "name": "wr_localvid",
@@ -26,7 +26,7 @@
     },
     {
       "name": "wr_skey",
-      "value": "uyyfboku"
+      "value": "pGWXwtaV"
     },
     {
       "name": "wr_vid",
@@ -34,7 +34,7 @@
     },
     {
       "name": "wr_rt",
-      "value": "web@8YoAjFpDE1Z0AgBo1Hs_AL"
+      "value": "web@ybIjMuTVuv9XnJ73YBH_AL"
     }
   ],
   "noteLocation": "public",
@@ -42,18 +42,20 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1740479308669,
+  "lastCookieTime": 1757078580971,
   "isCookieValid": true,
   "user": "嗯哼",
   "userVid": "38131323",
-  "template": "# 高亮划线\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}## {{chapter.chapterTitle}}{% elif chapter.level == 2 %}### {{chapter.chapterTitle}}{% elif chapter.level == 3 %}#### {{chapter.chapterTitle}}{% endif %}\n{% for highlight in chapter.highlights %}\n{{ highlight.markText }} \n{% endfor %}{% endfor %}\n",
-  "noteCountLimit": -1,
+  "template": "# {{metaData.title}}\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}{% else %}\n{{ highlight.markText |trim }} \n{% endif %} {% endfor %}{% endfor %}",
+  "noteCountLimit": 3,
   "subFolderType": "category",
   "fileNameType": "BOOK_NAME",
+  "removeParens": true,
+  "removeParensWhitelist": "",
   "dailyNotesToggle": false,
-  "notesBlacklist": "3300110962,825606,635838,3300019758,35808734,3300081924,3300017722",
+  "notesBlacklist": "",
   "showEmptyChapterTitleToggle": false,
-  "convertTags": true,
+  "convertTags": false,
   "saveArticleToggle": false,
   "saveReadingInfoToggle": false
 }

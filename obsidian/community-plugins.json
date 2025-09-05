@@ -6,9 +6,8 @@
   "omnisearch",
   "pdf-plus",
   "obsidian-enhancing-export",
-  "obsidian-weread-plugin",
-  "obsidian-git",
   "consistent-attachments-and-links",
   "obsidian-linter",
-  "obsidian-latex-suite"
+  "obsidian-latex-suite",
+  "obsidian-weread-plugin"
 ]
