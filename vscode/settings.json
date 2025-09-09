@@ -70,7 +70,7 @@
     "**/.git": true,
     "**/.ipynb_checkpoints": true,
     "**/.svn": true,
-    "**/Thumbs.db": true,
+    "**/Thumbs.db": true
   },
   "files.autoGuessEncoding": true,
   "files.defaultLanguage": "markdown",
@@ -209,7 +209,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": "never",
       "source.organizeImports": "explicit"
-    },
+    }
   },
   "python.analysis.supportAllPythonDocuments": true,
   "python.terminal.shellIntegration.enabled": true,
@@ -331,7 +331,7 @@
   ],
   // typst
   "[typst]": {
-    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
   },
   "tinymist.completion.triggerOnSnippetPlaceholders": true,
   "tinymist.exportPdf": "onDocumentHasTitle",
@@ -380,7 +380,7 @@
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [
     // "markdown",
-    "latex",
+    "latex"
   ],
   "spellright.language": [
     "en",
@@ -392,7 +392,7 @@
     "**/.vimrc",
     "**/.gitignore",
     "**/.spellignore",
-    "**/password.txt",
+    "**/password.txt"
   ],
   "spellright.ignoreRegExpsByClass": {
     "markdown": [
@@ -402,7 +402,7 @@
       "/\\[.+\\]/g",
       "/@[\\w\\d\\s]+\\s/g",
       "/#\\w+()/g"
-    ],
+    ]
   },
   "spellright.spellContextByClass": {
     "cpp": "comments",
@@ -428,14 +428,11 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  // marimo
-  "marimo.enableToken": true,
-  "marimo.pythonPath": "$HOME/mamba/bin/marimo",
   "redhat.telemetry.enabled": false,
   // powershell
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true
 }
