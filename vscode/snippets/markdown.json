@@ -31,8 +31,8 @@
     ],
     "description": ""
   },
-  "html-sum": {
-    "prefix": "hsum",
+  "html-summary": {
+    "prefix": "hsummary",
     "body": [
       "<details>",
       "      <summary>",

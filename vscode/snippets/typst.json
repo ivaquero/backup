@@ -1,20 +1,4 @@
 {
-  "rxlsx": {
-    "prefix": "rxlsx",
-    "body": [
-      "#figure(",
-      "  xlsx-parser(",
-      "    read(\"data\", encoding: none),",
-      "    parse-table-style: false,",
-      "    parse-stroke: false,",
-      "    stroke: frame(rgb(\"000\")),",
-      "  ),",
-      "  caption: \"\",",
-      "  kind: table,",
-      ")"
-    ],
-    "description": ""
-  },
   "ind": {
     "prefix": "ind",
     "body": [
@@ -44,7 +28,7 @@
     ],
     "description": ""
   },
-  "t3": {
+  "table-3": {
     "prefix": "t3",
     "body": [
       "#figure(",
@@ -59,12 +43,11 @@
       "    [], [], [],",
       "  ),",
       "  caption: none,",
-      "  kind: table",
       ")",
       ""
     ]
   },
-  "t4": {
+  "table-4": {
     "prefix": "t4",
     "body": [
       "#figure(",
@@ -79,13 +62,12 @@
       "    [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  kind: table",
       ")",
       ""
     ],
     "description": ""
   },
-  "t5": {
+  "table-5": {
     "prefix": "t5",
     "body": [
       "#figure(",
@@ -100,13 +82,12 @@
       "    [], [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  kind: table",
       ")",
       ""
     ],
     "description": ""
   },
-  "t6": {
+  "table-6": {
     "prefix": "t6",
     "body": [
       "#figure(",
@@ -121,7 +102,6 @@
       "    [], [], [], [], [], [],",
       "  ),",
       "  caption: none,",
-      "  kind: table",
       ")",
       ""
     ],
@@ -209,17 +189,31 @@
     ],
     "description": ""
   },
-  "rcsv": {
+  "read-csv": {
     "prefix": "rcsv",
     "body": [
       "#let data = csv(\"data\")",
       "#figure(",
       "  tableq(data, 4),",
       "  caption: none,",
-      "  kind: table",
       ")",
       ""
     ]
+  },
+  "read-xlsx": {
+    "prefix": "rxlsx",
+    "body": [
+      "#figure(",
+      "  xlsx-parser(",
+      "    read(\"data\", encoding: none),",
+      "    parse-table-style: false,",
+      "    parse-stroke: false,",
+      "    stroke: frame(rgb(\"000\")),",
+      "  ),",
+      "  caption: \"\",",
+      ")"
+    ],
+    "description": ""
   },
   "rimg": {
     "prefix": "rimg",
@@ -263,22 +257,22 @@
     ],
     "description": ""
   },
-  "braw": {
+  "blk-raw": {
     "prefix": "raw",
     "body": [
-      "```",
+      "```$1",
       "",
       "```"
     ]
   },
-  "bm": {
+  "blk-math": {
     "prefix": "bm",
     "body": [
       "$  $"
     ],
     "description": ""
   },
-  "bdef": {
+  "blk-def": {
     "prefix": "def",
     "body": [
       "#definition[",
@@ -286,7 +280,7 @@
     ],
     "description": ""
   },
-  "btheo": {
+  "blk-theo": {
     "prefix": "btheo",
     "body": [
       "#theorem[",
@@ -294,7 +288,7 @@
     ],
     "description": ""
   },
-  "bcoro": {
+  "blk-coro": {
     "prefix": "bcoro",
     "body": [
       "#corollary[",
@@ -302,7 +296,7 @@
     ],
     "description": ""
   },
-  "btp": {
+  "blk-tp": {
     "prefix": "btp",
     "body": [
       "#tip[",
@@ -310,7 +304,7 @@
     ],
     "description": ""
   },
-  "balg": {
+  "blk-alg": {
     "prefix": "balg",
     "body": [
       "#algo[",
@@ -318,253 +312,253 @@
     ],
     "description": ""
   },
-  "ma": {
+  "matrix-a": {
     "prefix": "ma",
     "body": [
       "𝑨"
     ],
     "description": ""
   },
-  "mb": {
+  "matrix-b": {
     "prefix": "mb",
     "body": [
       "𝑩"
     ],
     "description": ""
   },
-  "mc": {
+  "matrix-c": {
     "prefix": "mc",
     "body": [
       "𝑪"
     ],
     "description": ""
   },
-  "me": {
+  "matrix-e": {
     "prefix": "me",
     "body": [
       "𝑬"
     ],
     "description": ""
   },
-  "mg": {
+  "matrix-g": {
     "prefix": "mg",
     "body": [
       "𝑮"
     ],
     "description": ""
   },
-  "mh": {
+  "matrix-h": {
     "prefix": "mh",
     "body": [
       "𝑯"
     ],
     "description": ""
   },
-  "mi": {
+  "matrix-i": {
     "prefix": "mi",
     "body": [
       "𝑰"
     ],
     "description": ""
   },
-  "mj": {
+  "matrix-j": {
     "prefix": "mj",
     "body": [
       "𝑱"
     ],
     "description": ""
   },
-  "ml": {
+  "matrix-l": {
     "prefix": "ml",
     "body": [
       "𝑳"
     ],
     "description": ""
   },
-  "mm": {
+  "matrix-m": {
     "prefix": "mm",
     "body": [
       "𝑴"
     ],
     "description": ""
   },
-  "mo": {
+  "matrix-o": {
     "prefix": "mo",
     "body": [
       "𝑶"
     ],
     "description": ""
   },
-  "mp": {
+  "matrix-p": {
     "prefix": "mp",
     "body": [
       "𝑷"
     ],
     "description": ""
   },
-  "mq": {
+  "matrix-q": {
     "prefix": "mq",
     "body": [
       "𝑸"
     ],
     "description": ""
   },
-  "mr": {
+  "matrix-r": {
     "prefix": "mr",
     "body": [
       "𝑹"
     ],
     "description": ""
   },
-  "ms": {
+  "matrix-s": {
     "prefix": "ms",
     "body": [
       "𝑺"
     ],
     "description": ""
   },
-  "mu": {
+  "matrix-u": {
     "prefix": "mu",
     "body": [
       "𝑼"
     ],
     "description": ""
   },
-  "mx": {
+  "matrix-x": {
     "prefix": "mx",
     "body": [
       "𝑿"
     ],
     "description": ""
   },
-  "my": {
+  "matrix-y": {
     "prefix": "my",
     "body": [
       "𝒀"
     ],
     "description": ""
   },
-  "mgl": {
+  "matrix-gl": {
     "prefix": "mgl",
     "body": [
       "𝜦"
     ],
     "description": ""
   },
-  "v0": {
+  "vec-0": {
     "prefix": "v0",
     "body": [
       "𝟎"
     ],
     "description": ""
   },
-  "va": {
+  "vec-a": {
     "prefix": "va",
     "body": [
       "𝒂"
     ],
     "description": ""
   },
-  "vb": {
+  "vec-b": {
     "prefix": "vb",
     "body": [
       "𝒃"
     ],
     "description": ""
   },
-  "vc": {
+  "vec-c": {
     "prefix": "vc",
     "body": [
       "𝒄"
     ],
     "description": ""
   },
-  "ve": {
+  "vec-e": {
     "prefix": "ve",
     "body": [
       "𝒆"
     ],
     "description": ""
   },
-  "vu": {
+  "vec-u": {
     "prefix": "vu",
     "body": [
       "𝒖"
     ],
     "description": ""
   },
-  "vx": {
+  "vec-x": {
     "prefix": "vx",
     "body": [
       "𝒙"
     ],
     "description": ""
   },
-  "vy": {
+  "vec-y": {
     "prefix": "vy",
     "body": [
       "𝒚"
     ],
     "description": ""
   },
-  "vz": {
+  "vec-z": {
     "prefix": "vz",
     "body": [
       "𝒛"
     ],
     "description": ""
   },
-  "vxax": {
+  "vec-xax": {
     "prefix": "vxax",
     "body": [
       "𝒙^⊤ 𝑨 𝒙"
     ],
     "description": ""
   },
-  "vxt": {
+  "vec-xt": {
     "prefix": "vxt",
     "body": [
       "𝒙^⊤"
     ],
     "description": ""
   },
-  "vxx": {
+  "vec-xx": {
     "prefix": "vxx",
     "body": [
       "𝒙^⊤ 𝒙"
     ],
     "description": ""
   },
-  "vyy": {
+  "vec-yy": {
     "prefix": "vyy",
     "body": [
       "𝒚^⊤ 𝒚"
     ],
     "description": ""
   },
-  "aeig": {
-    "prefix": "aeig",
+  "matrix-eig": {
+    "prefix": "meig",
     "body": [
       "𝑨 - λ 𝑰"
     ],
     "description": ""
   },
-  "ata": {
-    "prefix": "ata",
+  "matrix-ata": {
+    "prefix": "mata",
     "body": [
       "𝑨^⊤ 𝑨"
     ],
     "description": ""
   },
-  "aat": {
-    "prefix": "aat",
+  "matrix-aat": {
+    "prefix": "maat",
     "body": [
       "𝑨 𝑨^⊤"
     ],
     "description": ""
   },
-  "maha": {
-    "prefix": "aha",
+  "matrix-aha": {
+    "prefix": "maha",
     "body": [
       "𝑨^H 𝑨"
     ],
@@ -682,15 +676,15 @@
     ],
     "description": ""
   },
-  "ork": {
-    "prefix": "ork",
+  "op-rk": {
+    "prefix": "oprk",
     "body": [
       "op(\"rank\")()"
     ],
     "description": ""
   },
-  "ovar": {
-    "prefix": "ovar",
+  "op-var": {
+    "prefix": "opvar",
     "body": [
       "op(\"Var\")(X)"
     ],
@@ -745,24 +739,17 @@
     ],
     "description": ""
   },
-  "rvxn": {
-    "prefix": "rvxn",
+  "vxn": {
+    "prefix": "vxn",
     "body": [
       "X_1, …, X_n"
-    ],
-    "description": ""
-  },
-  "rvxy": {
-    "prefix": "rvxy",
-    "body": [
-      "$X$和$Y$"
     ],
     "description": ""
   },
   "bib": {
     "prefix": "bib",
     "body": [
-      "#bibliography(\"data/works.bib\", title: \"参考文献\")",
+      "#bibliography(\"data/works.bib\", title: \"\")",
       ""
     ],
     "description": ""
@@ -774,24 +761,15 @@
       ""
     ]
   },
-  "rxlsx-1739335146959": {
-    "prefix": "rxlsx",
+  "test-size": {
+    "prefix": "txsz",
     "body": [
-      "#figure(",
-      "  xlsx-parser(",
-      "    read(\"data\", encoding: none),",
-      "    parse-table-style: false,",
-      "    parse-stroke: false,",
-      "    stroke: frame(rgb(\"000\")),",
-      "  ),",
-      "  caption: \"\",",
-      "  kind: table,",
-      ")"
+      "#set text(size: 18pt)"
     ],
     "description": ""
   },
-  "hred": {
-    "prefix": "hred",
+  "text-red": {
+    "prefix": "txred",
     "body": [
       "text(,fill: #rgb(\"#ff0000\"))"
     ],
@@ -803,13 +781,6 @@
       "#rule()[",
       "",
       "]"
-    ],
-    "description": ""
-  },
-  "tsz": {
-    "prefix": "tsz",
-    "body": [
-      "#set text(size: 18pt)"
     ],
     "description": ""
   }
