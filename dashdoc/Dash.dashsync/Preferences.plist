@@ -4362,6 +4362,31 @@ $("h1").each(function() {
 					<string>Scikit</string>
 				</dict>
 			</dict>
+			<key>Streamlit</key>
+			<dict>
+				<key>date</key>
+				<date>2025-09-19T08:11:01Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>streamlit</string>
+						<string>stream lit</string>
+						<string>Streamlit</string>
+						<string>st</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Streamlit#readme</string>
+					<key>authorLinkText</key>
+					<string>WangX</string>
+					<key>name</key>
+					<string>Streamlit</string>
+					<key>platform</key>
+					<string>usercontribStreamlit</string>
+					<key>uniqueIdentifier</key>
+					<string>Streamlit</string>
+				</dict>
+			</dict>
 			<key>SymPy</key>
 			<dict>
 				<key>date</key>
@@ -6136,6 +6161,8 @@ $("h1").each(function() {
 			<string>rn</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Requests/Requests.docset</key>
 			<string>rq</string>
+			<key>~/Library/Application Support/Dash/User Contributed/Streamlit/Streamlit.docset</key>
+			<string>st</string>
 			<key>~/Library/Application Support/Dash/User Contributed/Swift Language
 					Guide/SwiftLanguageGuide.docset</key>
 			<string>sw</string>

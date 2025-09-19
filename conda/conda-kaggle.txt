@@ -1,10 +1,9 @@
-gradio
 ipykernel
 onnxruntime
-polars
 python-graphviz
 scikit-image
 scikit-learn
+streamlit
 torchinfo
 torchvision
 torchvista
