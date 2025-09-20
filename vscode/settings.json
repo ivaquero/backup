@@ -211,7 +211,6 @@
       "source.organizeImports": "explicit"
     }
   },
-  "python.analysis.supportAllPythonDocuments": true,
   "python.terminal.shellIntegration.enabled": true,
   "ruff.configuration": "pyproject.toml",
   // jupyter
@@ -373,9 +372,9 @@
   "lldb.launch.expressions": "python",
   "lldb.launch.terminal": "integrated",
   "lldb.suppressUpdateNotifications": true,
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  },
+  // "[rust]": {
+  //   "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  // },
   // spell & grammar
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [

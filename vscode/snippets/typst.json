@@ -761,7 +761,7 @@
       ""
     ]
   },
-  "test-size": {
+  "text-size": {
     "prefix": "txsz",
     "body": [
       "#set text(size: 18pt)"

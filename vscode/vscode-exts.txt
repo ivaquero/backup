@@ -30,6 +30,7 @@ ms-vscode.powershell
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
 oracle.mysql-shell-for-vs-code
+oxc.oxc-vscode
 pfeif.hx-complete
 pkief.material-icon-theme
 pomdtr.markdown-kroki
