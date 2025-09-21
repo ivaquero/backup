@@ -3,7 +3,6 @@ adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
 ban.spellright
-biomejs.biome
 bradlc.vscode-tailwindcss
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
@@ -12,8 +11,10 @@ codeium.codeium
 cweijan.vscode-excel
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
+esbenp.prettier-vscode
 evertjunior.mass-renamer
 formulahendry.code-runner
+golang.go
 hediet.vscode-drawio
 huacnlee.autocorrect
 james-yu.latex-workshop

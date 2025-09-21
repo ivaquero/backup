@@ -229,10 +229,10 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[css]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[javascript][javascriptreact]": {
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
       "source.fixAll": "never"
     }
@@ -378,6 +378,9 @@
   // "[rust]": {
   //   "editor.defaultFormatter": "rust-lang.rust-analyzer"
   // },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
   // spell & grammar
   "spellright.configurationScope": "user",
   "spellright.documentTypes": [
