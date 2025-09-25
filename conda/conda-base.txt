@@ -9,7 +9,6 @@ polars
 pymoo
 pypdf
 python-graphviz
-python-igraph
 python-pptx
 scikit-learn
 streamlit

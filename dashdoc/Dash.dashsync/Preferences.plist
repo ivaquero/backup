@@ -3262,7 +3262,7 @@ $("h1").each(function() {
 			<key>https://docs.monai.io/en/stable/</key>
 			<dict>
 				<key>date</key>
-				<date>2025-08-15T01:16:39Z</date>
+				<date>2025-09-25T01:22:19Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -3299,6 +3299,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.wagtail.org/en/stable/</string>
+				</dict>
+			</dict>
+			<key>https://networkx.org/documentation/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-09-24T07:12:17Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>NetworkX</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://networkx.org/documentation/stable/</string>
 				</dict>
 			</dict>
 			<key>https://openpyxl.readthedocs.io/en/stable/</key>
@@ -3878,20 +3892,6 @@ $("h1").each(function() {
 					<string>https://moshi4.github.io/pyCirclize/</string>
 				</dict>
 			</dict>
-			<key>https://networkx.org/documentation/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-08-11T12:50:36Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>NetworkX</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://networkx.org/documentation/stable/</string>
-				</dict>
-			</dict>
 			<key>https://numba.readthedocs.io/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -4431,26 +4431,6 @@ $("h1").each(function() {
 					<string>usercontribbpy</string>
 					<key>uniqueIdentifier</key>
 					<string>bpy</string>
-				</dict>
-			</dict>
-			<key>igraph</key>
-			<dict>
-				<key>date</key>
-				<date>2025-06-30T10:59:27Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
-					<key>authorLinkText</key>
-					<string>The igraph core team</string>
-					<key>name</key>
-					<string>igraph</string>
-					<key>platform</key>
-					<string>usercontribigraph</string>
-					<key>uniqueIdentifier</key>
-					<string>igraph</string>
 				</dict>
 			</dict>
 			<key>polars</key>
@@ -5474,6 +5454,26 @@ $("h1").each(function() {
 					<string>usercontribggplot2</string>
 					<key>uniqueIdentifier</key>
 					<string>ggplot2</string>
+				</dict>
+			</dict>
+			<key>igraph</key>
+			<dict>
+				<key>date</key>
+				<date>2025-09-24T06:50:52Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array/>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/igraph#readme</string>
+					<key>authorLinkText</key>
+					<string>The igraph core team</string>
+					<key>name</key>
+					<string>igraph</string>
+					<key>platform</key>
+					<string>usercontribigraph</string>
+					<key>uniqueIdentifier</key>
+					<string>igraph</string>
 				</dict>
 			</dict>
 			<key>imbalanced-learn</key>
