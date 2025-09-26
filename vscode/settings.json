@@ -345,10 +345,6 @@
   "[c][cpp]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
-  "C_Cpp.default.cStandard": "gnu17",
-  "C_Cpp.default.cppStandard": "c++17",
-  "C_Cpp.default.mergeConfigurations": true,
-  "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.arguments": [
     "--all-scopes-completion",
     "--background-index",
@@ -367,12 +363,19 @@
     "-j=12"
   ],
   "clangd.onConfigChanged": "restart",
+  "C_Cpp.default.cStandard": "gnu17",
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.mergeConfigurations": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
   "[cmake]": {
     "editor.defaultFormatter": "ms-vscode.cmake-tools"
   },
   "cmake.allowCommentsInPresetsFile": true,
+  "lldb.commandCompletions": true,
+  "lldb.dereferencePointers": true,
+  "lldb.evaluateForHovers": true,
+  "lldb.launch.expressions": "native",
   "lldb.launch.breakpointMode": "file",
-  "lldb.launch.expressions": "python",
   "lldb.launch.terminal": "integrated",
   "lldb.suppressUpdateNotifications": true,
   // "[rust]": {
