@@ -12,7 +12,6 @@
     "ms-toolsai.jupyter-keymap": false,
     "ms-vscode-remote.remote-ssh-edit": false
   },
-  "http.experimental.systemCertificatesV2": true,
   // security
   "security.workspace.trust.untrustedFiles": "open",
   // search
@@ -24,14 +23,12 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.defaultFormatter": null,
   "editor.foldingStrategy": "indentation",
-  "editor.fontFamily": "FiraCode Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
-  "editor.multiCursorLimit": 100000,
   "editor.semanticHighlighting.enabled": true,
   "editor.suggest.preview": true,
   "editor.suggest.selectionMode": "whenQuickSuggestion",
@@ -41,7 +38,6 @@
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.useTabStops": false,
   "editor.wordBasedSuggestions": "matchingDocuments",
-  "editor.wordSeparators": "`~!@%^&*()=+[{]}\\|;:'\",.<>/?（），。；：",
   "editor.wordWrap": "on",
   "editor.quickSuggestions": {
     "comments": true,
@@ -234,7 +230,7 @@
   "[javascript][javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "never"
+      "source.fixAll": "always"
     }
   },
   "javascript.suggest.autoImports": true,
@@ -259,10 +255,8 @@
   "evenBetterToml.schema.enabled": false,
   // yaml
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "yaml.format.singleQuote": true,
-  "yaml.validate": false,
   // ui & preview
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.resizeImages": null,

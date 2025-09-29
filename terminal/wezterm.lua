@@ -118,8 +118,8 @@ local config = {
 	},
 
 	-- Font
-	font = wezterm.font_with_fallback({ "FiraCode Nerd Font" }),
-	font_size = 16,
+	-- font = wezterm.font_with_fallback({ "FiraCode Nerd Font" }),
+	font_size = 18,
 	freetype_load_target = "Mono",
 
 	-- Tab bar
