@@ -74,8 +74,6 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   // terminal
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
-  "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.inheritEnv": false,
