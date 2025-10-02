@@ -1,1 +1,4 @@
-conda-tree
+langchain-community
+langchain-openai
+loguru
+streamlit

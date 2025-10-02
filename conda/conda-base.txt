@@ -7,7 +7,6 @@ openpyxl
 plotnine
 polars
 pymoo
-pypdf
 python-graphviz
 python-pptx
 scikit-learn
