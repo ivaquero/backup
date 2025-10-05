@@ -1,6 +1,5 @@
 collection-latex
 collection-latexrecommended
-collection-metapost
 collection-xetex
 adjustbox
 csquotes
