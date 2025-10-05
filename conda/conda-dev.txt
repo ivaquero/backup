@@ -1,3 +1,4 @@
+faiss-cpu
 langchain-community
 langchain-openai
 loguru
