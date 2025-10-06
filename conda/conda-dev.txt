@@ -1,5 +1,6 @@
 faiss-cpu
 langchain-community
 langchain-openai
+langchain-postgres
 loguru
 streamlit
