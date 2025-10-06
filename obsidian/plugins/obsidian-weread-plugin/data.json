@@ -1,12 +1,29 @@
 {
+  "loginMethod": "scan",
   "cookies": [
-    {
-      "name": "wr_gid",
-      "value": "243360463"
-    },
     {
       "name": "wr_fp",
       "value": "1742480083"
+    },
+    {
+      "name": "wr_gid",
+      "value": "288702673"
+    },
+    {
+      "name": "wr_skey",
+      "value": "ayx5VWMV"
+    },
+    {
+      "name": "wr_vid",
+      "value": "38131323"
+    },
+    {
+      "name": "wr_ql",
+      "value": "0"
+    },
+    {
+      "name": "wr_rt",
+      "value": "web@F2zSumwT_bh2YWMKxdH_AL"
     },
     {
       "name": "wr_localvid",
@@ -23,18 +40,6 @@
     {
       "name": "wr_gender",
       "value": "1"
-    },
-    {
-      "name": "wr_skey",
-      "value": "pGWXwtaV"
-    },
-    {
-      "name": "wr_vid",
-      "value": "38131323"
-    },
-    {
-      "name": "wr_rt",
-      "value": "web@ybIjMuTVuv9XnJ73YBH_AL"
     }
   ],
   "noteLocation": "public",
@@ -42,7 +47,7 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1757078580971,
+  "lastCookieTime": 1759588799600,
   "isCookieValid": true,
   "user": "嗯哼",
   "userVid": "38131323",
@@ -57,5 +62,10 @@
   "showEmptyChapterTitleToggle": false,
   "convertTags": false,
   "saveArticleToggle": false,
-  "saveReadingInfoToggle": false
+  "saveReadingInfoToggle": false,
+  "cookieCloudInfo": {
+    "serverUrl": "",
+    "uuid": "",
+    "password": ""
+  }
 }

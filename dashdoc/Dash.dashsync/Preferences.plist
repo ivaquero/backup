@@ -3287,20 +3287,6 @@ $("h1").each(function() {
 					<string>https://docs.ultralytics.com/</string>
 				</dict>
 			</dict>
-			<key>https://docs.wagtail.org/en/stable/</key>
-			<dict>
-				<key>date</key>
-				<date>2025-08-30T21:30:12Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>Wagtail Documentation</string>
-					<key>platform</key>
-					<string>Other</string>
-					<key>uniqueIdentifier</key>
-					<string>https://docs.wagtail.org/en/stable/</string>
-				</dict>
-			</dict>
 			<key>https://networkx.org/documentation/stable/</key>
 			<dict>
 				<key>date</key>
@@ -3638,6 +3624,20 @@ $("h1").each(function() {
 					<string>Other</string>
 					<key>uniqueIdentifier</key>
 					<string>https://docs.ultralytics.com/zh/</string>
+				</dict>
+			</dict>
+			<key>https://docs.wagtail.org/en/stable/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-10-05T15:12:24Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>Wagtail Documentation</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://docs.wagtail.org/en/stable/</string>
 				</dict>
 			</dict>
 			<key>https://docs.xarray.dev/en/stable/</key>
@@ -4408,29 +4408,6 @@ $("h1").each(function() {
 					<string>usercontribSymPy</string>
 					<key>uniqueIdentifier</key>
 					<string>SymPy</string>
-				</dict>
-			</dict>
-			<key>bpy</key>
-			<dict>
-				<key>date</key>
-				<date>2025-08-15T01:02:31Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Blender</string>
-						<string>Blender Python API</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/bpy#readme</string>
-					<key>authorLinkText</key>
-					<string>Yue Gao</string>
-					<key>name</key>
-					<string>Blender Python API</string>
-					<key>platform</key>
-					<string>usercontribbpy</string>
-					<key>uniqueIdentifier</key>
-					<string>bpy</string>
 				</dict>
 			</dict>
 			<key>polars</key>
@@ -5389,6 +5366,29 @@ $("h1").each(function() {
 					<string>arviz</string>
 				</dict>
 			</dict>
+			<key>bpy</key>
+			<dict>
+				<key>date</key>
+				<date>2025-10-06T00:53:15Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Blender</string>
+						<string>Blender Python API</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/bpy#readme</string>
+					<key>authorLinkText</key>
+					<string>Yue Gao</string>
+					<key>name</key>
+					<string>Blender Python API</string>
+					<key>platform</key>
+					<string>usercontribbpy</string>
+					<key>uniqueIdentifier</key>
+					<string>bpy</string>
+				</dict>
+			</dict>
 			<key>cvxpy</key>
 			<dict>
 				<key>date</key>
@@ -6327,7 +6327,7 @@ $("h1").each(function() {
 			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2025-07-22T17:19:22Z</date>
+				<date>2025-10-06T00:57:36Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
