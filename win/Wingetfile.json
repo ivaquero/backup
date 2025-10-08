@@ -1,14 +1,11 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-08-13T11:20:01.103-00:00",
+	"CreationDate" : "2025-10-08T17:18:19.206-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
-				{
-					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
-				},
 				{
 					"PackageIdentifier" : "Git.Git"
 				},
@@ -22,22 +19,16 @@
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
-					"PackageIdentifier" : "Apple.Bonjour"
-				},
-				{
 					"PackageIdentifier" : "Giorgiotani.Peazip"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
-					"PackageIdentifier" : "Rakuten.Viber"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2005.x64"
 				},
 				{
-					"PackageIdentifier" : "Alibaba.AliWorkbench"
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.BuildTools"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
@@ -76,7 +67,7 @@
 					"PackageIdentifier" : "Baidu.BaiduNetdisk"
 				},
 				{
-					"PackageIdentifier" : "ByteDance.JianyingPro"
+					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
 				},
 				{
 					"PackageIdentifier" : "Canonical.Ubuntu.2204"
@@ -118,5 +109,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.11.430"
+	"WinGetVersion" : "1.11.510"
 }
