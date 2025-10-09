@@ -201,7 +201,6 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "never",
       "source.organizeImports": "explicit"
     }
   },
@@ -227,9 +226,6 @@
   },
   "[javascript][javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always"
-    }
   },
   "javascript.suggest.autoImports": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
