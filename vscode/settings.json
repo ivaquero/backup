@@ -366,45 +366,13 @@
   "lldb.launch.breakpointMode": "file",
   "lldb.launch.terminal": "integrated",
   "lldb.suppressUpdateNotifications": true,
-  // "[rust]": {
-  //   "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  // },
+  "redhat.telemetry.enabled": false,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  // spell & grammar
-  "spellright.configurationScope": "user",
-  "spellright.documentTypes": [
-    // "markdown",
-    "latex"
-  ],
-  "spellright.language": [
-    "en",
-    "es",
-    "fr",
-    "pt"
-  ],
-  "spellright.ignoreFiles": [
-    "**/.vimrc",
-    "**/.gitignore",
-    "**/.spellignore",
-    "**/password.txt"
-  ],
-  "spellright.ignoreRegExpsByClass": {
-    "markdown": [
-      "/(.+)/g",
-      "/\\$.+\\$/g",
-      "/\\$\\$.+\\$\\$/g",
-      "/\\[.+\\]/g",
-      "/@[\\w\\d\\s]+\\s/g",
-      "/#\\w+()/g"
-    ]
-  },
-  "spellright.spellContextByClass": {
-    "cpp": "comments",
-    "latex": "body",
-    "python": "strings"
-  },
+  // "[rust]": {
+  //   "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  // },
   // leetcode
   "leetcode-problem-rating.defaultLanguage": "cpp",
   "leetcode-problem-rating.hideScore": "Score",
@@ -424,7 +392,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  "redhat.telemetry.enabled": false,
   // powershell
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
