@@ -199,12 +199,12 @@
   "notebook.variablesView": true,
   // python
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
-    }
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "python.terminal.shellIntegration.enabled": true,
   "ruff.configuration": "pyproject.toml",
   // jupyter
   "jupyter.askForKernelRestart": false,

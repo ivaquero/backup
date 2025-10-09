@@ -1,6 +1,5 @@
 conda-tree
 cvxpy
-drawpyo
 ipykernel
 marimo
 openpyxl
@@ -10,5 +9,4 @@ pymoo
 python-graphviz
 python-pptx
 scikit-learn
-streamlit
 sympy
