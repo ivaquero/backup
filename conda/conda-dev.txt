@@ -3,4 +3,5 @@ langchain-community
 langchain-openai
 langchain-postgres
 loguru
+markitdown
 streamlit

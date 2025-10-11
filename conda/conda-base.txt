@@ -1,6 +1,7 @@
 conda-tree
 cvxpy
 ipykernel
+jupytext
 marimo
 openpyxl
 plotnine
