@@ -98,7 +98,6 @@
     }
   },
   "terminal.integrated.showExitAlert": false,
-  "terminal.integrated.suggest.enabled": true,
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
@@ -157,8 +156,6 @@
   "markdown.extension.toc.levels": "2..4",
   "markdownlint.config": {
     "MD003": false,
-    "MD024": false,
-    "MD025": false,
     "MD026": false,
     "MD029": false,
     "MD033": false,
@@ -398,4 +395,5 @@
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  "chat.mcp.gallery.enabled": true
 }
