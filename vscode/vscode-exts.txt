@@ -45,4 +45,5 @@ tomjs.vscode-snippets-manager
 ultralytics.ultralytics-snippets
 usernamehw.errorlens
 vadimcn.vscode-lldb
+xiaohuohumax.format-files-by-ignores
 yzhang.markdown-all-in-one
