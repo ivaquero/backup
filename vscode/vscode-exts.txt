@@ -2,7 +2,7 @@
 adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
-ban.spellright
+bierner.markdown-footnotes
 bradlc.vscode-tailwindcss
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
@@ -13,6 +13,7 @@ czhang03.unicode-math-input
 davidanson.vscode-markdownlint
 esbenp.prettier-vscode
 evertjunior.mass-renamer
+foam.foam-vscode
 formulahendry.code-runner
 golang.go
 hediet.vscode-drawio
