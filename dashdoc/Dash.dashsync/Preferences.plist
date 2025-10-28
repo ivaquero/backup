@@ -135,7 +135,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-04-04T06:01:17Z</date>
+				<date>2025-10-28T04:51:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -6327,11 +6327,6 @@ $("h1").each(function() {
 				<key>date</key>
 				<date>2025-07-03T14:29:03Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/VueJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-07-04T02:32:37Z</date>
-			</dict>
 		</dict>
 		<key>uninstalled</key>
 		<dict>
@@ -6419,6 +6414,11 @@ $("h1").each(function() {
 			<dict>
 				<key>date</key>
 				<date>2022-10-18T11:33:17Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/VueJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2025-10-28T04:47:52Z</date>
 			</dict>
 		</dict>
 	</dict>
