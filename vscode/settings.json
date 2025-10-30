@@ -202,6 +202,7 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "python.analysis.typeCheckingMode": "standard",
   "ruff.configuration": "pyproject.toml",
   // jupyter
   "jupyter.askForKernelRestart": false,

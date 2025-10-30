@@ -1,8 +1,15 @@
 {
-  "center": {
-    "prefix": "center",
+  "import-css": {
+    "prefix": "icss",
     "body": [
-      "div {text-align: center;}"
+      "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">"
+    ],
+    "description": ""
+  },
+  "import-js": {
+    "prefix": "ijs",
+    "body": [
+      "<script src=\".js\"></script>"
     ],
     "description": ""
   }
