@@ -1,5 +1,6 @@
 ipykernel
 onnxruntime
+openpyxl
 python-graphviz
 scikit-image
 scikit-learn

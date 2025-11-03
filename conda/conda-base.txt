@@ -1,3 +1,4 @@
+bambi
 conda-tree
 cvxpy
 ipykernel
@@ -5,8 +6,8 @@ marimo
 openpyxl
 plotnine
 polars
+preliz
 pymoo
-python-graphviz
 python-pptx
 scikit-learn
 sympy
