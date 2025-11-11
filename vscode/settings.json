@@ -222,8 +222,8 @@
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "[javascript][javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "javascript.suggest.autoImports": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
@@ -247,7 +247,7 @@
   "evenBetterToml.schema.enabled": false,
   // yaml
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   // ui & preview
   "hediet.vscode-drawio.offline": true,
@@ -365,6 +365,9 @@
   "lldb.launch.terminal": "integrated",
   "lldb.suppressUpdateNotifications": true,
   "redhat.telemetry.enabled": false,
+  // pandoc
+  "pandoc.pdfOptString": "--pdf-engine=xelatex -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
+  "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1",
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
@@ -395,5 +398,5 @@
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true
 }

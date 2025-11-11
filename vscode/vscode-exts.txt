@@ -2,16 +2,14 @@
 adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
-bierner.markdown-footnotes
 bradlc.vscode-tailwindcss
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
+chrischinchilla.vscode-pandoc
 codeium.codeium
-cweijan.vscode-excel
 czhang03.unicode-math-input
 davidanson.vscode-markdownlint
-esbenp.prettier-vscode
 evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
@@ -38,6 +36,7 @@ pkief.material-icon-theme
 pomdtr.markdown-kroki
 qcz.text-power-tools
 redhat.vscode-xml
+redhat.vscode-yaml
 rust-lang.rust-analyzer
 tamasfe.even-better-toml
 timonwong.shellcheck
