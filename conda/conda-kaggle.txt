@@ -1,3 +1,4 @@
+fastexcel
 ipykernel
 onnxruntime
 openpyxl

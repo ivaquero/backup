@@ -1,6 +1,7 @@
 bambi
 conda-tree
 cvxpy
+fastexcel
 ipykernel
 marimo
 openpyxl

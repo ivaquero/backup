@@ -196,11 +196,11 @@
   "notebook.variablesView": true,
   // python
   "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
-    },
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    }
   },
   "python.analysis.typeCheckingMode": "standard",
   "ruff.configuration": "pyproject.toml",
