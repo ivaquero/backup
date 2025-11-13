@@ -15,7 +15,6 @@ foam.foam-vscode
 formulahendry.code-runner
 golang.go
 hediet.vscode-drawio
-huacnlee.autocorrect
 james-yu.latex-workshop
 llvm-vs-code-extensions.vscode-clangd
 mads-hartmann.bash-ide-vscode

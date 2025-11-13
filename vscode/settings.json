@@ -19,24 +19,16 @@
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
   "search.searchView.keywordSuggestions": true,
   // editor
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.defaultFormatter": null,
-  "editor.foldingStrategy": "indentation",
-  "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.lineNumbers": "interval",
   "editor.linkedEditing": true,
   "editor.minimap.enabled": false,
-  "editor.semanticHighlighting.enabled": true,
   "editor.suggest.preview": true,
-  "editor.suggest.selectionMode": "whenQuickSuggestion",
   "editor.suggest.shareSuggestSelections": true,
   "editor.tabCompletion": "on",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.unicodeHighlight.nonBasicASCII": false,
-  "editor.useTabStops": false,
   "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.wordWrap": "on",
   "editor.quickSuggestions": {
@@ -76,28 +68,6 @@
   // terminal
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.profiles.osx": {
-    "zsh": {
-      "path": "/bin/zsh",
-      "args": [
-        "-l"
-      ]
-    }
-  },
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "args": [
-        "-NoExit",
-        "/C",
-        "chcp 65001"
-      ],
-      "icon": "terminal-powershell"
-    }
-  },
-  "terminal.integrated.showExitAlert": false,
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
@@ -113,10 +83,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
-  "workbench.tree.expandMode": "singleClick",
-  // scm
-  "scm.alwaysShowRepositories": true,
-  "scm.alwaysShowActions": true,
   // git
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
@@ -143,12 +109,10 @@
   "markdown.preview.linkify": true,
   "markdown.preview.markEditorSelection": true,
   "markdown.preview.openMarkdownLinks": "inEditor",
-  "markdown.preview.scrollPreviewWithEditor": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
   "markdown.extension.completion.enabled": true,
-  "markdown.extension.italic.indicator": "*",
   "markdown.extension.tableFormatter.delimiterRowNoPadding": true,
   "markdown.extension.tableFormatter.normalizeIndentation": true,
   "markdown.extension.theming.decoration.renderLink": true,
@@ -225,11 +189,8 @@
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
   },
-  "javascript.suggest.autoImports": true,
   "typescript.inlayHints.enumMemberValues.enabled": true,
-  "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "typescript.suggest.autoImports": true,
   "[json][jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -242,16 +203,13 @@
   },
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.allowedBlankLines": 1,
-  "evenBetterToml.formatter.arrayAutoCollapse": true,
   "evenBetterToml.formatter.indentEntries": true,
-  "evenBetterToml.schema.enabled": false,
   // yaml
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   // ui & preview
   "hediet.vscode-drawio.offline": true,
-  "hediet.vscode-drawio.resizeImages": null,
   "hediet.vscode-drawio.theme": "kennedy",
   // shell
   "[shellscript]": {
@@ -357,9 +315,6 @@
     "editor.defaultFormatter": "ms-vscode.cmake-tools"
   },
   "cmake.allowCommentsInPresetsFile": true,
-  "lldb.commandCompletions": true,
-  "lldb.dereferencePointers": true,
-  "lldb.evaluateForHovers": true,
   "lldb.launch.expressions": "native",
   "lldb.launch.breakpointMode": "file",
   "lldb.launch.terminal": "integrated",
