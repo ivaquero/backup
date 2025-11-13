@@ -47,10 +47,17 @@
     },
     {
       "name": "Bibliography"
+    },
+    {
+      "name": "PowerPoint (.pptx)"
     }
   ],
   "defaultExportDirectoryMode": "Auto",
   "openExportedFile": true,
   "env": {},
-  "showExportProgressBar": true
+  "showExportProgressBar": true,
+  "lastExportDirectory": {
+    "darwin": "/Users/integzz/Documents"
+  },
+  "lastExportType": "Word (.docx)"
 }
