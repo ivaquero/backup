@@ -316,10 +316,6 @@
     "editor.defaultFormatter": "ms-vscode.cmake-tools"
   },
   "cmake.allowCommentsInPresetsFile": true,
-  "lldb.launch.expressions": "native",
-  "lldb.launch.breakpointMode": "file",
-  "lldb.launch.terminal": "integrated",
-  "lldb.suppressUpdateNotifications": true,
   "redhat.telemetry.enabled": false,
   // pandoc
   "pandoc.pdfOptString": "--pdf-engine=xelatex -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",

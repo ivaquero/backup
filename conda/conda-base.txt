@@ -10,6 +10,5 @@ polars
 preliz
 pymoo
 python-pptx
-ruff
 scikit-learn
 sympy
