@@ -8,5 +8,4 @@ scikit-learn
 streamlit
 torchinfo
 torchvision
-torchvista
 ultralytics

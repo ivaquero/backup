@@ -42,5 +42,4 @@ timonwong.shellcheck
 tomjs.vscode-snippets-manager
 ultralytics.ultralytics-snippets
 usernamehw.errorlens
-xiaohuohumax.format-files-by-ignores
 yzhang.markdown-all-in-one
