@@ -1,4 +1,4 @@
-faiss-cpu
+chromadb
 langchain-community
 langchain-openai
 langchain-postgres
