@@ -9,6 +9,6 @@ plotnine
 polars
 preliz
 pymoo
-python-pptx
 scikit-learn
 sympy
+xlsxwriter

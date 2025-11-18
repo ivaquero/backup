@@ -130,7 +130,6 @@
   },
   // shortcuts
   "code-runner.runInTerminal": true,
-  "code-runner.enableAppInsights": false,
   "code-runner.executorMap": {
     "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out && rm ./a.out",
     "cpp": "cd $dir && clang++ -std=c++20 $fileName && ./a.out && rm ./a.out",
@@ -181,20 +180,11 @@
   "bookmarks.useWorkaroundForFormatters": true,
   // front end & formatters
   "emmet.showSuggestionsAsSnippets": true,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[css]": {
-    "editor.defaultFormatter": "vscode.css-language-features"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.preferences.preferTypeOnlyAutoImports": true,
-  "[json][jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   // toml
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
@@ -205,17 +195,10 @@
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "evenBetterToml.formatter.indentEntries": true,
-  // yaml
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
   // ui & preview
   "hediet.vscode-drawio.offline": true,
   "hediet.vscode-drawio.theme": "kennedy",
   // shell
-  "[shellscript]": {
-    "editor.defaultFormatter": "mads-hartmann.bash-ide-vscode"
-  },
   "shellcheck.exclude": [
     "SC1017",
     "SC1090",
@@ -312,20 +295,13 @@
   "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.default.mergeConfigurations": true,
   "C_Cpp.intelliSenseEngine": "disabled",
-  "[cmake]": {
-    "editor.defaultFormatter": "ms-vscode.cmake-tools"
-  },
+  // cmake
   "cmake.allowCommentsInPresetsFile": true,
+  // yaml
   "redhat.telemetry.enabled": false,
   // pandoc
   "pandoc.pdfOptString": "--pdf-engine=xelatex -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
   "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1",
-  "[go]": {
-    "editor.defaultFormatter": "golang.go"
-  },
-  // "[rust]": {
-  //   "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  // },
   // leetcode
   "leetcode-problem-rating.defaultLanguage": "cpp",
   "leetcode-problem-rating.hideScore": "Score",
