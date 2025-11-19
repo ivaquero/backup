@@ -19,7 +19,6 @@ james-yu.latex-workshop
 llvm-vs-code-extensions.vscode-clangd
 mads-hartmann.bash-ide-vscode
 ms-python.python
-ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
