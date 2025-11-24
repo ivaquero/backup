@@ -14,14 +14,14 @@
     ],
     "description": ""
   },
-  "pg": {
+  "page-br": {
     "prefix": "pg",
     "body": [
       "#pagebreak()"
     ],
     "description": ""
   },
-  "pgw": {
+  "page-br-w": {
     "prefix": "pgw",
     "body": [
       "#pagebreak(weak: true)"
@@ -215,7 +215,7 @@
     ],
     "description": ""
   },
-  "rimg": {
+  "read-img": {
     "prefix": "rimg",
     "body": [
       "#figure(",
@@ -226,7 +226,7 @@
     ],
     "description": ""
   },
-  "rpy": {
+  "raw-py": {
     "prefix": "rpy",
     "body": [
       "#let code1 = read(\"python\")",
@@ -234,7 +234,7 @@
     ],
     "description": ""
   },
-  "rjl": {
+  "raw-jl": {
     "prefix": "rjl",
     "body": [
       "#let code1 = read(\"julia\")",
@@ -242,7 +242,7 @@
     ],
     "description": ""
   },
-  "rcpp": {
+  "raw-cpp": {
     "prefix": "rcpp",
     "body": [
       "#let code1 = read(\"code\")",
@@ -312,133 +312,142 @@
     ],
     "description": ""
   },
-  "matrix-a": {
+  "blk-rule": {
+    "prefix": "brl",
+    "body": [
+      "#rule()[",
+      "",
+      "]"
+    ],
+    "description": ""
+  },
+  "mat-a": {
     "prefix": "ma",
     "body": [
       "𝑨"
     ],
     "description": ""
   },
-  "matrix-b": {
+  "mat-b": {
     "prefix": "mb",
     "body": [
       "𝑩"
     ],
     "description": ""
   },
-  "matrix-c": {
+  "mat-c": {
     "prefix": "mc",
     "body": [
       "𝑪"
     ],
     "description": ""
   },
-  "matrix-e": {
+  "mat-e": {
     "prefix": "me",
     "body": [
       "𝑬"
     ],
     "description": ""
   },
-  "matrix-g": {
+  "mat-g": {
     "prefix": "mg",
     "body": [
       "𝑮"
     ],
     "description": ""
   },
-  "matrix-h": {
+  "mat-h": {
     "prefix": "mh",
     "body": [
       "𝑯"
     ],
     "description": ""
   },
-  "matrix-i": {
+  "mat-i": {
     "prefix": "mi",
     "body": [
       "𝑰"
     ],
     "description": ""
   },
-  "matrix-j": {
+  "mat-j": {
     "prefix": "mj",
     "body": [
       "𝑱"
     ],
     "description": ""
   },
-  "matrix-l": {
+  "mat-l": {
     "prefix": "ml",
     "body": [
       "𝑳"
     ],
     "description": ""
   },
-  "matrix-m": {
+  "mat-m": {
     "prefix": "mm",
     "body": [
       "𝑴"
     ],
     "description": ""
   },
-  "matrix-o": {
+  "mat-o": {
     "prefix": "mo",
     "body": [
       "𝑶"
     ],
     "description": ""
   },
-  "matrix-p": {
+  "mat-p": {
     "prefix": "mp",
     "body": [
       "𝑷"
     ],
     "description": ""
   },
-  "matrix-q": {
+  "mat-q": {
     "prefix": "mq",
     "body": [
       "𝑸"
     ],
     "description": ""
   },
-  "matrix-r": {
+  "mat-r": {
     "prefix": "mr",
     "body": [
       "𝑹"
     ],
     "description": ""
   },
-  "matrix-s": {
+  "mat-s": {
     "prefix": "ms",
     "body": [
       "𝑺"
     ],
     "description": ""
   },
-  "matrix-u": {
+  "mat-u": {
     "prefix": "mu",
     "body": [
       "𝑼"
     ],
     "description": ""
   },
-  "matrix-x": {
+  "mat-x": {
     "prefix": "mx",
     "body": [
       "𝑿"
     ],
     "description": ""
   },
-  "matrix-y": {
+  "mat-y": {
     "prefix": "my",
     "body": [
       "𝒀"
     ],
     "description": ""
   },
-  "matrix-gl": {
+  "mat-gl": {
     "prefix": "mgl",
     "body": [
       "𝜦"
@@ -536,52 +545,59 @@
     ],
     "description": ""
   },
-  "matrix-eig": {
+  "mat-eig": {
     "prefix": "meig",
     "body": [
       "𝑨 - λ 𝑰"
     ],
     "description": ""
   },
-  "matrix-ata": {
+  "mat-ata": {
     "prefix": "mata",
     "body": [
       "𝑨^⊤ 𝑨"
     ],
     "description": ""
   },
-  "matrix-aat": {
+  "mat-aat": {
     "prefix": "maat",
     "body": [
       "𝑨 𝑨^⊤"
     ],
     "description": ""
   },
-  "matrix-aha": {
+  "mat-aha": {
     "prefix": "maha",
     "body": [
       "𝑨^H 𝑨"
     ],
     "description": ""
   },
-  "v00": {
+  "vec-00": {
     "prefix": "v00",
     "body": [
       "vec(delim: \"[\", 0, 0)"
     ],
     "description": ""
   },
-  "vx12": {
+  "vec-x12": {
     "prefix": "vx12",
     "body": [
       "vec(delim: \"[\", x_1, x_2)"
     ],
     "description": ""
   },
-  "vy12": {
+  "vec-y12": {
     "prefix": "vy12",
     "body": [
       "vec(delim: \"[\", y_1, y_2)"
+    ],
+    "description": ""
+  },
+  "vec-xn": {
+    "prefix": "vxn",
+    "body": [
+      "X_1, …, X_n"
     ],
     "description": ""
   },
@@ -613,63 +629,63 @@
     ],
     "description": ""
   },
-  "areq": {
+  "arr-eq": {
     "prefix": "darr",
     "body": [
       "⇔"
     ],
     "description": ""
   },
-  "si0n": {
+  "sum-i0n": {
     "prefix": "si0n",
     "body": [
       "∑_(i=0)^(i=N)"
     ],
     "description": ""
   },
-  "si1n": {
+  "sum-i1n": {
     "prefix": "si1n",
     "body": [
       "∑_(i=1)^(i=N)"
     ],
     "description": ""
   },
-  "sk0n": {
+  "sum-k0n": {
     "prefix": "sk0n",
     "body": [
       "∑_(k=0)^(k=N)"
     ],
     "description": ""
   },
-  "sk1n": {
+  "sum-k1n": {
     "prefix": "sk1n",
     "body": [
       "∑_(k=1)^(k=N)"
     ],
     "description": ""
   },
-  "pi0n": {
+  "prod-i0n": {
     "prefix": "pi0n",
     "body": [
       "∏_(i=0)^(i=N)"
     ],
     "description": ""
   },
-  "pi1n": {
+  "prod-i1n": {
     "prefix": "pi1n",
     "body": [
       "∏_(i=1)^(i=N)"
     ],
     "description": ""
   },
-  "pk0n": {
+  "prod-k0n": {
     "prefix": "pk0n",
     "body": [
       "∏_(k=0)^(k=N)"
     ],
     "description": ""
   },
-  "pk1n": {
+  "prod-k1n": {
     "prefix": "pk1n",
     "body": [
       "∏_(k=1)^(k=N)"
@@ -704,28 +720,28 @@
     ],
     "description": ""
   },
-  "iii": {
+  "int-ii": {
     "prefix": "iii",
     "body": [
       "∫_(-∞)^(∞)"
     ],
     "description": ""
   },
-  "i11": {
-    "prefix": "i01",
+  "int-11": {
+    "prefix": "i11",
     "body": [
       "∫_(-1)^1"
     ],
     "description": ""
   },
-  "i01": {
+  "int-01": {
     "prefix": "i01",
     "body": [
       "∫_0^1"
     ],
     "description": ""
   },
-  "i0t": {
+  "int-0t": {
     "prefix": "i0t",
     "body": [
       "∫_0^t"
@@ -736,13 +752,6 @@
     "prefix": "iid",
     "body": [
       "limits(∼)^(\"i.i.d\")"
-    ],
-    "description": ""
-  },
-  "vxn": {
-    "prefix": "vxn",
-    "body": [
-      "X_1, …, X_n"
     ],
     "description": ""
   },
@@ -775,11 +784,11 @@
     ],
     "description": ""
   },
-  "brl": {
-    "prefix": "brl",
+  "heading-none": {
+    "prefix": "hno",
     "body": [
-      "#rule()[",
-      "",
+      "#[",
+      "  #set heading(numbering: none)",
       "]"
     ],
     "description": ""

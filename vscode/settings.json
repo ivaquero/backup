@@ -18,7 +18,6 @@
   // search
   "search.followSymlinks": false,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
-  "search.searchView.keywordSuggestions": true,
   // editor
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
@@ -52,7 +51,6 @@
     "*.h": "cpp",
     "*.vimrc": "viml",
     "*.m": "matlab",
-    "docker-compose.yml": "yaml"
   },
   "files.exclude": {
     "**/.DS_Store": true,
@@ -132,8 +130,8 @@
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
-    "c": "cd $dir && clang $fileName && ./a.out && rm ./a.out && rm ./a.out",
-    "cpp": "cd $dir && clang++ -std=c++20 $fileName && ./a.out && rm ./a.out",
+    "c": "cd $dir && clang $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && clang++ -std=c++20 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "go": "go run",
     "javascript": "node run --allow-net $fullFileName",
     "julia": "julia",
@@ -185,6 +183,7 @@
   },
   "typescript.inlayHints.enumMemberValues.enabled": true,
   "typescript.preferences.preferTypeOnlyAutoImports": true,
+  "livePreview.notifyOnOpenLooseFile": false,
   // toml
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
@@ -291,8 +290,10 @@
     "-j=12"
   ],
   "clangd.onConfigChanged": "restart",
-  "C_Cpp.default.cStandard": "gnu17",
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.cStandard": "c17",
   "C_Cpp.default.mergeConfigurations": true,
   "C_Cpp.intelliSenseEngine": "disabled",
   // cmake
