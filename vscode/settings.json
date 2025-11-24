@@ -270,32 +270,13 @@
   "tinymist.preview.cursorIndicator": true,
   // cpp
   "[c][cpp]": {
-    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    "editor.defaultFormatter": "ms-vscode.cpptools"
   },
-  "clangd.arguments": [
-    "--all-scopes-completion",
-    "--background-index",
-    "--clang-tidy",
-    "--compile-commands-dir=.vscode",
-    "--completion-parse=auto",
-    "--completion-style=detailed",
-    "--enable-config",
-    "--fallback-style=LLVM",
-    "--function-arg-placeholders=false",
-    "--header-insertion-decorators",
-    "--header-insertion=iwyu",
-    "--pch-storage=memory",
-    "--pretty",
-    "--ranking-model=decision_forest",
-    "-j=12"
-  ],
-  "clangd.onConfigChanged": "restart",
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.default.cStandard": "c17",
   "C_Cpp.default.mergeConfigurations": true,
-  "C_Cpp.intelliSenseEngine": "disabled",
   // cmake
   "cmake.allowCommentsInPresetsFile": true,
   // yaml

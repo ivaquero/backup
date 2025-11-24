@@ -16,7 +16,6 @@ formulahendry.code-runner
 golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop
-llvm-vs-code-extensions.vscode-clangd
 mads-hartmann.bash-ide-vscode
 ms-python.python
 ms-toolsai.jupyter
