@@ -9,7 +9,6 @@ charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 codeium.codeium
 czhang03.unicode-math-input
-davidanson.vscode-markdownlint
 evertjunior.mass-renamer
 foam.foam-vscode
 formulahendry.code-runner
@@ -35,6 +34,7 @@ qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
 rust-lang.rust-analyzer
+rvben.rumdl
 tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager

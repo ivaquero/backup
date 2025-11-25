@@ -94,9 +94,9 @@
   "git.supportCancellation": true,
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.defaultFormatter": "rvben.rumdl",
     "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": "always"
+      "source.fixAll": "explicit"
     },
     "editor.quickSuggestions": {
       "other": "on",
@@ -118,15 +118,9 @@
   "markdown.extension.theming.decoration.renderLink": true,
   "markdown.extension.theming.decoration.renderParagraph": true,
   "markdown.extension.toc.levels": "2..4",
-  "markdownlint.config": {
-    "MD003": false,
-    "MD025": false,
-    "MD026": false,
-    "MD029": false,
-    "MD033": false,
-    "MD037": false,
-    "MD042": false
-  },
+  "rumdl.rules.disable": [
+    "MD013",
+  ],
   // shortcuts
   "code-runner.runInTerminal": true,
   "code-runner.executorMap": {
