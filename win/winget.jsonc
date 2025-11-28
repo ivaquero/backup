@@ -18,8 +18,7 @@
                 "fr-FR"
             ],
             "architectures": [
-                "x64",
-                "arm64"
+                "x64"
             ]
         }
     },
@@ -43,9 +42,10 @@
         "disable": true
     },
     "experimentalFeatures": {
-        "configuration03": true,
-        "configureExport": true,
-        "configureSelfElevate": true,
+        "directMSI": true,
+        "experimentalARG": true,
+        "experimentalCMD": true,
+        "fonts": true,
         "resume": true
     }
 }

@@ -1,11 +1,14 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2025-10-08T17:18:19.206-00:00",
+	"CreationDate" : "2025-11-28T10:50:24.504-00:00",
 	"Sources" : 
 	[
 		{
 			"Packages" : 
 			[
+				{
+					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
+				},
 				{
 					"PackageIdentifier" : "Git.Git"
 				},
@@ -16,7 +19,7 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
 				},
 				{
-					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
+					"PackageIdentifier" : "Apple.Bonjour"
 				},
 				{
 					"PackageIdentifier" : "Giorgiotani.Peazip"
@@ -25,10 +28,16 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
+					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2005.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.BuildTools"
+					"PackageIdentifier" : "Microsoft.VisualStudio.Community"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.BuildTools"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
@@ -55,9 +64,6 @@
 					"PackageIdentifier" : "Microsoft.Edge"
 				},
 				{
-					"PackageIdentifier" : "WinFsp.WinFsp"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
 				},
 				{
@@ -65,9 +71,6 @@
 				},
 				{
 					"PackageIdentifier" : "Baidu.BaiduNetdisk"
-				},
-				{
-					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
 				},
 				{
 					"PackageIdentifier" : "Canonical.Ubuntu.2204"
@@ -92,22 +95,7 @@
 				"Name" : "winget",
 				"Type" : "Microsoft.PreIndexed.Package"
 			}
-		},
-		{
-			"Packages" : 
-			[
-				{
-					"PackageIdentifier" : "9NBLGGH5R558"
-				}
-			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://storeedgefd.dsx.mp.microsoft.com/v9.0",
-				"Identifier" : "StoreEdgeFD",
-				"Name" : "msstore",
-				"Type" : "Microsoft.Rest"
-			}
 		}
 	],
-	"WinGetVersion" : "1.11.510"
+	"WinGetVersion" : "1.12.350"
 }

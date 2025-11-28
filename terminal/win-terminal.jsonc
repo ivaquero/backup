@@ -1,10 +1,81 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
     "alwaysShowNotificationIcon": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings": [
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PrevTab",
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "id": "Terminal.ResizePaneDown",
+            "keys": "alt+shift+down"
+        },
+        {
+            "id": "Terminal.NextTab",
+            "keys": "ctrl+tab"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.OpenNewTab",
+            "keys": "ctrl+shift+t"
+        },
+        {
+            "id": "Terminal.MoveFocusDown",
+            "keys": "alt+down"
+        },
+        {
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "alt+left"
+        },
+        {
+            "id": "Terminal.MoveFocusRight",
+            "keys": "alt+right"
+        },
+        {
+            "id": "Terminal.MoveFocusUp",
+            "keys": "alt+up"
+        },
+        {
+            "id": "Terminal.ResizePaneLeft",
+            "keys": "alt+shift+left"
+        },
+        {
+            "id": "Terminal.ResizePaneRight",
+            "keys": "alt+shift+right"
+        },
+        {
+            "id": "Terminal.ResizePaneUp",
+            "keys": "alt+shift+up"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": "Terminal.SplitPaneDown",
+            "keys": "alt+shift+minus"
+        },
+        {
+            "id": "Terminal.SplitPaneRight",
+            "keys": "alt+shift+\\"
+        }
+    ],
     "newTabMenu": [
         {
             "type": "remainingProfiles"
@@ -13,7 +84,6 @@
     "profiles": {
         "defaults": {
             "font": {
-                // "face": "FiraCode Nerd Font",
                 "size": 14
             },
             "snapOnInput": true,
@@ -27,140 +97,44 @@
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "C:\\Scoop\\shims\\git-bash.exe",
-                "guid": "{c891c3d2-b798-4857-83c0-89bf2ea34021}",
-                "icon": "C:\\Scoop\\apps\\git\\current\\mingw64\\share\\git\\git-for-windows.ico",
-                "name": "Git Bash"
-            },
-            {
-                "commandline": "C:\\Scoop\\shims\\msys2.cmd",
-                "guid": "{6f0ee3d1-ac4f-48ca-bcf5-a9795f9942d2}",
-                "startingDirectory": "%USERPROFILE%",
-                "icon": "C:\\Scoop\\apps\\msys2\\current\\msys2.ico",
-                "name": "Msys2"
-            },
-            {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
             },
             {
+                "commandline": "C:\\Scoop\\shims\\msys2.cmd",
+                "guid": "{6f0ee3d1-ac4f-48ca-bcf5-a9795f9942d2}",
+                "icon": "C:\\Scoop\\apps\\msys2\\current\\msys2.ico",
+                "name": "Msys2",
+                "startingDirectory": "%USERPROFILE%"
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
+            },
+            {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}",
+                "hidden": false,
+                "name": "Ubuntu 22.04.5 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
+            },
+            {
+                "guid": "{72e31a91-f0a9-5b46-9473-60f7238e250b}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
-    "actions": [
-        {
-            "command": {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+c"
-        },
-        {
-            "command": "paste",
-            "keys": "ctrl+v"
-        },
-        // Tab navigation
-        {
-            "command": "newTab",
-            "keys": "ctrl+shift+t"
-        },
-        {
-            "command": "closePane",
-            "keys": "ctrl+shift+w"
-        },
-        {
-            "command": "nextTab",
-            "keys": "ctrl+tab"
-        },
-        {
-            "command": "prevTab",
-            "keys": "ctrl+shift+tab"
-        },
-        // Pane navigation
-        {
-            "command": {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "alt+down"
-        },
-        {
-            "command": {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "alt+left"
-        },
-        {
-            "command": {
-                "action": "moveFocus",
-                "direction": "right"
-            },
-            "keys": "alt+right"
-        },
-        {
-            "command": {
-                "action": "moveFocus",
-                "direction": "up"
-            },
-            "keys": "alt+up"
-        },
-        // Resize
-        {
-            "command": {
-                "action": "resizePane",
-                "direction": "down"
-            },
-            "keys": "alt+shift+down"
-        },
-        {
-            "command": {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "keys": "alt+shift+left"
-        },
-        {
-            "command": {
-                "action": "resizePane",
-                "direction": "right"
-            },
-            "keys": "alt+shift+right"
-        },
-        {
-            "command": {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "alt+shift+up"
-        },
-        // New/close pane
-        {
-            "command": "closePane",
-            "keys": "ctrl+d"
-        },
-        // Split
-        {
-            "command": {
-                "action": "splitPane",
-                "split": "down"
-            },
-            "keys": "alt+shift+-"
-        },
-        {
-            "command": {
-                "action": "splitPane",
-                "split": "right"
-            },
-            "keys": "alt+shift+\\"
-        }
-    ],
     "schemes": [],
     "themes": []
 }
