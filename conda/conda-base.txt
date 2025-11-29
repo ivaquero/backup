@@ -1,5 +1,4 @@
 bambi
-conda-tree
 cvxpy
 fastexcel
 ipykernel
