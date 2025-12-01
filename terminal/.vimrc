@@ -58,37 +58,17 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nanotee/zoxide.vim'
 Plug 'sbdchd/neoformat'
 
-" completions
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " shortcut
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 " language
+Plug 'rust-lang/rust.vim'
 Plug 'kaarmu/typst.vim'
-Plug 'yaegassy/coc-ruff', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
 colorscheme monokai
-
-" coc.nvim
-let g:coc_global_extensions = [
-    \ 'coc-emmet',
-    \ 'coc-explorer',
-    \ 'coc-git',
-    \ 'coc-gitignore',
-    \ 'coc-highlight',
-    \ 'coc-json',
-    \ 'coc-lists',
-    \ 'coc-markdownlint',
-    \ 'coc-marketplace',
-    \ 'coc-pairs',
-    \ 'coc-prettier',
-    \ 'coc-rust-analyzer',
-    \ 'coc-texlab',
-    \ 'coc-yaml']
 
 " airline
 " let g:airline_theme = 'silver'
