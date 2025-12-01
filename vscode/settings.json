@@ -120,6 +120,7 @@
   "markdown.extension.toc.levels": "2..4",
   "rumdl.rules.disable": [
     "MD013",
+    "MD033",
   ],
   // shortcuts
   "code-runner.runInTerminal": true,
@@ -267,7 +268,6 @@
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "C_Cpp.autocompleteAddParentheses": true,
-  "C_Cpp.codeAnalysis.clangTidy.enabled": true,
   "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.default.cStandard": "c17",
   "C_Cpp.default.mergeConfigurations": true,
@@ -276,7 +276,7 @@
   // yaml
   "redhat.telemetry.enabled": false,
   // pandoc
-  "pandoc.pdfOptString": "--pdf-engine=xelatex -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
+  "pandoc.pdfOptString": "--pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
   "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1",
   // leetcode
   "leetcode-problem-rating.defaultLanguage": "cpp",
