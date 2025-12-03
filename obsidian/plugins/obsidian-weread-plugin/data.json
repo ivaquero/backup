@@ -31,7 +31,7 @@
     },
     {
       "name": "wr_skey",
-      "value": "2LmQu0n5"
+      "value": "DW1iw_Z3"
     },
     {
       "name": "wr_vid",
@@ -47,11 +47,11 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1763230002252,
+  "lastCookieTime": 1763868347601,
   "isCookieValid": true,
   "user": "嗯哼",
   "userVid": "38131323",
-  "template": "# {{metaData.title}}\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}{% else %}\n{{ highlight.markText |trim }} \n{% endif %} {% endfor %}{% endfor %}",
+  "template": "# {{metaData.title}}\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{{ highlight.markText |trim }} \n{% endfor %}{% endfor %}",
   "noteCountLimit": 3,
   "subFolderType": "category",
   "fileNameType": "BOOK_NAME",
@@ -63,6 +63,7 @@
   "convertTags": false,
   "saveArticleToggle": false,
   "saveReadingInfoToggle": false,
+  "trimBlocks": false,
   "cookieCloudInfo": {
     "serverUrl": "",
     "uuid": "",
