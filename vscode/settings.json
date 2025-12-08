@@ -50,7 +50,7 @@
     "*.condarc": "yaml",
     "*.h": "cpp",
     "*.vimrc": "viml",
-    "*.m": "matlab",
+    "*.m": "matlab"
   },
   "files.exclude": {
     "**/.DS_Store": true,
@@ -94,7 +94,7 @@
   "git.supportCancellation": true,
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "rvben.rumdl",
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit"
     },
@@ -120,7 +120,7 @@
   "markdown.extension.toc.levels": "2..4",
   "rumdl.rules.disable": [
     "MD013",
-    "MD033",
+    "MD033"
   ],
   // shortcuts
   "code-runner.runInTerminal": true,
@@ -220,6 +220,31 @@
   "tinymist.formatterMode": "typstyle",
   "tinymist.lint.enabled": true,
   "tinymist.outputPath": "$root/articles/$name",
+  // leetcode
+  "leetcode-problem-rating.defaultLanguage": "cpp",
+  "leetcode-problem-rating.hideScore": "Score",
+  "leetcode-problem-rating.hint.commandShortcut": false,
+  "leetcode-problem-rating.hint.commentDescription": false,
+  "leetcode-problem-rating.hint.configWebviewMarkdown": false,
+  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/algo",
+  "leetcode-problem-rating.editor.shortcuts": [
+    "submit",
+    "case",
+    "test",
+    "solution"
+  ],
+  "leetcode-problem-rating.filePath": {
+    "default": {
+      "folder": "${language}",
+      "filename": "${tag}_${id}_${snake_case_name}.${ext}"
+    }
+  },
+  // powershell
+  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
+  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+  "powershell.codeFormatting.useConstantStrings": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true,
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
@@ -271,30 +296,5 @@
         "xelatex"
       ]
     }
-  ],
-  // leetcode
-  "leetcode-problem-rating.defaultLanguage": "cpp",
-  "leetcode-problem-rating.hideScore": "Score",
-  "leetcode-problem-rating.hint.commandShortcut": false,
-  "leetcode-problem-rating.hint.commentDescription": false,
-  "leetcode-problem-rating.hint.configWebviewMarkdown": false,
-  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/algo",
-  "leetcode-problem-rating.editor.shortcuts": [
-    "submit",
-    "case",
-    "test",
-    "solution"
-  ],
-  "leetcode-problem-rating.filePath": {
-    "default": {
-      "folder": "${language}",
-      "filename": "${tag}_${id}_${snake_case_name}.${ext}"
-    }
-  },
-  // powershell
-  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
-  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
-  "powershell.codeFormatting.useConstantStrings": true,
-  "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  ]
 }
