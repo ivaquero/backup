@@ -1,5 +1,7 @@
 chromadb
+langchain-chroma
 langchain-community
+langchain-ollama
 langchain-openai
 langchain-postgres
 loguru

@@ -67,7 +67,6 @@
   // terminal
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.inheritEnv": false,
   // workbench
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Visual Studio Light",
@@ -159,6 +158,7 @@
       "source.organizeImports": "explicit"
     }
   },
+  "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -296,5 +296,5 @@
         "xelatex"
       ]
     }
-  ]
+  ],
 }
