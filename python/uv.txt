@@ -2,5 +2,4 @@ jupytext
 kaggle
 pdf2ppt-converter
 pdf2zh-next
-ruff
 touying
