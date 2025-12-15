@@ -10,7 +10,6 @@ codeium.codeium
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
-formulahendry.code-runner
 golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop

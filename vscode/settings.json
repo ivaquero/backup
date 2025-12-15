@@ -121,19 +121,6 @@
     "MD013",
     "MD033"
   ],
-  // shortcuts
-  "code-runner.runInTerminal": true,
-  "code-runner.executorMap": {
-    "c": "cd $dir && clang $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "cpp": "cd $dir && clang++ -std=c++20 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    "go": "go run",
-    "javascript": "bun run $fullFileName",
-    "julia": "julia",
-    "python": "$(which python) -u $fullFileName",
-    "rust": "cd $dir && rustc $fileName && $fileNameWithoutExt",
-    "shellscript": "bash",
-    "matlab": "cd $dir && matlab -nosplash -nodesktop -r $fileNameWithoutExt"
-  },
   // notebook
   "notebook.codeActionsOnSave": {
     "notebook.source.fixAll": "never",
