@@ -39,4 +39,5 @@ tomjs.vscode-snippets-manager
 tyngw.interactive-markdown-table-editor
 ultralytics.ultralytics-snippets
 usernamehw.errorlens
+vue.volar
 yzhang.markdown-all-in-one
