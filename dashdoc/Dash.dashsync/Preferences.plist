@@ -135,7 +135,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-10-28T04:51:15Z</date>
+				<date>2025-12-15T07:49:46Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -5902,7 +5902,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/DocSets/Qt_6/Qt.docset</key>
 			<string>q</string>
 			<key>~/Library/Application Support/Dash/DocSets/Rust/Rust.docset</key>
-			<string>rs</string>
+			<string>r</string>
 			<key>~/Library/Application Support/Dash/DocSets/SQLAlchemy/SQLAlchemy.docset</key>
 			<string>sa</string>
 			<key>~/Library/Application Support/Dash/DocSets/SciPy/SciPy.docset</key>
@@ -5928,7 +5928,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Docset Generator/Typst/Typst.docset</key>
 			<string>tt</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/typst/typst.docset</key>
-			<string>tt</string>
+			<string>t:</string>
 			<key>~/Library/Application Support/Dash/Go DocSets/github.com spf13 cobra/GoDoc.docset</key>
 			<string>godoc</string>
 			<key>~/Library/Application Support/Dash/Python
@@ -6068,6 +6068,8 @@ $("h1").each(function() {
 					0.14.4.docset</key>
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.4.docset</key>
+			<string>sm</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.6.docset</key>
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/xarray/xarray.docset</key>
 			<string>xr</string>
