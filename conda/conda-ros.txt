@@ -1,3 +1,2 @@
 colcon-common-extensions
-opencv
 ros-humble-desktop

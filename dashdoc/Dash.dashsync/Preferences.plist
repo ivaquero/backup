@@ -30,17 +30,19 @@
 			<key>Eigen</key>
 			<dict>
 				<key>date</key>
-				<date>2023-10-10T15:33:18Z</date>
+				<date>2025-12-16T15:37:14Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
 					<dict>
 						<key>allowFilters</key>
-						<string>https://eigen.tuxfamily.org/dox/*</string>
+						<string>https://libeigen.gitlab.io/eigen/docs-nightly/*</string>
 						<key>basicIndexEnabled</key>
 						<true/>
 						<key>cssToInject</key>
-						<string>footer { display: none !important; }</string>
+						<string>footer {
+    display: none !important;
+}</string>
 						<key>denyFilters</key>
 						<string></string>
 						<key>docsetKeyword</key>
@@ -56,16 +58,23 @@
 						<key>javaScriptIndexEnabled</key>
 						<false/>
 						<key>javaScriptUsedToIndex</key>
-						<string>const pageTitle = $("title").text(); dashDoc.addEntry({name:
-								pageTitle, type: "Guide"}); $("h1").each(function() { const
-								entryName = $(this).text(); var entryHash = $(this).attr('id');
-								if(!entryHash) { entryHash = entryName.replace(/\W/g, '');
-								$(this).attr('id', entryHash); } dashDoc.addEntry({name: entryName,
-								type: "Section", hash: entryHash}); });</string>
+						<string>const pageTitle = $("title").text();
+dashDoc.addEntry({name: pageTitle, type: "Guide"});
+
+$("h1").each(function() {
+    const entryName = $(this).text();
+    var entryHash = $(this).attr('id');
+    if(!entryHash)
+    {
+        entryHash = entryName.replace(/\W/g, '');
+        $(this).attr('id', entryHash);
+    }
+    dashDoc.addEntry({name: entryName, type: "Section", hash: entryHash});
+});</string>
 						<key>localFolderPath</key>
 						<string></string>
 						<key>websiteURL</key>
-						<string>https://eigen.tuxfamily.org/</string>
+						<string>https://libeigen.gitlab.io/eigen/docs-nightly/</string>
 					</dict>
 					<key>name</key>
 					<string>Eigen</string>
@@ -135,7 +144,7 @@ $("h1").each(function() {
 			<key>ruff</key>
 			<dict>
 				<key>date</key>
-				<date>2025-12-15T07:49:46Z</date>
+				<date>2025-12-16T15:10:55Z</date>
 				<key>entry</key>
 				<dict>
 					<key>docsetGeneratorSettings</key>
@@ -3677,6 +3686,20 @@ $("h1").each(function() {
 					<string>https://faker.readthedocs.io/en/master/</string>
 				</dict>
 			</dict>
+			<key>https://fastapi.tiangolo.com/</key>
+			<dict>
+				<key>date</key>
+				<date>2025-12-16T15:18:28Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>FastAPI</string>
+					<key>platform</key>
+					<string>Other</string>
+					<key>uniqueIdentifier</key>
+					<string>https://fastapi.tiangolo.com/</string>
+				</dict>
+			</dict>
 			<key>https://geopandas.org/en/stable/</key>
 			<dict>
 				<key>date</key>
@@ -5918,7 +5941,7 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Docset Generator/Doxygen/Doxygen.docset</key>
 			<string>d</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/Eigen/Eigen.docset</key>
-			<string>e</string>
+			<string>ei</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/JuMPjl/JuMP.jl.docset</key>
 			<string>mpj</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/NLTK/NLTK.docset</key>
@@ -5952,6 +5975,8 @@ $("h1").each(function() {
 			<string>dw</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Faker/Faker.docset</key>
 			<string>fk</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/FastAPI/FastAPI.docset</key>
+			<string>fa</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/GeoPandas/GeoPandas.docset</key>
 			<string>gpd</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Gymnasium/Gymnasium.docset</key>
