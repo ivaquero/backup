@@ -1,10 +1,6 @@
-ipykernel
+conda-tree
 langchain-chroma
 langchain-community
 langchain-ollama
-langchain-openai
-langchain-postgres
-loguru
-pygame
 pypdf
 streamlit

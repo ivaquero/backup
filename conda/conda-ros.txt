@@ -1,2 +1,6 @@
+catkin_tools
 colcon-common-extensions
-ros-humble-desktop
+compilers
+ninja
+ros-kilted-desktop
+rosdep
