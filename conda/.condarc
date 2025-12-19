@@ -1,7 +1,7 @@
 # channel
 channels:
   - conda-forge
-  - robostack-humble
+  - robostack-kilted
 # custom_channels:
 #   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 
@@ -19,7 +19,7 @@ ssl_verify: true
 auto_update_conda: true
 channel_priority: strict
 pip_interop_enabled: true
-pinned_packages: [chromadb=1, bambi=0.16]
+pinned_packages: [chromadb=1, bambi=0.16, colcon-core=0.20]
 disallow:
   - anaconda
 add_pip_as_python_dependency: false

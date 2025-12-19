@@ -3,4 +3,9 @@ colcon-common-extensions
 compilers
 ninja
 ros-kilted-desktop
+ros-kilted-joint-state-publisher
+ros-kilted-ros-gz-bridge
+ros-kilted-tf-transformations
+ros-kilted-xacro
 rosdep
+transforms3d
