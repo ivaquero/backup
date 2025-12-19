@@ -1,6 +1,7 @@
 adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
+astral-sh.ty
 bradlc.vscode-tailwindcss
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz

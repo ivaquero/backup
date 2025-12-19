@@ -139,19 +139,16 @@
   "notebook.variablesView": true,
   // python
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit",
       "source.organizeImports": "explicit"
     }
   },
+  "python.languageServer": "None",
   "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
   // jupyter
-  "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
-  "jupyter.interactiveWindow.textEditor.executeSelection": true,
-  "jupyter.interactiveWindow.textEditor.magicCommandsAsComments": true,
   "jupyter.pythonExportMethod": "nbconvert",
   // bookmarks
   "bookmarks.saveBookmarksInProject": true,

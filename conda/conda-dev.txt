@@ -1,4 +1,3 @@
-conda-tree
 langchain-chroma
 langchain-community
 langchain-ollama
