@@ -2,10 +2,10 @@ catkin_tools
 colcon-common-extensions
 compilers
 ninja
-ros-kilted-desktop
-ros-kilted-joint-state-publisher
-ros-kilted-ros-gz-bridge
-ros-kilted-tf-transformations
-ros-kilted-xacro
+ros-jazzy-desktop
+ros-jazzy-ros-gz-bridge
+ros-jazzy-ros-gz-sim
+ros-jazzy-tf-transformations
+ros-jazzy-xacro
 rosdep
 transforms3d

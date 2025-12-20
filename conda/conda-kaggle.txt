@@ -1,10 +1,8 @@
 fastexcel
-ipykernel
-onnxruntime
+mne
+monai
 openpyxl
 python-graphviz
-scikit-image
-scikit-learn
 streamlit
 torchinfo
 torchvision
