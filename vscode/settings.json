@@ -160,16 +160,6 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "livePreview.notifyOnOpenLooseFile": false,
-  // toml
-  "[toml]": {
-    "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "never"
-    }
-  },
-  "evenBetterToml.formatter.alignComments": true,
-  "evenBetterToml.formatter.allowedBlankLines": 1,
-  "evenBetterToml.formatter.indentEntries": true,
   // ui & preview
   "hediet.vscode-drawio.offline": true,
   // cpp

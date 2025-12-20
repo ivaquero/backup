@@ -15,6 +15,7 @@ golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop
 mads-hartmann.bash-ide-vscode
+mermaidchart.vscode-mermaid-chart
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
@@ -27,7 +28,6 @@ ms-vscode.remote-explorer
 myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
-pomdtr.markdown-kroki
 qcz.text-power-tools
 ranch-hand-robotics.rde-ros-2
 redhat.vscode-xml

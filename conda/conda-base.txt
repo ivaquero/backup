@@ -9,6 +9,5 @@ plotnine
 polars
 preliz
 pymoo
-scikit-learn
 sympy
 xlsxwriter
