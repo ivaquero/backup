@@ -2,12 +2,12 @@ bambi
 conda-tree
 cvxpy
 fastexcel
-ipykernel
 marimo
 openpyxl
 plotnine
 polars
 preliz
 pymoo
+pyzmq
 sympy
 xlsxwriter

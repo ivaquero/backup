@@ -11,10 +11,13 @@ codeium.codeium
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
+github.copilot
+github.copilot-chat
 golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop
 mads-hartmann.bash-ide-vscode
+marimo-team.vscode-marimo
 mermaidchart.vscode-mermaid-chart
 ms-python.python
 ms-toolsai.jupyter
