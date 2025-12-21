@@ -1,56 +1,15 @@
 {
   "loginMethod": "scan",
-  "cookies": [
-    {
-      "name": "wr_fp",
-      "value": "1742480083"
-    },
-    {
-      "name": "wr_ql",
-      "value": "0"
-    },
-    {
-      "name": "wr_localvid",
-      "value": "f59322507245d67bf59dc91"
-    },
-    {
-      "name": "wr_name",
-      "value": "嗯哼"
-    },
-    {
-      "name": "wr_avatar",
-      "value": "https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erDcWFOFyTicPlTx4xYzWfmLUu96icIzM4lKCTk24aAVGWt7IykOIOrWSmgwzmxiaJ0VZDCg3Ub69xVA/132"
-    },
-    {
-      "name": "wr_gender",
-      "value": "1"
-    },
-    {
-      "name": "wr_gid",
-      "value": "219166810"
-    },
-    {
-      "name": "wr_skey",
-      "value": "DW1iw_Z3"
-    },
-    {
-      "name": "wr_vid",
-      "value": "38131323"
-    },
-    {
-      "name": "wr_rt",
-      "value": "web@TTYdgVdYkNXTGBpw0p3_AL"
-    }
-  ],
+  "cookies": [],
   "noteLocation": "public",
   "dailyNotesLocation": "/",
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1763868347601,
-  "isCookieValid": true,
-  "user": "嗯哼",
-  "userVid": "38131323",
+  "lastCookieTime": 1766307052273,
+  "isCookieValid": false,
+  "user": "",
+  "userVid": "",
   "template": "# {{metaData.title}}\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{{ highlight.markText |trim }} \n{% endfor %}{% endfor %}",
   "noteCountLimit": 3,
   "subFolderType": "category",
