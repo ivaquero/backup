@@ -119,6 +119,7 @@
   "markdown.extension.toc.levels": "2..4",
   "rumdl.rules.disable": [
     "MD013",
+    "MD029",
     "MD033"
   ],
   // notebook
@@ -172,8 +173,8 @@
   // yaml
   "redhat.telemetry.enabled": false,
   // pandoc
-  "pandoc.pdfOptString": "--pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
-  "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1",
+  "pandoc.pdfOptString": "--pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\" --filter pandoc-mermaid-selenium-filter",
+  "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1 --filter pandoc-mermaid-selenium-filter",
   // shell
   "shellcheck.exclude": [
     "SC1017",
@@ -268,4 +269,8 @@
       ]
     }
   ],
+  "github.copilot.enable": {
+    "*": false,
+    "python": true,
+  },
 }
