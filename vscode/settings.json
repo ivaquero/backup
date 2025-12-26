@@ -46,7 +46,6 @@
   "explorer.sortOrder": "type",
   // files
   "files.associations": {
-    "*.clangd": "yaml",
     "*.condarc": "yaml",
     "*.h": "cpp",
     "*.vimrc": "viml",

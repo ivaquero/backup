@@ -1,9 +1,7 @@
-fastexcel
 mne
 monai
 openpyxl
 python-graphviz
-streamlit
 torchinfo
 torchvision
 ultralytics

@@ -44,6 +44,7 @@ brew "mas"
 brew "maven"
 brew "mbedtls"
 brew "micromamba"
+brew "monolith"
 brew "mysql"
 brew "ollama", restart_service: :changed
 brew "onefetch"
