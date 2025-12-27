@@ -1,4 +1,3 @@
-bambi
 conda-tree
 cvxpy
 fastexcel
@@ -7,6 +6,7 @@ openpyxl
 plotnine
 polars
 preliz
+pymc
 pymoo
 pyzmq
 sympy
