@@ -4665,6 +4665,8 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/DocSets/Spring_Framework/Spring
 					Framework.docset</key>
 			<string>s</string>
+			<key>~/Library/Application Support/Dash/DocSets/Spring_Framework/Spring Framework.docset</key>
+			<string>s</string>
 			<key>~/Library/Application Support/Dash/DocSets/TypeScript/TypeScript.docset</key>
 			<string>ts</string>
 			<key>~/Library/Application Support/Dash/DocSets/VueJS/VueJS_(Composition).docset</key>
@@ -4685,6 +4687,8 @@ $("h1").each(function() {
 			<string>tt</string>
 			<key>~/Library/Application Support/Dash/Docset Generator/typst/typst.docset</key>
 			<string>t:</string>
+			<key>~/Library/Application Support/Dash/Docset Generator/vuemini/vue-mini.docset</key>
+			<string>vm:</string>
 			<key>~/Library/Application Support/Dash/Go DocSets/github.com spf13
 					cobra/GoDoc.docset</key>
 			<string>godoc</string>
@@ -4759,6 +4763,8 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO
 					Docs/Ultralytics YOLO Docs.docset</key>
 			<string>y</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/Ultralytics YOLO Docs/Ultralytics YOLO Docs.docset</key>
+			<string>y</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/VegaAltair/Vega-Altair.docset</key>
 			<string>at</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/Wagtail Documentation/Wagtail
@@ -4815,6 +4821,8 @@ $("h1").each(function() {
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels
 					0.14.6.docset</key>
+			<string>sm</string>
+			<key>~/Library/Application Support/Dash/Python DocSets/statsmodels 0143/statsmodels 0.14.6.docset</key>
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/Python DocSets/xarray/xarray.docset</key>
 			<string>xr</string>
@@ -4973,6 +4981,8 @@ $("h1").each(function() {
 			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn
 					1.7.docset</key>
 			<string>sk</string>
+			<key>~/Library/Application Support/Dash/User Contributed/scikitlearn/scikit-learn 1.7.docset</key>
+			<string>sk</string>
 			<key>~/Library/Application Support/Dash/User Contributed/seaborn/seaborn
 					0.11.0.docset</key>
 			<string>s</string>
@@ -4986,6 +4996,8 @@ $("h1").each(function() {
 			<string>sm</string>
 			<key>~/Library/Application Support/Dash/User Contributed/torchtext/torchtext.docset</key>
 			<string>tt</string>
+			<key>~/Library/Application Support/Dash/User Contributed/torchvision/torchvision.docset</key>
+			<string>tv</string>
 			<key>~/Library/Application Support/Dash/User Contributed/xarray/xarray.docset</key>
 			<string>xr</string>
 			<key>~/Library/Application Support/Dash/Versioned DocSets/Qt for Python PySide
