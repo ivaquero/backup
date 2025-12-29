@@ -1,6 +1,8 @@
+cvxpy
 mne
 monai
 openpyxl
+plotnine
 python-graphviz
 torchinfo
 torchvision
