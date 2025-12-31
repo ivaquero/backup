@@ -1,5 +1,6 @@
 jupytext
 kaggle
+pandoc-mermaid-selenium-filter
 pdf2ppt-converter
 pdf2zh-next
 touying

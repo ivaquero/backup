@@ -3,7 +3,7 @@ mne
 monai
 openpyxl
 plotnine
-python-graphviz
+quantstats
 torchinfo
 torchvision
 ultralytics
