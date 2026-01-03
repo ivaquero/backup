@@ -1,9 +1,14 @@
 cvxpy
-mne
+ipykernel
 monai
+nbformat
 openpyxl
+plotly
 plotnine
 quantstats
+scikit-image
+scikit-learn
+simpleitk
 torchinfo
 torchvision
 ultralytics
