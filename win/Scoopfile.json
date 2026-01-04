@@ -47,8 +47,8 @@
             "Info": "",
             "Source": "main",
             "Name": "bottom",
-            "Version": "0.12.2",
-            "Updated": "\/Date(1766908998169)\/"
+            "Version": "0.12.3",
+            "Updated": "\/Date(1767498178028)\/"
         },
         {
             "Info": "",
@@ -75,8 +75,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
-            "Version": "1.7.7",
-            "Updated": "\/Date(1766726611354)\/"
+            "Version": "1.7.8",
+            "Updated": "\/Date(1766978126296)\/"
         },
         {
             "Info": "",
@@ -100,11 +100,11 @@
             "Updated": "\/Date(1763014429739)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "curl",
-            "Version": "8.16.0_6",
-            "Updated": "\/Date(1760930044521)\/"
+            "Version": "8.17.0_6",
+            "Updated": "\/Date(1766978168396)\/"
         },
         {
             "Info": "",
@@ -187,8 +187,8 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "fresh-editor",
-            "Version": "0.1.65",
-            "Updated": "\/Date(1766914474686)\/"
+            "Version": "0.1.69",
+            "Updated": "\/Date(1767498221721)\/"
         },
         {
             "Info": "",
@@ -255,10 +255,10 @@
         },
         {
             "Info": "",
-            "Source": "extras",
-            "Name": "handbrake",
+            "Source": "main",
+            "Name": "handbrake-cli",
             "Version": "1.10.2",
-            "Updated": "\/Date(1764574023606)\/"
+            "Updated": "\/Date(1767498334503)\/"
         },
         {
             "Info": "",
@@ -292,8 +292,8 @@
             "Info": "",
             "Source": "main",
             "Name": "imagemagick",
-            "Version": "7.1.2-11",
-            "Updated": "\/Date(1766121235972)\/"
+            "Version": "7.1.2-12",
+            "Updated": "\/Date(1766977802771)\/"
         },
         {
             "Info": "",
@@ -327,8 +327,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "lazygit",
-            "Version": "0.57.0",
-            "Updated": "\/Date(1765192813410)\/"
+            "Version": "0.58.0",
+            "Updated": "\/Date(1767498248939)\/"
         },
         {
             "Info": "",
@@ -383,8 +383,15 @@
             "Info": "",
             "Source": "main",
             "Name": "miktex",
-            "Version": "24.1",
-            "Updated": "\/Date(1762845403521)\/"
+            "Version": "25.12",
+            "Updated": "\/Date(1767498477856)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "mise",
+            "Version": "2025.12.13",
+            "Updated": "\/Date(1767498294283)\/"
         },
         {
             "Info": "",
@@ -485,11 +492,11 @@
             "Updated": "\/Date(1761187200348)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "qq-nt",
-            "Version": "9.9.21.250904",
-            "Updated": "\/Date(1762480655446)\/"
+            "Version": "9.9.25.251203",
+            "Updated": "\/Date(1766977795788)\/"
         },
         {
             "Info": "",
@@ -507,10 +514,10 @@
         },
         {
             "Info": "",
-            "Source": "extras-plus",
+            "Source": "extras",
             "Name": "rectanglewin",
             "Version": "0.2.1",
-            "Updated": "\/Date(1750475586349)\/"
+            "Updated": "\/Date(1766978383302)\/"
         },
         {
             "Info": "",
@@ -593,8 +600,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "shotcut",
-            "Version": "25.10.31",
-            "Updated": "\/Date(1762232439201)\/"
+            "Version": "25.12.31",
+            "Updated": "\/Date(1767498869252)\/"
         },
         {
             "Info": "",
@@ -614,8 +621,8 @@
             "Info": "",
             "Source": "main",
             "Name": "starship",
-            "Version": "1.24.1",
-            "Updated": "\/Date(1763371434185)\/"
+            "Version": "1.24.2",
+            "Updated": "\/Date(1767498916300)\/"
         },
         {
             "Info": "",
@@ -632,11 +639,11 @@
             "Updated": "\/Date(1727595020884)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "teamviewer",
-            "Version": "15.72.3",
-            "Updated": "\/Date(1766121505385)\/"
+            "Version": "15.73.5",
+            "Updated": "\/Date(1767503652651)\/"
         },
         {
             "Info": "",
@@ -663,8 +670,8 @@
             "Info": "",
             "Source": "main",
             "Name": "tinymist",
-            "Version": "0.14.4",
-            "Updated": "\/Date(1764155346618)\/"
+            "Version": "0.14.6",
+            "Updated": "\/Date(1767499020733)\/"
         },
         {
             "Info": "",
@@ -674,11 +681,11 @@
             "Updated": "\/Date(1759913446139)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "tor-browser",
-            "Version": "15.0.1",
-            "Updated": "\/Date(1763616563138)\/"
+            "Version": "15.0.3",
+            "Updated": "\/Date(1766977764138)\/"
         },
         {
             "Info": "",
@@ -698,8 +705,8 @@
             "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.9.18",
-            "Updated": "\/Date(1766125386572)\/"
+            "Version": "0.9.21",
+            "Updated": "\/Date(1767499043555)\/"
         },
         {
             "Info": "",
@@ -739,6 +746,20 @@
         {
             "Info": "",
             "Source": "extras-cn",
+            "Name": "wechatdevtools",
+            "Version": "2.01.2510260",
+            "Updated": "\/Date(1767498444496)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "wecom",
+            "Version": "5.0.3.6005",
+            "Updated": "\/Date(1767499280117)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras-cn",
             "Name": "wegame",
             "Version": "6.1.2.9172",
             "Updated": "\/Date(1765194397071)\/"
@@ -758,11 +779,11 @@
             "Updated": "\/Date(1766121511200)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "wireshark",
-            "Version": "4.6.1",
-            "Updated": "\/Date(1764927442516)\/"
+            "Version": "4.6.2",
+            "Updated": "\/Date(1767503667993)\/"
         },
         {
             "Info": "",
@@ -789,8 +810,8 @@
             "Info": "",
             "Source": "main",
             "Name": "yazi",
-            "Version": "25.5.31",
-            "Updated": "\/Date(1749049981513)\/"
+            "Version": "25.12.29",
+            "Updated": "\/Date(1766988181904)\/"
         },
         {
             "Info": "",
@@ -798,13 +819,6 @@
             "Name": "yt-dlp",
             "Version": "2025.12.08",
             "Updated": "\/Date(1765192960062)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "zeal",
-            "Version": "0.7.2",
-            "Updated": "\/Date(1727748035665)\/"
         },
         {
             "Info": "",
@@ -833,9 +847,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1766910756000)\/",
+                "value": "\/Date(1767501486000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年12月28日 16:32:36"
+                "DateTime": "2026年1月4日 12:38:06"
             },
             "Manifests": 1412
         },
@@ -843,19 +857,19 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1766910596000)\/",
+                "value": "\/Date(1767501548000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年12月28日 16:29:56"
+                "DateTime": "2026年1月4日 12:39:08"
             },
-            "Manifests": 2240
+            "Manifests": 2238
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1765791550000)\/",
+                "value": "\/Date(1767326727000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年12月15日 17:39:10"
+                "DateTime": "2026年1月2日 12:05:27"
             },
             "Manifests": 367
         },
@@ -873,19 +887,19 @@
             "Name": "extras-cn",
             "Source": "https://github.com/ivaquero/scoopet",
             "Updated": {
-                "value": "\/Date(1766889604000)\/",
+                "value": "\/Date(1767445401000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年12月28日 10:40:04"
+                "DateTime": "2026年1月3日 21:03:21"
             },
-            "Manifests": 82
+            "Manifests": 81
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/scoopforge/extras-plus",
             "Updated": {
-                "value": "\/Date(1766910058000)\/",
+                "value": "\/Date(1767320920000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年12月28日 16:20:58"
+                "DateTime": "2026年1月2日 10:28:40"
             },
             "Manifests": 46
         },
@@ -893,11 +907,11 @@
             "Name": "main-plus",
             "Source": "https://github.com/scoopforge/main-plus",
             "Updated": {
-                "value": "\/Date(1766914415000)\/",
+                "value": "\/Date(1767406953000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2025年12月28日 17:33:35"
+                "DateTime": "2026年1月3日 10:22:33"
             },
-            "Manifests": 31
+            "Manifests": 30
         }
     ]
 }
