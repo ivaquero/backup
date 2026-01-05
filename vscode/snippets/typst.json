@@ -136,9 +136,9 @@
   "col": {
     "prefix": "col",
     "body": [
-      "#block(height: 16em, [",
+      "#[",
       "  #set text(size: 18pt)",
-      "])",
+      "]",
       ""
     ],
     "description": ""
