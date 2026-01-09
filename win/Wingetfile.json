@@ -1,6 +1,6 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-01-09T18:11:57.769-00:00",
+	"CreationDate": "2026-01-09T19:18:03.500-00:00",
 	"Sources": [
 		{
 			"Packages": [
@@ -21,9 +21,6 @@
 				},
 				{
 					"PackageIdentifier": "Apple.Bonjour"
-				},
-				{
-					"PackageIdentifier": "Giorgiotani.Peazip"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2008.x64"
@@ -69,9 +66,6 @@
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2012.x64"
-				},
-				{
-					"PackageIdentifier": "Baidu.BaiduNetdisk"
 				},
 				{
 					"PackageIdentifier": "Microsoft.AppInstaller"
