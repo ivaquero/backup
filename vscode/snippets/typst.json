@@ -793,5 +793,19 @@
       "]"
     ],
     "description": ""
+  },
+  "zap": {
+    "prefix": "zap",
+    "body": [
+      "#figure(",
+      "  zap.circuit({",
+      "    import zap: *",
+      "",
+      "    isource(\"i\", (0, 0), (5, 0))",
+      "  }),",
+      "  caption: \"\",",
+      ")"
+    ],
+    "description": ""
   }
 }
