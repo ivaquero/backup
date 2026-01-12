@@ -84,8 +84,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
-            "Version": "1.7.12",
-            "Updated": "\/Date(1767950449945)\/"
+            "Version": "1.7.13",
+            "Updated": "\/Date(1768202978398)\/"
         },
         {
             "Info": "",
@@ -161,8 +161,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fastfetch",
-            "Version": "2.56.1",
-            "Updated": "\/Date(1766120724889)\/"
+            "Version": "2.57.0",
+            "Updated": "\/Date(1768202995463)\/"
         },
         {
             "Info": "",
@@ -196,8 +196,8 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "fresh-editor",
-            "Version": "0.1.75",
-            "Updated": "\/Date(1767950592844)\/"
+            "Version": "0.1.76",
+            "Updated": "\/Date(1768203077572)\/"
         },
         {
             "Info": "",
@@ -397,13 +397,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "monolith",
-            "Version": "2.10.1",
-            "Updated": "\/Date(1766728053730)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras-cn",
             "Name": "msys2-cn",
             "Version": "2025-12-13",
@@ -511,8 +504,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "readest",
-            "Version": "0.9.96",
-            "Updated": "\/Date(1766120664695)\/"
+            "Version": "0.9.97",
+            "Updated": "\/Date(1768203230314)\/"
         },
         {
             "Info": "",
@@ -623,8 +616,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
-            "Version": "2.1.5",
-            "Updated": "\/Date(1766121471567)\/"
+            "Version": "2.2.0",
+            "Updated": "\/Date(1768203947007)\/"
         },
         {
             "Info": "",
@@ -693,8 +686,8 @@
             "Info": "",
             "Source": "main",
             "Name": "typstyle",
-            "Version": "0.14.0",
-            "Updated": "\/Date(1761805642051)\/"
+            "Version": "0.14.4",
+            "Updated": "\/Date(1768202852082)\/"
         },
         {
             "Info": "Held package",
@@ -791,8 +784,8 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "witr",
-            "Version": "0.2.1",
-            "Updated": "\/Date(1767957244226)\/"
+            "Version": "0.2.3",
+            "Updated": "\/Date(1768202851187)\/"
         },
         {
             "Info": "",
@@ -856,29 +849,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1767952925000)\/",
+                "value": "\/Date(1768192775000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年1月9日 18:02:05"
+                "DateTime": "2026年1月12日 12:39:35"
             },
-            "Manifests": 1414
+            "Manifests": 1416
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1767947439000)\/",
+                "value": "\/Date(1768192817000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年1月9日 16:30:39"
+                "DateTime": "2026年1月12日 12:40:17"
             },
-            "Manifests": 2241
+            "Manifests": 2252
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1767326727000)\/",
+                "value": "\/Date(1767984006000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年1月2日 12:05:27"
+                "DateTime": "2026年1月10日 2:40:06"
             },
             "Manifests": 367
         },
@@ -896,31 +889,31 @@
             "Name": "extras-cn",
             "Source": "https://github.com/ivaquero/scoopet",
             "Updated": {
-                "value": "\/Date(1767877940000)\/",
+                "value": "\/Date(1768050220000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年1月8日 21:12:20"
+                "DateTime": "2026年1月10日 21:03:40"
             },
-            "Manifests": 81
+            "Manifests": 82
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/scoopforge/extras-plus",
             "Updated": {
-                "value": "\/Date(1767951504000)\/",
+                "value": "\/Date(1768136519000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年1月9日 17:38:24"
+                "DateTime": "2026年1月11日 21:01:59"
             },
-            "Manifests": 46
+            "Manifests": 42
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/scoopforge/main-plus",
             "Updated": {
-                "value": "\/Date(1767925761000)\/",
+                "value": "\/Date(1768185407000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年1月9日 10:29:21"
+                "DateTime": "2026年1月12日 10:36:47"
             },
-            "Manifests": 31
+            "Manifests": 30
         }
     ]
 }
