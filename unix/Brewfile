@@ -47,7 +47,6 @@ brew "maven"
 brew "pkgconf"
 brew "micromamba"
 brew "mise"
-brew "monolith"
 brew "mysql"
 brew "ollama", restart_service: :changed
 brew "onefetch"

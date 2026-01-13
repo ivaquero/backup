@@ -1,13 +1,14 @@
 cvxpy
+imbalanced-learn
 ipykernel
 monai
 nbformat
 openpyxl
 plotly
 plotnine
+pycirclize
 quantstats
 scikit-image
-scikit-learn
 simpleitk
 torchinfo
 torchvision
