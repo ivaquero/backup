@@ -209,7 +209,7 @@
       "    read(\"data\", encoding: none),",
       "    parse-table-style: false,",
       "    parse-stroke: false,",
-      "    stroke: frame(rgb(\"000\")),",
+      "    stroke: table-three-line(rgb(\"000\")),",
       "  ),",
       "  caption: \"\",",
       ")"
