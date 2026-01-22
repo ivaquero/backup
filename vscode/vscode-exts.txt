@@ -2,7 +2,6 @@ adachishingo.open-with
 alefragnani.bookmarks
 almahdi.code-django
 astral-sh.ty
-bradlc.vscode-tailwindcss
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
@@ -11,8 +10,6 @@ codeium.codeium
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
-github.copilot
-github.copilot-chat
 golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop
@@ -23,7 +20,6 @@ ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
-ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.powershell
@@ -32,7 +28,6 @@ myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
 qcz.text-power-tools
-ranch-hand-robotics.rde-ros-2
 redhat.vscode-xml
 redhat.vscode-yaml
 rust-lang.rust-analyzer
@@ -41,7 +36,6 @@ tamasfe.even-better-toml
 timonwong.shellcheck
 tomjs.vscode-snippets-manager
 tyngw.interactive-markdown-table-editor
-ultralytics.ultralytics-snippets
 usernamehw.errorlens
 vue.volar
 yzhang.markdown-all-in-one
