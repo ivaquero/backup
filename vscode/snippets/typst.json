@@ -185,7 +185,7 @@
       "  ),",
       "  columns: (200pt,) * 2,",
       "  gutter: 2pt,",
-      "  caption: \"\"",
+      "  caption: none",
       ")"
     ],
     "description": ""

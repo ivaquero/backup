@@ -27,11 +27,11 @@
     },
     {
       "name": "wr_gid",
-      "value": "232482326"
+      "value": "268884332"
     },
     {
       "name": "wr_skey",
-      "value": "36wRgGH1"
+      "value": "FEiuKQox"
     },
     {
       "name": "wr_vid",
@@ -39,7 +39,7 @@
     },
     {
       "name": "wr_rt",
-      "value": "web@O0BzwRc~WB0kfH4UQl~_AL"
+      "value": "web@XSazLfuFImc~wcOpbm3_AL"
     }
   ],
   "noteLocation": "public",
@@ -47,7 +47,7 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1766578998655,
+  "lastCookieTime": 1768698021256,
   "isCookieValid": true,
   "user": "嗯哼",
   "userVid": "38131323",

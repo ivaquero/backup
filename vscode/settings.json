@@ -268,8 +268,4 @@
       ]
     }
   ],
-  "github.copilot.enable": {
-    "*": false,
-    "python": true,
-  },
 }
