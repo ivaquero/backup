@@ -1,96 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "liter-chinese",
-      "path": "summary/liter-chinese.md"
-    },
-    {
-      "basename": "教学-文献检索",
-      "path": "articles/教学-文献检索.pdf"
-    },
-    {
-      "basename": "C-CMake",
-      "path": "articles/C-CMake.pdf"
-    },
-    {
-      "basename": "面试-中电科",
-      "path": "logs/面试-中电科.md"
-    },
-    {
-      "basename": "面试-郑航",
-      "path": "logs/面试-郑航.md"
-    },
-    {
-      "basename": "东亚-朝鲜",
-      "path": "public/东亚-朝鲜.md"
-    },
-    {
-      "basename": "C-01-基础回顾",
-      "path": "articles/C-01-基础回顾.pdf"
-    },
-    {
-      "basename": "东亚-韩国",
-      "path": "articles/东亚-韩国.pdf"
-    },
-    {
-      "basename": "bylun",
-      "path": "images/education/bylun.png"
-    },
-    {
-      "basename": "doi",
-      "path": "images/education/doi.png"
-    },
-    {
-      "basename": "aed",
-      "path": "images/aed.png"
-    },
-    {
-      "basename": "eugene",
-      "path": "images/education/eugene.png"
-    },
-    {
-      "basename": "sorting",
-      "path": "images/sorting.mp4"
-    },
-    {
-      "basename": "photo",
-      "path": "resumes/photo.png"
-    },
-    {
-      "basename": "photo-yy",
-      "path": "resumes/photo-yy.jpg"
-    },
-    {
-      "basename": "Resume-Yang-Xinbin",
-      "path": "resumes/Resume-Yang-Xinbin.pdf"
-    },
-    {
-      "basename": "杨鑫斌-数据",
-      "path": "resumes/杨鑫斌-数据.pdf"
-    },
-    {
-      "basename": "简历-杨鑫斌-数据",
-      "path": "resumes/简历-杨鑫斌-数据.pdf"
-    },
-    {
-      "basename": "andreyvkh",
-      "path": "drafts/andreyvkh.md"
-    },
-    {
       "basename": "教学-学习观",
       "path": "drafts/教学-学习观.md"
     },
     {
-      "basename": "面试-英文",
-      "path": "drafts/面试-英文.md"
+      "basename": "面试-生物方向",
+      "path": "drafts/面试-生物方向.md"
     },
     {
       "basename": "知乎-河南农大",
       "path": "drafts/知乎-河南农大.md"
     },
     {
-      "basename": "面试-生物方向",
-      "path": "drafts/面试-生物方向.md"
+      "basename": "andreyvkh",
+      "path": "drafts/andreyvkh.md"
+    },
+    {
+      "basename": "面试-英文",
+      "path": "drafts/面试-英文.md"
     }
   ],
   "omittedPaths": [],
