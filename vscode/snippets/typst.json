@@ -276,15 +276,23 @@
   "blk-def": {
     "prefix": "def",
     "body": [
-      "#definition[",
+      "#[",
+      "  #set text(size: 18pt)",
+      "  #definition[",
+      "",
+      "  ]",
       "]"
     ],
     "description": ""
   },
   "blk-theo": {
-    "prefix": "btheo",
+    "prefix": "theo",
     "body": [
-      "#theorem[",
+      "#[",
+      "  #set text(size: 18pt)",
+      "  #theorem[",
+      "",
+      "  ]",
       "]"
     ],
     "description": ""
@@ -292,32 +300,48 @@
   "blk-coro": {
     "prefix": "bcoro",
     "body": [
-      "#corollary[",
+      "#[",
+      "  #set text(size: 18pt)",
+      "  #corollary[",
+      "",
+      "  ]",
+      "]",
+      ""
+    ],
+    "description": ""
+  },
+  "blk-tip": {
+    "prefix": "tip",
+    "body": [
+      "#[",
+      "  #set text(size: 18pt)",
+      "  #tip[",
+      "",
+      "  ]",
       "]"
     ],
     "description": ""
   },
-  "blk-tp": {
-    "prefix": "btp",
+  "blk-algo": {
+    "prefix": "algo",
     "body": [
-      "#tip[",
-      "]"
-    ],
-    "description": ""
-  },
-  "blk-alg": {
-    "prefix": "balg",
-    "body": [
-      "#algo[",
+      "#[",
+      "  #set text(size: 18pt)",
+      "  #algo[",
+      "",
+      "  ]",
       "]"
     ],
     "description": ""
   },
   "blk-rule": {
-    "prefix": "brl",
+    "prefix": "rule",
     "body": [
-      "#rule()[",
+      "#[",
+      "  #set text(size: 18pt)",
+      "  #rule()[",
       "",
+      "  ]",
       "]"
     ],
     "description": ""
@@ -714,7 +738,7 @@
     ],
     "description": ""
   },
-  "dnorm": {
+  "distr-norm": {
     "prefix": "dnorm",
     "body": [
       "N(μ, σ^2)"
@@ -805,6 +829,13 @@
       "  }),",
       "  caption: \"\",",
       ")"
+    ],
+    "description": ""
+  },
+  "enum-start": {
+    "prefix": "ens",
+    "body": [
+      "#set enum(start: 2)"
     ],
     "description": ""
   }
