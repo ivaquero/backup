@@ -147,7 +147,6 @@
     "prefix": "cols",
     "body": [
       "#block(height: 18em, columns()[",
-      "  #set text(size: 18pt)",
       "",
       "])",
       ""
