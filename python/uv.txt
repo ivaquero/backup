@@ -4,4 +4,6 @@ label-studio
 pandoc-mermaid-selenium-filter
 pdf2ppt-converter
 pdf2zh-next
+ruff
 touying
+ty
