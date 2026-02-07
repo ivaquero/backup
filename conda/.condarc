@@ -19,7 +19,7 @@ ssl_verify: true
 auto_update_conda: true
 channel_priority: strict
 pip_interop_enabled: true
-pinned_packages: []
+pinned_packages: [colcon-core>=0.20, libopenblas>=0.3.31, clang>=21]
 disallow:
   - anaconda
 add_pip_as_python_dependency: false
