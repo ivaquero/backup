@@ -30,7 +30,6 @@ pkief.material-icon-theme
 qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
-rust-lang.rust-analyzer
 rvben.rumdl
 timonwong.shellcheck
 tombi-toml.tombi
