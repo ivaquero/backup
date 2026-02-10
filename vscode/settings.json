@@ -74,7 +74,6 @@
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
     "*.md": "default",
-    "*.drawio.png": "hediet.vscode-drawio",
     "*.csv": "default",
     "*.plist": "default"
   },

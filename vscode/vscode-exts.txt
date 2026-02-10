@@ -11,7 +11,6 @@ czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
 golang.go
-hediet.vscode-drawio
 james-yu.latex-workshop
 mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo

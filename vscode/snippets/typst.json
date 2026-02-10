@@ -837,5 +837,16 @@
       "#set enum(start: 2)"
     ],
     "description": ""
+  },
+  "shadow": {
+    "prefix": "shd",
+    "body": [
+      "#shadow(fill: rgb(90, 85, 100, 80%), blur: 8pt)[",
+      "    #block(fill: white, inset: 8pt)[",
+      "",
+      "    ]",
+      "  ]"
+    ],
+    "description": ""
   }
 }
