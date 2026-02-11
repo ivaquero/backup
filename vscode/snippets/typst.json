@@ -138,8 +138,8 @@
     "body": [
       "#[",
       "  #set text(size: 18pt)",
-      "]",
-      ""
+      "",
+      "]"
     ],
     "description": ""
   },
@@ -313,7 +313,7 @@
     "prefix": "tip",
     "body": [
       "#[",
-      "  #set text(size: 18pt)",
+      "  #set text(size: 16pt)",
       "  #tip[",
       "",
       "  ]",
