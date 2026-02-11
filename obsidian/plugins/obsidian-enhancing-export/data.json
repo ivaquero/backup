@@ -56,5 +56,8 @@
   "openExportedFile": true,
   "env": {},
   "showExportProgressBar": true,
+  "lastExportDirectory": {
+    "darwin": "/Users/integzz/Documents"
+  },
   "lastExportType": "Word (.docx)"
 }
