@@ -15,6 +15,7 @@
   },
   // security
   "security.workspace.trust.untrustedFiles": "open",
+  "security.promptForLocalFileProtocolHandling": false,
   // search
   "search.followSymlinks": false,
   "search.searchEditor.singleClickBehaviour": "peekDefinition",
@@ -149,6 +150,9 @@
   // jupyter
   "jupyter.exportWithOutputEnabled": true,
   "jupyter.pythonExportMethod": "nbconvert",
+  // marimo
+  "marimo.disableUvIntegration": true,
+  "marimo.disableManagedLanguageFeatures": true,
   // bookmarks
   "bookmarks.saveBookmarksInProject": true,
   "bookmarks.sideBar.expanded": true,

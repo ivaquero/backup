@@ -1,0 +1,32 @@
+{
+    "language": "zh",
+    "configVersion": null,
+    "customFonts": [],
+    "libraries": "general;uml;er;flowchart;basic",
+    "customLibraries": [
+        "L.scratchpad"
+    ],
+    "plugins": [],
+    "recentColors": [],
+    "formatWidth": "240",
+    "createTarget": false,
+    "pageFormat": {
+        "x": 0,
+        "y": 0,
+        "width": 850,
+        "height": 1100
+    },
+    "autosave": false,
+    "darkGridColor": "#424242",
+    "darkMode": "auto",
+    "gridColor": "#d0d0d0",
+    "isRulerOn": false,
+    "mathematicalTypesetting": true,
+    "openCounter": 23,
+    "resizeImages": null,
+    "search": true,
+    "showStartScreen": false,
+    "ui": "",
+    "unit": 1,
+    "version": 18
+}
