@@ -6,10 +6,9 @@ nbformat
 openpyxl
 plotly
 plotnine
-pycirclize
-quantstats
 scikit-image
 simpleitk
 torchinfo
 torchvision
 ultralytics
+yfinance

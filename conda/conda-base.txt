@@ -1,13 +1,10 @@
 conda-tree
 cvxpy
-fastexcel
 marimo
 openpyxl
 plotnine
-polars
 preliz
 pymc
 pymoo
 pyzmq
 sympy
-xlsxwriter

@@ -148,6 +148,7 @@
   "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
   // jupyter
+  "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
   "jupyter.pythonExportMethod": "nbconvert",
   // marimo
