@@ -192,7 +192,7 @@
   "read-csv": {
     "prefix": "rcsv",
     "body": [
-      "#let data = csv(\"data\")",
+      "#let data = csv(\"data$1\")",
       "#figure(",
       "  tableq(data, 4),",
       "  caption: none,",
@@ -205,7 +205,7 @@
     "body": [
       "#figure(",
       "  xlsx-parser(",
-      "    read(\"data\", encoding: none),",
+      "    read(\"data$1\", encoding: none),",
       "    parse-table-style: false,",
       "    parse-stroke: false,",
       "    stroke: table-three-line(rgb(\"000\")),",
@@ -219,7 +219,7 @@
     "prefix": "rimg",
     "body": [
       "#figure(",
-      "  image(\"images\", height: 80%),",
+      "  image(\"images$1\", height: 80%),",
       "  caption: none,",
       ")",
       ""
@@ -229,31 +229,40 @@
   "raw-py": {
     "prefix": "rpy",
     "body": [
-      "#let code1 = read(\"python\")",
-      "#code(code1)"
+      "#let codepy = read(\"python$1.py\")",
+      "#code(codepy)"
     ],
     "description": ""
   },
   "raw-jl": {
     "prefix": "rjl",
     "body": [
-      "#let code1 = read(\"julia\")",
-      "#code(code1, lang: \"julia\")"
+      "#let codejl = read(\"julia$1.jl\")",
+      "#code(codejl, lang: \"julia\")"
     ],
     "description": ""
   },
   "raw-cpp": {
     "prefix": "rcpp",
     "body": [
-      "#let code1 = read(\"code\")",
-      "#code(code1, lang: \"c++\")",
+      "#let codecpp = read(\"code$1.cpp\")",
+      "#code(codecpp, lang: \"c++\")",
       ""
     ]
   },
-  "lm": {
-    "prefix": "lm",
+  "math-inline": {
+    "prefix": "mn",
     "body": [
-      "$$"
+      "$$1$"
+    ],
+    "description": ""
+  },
+  "math-block": {
+    "prefix": "mm",
+    "body": [
+      "$",
+      "$1",
+      "$"
     ],
     "description": ""
   },
@@ -265,20 +274,13 @@
       "```"
     ]
   },
-  "blk-math": {
-    "prefix": "bm",
-    "body": [
-      "$  $"
-    ],
-    "description": ""
-  },
   "blk-def": {
     "prefix": "def",
     "body": [
       "#[",
       "  #set text(size: 18pt)",
       "  #definition[",
-      "",
+      "$1",
       "  ]",
       "]"
     ],
@@ -290,7 +292,7 @@
       "#[",
       "  #set text(size: 18pt)",
       "  #theorem[",
-      "",
+      "$1",
       "  ]",
       "]"
     ],
@@ -302,7 +304,7 @@
       "#[",
       "  #set text(size: 18pt)",
       "  #corollary[",
-      "",
+      "$1",
       "  ]",
       "]",
       ""
@@ -315,7 +317,7 @@
       "#[",
       "  #set text(size: 16pt)",
       "  #tip[",
-      "",
+      "$1",
       "  ]",
       "]"
     ],
@@ -327,7 +329,7 @@
       "#[",
       "  #set text(size: 18pt)",
       "  #algo[",
-      "",
+      "$1",
       "  ]",
       "]"
     ],
@@ -339,7 +341,7 @@
       "#[",
       "  #set text(size: 18pt)",
       "  #rule()[",
-      "",
+      "$1",
       "  ]",
       "]"
     ],
@@ -660,77 +662,49 @@
     ],
     "description": ""
   },
-  "sum-i0n": {
-    "prefix": "si0n",
+  "sum-0n": {
+    "prefix": "sm0n",
     "body": [
-      "∑_(i=0)^(i=N)"
+      "sum_(i=0)^(i=N)"
     ],
     "description": ""
   },
-  "sum-i1n": {
-    "prefix": "si1n",
+  "sum-1n": {
+    "prefix": "sm1n",
     "body": [
-      "∑_(i=1)^(i=N)"
+      "sum_(i=1)^(i=N)"
     ],
     "description": ""
   },
-  "sum-k0n": {
-    "prefix": "sk0n",
+  "prod-0n": {
+    "prefix": "pd0n",
     "body": [
-      "∑_(k=0)^(k=N)"
+      "product_(i=0)^(i=N)"
     ],
     "description": ""
   },
-  "sum-k1n": {
-    "prefix": "sk1n",
+  "prod-1n": {
+    "prefix": "pd1n",
     "body": [
-      "∑_(k=1)^(k=N)"
-    ],
-    "description": ""
-  },
-  "prod-i0n": {
-    "prefix": "pi0n",
-    "body": [
-      "∏_(i=0)^(i=N)"
-    ],
-    "description": ""
-  },
-  "prod-i1n": {
-    "prefix": "pi1n",
-    "body": [
-      "∏_(i=1)^(i=N)"
-    ],
-    "description": ""
-  },
-  "prod-k0n": {
-    "prefix": "pk0n",
-    "body": [
-      "∏_(k=0)^(k=N)"
-    ],
-    "description": ""
-  },
-  "prod-k1n": {
-    "prefix": "pk1n",
-    "body": [
-      "∏_(k=1)^(k=N)"
+      "product_(i=1)^(i=N)"
     ],
     "description": ""
   },
   "op-rk": {
-    "prefix": "oprk",
+    "prefix": "rank",
     "body": [
-      "op(\"rank\")()"
+      "op(\"rank\")($1)"
     ],
     "description": ""
   },
   "op-var": {
-    "prefix": "opvar",
+    "prefix": "var",
     "body": [
-      "op(\"Var\")(X)"
+      "op(\"Var\")($1)"
     ],
     "description": ""
   },
-  "r2r": {
+  "proj-r2r": {
     "prefix": "r2r",
     "body": [
       "ℝ → ℝ"
@@ -782,17 +756,10 @@
   "bib": {
     "prefix": "bib",
     "body": [
-      "#bibliography(\"data/works.bib\", title: \"\")",
+      "#bibliography(\"data/works.bib\", title: \"$1\")",
       ""
     ],
     "description": ""
-  },
-  "ce": {
-    "prefix": "ce",
-    "body": [
-      "#ce()",
-      ""
-    ]
   },
   "text-size": {
     "prefix": "txsz",
@@ -811,13 +778,18 @@
   "heading-none": {
     "prefix": "hno",
     "body": [
-      "#[",
-      "  #set heading(numbering: none)",
-      "]"
+      "#set heading(numbering: none)"
     ],
     "description": ""
   },
-  "zap": {
+  "enum-start": {
+    "prefix": "ens",
+    "body": [
+      "#set enum(start: 2)"
+    ],
+    "description": ""
+  },
+  "draw-zap": {
     "prefix": "zap",
     "body": [
       "#figure(",
@@ -831,21 +803,23 @@
     ],
     "description": ""
   },
-  "enum-start": {
-    "prefix": "ens",
-    "body": [
-      "#set enum(start: 2)"
-    ],
-    "description": ""
-  },
   "shadow": {
     "prefix": "shd",
     "body": [
       "#shadow(fill: rgb(90, 85, 100, 80%), blur: 8pt)[",
       "    #block(fill: white, inset: 8pt)[",
-      "",
+      "$1",
       "    ]",
       "  ]"
+    ],
+    "description": ""
+  },
+  "center": {
+    "prefix": "center",
+    "body": [
+      "#align(center, no-codly[",
+      "",
+      "])"
     ],
     "description": ""
   }

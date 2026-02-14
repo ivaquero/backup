@@ -1,29 +1,25 @@
-# channel
 channels:
   - conda-forge
   - robostack-jazzy
 # custom_channels:
 #   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 
-# path
 envs_dirs:
   - ~/.conda/envs
 pkgs_dirs:
   - ~/.conda/pkgs
 
-# network
-remote_max_retries: 1
 ssl_verify: true
 
 # solver
-auto_update_conda: true
 channel_priority: strict
+auto_update_conda: true
+add_pip_as_python_dependency: false
+use_pip: false
 pip_interop_enabled: true
 pinned_packages: [colcon-core>=0.20, libopenblas>=0.3.31, clang>=21]
 disallow:
   - anaconda
-add_pip_as_python_dependency: false
-use_pip: false
 
 # package
 rollback_enabled: true
@@ -32,4 +28,3 @@ safety_checks: enabled
 
 # output
 show_channel_urls: true
-report_errors: false

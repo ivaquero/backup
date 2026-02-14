@@ -147,6 +147,14 @@
   "python.languageServer": "None",
   "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
+  "ty.configuration": {
+    "rules": {
+      "missing-argument": "ignore",
+      "no-matching-overload": "ignore",
+      "possibly-missing-attribute": "ignore",
+      "unresolved-attribute": "ignore"
+    }
+  },
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
@@ -164,8 +172,6 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "livePreview.notifyOnOpenLooseFile": false,
-  // ui & preview
-  "hediet.vscode-drawio.offline": true,
   // cpp
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.default.cppStandard": "c++20",
@@ -214,12 +220,6 @@
       "filename": "${tag}_${id}_${snake_case_name}.${ext}"
     }
   },
-  // powershell
-  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
-  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
-  "powershell.codeFormatting.useConstantStrings": true,
-  "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true,
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
@@ -271,5 +271,10 @@
         "xelatex"
       ]
     }
-  ],
+  ], // powershell
+  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
+  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
+  "powershell.codeFormatting.useConstantStrings": true,
+  "powershell.codeFormatting.useCorrectCasing": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true
 }
