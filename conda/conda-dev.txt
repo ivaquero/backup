@@ -1,6 +1,7 @@
 langchain-chroma
 langchain-community
 langchain-ollama
+marimo
 pygame
 pypdf
-streamlit
+pyzmq

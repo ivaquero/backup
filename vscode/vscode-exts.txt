@@ -35,6 +35,5 @@ timonwong.shellcheck
 tombi-toml.tombi
 tomjs.vscode-snippets-manager
 tyngw.interactive-markdown-table-editor
-usernamehw.errorlens
 vue.volar
 yzhang.markdown-all-in-one
