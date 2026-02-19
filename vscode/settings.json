@@ -182,8 +182,8 @@
   // yaml
   "redhat.telemetry.enabled": false,
   // pandoc
-  "pandoc.pdfOptString": "--pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\" --filter pandoc-mermaid-selenium-filter",
-  "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1 --filter pandoc-mermaid-selenium-filter",
+  "pandoc.pdfOptString": "--pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
+  "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1",
   // shell
   "shellcheck.exclude": [
     "SC1017",
@@ -276,5 +276,6 @@
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true
+  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  "chat.mcp.gallery.enabled": true
 }
