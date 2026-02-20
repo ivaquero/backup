@@ -3,6 +3,4 @@ kaggle
 label-studio
 pdf2ppt-converter
 pdf2zh-next
-ruff
 touying
-ty
