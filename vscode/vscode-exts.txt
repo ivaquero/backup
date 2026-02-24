@@ -10,6 +10,8 @@ codeium.codeium
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
+github.vscode-github-actions
+github.vscode-pull-request-github
 golang.go
 james-yu.latex-workshop
 mads-hartmann.bash-ide-vscode
@@ -20,6 +22,7 @@ ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
 ms-vscode.cmake-tools
+ms-vscode.cpp-devtools
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.powershell
@@ -28,6 +31,7 @@ myriad-dreamin.tinymist
 oxc.oxc-vscode
 pkief.material-icon-theme
 qcz.text-power-tools
+qwenlm.qwen-code-vscode-ide-companion
 redhat.vscode-xml
 redhat.vscode-yaml
 rvben.rumdl
