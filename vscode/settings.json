@@ -90,6 +90,7 @@
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
+  "githubPullRequests.defaultMergeMethod": "squash",
   // markdown
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
@@ -207,7 +208,7 @@
   "leetcode-problem-rating.hint.commandShortcut": false,
   "leetcode-problem-rating.hint.commentDescription": false,
   "leetcode-problem-rating.hint.configWebviewMarkdown": false,
-  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/algo",
+  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/lectures",
   "leetcode-problem-rating.editor.shortcuts": [
     "submit",
     "case",
