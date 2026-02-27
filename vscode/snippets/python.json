@@ -174,28 +174,28 @@
   "fig-12": {
     "prefix": "f12",
     "body": [
-      "_, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=True)"
+      "_, axes = plt.subplots(1, 2, figsize=(10, 4), constrained_layout=1)"
     ],
     "description": ""
   },
   "fig-21": {
     "prefix": "f21",
     "body": [
-      "_, axes = plt.subplots(2, 1, figsize=(10, 8), constrained_layout=True)"
+      "_, axes = plt.subplots(2, 1, figsize=(10, 8), constrained_layout=1)"
     ],
     "description": ""
   },
   "fig-31": {
     "prefix": "f31",
     "body": [
-      "_, axes = plt.subplots(3, 1, figsize=(10, 8), constrained_layout=True)"
+      "_, axes = plt.subplots(3, 1, figsize=(10, 8), constrained_layout=1)"
     ],
     "description": ""
   },
   "fig-13": {
     "prefix": "f13",
     "body": [
-      "_, axes = plt.subplots(1, 3, figsize=(10, 6), constrained_layout=True)"
+      "_, axes = plt.subplots(1, 3, figsize=(10, 6), constrained_layout=1)"
     ],
     "description": ""
   },
@@ -209,7 +209,7 @@
   "fig-22": {
     "prefix": "f22",
     "body": [
-      "_, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=True)"
+      "_, axes = plt.subplots(2, 2, figsize=(10, 6), constrained_layout=1)"
     ],
     "description": ""
   },
