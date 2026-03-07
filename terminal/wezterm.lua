@@ -53,7 +53,7 @@ else
 
 		local right_top_pane = left_top_pane:split({
 			direction = "Right",
-			size = 0.50,
+			size = 0.60,
 		})
 
 		local left_bottom_pane = left_top_pane:split({
@@ -61,8 +61,8 @@ else
 			size = 0.60,
 		})
 
-		left_top_pane:send_text("b\n")
-		left_bottom_pane:send_text("\nz backup\nc\nb\n")
+		left_top_pane:send_text("d\n")
+		left_bottom_pane:send_text("b\n")
 		right_top_pane:send_text("k\n")
 		window:gui_window():maximize()
 	end)
