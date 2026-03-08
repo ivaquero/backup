@@ -1,5 +1,2 @@
-code
-corepack
-mailsy
 n8n
 npm

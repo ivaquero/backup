@@ -2,5 +2,6 @@ langchain-chroma
 langchain-community
 langchain-ollama
 marimo
+nbformat
 pypdf
 pyzmq

@@ -53,12 +53,12 @@ else
 
 		local right_top_pane = left_top_pane:split({
 			direction = "Right",
-			size = 0.80,
+			size = 0.70,
 		})
 
 		local left_bottom_pane = left_top_pane:split({
 			direction = "Bottom",
-			size = 0.60,
+			size = 0.55,
 		})
 
 		left_top_pane:send_text("d\n")
