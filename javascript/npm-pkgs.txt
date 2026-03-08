@@ -1,1 +1,8 @@
+mcp
+code
+summarize
+clawhub
+mcp
+mailsy
 npm
+openclaw
