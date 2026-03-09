@@ -63,7 +63,6 @@ else
 
 		left_top_pane:send_text("d\n")
 		left_bottom_pane:send_text("b\n")
-		right_top_pane:send_text("k\n")
 		window:gui_window():maximize()
 	end)
 end

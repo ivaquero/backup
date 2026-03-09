@@ -1,6 +1,5 @@
 adachishingo.open-with
 alefragnani.bookmarks
-almahdi.code-django
 astral-sh.ty
 ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
@@ -17,6 +16,7 @@ james-yu.latex-workshop
 mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo
 mermaidchart.vscode-mermaid-chart
+monosans.djlint
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers

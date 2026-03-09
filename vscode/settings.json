@@ -119,6 +119,7 @@
   "markdown.extension.toc.levels": "2..4",
   "rumdl.rules.disable": [
     "MD013",
+    "MD025",
     "MD029",
     "MD033"
   ],
@@ -163,6 +164,11 @@
   // marimo
   "marimo.disableUvIntegration": true,
   "marimo.disableManagedLanguageFeatures": true,
+  "[html]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  },
+  "djlint.formatCss": true,
+  "djlint.formatJs": true,
   // bookmarks
   "bookmarks.saveBookmarksInProject": true,
   "bookmarks.sideBar.expanded": true,
