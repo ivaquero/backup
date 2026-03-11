@@ -29,7 +29,6 @@
   "editor.suggest.shareSuggestSelections": true,
   "editor.tabCompletion": "on",
   "editor.unicodeHighlight.ambiguousCharacters": false,
-  "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.wordWrap": "on",
   "editor.quickSuggestions": {
@@ -284,5 +283,5 @@
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": true,
-  "chat.mcp.gallery.enabled": true
+  "chat.mcp.gallery.enabled": true,
 }
