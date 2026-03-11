@@ -1,7 +1,6 @@
 conda-tree
-ipykernel
+marimo
+nbformat
 openpyxl
 plotnine
-preliz
-pymc
-sympy
+pyzmq
