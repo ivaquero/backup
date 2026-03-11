@@ -1,6 +1,5 @@
 mcp
 code
-summarize
 clawhub
 mcp
 mailsy
