@@ -6,6 +6,7 @@ nbformat
 openpyxl
 plotly
 plotnine
+pymoo
 scikit-image
 shapely
 simpleitk

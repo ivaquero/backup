@@ -1,10 +1,7 @@
 conda-tree
-cvxpy
-marimo
+ipykernel
 openpyxl
 plotnine
 preliz
 pymc
-pymoo
-pyzmq
 sympy
