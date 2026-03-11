@@ -1,9 +1,12 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-03-07T13:55:23.661-00:00",
+	"CreationDate": "2026-03-12T04:44:21.126-00:00",
 	"Sources": [
 		{
 			"Packages": [
+				{
+					"PackageIdentifier": "ClashVergeRev.ClashVergeRev"
+				},
 				{
 					"PackageIdentifier": "Git.Git"
 				},
@@ -38,13 +41,13 @@
 					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
 				},
 				{
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.10"
+				},
+				{
 					"PackageIdentifier": "Microsoft.VCRedist.2012.x86"
 				},
 				{
 					"PackageIdentifier": "Microsoft.Edge"
-				},
-				{
-					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2005.x86"
@@ -59,10 +62,10 @@
 					"PackageIdentifier": "Microsoft.VCRedist.2013.x86"
 				},
 				{
-					"PackageIdentifier": "Microsoft.VCRedist.2010.x86"
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
-					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.10"
+					"PackageIdentifier": "Microsoft.VCRedist.2010.x86"
 				},
 				{
 					"PackageIdentifier": "Microsoft.WindowsSDK.10.0.26100"
