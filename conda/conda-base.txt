@@ -1,10 +1,6 @@
 conda-tree
-cvxpy
 marimo
+nbformat
 openpyxl
 plotnine
-preliz
-pymc
-pymoo
 pyzmq
-sympy

@@ -12,6 +12,7 @@ foam.foam-vscode
 github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
+google.colab
 james-yu.latex-workshop
 mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo

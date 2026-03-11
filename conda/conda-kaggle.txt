@@ -6,7 +6,9 @@ nbformat
 openpyxl
 plotly
 plotnine
-scikit-image
+preliz
+pymc
+pymoo
 shapely
 simpleitk
 torchinfo

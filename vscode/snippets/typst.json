@@ -775,13 +775,6 @@
     ],
     "description": ""
   },
-  "heading-none": {
-    "prefix": "hno",
-    "body": [
-      "#set heading(numbering: none)"
-    ],
-    "description": ""
-  },
   "enum-start": {
     "prefix": "ens",
     "body": [
