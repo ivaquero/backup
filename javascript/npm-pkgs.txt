@@ -1,7 +1,5 @@
-mcp
-code
-clawhub
-mcp
+@drawio/mcp
+@qwen-code/qwen-code
+firecrawl-mcp
 mailsy
 npm
-openclaw

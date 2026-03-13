@@ -12,14 +12,14 @@ pkgs_dirs:
 ssl_verify: true
 
 # solver
-channel_priority: strict
 auto_update_conda: true
-add_pip_as_python_dependency: false
-use_pip: false
+channel_priority: strict
 pip_interop_enabled: true
-pinned_packages: [colcon-core>=0.20, libopenblas>=0.3.31, clang>=21]
+pinned_packages: [colcon-core>=0.20, chromadb>=1]
 disallow:
   - anaconda
+add_pip_as_python_dependency: false
+use_pip: false
 
 # package
 rollback_enabled: true
