@@ -70,15 +70,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "cc-switch",
-            "Version": "3.12.1",
-            "Updated": "\/Date(1773260837503)\/"
+            "Version": "3.12.2",
+            "Updated": "\/Date(1773478323142)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
-            "Version": "1.7.24",
-            "Updated": "\/Date(1772727810654)\/"
+            "Version": "1.7.25",
+            "Updated": "\/Date(1773479329909)\/"
         },
         {
             "Info": "",
@@ -98,8 +98,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "cryptomator",
-            "Version": "1.19.0",
-            "Updated": "\/Date(1773061674692)\/"
+            "Version": "1.19.1",
+            "Updated": "\/Date(1773478823407)\/"
         },
         {
             "Info": "",
@@ -114,6 +114,13 @@
             "Name": "dark",
             "Version": "3.14.1",
             "Updated": "\/Date(1745071894972)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "deno",
+            "Version": "2.7.5",
+            "Updated": "\/Date(1773479189178)\/"
         },
         {
             "Info": "",
@@ -235,11 +242,11 @@
             "Updated": "\/Date(1772761071956)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "googlechrome",
             "Version": "146.0.7680.72",
-            "Updated": "\/Date(1773260944807)\/"
+            "Updated": "\/Date(1773477964692)\/"
         },
         {
             "Info": "",
@@ -327,13 +334,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "llmfit",
-            "Version": "0.6.6",
-            "Updated": "\/Date(1773192404725)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras",
             "Name": "localsend",
             "Version": "1.17.0",
@@ -375,11 +375,11 @@
             "Updated": "\/Date(1767498477856)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "mise",
             "Version": "2026.3.8",
-            "Updated": "\/Date(1773261901903)\/"
+            "Updated": "\/Date(1773477975325)\/"
         },
         {
             "Info": "",
@@ -411,13 +411,6 @@
         },
         {
             "Info": "",
-            "Source": "java",
-            "Name": "openjdk",
-            "Version": "25.0.2-10",
-            "Updated": "\/Date(1770545104429)\/"
-        },
-        {
-            "Info": "",
             "Source": "main",
             "Name": "ouch",
             "Version": "0.6.1",
@@ -441,8 +434,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "partition-assistant",
-            "Version": "10.7.0",
-            "Updated": "\/Date(1765199007660)\/"
+            "Version": "10.10.0",
+            "Updated": "\/Date(1773479948099)\/"
         },
         {
             "Info": "",
@@ -473,18 +466,18 @@
             "Updated": "\/Date(1761187200348)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "qq-nt",
-            "Version": "9.9.27.260205",
-            "Updated": "\/Date(1773239261844)\/"
+            "Version": "9.9.28.260311",
+            "Updated": "\/Date(1773481443104)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "qt-creator-cn",
-            "Version": "18.0.2",
-            "Updated": "\/Date(1772726051065)\/"
+            "Version": "19.0.0",
+            "Updated": "\/Date(1773481240549)\/"
         },
         {
             "Info": "",
@@ -581,8 +574,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
-            "Version": "2.7.0",
-            "Updated": "\/Date(1772859554647)\/"
+            "Version": "2.7.2",
+            "Updated": "\/Date(1773480521182)\/"
         },
         {
             "Info": "",
@@ -644,8 +637,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ty",
-            "Version": "0.0.21",
-            "Updated": "\/Date(1772857368450)\/"
+            "Version": "0.0.23",
+            "Updated": "\/Date(1773478396601)\/"
         },
         {
             "Info": "",
@@ -662,11 +655,11 @@
             "Updated": "\/Date(1768202852082)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "uv",
             "Version": "0.10.9",
-            "Updated": "\/Date(1773152228682)\/"
+            "Updated": "\/Date(1773477988593)\/"
         },
         {
             "Info": "",
@@ -676,11 +669,11 @@
             "Updated": "\/Date(1772726694411)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras-plus",
             "Name": "vibe",
             "Version": "3.0.18",
-            "Updated": "\/Date(1773152865088)\/"
+            "Updated": "\/Date(1773478019624)\/"
         },
         {
             "Info": "",
@@ -697,11 +690,11 @@
             "Updated": "\/Date(1773066757219)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "wechat",
             "Version": "4.1.7.59",
-            "Updated": "\/Date(1773261064656)\/"
+            "Updated": "\/Date(1773481690809)\/"
         },
         {
             "Info": "",
@@ -714,8 +707,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wecom",
-            "Version": "5.0.6.6028",
-            "Updated": "\/Date(1773151687466)\/"
+            "Version": "5.0.7.6005",
+            "Updated": "\/Date(1773481534173)\/"
         },
         {
             "Info": "",
@@ -739,11 +732,11 @@
             "Updated": "\/Date(1773261218094)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras-plus",
             "Name": "winhance",
             "Version": "26.03.06",
-            "Updated": "\/Date(1772858058126)\/"
+            "Updated": "\/Date(1773479795215)\/"
         },
         {
             "Info": "Held package",
@@ -774,11 +767,11 @@
             "Updated": "\/Date(1740488075630)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "xnviewmp",
             "Version": "1.10.3",
-            "Updated": "\/Date(1772725376179)\/"
+            "Updated": "\/Date(1773478007339)\/"
         },
         {
             "Info": "",
@@ -791,8 +784,8 @@
             "Info": "",
             "Source": "main",
             "Name": "yt-dlp",
-            "Version": "2026.03.03",
-            "Updated": "\/Date(1772725678515)\/"
+            "Version": "2026.03.13",
+            "Updated": "\/Date(1773478607509)\/"
         },
         {
             "Info": "",
@@ -821,21 +814,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1773261498000)\/",
+                "value": "\/Date(1773477141000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月12日 4:38:18"
+                "DateTime": "2026年3月14日 16:32:21"
             },
-            "Manifests": 1458
+            "Manifests": 1461
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1773261517000)\/",
+                "value": "\/Date(1773477046000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月12日 4:38:37"
+                "DateTime": "2026年3月14日 16:30:46"
             },
-            "Manifests": 2278
+            "Manifests": 2277
         },
         {
             "Name": "nerd-fonts",
@@ -861,9 +854,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/ivaquero/scoopet",
             "Updated": {
-                "value": "\/Date(1773236536000)\/",
+                "value": "\/Date(1773457856000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月11日 21:42:16"
+                "DateTime": "2026年3月14日 11:10:56"
             },
             "Manifests": 88
         },
@@ -871,9 +864,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/scoopforge/extras-plus",
             "Updated": {
-                "value": "\/Date(1773221747000)\/",
+                "value": "\/Date(1773457651000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月11日 17:35:47"
+                "DateTime": "2026年3月14日 11:07:31"
             },
             "Manifests": 44
         },
