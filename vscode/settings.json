@@ -164,10 +164,11 @@
   "marimo.disableUvIntegration": true,
   "marimo.disableManagedLanguageFeatures": true,
   "[html]": {
-    "editor.defaultFormatter": "monosans.djlint"
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "djlint.formatCss": true,
   "djlint.formatJs": true,
+  "djlint.showInstallError": false,
   // bookmarks
   "bookmarks.saveBookmarksInProject": true,
   "bookmarks.sideBar.expanded": true,
@@ -277,11 +278,11 @@
         "xelatex"
       ]
     }
-  ], // powershell
+  ],
+  // powershell
   "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true,
-  "chat.mcp.gallery.enabled": true,
+  "powershell.codeFormatting.whitespaceBetweenParameters": true
 }
