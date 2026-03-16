@@ -31,7 +31,7 @@
     },
     {
       "name": "wr_skey",
-      "value": "rRYwIRqo"
+      "value": "wd4KFEDQ"
     },
     {
       "name": "wr_vid",
@@ -47,7 +47,7 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1772188839836,
+  "lastCookieTime": 1773628676944,
   "isCookieValid": true,
   "user": "嗯哼",
   "userVid": "38131323",
@@ -58,7 +58,7 @@
   "removeParens": true,
   "removeParensWhitelist": "",
   "dailyNotesToggle": false,
-  "notesBlacklist": "",
+  "notesBlacklist": "CB_5jp7fZ7hV9JG6qU6omEqs4Pt,CB_54h8ff8g85CF6jD6kh673Eji",
   "showEmptyChapterTitleToggle": false,
   "convertTags": false,
   "saveArticleToggle": false,
@@ -68,5 +68,7 @@
     "serverUrl": "",
     "uuid": "",
     "password": ""
-  }
+  },
+  "cookieAutoRefreshToggle": false,
+  "cookieRefreshInterval": 12
 }
