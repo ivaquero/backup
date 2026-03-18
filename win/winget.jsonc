@@ -5,11 +5,10 @@
         "autoUpdateIntervalInMinutes": 60
     },
     "visual": {
-        "progressBar": "accent",
-        "anonymizeDisplayedPaths": true
+        "anonymizeDisplayedPaths": true,
+        "enableSixels": true
     },
     "installBehavior": {
-        "disableInstallNotes": false,
         "portablePackageMachineRoot": "C:/Program Files/Portables",
         "preferences": {
             "scope": "user",
@@ -19,8 +18,14 @@
             ],
             "architectures": [
                 "x64"
+            ],
+            "installerTypes": [
+                "zip",
+                "portable"
             ]
-        }
+        },
+        "archiveExtractionMethod": "tar",
+        "maxResumes": 3
     },
     "uninstallBehavior": {
         "purgePortablePackage": true
@@ -32,7 +37,7 @@
         "disable": true
     },
     "logging": {
-        "level": "warning"
+        "level": "error"
     },
     "network": {
         "downloader": "do",
@@ -46,6 +51,7 @@
         "experimentalARG": true,
         "experimentalCMD": true,
         "fonts": true,
-        "resume": true
+        "resume": true,
+        "sourcePriority": true
     }
 }
