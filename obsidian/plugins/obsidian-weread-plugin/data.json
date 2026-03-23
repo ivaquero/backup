@@ -51,6 +51,7 @@
   "isCookieValid": true,
   "user": "嗯哼",
   "userVid": "38131323",
+  "userAvatar": "",
   "template": "# {{metaData.title}}\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{{ highlight.markText |trim }} \n{% endfor %}{% endfor %}",
   "noteCountLimit": 3,
   "subFolderType": "category",
