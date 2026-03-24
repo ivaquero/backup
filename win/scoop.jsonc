@@ -1,6 +1,6 @@
 {
     "config": {
-        "aria2-enabled": true,
+        "aria2-enabled": false,
         "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
         "scoop_branch": "master"
     },
@@ -25,13 +25,6 @@
             "Name": "aria2",
             "Version": "1.37.0-1",
             "Updated": "\/Date(1749460230022)\/"
-        },
-        {
-            "Info": "Held package",
-            "Source": "extras-cn",
-            "Name": "baidunetdisk",
-            "Version": "8.2.7.101",
-            "Updated": "\/Date(1774068942721)\/"
         },
         {
             "Info": "",
@@ -170,8 +163,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fresh",
-            "Version": "0.2.17",
-            "Updated": "\/Date(1773903320734)\/"
+            "Version": "0.2.18",
+            "Updated": "\/Date(1774250259960)\/"
         },
         {
             "Info": "",
@@ -209,6 +202,13 @@
             "Updated": "\/Date(1773208841598)\/"
         },
         {
+            "Info": "Held package",
+            "Source": "extras",
+            "Name": "googlechrome",
+            "Version": "146.0.7680.154",
+            "Updated": "\/Date(1774340350906)\/"
+        },
+        {
             "Info": "",
             "Source": "extras",
             "Name": "gopeed",
@@ -226,8 +226,8 @@
             "Info": "",
             "Source": "main",
             "Name": "handbrake-cli",
-            "Version": "1.11.0",
-            "Updated": "\/Date(1773208974013)\/"
+            "Version": "1.11.1",
+            "Updated": "\/Date(1774250271952)\/"
         },
         {
             "Info": "",
@@ -247,8 +247,8 @@
             "Info": "",
             "Source": "main",
             "Name": "imagemagick",
-            "Version": "7.1.2-17",
-            "Updated": "\/Date(1773725050564)\/"
+            "Version": "7.1.2-18",
+            "Updated": "\/Date(1774250285869)\/"
         },
         {
             "Info": "",
@@ -261,8 +261,8 @@
             "Info": "",
             "Source": "main",
             "Name": "innounp",
-            "Version": "2.67.4",
-            "Updated": "\/Date(1773208522767)\/"
+            "Version": "2.67.5",
+            "Updated": "\/Date(1774340342996)\/"
         },
         {
             "Info": "",
@@ -314,18 +314,18 @@
             "Updated": "\/Date(1767589468102)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "mise",
             "Version": "2026.3.9",
-            "Updated": "\/Date(1773724873928)\/"
+            "Updated": "\/Date(1774154230055)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "msys2-cn",
-            "Version": "2025-12-13",
-            "Updated": "\/Date(1773222671329)\/"
+            "Version": "2026-03-22",
+            "Updated": "\/Date(1774340407599)\/"
         },
         {
             "Info": "",
@@ -422,8 +422,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "readest",
-            "Version": "0.9.101",
-            "Updated": "\/Date(1773207491945)\/"
+            "Version": "0.10.1",
+            "Updated": "\/Date(1774250307730)\/"
         },
         {
             "Info": "",
@@ -445,6 +445,13 @@
             "Name": "ripgrep",
             "Version": "15.1.0",
             "Updated": "\/Date(1765886362090)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "rune",
+            "Version": "1.1.0",
+            "Updated": "\/Date(1774252112854)\/"
         },
         {
             "Info": "",
@@ -566,11 +573,11 @@
             "Updated": "\/Date(1768805198001)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.10.11",
-            "Updated": "\/Date(1774010384599)\/"
+            "Version": "0.11.0",
+            "Updated": "\/Date(1774342450417)\/"
         },
         {
             "Info": "",
@@ -630,10 +637,10 @@
         },
         {
             "Info": "",
-            "Source": "main-plus",
+            "Source": "main",
             "Name": "witr",
-            "Version": "0.2.5",
-            "Updated": "\/Date(1768805488607)\/"
+            "Version": "0.3.1",
+            "Updated": "\/Date(1774342374591)\/"
         },
         {
             "Info": "",
@@ -690,21 +697,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
             "Updated": {
-                "value": "\/Date(1774068612000)\/",
+                "value": "\/Date(1774341363000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月21日 12:50:12"
+                "DateTime": "2026年3月24日 16:36:03"
             },
-            "Manifests": 1472
+            "Manifests": 1474
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1774068597000)\/",
+                "value": "\/Date(1774341688000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月21日 12:49:57"
+                "DateTime": "2026年3月24日 16:41:28"
             },
-            "Manifests": 2279
+            "Manifests": 2282
         },
         {
             "Name": "nerd-fonts",
@@ -730,9 +737,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-cn",
             "Updated": {
-                "value": "\/Date(1774062373000)\/",
+                "value": "\/Date(1774322295000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月21日 11:06:13"
+                "DateTime": "2026年3月24日 11:18:15"
             },
             "Manifests": 89
         },
@@ -740,9 +747,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1774061335000)\/",
+                "value": "\/Date(1774343384000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月21日 10:48:55"
+                "DateTime": "2026年3月24日 17:09:44"
             },
             "Manifests": 45
         },
@@ -750,9 +757,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1773890541000)\/",
+                "value": "\/Date(1774322108000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年3月19日 11:22:21"
+                "DateTime": "2026年3月24日 11:15:08"
             },
             "Manifests": 28
         }
