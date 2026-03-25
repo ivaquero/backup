@@ -1,4 +1,5 @@
 @drawio/mcp
+@jackwener/opencli
 @qwen-code/qwen-code
 firecrawl-mcp
 mailsy

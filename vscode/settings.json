@@ -92,7 +92,7 @@
   "githubPullRequests.defaultMergeMethod": "squash",
   // markdown
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.defaultFormatter": "rvben.rumdl",
     "editor.codeActionsOnSave": {
       "source.fixAll": "explicit"
     },
@@ -111,8 +111,6 @@
   "markdown.validate.duplicateLinkDefinitions.enabled": "warning",
   "markdown.validate.enabled": true,
   "markdown.extension.completion.enabled": true,
-  "markdown.extension.tableFormatter.delimiterRowNoPadding": true,
-  "markdown.extension.tableFormatter.normalizeIndentation": true,
   "markdown.extension.theming.decoration.renderLink": true,
   "markdown.extension.theming.decoration.renderParagraph": true,
   "markdown.extension.toc.levels": "2..4",
@@ -150,12 +148,15 @@
   "ruff.configuration": "pyproject.toml",
   "ty.configuration": {
     "rules": {
+      "invalid-method-override": "ignore",
       "missing-argument": "ignore",
       "no-matching-overload": "ignore",
       "possibly-missing-attribute": "ignore",
       "unresolved-attribute": "ignore"
     }
   },
+  "ty.inlayHints.callArgumentNames": false,
+  "ty.inlayHints.variableTypes": false,
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
@@ -189,8 +190,8 @@
   // yaml
   "redhat.telemetry.enabled": false,
   // pandoc
-  "pandoc.pdfOptString": "--pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
-  "pandoc.htmlOptString": "--to html5 --standalone --mathjax --shift-heading-level-by=-1",
+  "pandoc.pdfOptString": "-f gfm --pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V mainfont=\"Arial Unicode MS\" -V CJKmainfont=\"STFangsong\"",
+  "pandoc.htmlOptString": "-f gfm --standalone --mathjax --shift-heading-level-by=-1",
   // shell
   "shellcheck.exclude": [
     "SC1017",
@@ -284,5 +285,7 @@
   "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
   "powershell.codeFormatting.useConstantStrings": true,
   "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true
+  "powershell.codeFormatting.whitespaceBetweenParameters": true,
+  "powershell.promptToUpdatePowerShell": false,
+  "chat.mcp.gallery.enabled": true
 }
