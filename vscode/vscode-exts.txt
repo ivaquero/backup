@@ -22,7 +22,6 @@ ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
-ms-vscode.cmake-tools
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.powershell
@@ -41,5 +40,4 @@ tomjs.vscode-snippets-manager
 tyngw.interactive-markdown-table-editor
 vincent-templier.vscode-netron
 vue.volar
-wangqvq.easy-pytorch
 yzhang.markdown-all-in-one
