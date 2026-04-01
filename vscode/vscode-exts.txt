@@ -18,6 +18,7 @@ mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo
 mermaidchart.vscode-mermaid-chart
 monosans.djlint
+moonshot-ai.kimi-code
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
@@ -27,10 +28,10 @@ ms-vscode.live-server
 ms-vscode.powershell
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
+omarmujahid01.omars-comment-cleaner
 oxc.oxc-vscode
 pkief.material-icon-theme
 qcz.text-power-tools
-qwenlm.qwen-code-vscode-ide-companion
 redhat.vscode-xml
 redhat.vscode-yaml
 rvben.rumdl
