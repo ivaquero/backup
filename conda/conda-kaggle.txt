@@ -9,7 +9,6 @@ preliz
 pymc
 pymoo
 shapely
-simpleitk
 torchinfo
 torchvision
 ultralytics
