@@ -8,6 +8,7 @@ plotnine
 preliz
 pymc
 pymoo
+scikit-image
 shapely
 torchinfo
 torchvision
