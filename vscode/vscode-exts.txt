@@ -1,11 +1,9 @@
 adachishingo.open-with
 alefragnani.bookmarks
 astral-sh.ty
-ccagml.vscode-leetcode-problem-rating
 chanhx.crabviz
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
-codeium.codeium
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
@@ -31,6 +29,7 @@ ms-vscode.powershell
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
 omarmujahid01.omars-comment-cleaner
+openai.chatgpt
 oxc.oxc-vscode
 pkief.material-icon-theme
 qcz.text-power-tools

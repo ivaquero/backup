@@ -211,25 +211,6 @@
   "tinymist.formatterMode": "typstyle",
   "tinymist.lint.enabled": true,
   "tinymist.outputPath": "$root/articles/$name",
-  // leetcode
-  "leetcode-problem-rating.defaultLanguage": "cpp",
-  "leetcode-problem-rating.hideScore": "Score",
-  "leetcode-problem-rating.hint.commandShortcut": false,
-  "leetcode-problem-rating.hint.commentDescription": false,
-  "leetcode-problem-rating.hint.configWebviewMarkdown": false,
-  "leetcode-problem-rating.workspaceFolder": "${HOME}/Documents/GitHub/lectures",
-  "leetcode-problem-rating.editor.shortcuts": [
-    "submit",
-    "case",
-    "test",
-    "solution"
-  ],
-  "leetcode-problem-rating.filePath": {
-    "default": {
-      "folder": "${language}",
-      "filename": "${tag}_${id}_${snake_case_name}.${ext}"
-    }
-  },
   // latex
   "[latex]": {
     "editor.defaultFormatter": "James-Yu.latex-workshop"
