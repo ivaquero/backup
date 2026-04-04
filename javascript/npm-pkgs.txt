@@ -1,4 +1,3 @@
 @drawio/mcp
-@jackwener/opencli
 mailsy
 npm
