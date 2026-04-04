@@ -8,6 +8,7 @@
     "*": true,
     "ms-python.vscode-python-envs": false,
     "ms-python.vscode-pylance": false,
+    "ms-python.debugpy": false,
     "ms-toolsai.vscode-jupyter-slideshow": false,
     "ms-toolsai.vscode-jupyter-cell-tags": false,
     "ms-toolsai.jupyter-keymap": false,
@@ -288,5 +289,6 @@
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": true,
   "powershell.promptToUpdatePowerShell": false,
+  // others
   "chat.mcp.gallery.enabled": true
 }
