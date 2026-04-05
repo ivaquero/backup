@@ -1,9 +1,7 @@
 {
   "window.nativeTabs": true,
-  "window.newWindowDimensions": "inherit",
   "window.restoreWindows": "all",
   "extensions.autoUpdate": false,
-  "extensions.ignoreRecommendations": true,
   "extensions.allowed": {
     "*": true,
     "ms-python.vscode-python-envs": false,
@@ -14,13 +12,9 @@
     "ms-toolsai.jupyter-keymap": false,
     "ms-vscode-remote.remote-ssh-edit": false
   },
-  "debug.onTaskErrors": "debugAnyway",
   // security
   "security.workspace.trust.untrustedFiles": "open",
   "security.promptForLocalFileProtocolHandling": false,
-  // search
-  "search.followSymlinks": false,
-  "search.searchEditor.singleClickBehaviour": "peekDefinition",
   // editor
   "editor.fontSize": 18,
   "editor.formatOnSave": true,
@@ -73,6 +67,7 @@
   "workbench.colorTheme": "Visual Studio Light",
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.useModal": "off",
   "workbench.editor.wrapTabs": true,
   "workbench.editorAssociations": {
     "*.md": "default",
@@ -271,5 +266,6 @@
   "powershell.codeFormatting.whitespaceBetweenParameters": true,
   "powershell.promptToUpdatePowerShell": false,
   // others
-  "chat.mcp.gallery.enabled": true
+  "chat.mcp.gallery.enabled": true,
+  "trae.chatLanguage": "cn",
 }

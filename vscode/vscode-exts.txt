@@ -16,9 +16,9 @@ james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo
+marscode.marscode-extension
 mermaidchart.vscode-mermaid-chart
 monosans.djlint
-moonshot-ai.kimi-code
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
