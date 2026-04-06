@@ -61,8 +61,9 @@ else
 			size = 0.55,
 		})
 
-		left_top_pane:send_text("d\n")
-		left_bottom_pane:send_text("b\n")
+		left_top_pane:send_text("d\nz doc\nc\n")
+		right_top_pane:send_text("k\nz lect\nc\n")
+		left_bottom_pane:send_text("b\nz back\nc\n")
 		window:gui_window():maximize()
 	end)
 end

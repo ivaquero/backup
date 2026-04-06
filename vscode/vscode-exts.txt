@@ -36,7 +36,6 @@ qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
 rvben.rumdl
-timonwong.shellcheck
 tombi-toml.tombi
 tomjs.vscode-snippets-manager
 tyngw.interactive-markdown-table-editor

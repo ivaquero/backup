@@ -1,7 +1,4 @@
-catkin_tools
 colcon-common-extensions
-compilers
-ninja
 ros-jazzy-desktop
 ros-jazzy-ros-gz-bridge
 ros-jazzy-ros-gz-sim
