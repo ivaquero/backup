@@ -6,7 +6,6 @@ charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 czhang03.unicode-math-input
 evertjunior.mass-renamer
-fluxlabs.gsd-2
 foam.foam-vscode
 github.copilot-chat
 github.vscode-github-actions
