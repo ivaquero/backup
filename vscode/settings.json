@@ -145,18 +145,6 @@
   "python.languageServer": "None",
   "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
-  "ty.configuration": {
-    "rules": {
-      "invalid-argument-type": "ignore",
-      "invalid-method-override": "ignore",
-      "missing-argument": "ignore",
-      "no-matching-overload": "ignore",
-      "not-subscriptable": "ignore",
-      "possibly-missing-attribute": "ignore",
-      "unresolved-attribute": "ignore"
-    }
-  },
-  "ty.inlayHints.variableTypes": false,
   // jupyter
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,

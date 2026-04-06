@@ -1,6 +1,5 @@
 adachishingo.open-with
 alefragnani.bookmarks
-astral-sh.ty
 chanhx.crabviz
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
@@ -18,6 +17,7 @@ mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo
 marscode.marscode-extension
 mermaidchart.vscode-mermaid-chart
+meta.pyrefly
 monosans.djlint
 ms-python.python
 ms-toolsai.jupyter
