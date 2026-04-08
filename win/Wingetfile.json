@@ -1,6 +1,6 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-03-24T17:40:59.312-00:00",
+	"CreationDate": "2026-04-08T23:21:59.082-00:00",
 	"Sources": [
 		{
 			"Packages": [
@@ -44,6 +44,9 @@
 					"PackageIdentifier": "Baidu.BaiduNetdisk"
 				},
 				{
+					"PackageIdentifier": "Microsoft.VisualStudioCode"
+				},
+				{
 					"PackageIdentifier": "Microsoft.AppInstaller"
 				},
 				{
@@ -54,6 +57,15 @@
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCLibs.Desktop.14"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VCLibs.14"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.5"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.8"
 				}
 			],
 			"SourceDetails": {
