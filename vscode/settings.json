@@ -248,5 +248,6 @@
   "powershell.promptToUpdatePowerShell": false,
   // others
   "chat.mcp.gallery.enabled": true,
-  "trae.chatLanguage": "cn",
+  "chat.unifiedAgentsBar.enabled": true,
+  "trae.chatLanguage": "cn"
 }
