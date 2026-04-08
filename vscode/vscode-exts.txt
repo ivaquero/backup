@@ -3,6 +3,7 @@ alefragnani.bookmarks
 chanhx.crabviz
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
+codesmith.markdown-inline-editor-vscode
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
@@ -38,7 +39,5 @@ redhat.vscode-yaml
 rvben.rumdl
 tombi-toml.tombi
 tomjs.vscode-snippets-manager
-tyngw.interactive-markdown-table-editor
 vincent-templier.vscode-netron
-vue.volar
 yzhang.markdown-all-in-one
