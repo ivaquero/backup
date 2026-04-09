@@ -1,6 +1,6 @@
 channels:
   - conda-forge
-  - robostack-jazzy
+  # - robostack-jazzy
 # custom_channels:
 #   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 

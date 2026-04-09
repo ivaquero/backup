@@ -19,10 +19,13 @@
   "removeParensWhitelist": "",
   "dailyNotesToggle": false,
   "notesBlacklist": "CB_5jp7fZ7hV9JG6qU6omEqs4Pt,CB_54h8ff8g85CF6jD6kh673Eji",
+  "notesWhitelist": "",
+  "syncMode": "blacklist",
   "showEmptyChapterTitleToggle": false,
   "convertTags": false,
   "saveArticleToggle": false,
   "saveReadingInfoToggle": false,
+  "readingOpenMode": "TAB",
   "trimBlocks": false,
   "cookieCloudInfo": {
     "serverUrl": "",
