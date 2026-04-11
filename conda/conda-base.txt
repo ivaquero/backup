@@ -1,5 +1,0 @@
-conda-tree
-marimo
-nbformat
-openpyxl
-plotnine
