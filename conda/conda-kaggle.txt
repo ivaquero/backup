@@ -1,4 +1,5 @@
 cvxpy
+gymnasium
 imbalanced-learn
 ipykernel
 monai
