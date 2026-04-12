@@ -7,7 +7,6 @@ codesmith.markdown-inline-editor-vscode
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
-github.copilot-chat
 github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
@@ -17,6 +16,7 @@ kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
 marimo-team.vscode-marimo
 marscode.marscode-extension
+mathworks.language-matlab
 meta.pyrefly
 monosans.djlint
 ms-python.python
@@ -37,6 +37,5 @@ redhat.vscode-xml
 redhat.vscode-yaml
 rvben.rumdl
 tombi-toml.tombi
-tomjs.vscode-snippets-manager
 vincent-templier.vscode-netron
 yzhang.markdown-all-in-one
