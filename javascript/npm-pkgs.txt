@@ -1,3 +1,2 @@
 @drawio/mcp
-mailsy
 npm
