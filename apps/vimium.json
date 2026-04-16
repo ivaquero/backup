@@ -1,0 +1,27 @@
+{
+  "exclusionRules": [
+    {
+      "passKeys": "",
+      "pattern": "https?://mail.google.com/*"
+    },
+    {
+      "passKeys": "*",
+      "pattern": "https?://win11.blueedge.me/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.openvim.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://vscode.dev/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https?://www.tensortonic.com/*"
+    }
+  ],
+  "keyMappings": "",
+  "newTabDestination": "browserNewTabPage",
+  "settingsVersion": "2.4.2"
+}
