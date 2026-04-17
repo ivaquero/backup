@@ -153,22 +153,25 @@
   // marimo
   "marimo.disableUvIntegration": true,
   "marimo.disableManagedLanguageFeatures": true,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
   "djlint.formatCss": true,
   "djlint.formatJs": true,
   "djlint.showInstallError": false,
-  // bookmarks
-  "bookmarks.saveBookmarksInProject": true,
-  "bookmarks.sideBar.expanded": true,
-  "bookmarks.useWorkaroundForFormatters": true,
-  // front end & formatters
+  // frontend
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
   "emmet.showSuggestionsAsSnippets": true,
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "livePreview.notifyOnOpenLooseFile": false,
+  // bookmarks
+  "bookmarks.saveBookmarksInProject": true,
+  "bookmarks.sideBar.expanded": true,
+  "bookmarks.useWorkaroundForFormatters": true,
   // cpp
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.default.cppStandard": "c++20",
@@ -247,8 +250,9 @@
   "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.codeFormatting.whitespaceBetweenParameters": true,
   "powershell.promptToUpdatePowerShell": false,
-  // others
+  // ai
   "chat.mcp.gallery.enabled": true,
   "chat.unifiedAgentsBar.enabled": true,
-  "trae.chatLanguage": "cn"
+  "trae.chatLanguage": "cn",
+  "diffEditor.ignoreTrimWhitespace": false,
 }

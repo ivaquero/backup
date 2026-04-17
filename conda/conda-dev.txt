@@ -1,4 +1,4 @@
-langchain-chroma
+faiss
 langchain-community
 langchain-ollama
 pypdf
