@@ -377,11 +377,11 @@
             "Updated": "\/Date(1775965667561)\/"
         },
         {
-            "Info": "Install failed",
+            "Info": "",
             "Source": "extras",
             "Name": "ollama-full",
-            "Version": "0.20.2",
-            "Updated": "\/Date(1776427770518)\/"
+            "Version": "0.21.0",
+            "Updated": "\/Date(1776429566021)\/"
         },
         {
             "Info": "",
@@ -438,6 +438,13 @@
             "Name": "pot-desktop",
             "Version": "3.0.7",
             "Updated": "\/Date(1749536185825)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "psreadline",
+            "Version": "2.4.5",
+            "Updated": "\/Date(1776431541741)\/"
         },
         {
             "Info": "",
