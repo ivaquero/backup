@@ -1,6 +1,7 @@
 jupytext
 kaggle
 label-studio
+markitdown
 mineru
 nbconvert
 pdf2ppt-converter

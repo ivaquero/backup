@@ -11,6 +11,7 @@ pymc
 pymoo
 scikit-image
 shapely
+torchaudio
 torchinfo
 torchvision
 ultralytics
