@@ -24,7 +24,6 @@ ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
 ms-vscode.cpptools
 ms-vscode.live-server
-ms-vscode.powershell
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
 omarmujahid01.omars-comment-cleaner
