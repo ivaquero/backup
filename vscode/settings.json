@@ -197,7 +197,6 @@
   },
   "latex-workshop.bibtex-fields.sort.enabled": true,
   "latex-workshop.bibtex-format.sort.enabled": true,
-  "latex-workshop.formatting.latex": "tex-fmt",
   "latex-workshop.intellisense.unimathsymbols.enabled": true,
   "latex-workshop.intellisense.update.aggressive.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
