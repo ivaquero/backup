@@ -18,7 +18,6 @@ marimo-team.vscode-marimo
 marscode.marscode-extension
 mathworks.language-matlab
 meta.pyrefly
-monosans.djlint
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers

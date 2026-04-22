@@ -34,6 +34,7 @@
     "strings": true,
     "other": true
   },
+  "diffEditor.ignoreTrimWhitespace": false,
   // explorer
   "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
@@ -153,17 +154,11 @@
   // marimo
   "marimo.disableUvIntegration": true,
   "marimo.disableManagedLanguageFeatures": true,
-  "djlint.formatCss": true,
-  "djlint.formatJs": true,
-  "djlint.showInstallError": false,
   // frontend
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
+  "emmet.showSuggestionsAsSnippets": true,
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
-  "emmet.showSuggestionsAsSnippets": true,
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
@@ -252,6 +247,4 @@
   // ai
   "chat.mcp.gallery.enabled": true,
   "chat.unifiedAgentsBar.enabled": true,
-  "trae.chatLanguage": "cn",
-  "diffEditor.ignoreTrimWhitespace": false,
 }
