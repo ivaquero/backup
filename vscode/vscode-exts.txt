@@ -36,5 +36,4 @@ redhat.vscode-yaml
 rvben.rumdl
 tombi-toml.tombi
 vincent-templier.vscode-netron
-vue.volar
 yzhang.markdown-all-in-one
