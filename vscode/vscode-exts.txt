@@ -33,6 +33,7 @@ pkief.material-icon-theme
 qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
+rust-lang.rust-analyzer
 rvben.rumdl
 tombi-toml.tombi
 vincent-templier.vscode-netron

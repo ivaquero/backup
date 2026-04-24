@@ -234,13 +234,6 @@
       ]
     }
   ],
-  // powershell
-  "powershell.codeFormatting.avoidSemicolonsAsLineTerminators": true,
-  "powershell.codeFormatting.trimWhitespaceAroundPipe": true,
-  "powershell.codeFormatting.useConstantStrings": true,
-  "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.codeFormatting.whitespaceBetweenParameters": true,
-  "powershell.promptToUpdatePowerShell": false,
   // ai
   "chat.mcp.gallery.enabled": true,
   "chat.unifiedAgentsBar.enabled": true,
