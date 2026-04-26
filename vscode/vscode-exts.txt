@@ -5,9 +5,9 @@ charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 codesmith.markdown-inline-editor-vscode
 czhang03.unicode-math-input
+dart-code.dart-code
 evertjunior.mass-renamer
 foam.foam-vscode
-github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
 google.colab
