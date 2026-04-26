@@ -151,9 +151,6 @@
   "jupyter.askForKernelRestart": false,
   "jupyter.exportWithOutputEnabled": true,
   "jupyter.pythonExportMethod": "nbconvert",
-  // marimo
-  "marimo.disableUvIntegration": true,
-  "marimo.disableManagedLanguageFeatures": true,
   // frontend
   "emmet.showSuggestionsAsSnippets": true,
   "[javascript]": {
