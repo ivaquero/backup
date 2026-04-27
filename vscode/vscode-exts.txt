@@ -9,6 +9,7 @@ dart-code.dart-code
 dart-code.flutter
 evertjunior.mass-renamer
 foam.foam-vscode
+github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
 google.colab
@@ -26,7 +27,6 @@ ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.remote-explorer
 myriad-dreamin.tinymist
-omarmujahid01.omars-comment-cleaner
 openai.chatgpt
 oxc.oxc-vscode
 pkief.material-icon-theme
@@ -35,6 +35,7 @@ redhat.vscode-xml
 redhat.vscode-yaml
 rust-lang.rust-analyzer
 rvben.rumdl
+toanbui.clear-comments
 tombi-toml.tombi
 vincent-templier.vscode-netron
 yzhang.markdown-all-in-one
