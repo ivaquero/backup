@@ -4,6 +4,5 @@ label-studio
 markitdown
 mineru
 nbconvert
-pdf2ppt-converter
 touying
 typ2pptx
