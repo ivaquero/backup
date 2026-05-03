@@ -39,4 +39,5 @@ rvben.rumdl
 toanbui.clear-comments
 tombi-toml.tombi
 vincent-templier.vscode-netron
+vue.volar
 yzhang.markdown-all-in-one
