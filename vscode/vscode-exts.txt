@@ -5,8 +5,6 @@ charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 codesmith.markdown-inline-editor-vscode
 czhang03.unicode-math-input
-dart-code.dart-code
-dart-code.flutter
 evertjunior.mass-renamer
 foam.foam-vscode
 github.vscode-github-actions
@@ -16,7 +14,6 @@ google.colab
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
-marscode.marscode-extension
 mathworks.language-matlab
 meta.pyrefly
 ms-python.python

@@ -1,6 +1,5 @@
 jupytext
 kaggle
 label-studio
-mineru
 nbconvert
 typ2pptx
