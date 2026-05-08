@@ -4,7 +4,6 @@
   "extensions.autoUpdate": false,
   "extensions.allowed": {
     "*": true,
-    "github.copilot-chat": false,
     "ms-python.debugpy": false,
     "ms-python.vscode-pylance": false,
     "ms-python.vscode-python-envs": false,
@@ -94,7 +93,7 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
+      "source.fixAll.rumdl": "explicit"
     },
     "editor.quickSuggestions": {
       "other": "on",
@@ -242,4 +241,5 @@
   "trae.tab.cue": true,
   "trae.tab.enablePartialAccept": true,
   "trae.privacy.mode": true,
+  "chat.disableAIFeatures": true,
 }
