@@ -231,7 +231,15 @@
       ]
     }
   ],
+  "MATLAB.showFeatureNotAvailableError": false,
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
   // ai
   "chat.mcp.gallery.enabled": true,
   "chat.unifiedAgentsBar.enabled": true,
+  "trae.tab.enableAutoImport": true,
+  "trae.tab.cue": true,
+  "trae.tab.enablePartialAccept": true,
+  "trae.privacy.mode": true,
 }
