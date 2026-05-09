@@ -10,7 +10,7 @@
     "ms-toolsai.jupyter-keymap": false,
     "ms-toolsai.vscode-jupyter-cell-tags": false,
     "ms-toolsai.vscode-jupyter-slideshow": false,
-    "ms-vscode-remote.remote-ssh-edit": false,
+    "ms-vscode-remote.remote-ssh-edit": false
   },
   "extensions.ignoreRecommendations": true,
   // security
@@ -235,11 +235,11 @@
     "matlab.interrupt"
   ],
   // ai
+  "chat.disableAIFeatures": true,
   "chat.mcp.gallery.enabled": true,
   "chat.unifiedAgentsBar.enabled": true,
-  "trae.tab.enableAutoImport": true,
-  "trae.tab.cue": true,
-  "trae.tab.enablePartialAccept": true,
   "trae.privacy.mode": true,
-  "chat.disableAIFeatures": true,
+  "trae.tab.cue": true,
+  "trae.tab.enableAutoImport": true,
+  "trae.tab.enablePartialAccept": true
 }
