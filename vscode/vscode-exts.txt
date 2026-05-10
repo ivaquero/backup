@@ -14,6 +14,7 @@ google.colab
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
+marscode.marscode-extension
 mathworks.language-matlab
 meta.pyrefly
 ms-python.python
