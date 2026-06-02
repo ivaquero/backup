@@ -1,4 +1,6 @@
+albumentations
 cvxpy
+einops
 gymnasium
 imbalanced-learn
 ipykernel
@@ -11,7 +13,6 @@ pygame
 pymc
 pymoo
 scikit-image
-shapely
 torchvision
 ultralytics
 yfinance
