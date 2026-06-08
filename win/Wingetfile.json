@@ -1,6 +1,6 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-04-24T16:00:42.138-00:00",
+	"CreationDate": "2026-06-08T16:53:08.340-00:00",
 	"Sources": [
 		{
 			"Packages": [
@@ -11,13 +11,13 @@
 					"PackageIdentifier": "Git.Git"
 				},
 				{
-					"PackageIdentifier": "Nutstore.Nutstore"
-				},
-				{
 					"PackageIdentifier": "Microsoft.VCRedist.2010.x64"
 				},
 				{
 					"PackageIdentifier": "Giorgiotani.Peazip"
+				},
+				{
+					"PackageIdentifier": "Nutstore.Nutstore"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VisualStudio.BuildTools"
@@ -26,16 +26,13 @@
 					"PackageIdentifier": "Microsoft.VCRedist.2013.x64"
 				},
 				{
-					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
-				},
-				{
 					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.10"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2012.x86"
 				},
 				{
-					"PackageIdentifier": "Microsoft.Edge"
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
@@ -44,25 +41,31 @@
 					"PackageIdentifier": "Microsoft.VCRedist.2013.x86"
 				},
 				{
+					"PackageIdentifier": "Microsoft.Edge"
+				},
+				{
 					"PackageIdentifier": "Microsoft.VCRedist.2010.x86"
 				},
 				{
 					"PackageIdentifier": "indiff.QTTabBar"
 				},
 				{
-					"PackageIdentifier": "Microsoft.WindowsSDK.10.0.26100"
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2012.x64"
 				},
 				{
-					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
-				},
-				{
 					"PackageIdentifier": "Baidu.BaiduNetdisk"
 				},
 				{
+					"PackageIdentifier": "NetEase.UURemote"
+				},
+				{
 					"PackageIdentifier": "Microsoft.AppInstaller"
+				},
+				{
+					"PackageIdentifier": "Microsoft.DotNet.Native.Runtime"
 				},
 				{
 					"PackageIdentifier": "Microsoft.UI.Xaml.2.7"
@@ -91,5 +94,5 @@
 			}
 		}
 	],
-	"WinGetVersion": "1.28.220"
+	"WinGetVersion": "1.28.240"
 }
