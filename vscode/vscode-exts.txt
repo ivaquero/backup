@@ -14,7 +14,6 @@ google.colab
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
-marscode.marscode-extension
 mathworks.language-matlab
 meta.pyrefly
 ms-python.python
@@ -33,6 +32,7 @@ redhat.vscode-xml
 redhat.vscode-yaml
 rust-lang.rust-analyzer
 rvben.rumdl
+tencent-cloud.coding-copilot
 toanbui.clear-comments
 tombi-toml.tombi
 vincent-templier.vscode-netron

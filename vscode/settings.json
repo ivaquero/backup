@@ -47,7 +47,9 @@
     "*.condarc": "yaml",
     "*.h": "cpp",
     "*.vimrc": "viml",
-    "*.m": "matlab"
+    "*.m": "matlab",
+    "*.wxhtml": "html",
+    "*.wxss": "css"
   },
   "files.exclude": {
     "**/.DS_Store": true,
@@ -80,6 +82,9 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   // git
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -113,6 +118,7 @@
   "markdown.extension.theming.decoration.renderLink": true,
   "markdown.extension.theming.decoration.renderParagraph": true,
   "markdown.extension.toc.levels": "2..4",
+  "rumdl.fixOnSave": true,
   "rumdl.rules.disable": [
     "MD013",
     "MD025",
@@ -143,7 +149,7 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "python.languageServer": "None",
+  "python.languageServer": "Default",
   "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
   // jupyter
@@ -154,6 +160,9 @@
   "emmet.showSuggestionsAsSnippets": true,
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
   },
   "livePreview.notifyOnOpenLooseFile": false,
   // bookmarks

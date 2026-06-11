@@ -1,146 +1,286 @@
 tap "brewforge/chinese"
 tap "brewforge/extras"
 tap "brewforge/more"
+# Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Collection of portable C++ source libraries
 brew "boost"
+# Yet another cross-platform graphical process/system monitor
 brew "bottom"
+# Core application library for C
 brew "glib"
+# X.Org: Interface to the X Window System protocol
 brew "libxcb"
+# Vector graphics library with cross-device output support
 brew "cairo"
+# C++ template library for linear algebra
 brew "eigen"
+# Optimized BLAS library
 brew "openblas"
+# Suite of Sparse Matrix Software
 brew "suite-sparse"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Cross-platform make
 brew "cmake"
+# Dependency manager for Cocoa projects
 brew "cocoapods"
+# Create and run Linux containers using lightweight virtual machines
 brew "container"
+# Secure runtime for JavaScript and TypeScript
 brew "deno"
+# More intuitive version of du in rust
 brew "dust"
+# Like neofetch, but much faster because written mostly in C
 brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
 brew "sdl2"
+# AV1 encoder
 brew "svt-av1"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Open-source formatting library for C++
 brew "fmt"
+# Text editor for your terminal: easy, powerful and fast
 brew "fresh-editor"
+# Implementation of the Unicode BiDi algorithm
 brew "fribidi"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# OpenType text shaping engine
 brew "harfbuzz"
+# OCR (Optical Character Recognition) engine
 brew "tesseract"
+# Interpreter for PostScript and PDF
 brew "ghostscript"
-brew "libnghttp2"
+# Low-level cryptographic library
 brew "nettle"
+# HTTP/2 C Library
+brew "libnghttp2"
+# Validating, recursive, caching DNS resolver
 brew "unbound"
+# Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Open-source video transcoder available for Linux, Mac, and Windows
 brew "handbrake"
+# Command-line benchmarking tool
 brew "hyperfine"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Find what models run on your hardware
 brew "llmfit"
+# Clone of ls with colorful output, file type icons, and more
 brew "lsd"
+# Fast Cross-Platform Package Manager
 brew "micromamba"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
 brew "mole"
+# JSON for modern C++
 brew "nlohmann-json"
+# Command-line Git information tool
 brew "onefetch"
+# Open standard for machine learning interoperability
 brew "onnx"
+# Cross-platform application and UI framework
 brew "qtbase"
+# Open source computer vision library
 brew "opencv"
+# Painless compression and decompression for your terminal
 brew "ouch"
+# Multithreaded PNG optimizer written in Rust
 brew "oxipng"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# PDF processor written in Go
 brew "pdfcpu"
+# Fast, disk space efficient package manager
 brew "pnpm"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Object-relational database system
 brew "postgresql@18"
+# Seamless operability between C++11 and Python
 brew "pybind11"
+# Cross-platform application and UI framework
 brew "qt"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
+# CLI proxy to minimize LLM token consumption
 brew "rtk"
+# Extremely fast Python linter, written in Rust
 brew "ruff"
+# Rust toolchain installer
 brew "rustup"
+# Used as a compiler wrapper and avoids compilation when possible
 brew "sccache"
+# Display and control your Android device
 brew "scrcpy"
+# Intuitive find & replace CLI
 brew "sd"
+# Autoformat shell script source code
 brew "shfmt"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Feature rich terminal file transfer and explorer
 brew "termscp"
+# Official tldr client written in Rust
 brew "tlrc"
+# Markup-based typesetting system
 brew "typst"
+# Beautiful and reliable typst code formatter
 brew "typstyle"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Why is this running?
 brew "witr"
+# Weather Companion for the Terminal
 brew "wthrr"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Unified GUI for command-line AI agents
 cask "aionui"
+# Command-line tools for building and debugging Android apps
 cask "android-commandlinetools"
+# Multi-track audio editor and recorder
 cask "audacity"
+# Cloud storage service
 cask "baidunetdisk"
+# Compact TeX distribution as alternative to the full TeX Live / MacTeX
 cask "basictex"
+# Screen recording software
 cask "cap"
+# Desktop client that supports multiple LLM providers
 cask "cherry-studio"
+# Continuation of Clash Verge - A Clash Meta GUI based on Tauri
 cask "clash-verge-rev"
+# 通用 AI IDE 账号管理工具
 cask "brewforge/chinese/cockpit-tools"
+# OpenAI's coding agent that runs in your terminal
 cask "codex"
+# OpenAI's Codex desktop app for managing coding agents
 cask "codex-app"
+# Multi-platform client-side cloud file encryption tool
 cask "cryptomator"
+# Teamwork app by Alibaba Group
 cask "dingtalk"
+# Online diagram software
 cask "drawio"
+# 西语学习者必备的工具
 cask "brewforge/chinese/eshelper-cn"
+# Cross-platform Text Expander written in Rust
 cask "espanso"
+# Screenshot software with built-in annotation tools
 cask "flameshot"
+# UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
+# File transfer over ad-hoc wifi
 cask "flying-carpet"
 cask "font-fontawesome"
+# 法语学习者必备的工具
 cask "brewforge/chinese/frhelper-cn"
+# Kext-less implementation of FUSE
 cask "fuse-t"
+# Free and open-source image editor
 cask "brewforge/chinese/gimp-cn"
+# Web browser
 cask "google-chrome"
+# High speed downloader that supports all platforms
 cask "brewforge/extras/gopeed-app"
+# Terminal stock gotmail with live updates and position tracking
 cask "brewforge/more/gotmail"
+# Speech to text application
 cask "handy"
+# Cross-platform alias manager for Bash, Zsh, and PowerShell
 cask "brewforge/more/hunming"
+# Vector graphics editor
 cask "brewforge/chinese/inkscape-cn"
+# Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
+# Cross-platform configuration manager
 cask "brewforge/more/kungfig"
+# Open source android assistant
 cask "linkandroid"
+# Open-source cross-platform alternative to AirDrop
 cask "localsend"
+# Open-source firewall to block unknown outgoing connections
 cask "lulu"
+# Scanner app for math and science
 cask "mathpix-snipping-tool"
+# Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# Word processor
 cask "microsoft-word"
+# Cloud storage service platform
 cask "nutstore"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Free Zip/Unzip software and Rar file extractor
 cask "brewforge/extras/peazip"
+# Software for text translation and recognition
 cask "pot"
+# Instant messaging tool
 cask "qq"
+# IDE for application development
 cask "brewforge/chinese/qt-creator-cn"
+# Ebook reader
 cask "readest"
+# Player that blends classic design with modern technology
 cask "brewforge/extras/rune-music"
+# Video editor
 cask "shotcut"
+# EPUB ebook editor
 cask "sigil"
+# PDF utility
 cask "stirling-pdf"
+# Cloud video conferencing
 cask "tencent-meeting"
+# Web browser focusing on security
 cask "tor-browser"
+# NetEase UU remote desktop access and control tool
 cask "uuremote"
+# Custom Discord App
 cask "vesktop"
+# Transcribe on your own
 cask "brewforge/extras/vibe"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "brewforge/chinese/vlc-cn"
+# Free messaging and calling application
 cask "wechat"
+# Wechat DevTools for Official Account and Mini Program development
 cask "wechatwebdevtools"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Network protocol analyzer
 cask "wireshark-app"
+# AI-Powered Office Suite for Everyone
 cask "brewforge/extras/wpsoffice-en"
+# Photo viewer, image manager, image resiser and more
 cask "xnviewmp"
+# Video communication and virtual meeting platform
 cask "zoom"
+# Collect, organise, cite, and share research sources
 cask "zotero"
 vscode "adachishingo.open-with"
 vscode "alefragnani.bookmarks"
@@ -158,7 +298,6 @@ vscode "google.colab"
 vscode "james-yu.latex-workshop"
 vscode "kylinideteam.cmake-intellisence"
 vscode "mads-hartmann.bash-ide-vscode"
-vscode "marscode.marscode-extension"
 vscode "mathworks.language-matlab"
 vscode "meta.pyrefly"
 vscode "ms-python.python"
@@ -177,6 +316,7 @@ vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "rust-lang.rust-analyzer"
 vscode "rvben.rumdl"
+vscode "tencent-cloud.coding-copilot"
 vscode "toanbui.clear-comments"
 vscode "tombi-toml.tombi"
 vscode "vincent-templier.vscode-netron"
@@ -186,5 +326,6 @@ uv "jupytext"
 uv "kaggle"
 uv "label-studio"
 uv "nbconvert"
+uv "touying"
 uv "typ2pptx"
 npm "corepack"
