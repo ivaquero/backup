@@ -189,8 +189,6 @@ cask "drawio"
 cask "brewforge/chinese/eshelper-cn"
 # Cross-platform Text Expander written in Rust
 cask "espanso"
-# Screenshot software with built-in annotation tools
-cask "flameshot"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # File transfer over ad-hoc wifi
@@ -214,6 +212,8 @@ cask "handy"
 cask "brewforge/more/hunming"
 # Vector graphics editor
 cask "brewforge/chinese/inkscape-cn"
+# Programming language for technical computing
+cask "brewforge/chinese/julia-cn"
 # Tool to prevent the system from going into sleep mode
 cask "keepingyouawake"
 # Cross-platform configuration manager
@@ -296,6 +296,7 @@ vscode "github.vscode-pull-request-github"
 vscode "golang.go"
 vscode "google.colab"
 vscode "james-yu.latex-workshop"
+vscode "julialang.language-julia"
 vscode "kylinideteam.cmake-intellisence"
 vscode "mads-hartmann.bash-ide-vscode"
 vscode "mathworks.language-matlab"
