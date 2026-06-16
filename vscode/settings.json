@@ -247,8 +247,5 @@
   // ai
   "chat.disableAIFeatures": true,
   "chat.mcp.gallery.enabled": true,
-  "chat.unifiedAgentsBar.enabled": true,
-  // julia
-  "julia.symbolCacheDownload": true,
-  "julia.juliaup.install.hint": false
+  "chat.unifiedAgentsBar.enabled": true
 }

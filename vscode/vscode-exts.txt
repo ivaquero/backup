@@ -12,7 +12,6 @@ github.vscode-pull-request-github
 golang.go
 google.colab
 james-yu.latex-workshop
-julialang.language-julia
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
 mathworks.language-matlab

@@ -1,6 +1,8 @@
 albumentations
 cvxpy
+diffeqpy
 einops
+graphviz
 gymnasium
 imbalanced-learn
 ipykernel

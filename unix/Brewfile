@@ -61,10 +61,6 @@ brew "tesseract"
 brew "ghostscript"
 # Low-level cryptographic library
 brew "nettle"
-# HTTP/2 C Library
-brew "libnghttp2"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Open-source video transcoder available for Linux, Mac, and Windows
@@ -75,6 +71,8 @@ brew "hyperfine"
 brew "imagemagick"
 # Simple terminal UI for git commands
 brew "lazygit"
+# HTTP/2 C Library
+brew "libnghttp2"
 # Find what models run on your hardware
 brew "llmfit"
 # Clone of ls with colorful output, file type icons, and more
@@ -141,6 +139,8 @@ brew "tlrc"
 brew "typst"
 # Beautiful and reliable typst code formatter
 brew "typstyle"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Why is this running?
@@ -161,8 +161,6 @@ brew "zsh-syntax-highlighting"
 cask "aionui"
 # Command-line tools for building and debugging Android apps
 cask "android-commandlinetools"
-# Multi-track audio editor and recorder
-cask "audacity"
 # Cloud storage service
 cask "baidunetdisk"
 # Compact TeX distribution as alternative to the full TeX Live / MacTeX
@@ -296,7 +294,6 @@ vscode "github.vscode-pull-request-github"
 vscode "golang.go"
 vscode "google.colab"
 vscode "james-yu.latex-workshop"
-vscode "julialang.language-julia"
 vscode "kylinideteam.cmake-intellisence"
 vscode "mads-hartmann.bash-ide-vscode"
 vscode "mathworks.language-matlab"
