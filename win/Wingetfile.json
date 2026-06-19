@@ -1,6 +1,6 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-06-08T16:53:08.340-00:00",
+	"CreationDate": "2026-06-19T20:02:48.693-00:00",
 	"Sources": [
 		{
 			"Packages": [
@@ -20,6 +20,12 @@
 					"PackageIdentifier": "Nutstore.Nutstore"
 				},
 				{
+					"PackageIdentifier": "Nvidia.PhysX"
+				},
+				{
+					"PackageIdentifier": "Microsoft.Edge"
+				},
+				{
 					"PackageIdentifier": "Microsoft.VisualStudio.BuildTools"
 				},
 				{
@@ -29,19 +35,16 @@
 					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.10"
 				},
 				{
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
+				},
+				{
 					"PackageIdentifier": "Microsoft.VCRedist.2012.x86"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
 				},
 				{
-					"PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
-				},
-				{
 					"PackageIdentifier": "Microsoft.VCRedist.2013.x86"
-				},
-				{
-					"PackageIdentifier": "Microsoft.Edge"
 				},
 				{
 					"PackageIdentifier": "Microsoft.VCRedist.2010.x86"
@@ -50,16 +53,22 @@
 					"PackageIdentifier": "indiff.QTTabBar"
 				},
 				{
-					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
-				},
-				{
 					"PackageIdentifier": "Microsoft.VCRedist.2012.x64"
 				},
 				{
-					"PackageIdentifier": "Baidu.BaiduNetdisk"
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
 					"PackageIdentifier": "NetEase.UURemote"
+				},
+				{
+					"PackageIdentifier": "GeekUninstaller.GeekUninstaller"
+				},
+				{
+					"PackageIdentifier": "LocalSend.LocalSend"
+				},
+				{
+					"PackageIdentifier": "Microsoft.VisualStudioCode"
 				},
 				{
 					"PackageIdentifier": "Microsoft.AppInstaller"
@@ -83,7 +92,16 @@
 					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.5"
 				},
 				{
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.6"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.7"
+				},
+				{
 					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.8"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WindowsTerminal"
 				}
 			],
 			"SourceDetails": {
