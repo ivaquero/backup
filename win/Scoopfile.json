@@ -79,8 +79,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "cockpit-tools",
-            "Version": "0.26.3",
-            "Updated": "\/Date(1781855353869)\/"
+            "Version": "0.26.5",
+            "Updated": "\/Date(1782038112641)\/"
         },
         {
             "Info": "",
@@ -520,8 +520,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "readest",
-            "Version": "0.11.4",
-            "Updated": "\/Date(1781851520479)\/"
+            "Version": "0.11.12",
+            "Updated": "\/Date(1782037406092)\/"
         },
         {
             "Info": "",
@@ -625,8 +625,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
-            "Version": "2.13.0",
-            "Updated": "\/Date(1781856948043)\/"
+            "Version": "2.13.1",
+            "Updated": "\/Date(1782038217265)\/"
         },
         {
             "Info": "",
@@ -667,8 +667,8 @@
             "Info": "",
             "Source": "main",
             "Name": "typstyle",
-            "Version": "0.14.4",
-            "Updated": "\/Date(1781857055864)\/"
+            "Version": "0.15.0",
+            "Updated": "\/Date(1782038299242)\/"
         },
         {
             "Info": "Held package",
@@ -688,8 +688,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.124.2",
-            "Updated": "\/Date(1781850856110)\/"
+            "Version": "1.125.1",
+            "Updated": "\/Date(1782038429333)\/"
         },
         {
             "Info": "",
@@ -795,29 +795,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1781849014000)\/",
+                "value": "\/Date(1782034380000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月19日 14:03:34"
+                "DateTime": "2026年6月21日 17:33:00"
             },
-            "Manifests": 1579
+            "Manifests": 1583
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1781848974000)\/",
+                "value": "\/Date(1782034365000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月19日 14:02:54"
+                "DateTime": "2026年6月21日 17:32:45"
             },
-            "Manifests": 2311
+            "Manifests": 2314
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1780309546000)\/",
+                "value": "\/Date(1781895616000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月1日 18:25:46"
+                "DateTime": "2026年6月20日 3:00:16"
             },
             "Manifests": 367
         },
@@ -825,9 +825,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1781856855000)\/",
+                "value": "\/Date(1781966243000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月19日 16:14:15"
+                "DateTime": "2026年6月20日 22:37:23"
             },
             "Manifests": 89
         },
@@ -835,9 +835,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1781857664000)\/",
+                "value": "\/Date(1781965968000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月19日 16:27:44"
+                "DateTime": "2026年6月20日 22:32:48"
             },
             "Manifests": 46
         },
@@ -845,9 +845,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1781857345000)\/",
+                "value": "\/Date(1782019185000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月19日 16:22:25"
+                "DateTime": "2026年6月21日 13:19:45"
             },
             "Manifests": 33
         }
