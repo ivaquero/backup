@@ -2,8 +2,6 @@ albumentations
 cvxpy
 diffeqpy
 einops
-graphviz
-gymnasium
 imbalanced-learn
 ipykernel
 monai
@@ -11,7 +9,6 @@ openpyxl
 plotly
 plotnine
 preliz
-pygame
 pymc
 pymoo
 scikit-image

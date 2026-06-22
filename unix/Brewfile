@@ -208,6 +208,8 @@ cask "brewforge/more/gotmail"
 cask "handy"
 # Cross-platform alias manager for Bash, Zsh, and PowerShell
 cask "brewforge/more/hunming"
+# Mobile device management software
+cask "brewforge/chinese/i4tools"
 # Vector graphics editor
 cask "brewforge/chinese/inkscape-cn"
 # Programming language for technical computing
@@ -238,8 +240,6 @@ cask "brewforge/extras/peazip"
 cask "pot"
 # Instant messaging tool
 cask "qq"
-# IDE for application development
-cask "brewforge/chinese/qt-creator-cn"
 # Ebook reader
 cask "readest"
 # Player that blends classic design with modern technology
