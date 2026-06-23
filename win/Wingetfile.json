@@ -1,119 +1,116 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-06-21T19:19:15.604-00:00",
-	"Sources" :
-	[
+	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate": "2026-06-22T12:45:22.376-00:00",
+	"Sources": [
 		{
-			"Packages" :
-			[
+			"Packages": [
 				{
-					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
+					"PackageIdentifier": "ClashVergeRev.ClashVergeRev"
 				},
 				{
-					"PackageIdentifier" : "Git.Git"
+					"PackageIdentifier": "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x64"
+					"PackageIdentifier": "DigitalScholar.Zotero"
 				},
 				{
-					"PackageIdentifier" : "Giorgiotani.Peazip"
+					"PackageIdentifier": "Microsoft.VCRedist.2010.x64"
 				},
 				{
-					"PackageIdentifier" : "Nutstore.Nutstore"
+					"PackageIdentifier": "Nutstore.Nutstore"
 				},
 				{
-					"PackageIdentifier" : "Nvidia.PhysX"
+					"PackageIdentifier": "Nvidia.PhysX"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.Edge"
+					"PackageIdentifier": "voidtools.Everything"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.BuildTools"
+					"PackageIdentifier": "Microsoft.Edge"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
+					"PackageIdentifier": "Microsoft.VisualStudio.BuildTools"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.10"
+					"PackageIdentifier": "Microsoft.VCRedist.2013.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.10"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x64"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2012.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2015+.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
+					"PackageIdentifier": "Microsoft.VCRedist.2013.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
+					"PackageIdentifier": "Microsoft.VCRedist.2010.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
+					"PackageIdentifier": "Microsoft.VCRedist.2012.x64"
 				},
 				{
-					"PackageIdentifier" : "Baidu.BaiduNetdisk"
+					"PackageIdentifier": "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
-					"PackageIdentifier" : "NetEase.UURemote"
+					"PackageIdentifier": "Baidu.BaiduNetdisk"
 				},
 				{
-					"PackageIdentifier" : "GeekUninstaller.GeekUninstaller"
+					"PackageIdentifier": "NetEase.UURemote"
 				},
 				{
-					"PackageIdentifier" : "LocalSend.LocalSend"
+					"PackageIdentifier": "GeekUninstaller.GeekUninstaller"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+					"PackageIdentifier": "LocalSend.LocalSend"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.AppInstaller"
+					"PackageIdentifier": "Microsoft.VisualStudioCode"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.Native.Runtime"
+					"PackageIdentifier": "Microsoft.AppInstaller"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.UI.Xaml.2.7"
+					"PackageIdentifier": "Microsoft.DotNet.Native.Runtime"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.UI.Xaml.2.8"
+					"PackageIdentifier": "Microsoft.UI.Xaml.2.7"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCLibs.Desktop.14"
+					"PackageIdentifier": "Microsoft.UI.Xaml.2.8"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCLibs.14"
+					"PackageIdentifier": "Microsoft.VCLibs.Desktop.14"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.5"
+					"PackageIdentifier": "Microsoft.VCLibs.14"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.6"
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.6"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.7"
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.7"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.8"
+					"PackageIdentifier": "Microsoft.WindowsAppRuntime.1.8"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+					"PackageIdentifier": "Microsoft.WindowsTerminal"
 				}
 			],
-			"SourceDetails" :
-			{
-				"Argument" : "https://cdn.winget.microsoft.com/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
+			"SourceDetails": {
+				"Argument": "https://cdn.winget.microsoft.com/cache",
+				"Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name": "winget",
+				"Type": "Microsoft.PreIndexed.Package"
 			}
 		}
 	],
-	"WinGetVersion" : "1.28.240"
+	"WinGetVersion": "1.28.240"
 }

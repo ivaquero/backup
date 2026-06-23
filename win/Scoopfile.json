@@ -23,8 +23,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "aionui",
-            "Version": "2.1.21",
-            "Updated": "\/Date(1781855269806)\/"
+            "Version": "2.1.22",
+            "Updated": "\/Date(1782198330636)\/"
         },
         {
             "Info": "",
@@ -86,8 +86,8 @@
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.141.0",
-            "Updated": "\/Date(1781851426720)\/"
+            "Version": "0.142.0",
+            "Updated": "\/Date(1782198392539)\/"
         },
         {
             "Info": "",
@@ -112,24 +112,10 @@
         },
         {
             "Info": "",
-            "Source": "extras",
-            "Name": "deskflow",
-            "Version": "1.26.0",
-            "Updated": "\/Date(1781855465097)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras-cn",
             "Name": "dingtalk",
             "Version": "8.2.13.260209001",
             "Updated": "\/Date(1781855499822)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main-plus",
-            "Name": "docker-completion",
-            "Version": "1.2904.0.260509",
-            "Updated": "\/Date(1781855502342)\/"
         },
         {
             "Info": "",
@@ -195,11 +181,11 @@
             "Updated": "\/Date(1781855623364)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "flutter",
             "Version": "3.44.2",
-            "Updated": "\/Date(1781856197307)\/"
+            "Updated": "\/Date(1782198307329)\/"
         },
         {
             "Info": "",
@@ -256,6 +242,13 @@
             "Name": "gimp",
             "Version": "3.2.4",
             "Updated": "\/Date(1781851411675)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "godot",
+            "Version": "4.7",
+            "Updated": "\/Date(1782119562261)\/"
         },
         {
             "Info": "Held package",
@@ -324,8 +317,8 @@
             "Info": "",
             "Source": "main",
             "Name": "imagemagick",
-            "Version": "7.1.2-25",
-            "Updated": "\/Date(1781856308348)\/"
+            "Version": "7.1.2-26",
+            "Updated": "\/Date(1782102500036)\/"
         },
         {
             "Info": "",
@@ -373,8 +366,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "linkandroid",
-            "Version": "1.0.3",
-            "Updated": "\/Date(1781856416328)\/"
+            "Version": "2.0.0",
+            "Updated": "\/Date(1782198451859)\/"
         },
         {
             "Info": "",
@@ -415,8 +408,8 @@
             "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.6.11",
-            "Updated": "\/Date(1781851138171)\/"
+            "Version": "2026.6.12",
+            "Updated": "\/Date(1782102549868)\/"
         },
         {
             "Info": "",
@@ -575,13 +568,6 @@
         {
             "Info": "",
             "Source": "main",
-            "Name": "scoop-search",
-            "Version": "2.1.0",
-            "Updated": "\/Date(1781850838232)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
             "Name": "scrcpy",
             "Version": "4.0",
             "Updated": "\/Date(1781856835411)\/"
@@ -592,13 +578,6 @@
             "Name": "sd",
             "Version": "1.1.0",
             "Updated": "\/Date(1781850404552)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main-plus",
-            "Name": "shimmy",
-            "Version": "2.1.1",
-            "Updated": "\/Date(1781856854270)\/"
         },
         {
             "Info": "",
@@ -676,6 +655,13 @@
             "Name": "uv",
             "Version": "0.11.22",
             "Updated": "\/Date(1781857056121)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "vesktop",
+            "Version": "1.6.5",
+            "Updated": "\/Date(1782199501290)\/"
         },
         {
             "Info": "",
@@ -770,20 +756,6 @@
         },
         {
             "Info": "",
-            "Source": "extras",
-            "Name": "zlib",
-            "Version": "1.2.12",
-            "Updated": "\/Date(1781857197529)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "zotero",
-            "Version": "9.0.5",
-            "Updated": "\/Date(1781851477839)\/"
-        },
-        {
-            "Info": "",
             "Source": "main",
             "Name": "zoxide",
             "Version": "0.9.9",
@@ -795,21 +767,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1782034380000)\/",
+                "value": "\/Date(1782197845000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月21日 17:33:00"
+                "DateTime": "2026年6月23日 14:57:25"
             },
-            "Manifests": 1583
+            "Manifests": 1588
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1782034365000)\/",
+                "value": "\/Date(1782194043000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月21日 17:32:45"
+                "DateTime": "2026年6月23日 13:54:03"
             },
-            "Manifests": 2314
+            "Manifests": 2315
         },
         {
             "Name": "nerd-fonts",
@@ -825,9 +797,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1781966243000)\/",
+                "value": "\/Date(1782189287000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月20日 22:37:23"
+                "DateTime": "2026年6月23日 12:34:47"
             },
             "Manifests": 89
         },
@@ -835,9 +807,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1781965968000)\/",
+                "value": "\/Date(1782189081000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月20日 22:32:48"
+                "DateTime": "2026年6月23日 12:31:21"
             },
             "Manifests": 46
         },
@@ -845,9 +817,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1782019185000)\/",
+                "value": "\/Date(1782189090000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月21日 13:19:45"
+                "DateTime": "2026年6月23日 12:31:30"
             },
             "Manifests": 33
         }
