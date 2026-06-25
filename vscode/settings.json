@@ -1,7 +1,7 @@
 {
   "window.nativeTabs": true,
   "window.restoreWindows": "all",
-  "extensions.autoUpdate": false,
+  "extensions.autoUpdate": "off",
   "extensions.allowed": {
     "*": true,
     "ms-python.debugpy": false,
@@ -245,7 +245,5 @@
     "language-julia.interrupt"
   ],
   // ai
-  "chat.disableAIFeatures": true,
-  "chat.mcp.gallery.enabled": true,
-  "chat.unifiedAgentsBar.enabled": true
+  "chat.disableAIFeatures": true
 }

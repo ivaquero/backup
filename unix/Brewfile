@@ -37,8 +37,8 @@ brew "dust"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Low-level access to audio, keyboard, mouse, joystick, and graphics
-brew "sdl2"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
 # AV1 encoder
 brew "svt-av1"
 # Play, record, convert, and stream select audio and video codecs
@@ -305,6 +305,7 @@ vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.live-server"
 vscode "ms-vscode.remote-explorer"
+vscode "muhammad-ahmad.xlsx-viewer"
 vscode "myriad-dreamin.tinymist"
 vscode "openai.chatgpt"
 vscode "oxc.oxc-vscode"
@@ -327,3 +328,4 @@ uv "nbconvert"
 uv "touying"
 uv "typ2pptx"
 npm "corepack"
+npm "openclaw"
