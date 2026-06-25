@@ -8,20 +8,20 @@
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "keybindings": [
         {
-            "id": "Terminal.NextTab",
-            "keys": "ctrl+tab"
-        },
-        {
             "id": "Terminal.ResizePaneDown",
             "keys": "alt+shift+down"
         },
         {
-            "id": "Terminal.PrevTab",
-            "keys": "ctrl+shift+tab"
+            "id": "Terminal.NextTab",
+            "keys": "ctrl+tab"
         },
         {
             "id": "Terminal.CopyToClipboard",
             "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.PrevTab",
+            "keys": "ctrl+shift+tab"
         },
         {
             "id": "Terminal.PasteFromClipboard",
@@ -32,12 +32,12 @@
             "keys": "ctrl+shift+w"
         },
         {
-            "id": "Terminal.MoveFocusDown",
-            "keys": "alt+down"
-        },
-        {
             "id": "Terminal.OpenNewTab",
             "keys": "ctrl+shift+t"
+        },
+        {
+            "id": "Terminal.MoveFocusDown",
+            "keys": "alt+down"
         },
         {
             "id": "Terminal.MoveFocusLeft",
@@ -110,17 +110,25 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "commandline": "C:\\Program Files\\Git\\git-bash.exe",
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "guid": "{2661b4a8-b07e-5cb6-a6f4-5d3bd232b96f}",
                 "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
+                "name": "Ubuntu-26.04",
+                "source": "Microsoft.WSL"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "commandline": "powershell.exe -NoExit -Command \"&{Import-Module \"\"\"C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\Tools\\Microsoft.VisualStudio.DevShell.dll\"\"\"; Enter-VsDevShell c3e1d8e1 -SkipAutomaticLocation -DevCmdArguments \"\"\"-arch=x64 -host_arch=x64\"\"\"}\"",
+                "guid": "{26738eb5-2539-5a7d-9121-a7555fb4fd41}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/vs-powershell.png",
+                "name": "Developer PowerShell for VS 18",
+                "source": "Windows.Terminal.VisualStudio",
+                "startingDirectory": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools"
             }
         ]
     },

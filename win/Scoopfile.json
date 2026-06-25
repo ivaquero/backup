@@ -20,11 +20,11 @@
             "Updated": "\/Date(1781855236284)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras-plus",
             "Name": "aionui",
             "Version": "2.1.22",
-            "Updated": "\/Date(1782198330636)\/"
+            "Updated": "\/Date(1782376623652)\/"
         },
         {
             "Info": "",
@@ -86,8 +86,8 @@
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.142.0",
-            "Updated": "\/Date(1782198392539)\/"
+            "Version": "0.142.2",
+            "Updated": "\/Date(1782385784523)\/"
         },
         {
             "Info": "",
@@ -149,8 +149,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fastfetch",
-            "Version": "2.64.2",
-            "Updated": "\/Date(1781850714440)\/"
+            "Version": "2.65.1",
+            "Updated": "\/Date(1782376843171)\/"
         },
         {
             "Info": "",
@@ -373,8 +373,8 @@
             "Info": "",
             "Source": "main",
             "Name": "llmfit",
-            "Version": "0.9.31",
-            "Updated": "\/Date(1781856420552)\/"
+            "Version": "0.9.33",
+            "Updated": "\/Date(1782376853571)\/"
         },
         {
             "Info": "",
@@ -406,10 +406,17 @@
         },
         {
             "Info": "",
+            "Source": "extras-plus",
+            "Name": "mineru",
+            "Version": "0.14.1",
+            "Updated": "\/Date(1782390044857)\/"
+        },
+        {
+            "Info": "Held package",
             "Source": "main",
             "Name": "mise",
             "Version": "2026.6.12",
-            "Updated": "\/Date(1782102549868)\/"
+            "Updated": "\/Date(1782376629874)\/"
         },
         {
             "Info": "",
@@ -471,8 +478,8 @@
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "11.8.0",
-            "Updated": "\/Date(1781851202632)\/"
+            "Version": "11.9.0",
+            "Updated": "\/Date(1782376894536)\/"
         },
         {
             "Info": "",
@@ -538,11 +545,11 @@
             "Updated": "\/Date(1781856760742)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "ruff",
             "Version": "0.15.18",
-            "Updated": "\/Date(1781851108744)\/"
+            "Updated": "\/Date(1782376639768)\/"
         },
         {
             "Info": "",
@@ -601,11 +608,11 @@
             "Updated": "\/Date(1781853313999)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
             "Version": "2.13.1",
-            "Updated": "\/Date(1782038217265)\/"
+            "Updated": "\/Date(1782376637761)\/"
         },
         {
             "Info": "",
@@ -674,15 +681,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.125.1",
-            "Updated": "\/Date(1782038429333)\/"
+            "Version": "1.126.0",
+            "Updated": "\/Date(1782376955424)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.10.53",
-            "Updated": "\/Date(1781851351234)\/"
+            "Version": "4.1.11.23",
+            "Updated": "\/Date(1782376857126)\/"
         },
         {
             "Info": "",
@@ -716,8 +723,8 @@
             "Info": "",
             "Source": "main",
             "Name": "witr",
-            "Version": "0.3.2",
-            "Updated": "\/Date(1781857153644)\/"
+            "Version": "0.3.3",
+            "Updated": "\/Date(1782376705717)\/"
         },
         {
             "Info": "",
@@ -767,19 +774,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1782197845000)\/",
+                "value": "\/Date(1782379836000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月23日 14:57:25"
+                "DateTime": "2026年6月25日 17:30:36"
             },
-            "Manifests": 1588
+            "Manifests": 1589
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1782194043000)\/",
+                "value": "\/Date(1782384984000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月23日 13:54:03"
+                "DateTime": "2026年6月25日 18:56:24"
             },
             "Manifests": 2315
         },
@@ -797,9 +804,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1782189287000)\/",
+                "value": "\/Date(1782362392000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月23日 12:34:47"
+                "DateTime": "2026年6月25日 12:39:52"
             },
             "Manifests": 89
         },
@@ -807,19 +814,19 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1782189081000)\/",
+                "value": "\/Date(1782389940000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月23日 12:31:21"
+                "DateTime": "2026年6月25日 20:19:00"
             },
-            "Manifests": 46
+            "Manifests": 48
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1782189090000)\/",
+                "value": "\/Date(1782313819000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月23日 12:31:30"
+                "DateTime": "2026年6月24日 23:10:19"
             },
             "Manifests": 33
         }

@@ -1,6 +1,6 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-06-22T12:45:22.376-00:00",
+	"CreationDate": "2026-06-25T20:05:08.234-00:00",
 	"Sources": [
 		{
 			"Packages": [
@@ -71,6 +71,9 @@
 					"PackageIdentifier": "LocalSend.LocalSend"
 				},
 				{
+					"PackageIdentifier": "Python.Python.3.11"
+				},
+				{
 					"PackageIdentifier": "Microsoft.VisualStudioCode"
 				},
 				{
@@ -102,6 +105,9 @@
 				},
 				{
 					"PackageIdentifier": "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier": "Microsoft.WSL"
 				}
 			],
 			"SourceDetails": {
