@@ -1,11 +1,14 @@
 {
 	"$schema": "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate": "2026-06-25T20:05:08.234-00:00",
+	"CreationDate": "2026-06-28T15:13:50.087-00:00",
 	"Sources": [
 		{
 			"Packages": [
 				{
 					"PackageIdentifier": "ClashVergeRev.ClashVergeRev"
+				},
+				{
+					"PackageIdentifier": "Docker.DockerDesktop"
 				},
 				{
 					"PackageIdentifier": "Git.Git"
@@ -18,6 +21,9 @@
 				},
 				{
 					"PackageIdentifier": "Nutstore.Nutstore"
+				},
+				{
+					"PackageIdentifier": "Apple.iTunes"
 				},
 				{
 					"PackageIdentifier": "Nvidia.PhysX"
