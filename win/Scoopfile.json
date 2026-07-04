@@ -20,11 +20,18 @@
             "Updated": "\/Date(1781855236284)\/"
         },
         {
+            "Info": "",
+            "Source": "extras-plus",
+            "Name": "affinity",
+            "Version": "3.2.2.4557",
+            "Updated": "\/Date(1782867898883)\/"
+        },
+        {
             "Info": "Held package",
             "Source": "extras-plus",
             "Name": "aionui",
-            "Version": "2.1.22",
-            "Updated": "\/Date(1782376623652)\/"
+            "Version": "2.1.25",
+            "Updated": "\/Date(1782805128829)\/"
         },
         {
             "Info": "",
@@ -58,8 +65,15 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "cap",
-            "Version": "0.5.2",
-            "Updated": "\/Date(1782629144278)\/"
+            "Version": "0.5.3",
+            "Updated": "\/Date(1782886998321)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "cc-switch",
+            "Version": "3.16.5",
+            "Updated": "\/Date(1782970354252)\/"
         },
         {
             "Info": "",
@@ -72,29 +86,36 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "cockpit-tools",
-            "Version": "0.26.5",
-            "Updated": "\/Date(1782038112641)\/"
+            "Version": "1.0.2",
+            "Updated": "\/Date(1783065932182)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.142.4",
-            "Updated": "\/Date(1782719175765)\/"
+            "Version": "0.142.5",
+            "Updated": "\/Date(1782872553050)\/"
         },
         {
             "Info": "",
             "Source": "extras-plus",
             "Name": "comfyui",
-            "Version": "0.26.0",
-            "Updated": "\/Date(1782632408536)\/"
+            "Version": "0.27.0",
+            "Updated": "\/Date(1782887520195)\/"
+        },
+        {
+            "Info": "Held package",
+            "Source": "extras-plus",
+            "Name": "comfyui-manager",
+            "Version": "2026.07.02.193649",
+            "Updated": "\/Date(1783147831366)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cryptomator",
-            "Version": "1.19.2",
-            "Updated": "\/Date(1781855367864)\/"
+            "Version": "1.19.3",
+            "Updated": "\/Date(1782789024085)\/"
         },
         {
             "Info": "",
@@ -107,8 +128,8 @@
             "Info": "",
             "Source": "main",
             "Name": "deno",
-            "Version": "2.9.0",
-            "Updated": "\/Date(1782459433993)\/"
+            "Version": "2.9.1",
+            "Updated": "\/Date(1782954384821)\/"
         },
         {
             "Info": "",
@@ -158,13 +179,6 @@
             "Name": "ffmpeg",
             "Version": "8.1.2",
             "Updated": "\/Date(1782629337088)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "flameshot",
-            "Version": "14.0.0",
-            "Updated": "\/Date(1781855608874)\/"
         },
         {
             "Info": "",
@@ -225,16 +239,16 @@
         {
             "Info": "",
             "Source": "main",
-            "Name": "ghostscript",
-            "Version": "10.07.1",
-            "Updated": "\/Date(1781856243375)\/"
+            "Name": "gh",
+            "Version": "2.96.0",
+            "Updated": "\/Date(1783138592571)\/"
         },
         {
             "Info": "",
-            "Source": "extras",
-            "Name": "gimp",
-            "Version": "3.2.4",
-            "Updated": "\/Date(1781851411675)\/"
+            "Source": "main",
+            "Name": "ghostscript",
+            "Version": "10.07.1",
+            "Updated": "\/Date(1781856243375)\/"
         },
         {
             "Info": "",
@@ -282,8 +296,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "handy",
-            "Version": "0.8.3",
-            "Updated": "\/Date(1781856294023)\/"
+            "Version": "0.9.0",
+            "Updated": "\/Date(1782954399419)\/"
         },
         {
             "Info": "",
@@ -319,13 +333,6 @@
             "Name": "imagemagick",
             "Version": "7.1.2-26",
             "Updated": "\/Date(1782102500036)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras-cn",
-            "Name": "inkscape-cn",
-            "Version": "1.4.4",
-            "Updated": "\/Date(1781856569125)\/"
         },
         {
             "Info": "",
@@ -380,8 +387,8 @@
             "Info": "",
             "Source": "main",
             "Name": "llmfit",
-            "Version": "0.9.34",
-            "Updated": "\/Date(1782708382342)\/"
+            "Version": "0.9.37",
+            "Updated": "\/Date(1783137628563)\/"
         },
         {
             "Info": "",
@@ -426,11 +433,11 @@
             "Updated": "\/Date(1782390044857)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.6.12",
-            "Updated": "\/Date(1782376629874)\/"
+            "Version": "2026.7.0",
+            "Updated": "\/Date(1783066087833)\/"
         },
         {
             "Info": "",
@@ -506,8 +513,8 @@
             "Info": "",
             "Source": "main",
             "Name": "postgresql",
-            "Version": "18.4",
-            "Updated": "\/Date(1781856712780)\/"
+            "Version": "18.4-2",
+            "Updated": "\/Date(1783066163743)\/"
         },
         {
             "Info": "",
@@ -559,11 +566,11 @@
             "Updated": "\/Date(1782639394408)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "ruff",
-            "Version": "0.15.18",
-            "Updated": "\/Date(1782376639768)\/"
+            "Version": "0.15.20",
+            "Updated": "\/Date(1782732476957)\/"
         },
         {
             "Info": "",
@@ -665,17 +672,24 @@
         },
         {
             "Info": "",
+            "Source": "main-plus",
+            "Name": "typst-ts",
+            "Version": "0.8.0-rc3",
+            "Updated": "\/Date(1782816536311)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "typstyle",
             "Version": "0.15.0",
             "Updated": "\/Date(1782038299242)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.11.22",
-            "Updated": "\/Date(1781857056121)\/"
+            "Version": "0.11.26",
+            "Updated": "\/Date(1782867389239)\/"
         },
         {
             "Info": "",
@@ -695,15 +709,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.126.0",
-            "Updated": "\/Date(1782376955424)\/"
+            "Version": "1.127.0",
+            "Updated": "\/Date(1782954431893)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "webview2",
-            "Version": "149.0.4022.98",
-            "Updated": "\/Date(1782717999536)\/"
+            "Version": "150.0.4078.48",
+            "Updated": "\/Date(1783066421312)\/"
         },
         {
             "Info": "",
@@ -795,21 +809,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1782712810000)\/",
+                "value": "\/Date(1783145017000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月29日 14:00:10"
+                "DateTime": "2026年7月4日 14:03:37"
             },
-            "Manifests": 1593
+            "Manifests": 1604
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1782712734000)\/",
+                "value": "\/Date(1783143207000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月29日 13:58:54"
+                "DateTime": "2026年7月4日 13:33:27"
             },
-            "Manifests": 2322
+            "Manifests": 2328
         },
         {
             "Name": "nerd-fonts",
@@ -825,9 +839,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1782718751000)\/",
+                "value": "\/Date(1783138119000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月29日 15:39:11"
+                "DateTime": "2026年7月4日 12:08:39"
             },
             "Manifests": 88
         },
@@ -835,21 +849,21 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1782718664000)\/",
+                "value": "\/Date(1783137825000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月29日 15:37:44"
+                "DateTime": "2026年7月4日 12:03:45"
             },
-            "Manifests": 50
+            "Manifests": 53
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1782709291000)\/",
+                "value": "\/Date(1783089203000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年6月29日 13:01:31"
+                "DateTime": "2026年7月3日 22:33:23"
             },
-            "Manifests": 33
+            "Manifests": 34
         }
     ]
 }
