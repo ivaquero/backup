@@ -79,15 +79,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
-            "Version": "1.9.11",
-            "Updated": "\/Date(1781851435112)\/"
+            "Version": "1.9.12",
+            "Updated": "\/Date(1783271767735)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "cockpit-tools",
-            "Version": "1.0.2",
-            "Updated": "\/Date(1783065932182)\/"
+            "Version": "1.0.5",
+            "Updated": "\/Date(1783313461182)\/"
         },
         {
             "Info": "",
@@ -331,8 +331,8 @@
             "Info": "",
             "Source": "main",
             "Name": "imagemagick",
-            "Version": "7.1.2-26",
-            "Updated": "\/Date(1782102500036)\/"
+            "Version": "7.1.2-27",
+            "Updated": "\/Date(1783310577840)\/"
         },
         {
             "Info": "",
@@ -366,8 +366,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "lazygit",
-            "Version": "0.62.2",
-            "Updated": "\/Date(1781856359175)\/"
+            "Version": "0.63.0",
+            "Updated": "\/Date(1783184809708)\/"
         },
         {
             "Info": "",
@@ -387,8 +387,8 @@
             "Info": "",
             "Source": "main",
             "Name": "llmfit",
-            "Version": "0.9.37",
-            "Updated": "\/Date(1783137628563)\/"
+            "Version": "0.9.38",
+            "Updated": "\/Date(1783271773938)\/"
         },
         {
             "Info": "",
@@ -470,6 +470,13 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "ouch",
+            "Version": "0.8.1",
+            "Updated": "\/Date(1783153685141)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "oxipng",
             "Version": "10.1.1",
             "Updated": "\/Date(1781856612460)\/"
@@ -499,8 +506,8 @@
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "11.9.0",
-            "Updated": "\/Date(1782376894536)\/"
+            "Version": "11.10.0",
+            "Updated": "\/Date(1783217564472)\/"
         },
         {
             "Info": "",
@@ -629,18 +636,11 @@
             "Updated": "\/Date(1782708395623)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
             "Version": "2.13.1",
-            "Updated": "\/Date(1782376637761)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras-cn",
-            "Name": "tencent-meeting",
-            "Version": "3.43.21.403",
-            "Updated": "\/Date(1782635267196)\/"
+            "Updated": "\/Date(1783321872568)\/"
         },
         {
             "Info": "",
@@ -697,6 +697,13 @@
             "Name": "vesktop",
             "Version": "1.6.5",
             "Updated": "\/Date(1782199501290)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras-plus",
+            "Name": "vibe",
+            "Version": "3.0.20",
+            "Updated": "\/Date(1783228955582)\/"
         },
         {
             "Info": "",
@@ -793,15 +800,15 @@
             "Info": "",
             "Source": "main",
             "Name": "yt-dlp",
-            "Version": "2026.06.09",
-            "Updated": "\/Date(1781857173891)\/"
+            "Version": "2026.07.04",
+            "Updated": "\/Date(1783217717740)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "zoxide",
-            "Version": "0.9.9",
-            "Updated": "\/Date(1781850711170)\/"
+            "Version": "0.10.0",
+            "Updated": "\/Date(1783182145680)\/"
         }
     ],
     "buckets": [
@@ -809,21 +816,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1783145017000)\/",
+                "value": "\/Date(1783316860000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月4日 14:03:37"
+                "DateTime": "2026年7月6日 13:47:40"
             },
-            "Manifests": 1604
+            "Manifests": 1605
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1783143207000)\/",
+                "value": "\/Date(1783317381000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月4日 13:33:27"
+                "DateTime": "2026年7月6日 13:56:21"
             },
-            "Manifests": 2328
+            "Manifests": 2335
         },
         {
             "Name": "nerd-fonts",
@@ -839,9 +846,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1783138119000)\/",
+                "value": "\/Date(1783313221000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月4日 12:08:39"
+                "DateTime": "2026年7月6日 12:47:01"
             },
             "Manifests": 88
         },
@@ -849,19 +856,19 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1783137825000)\/",
+                "value": "\/Date(1783312865000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月4日 12:03:45"
+                "DateTime": "2026年7月6日 12:41:05"
             },
-            "Manifests": 53
+            "Manifests": 52
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1783089203000)\/",
+                "value": "\/Date(1783225908000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月3日 22:33:23"
+                "DateTime": "2026年7月5日 12:31:48"
             },
             "Manifests": 34
         }

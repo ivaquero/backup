@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-07-04T14:53:32.271-00:00",
+	"CreationDate" : "2026-07-06T15:16:45.573-00:00",
 	"Sources" : 
 	[
 		{
@@ -17,6 +17,9 @@
 				},
 				{
 					"PackageIdentifier" : "Unity.UnityHub"
+				},
+				{
+					"PackageIdentifier" : "Tencent.TencentMeeting"
 				},
 				{
 					"PackageIdentifier" : "DigitalScholar.Zotero"
@@ -49,6 +52,9 @@
 					"PackageIdentifier" : "Microsoft.VisualStudio.Community"
 				},
 				{
+					"PackageIdentifier" : "Embarcadero.Dev-C++"
+				},
+				{
 					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
@@ -71,6 +77,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.SDK.10"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
