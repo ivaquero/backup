@@ -239,11 +239,13 @@
       ]
     }
   ],
+  // other
   "MATLAB.showFeatureNotAvailableError": false,
   "terminal.integrated.commandsToSkipShell": [
     "matlab.interrupt",
     "language-julia.interrupt"
   ],
-  // ai
-  "chat.disableAIFeatures": true
+  "chat.disableAIFeatures": true,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "godotTools.lsp.autoReconnect.enabled": false
 }

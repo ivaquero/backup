@@ -63,6 +63,13 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "busybox",
+            "Version": "6075-g169694ebd",
+            "Updated": "\/Date(1783411140462)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras-plus",
             "Name": "cap",
             "Version": "0.5.3",
@@ -102,6 +109,13 @@
             "Name": "cryptomator",
             "Version": "1.19.3",
             "Updated": "\/Date(1782789024085)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "cuda",
+            "Version": "13.3.1",
+            "Updated": "\/Date(1783427892979)\/"
         },
         {
             "Info": "",
@@ -174,11 +188,11 @@
             "Updated": "\/Date(1781855623364)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "flutter",
-            "Version": "3.44.2",
-            "Updated": "\/Date(1782198307329)\/"
+            "Version": "3.44.5",
+            "Updated": "\/Date(1783426476823)\/"
         },
         {
             "Info": "",
@@ -212,8 +226,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.73.1",
-            "Updated": "\/Date(1781856230719)\/"
+            "Version": "0.74.0",
+            "Updated": "\/Date(1783395659370)\/"
         },
         {
             "Info": "",
@@ -395,14 +409,7 @@
             "Source": "main-plus",
             "Name": "micromamba",
             "Version": "2.8.1-0",
-            "Updated": "\/Date(1781853545422)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "microsoft-coreutils",
-            "Version": "2026.6.16",
-            "Updated": "\/Date(1782650638948)\/"
+            "Updated": "\/Date(1783410454840)\/"
         },
         {
             "Info": "",
@@ -419,11 +426,11 @@
             "Updated": "\/Date(1782390044857)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.7.0",
-            "Updated": "\/Date(1783066087833)\/"
+            "Version": "2026.7.1",
+            "Updated": "\/Date(1783409098865)\/"
         },
         {
             "Info": "",
@@ -487,6 +494,13 @@
             "Name": "pdfcpu",
             "Version": "0.13.0",
             "Updated": "\/Date(1781856616764)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "perl",
+            "Version": "5.42.2.1",
+            "Updated": "\/Date(1783409137501)\/"
         },
         {
             "Info": "",
@@ -681,8 +695,8 @@
             "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.11.26",
-            "Updated": "\/Date(1782867389239)\/"
+            "Version": "0.11.27",
+            "Updated": "\/Date(1783395667100)\/"
         },
         {
             "Info": "",
@@ -727,11 +741,11 @@
             "Updated": "\/Date(1783066421312)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "wechat",
             "Version": "4.1.11.24",
-            "Updated": "\/Date(1782629893807)\/"
+            "Updated": "\/Date(1783395679172)\/"
         },
         {
             "Info": "",
@@ -816,9 +830,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1783330896000)\/",
+                "value": "\/Date(1783416753000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 17:41:36"
+                "DateTime": "2026年7月7日 17:32:33"
             },
             "Manifests": 1605
         },
@@ -826,11 +840,11 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1783340755000)\/",
+                "value": "\/Date(1783416699000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 20:25:55"
+                "DateTime": "2026年7月7日 17:31:39"
             },
-            "Manifests": 2338
+            "Manifests": 2341
         },
         {
             "Name": "nerd-fonts",
@@ -846,9 +860,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1783313221000)\/",
+                "value": "\/Date(1783353509000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 12:47:01"
+                "DateTime": "2026年7月6日 23:58:29"
             },
             "Manifests": 88
         },
@@ -856,9 +870,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1783332088000)\/",
+                "value": "\/Date(1783397889000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 18:01:28"
+                "DateTime": "2026年7月7日 12:18:09"
             },
             "Manifests": 52
         },
@@ -866,9 +880,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1783225908000)\/",
+                "value": "\/Date(1783397887000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月5日 12:31:48"
+                "DateTime": "2026年7月7日 12:18:07"
             },
             "Manifests": 34
         }

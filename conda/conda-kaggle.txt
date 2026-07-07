@@ -9,6 +9,7 @@ openpyxl
 plotly
 plotnine
 preliz
+pygame-ce
 pymc
 pymoo
 scikit-image
