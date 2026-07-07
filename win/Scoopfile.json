@@ -98,20 +98,6 @@
         },
         {
             "Info": "",
-            "Source": "extras-plus",
-            "Name": "comfyui",
-            "Version": "0.27.0",
-            "Updated": "\/Date(1782887520195)\/"
-        },
-        {
-            "Info": "Held package",
-            "Source": "extras-plus",
-            "Name": "comfyui-manager",
-            "Version": "2026.07.02.193649",
-            "Updated": "\/Date(1783147831366)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras",
             "Name": "cryptomator",
             "Version": "1.19.3",
@@ -212,8 +198,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fresh",
-            "Version": "0.4.2",
-            "Updated": "\/Date(1782629403473)\/"
+            "Version": "0.4.3",
+            "Updated": "\/Date(1783332092100)\/"
         },
         {
             "Info": "",
@@ -258,11 +244,11 @@
             "Updated": "\/Date(1782119562261)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "googlechrome",
-            "Version": "149.0.7827.156",
-            "Updated": "\/Date(1781856265935)\/"
+            "Version": "150.0.7871.47",
+            "Updated": "\/Date(1783338820087)\/"
         },
         {
             "Info": "",
@@ -603,6 +589,13 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "scoop-search",
+            "Version": "2.1.0",
+            "Updated": "\/Date(1783338794496)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "scrcpy",
             "Version": "4.0",
             "Updated": "\/Date(1781856835411)\/"
@@ -639,8 +632,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
-            "Version": "2.13.1",
-            "Updated": "\/Date(1783321872568)\/"
+            "Version": "2.14.0",
+            "Updated": "\/Date(1783332016327)\/"
         },
         {
             "Info": "",
@@ -721,6 +714,13 @@
         },
         {
             "Info": "",
+            "Source": "main",
+            "Name": "weasyprint",
+            "Version": "69.0",
+            "Updated": "\/Date(1783332222798)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "webview2",
             "Version": "150.0.4078.48",
@@ -786,8 +786,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "xnviewmp",
-            "Version": "1.11.2",
-            "Updated": "\/Date(1781851515009)\/"
+            "Version": "1.11.5",
+            "Updated": "\/Date(1783342796997)\/"
         },
         {
             "Info": "",
@@ -816,9 +816,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1783316860000)\/",
+                "value": "\/Date(1783330896000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 13:47:40"
+                "DateTime": "2026年7月6日 17:41:36"
             },
             "Manifests": 1605
         },
@@ -826,11 +826,11 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1783317381000)\/",
+                "value": "\/Date(1783340755000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 13:56:21"
+                "DateTime": "2026年7月6日 20:25:55"
             },
-            "Manifests": 2335
+            "Manifests": 2338
         },
         {
             "Name": "nerd-fonts",
@@ -856,9 +856,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1783312865000)\/",
+                "value": "\/Date(1783332088000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月6日 12:41:05"
+                "DateTime": "2026年7月6日 18:01:28"
             },
             "Manifests": 52
         },

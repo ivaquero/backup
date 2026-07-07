@@ -6,7 +6,8 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-    "keybindings": [
+    "keybindings": 
+    [
         {
             "id": "Terminal.ResizePaneDown",
             "keys": "alt+shift+down"
@@ -76,20 +77,25 @@
             "keys": "alt+shift+\\"
         }
     ],
-    "newTabMenu": [
+    "newTabMenu": 
+    [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": {
-        "defaults": {
-            "font": {
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "font": 
+            {
                 "size": 16
             },
             "snapOnInput": true,
             "useAcrylic": true
         },
-        "list": [
+        "list": 
+        [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -113,6 +119,12 @@
                 "guid": "{2661b4a8-b07e-5cb6-a6f4-5d3bd232b96f}",
                 "hidden": false,
                 "name": "Ubuntu-26.04",
+                "source": "Microsoft.WSL"
+            },
+            {
+                "guid": "{8bbb00b3-6f7e-507f-a4ac-e454a233067e}",
+                "hidden": false,
+                "name": "kali-linux",
                 "source": "Microsoft.WSL"
             },
             {
