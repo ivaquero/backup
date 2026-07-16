@@ -93,6 +93,7 @@
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
+  "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.defaultMergeMethod": "squash",
   // markdown
   "[markdown]": {
@@ -245,7 +246,5 @@
     "matlab.interrupt",
     "language-julia.interrupt"
   ],
-  "chat.disableAIFeatures": true,
-  "githubPullRequests.createOnPublishBranch": "never",
-  "godotTools.lsp.autoReconnect.enabled": false
+  "chat.disableAIFeatures": true
 }

@@ -1,15 +1,13 @@
-albumentations
+control
 cvxpy
 diffeqpy
-einops
 imbalanced-learn
-ipykernel
+mne
 monai
 openpyxl
 plotly
 plotnine
 preliz
-pygame-ce
 pymc
 pymoo
 scikit-image

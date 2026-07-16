@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-07-06T15:16:45.573-00:00",
+	"CreationDate" : "2026-07-16T13:16:01.740-00:00",
 	"Sources" : 
 	[
 		{
@@ -11,12 +11,6 @@
 				},
 				{
 					"PackageIdentifier" : "Git.Git"
-				},
-				{
-					"PackageIdentifier" : "Unity.Unity.2020"
-				},
-				{
-					"PackageIdentifier" : "Unity.UnityHub"
 				},
 				{
 					"PackageIdentifier" : "Tencent.TencentMeeting"
@@ -52,19 +46,10 @@
 					"PackageIdentifier" : "Microsoft.VisualStudio.Community"
 				},
 				{
-					"PackageIdentifier" : "Embarcadero.Dev-C++"
-				},
-				{
 					"PackageIdentifier" : "Valve.Steam"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.BuildTools"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.10"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
@@ -73,13 +58,13 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
 				},
 				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.10"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.SDK.10"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
@@ -137,9 +122,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.8"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.2.1"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsTerminal"
