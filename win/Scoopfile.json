@@ -1,4 +1,4 @@
-{
+﻿{
     "config": {
         "aria2-enabled": true,
         "scoop_repo": "https://github.com/ScoopInstaller/Scoop",
@@ -23,15 +23,15 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "affinity",
-            "Version": "3.2.2.4557",
-            "Updated": "\/Date(1782867898883)\/"
+            "Version": "3.2.3.4646",
+            "Updated": "\/Date(1784534467374)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras-plus",
             "Name": "aionui",
-            "Version": "2.1.31",
-            "Updated": "\/Date(1783755984674)\/"
+            "Version": "2.1.37",
+            "Updated": "\/Date(1784535808375)\/"
         },
         {
             "Info": "",
@@ -72,8 +72,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "cap",
-            "Version": "0.5.3",
-            "Updated": "\/Date(1782886998321)\/"
+            "Version": "0.5.6",
+            "Updated": "\/Date(1784535122778)\/"
         },
         {
             "Info": "",
@@ -93,15 +93,15 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "cockpit-tools",
-            "Version": "1.3.4",
-            "Updated": "\/Date(1784172670562)\/"
+            "Version": "1.3.10",
+            "Updated": "\/Date(1784535156635)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.144.4",
-            "Updated": "\/Date(1784172770039)\/"
+            "Version": "0.144.6",
+            "Updated": "\/Date(1784535376217)\/"
         },
         {
             "Info": "",
@@ -135,8 +135,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "draw.io",
-            "Version": "30.3.11",
-            "Updated": "\/Date(1784172849836)\/"
+            "Version": "30.3.14",
+            "Updated": "\/Date(1784534813670)\/"
         },
         {
             "Info": "",
@@ -212,8 +212,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fresh",
-            "Version": "0.4.3",
-            "Updated": "\/Date(1783332092100)\/"
+            "Version": "0.4.4",
+            "Updated": "\/Date(1784534793381)\/"
         },
         {
             "Info": "",
@@ -226,8 +226,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.74.0",
-            "Updated": "\/Date(1783395659370)\/"
+            "Version": "0.74.1",
+            "Updated": "\/Date(1784534701593)\/"
         },
         {
             "Info": "",
@@ -380,8 +380,8 @@
             "Info": "",
             "Source": "main",
             "Name": "llmfit",
-            "Version": "1.1.3",
-            "Updated": "\/Date(1784172673101)\/"
+            "Version": "1.1.4",
+            "Updated": "\/Date(1784534691734)\/"
         },
         {
             "Info": "",
@@ -394,8 +394,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "mathpix",
-            "Version": "03.00.0147",
-            "Updated": "\/Date(1783495987524)\/"
+            "Version": "03.00.0150",
+            "Updated": "\/Date(1784535147831)\/"
         },
         {
             "Info": "",
@@ -499,8 +499,8 @@
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "11.13.1",
-            "Updated": "\/Date(1784172575815)\/"
+            "Version": "11.15.1",
+            "Updated": "\/Date(1784535164819)\/"
         },
         {
             "Info": "",
@@ -541,8 +541,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "readest",
-            "Version": "0.11.18",
-            "Updated": "\/Date(1783496001333)\/"
+            "Version": "0.11.20",
+            "Updated": "\/Date(1784534634084)\/"
         },
         {
             "Info": "",
@@ -569,8 +569,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ruff",
-            "Version": "0.15.21",
-            "Updated": "\/Date(1783656897328)\/"
+            "Version": "0.15.22",
+            "Updated": "\/Date(1784535583922)\/"
         },
         {
             "Info": "",
@@ -625,8 +625,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "sigil",
-            "Version": "2.8.0",
-            "Updated": "\/Date(1781851537247)\/"
+            "Version": "2.8.1",
+            "Updated": "\/Date(1784534603420)\/"
         },
         {
             "Info": "",
@@ -674,8 +674,8 @@
             "Info": "",
             "Source": "main",
             "Name": "typst",
-            "Version": "0.15.0",
-            "Updated": "\/Date(1781851266030)\/"
+            "Version": "0.15.1",
+            "Updated": "\/Date(1784534572380)\/"
         },
         {
             "Info": "",
@@ -692,11 +692,11 @@
             "Updated": "\/Date(1782038299242)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.11.27",
-            "Updated": "\/Date(1783496014931)\/"
+            "Version": "0.11.29",
+            "Updated": "\/Date(1784535413001)\/"
         },
         {
             "Info": "",
@@ -709,8 +709,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "vibe",
-            "Version": "3.0.22",
-            "Updated": "\/Date(1784173255390)\/"
+            "Version": "3.0.23",
+            "Updated": "\/Date(1784534587096)\/"
         },
         {
             "Info": "",
@@ -720,11 +720,11 @@
             "Updated": "\/Date(1781851508440)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "vscode",
             "Version": "1.129.0",
-            "Updated": "\/Date(1784173103598)\/"
+            "Updated": "\/Date(1784534393966)\/"
         },
         {
             "Info": "",
@@ -734,18 +734,11 @@
             "Updated": "\/Date(1783332222798)\/"
         },
         {
-            "Info": "Held package",
-            "Source": "extras",
-            "Name": "webview2",
-            "Version": "150.0.4078.48",
-            "Updated": "\/Date(1783656577342)\/"
-        },
-        {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.11.24",
-            "Updated": "\/Date(1783395679172)\/"
+            "Version": "4.1.11.55",
+            "Updated": "\/Date(1784535463933)\/"
         },
         {
             "Info": "",
@@ -755,11 +748,11 @@
             "Updated": "\/Date(1781857103093)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "windows-terminal",
             "Version": "1.24.11321.0",
-            "Updated": "\/Date(1781857107435)\/"
+            "Updated": "\/Date(1784534360401)\/"
         },
         {
             "Info": "",
@@ -830,21 +823,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1784163214000)\/",
+                "value": "\/Date(1784525609000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月16日 8:53:34"
+                "DateTime": "2026年7月20日 13:33:29"
             },
-            "Manifests": 1611
+            "Manifests": 1612
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1784163793000)\/",
+                "value": "\/Date(1784525536000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月16日 9:03:13"
+                "DateTime": "2026年7月20日 13:32:16"
             },
-            "Manifests": 2347
+            "Manifests": 2348
         },
         {
             "Name": "nerd-fonts",
@@ -860,9 +853,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1784124920000)\/",
+                "value": "\/Date(1784520760000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月15日 22:15:20"
+                "DateTime": "2026年7月20日 12:12:40"
             },
             "Manifests": 88
         },
@@ -870,9 +863,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1784173230000)\/",
+                "value": "\/Date(1784520376000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月16日 11:40:30"
+                "DateTime": "2026年7月20日 12:06:16"
             },
             "Manifests": 52
         },
@@ -880,9 +873,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1784124777000)\/",
+                "value": "\/Date(1784345694000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月15日 22:12:57"
+                "DateTime": "2026年7月18日 11:34:54"
             },
             "Manifests": 33
         }

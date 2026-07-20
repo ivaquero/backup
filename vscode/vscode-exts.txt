@@ -1,4 +1,4 @@
-adachishingo.open-with
+﻿adachishingo.open-with
 alefragnani.bookmarks
 chanhx.crabviz
 charliermarsh.ruff
@@ -7,11 +7,9 @@ codesmith.markdown-inline-editor-vscode
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
-geequlim.godot-tools
 github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
-google.colab
 hediet.vscode-drawio
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence

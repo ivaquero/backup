@@ -3,9 +3,12 @@
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
     "alwaysShowNotificationIcon": false,
+    "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
+    "defaultInputScope": "alphanumericHalfWidth",
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "firstWindowPreference": "persistedWindowLayout",
     "keybindings": 
     [
         {
@@ -77,6 +80,7 @@
             "keys": "alt+shift+\\"
         }
     ],
+    "launchMode": "fullscreen",
     "newTabMenu": 
     [
         {
@@ -100,7 +104,8 @@
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell"
+                "name": "Windows PowerShell",
+                "startingDirectory": "D:\\GitHub"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",

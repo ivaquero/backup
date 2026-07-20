@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-07-16T13:16:01.740-00:00",
+	"CreationDate" : "2026-07-20T16:28:02.607-00:00",
 	"Sources" : 
 	[
 		{
@@ -40,9 +40,6 @@
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.GameInput"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VisualStudio.Community"
 				},
 				{
@@ -70,10 +67,10 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
 				},
 				{
 					"PackageIdentifier" : "Baidu.BaiduNetdisk"
