@@ -16,7 +16,6 @@ kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
 mathworks.language-matlab
 meta.pyrefly
-ms-ossdata.vscode-pgsql
 ms-python.python
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
