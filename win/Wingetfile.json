@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-07-20T16:28:02.607-00:00",
+	"CreationDate" : "2026-07-23T15:20:15.889-00:00",
 	"Sources" : 
 	[
 		{
@@ -119,9 +119,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.8"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WSL"
