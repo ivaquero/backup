@@ -17,6 +17,7 @@ mads-hartmann.bash-ide-vscode
 mathworks.language-matlab
 meta.pyrefly
 ms-python.python
+ms-python.vscode-python-envs
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
@@ -35,6 +36,7 @@ redhat.vscode-xml
 redhat.vscode-yaml
 rust-lang.rust-analyzer
 rvben.rumdl
+snakemake.snakemake-lang
 tencent-cloud.coding-copilot
 toanbui.clear-comments
 tombi-toml.tombi
