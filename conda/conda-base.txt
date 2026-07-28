@@ -1,6 +1,7 @@
-conda-tree
+﻿conda-tree
 marimo
 nbformat
 openpyxl
 plotnine
 sympy
+zeromq

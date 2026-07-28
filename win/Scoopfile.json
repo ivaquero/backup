@@ -28,13 +28,6 @@
         },
         {
             "Info": "",
-            "Source": "extras-plus",
-            "Name": "aionui",
-            "Version": "2.1.39",
-            "Updated": "\/Date(1784778735932)\/"
-        },
-        {
-            "Info": "",
             "Source": "main",
             "Name": "android-clt",
             "Version": "15859902",
@@ -126,17 +119,24 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "dbx",
+            "Version": "0.5.68",
+            "Updated": "\/Date(1785216641296)\/"
+        },
+        {
+            "Info": "Held package",
             "Source": "main",
             "Name": "deno",
             "Version": "2.9.3",
-            "Updated": "\/Date(1784172787316)\/"
+            "Updated": "\/Date(1784874401170)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "draw.io",
-            "Version": "30.4.1",
-            "Updated": "\/Date(1784778399973)\/"
+            "Version": "31.0.2",
+            "Updated": "\/Date(1785216777182)\/"
         },
         {
             "Info": "",
@@ -188,18 +188,18 @@
             "Updated": "\/Date(1781855623364)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "flutter",
             "Version": "3.44.7",
-            "Updated": "\/Date(1784609784971)\/"
+            "Updated": "\/Date(1784873474986)\/"
         },
         {
             "Info": "",
             "Source": "extras-plus",
             "Name": "flying-carpet",
-            "Version": "9.0.0",
-            "Updated": "\/Date(1781857621282)\/"
+            "Version": "10.0.0",
+            "Updated": "\/Date(1785216812324)\/"
         },
         {
             "Info": "",
@@ -212,8 +212,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fresh",
-            "Version": "0.4.4",
-            "Updated": "\/Date(1784534793381)\/"
+            "Version": "0.4.5",
+            "Updated": "\/Date(1785216851496)\/"
         },
         {
             "Info": "",
@@ -324,22 +324,22 @@
             "Info": "",
             "Source": "main",
             "Name": "imagemagick",
-            "Version": "7.1.2-27",
-            "Updated": "\/Date(1783310577840)\/"
+            "Version": "7.1.2-29",
+            "Updated": "\/Date(1785216892570)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "innounp",
-            "Version": "2.67.11",
-            "Updated": "\/Date(1784172561555)\/"
+            "Version": "2.70.1",
+            "Updated": "\/Date(1784794028830)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "jan",
-            "Version": "0.8.3",
-            "Updated": "\/Date(1782709919679)\/"
+            "Version": "0.8.4",
+            "Updated": "\/Date(1784798395922)\/"
         },
         {
             "Info": "",
@@ -366,8 +366,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "lceda-pro",
-            "Version": "3.2.166",
-            "Updated": "\/Date(1783656887415)\/"
+            "Version": "3.2.174",
+            "Updated": "\/Date(1785216988680)\/"
         },
         {
             "Info": "",
@@ -422,8 +422,8 @@
             "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.7.12",
-            "Updated": "\/Date(1784785591251)\/"
+            "Version": "2026.7.15",
+            "Updated": "\/Date(1785217060847)\/"
         },
         {
             "Info": "",
@@ -452,6 +452,13 @@
             "Name": "obsidian",
             "Version": "1.12.7",
             "Updated": "\/Date(1781856606359)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras-plus",
+            "Name": "open-design",
+            "Version": "0.16.1",
+            "Updated": "\/Date(1785216964629)\/"
         },
         {
             "Info": "",
@@ -505,9 +512,16 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "pixi",
+            "Version": "0.74.0",
+            "Updated": "\/Date(1785217356239)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "pnpm",
-            "Version": "11.16.0",
-            "Updated": "\/Date(1784778332635)\/"
+            "Version": "11.17.0",
+            "Updated": "\/Date(1784874173620)\/"
         },
         {
             "Info": "",
@@ -569,15 +583,15 @@
             "Info": "",
             "Source": "main",
             "Name": "rtk",
-            "Version": "0.43.0",
-            "Updated": "\/Date(1782639394408)\/"
+            "Version": "0.44.0",
+            "Updated": "\/Date(1785216821986)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "ruff",
-            "Version": "0.15.22",
-            "Updated": "\/Date(1784535583922)\/"
+            "Version": "0.16.0",
+            "Updated": "\/Date(1784874699884)\/"
         },
         {
             "Info": "",
@@ -702,8 +716,8 @@
             "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.11.31",
-            "Updated": "\/Date(1784778430329)\/"
+            "Version": "0.11.32",
+            "Updated": "\/Date(1784874279976)\/"
         },
         {
             "Info": "",
@@ -744,8 +758,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.12.24",
-            "Updated": "\/Date(1784778747805)\/"
+            "Version": "4.1.12.26",
+            "Updated": "\/Date(1785216898459)\/"
         },
         {
             "Info": "",
@@ -830,21 +844,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1784784606000)\/",
+                "value": "\/Date(1785216279000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月23日 13:30:06"
+                "DateTime": "2026年7月28日 13:24:39"
             },
-            "Manifests": 1612
+            "Manifests": 1614
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1784784640000)\/",
+                "value": "\/Date(1785216311000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月23日 13:30:40"
+                "DateTime": "2026年7月28日 13:25:11"
             },
-            "Manifests": 2350
+            "Manifests": 2352
         },
         {
             "Name": "nerd-fonts",
@@ -860,9 +874,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1784778953000)\/",
+                "value": "\/Date(1785210426000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月23日 11:55:53"
+                "DateTime": "2026年7月28日 11:47:06"
             },
             "Manifests": 88
         },
@@ -870,19 +884,19 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1784778389000)\/",
+                "value": "\/Date(1785211902000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月23日 11:46:29"
+                "DateTime": "2026年7月28日 12:11:42"
             },
-            "Manifests": 52
+            "Manifests": 53
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1784778428000)\/",
+                "value": "\/Date(1785209956000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月23日 11:47:08"
+                "DateTime": "2026年7月28日 11:39:16"
             },
             "Manifests": 33
         }
