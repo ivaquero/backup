@@ -1,4 +1,4 @@
-﻿adachishingo.open-with
+adachishingo.open-with
 alefragnani.bookmarks
 chanhx.crabviz
 charliermarsh.ruff
@@ -8,13 +8,11 @@ czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
 github.vscode-github-actions
-github.vscode-pull-request-github
 golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
-mathworks.language-matlab
 meta.pyrefly
 ms-python.python
 ms-python.vscode-python-envs
@@ -38,8 +36,6 @@ rust-lang.rust-analyzer
 rvben.rumdl
 snakemake.snakemake-lang
 tencent-cloud.coding-copilot
-toanbui.clear-comments
 tombi-toml.tombi
-vincent-templier.vscode-netron
 vue.volar
 yzhang.markdown-all-in-one

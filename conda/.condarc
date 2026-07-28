@@ -1,14 +1,19 @@
+# channel
 channels:
   - conda-forge
-  # - robostack-jazzy
-# custom_channels:
-#   conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  - bioconda
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 
+# path
 envs_dirs:
   - ~/.conda/envs
 pkgs_dirs:
   - ~/.conda/pkgs
 
+# network
+remote_max_retries: 1
 ssl_verify: true
 
 # solver
@@ -28,3 +33,4 @@ safety_checks: enabled
 
 # output
 show_channel_urls: true
+report_errors: false
