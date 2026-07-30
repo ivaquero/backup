@@ -1,0 +1,5 @@
+﻿biopython
+markdown
+matplotlib
+ncbi-genome-download
+snakemake-minimal

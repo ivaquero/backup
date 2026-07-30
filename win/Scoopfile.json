@@ -72,29 +72,29 @@
             "Info": "",
             "Source": "extras",
             "Name": "cc-switch",
-            "Version": "3.18.0",
-            "Updated": "\/Date(1784778819280)\/"
+            "Version": "3.19.0",
+            "Updated": "\/Date(1785405312107)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
             "Version": "1.9.12",
-            "Updated": "\/Date(1783271767735)\/"
+            "Updated": "\/Date(1785407073817)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "cockpit-tools",
-            "Version": "1.3.14",
-            "Updated": "\/Date(1784778432712)\/"
+            "Version": "1.3.15",
+            "Updated": "\/Date(1785405523169)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.145.0",
-            "Updated": "\/Date(1784778952654)\/"
+            "Version": "0.146.0",
+            "Updated": "\/Date(1785408014192)\/"
         },
         {
             "Info": "",
@@ -121,15 +121,15 @@
             "Info": "",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.5.68",
-            "Updated": "\/Date(1785216641296)\/"
+            "Version": "0.5.70",
+            "Updated": "\/Date(1785405959811)\/"
         },
         {
             "Info": "Held package",
             "Source": "main",
             "Name": "deno",
             "Version": "2.9.3",
-            "Updated": "\/Date(1784874401170)\/"
+            "Updated": "\/Date(1785405493367)\/"
         },
         {
             "Info": "",
@@ -188,11 +188,11 @@
             "Updated": "\/Date(1781855623364)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "flutter",
-            "Version": "3.44.7",
-            "Updated": "\/Date(1784873474986)\/"
+            "Version": "3.44.8",
+            "Updated": "\/Date(1785413995428)\/"
         },
         {
             "Info": "",
@@ -258,11 +258,11 @@
             "Updated": "\/Date(1784172919038)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "googlechrome",
-            "Version": "150.0.7871.129",
-            "Updated": "\/Date(1784778792892)\/"
+            "Version": "151.0.7922.72",
+            "Updated": "\/Date(1785413774678)\/"
         },
         {
             "Info": "",
@@ -284,13 +284,6 @@
             "Name": "graphviz",
             "Version": "15.1.0",
             "Updated": "\/Date(1781856278832)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "handbrake-cli",
-            "Version": "1.11.2",
-            "Updated": "\/Date(1781856286676)\/"
         },
         {
             "Info": "",
@@ -366,8 +359,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "lceda-pro",
-            "Version": "3.2.174",
-            "Updated": "\/Date(1785216988680)\/"
+            "Version": "3.2.175",
+            "Updated": "\/Date(1785405794095)\/"
         },
         {
             "Info": "",
@@ -382,6 +375,13 @@
             "Name": "llmfit",
             "Version": "1.1.6",
             "Updated": "\/Date(1784778400996)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "lore",
+            "Version": "0.8.5",
+            "Updated": "\/Date(1785406467788)\/"
         },
         {
             "Info": "",
@@ -422,8 +422,8 @@
             "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.7.15",
-            "Updated": "\/Date(1785217060847)\/"
+            "Version": "2026.7.17",
+            "Updated": "\/Date(1785406275373)\/"
         },
         {
             "Info": "",
@@ -436,8 +436,8 @@
             "Info": "",
             "Source": "main",
             "Name": "nodejs",
-            "Version": "26.5.0",
-            "Updated": "\/Date(1784624561356)\/"
+            "Version": "26.5.1",
+            "Updated": "\/Date(1785406240956)\/"
         },
         {
             "Info": "",
@@ -513,15 +513,15 @@
             "Info": "",
             "Source": "main",
             "Name": "pixi",
-            "Version": "0.74.0",
-            "Updated": "\/Date(1785217356239)\/"
+            "Version": "0.75.0",
+            "Updated": "\/Date(1785405534499)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "11.17.0",
-            "Updated": "\/Date(1784874173620)\/"
+            "Version": "11.18.0",
+            "Updated": "\/Date(1785405530074)\/"
         },
         {
             "Info": "",
@@ -555,8 +555,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "qq-nt",
-            "Version": "9.9.32.260716",
-            "Updated": "\/Date(1784609530889)\/"
+            "Version": "9.9.33.260730",
+            "Updated": "\/Date(1785405500090)\/"
         },
         {
             "Info": "",
@@ -583,8 +583,8 @@
             "Info": "",
             "Source": "main",
             "Name": "rtk",
-            "Version": "0.44.0",
-            "Updated": "\/Date(1785216821986)\/"
+            "Version": "0.44.1",
+            "Updated": "\/Date(1785405584374)\/"
         },
         {
             "Info": "",
@@ -674,8 +674,8 @@
             "Info": "",
             "Source": "main",
             "Name": "tesseract",
-            "Version": "5.5.0.20241111",
-            "Updated": "\/Date(1781857010932)\/"
+            "Version": "5.5.3.20260724",
+            "Updated": "\/Date(1785218783275)\/"
         },
         {
             "Info": "",
@@ -716,8 +716,8 @@
             "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.11.32",
-            "Updated": "\/Date(1784874279976)\/"
+            "Version": "0.12.0",
+            "Updated": "\/Date(1785406376847)\/"
         },
         {
             "Info": "",
@@ -744,8 +744,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.130.0",
-            "Updated": "\/Date(1784779076792)\/"
+            "Version": "1.131.0",
+            "Updated": "\/Date(1785405909934)\/"
         },
         {
             "Info": "",
@@ -844,21 +844,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1785216279000)\/",
+                "value": "\/Date(1785402930000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月28日 13:24:39"
+                "DateTime": "2026年7月30日 17:15:30"
             },
-            "Manifests": 1614
+            "Manifests": 1617
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1785216311000)\/",
+                "value": "\/Date(1785405532000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月28日 13:25:11"
+                "DateTime": "2026年7月30日 17:58:52"
             },
-            "Manifests": 2352
+            "Manifests": 2354
         },
         {
             "Name": "nerd-fonts",
@@ -874,9 +874,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1785210426000)\/",
+                "value": "\/Date(1785382721000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月28日 11:47:06"
+                "DateTime": "2026年7月30日 11:38:41"
             },
             "Manifests": 88
         },
@@ -884,9 +884,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1785211902000)\/",
+                "value": "\/Date(1785382250000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月28日 12:11:42"
+                "DateTime": "2026年7月30日 11:30:50"
             },
             "Manifests": 53
         },
@@ -894,9 +894,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1785209956000)\/",
+                "value": "\/Date(1785335570000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月28日 11:39:16"
+                "DateTime": "2026年7月29日 22:32:50"
             },
             "Manifests": 33
         }
