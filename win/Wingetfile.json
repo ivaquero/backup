@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-07-23T15:20:15.889-00:00",
+	"CreationDate" : "2026-08-16T12:48:53.967-00:00",
 	"Sources" : 
 	[
 		{
@@ -43,9 +43,6 @@
 					"PackageIdentifier" : "Microsoft.VisualStudio.Community"
 				},
 				{
-					"PackageIdentifier" : "Valve.Steam"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
 				},
 				{
@@ -53,6 +50,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.10"
@@ -65,9 +65,6 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.9"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
@@ -119,6 +116,9 @@
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.1.8"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsAppRuntime.2"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.WSL"

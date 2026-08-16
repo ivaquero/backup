@@ -57,6 +57,13 @@
         {
             "Info": "",
             "Source": "main",
+            "Name": "bottom",
+            "Version": "0.14.8",
+            "Updated": "\/Date(1786699205208)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
             "Name": "busybox",
             "Version": "6075-g169694ebd",
             "Updated": "\/Date(1783411140462)\/"
@@ -65,36 +72,36 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "cap",
-            "Version": "0.5.7",
-            "Updated": "\/Date(1784609422821)\/"
+            "Version": "0.5.9",
+            "Updated": "\/Date(1786504170140)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cc-switch",
-            "Version": "3.19.0",
-            "Updated": "\/Date(1785405312107)\/"
+            "Version": "3.19.2",
+            "Updated": "\/Date(1786015221006)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
-            "Version": "1.9.12",
-            "Updated": "\/Date(1785407073817)\/"
+            "Version": "2.0.5",
+            "Updated": "\/Date(1786701369614)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "cockpit-tools",
-            "Version": "1.3.15",
-            "Updated": "\/Date(1785405523169)\/"
+            "Version": "1.3.21",
+            "Updated": "\/Date(1786801932475)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.146.0",
-            "Updated": "\/Date(1785408014192)\/"
+            "Version": "0.147.0",
+            "Updated": "\/Date(1786089463540)\/"
         },
         {
             "Info": "",
@@ -112,31 +119,38 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "cyberduck",
+            "Version": "9.5.3.45464",
+            "Updated": "\/Date(1786805207052)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "dark",
             "Version": "3.14.1",
             "Updated": "\/Date(1781855370378)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.5.70",
-            "Updated": "\/Date(1785405959811)\/"
+            "Version": "0.5.82",
+            "Updated": "\/Date(1786699665239)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "deno",
-            "Version": "2.9.3",
-            "Updated": "\/Date(1785405493367)\/"
+            "Version": "2.9.5",
+            "Updated": "\/Date(1786100178354)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "draw.io",
-            "Version": "31.0.2",
-            "Updated": "\/Date(1785216777182)\/"
+            "Version": "31.1.8",
+            "Updated": "\/Date(1786114395634)\/"
         },
         {
             "Info": "",
@@ -149,8 +163,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "eshelper",
-            "Version": "2026-04-09",
-            "Updated": "\/Date(1781856757596)\/"
+            "Version": "2026-08-06",
+            "Updated": "\/Date(1786166730953)\/"
         },
         {
             "Info": "",
@@ -163,8 +177,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fastfetch",
-            "Version": "2.66.0",
-            "Updated": "\/Date(1783677770533)\/"
+            "Version": "2.67.1",
+            "Updated": "\/Date(1786701495819)\/"
         },
         {
             "Info": "",
@@ -175,10 +189,24 @@
         },
         {
             "Info": "",
+            "Source": "main-plus",
+            "Name": "feynman",
+            "Version": "0.3.24",
+            "Updated": "\/Date(1786855696123)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "ffmpeg",
-            "Version": "8.1.2",
-            "Updated": "\/Date(1782629337088)\/"
+            "Version": "9.0.1",
+            "Updated": "\/Date(1786544698940)\/"
+        },
+        {
+            "Info": "",
+            "Source": "nerd-fonts",
+            "Name": "FiraCode-NF",
+            "Version": "3.5.0",
+            "Updated": "\/Date(1785745672067)\/"
         },
         {
             "Info": "",
@@ -191,8 +219,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "flutter",
-            "Version": "3.44.8",
-            "Updated": "\/Date(1785413995428)\/"
+            "Version": "3.47.0",
+            "Updated": "\/Date(1786702208299)\/"
         },
         {
             "Info": "",
@@ -203,31 +231,24 @@
         },
         {
             "Info": "",
-            "Source": "nerd-fonts",
-            "Name": "Font-Awesome",
-            "Version": "7.3.1",
-            "Updated": "\/Date(1784172884214)\/"
-        },
-        {
-            "Info": "",
             "Source": "main",
             "Name": "fresh",
-            "Version": "0.4.5",
-            "Updated": "\/Date(1785216851496)\/"
+            "Version": "0.4.9",
+            "Updated": "\/Date(1786504191983)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "frhelper",
-            "Version": "2026-04-09",
-            "Updated": "\/Date(1781856819284)\/"
+            "Version": "2026-08-06",
+            "Updated": "\/Date(1786189387667)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.74.1",
-            "Updated": "\/Date(1784534701593)\/"
+            "Version": "0.74.2",
+            "Updated": "\/Date(1785575710238)\/"
         },
         {
             "Info": "",
@@ -240,8 +261,8 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.96.0",
-            "Updated": "\/Date(1783138592571)\/"
+            "Version": "2.97.0",
+            "Updated": "\/Date(1785482801917)\/"
         },
         {
             "Info": "",
@@ -258,11 +279,11 @@
             "Updated": "\/Date(1784172919038)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "googlechrome",
             "Version": "151.0.7922.72",
-            "Updated": "\/Date(1785413774678)\/"
+            "Updated": "\/Date(1785933133645)\/"
         },
         {
             "Info": "",
@@ -282,15 +303,15 @@
             "Info": "",
             "Source": "main",
             "Name": "graphviz",
-            "Version": "15.1.0",
-            "Updated": "\/Date(1781856278832)\/"
+            "Version": "16.0.0",
+            "Updated": "\/Date(1786784556770)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "handy",
-            "Version": "0.9.4",
-            "Updated": "\/Date(1784778379122)\/"
+            "Version": "0.9.5",
+            "Updated": "\/Date(1786166056316)\/"
         },
         {
             "Info": "",
@@ -310,8 +331,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "i4tools",
-            "Version": "9.16.038",
-            "Updated": "\/Date(1783756246422)\/"
+            "Version": "9.17.013.5",
+            "Updated": "\/Date(1786114351540)\/"
         },
         {
             "Info": "",
@@ -329,17 +350,10 @@
         },
         {
             "Info": "",
-            "Source": "extras",
-            "Name": "jan",
-            "Version": "0.8.4",
-            "Updated": "\/Date(1784798395922)\/"
-        },
-        {
-            "Info": "",
             "Source": "extras-cn",
             "Name": "julia-cn",
-            "Version": "1.12.2",
-            "Updated": "\/Date(1781854753114)\/"
+            "Version": "1.12.6",
+            "Updated": "\/Date(1785419818200)\/"
         },
         {
             "Info": "",
@@ -352,36 +366,29 @@
             "Info": "",
             "Source": "extras",
             "Name": "lazygit",
-            "Version": "0.63.1",
-            "Updated": "\/Date(1784172971835)\/"
+            "Version": "0.64.1",
+            "Updated": "\/Date(1786699656700)\/"
         },
         {
             "Info": "",
             "Source": "extras-cn",
             "Name": "lceda-pro",
-            "Version": "3.2.175",
-            "Updated": "\/Date(1785405794095)\/"
+            "Version": "3.2.181",
+            "Updated": "\/Date(1786784673206)\/"
         },
         {
             "Info": "",
             "Source": "extras-plus",
             "Name": "linkandroid",
-            "Version": "2.0.0",
-            "Updated": "\/Date(1782198451859)\/"
+            "Version": "2.1.0",
+            "Updated": "\/Date(1785808650446)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "llmfit",
-            "Version": "1.1.6",
-            "Updated": "\/Date(1784778400996)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "lore",
-            "Version": "0.8.5",
-            "Updated": "\/Date(1785406467788)\/"
+            "Version": "1.1.9",
+            "Updated": "\/Date(1786332593122)\/"
         },
         {
             "Info": "",
@@ -401,8 +408,8 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "micromamba",
-            "Version": "2.8.1-0",
-            "Updated": "\/Date(1783410454840)\/"
+            "Version": "2.9.0-0",
+            "Updated": "\/Date(1786189197722)\/"
         },
         {
             "Info": "",
@@ -422,8 +429,8 @@
             "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.7.17",
-            "Updated": "\/Date(1785406275373)\/"
+            "Version": "2026.8.6",
+            "Updated": "\/Date(1786784702889)\/"
         },
         {
             "Info": "",
@@ -431,13 +438,6 @@
             "Name": "msys2-cn",
             "Version": "2026-06-11",
             "Updated": "\/Date(1781856574261)\/"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Name": "nodejs",
-            "Version": "26.5.1",
-            "Updated": "\/Date(1785406240956)\/"
         },
         {
             "Info": "",
@@ -450,15 +450,22 @@
             "Info": "",
             "Source": "extras",
             "Name": "obsidian",
-            "Version": "1.12.7",
-            "Updated": "\/Date(1781856606359)\/"
+            "Version": "1.13.7",
+            "Updated": "\/Date(1786572326695)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "ollama-full",
+            "Version": "0.32.13",
+            "Updated": "\/Date(1786801635070)\/"
         },
         {
             "Info": "",
             "Source": "extras-plus",
             "Name": "open-design",
-            "Version": "0.16.1",
-            "Updated": "\/Date(1785216964629)\/"
+            "Version": "0.19.2",
+            "Updated": "\/Date(1786784863188)\/"
         },
         {
             "Info": "",
@@ -478,15 +485,15 @@
             "Info": "",
             "Source": "main",
             "Name": "oxipng",
-            "Version": "10.1.1",
-            "Updated": "\/Date(1781856612460)\/"
+            "Version": "10.2.0",
+            "Updated": "\/Date(1786263240604)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "pandoc",
-            "Version": "3.10.1",
-            "Updated": "\/Date(1784778384209)\/"
+            "Version": "3.10.2",
+            "Updated": "\/Date(1786572335568)\/"
         },
         {
             "Info": "",
@@ -499,8 +506,8 @@
             "Info": "",
             "Source": "main",
             "Name": "pdfcpu",
-            "Version": "0.13.0",
-            "Updated": "\/Date(1781856616764)\/"
+            "Version": "0.15.0",
+            "Updated": "\/Date(1786504237120)\/"
         },
         {
             "Info": "",
@@ -513,15 +520,15 @@
             "Info": "",
             "Source": "main",
             "Name": "pixi",
-            "Version": "0.75.0",
-            "Updated": "\/Date(1785405534499)\/"
+            "Version": "0.76.2",
+            "Updated": "\/Date(1786383261754)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "11.18.0",
-            "Updated": "\/Date(1785405530074)\/"
+            "Version": "11.21.0",
+            "Updated": "\/Date(1786549322048)\/"
         },
         {
             "Info": "",
@@ -534,8 +541,8 @@
             "Info": "",
             "Source": "main",
             "Name": "postgresql",
-            "Version": "18.4-2",
-            "Updated": "\/Date(1783066163743)\/"
+            "Version": "18.6-1",
+            "Updated": "\/Date(1786699716619)\/"
         },
         {
             "Info": "",
@@ -548,22 +555,22 @@
             "Info": "",
             "Source": "main",
             "Name": "qpdf",
-            "Version": "12.3.2",
-            "Updated": "\/Date(1781856727724)\/"
+            "Version": "12.4.0",
+            "Updated": "\/Date(1786332720743)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "qq-nt",
-            "Version": "9.9.33.260730",
-            "Updated": "\/Date(1785405500090)\/"
+            "Version": "9.9.33.260813",
+            "Updated": "\/Date(1786699495387)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "readest",
-            "Version": "0.11.20",
-            "Updated": "\/Date(1784534634084)\/"
+            "Version": "0.12.1",
+            "Updated": "\/Date(1786233814560)\/"
         },
         {
             "Info": "",
@@ -583,15 +590,15 @@
             "Info": "",
             "Source": "main",
             "Name": "rtk",
-            "Version": "0.44.1",
-            "Updated": "\/Date(1785405584374)\/"
+            "Version": "0.45.0",
+            "Updated": "\/Date(1786114247113)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "ruff",
-            "Version": "0.16.0",
-            "Updated": "\/Date(1784874699884)\/"
+            "Version": "0.16.3",
+            "Updated": "\/Date(1786699209978)\/"
         },
         {
             "Info": "",
@@ -639,8 +646,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "shotcut",
-            "Version": "26.6.25",
-            "Updated": "\/Date(1782629575803)\/"
+            "Version": "26.8.1",
+            "Updated": "\/Date(1785617790254)\/"
         },
         {
             "Info": "",
@@ -660,8 +667,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "stirlingpdf",
-            "Version": "2.14.2",
-            "Updated": "\/Date(1783656662294)\/"
+            "Version": "2.14.3",
+            "Updated": "\/Date(1786074780022)\/"
         },
         {
             "Info": "",
@@ -709,15 +716,15 @@
             "Info": "",
             "Source": "main",
             "Name": "typstyle",
-            "Version": "0.15.0",
-            "Updated": "\/Date(1782038299242)\/"
+            "Version": "0.15.1",
+            "Updated": "\/Date(1785681754590)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.12.0",
-            "Updated": "\/Date(1785406376847)\/"
+            "Version": "0.12.5",
+            "Updated": "\/Date(1786784693122)\/"
         },
         {
             "Info": "",
@@ -744,8 +751,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.131.0",
-            "Updated": "\/Date(1785405909934)\/"
+            "Version": "1.133.0",
+            "Updated": "\/Date(1786572371552)\/"
         },
         {
             "Info": "",
@@ -758,15 +765,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.12.26",
-            "Updated": "\/Date(1785216898459)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras-cn",
-            "Name": "wechatdevtools",
-            "Version": "2.01.2510290",
-            "Updated": "\/Date(1781857103093)\/"
+            "Version": "4.1.12.55",
+            "Updated": "\/Date(1786701557917)\/"
         },
         {
             "Info": "",
@@ -786,8 +786,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wireshark",
-            "Version": "4.6.7",
-            "Updated": "\/Date(1783657433322)\/"
+            "Version": "4.6.8",
+            "Updated": "\/Date(1786701559971)\/"
         },
         {
             "Info": "",
@@ -821,8 +821,8 @@
             "Info": "",
             "Source": "main",
             "Name": "yazi",
-            "Version": "26.5.6",
-            "Updated": "\/Date(1781857169432)\/"
+            "Version": "26.8.15",
+            "Updated": "\/Date(1786784872829)\/"
         },
         {
             "Info": "",
@@ -844,29 +844,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1785402930000)\/",
+                "value": "\/Date(1786854684000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月30日 17:15:30"
+                "DateTime": "2026年8月16日 12:31:24"
             },
-            "Manifests": 1617
+            "Manifests": 1629
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1785405532000)\/",
+                "value": "\/Date(1786854648000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月30日 17:58:52"
+                "DateTime": "2026年8月16日 12:30:48"
             },
-            "Manifests": 2354
+            "Manifests": 2366
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1784146508000)\/",
+                "value": "\/Date(1785727958000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月16日 4:15:08"
+                "DateTime": "2026年8月3日 11:32:38"
             },
             "Manifests": 367
         },
@@ -874,31 +874,31 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1785382721000)\/",
+                "value": "\/Date(1786845633000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月30日 11:38:41"
+                "DateTime": "2026年8月16日 10:00:33"
             },
-            "Manifests": 88
+            "Manifests": 84
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1785382250000)\/",
+                "value": "\/Date(1786798798000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月30日 11:30:50"
+                "DateTime": "2026年8月15日 20:59:58"
             },
-            "Manifests": 53
+            "Manifests": 54
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1785335570000)\/",
+                "value": "\/Date(1786845510000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年7月29日 22:32:50"
+                "DateTime": "2026年8月16日 9:58:30"
             },
-            "Manifests": 33
+            "Manifests": 36
         }
     ]
 }
