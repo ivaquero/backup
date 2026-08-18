@@ -81,14 +81,11 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   // git
-  "scm.alwaysShowActions": true,
-  "scm.alwaysShowRepositories": true,
   "scm.defaultViewMode": "tree",
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
-  "git.ignoreMissingGitWarning": true,
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
@@ -175,7 +172,7 @@
   // yaml
   "redhat.telemetry.enabled": false,
   // pandoc
-  "pandoc.pdfOptString": "-f gfm --pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\"",
+  "pandoc.pdfOptString": "-f gfm --pdf-engine=xelatex -V colorlinks -V urlcolor=NavyBlue --syntax-highlighting tango -V geometry:a4paper -V geometry:margin=2.5cm -V CJKmainfont=\"STFangsong\" -V monofont=\"FiraCode Nerd Font\"",
   "pandoc.htmlOptString": "-f gfm --standalone --mathjax --shift-heading-level-by=-1",
   // typst
   "[typst]": {
