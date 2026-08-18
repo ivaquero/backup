@@ -144,8 +144,6 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
-  "python.languageServer": "Default",
-  "python.terminal.activateEnvironment": false,
   "ruff.configuration": "pyproject.toml",
   // jupyter
   "jupyter.askForKernelRestart": false,

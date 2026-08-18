@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-08-16T12:48:53.967-00:00",
+	"CreationDate" : "2026-08-18T18:41:39.018-00:00",
 	"Sources" : 
 	[
 		{
@@ -77,9 +77,6 @@
 				},
 				{
 					"PackageIdentifier" : "LocalSend.LocalSend"
-				},
-				{
-					"PackageIdentifier" : "Python.Python.3.11"
 				},
 				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
