@@ -4,6 +4,7 @@ diffeqpy
 graphviz
 imbalanced-learn
 mne
+monai
 openpyxl
 plotly
 plotnine

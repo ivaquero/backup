@@ -454,6 +454,13 @@
             "Updated": "\/Date(1786572326695)\/"
         },
         {
+            "Info": "",
+            "Source": "extras",
+            "Name": "office-tool-plus",
+            "Version": "11.6.6.0",
+            "Updated": "\/Date(1787050184004)\/"
+        },
+        {
             "Info": "Held package",
             "Source": "extras",
             "Name": "ollama-full",
