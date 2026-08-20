@@ -79,29 +79,29 @@
             "Info": "",
             "Source": "extras",
             "Name": "cc-switch",
-            "Version": "3.19.2",
-            "Updated": "\/Date(1786015221006)\/"
+            "Version": "3.20.0",
+            "Updated": "\/Date(1787115364135)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cherry-studio",
-            "Version": "2.0.7",
-            "Updated": "\/Date(1787047764374)\/"
+            "Version": "2.0.8",
+            "Updated": "\/Date(1787190134395)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "cockpit-tools",
-            "Version": "1.3.22",
-            "Updated": "\/Date(1787047968473)\/"
+            "Version": "1.3.23",
+            "Updated": "\/Date(1787115372137)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.147.0",
-            "Updated": "\/Date(1786089463540)\/"
+            "Version": "0.148.0",
+            "Updated": "\/Date(1787115397656)\/"
         },
         {
             "Info": "",
@@ -156,8 +156,8 @@
             "Info": "",
             "Source": "main",
             "Name": "dust",
-            "Version": "1.2.4",
-            "Updated": "\/Date(1781850410417)\/"
+            "Version": "1.2.5",
+            "Updated": "\/Date(1787190137359)\/"
         },
         {
             "Info": "",
@@ -191,8 +191,8 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "feynman",
-            "Version": "0.3.27",
-            "Updated": "\/Date(1787049121409)\/"
+            "Version": "0.3.28",
+            "Updated": "\/Date(1787115485984)\/"
         },
         {
             "Info": "",
@@ -254,8 +254,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "geekuninstaller",
-            "Version": "1.5.3.170",
-            "Updated": "\/Date(1781856234320)\/"
+            "Version": "1.5.4.180",
+            "Updated": "\/Date(1787147588442)\/"
         },
         {
             "Info": "",
@@ -275,8 +275,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "godot",
-            "Version": "4.7.1",
-            "Updated": "\/Date(1784172919038)\/"
+            "Version": "4.7.2",
+            "Updated": "\/Date(1787115493952)\/"
         },
         {
             "Info": "Held package",
@@ -331,8 +331,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "i4tools",
-            "Version": "9.17.013.5",
-            "Updated": "\/Date(1786114351540)\/"
+            "Version": "9.18.018",
+            "Updated": "\/Date(1787147605342)\/"
         },
         {
             "Info": "",
@@ -357,6 +357,13 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "kopuz",
+            "Version": "0.15.1",
+            "Updated": "\/Date(1787190136027)\/"
+        },
+        {
+            "Info": "",
             "Source": "main-plus",
             "Name": "kungfig",
             "Version": "0.0.1",
@@ -370,11 +377,11 @@
             "Updated": "\/Date(1786699656700)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras-cn",
             "Name": "lceda-pro",
             "Version": "3.2.181",
-            "Updated": "\/Date(1786784673206)\/"
+            "Updated": "\/Date(1787115063346)\/"
         },
         {
             "Info": "",
@@ -476,13 +483,6 @@
         },
         {
             "Info": "",
-            "Source": "extras-plus",
-            "Name": "open-design",
-            "Version": "0.19.2",
-            "Updated": "\/Date(1786784863188)\/"
-        },
-        {
-            "Info": "",
             "Source": "main",
             "Name": "openssh",
             "Version": "10.0.0.0p2",
@@ -534,8 +534,8 @@
             "Info": "",
             "Source": "main",
             "Name": "pixi",
-            "Version": "0.76.2",
-            "Updated": "\/Date(1786383261754)\/"
+            "Version": "0.77.0",
+            "Updated": "\/Date(1787147610368)\/"
         },
         {
             "Info": "Held package",
@@ -606,13 +606,6 @@
             "Name": "ruff",
             "Version": "0.16.3",
             "Updated": "\/Date(1786699209978)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "rune",
-            "Version": "1.1.0",
-            "Updated": "\/Date(1781851566925)\/"
         },
         {
             "Info": "",
@@ -702,8 +695,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "tor-browser",
-            "Version": "15.0.19",
-            "Updated": "\/Date(1784778924557)\/"
+            "Version": "15.0.20",
+            "Updated": "\/Date(1787115515057)\/"
         },
         {
             "Info": "",
@@ -758,8 +751,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.133.0",
-            "Updated": "\/Date(1786572371552)\/"
+            "Version": "1.134.0",
+            "Updated": "\/Date(1787147460260)\/"
         },
         {
             "Info": "",
@@ -772,8 +765,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.12.55",
-            "Updated": "\/Date(1786701557917)\/"
+            "Version": "4.1.13.7",
+            "Updated": "\/Date(1787115400412)\/"
         },
         {
             "Info": "",
@@ -851,19 +844,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1787043319000)\/",
+                "value": "\/Date(1787172505000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月18日 16:55:19"
+                "DateTime": "2026年8月20日 4:48:25"
             },
-            "Manifests": 1629
+            "Manifests": 1631
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1787043419000)\/",
+                "value": "\/Date(1787172448000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月18日 16:56:59"
+                "DateTime": "2026年8月20日 4:47:28"
             },
             "Manifests": 2368
         },
@@ -881,9 +874,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1787030331000)\/",
+                "value": "\/Date(1787145430000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月18日 13:18:51"
+                "DateTime": "2026年8月19日 21:17:10"
             },
             "Manifests": 82
         },
@@ -891,9 +884,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1787034383000)\/",
+                "value": "\/Date(1787104455000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月18日 14:26:23"
+                "DateTime": "2026年8月19日 9:54:15"
             },
             "Manifests": 56
         },
@@ -901,9 +894,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1787023637000)\/",
+                "value": "\/Date(1787058614000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月18日 11:27:17"
+                "DateTime": "2026年8月18日 21:10:14"
             },
             "Manifests": 35
         }
