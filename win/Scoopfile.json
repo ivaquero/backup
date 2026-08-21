@@ -85,23 +85,16 @@
         {
             "Info": "",
             "Source": "extras",
-            "Name": "cherry-studio",
-            "Version": "2.0.8",
-            "Updated": "\/Date(1787190134395)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
             "Name": "cockpit-tools",
-            "Version": "1.3.23",
-            "Updated": "\/Date(1787115372137)\/"
+            "Version": "1.3.24",
+            "Updated": "\/Date(1787273613029)\/"
         },
         {
             "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.148.0",
-            "Updated": "\/Date(1787115397656)\/"
+            "Version": "0.149.0",
+            "Updated": "\/Date(1787273625042)\/"
         },
         {
             "Info": "",
@@ -216,11 +209,11 @@
             "Updated": "\/Date(1781855623364)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "flutter",
             "Version": "3.47.0",
-            "Updated": "\/Date(1786702208299)\/"
+            "Updated": "\/Date(1787200030499)\/"
         },
         {
             "Info": "",
@@ -233,8 +226,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fresh",
-            "Version": "0.4.9",
-            "Updated": "\/Date(1786504191983)\/"
+            "Version": "0.4.10",
+            "Updated": "\/Date(1787273629290)\/"
         },
         {
             "Info": "",
@@ -261,8 +254,8 @@
             "Info": "",
             "Source": "main",
             "Name": "gh",
-            "Version": "2.97.0",
-            "Updated": "\/Date(1785482801917)\/"
+            "Version": "2.98.0",
+            "Updated": "\/Date(1787273633148)\/"
         },
         {
             "Info": "",
@@ -345,8 +338,8 @@
             "Info": "",
             "Source": "main",
             "Name": "innounp",
-            "Version": "2.70.1",
-            "Updated": "\/Date(1784794028830)\/"
+            "Version": "2.71.0",
+            "Updated": "\/Date(1787273634308)\/"
         },
         {
             "Info": "",
@@ -436,8 +429,8 @@
             "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.8.8",
-            "Updated": "\/Date(1787047908139)\/"
+            "Version": "2026.8.10",
+            "Updated": "\/Date(1787273639226)\/"
         },
         {
             "Info": "",
@@ -604,8 +597,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ruff",
-            "Version": "0.16.3",
-            "Updated": "\/Date(1786699209978)\/"
+            "Version": "0.16.4",
+            "Updated": "\/Date(1787273705560)\/"
         },
         {
             "Info": "",
@@ -828,8 +821,8 @@
             "Info": "",
             "Source": "main",
             "Name": "yt-dlp",
-            "Version": "2026.07.04",
-            "Updated": "\/Date(1783217717740)\/"
+            "Version": "2026.08.19",
+            "Updated": "\/Date(1787200976214)\/"
         },
         {
             "Info": "",
@@ -844,29 +837,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1787172505000)\/",
+                "value": "\/Date(1787291883000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月20日 4:48:25"
+                "DateTime": "2026年8月21日 13:58:03"
             },
-            "Manifests": 1631
+            "Manifests": 1634
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1787172448000)\/",
+                "value": "\/Date(1787286695000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月20日 4:47:28"
+                "DateTime": "2026年8月21日 12:31:35"
             },
-            "Manifests": 2368
+            "Manifests": 2371
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1785727958000)\/",
+                "value": "\/Date(1787243996000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月3日 11:32:38"
+                "DateTime": "2026年8月21日 0:39:56"
             },
             "Manifests": 367
         },
@@ -874,9 +867,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1787145430000)\/",
+                "value": "\/Date(1787277699000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月19日 21:17:10"
+                "DateTime": "2026年8月21日 10:01:39"
             },
             "Manifests": 82
         },
@@ -884,9 +877,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1787104455000)\/",
+                "value": "\/Date(1787190800000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月19日 9:54:15"
+                "DateTime": "2026年8月20日 9:53:20"
             },
             "Manifests": 56
         },
@@ -894,9 +887,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1787058614000)\/",
+                "value": "\/Date(1787277567000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月18日 21:10:14"
+                "DateTime": "2026年8月21日 9:59:27"
             },
             "Manifests": 35
         }
