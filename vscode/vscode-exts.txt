@@ -1,5 +1,6 @@
-adachishingo.open-with
+﻿adachishingo.open-with
 alefragnani.bookmarks
+astral-sh.ty
 chanhx.crabviz
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
@@ -12,7 +13,7 @@ hediet.vscode-drawio
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
-meta.pyrefly
+ms-python.python
 ms-python.vscode-python-envs
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers

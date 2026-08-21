@@ -144,6 +144,7 @@
     },
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "python.languageServer": "None",
   "ruff.configuration": "pyproject.toml",
   // jupyter
   "jupyter.askForKernelRestart": false,
@@ -232,11 +233,5 @@
       ]
     }
   ],
-  // other
-  "terminal.integrated.commandsToSkipShell": [
-    "matlab.interrupt",
-    "language-julia.interrupt"
-  ],
-  "MATLAB.showFeatureNotAvailableError": false,
-  "chat.disableAIFeatures": true,
+  "chat.disableAIFeatures": true
 }
