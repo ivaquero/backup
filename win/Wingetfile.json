@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-08-21T16:10:26.454-00:00",
+	"CreationDate" : "2026-08-23T12:03:17.240-00:00",
 	"Sources" : 
 	[
 		{
@@ -79,9 +79,6 @@
 					"PackageIdentifier" : "NetEase.UURemote"
 				},
 				{
-					"PackageIdentifier" : "LocalSend.LocalSend"
-				},
-				{
 					"PackageIdentifier" : "Microsoft.VisualStudioCode"
 				},
 				{
@@ -133,5 +130,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.29.280"
+	"WinGetVersion" : "1.29.290"
 }

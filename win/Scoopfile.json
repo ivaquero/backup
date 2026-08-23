@@ -86,8 +86,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "cockpit-tools",
-            "Version": "1.3.24",
-            "Updated": "\/Date(1787273613029)\/"
+            "Version": "1.3.25",
+            "Updated": "\/Date(1787457680209)\/"
         },
         {
             "Info": "",
@@ -128,8 +128,8 @@
             "Info": "Held package",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.5.82",
-            "Updated": "\/Date(1786699665239)\/"
+            "Version": "0.5.91",
+            "Updated": "\/Date(1787417256940)\/"
         },
         {
             "Info": "",
@@ -142,8 +142,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "draw.io",
-            "Version": "31.1.8",
-            "Updated": "\/Date(1786114395634)\/"
+            "Version": "31.3.2",
+            "Updated": "\/Date(1787457641376)\/"
         },
         {
             "Info": "",
@@ -181,11 +181,11 @@
             "Updated": "\/Date(1781850427754)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main-plus",
             "Name": "feynman",
-            "Version": "0.3.28",
-            "Updated": "\/Date(1787115485984)\/"
+            "Version": "0.3.33",
+            "Updated": "\/Date(1787415171812)\/"
         },
         {
             "Info": "",
@@ -198,8 +198,8 @@
             "Info": "",
             "Source": "nerd-fonts",
             "Name": "FiraCode-NF",
-            "Version": "3.5.0",
-            "Updated": "\/Date(1785745672067)\/"
+            "Version": "3.5.1",
+            "Updated": "\/Date(1787330221331)\/"
         },
         {
             "Info": "",
@@ -370,11 +370,11 @@
             "Updated": "\/Date(1786699656700)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras-cn",
             "Name": "lceda-pro",
-            "Version": "3.2.181",
-            "Updated": "\/Date(1787115063346)\/"
+            "Version": "3.2.186",
+            "Updated": "\/Date(1787417644625)\/"
         },
         {
             "Info": "",
@@ -389,6 +389,13 @@
             "Name": "llmfit",
             "Version": "1.1.10",
             "Updated": "\/Date(1786963423817)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Name": "localsend",
+            "Version": "1.18.2",
+            "Updated": "\/Date(1787457790254)\/"
         },
         {
             "Info": "",
@@ -730,8 +737,8 @@
             "Info": "",
             "Source": "extras-plus",
             "Name": "vibe",
-            "Version": "3.0.23",
-            "Updated": "\/Date(1784534587096)\/"
+            "Version": "3.1.2",
+            "Updated": "\/Date(1787457652636)\/"
         },
         {
             "Info": "",
@@ -758,8 +765,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.13.7",
-            "Updated": "\/Date(1787115400412)\/"
+            "Version": "4.1.13.12",
+            "Updated": "\/Date(1787392612535)\/"
         },
         {
             "Info": "",
@@ -837,19 +844,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1787291883000)\/",
+                "value": "\/Date(1787445233000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月21日 13:58:03"
+                "DateTime": "2026年8月23日 8:33:53"
             },
-            "Manifests": 1634
+            "Manifests": 1635
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1787286695000)\/",
+                "value": "\/Date(1787445120000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月21日 12:31:35"
+                "DateTime": "2026年8月23日 8:32:00"
             },
             "Manifests": 2371
         },
@@ -857,9 +864,9 @@
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1787243996000)\/",
+                "value": "\/Date(1787416200000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月21日 0:39:56"
+                "DateTime": "2026年8月23日 0:30:00"
             },
             "Manifests": 367
         },
@@ -867,9 +874,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1787277699000)\/",
+                "value": "\/Date(1787403968000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月21日 10:01:39"
+                "DateTime": "2026年8月22日 21:06:08"
             },
             "Manifests": 82
         },
@@ -877,9 +884,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1787190800000)\/",
+                "value": "\/Date(1787450431000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月20日 9:53:20"
+                "DateTime": "2026年8月23日 10:00:31"
             },
             "Manifests": 56
         },
@@ -887,9 +894,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1787277567000)\/",
+                "value": "\/Date(1787450475000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月21日 9:59:27"
+                "DateTime": "2026年8月23日 10:01:15"
             },
             "Manifests": 35
         }
