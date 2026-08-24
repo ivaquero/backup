@@ -159,10 +159,6 @@
     "editor.defaultFormatter": "Vue.volar"
   },
   "livePreview.notifyOnOpenLooseFile": false,
-  // bookmarks
-  "bookmarks.saveBookmarksInProject": true,
-  "bookmarks.sideBar.expanded": true,
-  "bookmarks.useWorkaroundForFormatters": true,
   // cpp
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.default.cppStandard": "c++20",

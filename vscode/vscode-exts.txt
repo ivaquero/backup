@@ -1,5 +1,4 @@
-﻿adachishingo.open-with
-alefragnani.bookmarks
+adachishingo.open-with
 astral-sh.ty
 chanhx.crabviz
 charliermarsh.ruff
@@ -13,7 +12,6 @@ hediet.vscode-drawio
 james-yu.latex-workshop
 kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
-ms-python.python
 ms-python.vscode-python-envs
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
@@ -22,7 +20,6 @@ ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.remote-explorer
-muhammad-ahmad.xlsx-viewer
 myriad-dreamin.tinymist
 openai.chatgpt
 oxc.oxc-vscode
