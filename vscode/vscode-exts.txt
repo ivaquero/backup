@@ -1,4 +1,4 @@
-adachishingo.open-with
+﻿adachishingo.open-with
 astral-sh.ty
 chanhx.crabviz
 charliermarsh.ruff
@@ -16,10 +16,10 @@ ms-python.vscode-python-envs
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-ssh
-ms-vscode-remote.remote-wsl
 ms-vscode.cpptools
 ms-vscode.live-server
 ms-vscode.remote-explorer
+muhammad-ahmad.xlsx-viewer
 myriad-dreamin.tinymist
 openai.chatgpt
 oxc.oxc-vscode
