@@ -52,7 +52,7 @@
             "Source": "extras",
             "Name": "blender",
             "Version": "5.2.1",
-            "Updated": "\/Date(1787682538796)\/"
+            "Updated": "\/Date(1787712129730)\/"
         },
         {
             "Info": "",
@@ -107,8 +107,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "cyberduck",
-            "Version": "9.5.3.45464",
-            "Updated": "\/Date(1786805207052)\/"
+            "Version": "9.5.4.45528",
+            "Updated": "\/Date(1787708224042)\/"
         },
         {
             "Info": "",
@@ -118,11 +118,11 @@
             "Updated": "\/Date(1781855370378)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.5.91",
-            "Updated": "\/Date(1787417256940)\/"
+            "Version": "0.5.96",
+            "Updated": "\/Date(1787732969306)\/"
         },
         {
             "Info": "",
@@ -181,11 +181,11 @@
             "Updated": "\/Date(1781850427754)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main-plus",
             "Name": "feynman",
             "Version": "0.3.40",
-            "Updated": "\/Date(1787647439127)\/"
+            "Updated": "\/Date(1787725541575)\/"
         },
         {
             "Info": "",
@@ -329,10 +329,10 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "julia",
+            "Source": "extras-cn",
+            "Name": "julia-cn",
             "Version": "1.12.7",
-            "Updated": "\/Date(1787682760607)\/"
+            "Updated": "\/Date(1787710558468)\/"
         },
         {
             "Info": "",
@@ -412,18 +412,18 @@
             "Updated": "\/Date(1782390044857)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.8.12",
-            "Updated": "\/Date(1787646900844)\/"
+            "Version": "2026.8.13",
+            "Updated": "\/Date(1787725518617)\/"
         },
         {
             "Info": "",
-            "Source": "main",
-            "Name": "msys2",
+            "Source": "extras-cn",
+            "Name": "msys2-cn",
             "Version": "2026-06-11",
-            "Updated": "\/Date(1787682840769)\/"
+            "Updated": "\/Date(1787713514734)\/"
         },
         {
             "Info": "",
@@ -454,11 +454,11 @@
             "Updated": "\/Date(1787050184004)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "ollama-full",
             "Version": "0.32.15",
-            "Updated": "\/Date(1787469607776)\/"
+            "Updated": "\/Date(1787725527390)\/"
         },
         {
             "Info": "",
@@ -709,8 +709,8 @@
             "Info": "",
             "Source": "main",
             "Name": "uv",
-            "Version": "0.12.5",
-            "Updated": "\/Date(1786784693122)\/"
+            "Version": "0.12.6",
+            "Updated": "\/Date(1787708240543)\/"
         },
         {
             "Info": "",
@@ -725,13 +725,6 @@
             "Name": "vibe",
             "Version": "3.1.2",
             "Updated": "\/Date(1787457652636)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "vlc",
-            "Version": "3.0.23",
-            "Updated": "\/Date(1787682610545)\/"
         },
         {
             "Info": "",
@@ -830,21 +823,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1787676933000)\/",
+                "value": "\/Date(1787726188000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 0:55:33"
+                "DateTime": "2026年8月26日 14:36:28"
             },
-            "Manifests": 1638
+            "Manifests": 1639
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1787675593000)\/",
+                "value": "\/Date(1787731147000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 0:33:13"
+                "DateTime": "2026年8月26日 15:59:07"
             },
-            "Manifests": 2372
+            "Manifests": 2373
         },
         {
             "Name": "nerd-fonts",
@@ -860,9 +853,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1787663847000)\/",
+                "value": "\/Date(1787726310000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月25日 21:17:27"
+                "DateTime": "2026年8月26日 14:38:30"
             },
             "Manifests": 82
         },
@@ -870,9 +863,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1787577273000)\/",
+                "value": "\/Date(1787709569000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月24日 21:14:33"
+                "DateTime": "2026年8月26日 9:59:29"
             },
             "Manifests": 56
         },
@@ -880,9 +873,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1787622874000)\/",
+                "value": "\/Date(1787709627000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月25日 9:54:34"
+                "DateTime": "2026年8月26日 10:00:27"
             },
             "Manifests": 36
         }
