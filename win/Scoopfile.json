@@ -49,10 +49,10 @@
         },
         {
             "Info": "",
-            "Source": "extras",
-            "Name": "blender",
+            "Source": "extras-cn",
+            "Name": "blender-cn",
             "Version": "5.2.1",
-            "Updated": "\/Date(1787712129730)\/"
+            "Updated": "\/Date(1787733655380)\/"
         },
         {
             "Info": "",
@@ -177,8 +177,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fd",
-            "Version": "10.4.2",
-            "Updated": "\/Date(1781850427754)\/"
+            "Version": "10.5.0",
+            "Updated": "\/Date(1787733559999)\/"
         },
         {
             "Info": "Held package",
@@ -728,6 +728,13 @@
         },
         {
             "Info": "",
+            "Source": "extras-cn",
+            "Name": "vlc-cn",
+            "Version": "3.0.23",
+            "Updated": "\/Date(1787758078096)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "vscode",
             "Version": "1.134.0",
@@ -823,9 +830,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1787726188000)\/",
+                "value": "\/Date(1787747559000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 14:36:28"
+                "DateTime": "2026年8月26日 20:32:39"
             },
             "Manifests": 1639
         },
@@ -833,9 +840,9 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1787731147000)\/",
+                "value": "\/Date(1787752974000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 15:59:07"
+                "DateTime": "2026年8月26日 22:02:54"
             },
             "Manifests": 2373
         },
@@ -853,31 +860,31 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1787726310000)\/",
+                "value": "\/Date(1787760249000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 14:38:30"
+                "DateTime": "2026年8月27日 0:04:09"
             },
-            "Manifests": 82
+            "Manifests": 84
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1787709569000)\/",
+                "value": "\/Date(1787760253000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 9:59:29"
+                "DateTime": "2026年8月27日 0:04:13"
             },
-            "Manifests": 56
+            "Manifests": 55
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1787709627000)\/",
+                "value": "\/Date(1787760243000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 10:00:27"
+                "DateTime": "2026年8月27日 0:04:03"
             },
-            "Manifests": 36
+            "Manifests": 37
         }
     ]
 }
