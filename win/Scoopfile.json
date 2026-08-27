@@ -84,10 +84,17 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "cockpit-tools",
+            "Version": "1.3.32",
+            "Updated": "\/Date(1787822809769)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "codex",
-            "Version": "0.149.1",
-            "Updated": "\/Date(1787548778048)\/"
+            "Version": "0.150.1",
+            "Updated": "\/Date(1787804764057)\/"
         },
         {
             "Info": "",
@@ -184,8 +191,8 @@
             "Info": "Held package",
             "Source": "main-plus",
             "Name": "feynman",
-            "Version": "0.3.40",
-            "Updated": "\/Date(1787725541575)\/"
+            "Version": "0.3.44",
+            "Updated": "\/Date(1787773715834)\/"
         },
         {
             "Info": "",
@@ -258,11 +265,11 @@
             "Updated": "\/Date(1787115493952)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "googlechrome",
-            "Version": "151.0.7922.72",
-            "Updated": "\/Date(1785933133645)\/"
+            "Version": "152.0.7977.65",
+            "Updated": "\/Date(1787820227603)\/"
         },
         {
             "Info": "",
@@ -338,8 +345,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "kopuz",
-            "Version": "0.16.0",
-            "Updated": "\/Date(1787509798911)\/"
+            "Version": "0.16.1",
+            "Updated": "\/Date(1787773278450)\/"
         },
         {
             "Info": "",
@@ -412,11 +419,11 @@
             "Updated": "\/Date(1782390044857)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "main",
             "Name": "mise",
-            "Version": "2026.8.13",
-            "Updated": "\/Date(1787725518617)\/"
+            "Version": "2026.8.14",
+            "Updated": "\/Date(1787819460910)\/"
         },
         {
             "Info": "",
@@ -454,11 +461,11 @@
             "Updated": "\/Date(1787050184004)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "ollama-full",
-            "Version": "0.32.15",
-            "Updated": "\/Date(1787725527390)\/"
+            "Version": "0.33.1",
+            "Updated": "\/Date(1787805244236)\/"
         },
         {
             "Info": "",
@@ -527,8 +534,8 @@
             "Info": "",
             "Source": "main",
             "Name": "pnpm",
-            "Version": "11.24.0",
-            "Updated": "\/Date(1787646725285)\/"
+            "Version": "12.0.0",
+            "Updated": "\/Date(1787773291947)\/"
         },
         {
             "Info": "",
@@ -576,8 +583,8 @@
             "Info": "",
             "Source": "main",
             "Name": "rtk",
-            "Version": "0.45.0",
-            "Updated": "\/Date(1786114247113)\/"
+            "Version": "0.46.0",
+            "Updated": "\/Date(1787804882737)\/"
         },
         {
             "Info": "",
@@ -644,6 +651,13 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "sniffnet",
+            "Version": "1.5.1",
+            "Updated": "\/Date(1787773292940)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "starship",
             "Version": "1.26.0",
@@ -681,8 +695,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ty",
-            "Version": "0.0.74",
-            "Updated": "\/Date(1787495051330)\/"
+            "Version": "0.0.75",
+            "Updated": "\/Date(1787804875547)\/"
         },
         {
             "Info": "",
@@ -737,8 +751,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "vscode",
-            "Version": "1.134.0",
-            "Updated": "\/Date(1787147460260)\/"
+            "Version": "1.135.0",
+            "Updated": "\/Date(1787773337150)\/"
         },
         {
             "Info": "",
@@ -767,13 +781,6 @@
             "Name": "winhance",
             "Version": "26.06.12",
             "Updated": "\/Date(1781857120754)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "wireshark",
-            "Version": "4.6.8",
-            "Updated": "\/Date(1786701559971)\/"
         },
         {
             "Info": "",
@@ -830,19 +837,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1787747559000)\/",
+                "value": "\/Date(1787815577000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 20:32:39"
+                "DateTime": "2026年8月27日 15:26:17"
             },
-            "Manifests": 1639
+            "Manifests": 1640
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1787752974000)\/",
+                "value": "\/Date(1787812287000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年8月26日 22:02:54"
+                "DateTime": "2026年8月27日 14:31:27"
             },
             "Manifests": 2373
         },

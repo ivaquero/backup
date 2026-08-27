@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-08-26T23:33:00.977-00:00",
+	"CreationDate" : "2026-08-27T18:12:36.565-00:00",
 	"Sources" : 
 	[
 		{
@@ -74,6 +74,9 @@
 				},
 				{
 					"PackageIdentifier" : "kangfenmao.CherryStudio"
+				},
+				{
+					"PackageIdentifier" : "Tencent.WorkBuddy"
 				},
 				{
 					"PackageIdentifier" : "NetEase.UURemote"
