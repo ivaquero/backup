@@ -3,27 +3,11 @@
   "cookies": [
     {
       "name": "wr_fp",
-      "value": "1742480083"
-    },
-    {
-      "name": "wr_localvid",
-      "value": "f59322507245d67bf59dc91"
-    },
-    {
-      "name": "wr_name",
-      "value": "嗯哼"
-    },
-    {
-      "name": "wr_avatar",
-      "value": "https://thirdwx.qlogo.cn/mmopen/vi_32/qeeYW4r000ibcKjKNlWQIpVvsju175X3jOtGH3dUK4VhUHfLJpusLNybnDEPXkdUShbYElRJ8gZTF1MbEUib2I4hOOlSXegATLgdn0ss9hHyU/132"
-    },
-    {
-      "name": "wr_gender",
-      "value": "1"
+      "value": "2835273639"
     },
     {
       "name": "wr_skey",
-      "value": "Dd6UeFo5"
+      "value": "5dNAf2i6"
     },
     {
       "name": "wr_vid",
@@ -35,11 +19,11 @@
     },
     {
       "name": "wr_rt",
-      "value": "web@KVJv8yV4tfA3PD5UiTC_AL"
+      "value": "web@YBufzBqZsvd0QEIpU5k_AL"
     },
     {
       "name": "wr_gid",
-      "value": "270588627"
+      "value": "256361646"
     }
   ],
   "noteLocation": "public",
@@ -47,11 +31,11 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1775965578581,
-  "isCookieValid": false,
-  "user": "嗯哼",
+  "lastCookieTime": 1788486735968,
+  "isCookieValid": true,
+  "user": "",
   "userVid": "38131323",
-  "userAvatar": "https://thirdwx.qlogo.cn/mmopen/vi_32/qeeYW4r000ibcKjKNlWQIpVvsju175X3jOtGH3dUK4VhUHfLJpusLNybnDEPXkdUShbYElRJ8gZTF1MbEUib2I4hOOlSXegATLgdn0ss9hHyU/132",
+  "userAvatar": "",
   "userSignature": "",
   "template": "# {{metaData.title}}\n{% for chapter in chapterHighlights %}\n## {{chapter.chapterTitle}}\n{% for highlight in chapter.highlights %}\n{{ highlight.markText |trim }} \n{% endfor %}{% endfor %}",
   "noteCountLimit": 3,
@@ -81,10 +65,132 @@
   "cookieRefreshInterval": 12,
   "scheduledSyncToggle": false,
   "scheduledSyncInterval": 5,
-  "lastSyncTime": 1775898436883,
-  "lastSyncBookCount": 4,
+  "lastSyncTime": 1788229019287,
+  "lastSyncBookCount": 18,
   "lastSyncBookTitles": [],
-  "syncLogs": [],
+  "syncLogs": [
+    {
+      "id": "sync-1788229005640",
+      "timestamp": 1788229005640,
+      "totalBooks": 117,
+      "syncedBooks": 18,
+      "skippedBooks": 0,
+      "duration": 13.646,
+      "notes": [
+        {
+          "bookId": "536972",
+          "title": "失控",
+          "filePath": "public/社会文化/失控.md"
+        },
+        {
+          "bookId": "834465",
+          "title": "许三观卖血记",
+          "filePath": "public/精品小说/许三观卖血记.md"
+        },
+        {
+          "bookId": "915505",
+          "title": "控制力：麻省理工学院的经典理论",
+          "filePath": "public/社会文化/控制力：麻省理工学院的经典理论.md"
+        },
+        {
+          "bookId": "731612",
+          "title": "股票大作手操盘术：融合时间和价格的利弗莫尔准则",
+          "filePath": "public/经济理财/股票大作手操盘术：融合时间和价格的利弗莫尔准则.md"
+        },
+        {
+          "bookId": "41518628",
+          "title": "作家榜名著：先知",
+          "filePath": "public/文学/作家榜名著：先知.md"
+        },
+        {
+          "bookId": "22369480",
+          "title": "规模",
+          "filePath": "public/科学技术/规模.md"
+        },
+        {
+          "bookId": "3300020531",
+          "title": "嫌疑人X的献身",
+          "filePath": "public/精品小说/嫌疑人X的献身.md"
+        },
+        {
+          "bookId": "3300019847",
+          "title": "绿里（斯蒂芬·金作品系列）",
+          "filePath": "public/精品小说/绿里.md"
+        },
+        {
+          "bookId": "23796324",
+          "title": "昨日的世界",
+          "filePath": "public/文学/昨日的世界.md"
+        },
+        {
+          "bookId": "34632166",
+          "title": "断头王后：玛丽·安托瓦内特传",
+          "filePath": "public/人物传记/断头王后：玛丽·安托瓦内特传.md"
+        },
+        {
+          "bookId": "3300060718",
+          "title": "头号书迷（斯蒂芬·金作品系列）",
+          "filePath": "public/精品小说/头号书迷.md"
+        },
+        {
+          "bookId": "3300020488",
+          "title": "世上最美的溺水者",
+          "filePath": "public/文学/世上最美的溺水者.md"
+        },
+        {
+          "bookId": "26435427",
+          "title": "生死疲劳【中国诺奖得主代表作】",
+          "filePath": "public/精品小说/生死疲劳【中国诺奖得主代表作】.md"
+        },
+        {
+          "bookId": "33820337",
+          "title": "契诃夫小说选（人文社外国文学名著经典·网格本）",
+          "filePath": "public/文学/契诃夫小说选.md"
+        },
+        {
+          "bookId": "749907",
+          "title": "牧羊少年奇幻之旅",
+          "filePath": "public/精品小说/牧羊少年奇幻之旅.md"
+        },
+        {
+          "bookId": "3300150167",
+          "title": "维奥莱塔：一个女人的一生（阿连德作品）",
+          "filePath": "public/文学/维奥莱塔：一个女人的一生.md"
+        },
+        {
+          "bookId": "44752228",
+          "title": "饥饿的盛世：乾隆时代的得与失",
+          "filePath": "public/历史/饥饿的盛世：乾隆时代的得与失.md"
+        },
+        {
+          "bookId": "44026191",
+          "title": "纳瓦尔宝典",
+          "filePath": "public/经济理财/纳瓦尔宝典.md"
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "sync-1788188250169",
+      "timestamp": 1788188250169,
+      "totalBooks": 0,
+      "syncedBooks": 0,
+      "skippedBooks": 0,
+      "duration": 0.49,
+      "notes": [],
+      "success": true
+    },
+    {
+      "id": "sync-1788188242684",
+      "timestamp": 1788188242684,
+      "totalBooks": 0,
+      "syncedBooks": 0,
+      "skippedBooks": 0,
+      "duration": 1.051,
+      "notes": [],
+      "success": true
+    }
+  ],
   "bookshelfSortMode": "recent",
   "bookshelfGroupByYear": true,
   "bookshelfDefaultSyncStatusFilter": "all",
@@ -131,8 +237,8 @@
     }
   ],
   "activeThemeId": "legacy_template",
-  "wereadApiKey": "",
-  "apiKeyValid": null,
+  "wereadApiKey": "wrk-8n5l4sqCQ30iXwGRE0YdMgAA",
+  "apiKeyValid": true,
   "readingStatsLocation": "/",
   "statsStartYear": 0,
   "popularHighlightsCacheTtl": 7
