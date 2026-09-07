@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-08-27T18:12:36.565-00:00",
+	"CreationDate" : "2026-09-07T17:57:42.524-00:00",
 	"Sources" : 
 	[
 		{
@@ -32,9 +32,6 @@
 				},
 				{
 					"PackageIdentifier" : "Nvidia.PhysX"
-				},
-				{
-					"PackageIdentifier" : "voidtools.Everything"
 				},
 				{
 					"PackageIdentifier" : "Apple.AppleMobileDeviceSupport"
