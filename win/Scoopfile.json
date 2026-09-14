@@ -90,11 +90,11 @@
             "Updated": "\/Date(1789149096886)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "cockpit-tools",
-            "Version": "1.3.48",
-            "Updated": "\/Date(1789134165794)\/"
+            "Version": "1.3.50",
+            "Updated": "\/Date(1789318833273)\/"
         },
         {
             "Info": "",
@@ -135,8 +135,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.6.10",
-            "Updated": "\/Date(1789089987697)\/"
+            "Version": "0.6.12",
+            "Updated": "\/Date(1789372242244)\/"
         },
         {
             "Info": "",
@@ -158,6 +158,13 @@
             "Name": "draw.io",
             "Version": "31.3.2",
             "Updated": "\/Date(1787457641376)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras-cn",
+            "Name": "dsh-desktop",
+            "Version": "2.0.9",
+            "Updated": "\/Date(1789303687406)\/"
         },
         {
             "Info": "",
@@ -254,8 +261,8 @@
             "Info": "",
             "Source": "main",
             "Name": "fzf",
-            "Version": "0.74.3",
-            "Updated": "\/Date(1786943081313)\/"
+            "Version": "0.74.4",
+            "Updated": "\/Date(1789180541431)\/"
         },
         {
             "Info": "",
@@ -352,15 +359,15 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "julia-cn",
-            "Version": "1.12.7",
-            "Updated": "\/Date(1787710558468)\/"
+            "Version": "1.13.0",
+            "Updated": "\/Date(1789236022769)\/"
         },
         {
             "Info": "",
             "Source": "extras",
             "Name": "kopuz",
-            "Version": "0.16.1",
-            "Updated": "\/Date(1787773278450)\/"
+            "Version": "0.16.2",
+            "Updated": "\/Date(1789180548392)\/"
         },
         {
             "Info": "",
@@ -373,8 +380,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "lazygit",
-            "Version": "0.65.0",
-            "Updated": "\/Date(1788653676790)\/"
+            "Version": "0.65.1",
+            "Updated": "\/Date(1789302494072)\/"
         },
         {
             "Info": "",
@@ -490,6 +497,13 @@
         },
         {
             "Info": "",
+            "Source": "main-plus",
+            "Name": "openresearch",
+            "Version": "0.2.1",
+            "Updated": "\/Date(1789236050692)\/"
+        },
+        {
+            "Info": "",
             "Source": "main",
             "Name": "openssh",
             "Version": "10.0.0.0p2",
@@ -499,8 +513,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ouch",
-            "Version": "0.8.2",
-            "Updated": "\/Date(1788163413167)\/"
+            "Version": "0.8.3",
+            "Updated": "\/Date(1789318900011)\/"
         },
         {
             "Info": "",
@@ -585,13 +599,6 @@
             "Name": "readest",
             "Version": "0.12.8",
             "Updated": "\/Date(1788845572851)\/"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Name": "reasonix-desktop",
-            "Version": "1.38.6",
-            "Updated": "\/Date(1789115337623)\/"
         },
         {
             "Info": "",
@@ -784,6 +791,13 @@
         },
         {
             "Info": "",
+            "Source": "extras-plus",
+            "Name": "voicestudio",
+            "Version": "0.5.2",
+            "Updated": "\/Date(1789373806156)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "vscode",
             "Version": "1.137.0",
@@ -802,6 +816,13 @@
             "Name": "wechat",
             "Version": "4.1.13.65",
             "Updated": "\/Date(1788958998053)\/"
+        },
+        {
+            "Info": "",
+            "Source": "extras-cn",
+            "Name": "wechatdevtools",
+            "Version": "2.02.2608070",
+            "Updated": "\/Date(1789306342584)\/"
         },
         {
             "Info": "",
@@ -879,21 +900,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1789144274000)\/",
+                "value": "\/Date(1789360558000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月12日 0:31:14"
+                "DateTime": "2026年9月14日 12:35:58"
             },
-            "Manifests": 1644
+            "Manifests": 1648
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1789144275000)\/",
+                "value": "\/Date(1789371957000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月12日 0:31:15"
+                "DateTime": "2026年9月14日 15:45:57"
             },
-            "Manifests": 2383
+            "Manifests": 2386
         },
         {
             "Name": "nerd-fonts",
@@ -909,31 +930,31 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1789150771000)\/",
+                "value": "\/Date(1789362495000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月12日 2:19:31"
+                "DateTime": "2026年9月14日 13:08:15"
             },
-            "Manifests": 85
+            "Manifests": 86
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1789150774000)\/",
+                "value": "\/Date(1789374098000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月12日 2:19:34"
+                "DateTime": "2026年9月14日 16:21:38"
             },
-            "Manifests": 55
+            "Manifests": 56
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1789144351000)\/",
+                "value": "\/Date(1789275212000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月12日 0:32:31"
+                "DateTime": "2026年9月13日 12:53:32"
             },
-            "Manifests": 37
+            "Manifests": 38
         }
     ]
 }

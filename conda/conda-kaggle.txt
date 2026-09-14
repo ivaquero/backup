@@ -1,9 +1,8 @@
 ﻿control
 cvxpy
 diffeqpy
-graphviz
 imbalanced-learn
-mne
+ipykernel
 monai
 openpyxl
 plotly
