@@ -1,9 +1,11 @@
 {
   "window.nativeTabs": true,
   "window.restoreWindows": "all",
+  "update.showReleaseNotes": false,
   "extensions.autoUpdate": "off",
   "extensions.allowed": {
     "*": true,
+    "ms-ceintl.vscode-language-pack-zh-hans": false,
     "ms-python.debugpy": false,
     "ms-python.vscode-pylance": false,
     "ms-toolsai.jupyter-keymap": false,
@@ -25,6 +27,7 @@
   "editor.suggest.shareSuggestSelections": true,
   "editor.tabCompletion": "on",
   "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordBasedSuggestions": "matchingDocuments",
   "editor.wordWrap": "on",
   "editor.quickSuggestions": {
@@ -32,7 +35,6 @@
     "strings": true,
     "other": true
   },
-  "diffEditor.ignoreTrimWhitespace": false,
   // explorer
   "explorer.compactFolders": true,
   "explorer.confirmDelete": false,
@@ -62,6 +64,8 @@
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "debug.onTaskErrors": "abort",
+  "diffEditor.ignoreTrimWhitespace": false,
   // terminal
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.hideOnStartup": "always",
@@ -81,7 +85,6 @@
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   // git
-  "scm.defaultViewMode": "tree",
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -89,6 +92,10 @@
   "git.openRepositoryInParentFolders": "always",
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
+  "scm.defaultViewMode": "tree",
+  "remote.SSH.remotePlatform": {
+    "robot": "linux"
+  },
   // markdown
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
