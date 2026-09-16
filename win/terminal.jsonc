@@ -12,14 +12,6 @@
     "firstWindowPreference": "persistedWindowLayout",
     "keybindings": [
         {
-            "id": "Terminal.PrevTab",
-            "keys": "ctrl+shift+tab"
-        },
-        {
-            "id": "Terminal.CopyToClipboard",
-            "keys": "ctrl+c"
-        },
-        {
             "id": "Terminal.NextTab",
             "keys": "ctrl+tab"
         },
@@ -28,12 +20,20 @@
             "keys": "alt+shift+down"
         },
         {
-            "id": "Terminal.ClosePane",
-            "keys": "ctrl+shift+w"
+            "id": "Terminal.PrevTab",
+            "keys": "ctrl+shift+tab"
+        },
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
         },
         {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "ctrl+shift+w"
         },
         {
             "id": "Terminal.MoveFocusDown",
@@ -89,8 +89,8 @@
     "profiles": {
         "defaults": {
             "font": {
-                "size": 16,
-                "face": "FiraCode Nerd Font"
+                "face": "FiraCode Nerd Font",
+                "size": 16
             },
             "snapOnInput": true,
             "useAcrylic": true
@@ -113,7 +113,7 @@
                 "commandline": "C:\\Scoop\\shims\\msys2.cmd",
                 "guid": "{6f0ee3d1-ac4f-48ca-bcf5-a9795f9942d2}",
                 "icon": "C:\\Scoop\\apps\\msys2-cn\\current\\msys2.ico",
-                "name": "Msys2",
+                "name": "MSYS2",
                 "startingDirectory": "%USERPROFILE%"
             },
             {
@@ -133,6 +133,12 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{5bfd203a-d266-5705-bd99-2445051318a1}",
+                "hidden": false,
+                "name": "Ubuntu-26.04",
+                "source": "Microsoft.WSL"
             }
         ]
     },
