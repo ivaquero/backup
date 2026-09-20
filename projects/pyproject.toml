@@ -1,7 +1,7 @@
 [tool.ruff]
 fix = true
 fix-only = true
-target-version = "py312"
+target-version = "py314"
 line-length = 88
 
 [tool.ruff.format]

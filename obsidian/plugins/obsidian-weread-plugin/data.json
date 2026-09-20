@@ -32,7 +32,7 @@
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
   "lastCookieTime": 1788486735968,
-  "isCookieValid": true,
+  "isCookieValid": false,
   "user": "",
   "userVid": "38131323",
   "userAvatar": "",
@@ -192,6 +192,8 @@
     }
   ],
   "bookshelfSortMode": "recent",
+  "bookshelfViewMode": "list",
+  "bookshelfShowCoverTitle": true,
   "bookshelfGroupByYear": true,
   "bookshelfDefaultSyncStatusFilter": "all",
   "themes": [

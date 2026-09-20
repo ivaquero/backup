@@ -1,5 +1,4 @@
 jupytext
-kaggle
 label-studio
 nbconvert
 touying

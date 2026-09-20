@@ -117,7 +117,7 @@
                 "startingDirectory": "%USERPROFILE%"
             },
             {
-                "guid": "{2661b4a8-b07e-5cb6-a6f4-5d3bd232b96f}",
+                "guid": "{5bfd203a-d266-5705-bd99-2445051318a1}",
                 "hidden": false,
                 "name": "Ubuntu-26.04",
                 "source": "Microsoft.WSL"
@@ -133,12 +133,6 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
-            },
-            {
-                "guid": "{5bfd203a-d266-5705-bd99-2445051318a1}",
-                "hidden": false,
-                "name": "Ubuntu-26.04",
-                "source": "Microsoft.WSL"
             }
         ]
     },

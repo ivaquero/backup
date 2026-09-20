@@ -10,11 +10,20 @@
   "excludePathsFromAttachmentCollecting": [],
   "includePaths": [],
   "isAdvancedRenameAndDeleteHandlerSuggestionDeclined": false,
+  "maxVaultRootPathLength": 0,
   "moveAttachmentToProperFolderUsedByMultipleNotesMode": "CopyAll",
   "proposedRenameDeleteSettings": null,
   "shouldAddCommandsToFileMenu": true,
   "shouldCollectAttachmentsAutomatically": false,
+  "shouldCreateNoteToPreserveOriginalName": false,
+  "shouldEnsurePathCompatibilityOnAndroid": false,
+  "shouldEnsurePathCompatibilityOnEveryPlatform": false,
+  "shouldEnsurePathCompatibilityOnIos": false,
+  "shouldEnsurePathCompatibilityOnLinux": false,
+  "shouldEnsurePathCompatibilityOnMacOs": false,
+  "shouldEnsurePathCompatibilityOnWindows": true,
   "shouldShowBackupWarning": false,
+  "sidecarNoteNamePattern": "{{fileName}}.md",
   "treatAsAttachmentExtensions": [
     ".excalidraw.md"
   ]
