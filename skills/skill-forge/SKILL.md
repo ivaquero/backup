@@ -1,8 +1,8 @@
 ---
 name: skill-forge
-description: 把工作流或领域知识固化成 Skill 包，并保证包内每个文件在保存前通过质量闸门：Python 走 ruff + ty，Markdown 走 rumdl，TS/JS 走 oxlint + oxfmt，CSS 走 oxfmt，PNG 走 oxipng，JSON 过解析校验。触发词：创建 skill、新建技能、写 SKILL.md、把这套流程存成 skill、改 skill、校验 skill 包、给闸门加一种文件类型。
+description: Turn a workflow or domain knowledge into a Skill package, and make every file in it pass a quality gate before it is saved. Python goes through ruff + ty, Markdown through rumdl, TS/JS through oxlint + oxfmt, CSS through oxfmt, PNG through oxipng, JSON through parse validation. Trigger words: create a skill, new skill, write SKILL.md, save this workflow as a skill, edit a skill, validate a skill package, add a file type to the gate.
 agent_created: true
-version: 1.2.0
+version: 1.4.0
 tags:
   - skill
   - meta
@@ -16,191 +16,268 @@ tags:
 
 # skill-forge
 
-创建或修改 Skill 包，并让包内每个文件在落盘前通过闸门。
+Create or modify a Skill package, and make every file in it pass the gate
+before it lands on disk.
 
-## 铁律
+## Iron rules
 
-- 闸门不过，文件不算写完。Write 或 Edit 之后立刻跑闸门。
-- 只调系统工具。不装依赖，也不新建配置来降级规则。
-- 误报用行内抑制，并说明为什么是工具错、不是代码错。
-- 措辞与结构不归这里管：怎么写步骤、怎么下指针、怎么分层，
-  都看 `writing-for-agents`。本技能只管骨架与闸门。
+- A file is not done until the gate passes. Run the gate immediately after
+  every Write or Edit.
+- Use system tools only. Do not install dependencies, and do not add config
+  just to downgrade rules.
+- Suppress false positives inline, and state why the tool is wrong rather
+  than the code.
+- Wording and structure are not this skill's concern: how to write steps,
+  set pointers, or layer content is all covered by `writing-for-agents`.
+  This skill owns only the skeleton and the gate.
 
-## 步骤
+## Steps
 
-### 1. 定身份
+### 1. Fix the identity
 
-与用户敲定三件事，缺一不可。
+Settle three things with the user; none of them is optional.
 
-- `name`：小写 kebab，必须等于包目录名，否则加载不了。
-- `description`：能力一句话 + 触发分支，即用户会说的原话。
-- 调用方式：需被模型或别的技能自动触发的留 `description`；
-  只由用户手敲的加 `disable-model-invocation: true`。
+- `name`: lowercase kebab, and it must equal the package directory name,
+  or the skill will not load.
+- `description`: one line of capability plus trigger branches, written as
+  the words the user would actually say.
+- Invocation: leave `description` for skills that the model or another
+  skill should trigger automatically; add `disable-model-invocation: true`
+  for the ones the user types by hand.
 
-### 2. 定骨架
+### 2. Fix the skeleton
 
 ```text
 <name>/
-├── SKILL.md        必需
-├── scripts/        要确定性执行、会被反复重写的代码
-├── references/     按需加载的长文规范
-└── assets/         产出用的模板与字体，不进上下文
+├── SKILL.md        required
+├── scripts/        code that runs deterministically and is rewritten often
+├── references/     long specs, loaded on demand
+└── assets/         templates and fonts for output, never entering context
 ```
 
-只建用得上的目录。放进 `references/` 的前提是正文有指针指向它。
+Create only the directories you need. Something belongs in `references/`
+only if the body points to it.
 
-### 3. 写文件
+### 3. Write the files
 
-命令式（动词开头）写步骤，一步一个完成判据，长规范下沉到
-`references/`。包内脚本只允许标准库，保证换台机器也能跑。
+Write steps imperatively (verb first), one completion criterion per step,
+and push long specs down into `references/`. Scripts inside the package may
+use the standard library only, so that the package runs on any machine.
 
-### 4. 过闸门
+Never write a machine-local absolute path into the body or the scripts
+(`C:\Users\...`, `/home/...`). A package gets copied and ported, and a
+hard-coded path turns into wrong information the moment it is copied.
+Refer to this skill itself with the `<this skill dir>` placeholder, and to
+the home directory with `~` or `Path.home()`. The gate's `no-local-paths`
+check backstops this.
 
-一条命令跑完全部：
+### 4. Pass the gate
+
+One command runs everything:
 
 ```bash
-# <本技能目录> 指本技能包所在目录；
-# 用户级安装即 ~/.workbuddy/skills/skill-forge
-python <本技能目录>/scripts/verify.py <文件或目录>...
+# <this skill dir> is where this skill package lives;
+# for a user-level install that is ~/.workbuddy/skills/skill-forge
+python <this skill dir>/scripts/verify.py <file-or-dir>...
 ```
 
-每种类型的流水线都是三段：内置校验、修复、复验。修复阶段的退出码
-忽略，复验阶段必须全 0。当前覆盖 `.py`、`.md`、`.json`/`.jsonc`、
-`.ts`/`.js` 家族、`.css`/`.scss`/`.less`、`.png`。
+Every type's pipeline has three stages: builtin check, repair, verify.
+The repair stage's exit code is ignored; the verify stage must be all zero.
+Currently covered: `.py`, `.md`, `.json`/`.jsonc`, the `.ts`/`.js` family,
+`.css`/`.scss`/`.less`, `.png`.
 
-想看现场有哪些规则、工具在不在，就跑 `--list`：
+To see which rules exist and whether the tools are present, run `--list`:
 
 ```bash
-python <本技能目录>/scripts/verify.py --list
+python <this skill dir>/scripts/verify.py --list
 ```
 
-残余问题分两类。
+Residual problems come in two kinds.
 
-- 机器改不动的：真实类型错误、`oxlint` 里没有自动修复的那类警告。
-  手工改。
-- 工具自己已修的：什么都不用做，脚本已经落盘。
+- The machine cannot fix them: real type errors, and the class of `oxlint`
+  warnings that has no autofix. Fix those by hand.
+- The tool already fixed them: nothing to do, the script has written the
+  result to disk.
 
-改完重跑闸门，直到退出码 0。退出码 2 表示闸门或规则表自身有问题。
+Rerun the gate after fixing, until the exit code is 0. Exit code 2 means
+the gate or the rules table itself is broken.
 
-### 5. 真跑一遍
+### 5. Actually run it
 
-包内的入口脚本要用最小样例真的执行一次。静态检查抓不到运行期问题。
+The package's entry script must be executed once for real, against a
+minimal sample. Static checks cannot catch runtime problems.
 
 ```bash
-python <skill>/scripts/<entry>.py <最小样例>
+python <skill>/scripts/<entry>.py <minimal-sample>
 ```
 
-### 6. 汇报
+### 6. Report
 
-一张表给出「文件 / 残余问题 / 闸门退出码」。零残余就写 0。
-压缩类结果带上省下的字节数。
+Give one table with "file / residual problems / gate exit code". Write 0
+when there are no residual problems. For compression results, include the
+bytes saved.
 
-## 扩展
+## Extending
 
-加一种文件类型，通常只改 `scripts/file-types.json`，不动代码。
+Adding a file type usually means editing `scripts/file-types.json` only,
+with no code change.
 
-1. 在 `types` 里加一段：`id`、`suffixes`，以及 `fix` 与 `verify`
-   两组命令。命令写成数组，文件路径由引擎追加到末尾。
-2. 工具只认一部分后缀时，同时在 `tools` 里声明它的 `suffixes`。
-   引擎会在运行前校验：把文件交给不认它的工具会直接报错退出，
-   而不是产出一个永远修不掉的假失败。
-3. 工具会静默跳过不认的文件时，给它加 `no_target_markers`。
-   这类输出会被判成规则表错误，不再冒充文件问题。
-4. 需要进程内校验（语法、解析、二进制完整性）时，在
-   `scripts/checkers.py` 加一个函数并注册进 `CHECKERS`，
-   再用 `{"check": "名字"}` 引用；`only` 可限定生效的文件名。
+1. Add a block under `types`: `id`, `suffixes`, plus the two command
+   groups `fix` and `verify`. Write commands as arrays; the engine appends
+   the file paths at the end.
+2. When a tool accepts only some suffixes, also declare its `suffixes`
+   under `tools`. The engine validates before running: handing a file to a
+   tool that does not accept it fails loudly and exits, instead of
+   producing a false failure that can never be fixed.
+3. When a tool silently skips files it does not recognize, give it
+   `no_target_markers`. Such output is then classified as a rules-table
+   error instead of masquerading as a file problem.
+4. When you need in-process validation (syntax, parsing, binary
+   integrity), add a function in `scripts/checkers.py`, register it in
+   `CHECKERS`, and reference it with `{"check": "name"}`; `only` can
+   restrict it to specific file names. Checks that are not tied to a
+   suffix and should apply to the whole package go into the top-level
+   `package_checks`, and the engine runs them over every collected file —
+   that is how `no-local-paths` is wired in.
 
-`report_savings: true` 让引擎报出优化前后的字节数，压缩类工具用得上。
+`report_savings: true` makes the engine report byte counts before and
+after optimization, which is useful for compression tools.
 
-## 移植既有 Skill 到新语料
+## Porting an existing Skill to a new corpus
 
-把一个已建成的技能包从旧数据集搬到新数据集（换仓库、换桶、换语料），
-不是改路径就完事。骨架往往吃透了旧语料的形态，换过去会静默失效。
+Moving a built skill package from one dataset to another (a different
+repo, bucket, or corpus) is not just a path change. The skeleton has
+usually internalized the old corpus's shape, and it fails silently once
+moved.
 
-1. **先量化，再动手**。跑一遍旧语料与新语料，各出一张形态分布表
-   （字段出现率、主导取值、机制与扩展名占比）。凭印象改配方，改出来
-   的是旧语料的偏见。
-2. **看主导特征翻转**。两个语料的形态可能完全相反。此时决定性的不是
-   平均值，是占比最高的那一条：它决定默认配方是谁。旧默认配方在新
-   语料里可能只覆盖百分之几，那就得新写一个，而不是调参数。
-3. **必填项过严会毁掉主配方**。旧语料里几乎必然出现的字段，新语料里
-   可能罕见。把它留在 `required` 里，主配方对新语料的大多数案例直接
-   渲染失败。降级为可选，并在构造器里按需校验。
-   暴露这类过严配置的办法：让自检**只喂配方自己声明的参数**渲染
-   （`required` ∪ `optional`），多喂一个不该有的字段就会当场报错。
-4. **样本必须真实存在**。文档里的每个 Samples 路径都要能在包内或上游
-   仓库里指到实体文件；写在包内的优先。凭空编的样本路径比没有样本更坏，
-   它会让下一个人照着不存在的文件建东西。
-5. **改一处要同步三处**。配方目录变了，按序更新：配方目录本身、
-   配方说明文档（决策树 + 分节）、覆盖度调研文档（新配方要附上它在
-   新语料里的人群依据——支持它的 manifest 数量）。漏掉任何一处，
-   自检里的「文档覆盖全部配方」断言会拦下来。
-6. **硬编码的解析是定时炸弹**。解析器若写死了列数、标题层级或表头
-   文本，换语料必然碎。改成结构驱动：认表头而不是认位置，认任意层级
-   的标题而不是 `###`。补一条「把同一行重写一遍必须字节级不变」的
-   断言，保护那些不归本技能管的列。
+1. **Quantify first, then act.** Run the old corpus and the new corpus and
+   produce a shape distribution table for each (field occurrence rate,
+   dominant values, mechanism and extension share). Editing the recipe
+   from impressions only bakes in the old corpus's bias.
+2. **Watch for the dominant trait to flip.** The two corpora may have
+   opposite shapes. What decides the default recipe is not the average but
+   the single most common case. The old default recipe may cover only a
+   few percent of the new corpus, and then you need a new recipe rather
+   than a parameter tweak.
+3. **Over-strict required fields kill the main recipe.** A field that
+   virtually always appears in the old corpus may be rare in the new one.
+   Leave it in `required` and the main recipe fails to render for most
+   cases in the new corpus. Downgrade it to optional and validate on
+   demand inside the constructor. A way to expose such over-strict config:
+   make the self-check render **using only the parameters the recipe
+   itself declares** (`required` ∪ `optional`), so that feeding one extra
+   field that should not exist fails immediately.
+4. **Samples must really exist.** Every Samples path in the docs must
+   resolve to a real file inside the package or in the upstream repo;
+   prefer paths inside the package. An invented sample path is worse than
+   no sample at all: it makes the next person build against a file that
+   does not exist.
+5. **One change has to sync three places.** When the recipe directory
+   changes, update in order: the recipe directory itself, the recipe
+   documentation (decision tree plus sections), and the coverage survey
+   document (a new recipe must come with its population evidence in the
+   new corpus, meaning the number of manifests that support it). Miss any
+   one of them and the self-check assertion "docs cover all recipes"
+   stops you.
+6. **Hard-coded parsing is a time bomb.** If a parser hard-codes column
+   counts, heading levels, or header text, it will break on a new corpus.
+   Make it structure-driven instead: recognize headers rather than
+   positions, and headings at any level rather than `###`. Add an
+   assertion that "rewriting the same line must be byte-identical", to
+   protect the columns this skill does not own.
 
-## 闸门细则
+## Gate details
 
-- **闸门按本机 `rumdl` 用户配置判定**。配置文件在
-  `%APPDATA%\rumdl\rumdl.toml`，其中
-  `disable = ["MD013", "MD025", "MD029", "MD033"]`、
-  `line-length = 120`。所以**超长行、一级标题重数、有序列表编号、
-  行内 HTML 这四类在当前机器上不报警**，闸门也不会拦。
-  闸门没有切换口径的开关，它永远反映本机配置。想按 `rumdl` 原生
-  严格度复核某个包，绕开闸门直接调：`rumdl check --no-config <文件>`
-  （格式化同理，`rumdl fmt --no-config --check <文件>`）。
-- `MD013`（仅在未禁用时）才需手工折行。判定用显示宽度：汉字算
-  2 列，默认上限 80。而且光超宽还不报，得另有一个空格落在第 80 列
-  或之后——纯中文长句常常不报，夹了英文与行内代码的长句必报。
-  想校准实测宽度用内联阈值：
-  `rumdl check --config 'MD013.line-length = 60' <file>`，
-  报错消息里的数字就是实测宽度，比手算可靠。
-- `MD025`（仅在未禁用时）才会把正文 H1 降级：frontmatter 里有
-  `title:` 时 `rumdl` 视其为文档标题，正文的 `#` 成了「第二个一级
-  标题」，而 `fmt` 的修法是**把该 H1 降成 H2**——静默改结构，且
-  只降不升。当前机器已禁用此规则，现象不会发生；但 SKILL.md 的
-  frontmatter 仍只写 `name` + `description`，不加 `title:`，
-  这样换到任何机器上都安全。
-- 配置层面的两个坑。其一，`rumdl config file` 会打印默认全局路径
-  **而不区分文件是否存在**，别拿它判断「有没有配置」；要确认某个
-  键是否生效，用 `rumdl config get <键>` 看来源标签（`default` /
-  `project config` / `user config`）。其二，**未识别的键名会被静默
-  忽略**，写错等于没写——改完配置必须逐项 `get` 确认。
-- `rumdl fmt` 的退出码不表示有无改动，只有 `rumdl fmt --check`
-  在需要改动时返回 1。判干净要 `check` 加 `fmt --check` 两条。
-- `oxlint` 默认把规则问题判成 warning 且退出码 0，光跑它抓不住警告。
-  复验必须带 `--deny-warnings`，否则闸门会放走没修完的警告。
-- `oxlint` 只吃 JS/TS 家族。`.css` / `.scss` / `.less` 交给它会报
-  「No files found」并 exit 1，那是假失败；CSS 只走 `oxfmt`。
-- `oxfmt` 不支持的后缀会直接报错退出，别把 `.vue` / `.svelte`
-  这类塞进规则表。
-- `oxipng` 无论还能不能压缩都返回 0，所以它那档不能靠退出码判干净，
-  要靠内置的 `png-integrity` 按块结构与 CRC 复核。
-- `oxipng` 默认只做无损压缩、保留全部元数据。要更小可以手动加 `-s`
-  或提高 `-o`，但那超出「压缩」的范围，别默认开。
-- `ruff check` 默认启用 413 条规则，含 `PLW` 一类，远超经典的
-  `E4/E7/E9/F`。已用 `--isolated` 验证过，是 0.16.x 的内置默认集。
-- `ty check --fix` 能自动修的很少，返回非零是常态，真正的修复靠人。
-  ty 默认按项目根的 `pyproject.toml` 与 `.venv` 解析第三方包；
-  包内脚本只用标准库时无需额外参数。
-- 闸门不留痕。语法编译走进程内 `compile()`；`ruff` 与 `rumdl`
-  一律带 `--no-cache`。所以包目录里不会出现 `__pycache__`、
-  `.ruff_cache` 或 `.rumdl_cache`。
-- 不要删语法编译这道关。`ruff format` 0.16.6 曾把
-  `except (A, B):` 的括号删成 Python 2 语法（0.16.8 已修），
-  它仍是最便宜的回归网。
+- **The gate judges by this machine's `rumdl` user config.** The config
+  file is `%APPDATA%\rumdl\rumdl.toml`, holding
+  `disable = ["MD013", "MD025", "MD029", "MD033"]` and
+  `line-length = 120`. So **long lines, repeated H1s, ordered-list
+  numbering, and inline HTML do not warn on this machine**, and the gate
+  will not stop them. The gate has no switch to change the regime; it
+  always reflects the local config. To re-check a package at `rumdl`'s
+  native strictness, bypass the gate and call it directly:
+  `rumdl check --no-config <file>` (and likewise for formatting,
+  `rumdl fmt --no-config --check <file>`).
+- `MD013` (only when not disabled) is what forces manual rewrapping. It
+  measures display width: CJK characters count as 2 columns, with a
+  default limit of 80. And being too wide is not enough on its own; there
+  must also be a space at or past column 80. Pure-CJK long sentences
+  often do not warn, while long sentences containing English and inline
+  code always do. To calibrate the measured width, use an inline
+  threshold: `rumdl check --config 'MD013.line-length = 60' <file>`; the
+  number in the error message is the measured width, more reliable than
+  counting by hand.
+- `MD025` (only when not disabled) is what demotes a body H1: with
+  `title:` in the frontmatter, `rumdl` treats it as the document title,
+  the body `#` becomes a "second level-1 heading", and `fmt`'s fix is to
+  **demote that H1 to H2** — a silent structural change, which only
+  demotes and never promotes. The rule is disabled on the current machine
+  so the effect does not occur; but SKILL.md's frontmatter still writes
+  only `name` + `description` with no `title:`, so it stays safe on any
+  machine.
+- Two configuration traps. First, `rumdl config file` prints the default
+  global path **without distinguishing whether the file exists**, so do
+  not use it to answer "is there a config". To confirm whether a key takes
+  effect, use `rumdl config get <key>` and read the source tag (`default`
+  / `project config` / `user config`). Second, **unrecognized key names
+  are silently ignored**, so a typo equals not writing it at all — after
+  editing config you must `get` every key to confirm.
+- `rumdl fmt`'s exit code does not indicate whether anything changed; only
+  `rumdl fmt --check` returns 1 when a change is needed. Calling a file
+  clean requires both `check` and `fmt --check`.
+- `oxlint` reports rule problems as warnings with exit code 0 by default,
+  so running it alone misses warnings. The verify stage must pass
+  `--deny-warnings`, or the gate lets unfixed warnings through.
+- `oxlint` only accepts the JS/TS family. Handing it `.css` / `.scss` /
+  `.less` reports "No files found" and exits 1, which is a false failure;
+  CSS goes through `oxfmt` only.
+- Suffixes that `oxfmt` does not support fail loudly and exit, so do not
+  put things like `.vue` / `.svelte` into the rules table.
+- `oxipng` returns 0 whether or not it could still compress, so that
+  column cannot be called clean by exit code. Rely on the builtin
+  `png-integrity`, which rechecks chunk structure and CRCs.
+- `oxipng` only does lossless compression and keeps all metadata by
+  default. For smaller files you can add `-s` or raise `-o` by hand, but
+  that goes beyond "compression"; do not enable it by default.
+- `ruff check` enables 413 rules by default, including `PLW`-style ones,
+  far beyond the classic `E4/E7/E9/F`. Verified with `--isolated`: this is
+  the built-in default set of 0.16.x.
+- `ty check --fix` autofixes very little; a non-zero return is normal and
+  the real fixes are manual. ty resolves third-party packages from the
+  project root's `pyproject.toml` and `.venv` by default; when a package's
+  scripts use only the standard library, no extra flags are needed.
+- The gate leaves no trace. Syntax compilation runs through in-process
+  `compile()`, and `ruff` and `rumdl` always get `--no-cache`. So no
+  `__pycache__`, `.ruff_cache`, or `.rumdl_cache` appears in the package
+  directory.
+- `no-local-paths` only matches **this machine's real home directory**
+  (`Path.home()` and the values of `USERPROFILE` / `HOME`; both slash
+  styles, case-insensitive), so the `C:/Users/someone` used as an example
+  in docs does not false-positive, and binary files are skipped silently.
+  It can stay on by default precisely because it does not false-positive —
+  a check that false-positives gets turned off sooner or later.
+- Do not remove the syntax-compilation stage. `ruff format` 0.16.6 used to
+  strip the parentheses from `except (A, B):` into Python 2 syntax (fixed
+  in 0.16.8), and it is still the cheapest regression net available.
 
-## 反模式
+## Anti-patterns
 
-- 改了文件不重跑闸门就交付，或闸门报错时关规则换绿。
-- 新建 `ruff.toml` / `ty.toml` / `.rumdl.toml` 降级规则，
-  等于让闸门失效。
-- `description` 写成没有分支的简介，技能永远不会被触发。
-- 长规范全塞进 SKILL.md，或反过来把步骤全塞进 `references/`。
-- 包内脚本用第三方库，别人装不了，闸门也跑不起来。
-- `# ty: ignore[...]` 插在表达式中间，会把行尾的 `)` 一起注释掉。
-- 图省事给闸门加 `--fix-dangerously` 这类会改动行为的开关。
-- 技能包放进一个自带 CI 的仓库，却用宿主 CI 会扫的扩展名放数据文件。
-  先读宿主的 CI 脚本再定文件名：Scoop bucket 的 CI 就会把「仓库内任何改动的
-  `.json`」按 manifest schema 校验，非 manifest 的数据文件得叫 `.jsonc`。
+- Delivering after editing a file without rerunning the gate, or turning a
+  rule off to go green when the gate reports errors.
+- Creating `ruff.toml` / `ty.toml` / `.rumdl.toml` to downgrade rules,
+  which is the same as disabling the gate.
+- Writing `description` as an introduction with no branches, so the skill
+  never triggers.
+- Cramming all long specs into SKILL.md, or conversely stuffing all the
+  steps into `references/`.
+- Using third-party libraries in package scripts: others cannot install
+  them, and the gate cannot run either.
+- Putting `# ty: ignore[...]` in the middle of an expression, which
+  comments out the trailing `)` along with it.
+- Adding behaviour-changing switches such as `--fix-dangerously` to the
+  gate for convenience.
+- Putting a skill package inside a repo that has its own CI while using
+  extensions the host CI scans for data files. Read the host's CI script
+  before naming files: the Scoop bucket CI validates "any changed `.json`
+  in the repo" against the manifest schema, so non-manifest data files
+  have to be named `.jsonc`.

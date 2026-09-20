@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""skill-forge 闸门引擎：读同目录的 file-types.json，按后缀分组跑修复与复验。
+"""skill-forge gate engine: read the sibling file-types.json, group by suffix, fix and re-verify.
 
-用法: python verify.py [--list] <文件或目录>...
-退出码: 0 = 全部干净；1 = 有残余问题；2 = 闸门自身或规则表出错。
+Usage: python verify.py [--list] <file-or-dir>...
+Exit codes: 0 = all clean; 1 = residual problems; 2 = the gate itself or the rules table failed.
 """
 
 from __future__ import annotations
@@ -39,12 +39,12 @@ Checker = Callable[[Path], list[str]]
 
 
 class GateError(Exception):
-    """闸门自身或规则表无法继续：工具缺失、路径不存在、规则表写错。"""
+    """The gate itself or the rules table cannot continue: missing tool, bad path, malformed rules."""
 
 
 @dataclass(frozen=True)
 class ToolSpec:
-    """规则表里对某个外部工具的约束，用于提前拦住配置错误。"""
+    """Constraints on one external tool, declared in the rules table to catch bad config early."""
 
     name: str
     suffixes: frozenset[str] = frozenset()
@@ -53,7 +53,7 @@ class ToolSpec:
 
 @dataclass(frozen=True)
 class BuiltinSpec:
-    """对内置检查器的引用；only 非空时只对列出的文件名生效。"""
+    """Reference to a builtin checker; when only is non-empty it applies only to those names."""
 
     check: str
     only: frozenset[str] = frozenset()
@@ -61,7 +61,7 @@ class BuiltinSpec:
 
 @dataclass(frozen=True)
 class TypeRule:
-    """一种文件类型的完整流水线。"""
+    """The full pipeline for one file type."""
 
     id: str
     label: str
@@ -75,30 +75,32 @@ class TypeRule:
 def parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         prog="verify.py",
-        description="skill-forge 闸门：按 file-types.json 的规则修复并复验包内文件。",
+        description="skill-forge gate: fix and re-verify skill files using file-types.json.",
     )
-    parser.add_argument("paths", nargs="*", help="要检查的文件或目录")
+    parser.add_argument("paths", nargs="*", help="files or directories to check")
     parser.add_argument(
-        "--list", action="store_true", help="打印规则表与工具可用性后退出"
+        "--list",
+        action="store_true",
+        help="print the rules table and tool availability, then exit",
     )
     return parser.parse_args(argv)
 
 
 def _as_str_tuple(value: object, where: str) -> tuple[str, ...]:
     if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
-        raise GateError(f"规则表 {where} 应为字符串数组")
+        raise GateError(f"rules table {where} must be an array of strings")
     return tuple(value)
 
 
 def _as_list(value: object, where: str) -> list[object]:
     if not isinstance(value, list):
-        raise GateError(f"规则表 {where} 应为数组")
+        raise GateError(f"rules table {where} must be an array")
     return list(value)
 
 
 def _as_dict(value: object, where: str) -> dict[str, object]:
     if not isinstance(value, dict):
-        raise GateError(f"规则表 {where} 应为对象")
+        raise GateError(f"rules table {where} must be an object")
     return {str(key): item for key, item in value.items()}
 
 
@@ -127,7 +129,7 @@ def _parse_builtins(raw: object, where: str) -> tuple[BuiltinSpec, ...]:
         fields = _as_dict(item, f"{where}.builtins[{index}]")
         check = fields.get("check")
         if not isinstance(check, str) or not check:
-            raise GateError(f"规则表 {where}.builtins[{index}] 缺 check")
+            raise GateError(f"rules table {where}.builtins[{index}] is missing check")
         specs.append(
             BuiltinSpec(
                 check=check,
@@ -146,33 +148,36 @@ def _parse_steps(raw: object, where: str) -> tuple[tuple[str, ...], ...]:
     for index, item in enumerate(_as_list(raw if raw is not None else [], where)):
         step = _as_str_tuple(item, f"{where}[{index}]")
         if not step:
-            raise GateError(f"规则表 {where}[{index}] 是空命令")
+            raise GateError(f"rules table {where}[{index}] is an empty command")
         steps.append(step)
     return tuple(steps)
 
 
 def _check_tool_fit(rule: TypeRule, tools: dict[str, ToolSpec]) -> None:
-    """拦住「把文件交给不认它的工具」这类配置错误。"""
+    """Catch the misconfiguration where files are handed to a tool that does not accept them."""
     for step in (*rule.fix, *rule.verify):
         spec = tools.get(step[0])
         if spec is None or not spec.suffixes:
             continue
         wrong = sorted(rule.suffixes - spec.suffixes)
         if wrong:
-            allowed = "、".join(sorted(spec.suffixes))
+            allowed = ", ".join(sorted(spec.suffixes))
             raise GateError(
-                f"规则表配置错误：{rule.id} 把 {'、'.join(wrong)} 交给 {step[0]}，"
-                f"但该工具只接受 {allowed}"
+                f"rules table misconfigured: {rule.id} hands "
+                f"{', '.join(wrong)} to {step[0]}, which only accepts {allowed}"
             )
 
 
-def load_rules(path: Path) -> tuple[list[TypeRule], dict[str, ToolSpec]]:
+def load_rules(
+    path: Path,
+) -> tuple[list[TypeRule], dict[str, ToolSpec], tuple[BuiltinSpec, ...]]:
     try:
         raw: object = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError, ValueError) as exc:
-        raise GateError(f"规则表读取失败：{exc}") from exc
-    root = _as_dict(raw, "顶层")
+        raise GateError(f"cannot read the rules table: {exc}") from exc
+    root = _as_dict(raw, "top level")
     tools = _parse_tools(root.get("tools"))
+    package_checks = _parse_builtins(root.get("package_checks"), "package_checks")
     rules: list[TypeRule] = []
     owner: dict[str, str] = {}
     for index, item in enumerate(_as_list(root.get("types"), "types")):
@@ -180,10 +185,10 @@ def load_rules(path: Path) -> tuple[list[TypeRule], dict[str, ToolSpec]]:
         fields = _as_dict(item, where)
         rule_id = fields.get("id")
         if not isinstance(rule_id, str) or not rule_id:
-            raise GateError(f"规则表 {where} 缺 id")
+            raise GateError(f"rules table {where} is missing id")
         suffixes = _as_str_tuple(fields.get("suffixes", []), f"{where}.suffixes")
         if not suffixes:
-            raise GateError(f"规则表 {where} 缺 suffixes")
+            raise GateError(f"rules table {where} is missing suffixes")
         rule = TypeRule(
             id=rule_id,
             label=str(fields.get("label", rule_id)),
@@ -196,26 +201,27 @@ def load_rules(path: Path) -> tuple[list[TypeRule], dict[str, ToolSpec]]:
         for suffix in sorted(rule.suffixes):
             if suffix in owner:
                 raise GateError(
-                    f"规则表后缀 {suffix} 被 {owner[suffix]} 与 {rule_id} 重复声明"
+                    f"rules table suffix {suffix} is declared by both "
+                    f"{owner[suffix]} and {rule_id}"
                 )
             owner[suffix] = rule_id
         _check_tool_fit(rule, tools)
         rules.append(rule)
     if not rules:
-        raise GateError("规则表没有任何 types")
-    return rules, tools
+        raise GateError("rules table defines no types")
+    return rules, tools, package_checks
 
 
 def load_checkers() -> dict[str, Checker]:
-    """按路径加载同目录的 checkers.py，避免与标准库模块重名。"""
+    """Load the sibling checkers.py by path, avoiding a clash with a stdlib module name."""
     spec = importlib.util.spec_from_file_location("skill_forge_checkers", CHECKERS_PATH)
     if spec is None or spec.loader is None:
-        raise GateError(f"无法加载检查器模块：{CHECKERS_PATH}")
+        raise GateError(f"cannot load the checkers module: {CHECKERS_PATH}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     registry = getattr(module, "CHECKERS", None)
     if not isinstance(registry, dict):
-        raise GateError("checkers.py 未定义 CHECKERS 字典")
+        raise GateError("checkers.py does not define a CHECKERS dict")
     return {str(name): checker for name, checker in registry.items()}
 
 
@@ -224,7 +230,9 @@ def resolve_tools(names: Iterable[str]) -> dict[str, str]:
     for name in names:
         located = shutil.which(name)
         if located is None:
-            raise GateError(f"缺少工具 {name}，不在 PATH 上；本闸门只调用系统工具")
+            raise GateError(
+                f"missing tool {name}, not on PATH; this gate only calls system tools"
+            )
         found[name] = located
     return found
 
@@ -241,7 +249,7 @@ def run(cmd: Sequence[str]) -> tuple[int, str]:
             check=False,
         )
     except subprocess.TimeoutExpired:
-        return 1, f"超时（>{TIMEOUT_SECONDS}s）"
+        return 1, f"timed out (>{TIMEOUT_SECONDS}s)"
     parts = [part.strip() for part in (proc.stdout, proc.stderr) if part.strip()]
     return proc.returncode, "\n".join(parts)
 
@@ -251,7 +259,7 @@ def iter_files(targets: Iterable[str]) -> list[Path]:
     for raw in targets:
         path = Path(raw).resolve()
         if not path.exists():
-            raise GateError(f"路径不存在：{raw}")
+            raise GateError(f"path does not exist: {raw}")
         candidates = path.rglob("*") if path.is_dir() else [path]
         for item in candidates:
             if item.is_file() and not SKIP_PARTS & set(item.parts):
@@ -272,14 +280,18 @@ def _is_no_target(tool: str, out: str, tools: dict[str, ToolSpec]) -> bool:
     return spec is not None and any(marker in out for marker in spec.no_target_markers)
 
 
-def collect_builtin_problems(
-    rule: TypeRule, files: Sequence[Path], checkers: dict[str, Checker]
+def run_checks(
+    specs: Sequence[BuiltinSpec],
+    files: Sequence[Path],
+    checkers: dict[str, Checker],
+    where: str,
 ) -> list[str]:
+    """Run a set of builtin checks; type-level and package-level share this, differing in where."""
     problems: list[str] = []
-    for spec in rule.builtins:
+    for spec in specs:
         checker = checkers.get(spec.check)
         if checker is None:
-            raise GateError(f"规则 {rule.id} 引用了未注册的检查器 {spec.check}")
+            raise GateError(f"{where} references unregistered checker {spec.check}")
         for path in files:
             if spec.only and path.name not in spec.only:
                 continue
@@ -287,10 +299,17 @@ def collect_builtin_problems(
     return problems
 
 
+def collect_builtin_problems(
+    rule: TypeRule, files: Sequence[Path], checkers: dict[str, Checker]
+) -> list[str]:
+    return run_checks(rule.builtins, files, checkers, f"rule {rule.id}")
+
+
 def _savings_note(before: int, after: int) -> str:
     if before <= 0:
         return ""
-    return f"（{before} → {after} 字节，省 {(before - after) / before * 100:.1f}%）"
+    saved = (before - after) / before * 100
+    return f" ({before} -> {after} bytes, {saved:.1f}% saved)"
 
 
 def run_group(
@@ -300,7 +319,7 @@ def run_group(
     tool_specs: dict[str, ToolSpec],
     checkers: dict[str, Checker],
 ) -> tuple[list[str], list[str]]:
-    """跑一种类型的修复与复验，返回（残余问题, 规则表疑似配置错误）。"""
+    """Fix and re-verify one file type: returns (residual problems, suspected rules-table errors)."""
     residual = collect_builtin_problems(rule, files, checkers)
     before = sum(path.stat().st_size for path in files) if rule.report_savings else 0
     for step in rule.fix:
@@ -310,19 +329,19 @@ def run_group(
         code, out = run(build_cmd(step, files))
         if code == 0:
             continue
-        detail = _indent(out) if out else "无输出"
+        detail = _indent(out) if out else "(no output)"
         if _is_no_target(step[0], out, tool_specs):
             config_errors.append(
-                f"{step[0]} 没有接受这些文件，检查规则表：\n{DETAIL_INDENT}{detail}"
+                f"{step[0]} did not accept these files, check the rules table:\n"
+                f"{DETAIL_INDENT}{detail}"
             )
             continue
         residual.append(f"{' '.join(step)} (exit {code})\n{DETAIL_INDENT}{detail}")
     after = sum(path.stat().st_size for path in files)
     note = _savings_note(before, after) if rule.report_savings else ""
     bad = len(residual) + len(config_errors)
-    print(
-        f"{rule.label}: {len(files)} 个文件: {'OK' if not bad else f'{bad} 项待修'}{note}"
-    )
+    status = "OK" if not bad else f"{bad} to fix"
+    print(f"{rule.label}: {len(files)} file(s): {status}{note}")
     for item in config_errors:
         print(f"{INDENT}!! {item}")
     for item in residual:
@@ -331,7 +350,7 @@ def run_group(
 
 
 def _version_line(name: str, raw: str) -> str:
-    """统一版本横幅：有的工具只打印 `Version: x.y.z`，不带自己的名字。"""
+    """Normalize version banners: some tools print a bare `Version: x.y.z` without their name."""
     line = raw.splitlines()[0] if raw else ""
     head, sep, tail = line.partition(":")
     if sep and head.strip().lower() in {"version", name.lower()}:
@@ -347,19 +366,28 @@ def tool_banner(tool_paths: dict[str, str], names: Iterable[str]) -> str:
     return "  ".join(parts)
 
 
-def print_matrix(rules: Sequence[TypeRule], tool_specs: dict[str, ToolSpec]) -> None:
-    print(f"规则表：{RULES_PATH}")
+def print_matrix(
+    rules: Sequence[TypeRule],
+    tool_specs: dict[str, ToolSpec],
+    package_checks: Sequence[BuiltinSpec],
+) -> None:
+    print(f"Rules table: {RULES_PATH}")
     for rule in rules:
-        fixers = "、".join(dict.fromkeys(step[0] for step in rule.fix)) or "无"
-        verifiers = "、".join(dict.fromkeys(step[0] for step in rule.verify)) or "无"
-        checks = "、".join(spec.check for spec in rule.builtins) or "无"
+        fixers = ", ".join(dict.fromkeys(step[0] for step in rule.fix)) or "none"
+        verifiers = ", ".join(dict.fromkeys(step[0] for step in rule.verify)) or "none"
+        checks = ", ".join(spec.check for spec in rule.builtins) or "none"
         print(f"  {rule.id:<12} {' '.join(sorted(rule.suffixes))}")
-        print(f"      修复 {fixers}／复验 {verifiers}／内置 {checks}")
+        print(f"      fix {fixers} / verify {verifiers} / builtin {checks}")
+    package_line = ", ".join(spec.check for spec in package_checks) or "none"
+    print(f"  {'package':<12} (all files)")
+    print(f"      builtin {package_line}")
     declared = sorted(tool_specs)
     missing = [name for name in declared if shutil.which(name) is None]
-    print(f"工具：{'、'.join(declared) or '无'}")
+    print(f"Tools: {', '.join(declared) or 'none'}")
     if missing:
-        print(f"缺工具：{'、'.join(missing)}（用到的那些会直接报错）")
+        print(
+            f"Missing tools: {', '.join(missing)} (any that are used will fail outright)"
+        )
 
 
 def group_by_rule(
@@ -380,20 +408,24 @@ def group_by_rule(
 
 
 def main(argv: Sequence[str]) -> int:
+    package_problems: list[str] = []
     try:
         args = parse_args(argv)
-        rules, tool_specs = load_rules(RULES_PATH)
+        rules, tool_specs, package_checks = load_rules(RULES_PATH)
         if args.list:
-            print_matrix(rules, tool_specs)
+            print_matrix(rules, tool_specs, package_checks)
             return 0
         if not args.paths:
-            print("需要给出要检查的文件或目录；用 --list 看规则表。")
+            print(
+                "Give files or directories to check; use --list to see the rules table."
+            )
             return 2
         checkers = load_checkers()
         files = iter_files(args.paths)
         if not files:
-            print(f"未找到可检查的文件：{' '.join(args.paths)}")
+            print(f"No checkable files found: {' '.join(args.paths)}")
             return 2
+        package_problems = run_checks(package_checks, files, checkers, "package_checks")
         groups = group_by_rule(rules, files)
         needed = sorted(
             {
@@ -405,11 +437,15 @@ def main(argv: Sequence[str]) -> int:
         )
         tool_paths = resolve_tools(needed)
     except GateError as exc:
-        print(f"闸门无法运行：{exc}")
+        print(f"Gate cannot run: {exc}")
         return 2
 
-    print(f"工具：{tool_banner(tool_paths, needed)}")
-    residual: list[str] = []
+    print(f"Tools: {tool_banner(tool_paths, needed)}")
+    if package_problems:
+        print(f"Package checks: {len(package_problems)} to fix")
+        for item in package_problems:
+            print(INDENT + item)
+    residual: list[str] = list(package_problems)
     config_errors: list[str] = []
     for rule, group in groups:
         if not group:
@@ -424,15 +460,18 @@ def main(argv: Sequence[str]) -> int:
     uncovered = sorted({path.suffix.lower() for path in files} - covered)
     print()
     if uncovered:
-        shown = "、".join(suffix or "（无后缀）" for suffix in uncovered)
-        print(f"未纳入闸门的后缀：{shown}（在 file-types.json 加一段即可覆盖）")
+        shown = ", ".join(suffix or "(no suffix)" for suffix in uncovered)
+        print(
+            f"Suffixes outside the gate: {shown} "
+            "(add a block in file-types.json to cover them)"
+        )
     if config_errors:
-        print(f"规则表有问题：{len(config_errors)} 项")
+        print(f"Rules table has problems: {len(config_errors)}")
         return 2
     if residual:
-        print(f"闸门未通过：{len(residual)} 项待修")
+        print(f"Gate failed: {len(residual)} to fix")
         return 1
-    print(f"闸门通过：{len(files)} 个文件全部干净")
+    print(f"Gate passed: all {len(files)} files clean")
     return 0
 
 

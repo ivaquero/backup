@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "comment": "skill-forge 的规则表。加新文件类型 = 在 types 里加一段；命令行里的文件路径由引擎追加到末尾。",
+  "comment": "skill-forge rules table. Add a file type = add a block to types; package_checks are builtin checks that ignore suffix and cover the whole package. Paths given on the command line are appended to each command by the engine.",
   "tools": {
     "ruff": { "suffixes": [".py"] },
     "ty": { "suffixes": [".py"] },
@@ -28,6 +28,7 @@
     },
     "oxipng": { "suffixes": [".png"] }
   },
+  "package_checks": [{ "check": "no-local-paths" }],
   "types": [
     {
       "id": "python",
@@ -60,7 +61,7 @@
       ]
     },
     {
-      "id":     "json-data",
+      "id": "json-data",
       "label": "JSON",
       "suffixes": [".json", ".jsonc"],
       "builtins": [{ "check": "json-parse" }],

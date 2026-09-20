@@ -1,15 +1,16 @@
-"""skill-forge 内置检查器：不走外部工具的那几种校验。
+"""skill-forge builtin checkers: the validations that do not go through an external tool.
 
-每个检查器签名为 `(path: Path) -> list[str]`，返回问题描述，空列表表示通过。
-在 `file-types.json` 里用 `{"check": "名字"}` 引用；`{"check": "名字", "only": ["SKILL.md"]}`
-可以限定只对指定文件名生效。
+Each checker has the signature `(path: Path) -> list[str]`, returns problem descriptions,
+and an empty list means it passed. Reference one in `file-types.json` with
+`{"check": "name"}`; `{"check": "name", "only": ["SKILL.md"]}` limits it to those file names.
 
-扩展方式：在这里加一个函数并注册进 `CHECKERS`，无需改动引擎。
+To extend: add a function here and register it in `CHECKERS`; the engine needs no change.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import struct
 import zlib
@@ -30,63 +31,64 @@ def _read_text(path: Path) -> tuple[str, list[str]]:
     try:
         return path.read_text(encoding="utf-8"), []
     except (UnicodeDecodeError, OSError) as exc:
-        return "", [f"无法按 UTF-8 读取：{exc}"]
+        return "", [f"cannot read as UTF-8: {exc}"]
 
 
 def python_syntax(path: Path) -> list[str]:
-    """编译一次源码，抓语法层错误，这是最便宜的回归网。"""
+    """Compile the source once to catch syntax-level errors; the cheapest regression net."""
     source, problems = _read_text(path)
     if problems:
         return problems
     try:
         compile(source, str(path), "exec")
     except (SyntaxError, ValueError) as exc:
-        return [f"语法编译失败：{exc}"]
+        return [f"syntax compile failed: {exc}"]
     return []
 
 
 def json_parse(path: Path) -> list[str]:
-    """确认能被 json 解析，挡掉表格/配置类文件的手写语法错。"""
+    """Confirm the file parses as JSON, catching hand-written syntax errors in data files."""
     source, problems = _read_text(path)
     if problems:
         return problems
     try:
         json.loads(source)
     except (json.JSONDecodeError, ValueError) as exc:
-        return [f"JSON 不可解析：{exc}"]
+        return [f"JSON does not parse: {exc}"]
     return []
 
 
 def skill_frontmatter(path: Path) -> list[str]:
-    """校验 frontmatter 齐备，且 name 等于目录名——不等就加载不了。"""
+    """Check the frontmatter is complete and name equals the directory name; else it will not load."""
     if path.name != "SKILL.md":
         return []
     source, problems = _read_text(path)
     if problems:
         return problems
     if not source.startswith("---"):
-        return ["frontmatter 缺失"]
+        return ["frontmatter missing"]
     end = source.find(FRONTMATTER_END, 3)
     if end == -1:
-        return ["frontmatter 未闭合"]
+        return ["frontmatter not closed"]
     block = source[3:end]
     found: list[str] = []
     match = NAME_RE.search(block)
     if match is None:
-        found.append("frontmatter 缺 name")
+        found.append("frontmatter is missing name")
     else:
         name = match.group(1).strip().strip("\"'")
         if name != path.parent.name:
             found.append(
-                f"frontmatter name={name!r} 与目录名 {path.parent.name!r} 不一致"
+                f"frontmatter name={name!r} does not match "
+                f"directory name {path.parent.name!r}"
             )
     if DESC_RE.search(block) is None:
-        found.append("frontmatter 缺 description")
+        found.append("frontmatter is missing description")
     return found
 
 
 def _walk_png_chunks(data: bytes, found: list[str], seen: set[bytes]) -> int:
-    """按块走一遍 PNG，返回结束偏移；顺带记录块名与结构问题。"""
+    """Walk the PNG chunk by chunk, returning the end offset and recording structural problems."""
     check_crc = len(data) <= PNG_CRC_LIMIT
     offset = len(PNG_SIGNATURE)
     while offset + 8 <= len(data):
@@ -94,21 +96,21 @@ def _walk_png_chunks(data: bytes, found: list[str], seen: set[bytes]) -> int:
         body_start = offset + 8
         body_end = body_start + length
         if body_end + 4 > len(data):
-            found.append(f"块 {tag!r} 声明长度 {length} 超出文件末尾")
+            found.append(f"chunk {tag!r} declares length {length} past end of file")
             return offset
         seen.add(tag)
         if tag == b"IHDR":
             if length != IHDR_LENGTH:
-                found.append(f"IHDR 长度应为 {IHDR_LENGTH}，实际 {length}")
+                found.append(f"IHDR length should be {IHDR_LENGTH}, got {length}")
             else:
                 width, height = struct.unpack(">II", data[body_start : body_start + 8])
                 if width == 0 or height == 0:
-                    found.append(f"IHDR 尺寸非法：{width}x{height}")
+                    found.append(f"IHDR has invalid dimensions: {width}x{height}")
         if check_crc:
             expected = struct.unpack(">I", data[body_end : body_end + 4])[0]
             actual = zlib.crc32(data[offset + 4 : body_end]) & 0xFFFFFFFF
             if expected != actual:
-                found.append(f"块 {tag!r} CRC 不匹配")
+                found.append(f"chunk {tag!r} CRC mismatch")
         offset = body_end + 4
         if tag == b"IEND":
             break
@@ -116,23 +118,67 @@ def _walk_png_chunks(data: bytes, found: list[str], seen: set[bytes]) -> int:
 
 
 def png_integrity(path: Path) -> list[str]:
-    """oxipng 是原地重写二进制，这里按块结构与 CRC 复核它没写坏。"""
+    """oxipng rewrites the binary in place; re-check chunk structure and CRCs to confirm it held."""
     try:
         data = path.read_bytes()
     except OSError as exc:
-        return [f"无法读取：{exc}"]
+        return [f"cannot read: {exc}"]
     if not data.startswith(PNG_SIGNATURE):
-        return ["不是 PNG：签名不匹配"]
+        return ["not a PNG: signature mismatch"]
     found: list[str] = []
     seen: set[bytes] = set()
     offset = _walk_png_chunks(data, found, seen)
     if b"IHDR" not in seen:
-        found.append("缺 IHDR")
+        found.append("missing IHDR")
     if b"IEND" not in seen:
-        found.append("缺 IEND")
+        found.append("missing IEND")
     elif offset != len(data):
-        found.append(f"IEND 之后还有 {len(data) - offset} 字节多余数据")
+        found.append(f"{len(data) - offset} extra bytes after IEND")
     return found
+
+
+def _home_needles() -> tuple[str, ...]:
+    """The spellings of this machine's home directory, used to spot hard-coded local paths.
+
+    Only the home directory that really exists on this machine is used, so an
+    illustrative `C:/Users/someone` in documentation never triggers a false positive.
+    Anything shorter than 4 characters (such as `C:/`) is dropped, so a whole drive
+    never becomes a match pattern.
+    """
+    candidates = {str(Path.home())}
+    for var in ("USERPROFILE", "HOME"):
+        value = os.environ.get(var)
+        if value:
+            candidates.add(value)
+    needles: list[str] = []
+    for item in sorted(candidates):
+        for form in (item, item.replace("\\", "/")):
+            if len(form) > 3 and form not in needles:
+                needles.append(form)
+    return tuple(needles)
+
+
+def no_local_paths(path: Path) -> list[str]:
+    """A skill package must not carry this machine's absolute paths: elsewhere that text is wrong.
+
+    Binary files are skipped silently; portability is not their concern, so a decode
+    failure is not counted as a problem.
+    """
+    try:
+        source = path.read_text(encoding="utf-8")
+    except (UnicodeDecodeError, OSError):
+        return []
+    lowered = source.lower()
+    for needle in _home_needles():
+        if needle.lower() in lowered:
+            return [
+                (
+                    f"found this machine's absolute path {needle}; a skill package gets "
+                    "copied to other machines and paths, where a hard-coded path is simply "
+                    "wrong -- use ~ or the <this skill dir> placeholder instead"
+                )
+            ]
+    return []
 
 
 CHECKERS: dict[str, Checker] = {
@@ -140,4 +186,5 @@ CHECKERS: dict[str, Checker] = {
     "json-parse": json_parse,
     "skill-frontmatter": skill_frontmatter,
     "png-integrity": png_integrity,
+    "no-local-paths": no_local_paths,
 }
