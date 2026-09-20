@@ -3,11 +3,27 @@
   "cookies": [
     {
       "name": "wr_fp",
-      "value": "2835273639"
+      "value": "3167646864"
+    },
+    {
+      "name": "wr_localvid",
+      "value": ""
+    },
+    {
+      "name": "wr_name",
+      "value": ""
+    },
+    {
+      "name": "wr_avatar",
+      "value": ""
+    },
+    {
+      "name": "wr_gender",
+      "value": ""
     },
     {
       "name": "wr_skey",
-      "value": "5dNAf2i6"
+      "value": "T3ajHzAN"
     },
     {
       "name": "wr_vid",
@@ -19,11 +35,11 @@
     },
     {
       "name": "wr_rt",
-      "value": "web@YBufzBqZsvd0QEIpU5k_AL"
+      "value": "web@PEfPmkyGy44KR0Uu4O8_AL"
     },
     {
       "name": "wr_gid",
-      "value": "256361646"
+      "value": "274785756"
     }
   ],
   "noteLocation": "public",
@@ -31,7 +47,7 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1788486735968,
+  "lastCookieTime": 1788312713120,
   "isCookieValid": false,
   "user": "",
   "userVid": "38131323",
@@ -65,17 +81,17 @@
   "cookieRefreshInterval": 12,
   "scheduledSyncToggle": false,
   "scheduledSyncInterval": 5,
-  "lastSyncTime": 1788229019287,
-  "lastSyncBookCount": 18,
+  "lastSyncTime": 1789923167938,
+  "lastSyncBookCount": 2,
   "lastSyncBookTitles": [],
   "syncLogs": [
     {
-      "id": "sync-1788229005640",
-      "timestamp": 1788229005640,
-      "totalBooks": 117,
-      "syncedBooks": 18,
+      "id": "sync-1789923166617",
+      "timestamp": 1789923166617,
+      "totalBooks": 112,
+      "syncedBooks": 2,
       "skippedBooks": 0,
-      "duration": 13.646,
+      "duration": 1.321,
       "notes": [
         {
           "bookId": "536972",
@@ -83,110 +99,50 @@
           "filePath": "public/社会文化/失控.md"
         },
         {
-          "bookId": "834465",
-          "title": "许三观卖血记",
-          "filePath": "public/精品小说/许三观卖血记.md"
-        },
-        {
-          "bookId": "915505",
-          "title": "控制力：麻省理工学院的经典理论",
-          "filePath": "public/社会文化/控制力：麻省理工学院的经典理论.md"
-        },
-        {
-          "bookId": "731612",
-          "title": "股票大作手操盘术：融合时间和价格的利弗莫尔准则",
-          "filePath": "public/经济理财/股票大作手操盘术：融合时间和价格的利弗莫尔准则.md"
-        },
-        {
-          "bookId": "41518628",
-          "title": "作家榜名著：先知",
-          "filePath": "public/文学/作家榜名著：先知.md"
-        },
-        {
-          "bookId": "22369480",
-          "title": "规模",
-          "filePath": "public/科学技术/规模.md"
-        },
-        {
-          "bookId": "3300020531",
-          "title": "嫌疑人X的献身",
-          "filePath": "public/精品小说/嫌疑人X的献身.md"
-        },
-        {
-          "bookId": "3300019847",
-          "title": "绿里（斯蒂芬·金作品系列）",
-          "filePath": "public/精品小说/绿里.md"
-        },
-        {
-          "bookId": "23796324",
-          "title": "昨日的世界",
-          "filePath": "public/文学/昨日的世界.md"
-        },
-        {
-          "bookId": "34632166",
-          "title": "断头王后：玛丽·安托瓦内特传",
-          "filePath": "public/人物传记/断头王后：玛丽·安托瓦内特传.md"
-        },
-        {
-          "bookId": "3300060718",
-          "title": "头号书迷（斯蒂芬·金作品系列）",
-          "filePath": "public/精品小说/头号书迷.md"
-        },
-        {
-          "bookId": "3300020488",
-          "title": "世上最美的溺水者",
-          "filePath": "public/文学/世上最美的溺水者.md"
-        },
-        {
-          "bookId": "26435427",
-          "title": "生死疲劳【中国诺奖得主代表作】",
-          "filePath": "public/精品小说/生死疲劳【中国诺奖得主代表作】.md"
-        },
-        {
-          "bookId": "33820337",
-          "title": "契诃夫小说选（人文社外国文学名著经典·网格本）",
-          "filePath": "public/文学/契诃夫小说选.md"
-        },
-        {
-          "bookId": "749907",
-          "title": "牧羊少年奇幻之旅",
-          "filePath": "public/精品小说/牧羊少年奇幻之旅.md"
-        },
-        {
-          "bookId": "3300150167",
-          "title": "维奥莱塔：一个女人的一生（阿连德作品）",
-          "filePath": "public/文学/维奥莱塔：一个女人的一生.md"
-        },
-        {
-          "bookId": "44752228",
-          "title": "饥饿的盛世：乾隆时代的得与失",
-          "filePath": "public/历史/饥饿的盛世：乾隆时代的得与失.md"
-        },
-        {
-          "bookId": "44026191",
-          "title": "纳瓦尔宝典",
-          "filePath": "public/经济理财/纳瓦尔宝典.md"
+          "bookId": "3300209394",
+          "title": "图解Skill：AI提效实战指南",
+          "filePath": "public/科学技术/图解Skill：AI提效实战指南.md"
         }
       ],
       "success": true
     },
     {
-      "id": "sync-1788188250169",
-      "timestamp": 1788188250169,
-      "totalBooks": 0,
+      "id": "sync-1788312760450",
+      "timestamp": 1788312760450,
+      "totalBooks": 117,
       "syncedBooks": 0,
       "skippedBooks": 0,
-      "duration": 0.49,
+      "duration": 0.345,
       "notes": [],
       "success": true
     },
     {
-      "id": "sync-1788188242684",
-      "timestamp": 1788188242684,
+      "id": "sync-1788312613040",
+      "timestamp": 1788312613040,
       "totalBooks": 0,
       "syncedBooks": 0,
       "skippedBooks": 0,
-      "duration": 1.051,
+      "duration": 0.456,
+      "notes": [],
+      "success": true
+    },
+    {
+      "id": "sync-1788312607995",
+      "timestamp": 1788312607995,
+      "totalBooks": 0,
+      "syncedBooks": 0,
+      "skippedBooks": 0,
+      "duration": 0.489,
+      "notes": [],
+      "success": true
+    },
+    {
+      "id": "sync-1788312599341",
+      "timestamp": 1788312599341,
+      "totalBooks": 0,
+      "syncedBooks": 0,
+      "skippedBooks": 0,
+      "duration": 1.004,
       "notes": [],
       "success": true
     }
