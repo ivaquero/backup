@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "comment": "skill-forge 的规则表。加新文件类型 = 在 types 里加一段；命令行里的文件路径由引擎追加到末尾。",
+  "tools": {
+    "ruff": { "suffixes": [".py"] },
+    "ty": { "suffixes": [".py"] },
+    "rumdl": { "suffixes": [".md"] },
+    "oxlint": {
+      "suffixes": [".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs", ".mts", ".cts"],
+      "no_target_markers": ["No files found to lint"]
+    },
+    "oxfmt": {
+      "suffixes": [
+        ".js",
+        ".jsx",
+        ".ts",
+        ".tsx",
+        ".mjs",
+        ".cjs",
+        ".mts",
+        ".cts",
+        ".css",
+        ".scss",
+        ".less",
+        ".json"
+      ],
+      "no_target_markers": ["Expected at least one target file"]
+    },
+    "oxipng": { "suffixes": [".png"] }
+  },
+  "types": [
+    {
+      "id": "python",
+      "label": "Python",
+      "suffixes": [".py"],
+      "builtins": [{ "check": "python-syntax" }],
+      "fix": [
+        ["ruff", "check", "--no-cache", "--fix", "--unsafe-fixes"],
+        ["ruff", "format", "--no-cache"],
+        ["ty", "check", "--fix"]
+      ],
+      "verify": [
+        ["ruff", "check", "--no-cache"],
+        ["ruff", "format", "--no-cache", "--check"],
+        ["ty", "check", "--output-format", "concise"]
+      ]
+    },
+    {
+      "id": "markdown",
+      "label": "Markdown",
+      "suffixes": [".md"],
+      "builtins": [{ "check": "skill-frontmatter", "only": ["SKILL.md"] }],
+      "fix": [
+        ["rumdl", "check", "--no-cache", "--fix"],
+        ["rumdl", "fmt", "--no-cache"]
+      ],
+      "verify": [
+        ["rumdl", "check", "--no-cache"],
+        ["rumdl", "fmt", "--no-cache", "--check"]
+      ]
+    },
+    {
+      "id":     "json-data",
+      "label": "JSON",
+      "suffixes": [".json", ".jsonc"],
+      "builtins": [{ "check": "json-parse" }],
+      "fix": [],
+      "verify": []
+    },
+    {
+      "id": "frontend",
+      "label": "TS/JS",
+      "suffixes": [".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs", ".mts", ".cts"],
+      "builtins": [],
+      "fix": [
+        ["oxlint", "--fix", "--format", "unix"],
+        ["oxfmt"]
+      ],
+      "verify": [
+        ["oxlint", "--deny-warnings", "--format", "unix"],
+        ["oxfmt", "--check"]
+      ]
+    },
+    {
+      "id": "css",
+      "label": "CSS",
+      "suffixes": [".css", ".scss", ".less"],
+      "builtins": [],
+      "fix": [["oxfmt"]],
+      "verify": [["oxfmt", "--check"]]
+    },
+    {
+      "id": "png",
+      "label": "PNG",
+      "suffixes": [".png"],
+      "builtins": [{ "check": "png-integrity" }],
+      "fix": [["oxipng", "-o", "2"]],
+      "verify": [],
+      "report_savings": true
+    }
+  ]
+}
