@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-09-12T02:46:23.958-00:00",
+	"CreationDate" : "2026-09-21T17:43:35.072-00:00",
 	"Sources" : 
 	[
 		{
@@ -8,9 +8,6 @@
 			[
 				{
 					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
-				},
-				{
-					"PackageIdentifier" : "Git.Git"
 				},
 				{
 					"PackageIdentifier" : "Tencent.TencentMeeting"

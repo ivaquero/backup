@@ -90,11 +90,11 @@
             "Updated": "\/Date(1789149096886)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras",
             "Name": "cockpit-tools",
-            "Version": "1.3.56",
-            "Updated": "\/Date(1789714745103)\/"
+            "Version": "1.3.57",
+            "Updated": "\/Date(1789886003690)\/"
         },
         {
             "Info": "",
@@ -135,8 +135,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.6.17",
-            "Updated": "\/Date(1789836965190)\/"
+            "Version": "0.6.18",
+            "Updated": "\/Date(1789960985232)\/"
         },
         {
             "Info": "",
@@ -151,13 +151,6 @@
             "Name": "draw.io",
             "Version": "31.3.2",
             "Updated": "\/Date(1787457641376)\/"
-        },
-        {
-            "Info": "Held package",
-            "Source": "extras-cn",
-            "Name": "dsh-desktop",
-            "Version": "2.0.10",
-            "Updated": "\/Date(1789714810437)\/"
         },
         {
             "Info": "",
@@ -212,8 +205,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ffmpeg",
-            "Version": "9.0.1",
-            "Updated": "\/Date(1786544698940)\/"
+            "Version": "9.0.2",
+            "Updated": "\/Date(1789906879961)\/"
         },
         {
             "Info": "",
@@ -226,8 +219,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "flow-launcher",
-            "Version": "2.1.3",
-            "Updated": "\/Date(1781855623364)\/"
+            "Version": "2.1.4",
+            "Updated": "\/Date(1789922441028)\/"
         },
         {
             "Info": "",
@@ -270,6 +263,13 @@
             "Name": "gh",
             "Version": "2.101.0",
             "Updated": "\/Date(1789498900561)\/"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Name": "git",
+            "Version": "2.55.0.5",
+            "Updated": "\/Date(1789983801991)\/"
         },
         {
             "Info": "",
@@ -331,8 +331,8 @@
             "Info": "",
             "Source": "extras-cn",
             "Name": "i4tools",
-            "Version": "9.19",
-            "Updated": "\/Date(1788925497974)\/"
+            "Version": "9.20.028",
+            "Updated": "\/Date(1789922451662)\/"
         },
         {
             "Info": "",
@@ -433,11 +433,11 @@
             "Updated": "\/Date(1782390044857)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "main",
             "Name": "mise",
             "Version": "2026.9.11",
-            "Updated": "\/Date(1789818993794)\/"
+            "Updated": "\/Date(1789922468455)\/"
         },
         {
             "Info": "",
@@ -499,8 +499,8 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "openresearch",
-            "Version": "0.2.4",
-            "Updated": "\/Date(1789636094693)\/"
+            "Version": "0.2.6",
+            "Updated": "\/Date(1789922584763)\/"
         },
         {
             "Info": "",
@@ -595,6 +595,13 @@
         },
         {
             "Info": "",
+            "Source": "extras",
+            "Name": "psreadline",
+            "Version": "2.4.5",
+            "Updated": "\/Date(1789973981997)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras-cn",
             "Name": "qingjian",
             "Version": "0.1.3",
@@ -646,8 +653,8 @@
             "Info": "",
             "Source": "main",
             "Name": "rumdl",
-            "Version": "0.2.74",
-            "Updated": "\/Date(1789819008558)\/"
+            "Version": "0.2.75",
+            "Updated": "\/Date(1789963954287)\/"
         },
         {
             "Info": "",
@@ -811,11 +818,11 @@
             "Updated": "\/Date(1789458479057)\/"
         },
         {
-            "Info": "Held package",
+            "Info": "",
             "Source": "extras-plus",
             "Name": "voicestudio",
-            "Version": "0.5.2",
-            "Updated": "\/Date(1789714779349)\/"
+            "Version": "0.5.3",
+            "Updated": "\/Date(1789922714067)\/"
         },
         {
             "Info": "",
@@ -835,8 +842,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.15.11",
-            "Updated": "\/Date(1789648529115)\/"
+            "Version": "4.1.15.12",
+            "Updated": "\/Date(1789922725936)\/"
         },
         {
             "Info": "",
@@ -921,19 +928,19 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1789835287000)\/",
+                "value": "\/Date(1789980878000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月20日 0:28:07"
+                "DateTime": "2026年9月21日 16:54:38"
             },
-            "Manifests": 1653
+            "Manifests": 1655
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1789835314000)\/",
+                "value": "\/Date(1789980058000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月20日 0:28:34"
+                "DateTime": "2026年9月21日 16:40:58"
             },
             "Manifests": 2389
         },
@@ -951,9 +958,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1789833564000)\/",
+                "value": "\/Date(1789967693000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月19日 23:59:24"
+                "DateTime": "2026年9月21日 13:14:53"
             },
             "Manifests": 88
         },
@@ -961,9 +968,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1789840782000)\/",
+                "value": "\/Date(1789966770000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月20日 1:59:42"
+                "DateTime": "2026年9月21日 12:59:30"
             },
             "Manifests": 56
         },
@@ -971,9 +978,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1789839401000)\/",
+                "value": "\/Date(1789920669000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月20日 1:36:41"
+                "DateTime": "2026年9月21日 0:11:09"
             },
             "Manifests": 38
         }
