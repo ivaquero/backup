@@ -12,16 +12,16 @@
     "firstWindowPreference": "persistedWindowLayout",
     "keybindings": [
         {
-            "id": "Terminal.NextTab",
-            "keys": "ctrl+tab"
+            "id": "Terminal.OpenNewTab",
+            "keys": "alt+shift+t"
         },
         {
-            "id": "Terminal.ResizePaneDown",
-            "keys": "alt+shift+down"
+            "id": "Terminal.NextTab",
+            "keys": "alt+tab"
         },
         {
             "id": "Terminal.PrevTab",
-            "keys": "ctrl+shift+tab"
+            "keys": "alt+shift+tab"
         },
         {
             "id": "Terminal.CopyToClipboard",
@@ -32,16 +32,8 @@
             "keys": "ctrl+v"
         },
         {
-            "id": "Terminal.ClosePane",
-            "keys": "ctrl+shift+w"
-        },
-        {
             "id": "Terminal.MoveFocusDown",
             "keys": "alt+down"
-        },
-        {
-            "id": "Terminal.OpenNewTab",
-            "keys": "ctrl+shift+t"
         },
         {
             "id": "Terminal.MoveFocusLeft",
@@ -54,6 +46,10 @@
         {
             "id": "Terminal.MoveFocusUp",
             "keys": "alt+up"
+        },
+        {
+            "id": "Terminal.ResizePaneDown",
+            "keys": "alt+shift+down"
         },
         {
             "id": "Terminal.ResizePaneLeft",

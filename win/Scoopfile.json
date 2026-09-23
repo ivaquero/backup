@@ -30,8 +30,8 @@
             "Info": "",
             "Source": "main",
             "Name": "android-cli",
-            "Version": "1.0.16261425",
-            "Updated": "\/Date(1789841234987)\/"
+            "Version": "1.0.16406183",
+            "Updated": "\/Date(1790062149288)\/"
         },
         {
             "Info": "",
@@ -93,8 +93,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "cockpit-tools",
-            "Version": "1.3.57",
-            "Updated": "\/Date(1789886003690)\/"
+            "Version": "1.3.58",
+            "Updated": "\/Date(1790067235485)\/"
         },
         {
             "Info": "",
@@ -114,8 +114,8 @@
             "Info": "",
             "Source": "main",
             "Name": "cuda",
-            "Version": "13.3.1",
-            "Updated": "\/Date(1783427892979)\/"
+            "Version": "13.4.2",
+            "Updated": "\/Date(1790052026032)\/"
         },
         {
             "Info": "",
@@ -135,8 +135,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "dbx",
-            "Version": "0.6.18",
-            "Updated": "\/Date(1789960985232)\/"
+            "Version": "0.6.20",
+            "Updated": "\/Date(1790095292822)\/"
         },
         {
             "Info": "",
@@ -254,8 +254,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "geekuninstaller",
-            "Version": "1.5.4.180",
-            "Updated": "\/Date(1787147588442)\/"
+            "Version": "1.5.5.185",
+            "Updated": "\/Date(1790091314992)\/"
         },
         {
             "Info": "",
@@ -455,6 +455,13 @@
         },
         {
             "Info": "",
+            "Source": "main-plus",
+            "Name": "music-dl",
+            "Version": "1.1.1",
+            "Updated": "\/Date(1790089333678)\/"
+        },
+        {
+            "Info": "",
             "Source": "extras",
             "Name": "nvcleanstall",
             "Version": "1.19.0",
@@ -492,15 +499,15 @@
             "Info": "",
             "Source": "main-plus",
             "Name": "open-code-review",
-            "Version": "1.12.7",
-            "Updated": "\/Date(1789837003039)\/"
+            "Version": "1.12.9",
+            "Updated": "\/Date(1790101110201)\/"
         },
         {
             "Info": "",
             "Source": "main-plus",
             "Name": "openresearch",
-            "Version": "0.2.6",
-            "Updated": "\/Date(1789922584763)\/"
+            "Version": "0.2.8",
+            "Updated": "\/Date(1790062219927)\/"
         },
         {
             "Info": "",
@@ -520,8 +527,8 @@
             "Info": "",
             "Source": "main",
             "Name": "oxfmt",
-            "Version": "0.68.0",
-            "Updated": "\/Date(1789834491816)\/"
+            "Version": "0.70.0",
+            "Updated": "\/Date(1790051243008)\/"
         },
         {
             "Info": "",
@@ -534,8 +541,8 @@
             "Info": "",
             "Source": "main",
             "Name": "oxlint",
-            "Version": "1.83.0",
-            "Updated": "\/Date(1789398252357)\/"
+            "Version": "1.85.0",
+            "Updated": "\/Date(1790051431034)\/"
         },
         {
             "Info": "",
@@ -605,7 +612,7 @@
             "Source": "extras-cn",
             "Name": "qingjian",
             "Version": "0.1.3",
-            "Updated": "\/Date(1789654194139)\/"
+            "Updated": "\/Date(1790101600689)\/"
         },
         {
             "Info": "",
@@ -618,8 +625,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "readest",
-            "Version": "0.12.8",
-            "Updated": "\/Date(1788845572851)\/"
+            "Version": "0.12.10",
+            "Updated": "\/Date(1790052635103)\/"
         },
         {
             "Info": "",
@@ -758,8 +765,8 @@
             "Info": "",
             "Source": "main",
             "Name": "ty",
-            "Version": "0.0.82",
-            "Updated": "\/Date(1789714862113)\/"
+            "Version": "0.0.83",
+            "Updated": "\/Date(1790051678214)\/"
         },
         {
             "Info": "",
@@ -842,8 +849,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "wechat",
-            "Version": "4.1.15.12",
-            "Updated": "\/Date(1789922725936)\/"
+            "Version": "4.1.15.13",
+            "Updated": "\/Date(1790085132193)\/"
         },
         {
             "Info": "",
@@ -891,8 +898,8 @@
             "Info": "",
             "Source": "extras",
             "Name": "xnviewmp",
-            "Version": "1.11.6",
-            "Updated": "\/Date(1788187492428)\/"
+            "Version": "1.11.7",
+            "Updated": "\/Date(1790051434788)\/"
         },
         {
             "Info": "",
@@ -909,11 +916,11 @@
             "Updated": "\/Date(1787200976214)\/"
         },
         {
-            "Info": "",
+            "Info": "Held package",
             "Source": "extras",
             "Name": "zoom",
             "Version": "7.2.0.48358",
-            "Updated": "\/Date(1789819010924)\/"
+            "Updated": "\/Date(1790050874752)\/"
         },
         {
             "Info": "",
@@ -928,9 +935,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1789980878000)\/",
+                "value": "\/Date(1790094735000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月21日 16:54:38"
+                "DateTime": "2026年9月23日 0:32:15"
             },
             "Manifests": 1655
         },
@@ -938,9 +945,9 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1789980058000)\/",
+                "value": "\/Date(1790095494000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月21日 16:40:58"
+                "DateTime": "2026年9月23日 0:44:54"
             },
             "Manifests": 2389
         },
@@ -958,31 +965,31 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1789967693000)\/",
+                "value": "\/Date(1790100663000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月21日 13:14:53"
+                "DateTime": "2026年9月23日 2:11:03"
             },
-            "Manifests": 88
+            "Manifests": 89
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1789966770000)\/",
+                "value": "\/Date(1790096364000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月21日 12:59:30"
+                "DateTime": "2026年9月23日 0:59:24"
             },
-            "Manifests": 56
+            "Manifests": 57
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1789920669000)\/",
+                "value": "\/Date(1790101063000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年9月21日 0:11:09"
+                "DateTime": "2026年9月23日 2:17:43"
             },
-            "Manifests": 38
+            "Manifests": 40
         }
     ]
 }
