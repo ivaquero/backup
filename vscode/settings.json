@@ -93,9 +93,6 @@
   "git.suggestSmartCommit": true,
   "git.supportCancellation": true,
   "scm.defaultViewMode": "tree",
-  "remote.SSH.remotePlatform": {
-    "robot": "linux"
-  },
   // markdown
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
@@ -121,12 +118,6 @@
   "markdown.extension.theming.decoration.renderParagraph": true,
   "markdown.extension.toc.levels": "2..4",
   "rumdl.fixOnSave": true,
-  "rumdl.rules.disable": [
-    "MD013",
-    "MD025",
-    "MD029",
-    "MD033"
-  ],
   // notebook
   "notebook.codeActionsOnSave": {
     "notebook.source.fixAll": "never",
