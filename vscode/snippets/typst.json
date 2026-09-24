@@ -14,15 +14,61 @@
     ],
     "description": ""
   },
+  "col-br": {
+    "prefix": "cb",
+    "body": [
+      "#colbreak()"
+    ],
+    "description": ""
+  },
+  "col": {
+    "prefix": "col",
+    "body": [
+      "#[",
+      "  #set text(size: 18pt)",
+      "",
+      "]"
+    ],
+    "description": ""
+  },
+  "cols": {
+    "prefix": "cols",
+    "body": [
+      "#columns()[",
+      "",
+      "#colbreak()",
+      "",
+      "]",
+      ""
+    ],
+    "description": ""
+  },
+  "cols2": {
+    "prefix": "cols2",
+    "body": [
+      "#columns(gutter: 20pt, [",
+      "  #[",
+      "  #set text(size: 18pt)",
+      "",
+      "  ]",
+      "",
+      "  #[",
+      "  #set text(size: 18pt)",
+      "",
+      "  ]",
+      "]"
+    ],
+    "description": ""
+  },
   "page-br": {
-    "prefix": "pg",
+    "prefix": "pb",
     "body": [
       "#pagebreak()"
     ],
     "description": ""
   },
   "page-br-w": {
-    "prefix": "pgw",
+    "prefix": "pbw",
     "body": [
       "#pagebreak(weak: true)"
     ],
@@ -130,43 +176,6 @@
       "  indent: 0em,",
       ")",
       ""
-    ],
-    "description": ""
-  },
-  "col": {
-    "prefix": "col",
-    "body": [
-      "#[",
-      "  #set text(size: 18pt)",
-      "",
-      "]"
-    ],
-    "description": ""
-  },
-  "cols": {
-    "prefix": "cols",
-    "body": [
-      "#block(height: 18em, columns()[",
-      "",
-      "])",
-      ""
-    ],
-    "description": ""
-  },
-  "cols2": {
-    "prefix": "cols2",
-    "body": [
-      "#columns(gutter: 20pt, [",
-      "  #set text(size: 18pt)",
-      "  #let bh = 18em",
-      "  #block(height: bh)[",
-      "",
-      "  ]",
-      "",
-      "  #block(height: bh)[",
-      "",
-      "  ]",
-      "])"
     ],
     "description": ""
   },
