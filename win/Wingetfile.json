@@ -1,6 +1,6 @@
 {
 	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2026-09-21T17:43:35.072-00:00",
+	"CreationDate" : "2026-09-29T13:52:26.560-00:00",
 	"Sources" : 
 	[
 		{
@@ -8,6 +8,9 @@
 			[
 				{
 					"PackageIdentifier" : "ClashVergeRev.ClashVergeRev"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
 				},
 				{
 					"PackageIdentifier" : "Tencent.TencentMeeting"
@@ -124,5 +127,5 @@
 			}
 		}
 	],
-	"WinGetVersion" : "1.29.290"
+	"WinGetVersion" : "1.29.380"
 }
