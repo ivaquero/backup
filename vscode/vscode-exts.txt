@@ -10,8 +10,8 @@ foam.foam-vscode
 golang.go
 hediet.vscode-drawio
 james-yu.latex-workshop
-kylinideteam.cmake-intellisence
 mads-hartmann.bash-ide-vscode
+ms-python.python
 ms-python.vscode-python-envs
 ms-toolsai.jupyter
 ms-toolsai.jupyter-renderers
@@ -21,8 +21,6 @@ ms-vscode.live-server
 ms-vscode.remote-explorer
 muhammad-ahmad.xlsx-viewer
 myriad-dreamin.tinymist
-openai.chatgpt
-oxc.oxc-vscode
 pkief.material-icon-theme
 platformio.platformio-ide
 qcz.text-power-tools
@@ -32,6 +30,5 @@ rust-lang.rust-analyzer
 rvben.rumdl
 snakemake.snakemake-lang
 tencent-cloud.coding-copilot
-tombi-toml.tombi
 vue.volar
 yzhang.markdown-all-in-one
