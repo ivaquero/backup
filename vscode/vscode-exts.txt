@@ -21,14 +21,15 @@ ms-vscode.live-server
 ms-vscode.remote-explorer
 muhammad-ahmad.xlsx-viewer
 myriad-dreamin.tinymist
+oxc.oxc-vscode
 pkief.material-icon-theme
 platformio.platformio-ide
 qcz.text-power-tools
 redhat.vscode-xml
 redhat.vscode-yaml
-rust-lang.rust-analyzer
 rvben.rumdl
 snakemake.snakemake-lang
 tencent-cloud.coding-copilot
+tombi-toml.tombi
 vue.volar
 yzhang.markdown-all-in-one
