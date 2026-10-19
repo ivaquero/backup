@@ -9,9 +9,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1792312397000)\/",
+                "value": "\/Date(1792384605000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月18日 16:33:17"
+                "DateTime": "2026年10月19日 12:36:45"
             },
             "Manifests": 1692
         },
@@ -19,9 +19,9 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1792312521000)\/",
+                "value": "\/Date(1792384596000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月18日 16:35:21"
+                "DateTime": "2026年10月19日 12:36:36"
             },
             "Manifests": 2426
         },
@@ -29,9 +29,9 @@
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1792264140000)\/",
+                "value": "\/Date(1792333450000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月18日 3:09:00"
+                "DateTime": "2026年10月18日 22:24:10"
             },
             "Manifests": 367
         },
@@ -49,9 +49,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1792298258000)\/",
+                "value": "\/Date(1792385085000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月18日 12:37:38"
+                "DateTime": "2026年10月19日 12:44:45"
             },
             "Manifests": 58
         },
@@ -59,9 +59,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1792298373000)\/",
+                "value": "\/Date(1792385208000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月18日 12:39:33"
+                "DateTime": "2026年10月19日 12:46:48"
             },
             "Manifests": 40
         }
@@ -188,9 +188,9 @@
         },
         {
             "Name": "dbx",
-            "Version": "0.6.47",
+            "Version": "0.6.48",
             "Source": "extras",
-            "Updated": "\/Date(1792286561881)\/",
+            "Updated": "\/Date(1792385527477)\/",
             "Info": ""
         },
         {
@@ -202,9 +202,9 @@
         },
         {
             "Name": "draw.io",
-            "Version": "32.4.1",
+            "Version": "32.5.5",
             "Source": "extras",
-            "Updated": "\/Date(1791537554180)\/",
+            "Updated": "\/Date(1792336649800)\/",
             "Info": ""
         },
         {
@@ -258,9 +258,9 @@
         },
         {
             "Name": "feynman",
-            "Version": "0.5.49",
+            "Version": "0.5.50",
             "Source": "main-plus",
-            "Updated": "\/Date(1792302781463)\/",
+            "Updated": "\/Date(1792341651316)\/",
             "Info": ""
         },
         {
@@ -426,10 +426,10 @@
         },
         {
             "Name": "magpie-ai",
-            "Version": "0.1.1285",
+            "Version": "0.1.1286",
             "Source": "extras",
-            "Updated": "\/Date(1792286651649)\/",
-            "Info": ""
+            "Updated": "\/Date(1792342117468)\/",
+            "Info": "Held package"
         },
         {
             "Name": "mathpix",
@@ -461,9 +461,9 @@
         },
         {
             "Name": "mise",
-            "Version": "2026.10.13",
+            "Version": "2026.10.14",
             "Source": "main",
-            "Updated": "\/Date(1792286661528)\/",
+            "Updated": "\/Date(1792370515705)\/",
             "Info": ""
         },
         {
@@ -524,9 +524,9 @@
         },
         {
             "Name": "office-tool-plus",
-            "Version": "11.7.9.0",
+            "Version": "11.8.50.0",
             "Source": "extras",
-            "Updated": "\/Date(1788958956003)\/",
+            "Updated": "\/Date(1792336653980)\/",
             "Info": ""
         },
         {
@@ -538,9 +538,9 @@
         },
         {
             "Name": "onefetch",
-            "Version": "3.0.0",
+            "Version": "3.1.0",
             "Source": "extras",
-            "Updated": "\/Date(1791338282095)\/",
+            "Updated": "\/Date(1792385531632)\/",
             "Info": ""
         },
         {
@@ -786,6 +786,13 @@
             "Version": "3.2.0",
             "Source": "extras-plus",
             "Updated": "\/Date(1792128873413)\/",
+            "Info": ""
+        },
+        {
+            "Name": "telegram",
+            "Version": "7.3.1",
+            "Source": "extras",
+            "Updated": "\/Date(1792320234541)\/",
             "Info": ""
         },
         {

@@ -1,6 +1,5 @@
 ﻿adachishingo.open-with
 astral-sh.ty
-chanhx.crabviz
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
 codesmith.markdown-inline-editor-vscode
@@ -21,7 +20,6 @@ ms-vscode.live-server
 ms-vscode.remote-explorer
 muhammad-ahmad.xlsx-viewer
 myriad-dreamin.tinymist
-oxc.oxc-vscode
 pkief.material-icon-theme
 platformio.platformio-ide
 qcz.text-power-tools
