@@ -131,13 +131,6 @@
             "Info": ""
         },
         {
-            "Name": "caddy",
-            "Version": "2.11.7",
-            "Source": "main",
-            "Updated": "\/Date(1791018130888)\/",
-            "Info": ""
-        },
-        {
             "Name": "cap",
             "Version": "0.6.0",
             "Source": "extras-plus",
@@ -254,13 +247,6 @@
             "Version": "10.5.0",
             "Source": "main",
             "Updated": "\/Date(1787733559999)\/",
-            "Info": ""
-        },
-        {
-            "Name": "feynman",
-            "Version": "0.5.50",
-            "Source": "main-plus",
-            "Updated": "\/Date(1792341651316)\/",
             "Info": ""
         },
         {
@@ -492,20 +478,6 @@
             "Version": "1.1.3",
             "Source": "main-plus",
             "Updated": "\/Date(1792302786917)\/",
-            "Info": ""
-        },
-        {
-            "Name": "nginx",
-            "Version": "1.31.7",
-            "Source": "main",
-            "Updated": "\/Date(1792030338688)\/",
-            "Info": ""
-        },
-        {
-            "Name": "ngrok",
-            "Version": "3.39.11",
-            "Source": "main",
-            "Updated": "\/Date(1790661123710)\/",
             "Info": ""
         },
         {
