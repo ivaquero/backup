@@ -9,9 +9,9 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1792493756000)\/",
+                "value": "\/Date(1792557278000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月20日 18:55:56"
+                "DateTime": "2026年10月21日 12:34:38"
             },
             "Manifests": 1694
         },
@@ -19,11 +19,11 @@
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1792492852000)\/",
+                "value": "\/Date(1792557370000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月20日 18:40:52"
+                "DateTime": "2026年10月21日 12:36:10"
             },
-            "Manifests": 2432
+            "Manifests": 2433
         },
         {
             "Name": "nerd-fonts",
@@ -49,9 +49,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1792496173000)\/",
+                "value": "\/Date(1792558352000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月20日 19:36:13"
+                "DateTime": "2026年10月21日 12:52:32"
             },
             "Manifests": 57
         },
@@ -59,9 +59,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1792472156000)\/",
+                "value": "\/Date(1792516408000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月20日 12:55:56"
+                "DateTime": "2026年10月21日 1:13:28"
             },
             "Manifests": 40
         }
@@ -132,9 +132,9 @@
         },
         {
             "Name": "cap",
-            "Version": "0.6.0",
+            "Version": "0.6.1",
             "Source": "extras-plus",
-            "Updated": "\/Date(1789499029264)\/",
+            "Updated": "\/Date(1792548743489)\/",
             "Info": ""
         },
         {
@@ -174,9 +174,9 @@
         },
         {
             "Name": "dbx",
-            "Version": "0.6.49",
+            "Version": "0.6.50",
             "Source": "extras",
-            "Updated": "\/Date(1792486776712)\/",
+            "Updated": "\/Date(1792548753764)\/",
             "Info": ""
         },
         {
@@ -258,9 +258,9 @@
         },
         {
             "Name": "fresh",
-            "Version": "0.5.3",
+            "Version": "0.5.4",
             "Source": "main",
-            "Updated": "\/Date(1791857259558)\/",
+            "Updated": "\/Date(1792548761349)\/",
             "Info": ""
         },
         {
@@ -278,17 +278,10 @@
             "Info": ""
         },
         {
-            "Name": "genoffice",
-            "Version": "0.11.919",
-            "Source": "extras-plus",
-            "Updated": "\/Date(1792468065318)\/",
-            "Info": ""
-        },
-        {
             "Name": "gh",
-            "Version": "2.102.0",
+            "Version": "2.102.1",
             "Source": "main",
-            "Updated": "\/Date(1790746882413)\/",
+            "Updated": "\/Date(1792548768994)\/",
             "Info": ""
         },
         {
@@ -370,9 +363,9 @@
         },
         {
             "Name": "kopuz",
-            "Version": "0.21.0",
+            "Version": "0.22.0",
             "Source": "extras",
-            "Updated": "\/Date(1792030322386)\/",
+            "Updated": "\/Date(1792548785903)\/",
             "Info": ""
         },
         {
@@ -440,9 +433,9 @@
         },
         {
             "Name": "mise",
-            "Version": "2026.10.15",
+            "Version": "2026.10.17",
             "Source": "main",
-            "Updated": "\/Date(1792416527735)\/",
+            "Updated": "\/Date(1792559221693)\/",
             "Info": ""
         },
         {
@@ -467,13 +460,6 @@
             "Info": ""
         },
         {
-            "Name": "music-dl",
-            "Version": "1.1.3",
-            "Source": "main-plus",
-            "Updated": "\/Date(1792302786917)\/",
-            "Info": ""
-        },
-        {
             "Name": "obsidian",
             "Version": "1.14.4",
             "Source": "extras",
@@ -489,9 +475,9 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.6",
+            "Version": "0.40.7",
             "Source": "extras",
-            "Updated": "\/Date(1792298481554)\/",
+            "Updated": "\/Date(1792559607176)\/",
             "Info": ""
         },
         {
@@ -517,9 +503,9 @@
         },
         {
             "Name": "openssh",
-            "Version": "10.0.0.0p2",
+            "Version": "10.4.0.0p1",
             "Source": "main",
-            "Updated": "\/Date(1781856609559)\/",
+            "Updated": "\/Date(1792548788354)\/",
             "Info": ""
         },
         {
@@ -741,9 +727,9 @@
         },
         {
             "Name": "telegram",
-            "Version": "7.3.1",
+            "Version": "7.3.2",
             "Source": "extras",
-            "Updated": "\/Date(1792320234541)\/",
+            "Updated": "\/Date(1792548801430)\/",
             "Info": ""
         },
         {
@@ -769,9 +755,9 @@
         },
         {
             "Name": "ty",
-            "Version": "0.0.89",
+            "Version": "0.0.90",
             "Source": "main",
-            "Updated": "\/Date(1792204887472)\/",
+            "Updated": "\/Date(1792548762724)\/",
             "Info": ""
         },
         {
@@ -797,9 +783,9 @@
         },
         {
             "Name": "uv",
-            "Version": "0.13.3",
+            "Version": "0.13.4",
             "Source": "main",
-            "Updated": "\/Date(1792486806502)\/",
+            "Updated": "\/Date(1792548758976)\/",
             "Info": ""
         },
         {
@@ -863,6 +849,13 @@
             "Version": "0.3.4",
             "Source": "main",
             "Updated": "\/Date(1791165669769)\/",
+            "Info": ""
+        },
+        {
+            "Name": "wpsoffice",
+            "Version": "12.2.0.21179",
+            "Source": "extras",
+            "Updated": "\/Date(1792505170493)\/",
             "Info": ""
         },
         {

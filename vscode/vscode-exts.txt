@@ -2,7 +2,6 @@
 astral-sh.ty
 charliermarsh.ruff
 chrischinchilla.vscode-pandoc
-codesmith.markdown-inline-editor-vscode
 czhang03.unicode-math-input
 evertjunior.mass-renamer
 foam.foam-vscode
