@@ -81,10 +81,52 @@
   "cookieRefreshInterval": 12,
   "scheduledSyncToggle": false,
   "scheduledSyncInterval": 5,
-  "lastSyncTime": 1789923167938,
+  "lastSyncTime": 1792768165809,
   "lastSyncBookCount": 2,
   "lastSyncBookTitles": [],
   "syncLogs": [
+    {
+      "id": "sync-1792768164322",
+      "timestamp": 1792768164322,
+      "totalBooks": 118,
+      "syncedBooks": 2,
+      "skippedBooks": 0,
+      "duration": 1.486,
+      "notes": [
+        {
+          "bookId": "812443",
+          "title": "白鹿原",
+          "filePath": "public/精品小说/白鹿原.md"
+        },
+        {
+          "bookId": "848673",
+          "title": "当下的力量（白金版）",
+          "filePath": "public/个人成长/当下的力量.md"
+        }
+      ],
+      "success": true
+    },
+    {
+      "id": "sync-1791457582385",
+      "timestamp": 1791457582385,
+      "totalBooks": 115,
+      "syncedBooks": 2,
+      "skippedBooks": 0,
+      "duration": 1.654,
+      "notes": [
+        {
+          "bookId": "24953399",
+          "title": "不存在的骑士",
+          "filePath": "public/文学/不存在的骑士.md"
+        },
+        {
+          "bookId": "536972",
+          "title": "失控",
+          "filePath": "public/社会文化/失控.md"
+        }
+      ],
+      "success": true
+    },
     {
       "id": "sync-1789923166617",
       "timestamp": 1789923166617,
