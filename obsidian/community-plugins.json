@@ -1,9 +1,7 @@
 [
   "recent-files-obsidian",
-  "omnisearch",
-  "pdf-plus",
-  "obsidian-enhancing-export",
   "obsidian-linter",
-  "obsidian-latex-suite",
-  "obsidian-weread-plugin"
+  "obsidian-weread-plugin",
+  "obsidian-tasks-plugin",
+  "omnisearch"
 ]
