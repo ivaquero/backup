@@ -9,29 +9,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1792759268000)\/",
+                "value": "\/Date(1792976693000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月23日 20:41:08"
+                "DateTime": "2026年10月26日 9:04:53"
             },
-            "Manifests": 1698
+            "Manifests": 1700
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1792759291000)\/",
+                "value": "\/Date(1792978282000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月23日 20:41:31"
+                "DateTime": "2026年10月26日 9:31:22"
             },
-            "Manifests": 2447
+            "Manifests": 2448
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1792642081000)\/",
+                "value": "\/Date(1792901148000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月22日 12:08:01"
+                "DateTime": "2026年10月25日 12:05:48"
             },
             "Manifests": 367
         },
@@ -39,29 +39,29 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1792689658000)\/",
+                "value": "\/Date(1792946221000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月23日 1:20:58"
+                "DateTime": "2026年10月26日 0:37:01"
             },
-            "Manifests": 89
+            "Manifests": 90
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1792731260000)\/",
+                "value": "\/Date(1792945518000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月23日 12:54:20"
+                "DateTime": "2026年10月26日 0:25:18"
             },
-            "Manifests": 57
+            "Manifests": 58
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1792731416000)\/",
+                "value": "\/Date(1792857641000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月23日 12:56:56"
+                "DateTime": "2026年10月25日 0:00:41"
             },
             "Manifests": 41
         }
@@ -90,9 +90,9 @@
         },
         {
             "Name": "android-cli",
-            "Version": "1.0.16625370",
+            "Version": "1.1.16717390",
             "Source": "main",
-            "Updated": "\/Date(1792128126168)\/",
+            "Updated": "\/Date(1792903043152)\/",
             "Info": ""
         },
         {
@@ -139,9 +139,9 @@
         },
         {
             "Name": "chatgpt",
-            "Version": "26.1016.8622.0",
+            "Version": "26.1021.3705.0",
             "Source": "extras",
-            "Updated": "\/Date(1792723969648)\/",
+            "Updated": "\/Date(1792825635883)\/",
             "Info": ""
         },
         {
@@ -174,9 +174,9 @@
         },
         {
             "Name": "dbx",
-            "Version": "0.6.52",
+            "Version": "0.6.55",
             "Source": "extras",
-            "Updated": "\/Date(1792738061043)\/",
+            "Updated": "\/Date(1792983128695)\/",
             "Info": ""
         },
         {
@@ -188,9 +188,9 @@
         },
         {
             "Name": "draw.io",
-            "Version": "32.5.5",
+            "Version": "32.6.1",
             "Source": "extras",
-            "Updated": "\/Date(1792336649800)\/",
+            "Updated": "\/Date(1792808782014)\/",
             "Info": ""
         },
         {
@@ -279,9 +279,9 @@
         },
         {
             "Name": "gh",
-            "Version": "2.103.0",
+            "Version": "2.103.2",
             "Source": "main",
-            "Updated": "\/Date(1792644328373)\/",
+            "Updated": "\/Date(1792808784826)\/",
             "Info": ""
         },
         {
@@ -398,10 +398,10 @@
         },
         {
             "Name": "magpie-ai",
-            "Version": "0.1.1293",
+            "Version": "0.1.1559",
             "Source": "extras",
-            "Updated": "\/Date(1792486726156)\/",
-            "Info": "Held package"
+            "Updated": "\/Date(1792983105495)\/",
+            "Info": ""
         },
         {
             "Name": "mathpix",
@@ -440,9 +440,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.37.0",
+            "Version": "1.39.0",
             "Source": "main",
-            "Updated": "\/Date(1792573181407)\/",
+            "Updated": "\/Date(1792939307903)\/",
             "Info": ""
         },
         {
@@ -643,9 +643,9 @@
         },
         {
             "Name": "rtk",
-            "Version": "1.0.1",
+            "Version": "1.1.0",
             "Source": "main",
-            "Updated": "\/Date(1792029992381)\/",
+            "Updated": "\/Date(1792973665698)\/",
             "Info": ""
         },
         {
@@ -727,9 +727,9 @@
         },
         {
             "Name": "stirlingpdf",
-            "Version": "3.2.1",
+            "Version": "3.2.2",
             "Source": "extras-plus",
-            "Updated": "\/Date(1792716814462)\/",
+            "Updated": "\/Date(1792866669920)\/",
             "Info": ""
         },
         {
@@ -755,10 +755,10 @@
         },
         {
             "Name": "tor-browser",
-            "Version": "15.0.25",
+            "Version": "15.0.26",
             "Source": "extras",
-            "Updated": "\/Date(1792644455856)\/",
-            "Info": "Held package"
+            "Updated": "\/Date(1792808914445)\/",
+            "Info": ""
         },
         {
             "Name": "ty",

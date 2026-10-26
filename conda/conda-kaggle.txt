@@ -1,6 +1,7 @@
 ﻿control
 cvxpy
 diffeqpy
+dlib
 imbalanced-learn
 ipykernel
 monai
