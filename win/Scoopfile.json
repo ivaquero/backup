@@ -474,6 +474,13 @@
             "Info": ""
         },
         {
+            "Name": "obs-studio-cn",
+            "Version": "33.0.1",
+            "Source": "extras-cn",
+            "Updated": "\/Date(1793519443042)\/",
+            "Info": ""
+        },
+        {
             "Name": "obsidian",
             "Version": "1.14.5",
             "Source": "extras",

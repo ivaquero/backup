@@ -79,7 +79,7 @@
     "body": [
       "#figure(",
       "  table(",
-      "    columns: (auto, auto, auto),",
+      "    columns: (auto, )*3,",
       "    inset: 0.3em,",
       "    align: center + horizon,",
       "    stroke: table-three-line(rgb(\"000\")),",
@@ -98,7 +98,7 @@
     "body": [
       "#figure(",
       "  table(",
-      "    columns: (auto, auto, auto, auto),",
+      "    columns: (auto, )*4,",
       "    inset: 0.3em,",
       "    align: center + horizon,",
       "    stroke: table-three-line(rgb(\"000\")),",
@@ -118,7 +118,7 @@
     "body": [
       "#figure(",
       "  table(",
-      "    columns: (auto, auto, auto, auto, auto),",
+      "    columns: (auto, )*5,",
       "    inset: 0.3em,",
       "    align: center + horizon,",
       "    stroke: table-three-line(rgb(\"000\")),",
@@ -138,7 +138,7 @@
     "body": [
       "#figure(",
       "  table(",
-      "    columns: (auto, auto, auto, auto, auto, auto),",
+      "    columns: (auto, )*6",
       "    inset: 0.3em,",
       "    align: center + horizon,",
       "    stroke: table-three-line(rgb(\"000\")),",
@@ -320,18 +320,6 @@
     ],
     "description": ""
   },
-  "blk-tip": {
-    "prefix": "tip",
-    "body": [
-      "#[",
-      "  #set text(size: 16pt)",
-      "  #tip[",
-      "$1",
-      "  ]",
-      "]"
-    ],
-    "description": ""
-  },
   "blk-algo": {
     "prefix": "algo",
     "body": [
@@ -344,11 +332,23 @@
     ],
     "description": ""
   },
+  "blk-tip": {
+    "prefix": "tip",
+    "body": [
+      "#[",
+      "  #set text(size: 14pt)",
+      "  #tip[",
+      "$1",
+      "  ]",
+      "]"
+    ],
+    "description": ""
+  },
   "blk-rule": {
     "prefix": "rule",
     "body": [
       "#[",
-      "  #set text(size: 18pt)",
+      "  #set text(size: 14pt)",
       "  #rule()[",
       "$1",
       "  ]",
@@ -788,20 +788,6 @@
     "prefix": "ens",
     "body": [
       "#set enum(start: 2)"
-    ],
-    "description": ""
-  },
-  "draw-zap": {
-    "prefix": "zap",
-    "body": [
-      "#figure(",
-      "  zap.circuit({",
-      "    import zap: *",
-      "",
-      "    isource(\"i\", (0, 0), (5, 0))",
-      "  }),",
-      "  caption: \"\",",
-      ")"
     ],
     "description": ""
   },
