@@ -26,7 +26,6 @@ redhat.vscode-xml
 redhat.vscode-yaml
 rvben.rumdl
 snakemake.snakemake-lang
-tencent-cloud.coding-copilot
 tombi-toml.tombi
 vue.volar
 yzhang.markdown-all-in-one
