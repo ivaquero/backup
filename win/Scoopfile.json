@@ -9,29 +9,29 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1793507003000)\/",
+                "value": "\/Date(1794876166000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月1日 12:23:23"
+                "DateTime": "2026年11月17日 8:42:46"
             },
-            "Manifests": 1703
+            "Manifests": 1715
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1793507049000)\/",
+                "value": "\/Date(1794876249000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月1日 12:24:09"
+                "DateTime": "2026年11月17日 8:44:09"
             },
-            "Manifests": 2451
+            "Manifests": 2470
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": {
-                "value": "\/Date(1792901148000)\/",
+                "value": "\/Date(1794342113000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月25日 12:05:48"
+                "DateTime": "2026年11月11日 4:21:53"
             },
             "Manifests": 367
         },
@@ -39,29 +39,29 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1793467070000)\/",
+                "value": "\/Date(1794867659000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月1日 1:17:50"
+                "DateTime": "2026年11月17日 6:20:59"
             },
-            "Manifests": 90
+            "Manifests": 93
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1793466951000)\/",
+                "value": "\/Date(1794866834000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月1日 1:15:51"
+                "DateTime": "2026年11月17日 6:07:14"
             },
-            "Manifests": 59
+            "Manifests": 62
         },
         {
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1793425828000)\/",
+                "value": "\/Date(1794867017000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年10月31日 13:50:28"
+                "DateTime": "2026年11月17日 6:10:17"
             },
             "Manifests": 41
         }
@@ -69,9 +69,9 @@
     "apps": [
         {
             "Name": "7zip",
-            "Version": "26.05",
+            "Version": "26.06",
             "Source": "main",
-            "Updated": "\/Date(1792644185398)\/",
+            "Updated": "\/Date(1794148023897)\/",
             "Info": ""
         },
         {
@@ -83,16 +83,16 @@
         },
         {
             "Name": "affinity",
-            "Version": "3.3.1.4940",
+            "Version": "3.3.3.5004",
             "Source": "extras-plus",
-            "Updated": "\/Date(1791489192304)\/",
+            "Updated": "\/Date(1793668982271)\/",
             "Info": ""
         },
         {
             "Name": "android-cli",
-            "Version": "1.1.16717390",
+            "Version": "1.1.16919734",
             "Source": "main",
-            "Updated": "\/Date(1792903043152)\/",
+            "Updated": "\/Date(1794566633819)\/",
             "Info": ""
         },
         {
@@ -111,9 +111,9 @@
         },
         {
             "Name": "blender-cn",
-            "Version": "5.2.3",
+            "Version": "5.3.0",
             "Source": "extras-cn",
-            "Updated": "\/Date(1792716765655)\/",
+            "Updated": "\/Date(1794361073207)\/",
             "Info": ""
         },
         {
@@ -132,37 +132,30 @@
         },
         {
             "Name": "cap",
-            "Version": "0.6.2",
+            "Version": "0.6.3",
             "Source": "extras-plus",
-            "Updated": "\/Date(1793262952174)\/",
+            "Updated": "\/Date(1794483113719)\/",
             "Info": ""
         },
         {
             "Name": "chatgpt",
-            "Version": "26.1027.3384.0",
+            "Version": "26.1111.2228.0",
             "Source": "extras",
-            "Updated": "\/Date(1793324022788)\/",
+            "Updated": "\/Date(1794634690783)\/",
             "Info": ""
         },
         {
             "Name": "codex",
-            "Version": "0.166.0",
+            "Version": "0.169.0",
             "Source": "main",
-            "Updated": "\/Date(1793317610488)\/",
-            "Info": ""
-        },
-        {
-            "Name": "cryptomator",
-            "Version": "1.19.6",
-            "Source": "extras",
-            "Updated": "\/Date(1793371462847)\/",
+            "Updated": "\/Date(1794582927259)\/",
             "Info": ""
         },
         {
             "Name": "cuda",
-            "Version": "13.4.3",
+            "Version": "13.5.0",
             "Source": "main",
-            "Updated": "\/Date(1791941763497)\/",
+            "Updated": "\/Date(1793811216265)\/",
             "Info": ""
         },
         {
@@ -174,10 +167,10 @@
         },
         {
             "Name": "dbx",
-            "Version": "0.6.60",
+            "Version": "0.6.71",
             "Source": "extras",
-            "Updated": "\/Date(1793251403006)\/",
-            "Info": "Held package"
+            "Updated": "\/Date(1794819064825)\/",
+            "Info": ""
         },
         {
             "Name": "deno",
@@ -188,16 +181,23 @@
         },
         {
             "Name": "draw.io",
-            "Version": "32.6.1",
+            "Version": "32.6.10",
             "Source": "extras",
-            "Updated": "\/Date(1792808782014)\/",
+            "Updated": "\/Date(1793850662781)\/",
+            "Info": ""
+        },
+        {
+            "Name": "dsh-official",
+            "Version": "0.2.2-rc.3",
+            "Source": "extras-plus",
+            "Updated": "\/Date(1794618871158)\/",
             "Info": ""
         },
         {
             "Name": "dust",
-            "Version": "1.2.6",
+            "Version": "1.2.7",
             "Source": "main",
-            "Updated": "\/Date(1789608260718)\/",
+            "Updated": "\/Date(1793612074919)\/",
             "Info": ""
         },
         {
@@ -230,16 +230,16 @@
         },
         {
             "Name": "fastfetch",
-            "Version": "2.70.0",
+            "Version": "2.71.0",
             "Source": "main",
-            "Updated": "\/Date(1791998104888)\/",
+            "Updated": "\/Date(1793945612919)\/",
             "Info": ""
         },
         {
             "Name": "fd",
-            "Version": "10.5.0",
+            "Version": "10.5.2",
             "Source": "main",
-            "Updated": "\/Date(1787733559999)\/",
+            "Updated": "\/Date(1794148476155)\/",
             "Info": ""
         },
         {
@@ -258,9 +258,9 @@
         },
         {
             "Name": "fresh",
-            "Version": "0.5.7",
+            "Version": "0.5.9",
             "Source": "main",
-            "Updated": "\/Date(1793509492292)\/",
+            "Updated": "\/Date(1794884905681)\/",
             "Info": ""
         },
         {
@@ -272,16 +272,16 @@
         },
         {
             "Name": "fzf",
-            "Version": "0.74.5",
+            "Version": "0.75.0",
             "Source": "main",
-            "Updated": "\/Date(1791754434259)\/",
+            "Updated": "\/Date(1794148491975)\/",
             "Info": ""
         },
         {
             "Name": "gh",
-            "Version": "2.103.3",
+            "Version": "2.104.0",
             "Source": "main",
-            "Updated": "\/Date(1793066807499)\/",
+            "Updated": "\/Date(1794527928153)\/",
             "Info": ""
         },
         {
@@ -293,9 +293,9 @@
         },
         {
             "Name": "googlechrome",
-            "Version": "156.0.8078.48",
+            "Version": "157.0.8103.39",
             "Source": "extras",
-            "Updated": "\/Date(1793151656665)\/",
+            "Updated": "\/Date(1793946186172)\/",
             "Info": "Held package"
         },
         {
@@ -314,16 +314,16 @@
         },
         {
             "Name": "graphviz",
-            "Version": "16.1.0",
+            "Version": "16.1.1",
             "Source": "main",
-            "Updated": "\/Date(1788580218372)\/",
+            "Updated": "\/Date(1794198563492)\/",
             "Info": ""
         },
         {
             "Name": "handy",
-            "Version": "0.9.8",
+            "Version": "0.10.1",
             "Source": "extras",
-            "Updated": "\/Date(1791018227996)\/",
+            "Updated": "\/Date(1794668068135)\/",
             "Info": ""
         },
         {
@@ -335,16 +335,16 @@
         },
         {
             "Name": "i4tools",
-            "Version": "9.21.010",
+            "Version": "9.22.032",
             "Source": "extras-cn",
-            "Updated": "\/Date(1790714866908)\/",
+            "Updated": "\/Date(1794148560079)\/",
             "Info": ""
         },
         {
             "Name": "imagemagick-lean",
-            "Version": "7.1.2-35",
+            "Version": "7.1.2-36",
             "Source": "main",
-            "Updated": "\/Date(1793509496258)\/",
+            "Updated": "\/Date(1794884914253)\/",
             "Info": ""
         },
         {
@@ -356,23 +356,23 @@
         },
         {
             "Name": "julia-cn",
-            "Version": "1.13.3",
+            "Version": "1.13.4",
             "Source": "extras-cn",
-            "Updated": "\/Date(1793198819321)\/",
+            "Updated": "\/Date(1794734670895)\/",
             "Info": ""
         },
         {
             "Name": "kopuz",
-            "Version": "0.67.0",
+            "Version": "0.67.1",
             "Source": "extras",
-            "Updated": "\/Date(1793066822955)\/",
+            "Updated": "\/Date(1793928327119)\/",
             "Info": ""
         },
         {
             "Name": "lazygit",
-            "Version": "0.66.2",
+            "Version": "0.66.3",
             "Source": "extras",
-            "Updated": "\/Date(1792171707545)\/",
+            "Updated": "\/Date(1794148601435)\/",
             "Info": ""
         },
         {
@@ -384,9 +384,9 @@
         },
         {
             "Name": "llmfit",
-            "Version": "1.1.18",
+            "Version": "1.1.20",
             "Source": "main",
-            "Updated": "\/Date(1793198831076)\/",
+            "Updated": "\/Date(1793764252470)\/",
             "Info": ""
         },
         {
@@ -405,10 +405,10 @@
         },
         {
             "Name": "magpie-ai",
-            "Version": "0.1.2535",
+            "Version": "0.1.3960",
             "Source": "extras",
-            "Updated": "\/Date(1793513357865)\/",
-            "Info": "Held package"
+            "Updated": "\/Date(1794819076386)\/",
+            "Info": ""
         },
         {
             "Name": "mathpix",
@@ -440,16 +440,16 @@
         },
         {
             "Name": "mise",
-            "Version": "2026.10.25",
+            "Version": "2026.11.9",
             "Source": "main",
-            "Updated": "\/Date(1793467321690)\/",
+            "Updated": "\/Date(1794840418227)\/",
             "Info": ""
         },
         {
             "Name": "mole",
-            "Version": "1.40.0",
+            "Version": "1.45.0",
             "Source": "main",
-            "Updated": "\/Date(1793438847782)\/",
+            "Updated": "\/Date(1794566909126)\/",
             "Info": ""
         },
         {
@@ -482,23 +482,23 @@
         },
         {
             "Name": "obsidian",
-            "Version": "1.14.5",
+            "Version": "1.15.1",
             "Source": "extras",
-            "Updated": "\/Date(1792724028719)\/",
+            "Updated": "\/Date(1794527988024)\/",
             "Info": ""
         },
         {
             "Name": "office-tool-plus",
-            "Version": "11.8.50.0",
+            "Version": "11.9.15.0",
             "Source": "extras",
-            "Updated": "\/Date(1792336653980)\/",
+            "Updated": "\/Date(1794450243029)\/",
             "Info": ""
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.11",
+            "Version": "0.40.15",
             "Source": "extras",
-            "Updated": "\/Date(1793095800314)\/",
+            "Updated": "\/Date(1793946194198)\/",
             "Info": "Held package"
         },
         {
@@ -509,17 +509,10 @@
             "Info": ""
         },
         {
-            "Name": "open-code-review",
-            "Version": "1.13.3",
-            "Source": "main-plus",
-            "Updated": "\/Date(1793094053338)\/",
-            "Info": ""
-        },
-        {
             "Name": "openresearch",
-            "Version": "0.2.23",
+            "Version": "0.2.27",
             "Source": "main-plus",
-            "Updated": "\/Date(1793438851761)\/",
+            "Updated": "\/Date(1794566958873)\/",
             "Info": ""
         },
         {
@@ -538,9 +531,9 @@
         },
         {
             "Name": "oxfmt",
-            "Version": "0.75.0",
+            "Version": "0.79.0",
             "Source": "main",
-            "Updated": "\/Date(1793100136337)\/",
+            "Updated": "\/Date(1794840431757)\/",
             "Info": ""
         },
         {
@@ -552,16 +545,16 @@
         },
         {
             "Name": "oxlint",
-            "Version": "1.90.0",
+            "Version": "1.94.0",
             "Source": "main",
-            "Updated": "\/Date(1793100138878)\/",
+            "Updated": "\/Date(1794840464558)\/",
             "Info": ""
         },
         {
             "Name": "pandoc",
-            "Version": "3.13",
+            "Version": "3.14",
             "Source": "main",
-            "Updated": "\/Date(1793067028689)\/",
+            "Updated": "\/Date(1794483089415)\/",
             "Info": ""
         },
         {
@@ -587,16 +580,16 @@
         },
         {
             "Name": "pixi",
-            "Version": "0.83.0",
+            "Version": "0.84.2",
             "Source": "main",
-            "Updated": "\/Date(1792716782545)\/",
+            "Updated": "\/Date(1794361114754)\/",
             "Info": ""
         },
         {
             "Name": "pnpm",
-            "Version": "12.17.0",
+            "Version": "12.21.0",
             "Source": "main",
-            "Updated": "\/Date(1793411298567)\/",
+            "Updated": "\/Date(1794621247466)\/",
             "Info": ""
         },
         {
@@ -608,16 +601,16 @@
         },
         {
             "Name": "postgresql",
-            "Version": "18.6-5",
+            "Version": "18.7-1",
             "Source": "main",
-            "Updated": "\/Date(1790861627762)\/",
+            "Updated": "\/Date(1794490995023)\/",
             "Info": ""
         },
         {
             "Name": "powertoys",
-            "Version": "0.102.3001.0",
+            "Version": "0.102.3101.0",
             "Source": "extras",
-            "Updated": "\/Date(1793371614745)\/",
+            "Updated": "\/Date(1793984306998)\/",
             "Info": ""
         },
         {
@@ -636,9 +629,9 @@
         },
         {
             "Name": "readest",
-            "Version": "0.12.16",
+            "Version": "0.12.20",
             "Source": "extras",
-            "Updated": "\/Date(1791942016315)\/",
+            "Updated": "\/Date(1793928372189)\/",
             "Info": ""
         },
         {
@@ -657,30 +650,30 @@
         },
         {
             "Name": "rtk",
-            "Version": "1.1.0",
+            "Version": "1.2.0",
             "Source": "main",
-            "Updated": "\/Date(1792973665698)\/",
+            "Updated": "\/Date(1794148886602)\/",
             "Info": ""
         },
         {
             "Name": "ruff",
-            "Version": "0.17.3",
+            "Version": "0.17.5",
             "Source": "main",
-            "Updated": "\/Date(1793071418513)\/",
+            "Updated": "\/Date(1794527990660)\/",
             "Info": ""
         },
         {
             "Name": "rumdl",
-            "Version": "0.3.2",
+            "Version": "0.3.4",
             "Source": "main",
-            "Updated": "\/Date(1793205256626)\/",
+            "Updated": "\/Date(1794531384760)\/",
             "Info": ""
         },
         {
             "Name": "rustup",
-            "Version": "1.29.2",
+            "Version": "1.29.3",
             "Source": "main",
-            "Updated": "\/Date(1792587129352)\/",
+            "Updated": "\/Date(1793764280790)\/",
             "Info": ""
         },
         {
@@ -705,6 +698,13 @@
             "Info": ""
         },
         {
+            "Name": "separatrix",
+            "Version": "1.0.1",
+            "Source": "extras-plus",
+            "Updated": "\/Date(1794791807176)\/",
+            "Info": ""
+        },
+        {
             "Name": "seqkit",
             "Version": "2.14.0",
             "Source": "main-plus",
@@ -713,23 +713,23 @@
         },
         {
             "Name": "shotcut",
-            "Version": "26.9.27",
+            "Version": "26.11.15",
             "Source": "extras",
-            "Updated": "\/Date(1790568914934)\/",
+            "Updated": "\/Date(1794884996350)\/",
             "Info": ""
         },
         {
             "Name": "sigil",
-            "Version": "2.8.1",
+            "Version": "2.8.6",
             "Source": "extras",
-            "Updated": "\/Date(1784534603420)\/",
+            "Updated": "\/Date(1794294114822)\/",
             "Info": ""
         },
         {
             "Name": "sniffnet",
-            "Version": "1.5.1",
+            "Version": "1.6.0",
             "Source": "extras",
-            "Updated": "\/Date(1787773292940)\/",
+            "Updated": "\/Date(1794840539848)\/",
             "Info": ""
         },
         {
@@ -741,23 +741,23 @@
         },
         {
             "Name": "stirlingpdf",
-            "Version": "3.2.2",
+            "Version": "3.3.0",
             "Source": "extras-plus",
-            "Updated": "\/Date(1792866669920)\/",
+            "Updated": "\/Date(1793928471370)\/",
             "Info": ""
         },
         {
             "Name": "telegram",
-            "Version": "7.3.3",
+            "Version": "7.4.4",
             "Source": "extras",
-            "Updated": "\/Date(1792644435376)\/",
+            "Updated": "\/Date(1794621736785)\/",
             "Info": ""
         },
         {
             "Name": "termscp",
-            "Version": "1.2.1",
+            "Version": "1.2.2",
             "Source": "main",
-            "Updated": "\/Date(1792468261447)\/",
+            "Updated": "\/Date(1793638138531)\/",
             "Info": ""
         },
         {
@@ -769,16 +769,16 @@
         },
         {
             "Name": "tor-browser",
-            "Version": "16.0",
+            "Version": "16.0.1",
             "Source": "extras",
-            "Updated": "\/Date(1793317630056)\/",
+            "Updated": "\/Date(1794323401818)\/",
             "Info": ""
         },
         {
             "Name": "ty",
-            "Version": "0.0.95",
+            "Version": "0.0.104",
             "Source": "main",
-            "Updated": "\/Date(1793317633534)\/",
+            "Updated": "\/Date(1794618967611)\/",
             "Info": ""
         },
         {
@@ -797,30 +797,37 @@
         },
         {
             "Name": "typstyle",
-            "Version": "0.15.2",
+            "Version": "0.15.3",
             "Source": "main",
-            "Updated": "\/Date(1791786634387)\/",
+            "Updated": "\/Date(1794789139746)\/",
+            "Info": ""
+        },
+        {
+            "Name": "unsloth",
+            "Version": "0.1.918-beta",
+            "Source": "extras-plus",
+            "Updated": "\/Date(1794885030990)\/",
             "Info": ""
         },
         {
             "Name": "uv",
-            "Version": "0.13.6",
+            "Version": "0.13.8",
             "Source": "main",
-            "Updated": "\/Date(1793066960518)\/",
+            "Updated": "\/Date(1794528001658)\/",
             "Info": ""
         },
         {
             "Name": "vesktop",
-            "Version": "1.6.8",
+            "Version": "1.6.9",
             "Source": "extras",
-            "Updated": "\/Date(1792644341330)\/",
+            "Updated": "\/Date(1793928539998)\/",
             "Info": ""
         },
         {
             "Name": "vibe",
-            "Version": "3.3.0",
+            "Version": "3.3.5",
             "Source": "extras-plus",
-            "Updated": "\/Date(1793342444583)\/",
+            "Updated": "\/Date(1794621279615)\/",
             "Info": ""
         },
         {
@@ -832,9 +839,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.144.0",
+            "Version": "1.146.0",
             "Source": "extras",
-            "Updated": "\/Date(1793205317621)\/",
+            "Updated": "\/Date(1794483483510)\/",
             "Info": ""
         },
         {
@@ -846,23 +853,23 @@
         },
         {
             "Name": "wechat",
-            "Version": "4.2.0.12",
+            "Version": "4.2.0.53",
             "Source": "extras",
-            "Updated": "\/Date(1793371525390)\/",
+            "Updated": "\/Date(1794819105039)\/",
             "Info": ""
         },
         {
             "Name": "wechatdevtools",
-            "Version": "2.02.2609240",
+            "Version": "2.02.2609250",
             "Source": "extras-cn",
-            "Updated": "\/Date(1793090307109)\/",
+            "Updated": "\/Date(1794013096616)\/",
             "Info": ""
         },
         {
             "Name": "windows-terminal",
-            "Version": "1.25.2733.0",
+            "Version": "1.25.3131.0",
             "Source": "extras",
-            "Updated": "\/Date(1790992327564)\/",
+            "Updated": "\/Date(1794384024529)\/",
             "Info": ""
         },
         {
@@ -888,9 +895,9 @@
         },
         {
             "Name": "xnviewmp",
-            "Version": "1.12.2",
+            "Version": "1.12.3",
             "Source": "extras",
-            "Updated": "\/Date(1791857255302)\/",
+            "Updated": "\/Date(1794239656922)\/",
             "Info": ""
         },
         {
