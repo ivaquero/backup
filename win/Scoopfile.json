@@ -9,21 +9,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1794876166000)\/",
+                "value": "\/Date(1794975886000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月17日 8:42:46"
+                "DateTime": "2026年11月18日 12:24:46"
             },
-            "Manifests": 1715
+            "Manifests": 1716
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1794876249000)\/",
+                "value": "\/Date(1794986100000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月17日 8:44:09"
+                "DateTime": "2026年11月18日 15:15:00"
             },
-            "Manifests": 2470
+            "Manifests": 2473
         },
         {
             "Name": "nerd-fonts",
@@ -39,19 +39,19 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1794867659000)\/",
+                "value": "\/Date(1794949726000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月17日 6:20:59"
+                "DateTime": "2026年11月18日 5:08:46"
             },
-            "Manifests": 93
+            "Manifests": 95
         },
         {
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1794866834000)\/",
+                "value": "\/Date(1794987158000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月17日 6:07:14"
+                "DateTime": "2026年11月18日 15:32:38"
             },
             "Manifests": 62
         },
@@ -59,9 +59,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1794867017000)\/",
+                "value": "\/Date(1794987297000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月17日 6:10:17"
+                "DateTime": "2026年11月18日 15:34:57"
             },
             "Manifests": 41
         }
@@ -146,9 +146,9 @@
         },
         {
             "Name": "codex",
-            "Version": "0.169.0",
+            "Version": "0.170.0",
             "Source": "main",
-            "Updated": "\/Date(1794582927259)\/",
+            "Updated": "\/Date(1794988052422)\/",
             "Info": ""
         },
         {
@@ -181,9 +181,9 @@
         },
         {
             "Name": "draw.io",
-            "Version": "32.6.10",
+            "Version": "32.7.4",
             "Source": "extras",
-            "Updated": "\/Date(1793850662781)\/",
+            "Updated": "\/Date(1794969049105)\/",
             "Info": ""
         },
         {
@@ -279,9 +279,9 @@
         },
         {
             "Name": "gh",
-            "Version": "2.104.0",
+            "Version": "2.105.0",
             "Source": "main",
-            "Updated": "\/Date(1794527928153)\/",
+            "Updated": "\/Date(1794969167968)\/",
             "Info": ""
         },
         {
@@ -293,10 +293,10 @@
         },
         {
             "Name": "googlechrome",
-            "Version": "157.0.8103.39",
+            "Version": "158.0.8127.37",
             "Source": "extras",
-            "Updated": "\/Date(1793946186172)\/",
-            "Info": "Held package"
+            "Updated": "\/Date(1794989795691)\/",
+            "Info": ""
         },
         {
             "Name": "gopeed",
@@ -587,9 +587,9 @@
         },
         {
             "Name": "pnpm",
-            "Version": "12.21.0",
+            "Version": "12.22.0",
             "Source": "main",
-            "Updated": "\/Date(1794621247466)\/",
+            "Updated": "\/Date(1794969189292)\/",
             "Info": ""
         },
         {
@@ -776,9 +776,9 @@
         },
         {
             "Name": "ty",
-            "Version": "0.0.104",
+            "Version": "0.0.105",
             "Source": "main",
-            "Updated": "\/Date(1794618967611)\/",
+            "Updated": "\/Date(1794932605209)\/",
             "Info": ""
         },
         {
@@ -804,16 +804,16 @@
         },
         {
             "Name": "unsloth",
-            "Version": "0.1.918-beta",
+            "Version": "0.1.919-beta",
             "Source": "extras-plus",
-            "Updated": "\/Date(1794885030990)\/",
+            "Updated": "\/Date(1794969216640)\/",
             "Info": ""
         },
         {
             "Name": "uv",
-            "Version": "0.13.8",
+            "Version": "0.13.9",
             "Source": "main",
-            "Updated": "\/Date(1794528001658)\/",
+            "Updated": "\/Date(1794926661925)\/",
             "Info": ""
         },
         {
@@ -877,6 +877,13 @@
             "Version": "0.3.4",
             "Source": "main",
             "Updated": "\/Date(1791165669769)\/",
+            "Info": ""
+        },
+        {
+            "Name": "workbuddy-cn",
+            "Version": "5.11.3.43806934",
+            "Source": "extras-cn",
+            "Updated": "\/Date(1794898516089)\/",
             "Info": ""
         },
         {
