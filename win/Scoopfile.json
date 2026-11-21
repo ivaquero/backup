@@ -9,21 +9,21 @@
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
             "Updated": {
-                "value": "\/Date(1794975886000)\/",
+                "value": "\/Date(1795221703000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月18日 12:24:46"
+                "DateTime": "2026年11月21日 8:41:43"
             },
-            "Manifests": 1716
+            "Manifests": 1719
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
             "Updated": {
-                "value": "\/Date(1794986100000)\/",
+                "value": "\/Date(1795221709000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月18日 15:15:00"
+                "DateTime": "2026年11月21日 8:41:49"
             },
-            "Manifests": 2473
+            "Manifests": 2475
         },
         {
             "Name": "nerd-fonts",
@@ -39,9 +39,9 @@
             "Name": "extras-cn",
             "Source": "https://github.com/Scoopforge/Extras-CN",
             "Updated": {
-                "value": "\/Date(1794949726000)\/",
+                "value": "\/Date(1795222358000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月18日 5:08:46"
+                "DateTime": "2026年11月21日 8:52:38"
             },
             "Manifests": 95
         },
@@ -49,9 +49,9 @@
             "Name": "extras-plus",
             "Source": "https://github.com/Scoopforge/Extras-Plus",
             "Updated": {
-                "value": "\/Date(1794987158000)\/",
+                "value": "\/Date(1795206290000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月18日 15:32:38"
+                "DateTime": "2026年11月21日 4:24:50"
             },
             "Manifests": 62
         },
@@ -59,9 +59,9 @@
             "Name": "main-plus",
             "Source": "https://github.com/Scoopforge/Main-Plus",
             "Updated": {
-                "value": "\/Date(1794987297000)\/",
+                "value": "\/Date(1795206400000)\/",
                 "DisplayHint": 2,
-                "DateTime": "2026年11月18日 15:34:57"
+                "DateTime": "2026年11月21日 4:26:40"
             },
             "Manifests": 41
         }
@@ -139,16 +139,16 @@
         },
         {
             "Name": "chatgpt",
-            "Version": "26.1111.2228.0",
+            "Version": "26.1117.3838.0",
             "Source": "extras",
-            "Updated": "\/Date(1794634690783)\/",
+            "Updated": "\/Date(1795165232368)\/",
             "Info": ""
         },
         {
             "Name": "codex",
-            "Version": "0.170.0",
+            "Version": "0.171.0",
             "Source": "main",
-            "Updated": "\/Date(1794988052422)\/",
+            "Updated": "\/Date(1795165253524)\/",
             "Info": ""
         },
         {
@@ -167,9 +167,9 @@
         },
         {
             "Name": "dbx",
-            "Version": "0.6.71",
+            "Version": "0.6.72",
             "Source": "extras",
-            "Updated": "\/Date(1794819064825)\/",
+            "Updated": "\/Date(1795165262142)\/",
             "Info": ""
         },
         {
@@ -188,9 +188,9 @@
         },
         {
             "Name": "dsh-official",
-            "Version": "0.2.2-rc.3",
+            "Version": "0.2.2-rc.5",
             "Source": "extras-plus",
-            "Updated": "\/Date(1794618871158)\/",
+            "Updated": "\/Date(1795053072938)\/",
             "Info": ""
         },
         {
@@ -244,9 +244,9 @@
         },
         {
             "Name": "ffmpeg",
-            "Version": "9.0.2",
+            "Version": "9.1",
             "Source": "main",
-            "Updated": "\/Date(1789906879961)\/",
+            "Updated": "\/Date(1795165275048)\/",
             "Info": ""
         },
         {
@@ -282,6 +282,13 @@
             "Version": "2.105.0",
             "Source": "main",
             "Updated": "\/Date(1794969167968)\/",
+            "Info": ""
+        },
+        {
+            "Name": "git",
+            "Version": "2.56.1",
+            "Source": "main",
+            "Updated": "\/Date(1795223850903)\/",
             "Info": ""
         },
         {
@@ -349,9 +356,9 @@
         },
         {
             "Name": "innounp",
-            "Version": "2.71.3",
+            "Version": "2.71.4",
             "Source": "main",
-            "Updated": "\/Date(1793467296977)\/",
+            "Updated": "\/Date(1795165279709)\/",
             "Info": ""
         },
         {
@@ -363,10 +370,10 @@
         },
         {
             "Name": "kopuz",
-            "Version": "0.67.1",
+            "Version": "1.0.0",
             "Source": "extras",
-            "Updated": "\/Date(1793928327119)\/",
-            "Info": ""
+            "Updated": "\/Date(1795223710170)\/",
+            "Info": "Held package"
         },
         {
             "Name": "lazygit",
@@ -377,9 +384,9 @@
         },
         {
             "Name": "linkandroid",
-            "Version": "2.4.0",
+            "Version": "2.5.0",
             "Source": "extras-plus",
-            "Updated": "\/Date(1791661564382)\/",
+            "Updated": "\/Date(1795053280545)\/",
             "Info": ""
         },
         {
@@ -440,16 +447,16 @@
         },
         {
             "Name": "mise",
-            "Version": "2026.11.9",
+            "Version": "2026.11.11",
             "Source": "main",
-            "Updated": "\/Date(1794840418227)\/",
+            "Updated": "\/Date(1795223721020)\/",
             "Info": ""
         },
         {
             "Name": "mole",
-            "Version": "1.45.0",
+            "Version": "1.46.0",
             "Source": "main",
-            "Updated": "\/Date(1794566909126)\/",
+            "Updated": "\/Date(1795053370869)\/",
             "Info": ""
         },
         {
@@ -475,9 +482,9 @@
         },
         {
             "Name": "obs-studio-cn",
-            "Version": "33.0.1",
+            "Version": "33.0.2",
             "Source": "extras-cn",
-            "Updated": "\/Date(1793519443042)\/",
+            "Updated": "\/Date(1795223740291)\/",
             "Info": ""
         },
         {
@@ -510,9 +517,9 @@
         },
         {
             "Name": "openresearch",
-            "Version": "0.2.27",
+            "Version": "0.2.28",
             "Source": "main-plus",
-            "Updated": "\/Date(1794566958873)\/",
+            "Updated": "\/Date(1795053408156)\/",
             "Info": ""
         },
         {
@@ -601,9 +608,9 @@
         },
         {
             "Name": "postgresql",
-            "Version": "18.7-1",
+            "Version": "19.0-1",
             "Source": "main",
-            "Updated": "\/Date(1794490995023)\/",
+            "Updated": "\/Date(1795165921024)\/",
             "Info": ""
         },
         {
@@ -650,23 +657,23 @@
         },
         {
             "Name": "rtk",
-            "Version": "1.2.0",
+            "Version": "1.2.1",
             "Source": "main",
-            "Updated": "\/Date(1794148886602)\/",
+            "Updated": "\/Date(1795165829346)\/",
             "Info": ""
         },
         {
             "Name": "ruff",
-            "Version": "0.17.5",
+            "Version": "0.17.6",
             "Source": "main",
-            "Updated": "\/Date(1794527990660)\/",
+            "Updated": "\/Date(1795165892483)\/",
             "Info": ""
         },
         {
             "Name": "rumdl",
-            "Version": "0.3.4",
+            "Version": "0.3.5",
             "Source": "main",
-            "Updated": "\/Date(1794531384760)\/",
+            "Updated": "\/Date(1795053422866)\/",
             "Info": ""
         },
         {
@@ -741,9 +748,9 @@
         },
         {
             "Name": "stirlingpdf",
-            "Version": "3.3.0",
+            "Version": "3.4.0",
             "Source": "extras-plus",
-            "Updated": "\/Date(1793928471370)\/",
+            "Updated": "\/Date(1795079119118)\/",
             "Info": ""
         },
         {
@@ -776,9 +783,9 @@
         },
         {
             "Name": "ty",
-            "Version": "0.0.105",
+            "Version": "0.0.107",
             "Source": "main",
-            "Updated": "\/Date(1794932605209)\/",
+            "Updated": "\/Date(1795053445596)\/",
             "Info": ""
         },
         {
@@ -804,9 +811,9 @@
         },
         {
             "Name": "unsloth",
-            "Version": "0.1.919-beta",
+            "Version": "0.1.921-beta",
             "Source": "extras-plus",
-            "Updated": "\/Date(1794969216640)\/",
+            "Updated": "\/Date(1795223746005)\/",
             "Info": ""
         },
         {
@@ -818,9 +825,9 @@
         },
         {
             "Name": "vesktop",
-            "Version": "1.6.9",
+            "Version": "1.7.0",
             "Source": "extras",
-            "Updated": "\/Date(1793928539998)\/",
+            "Updated": "\/Date(1795165841140)\/",
             "Info": ""
         },
         {
@@ -839,9 +846,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.146.0",
+            "Version": "1.147.0",
             "Source": "extras",
-            "Updated": "\/Date(1794483483510)\/",
+            "Updated": "\/Date(1795015197920)\/",
             "Info": ""
         },
         {
